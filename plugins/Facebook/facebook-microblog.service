@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-microblog">
+  <type>microblogging</type>
+  <name>Facebook</name>
+  <icon>facebook</icon>
+  <provider>facebook</provider>
+  <translations>online-accounts-plug</translations>
+
+  
+  <template>
+    <group name="friends">
+      <setting type="bool" name="send_enabled">true</setting>
+      <setting name="color">#1169E1</setting>
+    </group>
+    <group name="gwibber">
+      <setting type="bool" name="send_enabled">true</setting>
+      <setting name="color">#1169E1</setting>
+    </group>
+  </template>
+
+</service>

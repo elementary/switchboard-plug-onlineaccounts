@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-im">
+  <type>IM</type>
+  <name>Facebook</name>
+  <icon>facebook</icon>
+  <provider>facebook</provider>
+  <translations>online-accounts-plug</translations>
+
+  
+  <template>
+    <group name="telepathy">
+      <setting type="b" name="mc-readonly-params">true</setting>
+      <setting name="manager">gabble</setting>
+      <setting name="protocol">jabber</setting>
+
+      <setting name="param-account">chat.facebook.com</setting>
+      <setting name="param-server">chat.facebook.com</setting>
+      <setting name="param-fallback-servers">chat.facebook.com:443</setting>
+    </group>
+  </template>
+
+</service>

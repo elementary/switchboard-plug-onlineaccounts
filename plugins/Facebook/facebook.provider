@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="facebook">
+  <name>Facebook</name>
+  <icon>facebook</icon>
+  <translations>online-accounts-plug</translations>
+  <domains>.*facebook\.com</domains>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth2</setting>
+      <setting name="mechanism">user_agent</setting>
+      <group name="oauth2">
+        <group name="user_agent">
+          <setting name="Host">www.facebook.com</setting>
+          <setting name="AuthPath">/dialog/oauth</setting>
+          <setting name="RedirectUri">https://www.facebook.com/connect/login_success.html</setting>
+          <setting name="Display">popup</setting>
+          <setting type="as" name="Scope">['publish_stream','read_stream','status_update','user_photos','friends_photos','xmpp_login']</setting>
+          <setting name="ClientId">217719465038528</setting>
+          <setting type="as" name="AllowedSchemes">['https','http']</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service-type id="calendar">
+  <name>Calendar</name>
+  <description>Integrate your calendars</description>
+  <icon>x-office-calendar</icon>
+  <translations>online-accounts-plug</translations>
+</service-type>

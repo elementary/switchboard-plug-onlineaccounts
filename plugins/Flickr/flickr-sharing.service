@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="flickr-sharing">
+  <type>sharing</type>
+  <name>Flickr</name>
+  <icon>flickr</icon>
+  <provider>flickr</provider>
+  <translations>online-accounts-plug</translations>
+</service>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="google-calendar">
+  <type>calendar</type>
+  <name>Google Calendar</name>
+  <provider>google</provider>
+  <translations>evolution-data-server-3.10</translations>
+
+  
+  <template>
+    <group name="auth">
+      <group name="oauth2">
+        <group name="user_agent">
+          <setting type="as" name="Scope">["https://www.googleapis.com/auth/calendar"]</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</service>

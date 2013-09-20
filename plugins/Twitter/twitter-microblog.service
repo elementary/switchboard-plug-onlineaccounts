@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="twitter-microblog">
+  <type>microblogging</type>
+  <name>Twitter</name>
+  <icon>twitter</icon>
+  <provider>twitter</provider>
+  <translations>online-accounts-plug</translations>
+
+  
+  <template>
+    <group name="friends">
+      <setting type="bool" name="send_enabled">true</setting>
+      <setting name="color">#05BBFC</setting>
+    </group>
+    <group name="gwibber">
+      <setting type="bool" name="send_enabled">true</setting>
+      <setting name="color">#05BBFC</setting>
+    </group>
+  </template>
+
+</service>

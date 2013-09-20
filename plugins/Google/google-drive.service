@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="service">
+  <type>documents</type>
+  <name>GoogleDrive</name>
+  <icon>icon_google_docs</icon>
+  <provider>google</provider>
+  <translations>online-accounts-plug</translations>
+
+  
+  <template>
+    <group name="auth">
+      <group name="oauth2">
+        <group name="user_agent">
+          <setting type="as" name="Scope">["https://docs.google.com/feeds/"]</setting>
+        </group>
+      </group>
+
+      <group name="google">
+        <group name="ClientLogin">
+          <setting name="Service">writely</setting>
+          <setting name="Source">Ubuntu-documents-1.0</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+
+</service>

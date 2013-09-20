@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="flickr-microblog">
+  <type>microblogging</type>
+  <name>Flickr</name>
+  <icon>flickr</icon>
+  <provider>flickr</provider>
+  <translations>online-accounts-plug</translations>
+
+  
+  <template>
+    <group name="friends">
+      <setting name="color">#A63FF4</setting>
+    </group>
+    <group name="gwibber">
+      <setting name="color">#A63FF4</setting>
+    </group>
+  </template>
+
+</service>

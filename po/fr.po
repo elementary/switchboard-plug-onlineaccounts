@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: beatbox 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-23 01:23+0100\n"
+"PO-Revision-Date: 2013-02-23 01:24+0100\n"
+"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
+"Language-Team: Fr <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2013-02-07 05:18+0000\n"
+"X-Generator: Launchpad (build 16477)\n"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:196
+#, c-format
+msgid "There are currently no applications installed which integrate with your %s account."
+msgstr "Il n'y a actuellement aucune application installée utilisant votre compte %s."
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:201
+#, c-format
+msgid "The following applications integrate with your %s account:"
+msgstr "Les applications suivantes peuvent utiliser votre compte %s :"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:294
+msgid "Grant access"
+msgstr "Autoriser l'accès"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:374
+msgid "Remove Account"
+msgstr "Supprimer le compte"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:376
+msgid "Edit Options"
+msgstr "Éditer les paramètres"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:441
+msgid "Options"
+msgstr "Paramètres"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:464
+#, c-format
+msgid "Please authorize %s to access your %s account:"
+msgstr "Veuillez autoriser %s à accéder à votre compte %s :"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:495
+msgid "Are you sure that you wish to remove this Web Account?"
+msgstr "Voulez-vous vraiment supprimer ce compte en-ligne ?"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:499
+#, c-format
+msgid "The Web Account which manages the integration of %s with your applications will be removed."
+msgstr "Toute intégration de votre compte %s avec vos applications sera supprimé."
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:501
+#, c-format
+msgid "Your online %s account is not affected."
+msgstr "Votre compte en-ligne %s ne sera néanmoins pas modifié."
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-applications-model.vala:88
+msgid "All applications"
+msgstr "Toutes les applications"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-providers-page.vala:113
+msgid "Show accounts that integrate with:"
+msgstr "Afficher les comptes s'intégrant à :"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-providers-page.vala:148
+msgid "There are currently no account providers available which integrate with this application"
+msgstr "Il n'y a actuellement aucun compte pouvant s'intégrer à cette application."
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//OnlineAccounts.vala:43
+msgid "Online Accounts"
+msgstr "Comptes en-ligne"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-accounts-model.vala:101
+msgid "Add account…"
+msgstr "Ajouter un compte…"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-providers-model.vala:338
+#, c-format
+msgid "Select to configure a new %s account"
+msgstr "Sélectionnez pour configurer un nouveau compte %s"
+
+#: /home/noelco/Programmation/Plugs/online-accounts/po/../plugins//Google/google.vala:97
+msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
+msgstr "Inclus la gestion des contacts, de Gmail, Google Documents, Google+, Youtube et Picasa"
+

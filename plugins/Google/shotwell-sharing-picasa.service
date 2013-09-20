@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="shotwell-sharing-picasa">
+  <type>shotwell-sharing</type>
+  <name>Picasa</name>
+  <icon>icon_picasa</icon>
+  <provider>google</provider>
+  <template>
+    <group name="auth/oauth2">
+      <group name="user_agent">
+        <setting type="as" name="Scope">['http://picasaweb.google.com/data/','https://picasaweb.google.com/data/','https://www.googleapis.com/auth/userinfo.profile']</setting>
+        <setting name="ClientId">1073902228337-nv1s75sfvrt75lfcq4pg3pn7gee8e1d5.apps.googleusercontent.com</setting>
+        <setting name="RedirectUri">https://wiki.ubuntu.com/</setting>
+      </group>
+      <group name="web_server">
+        <setting type="as" name="Scope">['http://picasaweb.google.com/data/','https://picasaweb.google.com/data/','https://www.googleapis.com/auth/userinfo.profile']</setting>
+        <setting name="ClientId">1073902228337-nv1s75sfvrt75lfcq4pg3pn7gee8e1d5.apps.googleusercontent.com</setting>
+        <setting name="ClientSecret">jWoGL5PDGk55ZfpBYNOgG43g</setting>
+        <setting name="RedirectUri">https://wiki.ubuntu.com/</setting>
+      </group>
+    </group>
+  </template>
+</service>

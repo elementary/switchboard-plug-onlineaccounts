@@ -1,0 +1,8 @@
+[Plugin]
+Module=microsoft
+IAge=2
+Name=Microsoft integration
+Description=Enable Microsoft support
+Authors=Switchboard Developers
+Copyright=Copyright © 2013 Switchboard Developers
+Website=http://launchpad.net/switchboard

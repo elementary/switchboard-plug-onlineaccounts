@@ -1,0 +1,35 @@
+Source: switchboard-plug-online-accounts
+Section: x11
+Priority: optional
+Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+Build-Depends: autotools-dev,
+               dbus-test-runner,
+               debhelper (>= 9),
+               gir1.2-glib-2.0,
+               cmake,
+               libpantheon-dev,
+               libaccounts-glib-dev (>= 1.7),
+               libgirepository1.0-dev (>= 0.10),
+               libgtk-3-dev,
+               libsignon-glib-dev (>= 1.8),
+               pkg-config,
+               signond-dev,
+               valac-0.16,
+Standards-Version: 3.9.2
+Homepage: https://launchpad.net/pantheon-plugs
+
+Package: switchboard-plug-online-accounts
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: switchboard
+Description: Switchboard plug for online accounts settings
+ This plug can be used to integrate your favorites online services with the desktop.
+
+Package: switchboard-plug-online-accounts-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: switchboard-plug-online-accounts (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-online-accounts
+Description: Switchboard plug for online accounts settings (debugging symbols)
+ This package contains debugging symbols for switchboard-plug-online-accounts.

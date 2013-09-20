@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="service">
+  <type>sharing</type>
+  <name>Picasa</name>
+  <icon>icon_picasa</icon>
+  <provider>google</provider>
+  <translations>account-plugins</translations>
+
+  
+  <template>
+    <group name="auth">
+      <group name="oauth2">
+        <group name="user_agent">
+          <setting type="as" name="Scope">["https://picasaweb.google.com/data/"]</setting>
+        </group>
+      </group>
+
+      <group name="google">
+        <group name="ClientLogin">
+          <setting name="Service">lh2</setting>
+          <setting name="Source">Ubuntu-sharing-1.0</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+
+</service>
