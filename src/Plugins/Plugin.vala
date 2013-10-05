@@ -40,5 +40,6 @@ public abstract class OnlineAccounts.Plugin : GLib.Object {
 
     public abstract Gtk.Widget get_widget ();
     public abstract void delete_account ();
+    //public abstract Gtk.Widget get_new_account_widget ();
 
 }

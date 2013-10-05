@@ -20,8 +20,11 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 namespace OnlineAccounts {
+
+    string dialog_bus_address;
     
     public Plugins.Manager plugins_manager;
+    //public DBus dbus;
     
     public class Plug : Pantheon.Switchboard.Plug {
 
@@ -43,8 +46,25 @@ namespace OnlineAccounts {
             
             plugins_manager.activate ();
             plugins_manager.load_accounts ();
+            //dbus = new DBus ();
+            
+            
         }
 
+    }
+    
+    public static string string_from_string_array (string[] strv) {
+        string output = "";
+        bool first = true;
+        foreach (var str in strv) {
+            if (first) {
+                output = str;
+                first = false;
+            } else {
+                output = output + "," + str;
+            }
+        }
+        return output;
     }
 }
 public static int main (string[] args) {

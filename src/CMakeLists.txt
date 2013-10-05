@@ -15,6 +15,7 @@ vala_precompile (VALA_C ${PLUGNAME}
     ${CONFIG_FILE}
     OnlineAccounts.vala
     PluginManager.vala
+    Threads.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
     Views/AccountPopOver.vala

@@ -36,37 +36,6 @@ namespace OnlineAccounts.GooglePlugin {
             set_mechanism (OnlineAccounts.OAuthPlugin.OAuthMechanism.WEB_SERVER);
             
             ignore_cookies = true;
-            
-            /*oauth_params.insert ("AuthHost", "accounts.google.com");
-            oauth_params.insert ("AuthPath", "o/oauth2/auth");
-            oauth_params.insert ("TokenPath", "o/oauth2/token");
-            oauth_params.insert ("RedirectUri",
-                                 "http://elementaryos.org/");
-            oauth_params.insert ("ClientId", Config.GOOGLE_CLIENT_ID);
-            oauth_params.insert ("ClientSecret", Config.GOOGLE_CLIENT_SECRET);
-            
-            account_oauth_params.insert ("AuthHost", "accounts.google.com");
-            account_oauth_params.insert ("AuthPath", "o/oauth2/auth");
-            account_oauth_params.insert ("TokenPath", "o/oauth2/token");
-            account_oauth_params.insert ("RedirectUri",
-                                 "http://elementaryos.org/");
-            account_oauth_params.insert ("ClientId", Config.GOOGLE_CLIENT_ID);
-            account_oauth_params.insert ("ClientSecret", Config.GOOGLE_CLIENT_SECRET);*/
-
-            /* Note the evil trick here: Google uses a couple of non-standard OAuth
-             * parameters: "access_type" and "approval_prompt"; the signon OAuth
-             * plugin doesn't (yet?) give us a way to provide extra parameters, so
-             * we fool it by appending them to the value of the "ResponseType".
-             *
-             * We need to specify "access_type=offline" if we want Google to return
-             * us a refresh token.
-             */
-            /* The "approval_prompt=force" string forces Google to ask for
-             * authentication. */
-            /*oauth_params.insert ("ResponseType",
-                                 "code&access_type=offline&approval_prompt=force");
-            account_oauth_params.insert ("ResponseType",
-                                 "code&access_type=offline");*/
         }
         
         internal void translation () {
@@ -105,15 +74,51 @@ namespace OnlineAccounts.GooglePlugin {
         }
         
         public void new_account_for_provider (Ag.Provider provider) {
-            if (provider.get_name () == plugin_name) {
-                var identity = new Signon.Identity ();
+            new_account_for_provider_async.begin (provider);
+        }
+        
+        public async void new_account_for_provider_async (Ag.Provider provider) {
+
+        if (provider.get_name () == plugin_name) {
                 
+                var identity = new Signon.Identity ("switchboard");
+                var session = identity.create_session ("oauth");
+                var oauth_params = new GLib.VariantBuilder (GLib.VariantType.VARDICT);
+                oauth_params.add ("{sv}", "AuthHost", new GLib.Variant.string (Config.auth_host));
+                oauth_params.add ("{sv}", "AuthPath", new GLib.Variant.string (Config.auth_path));
+                oauth_params.add ("{sv}", "TokenHost", new GLib.Variant.string (Config.auth_host));
+                oauth_params.add ("{sv}", "TokenPath", new GLib.Variant.string (Config.token_path));
+                oauth_params.add ("{sv}", "RedirectUri", new GLib.Variant.string (Config.redirect_uri));
+                oauth_params.add ("{sv}", "ClientId", new GLib.Variant.string (Config.client_id));
+                oauth_params.add ("{sv}", "ClientSecret", new GLib.Variant.string (Config.client_secret));
+                oauth_params.add ("{sv}", "ResponseType", new GLib.Variant.string (Config.response_type));
+                oauth_params.add ("{sv}", "UiPolicy", new GLib.Variant.int32 (Signon.SessionDataUiPolicy.DEFAULT));
+                oauth_params.add ("{sv}", "Scope", new GLib.Variant.string (string_from_string_array (Config.scopes)));
+                oauth_params.add ("{sv}", "AllowedSchemes", new GLib.Variant.string (string_from_string_array (Config.schemes)));
+                try {
+                    session.state_changed.connect (state_changed );
+                    var val = yield session.process_async (oauth_params.end (), "oauth2", null);
+                } catch (Error e) {
+                    warning (e.message);
+                }
                 /*var manager = new Ag.Manager ();
                 var account = manager.create_account (plugin_name);
                 var OAuth = new OAuthPlugin (account);
                 var webview = new WebView (OAuth);
                 webview.present ();*/
-            }
+        }
+
+        yield;
+        }
+        
+        private void state_changed (int state, string message) {
+            warning ("%i: %s", state, message);
+        }
+        
+        private void auth_ready (GLib.Error error, GLib.DBusConnection? connection, string? bus_name, string? object_path) {
+            
+            warning (error.message);
+            
         }
     }
 }

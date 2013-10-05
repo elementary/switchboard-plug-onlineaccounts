@@ -21,3 +21,8 @@ namespace Assertions {
   public void assert_cmphex (uint n1, OperatorType op, uint n2);
   public void assert_cmpfloat (float n1, OperatorType op, float n2);
 }
+namespace GLib {
+  public string get_user_runtime_dir ();
+}
+
+public int tempnam (string n1, string n2);
