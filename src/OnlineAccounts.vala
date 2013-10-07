@@ -61,7 +61,7 @@ namespace OnlineAccounts {
                 output = str;
                 first = false;
             } else {
-                output = output + "," + str;
+                output = output + " " + str;
             }
         }
         return output;

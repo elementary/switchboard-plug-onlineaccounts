@@ -67,6 +67,7 @@ set(DEPS_PACKAGES
     accounts
     gSignon
     libpeas-1.0
+    json-glib-1.0
 )
 
 set(DEPS_PKG
@@ -79,6 +80,7 @@ set(DEPS_PKG
     libaccounts-glib
     libgsignon-glib
     libpeas-1.0
+    libjson-glib-1.0
 )
 
 add_subdirectory (po)

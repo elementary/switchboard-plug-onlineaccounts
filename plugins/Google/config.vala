@@ -7,10 +7,13 @@ namespace OnlineAccounts.GooglePlugin.Config {
     };
     
     const string[] scopes = {
+        "https://www.googleapis.com/auth/userinfo.profile",
         "https://docs.google.com/feeds/",
         "https://www.googleapis.com/auth/googletalk",
         "https://www.googleapis.com/auth/userinfo.email",
-        "https://www.googleapis.com/auth/userinfo.profile",
+        "https://www.googleapis.com/auth/plus.login",
+        /*"https://www.googleapis.com/auth/calendar",
+        "https://www.googleapis.com/auth/plus.me",*/
         "https://picasaweb.google.com/data/",
         "https://www.google.com/m8/feeds/" + "&access_type=offline&approval_prompt=force"
     };
