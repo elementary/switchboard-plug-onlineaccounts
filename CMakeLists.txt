@@ -66,8 +66,10 @@ set(DEPS_PACKAGES
     pantheon
     accounts
     gSignon
+    gSignond
     libpeas-1.0
     json-glib-1.0
+    libsecret-1
 )
 
 set(DEPS_PKG
@@ -79,8 +81,10 @@ set(DEPS_PKG
     pantheon
     libaccounts-glib
     libgsignon-glib
+    gsignond
     libpeas-1.0
-    libjson-glib-1.0
+    json-glib-1.0
+    libsecret-1
 )
 
 add_subdirectory (po)
@@ -100,4 +104,5 @@ set(GLOBAL_VALAC_OPTIONS
 )
 
 add_subdirectory(src)
+add_subdirectory(extension)
 add_subdirectory(plugins)

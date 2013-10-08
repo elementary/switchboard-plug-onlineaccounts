@@ -24,11 +24,13 @@ namespace OnlineAccounts {
     string dialog_bus_address;
     
     public Plugins.Manager plugins_manager;
+    public Keyring keyring;
     //public DBus dbus;
     
     public class Plug : Pantheon.Switchboard.Plug {
 
         public Plug () {
+            keyring = new Keyring ();
             plugins_manager = new Plugins.Manager (Build.PLUGIN_DIR, "online-accounts", null);
             
             var main_grid = new Gtk.Grid ();

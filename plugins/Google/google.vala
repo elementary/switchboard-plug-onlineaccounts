@@ -102,6 +102,7 @@ namespace OnlineAccounts.GooglePlugin {
                 }
                 account.set_enabled (true);
                 yield account.store_async (null);
+                //keyring.store_password (int type, account.id, int method, access_token)
             } catch (Error e) {
                 warning (e.message);
             }
