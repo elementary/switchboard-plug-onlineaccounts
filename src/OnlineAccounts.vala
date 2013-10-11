@@ -46,11 +46,29 @@ namespace OnlineAccounts {
             main_grid.show_all ();
             this.add (main_grid);
             
+            check_folder ();
             plugins_manager.activate ();
             plugins_manager.load_accounts ();
             //dbus = new DBus ();
             
-            
+        }
+        
+        private void check_folder () {
+            try {
+                File directory = File.new_for_path (GLib.Environment.get_user_config_dir () + "/gsignond/");
+                if (!directory.query_exists ()) {
+                    directory.make_directory_with_parents ();
+                }
+                File file = File.new_for_path (GLib.Environment.get_user_config_dir () + "/gsignond/gsignond.conf");
+                if (!file.query_exists ()) {
+                    debug ("creating gsignond config file");
+                    var iostream = file.create_readwrite (GLib.FileCreateFlags.NONE);
+                    iostream.output_stream.write (config_file.data);
+                    iostream.close ();
+                }
+            } catch (Error e) {
+                stdout.printf ("Error: %s\n", e.message);
+            }
         }
 
     }
@@ -82,3 +100,10 @@ public static int main (string[] args) {
 internal void translation () {
     var title = _("Online Accounts");
 }
+
+const string config_file = """[General]
+Extension = pantheon
+StoragePath = ~/.local/gsignond/
+[ObjectTimeouts]
+IdentityTimeout = 5
+AuthSessionTimeout = 5""";

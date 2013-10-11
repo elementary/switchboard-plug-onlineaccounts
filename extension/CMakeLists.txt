@@ -5,7 +5,7 @@ set (CMAKE_INCLUDE_CURRENT_DIR ON)
 link_directories (${DEPS_LIBRARY_DIRS})
 add_definitions (${DEPS_CFLAGS} "-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
 
-set(EXTENSION_NAME pantheon-oa)
+set(EXTENSION_NAME extension-pantheon)
 vala_precompile(EXTENSION_VALA_C ${EXTENSION_NAME}
     Extension.vala
 PACKAGES
