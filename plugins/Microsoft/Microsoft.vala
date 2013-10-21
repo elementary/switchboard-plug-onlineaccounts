@@ -19,34 +19,19 @@
  *      Xavier Claessens <xavier.claessens@collabora.co.uk>
  */
 
-namespace OnlineAccounts.Plugins {
+namespace OnlineAccounts.Plugins.Microsoft {
     
     private const string plugin_name = "microsoft";
-    
-    public class MicrosoftOAuthPlugin : OnlineAccounts.OAuthPlugin {
-        public MicrosoftOAuthPlugin (Ag.Account account) {
-            base (account);
-            oauth_params.insert ("Host", "login.live.com");
-            oauth_params.insert ("AuthPath", "/oauth20_authorize.srf");
-            oauth_params.insert ("TokenPath", "/oauth20_token.srf");
-            oauth_params.insert ("RedirectUri", "https://login.live.com/oauth20_desktop.srf");
-            oauth_params.insert ("ClientId", Config.MICROSOFT_CLIENT_ID);
-            oauth_params.insert ("ResponseType", "code");
-            oauth_params.insert ("Display", "popup");
-            string[] scopes = {
-                "wl.offline_access",
-                "wl.calendars",
-                "wl.contacts_create"
-            };
-            oauth_params.insert ("Scope", scopes);
-            set_mechanism (OnlineAccounts.OAuthPlugin.OAuthMechanism.WEB_SERVER);
-        }
-    }
-    public class MicrosoftPlugin : Peas.ExtensionBase, Peas.Activatable {
+        
+    public class Plugin : Peas.ExtensionBase, Peas.Activatable {
         public GLib.Object object { owned get; construct; }
 
-        public MicrosoftPlugin () {
+        public Plugin () {
           GLib.Object ();
+        }
+        
+        internal void translation () {
+            var desc = _("Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa");
         }
         
         public void activate () {
@@ -64,12 +49,13 @@ namespace OnlineAccounts.Plugins {
             // do nothing
         }
         
-        public void use_plugin (string plugin, Ag.Account account) {
+        public void use_plugin (string plugin, Ag.Account? account = null) {
             if (plugin == plugin_name) {
-                var microsoft_oauthplugin = new MicrosoftOAuthPlugin (account);
-                plugins_manager.plugin_callback (microsoft_oauthplugin);
+                var provider = new Provider (account);
+                accounts_manager.add_account (provider);
             }
         }
+        
     }
 }
 
@@ -77,5 +63,5 @@ namespace OnlineAccounts.Plugins {
 public void peas_register_types (GLib.TypeModule module) {
     var objmodule = module as Peas.ObjectModule;
     objmodule.register_extension_type (typeof (Peas.Activatable),
-                                     typeof (OnlineAccounts.Plugins.MicrosoftPlugin));
+                                     typeof (OnlineAccounts.Plugins.Microsoft.Plugin));
 }

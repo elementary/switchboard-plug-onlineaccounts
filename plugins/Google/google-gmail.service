@@ -2,6 +2,7 @@
 <service id="google-gmail">
   <type>mail</type>
   <name>GMail</name>
+  <icon>internet-mail</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>
 

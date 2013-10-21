@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-19 12:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:110
+msgid "Online Accounts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:93
+msgid "Add…"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:97
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:98
+msgid "Remove"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:31
+msgid "<big>User name:</big>"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:42
+msgid "Remove Account"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:53
+msgid "<b>Applications that use this service:</b>"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountDialog.vala:27
+msgid "Add an Account"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/google.vala:34
+msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:27
+msgid "Connect your Google Account"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:93
+#, c-format
+msgid ""
+"Expected status 200 when requesting access token, instead got status %d (%s)"
+msgstr ""

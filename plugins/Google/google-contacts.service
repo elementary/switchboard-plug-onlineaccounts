@@ -2,6 +2,7 @@
 <service id="google-contacts">
   <type>contacts</type>
   <name>Google Contacts</name>
+  <icon>office-address-book</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>
 

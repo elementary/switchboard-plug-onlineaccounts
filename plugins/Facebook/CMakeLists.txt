@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 
-pkg_check_modules(FACEBOOKPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib)
+pkg_check_modules(FACEBOOKPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib libsoup-2.4)
 
 if (FACEBOOKPLUGIN_FOUND)
 
@@ -13,12 +13,14 @@ set(FACEBOOKPLUGIN_LIBRARY_DIRS ${DEPS_LIBRARY_DIRS} ${FACEBOOKPLUGIN_LIBRARY_DI
 link_directories (${FACEBOOKPLUGIN_LIBRARY_DIRS} ${CMAKE_CURRENT_BINARY_DIR}/../../lib)
 add_definitions (${FACEBOOKPLUGIN_CFLAGS} "-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
 set (FACEBOOK_PLUGIN_PKG_DEPS
-    ${DEPS_PACKAGES})
+    ${DEPS_PACKAGES}
+    libsoup-2.4)
 
 set(TARGET_NAME facebook)
 vala_precompile(FACEBOOKPLUGIN_VALA_C ${TARGET_NAME}
     config.vala
     facebook.vala
+    FacebookProvider.vala
 PACKAGES
     ${FACEBOOK_PLUGIN_PKG_DEPS}
 OPTIONS

@@ -94,7 +94,7 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         list_store.get_iter (out iter, path);
         GLib.Value src;
         list_store.get_value (iter, 2, out src);
-        plugins_manager.new_account_for_provider ((Ag.Provider)src);
+        plugins_manager.use_plugin (((Ag.Provider)src).get_name ());
         this.hide ();
     }
     

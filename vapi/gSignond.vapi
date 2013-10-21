@@ -48,9 +48,9 @@ namespace Signond {
 		public virtual bool remove_data (uint32 id, uint32 method);
 		public virtual GLib.Error get_last_error ();
 	}
-	[CCode (cheader_filename = "gsignond/gsignond-credidentials.h", type_id = "gsignond_credentials_get_type ()")]
+	[CCode (cheader_filename = "gsignond/gsignond-credentials.h", type_id = "gsignond_credentials_get_type ()")]
 	[Compact]
-	public class Credentials {
+	public class Credentials : GLib.Object {
 		public Credentials ();
 		public bool set_data (uint32 id, string username, string password);
 		public bool set_id (uint32 id);
@@ -64,7 +64,7 @@ namespace Signond {
 	
 	[CCode (cheader_filename = "gsignond/gsignond-access-control-manager.h", type_id = "gsignond_access_control_manager_get_type ()")]
 	[Compact]
-	public class AccessControlManager {
+	public class AccessControlManager : GLib.Object {
 		[CCode (has_construct_function = false)]
 		public AccessControlManager ();
 	}

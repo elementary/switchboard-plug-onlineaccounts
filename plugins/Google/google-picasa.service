@@ -2,7 +2,7 @@
 <service id="service">
   <type>sharing</type>
   <name>Picasa</name>
-  <icon>icon_picasa</icon>
+  <icon>shotwell</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>
 

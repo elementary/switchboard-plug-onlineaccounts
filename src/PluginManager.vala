@@ -38,14 +38,12 @@ public class OnlineAccounts.Plugins.Interface : Object {
 public class OnlineAccounts.Plugins.Manager : Object {
     Peas.Engine engine;
     Peas.ExtensionSet exts;
-    public signal void use_plugin (string plugin, Ag.Account account);
-    public signal void new_account_for_provider (Ag.Provider provider);
-    public signal void plugin_callback (OnlineAccounts.Plugin plugin);
+    public signal void use_plugin (string plugin, Ag.Account? account = null);
     
     public OnlineAccounts.Plugins.Interface plugin_iface { private set; get; }
     public Gee.ArrayList<string> plugins_available;
 
-    public Manager(string d, string? e, string? argument_set) {
+    public Manager (string d, string? e, string? argument_set) {
         plugins_available = new Gee.ArrayList<string> ();
         plugin_iface = new OnlineAccounts.Plugins.Interface (this);
         plugin_iface.argument = argument_set;

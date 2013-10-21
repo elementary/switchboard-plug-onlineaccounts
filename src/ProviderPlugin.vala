@@ -20,26 +20,22 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
-public abstract class OnlineAccounts.Plugin : GLib.Object {
+public abstract class OnlineAccounts.ProviderPlugin : GLib.Object {
 
     public Ag.Account account;
     public Ag.Provider provider;
-    public GLib.Error error;
     public string username;
     public string password;
-    public GLib.HashTable<string, string> cookies;
-    public bool ignore_cookies;
-    public bool need_authentication;
-    public bool cancelled;
-    public static string signon_id = "CredentialsId";
+    public bool need_authentification;
     
-    public Plugin (Ag.Account account) {
+    public signal void removed ();
+    public signal void complete ();
+    
+    public ProviderPlugin (Ag.Account? account = null) {
         this.account = account;
-        cookies = new GLib.HashTable<string, string> (null, null);
     }
-
-    public abstract Gtk.Widget get_widget ();
-    public abstract void delete_account ();
-    //public abstract Gtk.Widget get_new_account_widget ();
+    
+    public abstract async void delete_account ();
+    public abstract async void authenticate ();
 
 }

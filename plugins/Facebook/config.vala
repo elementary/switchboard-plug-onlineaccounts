@@ -1,5 +1,5 @@
 
-namespace Config {
+namespace OnlineAccounts.Plugins.Facebook.Config {
     
     const string[] schemes = {
         "https"

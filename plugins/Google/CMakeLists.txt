@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 
-pkg_check_modules(GOOGLEPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib webkitgtk-3.0 rest-0.7 json-glib-1.0)
+pkg_check_modules(GOOGLEPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib webkitgtk-3.0 rest-0.7 json-glib-1.0 libsoup-2.4)
 
 if (GOOGLEPLUGIN_FOUND)
 
@@ -13,18 +13,19 @@ set(GOOGLEPLUGIN_LIBRARY_DIRS ${DEPS_LIBRARY_DIRS} ${GOOGLEPLUGIN_LIBRARY_DIRS})
 link_directories (${GOOGLEPLUGIN_LIBRARY_DIRS} ${CMAKE_CURRENT_BINARY_DIR}/../../lib)
 add_definitions (${GOOGLEPLUGIN_CFLAGS} "-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
 set (GOOGLE_PLUGIN_PKG_DEPS
-    ${DEPS_PACKAGES})
+    ${DEPS_PACKAGES}
+    libsoup-2.4
+    webkit-3.0
+    rest-0.7
+    json-glib-1.0)
 
 set(TARGET_NAME google)
 vala_precompile(GOOGLEPLUGIN_VALA_C ${TARGET_NAME}
     config.vala
     google.vala
-    webview.vala
+    GoogleProvider.vala
 PACKAGES
     ${GOOGLE_PLUGIN_PKG_DEPS}
-    webkit-3.0
-    rest-0.7
-    json-glib-1.0
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}
 )

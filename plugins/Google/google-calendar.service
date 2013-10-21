@@ -2,8 +2,9 @@
 <service id="google-calendar">
   <type>calendar</type>
   <name>Google Calendar</name>
+  <icon>office-calendar</icon>
   <provider>google</provider>
-  <translations>evolution-data-server-3.10</translations>
+  <translations>online-accounts-plug</translations>
 
   
   <template>

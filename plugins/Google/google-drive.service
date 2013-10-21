@@ -2,7 +2,7 @@
 <service id="service">
   <type>documents</type>
   <name>GoogleDrive</name>
-  <icon>icon_google_docs</icon>
+  <icon>system-file-manager</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>
 

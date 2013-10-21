@@ -59,6 +59,7 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\" -w)
 set(DEPS_PACKAGES
     glib-2.0
     gio-2.0
+    gio-unix-2.0
     gee-1.0
     gtk+-3.0
     posix
@@ -75,6 +76,7 @@ set(DEPS_PACKAGES
 set(DEPS_PKG
     glib-2.0
     gio-2.0
+    gio-unix-2.0
     gee-1.0
     gtk+-3.0
     granite
@@ -92,7 +94,7 @@ add_subdirectory (data)
 
 find_package (Vala REQUIRED)
 include (ValaVersion)
-ensure_vala_version ("0.16.0" MINIMUM)
+ensure_vala_version ("0.21.2" MINIMUM)
 
 include (ValaPrecompile)
 

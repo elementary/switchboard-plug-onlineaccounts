@@ -14,14 +14,13 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${PLUGNAME}.pc.cmake ${CMAKE_CURRENT_
 vala_precompile (VALA_C ${PLUGNAME}
     ${CONFIG_FILE}
     OnlineAccounts.vala
+    AccountsManager.vala
     PluginManager.vala
     Threads.vala
-    Keyring.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
     Views/AccountPopOver.vala
-    Plugins/Plugin.vala
-    Plugins/OAuthPlugin.vala
+    ProviderPlugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS

@@ -7,89 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-23 01:23+0100\n"
-"PO-Revision-Date: 2013-02-23 01:24+0100\n"
+"POT-Creation-Date: 2013-10-19 12:02+0200\n"
+"PO-Revision-Date: 2013-10-19 12:06+0100\n"
 "Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
 "Language-Team: Fr <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Launchpad-Export-Date: 2013-02-07 05:18+0000\n"
-"X-Generator: Launchpad (build 16477)\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:196
-#, c-format
-msgid "There are currently no applications installed which integrate with your %s account."
-msgstr "Il n'y a actuellement aucune application installée utilisant votre compte %s."
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:201
-#, c-format
-msgid "The following applications integrate with your %s account:"
-msgstr "Les applications suivantes peuvent utiliser votre compte %s :"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:294
-msgid "Grant access"
-msgstr "Autoriser l'accès"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:374
-msgid "Remove Account"
-msgstr "Supprimer le compte"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:376
-msgid "Edit Options"
-msgstr "Éditer les paramètres"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:441
-msgid "Options"
-msgstr "Paramètres"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:464
-#, c-format
-msgid "Please authorize %s to access your %s account:"
-msgstr "Veuillez autoriser %s à accéder à votre compte %s :"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:495
-msgid "Are you sure that you wish to remove this Web Account?"
-msgstr "Voulez-vous vraiment supprimer ce compte en-ligne ?"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:499
-#, c-format
-msgid "The Web Account which manages the integration of %s with your applications will be removed."
-msgstr "Toute intégration de votre compte %s avec vos applications sera supprimé."
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-account-details-page.vala:501
-#, c-format
-msgid "Your online %s account is not affected."
-msgstr "Votre compte en-ligne %s ne sera néanmoins pas modifié."
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-applications-model.vala:88
-msgid "All applications"
-msgstr "Toutes les applications"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-providers-page.vala:113
-msgid "Show accounts that integrate with:"
-msgstr "Afficher les comptes s'intégrant à :"
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-providers-page.vala:148
-msgid "There are currently no account providers available which integrate with this application"
-msgstr "Il n'y a actuellement aucun compte pouvant s'intégrer à cette application."
-
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//OnlineAccounts.vala:43
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:110
 msgid "Online Accounts"
 msgstr "Comptes en-ligne"
 
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-accounts-model.vala:101
-msgid "Add account…"
-msgstr "Ajouter un compte…"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:93
+msgid "Add…"
+msgstr "Ajouter…"
 
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../src//cc-credentials-providers-model.vala:338
-#, c-format
-msgid "Select to configure a new %s account"
-msgstr "Sélectionnez pour configurer un nouveau compte %s"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:97
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:98
+msgid "Remove"
+msgstr "Retirer"
 
-#: /home/noelco/Programmation/Plugs/online-accounts/po/../plugins//Google/google.vala:97
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:31
+msgid "<big>User name:</big>"
+msgstr "<big>Nom d'utilisateur :</big>"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:42
+msgid "Remove Account"
+msgstr "Supprimer le compte"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:53
+msgid "<b>Applications that use this service:</b>"
+msgstr "<b>Applications utilisant ce service :</b>"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountDialog.vala:27
+msgid "Add an Account"
+msgstr "Ajouter un compte"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/google.vala:34
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr "Inclus la gestion des contacts, de Gmail, Google Documents, Google+, Youtube et Picasa"
+msgstr ""
+"Inclus la gestion des contacts, de Gmail, Google Documents, Google+, Youtube "
+"et Picasa"
 
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:27
+msgid "Connect your Google Account"
+msgstr "Connectez-vous à votre compte Google"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:93
+#, c-format
+msgid ""
+"Expected status 200 when requesting access token, instead got status %d (%s)"
+msgstr ""
+"État 200 attendu lors de la requête du jeton d'accès, état %d (%s) reçu à la "
+"place"
+
+#~ msgid ""
+#~ "There are currently no applications installed which integrate with your "
+#~ "%s account."
+#~ msgstr ""
+#~ "Il n'y a actuellement aucune application installée utilisant votre compte "
+#~ "%s."
+
+#~ msgid "The following applications integrate with your %s account:"
+#~ msgstr "Les applications suivantes peuvent utiliser votre compte %s :"
+
+#~ msgid "Grant access"
+#~ msgstr "Autoriser l'accès"
+
+#~ msgid "Edit Options"
+#~ msgstr "Éditer les paramètres"
+
+#~ msgid "Options"
+#~ msgstr "Paramètres"
+
+#~ msgid "Please authorize %s to access your %s account:"
+#~ msgstr "Veuillez autoriser %s à accéder à votre compte %s :"
+
+#~ msgid "Are you sure that you wish to remove this Web Account?"
+#~ msgstr "Voulez-vous vraiment supprimer ce compte en-ligne ?"
+
+#~ msgid ""
+#~ "The Web Account which manages the integration of %s with your "
+#~ "applications will be removed."
+#~ msgstr ""
+#~ "Toute intégration de votre compte %s avec vos applications sera supprimé."
+
+#~ msgid "Your online %s account is not affected."
+#~ msgstr "Votre compte en-ligne %s ne sera néanmoins pas modifié."
+
+#~ msgid "All applications"
+#~ msgstr "Toutes les applications"
+
+#~ msgid "Show accounts that integrate with:"
+#~ msgstr "Afficher les comptes s'intégrant à :"
+
+#~ msgid ""
+#~ "There are currently no account providers available which integrate with "
+#~ "this application"
+#~ msgstr ""
+#~ "Il n'y a actuellement aucun compte pouvant s'intégrer à cette application."
+
+#~ msgid "Select to configure a new %s account"
+#~ msgstr "Sélectionnez pour configurer un nouveau compte %s"

@@ -1,5 +1,5 @@
 
-namespace OnlineAccounts.GooglePlugin.Config {
+namespace OnlineAccounts.Plugins.Google.Config {
     
     const string[] schemes = {
         "https",

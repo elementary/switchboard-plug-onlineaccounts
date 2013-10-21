@@ -24,22 +24,26 @@ namespace OnlineAccounts {
     string dialog_bus_address;
     
     public Plugins.Manager plugins_manager;
-    public Keyring keyring;
-    //public DBus dbus;
+    public AccountsManager accounts_manager;
     
     public class Plug : Pantheon.Switchboard.Plug {
-
+        
+        Gtk.Grid grid;
+        AccountView account_view;
+        
         public Plug () {
-            keyring = new Keyring ();
             plugins_manager = new Plugins.Manager (Build.PLUGIN_DIR, "online-accounts", null);
+            accounts_manager = new AccountsManager ();
             
             var main_grid = new Gtk.Grid ();
             var paned = new Granite.Widgets.ThinPaned ();
             var source_selector = new SourceSelector ();
-            var account_view = new AccountView ();
+            source_selector.account_selected.connect (account_selected);
+            grid = new Gtk.Grid ();
+            grid.expand = true;
             
             paned.pack1 (source_selector, false, false);
-            paned.pack2 (account_view, true, false);
+            paned.pack2 (grid, true, false);
             paned.set_position (200);
             
             main_grid.attach (paned, 0, 0, 1, 1);
@@ -49,8 +53,11 @@ namespace OnlineAccounts {
             check_folder ();
             plugins_manager.activate ();
             plugins_manager.load_accounts ();
-            //dbus = new DBus ();
             
+        }
+        
+        ~Plug () {
+            warning ("do real destruction here");
         }
         
         private void check_folder () {
@@ -70,10 +77,19 @@ namespace OnlineAccounts {
                 stdout.printf ("Error: %s\n", e.message);
             }
         }
+        
+        private void account_selected (OnlineAccounts.ProviderPlugin plugin) {
+            if (account_view != null) {
+                account_view.hide ();
+            }
+            account_view = new AccountView (plugin);
+            grid.attach (account_view, 0, 0, 1, 1);
+            account_view.show_all ();
+        }
 
     }
     
-    public static string string_from_string_array (string[] strv) {
+    public static string string_from_string_array (string[] strv, string separator = " ") {
         string output = "";
         bool first = true;
         foreach (var str in strv) {
@@ -81,7 +97,7 @@ namespace OnlineAccounts {
                 output = str;
                 first = false;
             } else {
-                output = output + " " + str;
+                output = output + separator + str;
             }
         }
         return output;

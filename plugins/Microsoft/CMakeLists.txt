@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 
-pkg_check_modules(MICROSOFTPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib)
+pkg_check_modules(MICROSOFTPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib libsoup-2.4)
 
 if (MICROSOFTPLUGIN_FOUND)
 
@@ -12,13 +12,16 @@ set(MICROSOFTPLUGIN_LIBRARY_DIRS ${DEPS_LIBRARY_DIRS} ${MICROSOFTPLUGIN_LIBRARY_
 
 link_directories (${MICROSOFTPLUGIN_LIBRARY_DIRS} ${CMAKE_CURRENT_BINARY_DIR}/../../lib)
 add_definitions (${MICROSOFTPLUGIN_CFLAGS} "-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
+
 set (MICROSOFT_PLUGIN_PKG_DEPS
-    ${DEPS_PACKAGES})
+    ${DEPS_PACKAGES}
+    libsoup-2.4)
 
 set(TARGET_NAME microsoft)
 vala_precompile(MICROSOFTPLUGIN_VALA_C ${TARGET_NAME}
     config.vala
     Microsoft.vala
+    MicrosoftProvider.vala
 PACKAGES
     ${MICROSOFT_PLUGIN_PKG_DEPS}
 OPTIONS
