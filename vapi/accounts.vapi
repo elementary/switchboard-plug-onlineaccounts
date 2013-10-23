@@ -158,6 +158,7 @@ namespace Ag {
 		public unowned string get_icon_name ();
 		public unowned string get_name ();
 		public unowned string get_plugin_name ();
+		public unowned bool get_single_account ();
 		public static void list_free (GLib.List<Ag.Provider> list);
 		public bool match_domain (string domain);
 		public Ag.Provider @ref ();

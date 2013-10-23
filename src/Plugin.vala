@@ -20,22 +20,33 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
-public abstract class OnlineAccounts.ProviderPlugin : GLib.Object {
+public abstract class OnlineAccounts.Plugin : GLib.Object {
 
     public Ag.Account account;
     public Ag.Provider provider;
     public string username;
     public string password;
     public bool need_authentification;
+    public bool is_new;
+    
+    public const string gsignon_id = "CredentialsId";
     
     public signal void removed ();
     public signal void complete ();
     
-    public ProviderPlugin (Ag.Account? account = null) {
+    public Plugin (Ag.Account account, bool is_new = false) {
         this.account = account;
+        this.is_new = is_new;
     }
     
-    public abstract async void delete_account ();
+    public async void delete_account () {
+        account.select_service (null);
+        var v_id = account.get_variant (gsignon_id, null);
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "switchboard");
+        identity.remove ((Signon.IdentityRemovedCb) null);
+        account.delete ();
+        yield account.store_async (null);
+    }
     public abstract async void authenticate ();
 
 }

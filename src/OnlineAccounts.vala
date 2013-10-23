@@ -32,6 +32,7 @@ namespace OnlineAccounts {
         AccountView account_view;
         
         public Plug () {
+            plug_name = _("Online Accounts");
             plugins_manager = new Plugins.Manager (Build.PLUGIN_DIR, "online-accounts", null);
             accounts_manager = new AccountsManager ();
             
@@ -56,8 +57,9 @@ namespace OnlineAccounts {
             
         }
         
-        ~Plug () {
+        public void on_exit () {
             warning ("do real destruction here");
+            base.on_exit ();
         }
         
         private void check_folder () {
@@ -78,7 +80,7 @@ namespace OnlineAccounts {
             }
         }
         
-        private void account_selected (OnlineAccounts.ProviderPlugin plugin) {
+        private void account_selected (OnlineAccounts.Plugin plugin) {
             if (account_view != null) {
                 account_view.hide ();
             }
@@ -107,19 +109,14 @@ public static int main (string[] args) {
 
     Gtk.init (ref args);
     var plug = new OnlineAccounts.Plug ();
-    plug.register ("OnlineAccounts");
+    plug.register (plug.plug_name);
     plug.show_all ();
     Gtk.main ();
     return 0;
 }
 
-internal void translation () {
-    var title = _("Online Accounts");
-}
-
 const string config_file = """[General]
 Extension = pantheon
-StoragePath = ~/.local/gsignond/
 [ObjectTimeouts]
 IdentityTimeout = 5
 AuthSessionTimeout = 5""";

@@ -24,21 +24,26 @@
 
 public class OnlineAccounts.AccountsManager : Object {
     
-    public Gee.ArrayList<ProviderPlugin> accounts_available;
-    private ProviderPlugin to_delete; // Store it here and wait until the user is sure to remove it.
+    public Gee.ArrayList<Plugin> accounts_available;
+    private Plugin to_delete; // Store it here and wait until the user is sure to remove it.
     
-    public signal void account_added (ProviderPlugin account);
+    public signal void account_added (Plugin account);
 
     public AccountsManager () {
-        accounts_available = new Gee.ArrayList<ProviderPlugin> ();
+        accounts_available = new Gee.ArrayList<Plugin> ();
+    }
+    ~AccountsManager () {
+        if (to_delete != null) {
+            to_delete.delete_account ();
+        }
     }
     
-    public void add_account (ProviderPlugin account) {
+    public void add_account (Plugin account) {
         accounts_available.add (account);
         account_added (account);
     }
     
-    public void remove_account (ProviderPlugin account) {
+    public void remove_account (Plugin account) {
         accounts_available.remove (account);
         if (to_delete != null) {
             to_delete.delete_account ();

@@ -28,11 +28,6 @@ public class OnlineAccounts.Plugins.Microsoft.Provider : ProviderPlugin {
         }
     }
     
-    
-    public override async void delete_account () {
-        
-    }
-    
     public override async void authenticate () {
         
         var identity = new Signon.Identity ("switchboard");
@@ -71,17 +66,29 @@ public class OnlineAccounts.Plugins.Microsoft.Provider : ProviderPlugin {
                 account.set_variant (key, vari);
             }
             account.set_enabled (true);
-            yield account.store_async (null);
+            var info = new Signon.IdentityInfo ();
+            string[] method = {"oauth2"};
+            info.set_method ("oauth", method);
+            info.set_username (email);
+            info.set_secret (access_token, true);
+            identity.store_credentials_with_info (info, (self, id, error) => {IdentityStoreCredentialsCallback (self, id, error, this);});
         } catch (Error e) {
             warning (e.message);
         }
         yield;
     }
     
-    private void auth_ready (GLib.Error error, GLib.DBusConnection? connection, string? bus_name, string? object_path) {
+    public static void IdentityStoreCredentialsCallback (Signon.Identity self, uint32 id, GLib.Error error, OnlineAccounts.Plugins.Microsoft.Provider pr) {
+        if (error != null) {
+            critical (error.message);
+            return;
+        }
         
-        warning (error.message);
-        
+        if (pr != null) {
+            GLib.Variant? v_id = new GLib.Variant.uint32 (id);
+            pr.account.set_variant (gsignon_id, v_id);
+            pr.account.store_async.begin (null);
+        }
     }
     
     private string query_mail_address (string token_type, string token) {

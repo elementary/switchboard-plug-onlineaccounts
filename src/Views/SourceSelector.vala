@@ -37,11 +37,11 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         N_COLUMNS
     }
     
-    public signal void account_selected (OnlineAccounts.ProviderPlugin plugin);
+    public signal void account_selected (OnlineAccounts.Plugin plugin);
     
     public SourceSelector () {
         
-        list_store = new Gtk.ListStore (Columns.N_COLUMNS, typeof (string), typeof (string), typeof (OnlineAccounts.ProviderPlugin));
+        list_store = new Gtk.ListStore (Columns.N_COLUMNS, typeof (string), typeof (string), typeof (OnlineAccounts.Plugin));
         tree_view = new Gtk.TreeView.with_model (list_store);
         tree_view.activate_on_single_click = true;
         iter_map = new Gee.HashMap<string, Gtk.TreeIter?> ();
@@ -108,13 +108,13 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         tree_view.row_activated.connect ((path, column) => {
             Gtk.TreeIter iter;
             list_store.get_iter (out iter, path);
-            OnlineAccounts.ProviderPlugin plugin;
+            OnlineAccounts.Plugin plugin;
             list_store.get (iter, Columns.PLUGIN, out plugin);
             account_selected (plugin);
         });
     }
     
-    private void add_plugin_callback (OnlineAccounts.ProviderPlugin plugin) {
+    private void add_plugin_callback (OnlineAccounts.Plugin plugin) {
         var provider = plugin.account.get_manager ().get_provider (plugin.account.provider);
         Gtk.TreeIter iter;
         list_store.append (out iter);
@@ -141,7 +141,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         Gtk.TreeIter? iter;
         var selection = tree_view.get_selection ();
         if (selection.get_selected (out model, out iter)) {
-            OnlineAccounts.ProviderPlugin plugin;
+            OnlineAccounts.Plugin plugin;
             list_store.get (iter, Columns.PLUGIN, out plugin);
             accounts_manager.remove_account (plugin);
             bool show_welcome = false;

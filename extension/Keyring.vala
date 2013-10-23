@@ -22,50 +22,21 @@
 
 // This is compatible with Ubuntu Online Accounts.
 public class OnlineAccounts.Keyring : Signond.SecretStorage {
+    public enum SignonSecretType {
+        NOTYPE = 0,
+        PASSWORD,
+        USERNAME,
+        DATA
+    }
     
     Secret.Schema schema = null;
-    SQLHeavy.Database database;
     public override bool open_db () {
-        schema = new Secret.Schema ("com.ubuntu.OnlineAccounts.Secrets", Secret.SchemaFlags.NONE,
+        if (schema == null)
+        schema = new Secret.Schema ("com.ubuntu.OnlineAccounts.Secrets", Secret.SchemaFlags.DONT_MATCH_NAME,
                                  "signon-type", Secret.SchemaAttributeType.INTEGER,
                                  "signon-id", Secret.SchemaAttributeType.INTEGER,
                                  "signon-method", Secret.SchemaAttributeType.INTEGER);
-        var database_dir = GLib.File.new_for_path (GLib.Environment.get_user_config_dir () + "/signond/");
-        try {
-            database_dir.make_directory_with_parents (null);
-        } catch (GLib.Error err) {
-            if (!(err is IOError.EXISTS))
-                error ("Could not create data directory: %s", err.message);
-        }
-
-        string database_path = Path.build_filename (database_dir.get_path (), "signon.db");
-        var database_file = File.new_for_path (database_path);
-
-        try {
-            const SQLHeavy.FileMode flags = SQLHeavy.FileMode.READ
-                                            | SQLHeavy.FileMode.WRITE
-                                            | SQLHeavy.FileMode.CREATE;
-            database = new SQLHeavy.Database (database_file.get_path (), flags);
-        } catch (SQLHeavy.Error err) {
-            error ("Could not read/create database file: %s", err.message);
-        }
-
-        // Disable synchronized commits for performance reasons
-        database.synchronous = SQLHeavy.SynchronousMode.OFF;
-
-        load_table (Database.Tables.ACL);
-        load_table (Database.Tables.CREDIDENTIALS);
-        load_table (Database.Tables.METHODS);
-        load_table (Database.Tables.TOKENS);
         return true;
-    }
-
-    private void load_table (string table) {
-        try {
-            database.execute (table);
-        } catch (SQLHeavy.Error err) {
-            warning ("Error while executing %s: %s", table, err.message);
-        }
     }
     
     public override bool close_db () {
@@ -77,135 +48,35 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
     }
     
     public override bool is_open_db () {
-        return ((schema != null) && (database != null));
+        return (schema != null);
     }
     
     public override Signond.Credentials load_credentials (uint32 id) {
-        assert (database != null);
         var credidential = new Signond.Credentials ();
-        int identity_id = 0;
-        int type = 0;
-        string method = "";
-        string username = "";
-        string password = "";
-
-        // Get ID
-        try {
-            SQLHeavy.Query query = new SQLHeavy.Query (database, "SELECT * FROM `ACL` WHERE rowid=:rowid");
-            query.set_int (":rowid", (int)id);
-
-            for (var results = query.execute (); !results.finished; results.next()) {
-                warning ("rowid: %d", results.fetch_int (1));
-                identity_id = results.fetch_int (2);
-                warning ("identity_id: %d", identity_id);
-                warning ("token_id: %d", results.fetch_int (5));
-                
-            }
-        }
-        catch (SQLHeavy.Error err) {
-            warning ("Could not load credidentials from db: %s\n", err.message);
-        }
-
-        // Get Method
-        try {
-            SQLHeavy.Query query = new SQLHeavy.Query (database, "SELECT * FROM `METHODS` WHERE id=:id");
-            query.set_int (":id", identity_id);
-
-            for (var results = query.execute (); !results.finished; results.next()) {
-                method = results.fetch_string (1);
-                warning ("method: %s", method);
-                
-            }
-        }
-        catch (SQLHeavy.Error err) {
-            warning ("Could not load credidentials from db: %s\n", err.message);
-        }
-
-        // Get Username and Type
-        try {
-            SQLHeavy.Query query = new SQLHeavy.Query (database, "SELECT * FROM `CREDIDENTIALS` WHERE id=:id");
-            query.set_int (":id", identity_id);
-
-            for (var results = query.execute (); !results.finished; results.next()) {
-                username = results.fetch_string (2);
-                warning ("username: %s", username);
-                type = results.fetch_int (4);
-                warning ("type: %d", type);
-            }
-        }
-        catch (SQLHeavy.Error err) {
-            warning ("Could not load credidentials from db: %s\n", err.message);
-        }
-
-        password = Secret.password_lookup_sync (schema, null, 
-                                        "signon-type", type, "signon-id", identity_id,
-                                        "signon-method", method);
+        string username;
+        load_secret (SignonSecretType.USERNAME, id, 0, out username);
+        string password;
+        load_secret (SignonSecretType.PASSWORD, id, 0, out password);
         credidential.set_data (id, username, password);
-
         return credidential;
     
     }
     
     public override bool update_credentials (Signond.Credentials creds) {
-        return base.update_credentials (creds);
+        if (creds.get_password () != null)
+            store_secret (SignonSecretType.PASSWORD, creds.get_id (), 0, creds.get_password ());
+        if (creds.get_username () != null)
+            store_secret (SignonSecretType.USERNAME, creds.get_id (), 0, creds.get_username ());
+        return true;
     }
     
     public override bool remove_credentials (uint32 id) {
-        int identity_id = 0;
-        int type = 0;
-        string method = "";
-        string username = "";
-
-        // Get ID
         try {
-            SQLHeavy.Query query = new SQLHeavy.Query (database, "SELECT * FROM `ACL` WHERE rowid=:rowid");
-            query.set_int (":rowid", (int)id);
-
-            for (var results = query.execute (); !results.finished; results.next()) {
-                warning ("rowid: %d", results.fetch_int (1));
-                identity_id = results.fetch_int (2);
-                warning ("identity_id: %d", identity_id);
-                warning ("token_id: %d", results.fetch_int (5));
-                
-            }
+            return Secret.password_clear_sync (schema, null, "signon-id", id);
+        } catch (Error e) {
+            critical (e.message);
+            return false;
         }
-        catch (SQLHeavy.Error err) {
-            warning ("Could not load credidentials from db: %s\n", err.message);
-        }
-
-        // Get Method
-        try {
-            SQLHeavy.Query query = new SQLHeavy.Query (database, "SELECT * FROM `METHODS` WHERE id=:id");
-            query.set_int (":id", identity_id);
-
-            for (var results = query.execute (); !results.finished; results.next()) {
-                method = results.fetch_string (1);
-                warning ("method: %s", method);
-                
-            }
-        }
-        catch (SQLHeavy.Error err) {
-            warning ("Could not load credidentials from db: %s\n", err.message);
-        }
-
-        // Get Username and Type
-        try {
-            SQLHeavy.Query query = new SQLHeavy.Query (database, "SELECT * FROM `CREDIDENTIALS` WHERE id=:id");
-            query.set_int (":id", identity_id);
-
-            for (var results = query.execute (); !results.finished; results.next()) {
-                username = results.fetch_string (2);
-                warning ("username: %s", username);
-                type = results.fetch_int (4);
-                warning ("type: %d", type);
-            }
-        }
-        catch (SQLHeavy.Error err) {
-            warning ("Could not load credidentials from db: %s\n", err.message);
-        }
-        return Secret.password_clear_sync (schema, null,
-                                        "signon-type", type, "signon-id", identity_id,
-                                        "signon-method", method);
     }
     
     public override bool check_credentials (Signond.Credentials creds) {
@@ -213,25 +84,81 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
     }
     
     public override GLib.HashTable<string, GLib.Variant> load_data (uint32 id, uint32 method) {
-        return base.load_data (id, method);
+        var result = new GLib.HashTable<string, GLib.Variant>(null, null);
+        string data_serialized;
+        load_secret (SignonSecretType.DATA, id, method, out data_serialized);
+        foreach (var entry in data_serialized.split ("\n")) {
+            if (entry != null) {
+                var entries = entry.split ("<!separator>", 2);
+                try {
+                    result.set (entries[0], GLib.Variant.parse (null, entries[1]));
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            }
+        }
+        return result;
     }
     
     public override bool update_data (uint32 id, uint32 method, GLib.HashTable<string, GLib.Variant> data) {
-        return base.update_data (id, method, data);
+        string data_serialized = "";
+        foreach (var key in data.get_keys ()) {
+            data_serialized = data_serialized + key + "<!separator>" + data.lookup (key).print (true) + "\n";
+        }
+        return store_secret (SignonSecretType.DATA, id, method, data_serialized);
     }
     
     public override bool remove_data (uint32 id, uint32 method) {
-        return base.remove_data (id, method);
+        try {
+            return Secret.password_clear_sync (schema, null, "signon-id", id, "signon-method", method);
+        } catch (Error e) {
+            critical (e.message);
+            return false;
+        }
     }
     
     public override GLib.Error get_last_error () {
-        return base.get_last_error ();
+        return null;
     }
     
     public bool store_password (int type, int id, int method, string password) {
-        return Secret.password_store_sync (schema, Secret.COLLECTION_DEFAULT, "Online Account",
+        try {
+            return Secret.password_store_sync (schema, Secret.COLLECTION_DEFAULT, "Online Account",
                                         password, null, "signon-type", type, "signon-id", id,
                                         "signon-method", method);
+        } catch (Error e) {
+            critical (e.message);
+            return false;
+        }
+    }
+    
+    public bool store_secret (SignonSecretType type, uint32 id, uint32 method, string secret) {
+        var display_name = "Web Account: id %u-%u".printf (id, type);
+        string? signonMethod = (type == SignonSecretType.DATA) ? "signon-method" : null;
+        try {
+            Secret.password_store_sync(schema, Secret.COLLECTION_DEFAULT, display_name,
+                                        secret, null, "signon-type", type, "signon-id", id,
+                                        signonMethod, method);
+        } catch (Error e) {
+            critical (e.message);
+            return false;
+        }
+        
+        return true;
+    }
+
+    public bool load_secret (SignonSecretType type, uint32 id, uint32 method, out string secret) {
+        string? signonMethod = (type == SignonSecretType.DATA) ? "signon-method" : null;
+        
+        try {
+            string data = Secret.password_lookup_sync(schema, null, "signon-type", type,
+                                                  "signon-id", id, signonMethod, method);
+            secret = data;
+        } catch (Error e) {
+            warning (e.message);
+            return false;
+        }
+        return true;
     }
 }
 

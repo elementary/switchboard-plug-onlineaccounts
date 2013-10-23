@@ -1,0 +1,8 @@
+[Plugin]
+Module=generic-oauth
+IAge=2
+Name=OAuth integration
+Description=Enable OAuth support
+Authors=Switchboard Developers
+Copyright=Copyright © 2013 Switchboard Developers
+Website=http://launchpad.net/switchboard

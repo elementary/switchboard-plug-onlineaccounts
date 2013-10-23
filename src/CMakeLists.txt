@@ -20,7 +20,7 @@ vala_precompile (VALA_C ${PLUGNAME}
     Views/SourceSelector.vala
     Views/AccountView.vala
     Views/AccountPopOver.vala
-    ProviderPlugin.vala
+    Plugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS

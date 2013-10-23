@@ -22,22 +22,9 @@
 
 namespace OnlineAccounts.Database.Tables {
 
-public const string ACL = """
-CREATE TABLE IF NOT EXISTS ACL (`rowid` INT, `identity_id` INT,
-`method_id` INT, `mechanism_id` INT, `token_id` INT)
-""";
-
-public const string CREDIDENTIALS = """
-CREATE TABLE IF NOT EXISTS CREDIDENTIALS (`id` INT, `caption` TEXT, `username` TEXT,
-`flag` INT, `type` INT)
-""";
-
-public const string METHODS = """
-CREATE TABLE IF NOT EXISTS METHODS (`id` INT, `method` TEXT)
-""";
-
-public const string TOKENS = """
-CREATE TABLE IF NOT EXISTS TOKENS (`id` INT, `token` TEXT)
+public const string CREDENTIALS = """
+CREATE TABLE IF NOT EXISTS CREDENTIALS (`id` INT, `username` TEXT,
+`method` INT, `type` INT)
 """;
 
 }

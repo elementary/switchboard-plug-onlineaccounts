@@ -41,6 +41,7 @@ namespace OnlineAccounts {
         public override Signond.SecretStorage get_secret_storage (Signond.Config config) {
             if (keyring == null) {
                 keyring = new OnlineAccounts.Keyring ();
+                keyring.open_db ();
             }
             return keyring;
         }

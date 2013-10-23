@@ -38,7 +38,7 @@ public class OnlineAccounts.Plugins.Interface : Object {
 public class OnlineAccounts.Plugins.Manager : Object {
     Peas.Engine engine;
     Peas.ExtensionSet exts;
-    public signal void use_plugin (string plugin, Ag.Account? account = null);
+    public signal void use_plugin (Ag.Account account, bool new_account = false);
     
     public OnlineAccounts.Plugins.Interface plugin_iface { private set; get; }
     public Gee.ArrayList<string> plugins_available;
@@ -95,7 +95,7 @@ public class OnlineAccounts.Plugins.Manager : Object {
         foreach (var accountid in manager.list_enabled ()) {
             try {
                 var account = manager.load_account (accountid);
-                use_plugin (account.provider, account);
+                use_plugin (account, false);
             } catch (Error e) {
                 critical (e.message);
             }

@@ -4,6 +4,7 @@
   <icon>facebook</icon>
   <translations>online-accounts-plug</translations>
   <domains>.*facebook\.com</domains>
+  <plugin>generic-oauth</plugin>
 
   <template>
     <group name="auth">
@@ -13,10 +14,11 @@
         <group name="user_agent">
           <setting name="Host">www.facebook.com</setting>
           <setting name="AuthPath">/dialog/oauth</setting>
-          <setting name="RedirectUri">https://www.facebook.com/connect/login_success.html</setting>
+          <setting name="RedirectUri">http://elementaryos.org</setting>
           <setting name="Display">popup</setting>
           <setting type="as" name="Scope">['publish_stream','read_stream','status_update','user_photos','friends_photos','xmpp_login']</setting>
           <setting name="ClientId">217719465038528</setting>
+          <setting name="ClientSecret">394982b75bcd14e6859ffc2c6884ac23</setting>
           <setting type="as" name="AllowedSchemes">['https','http']</setting>
         </group>
       </group>

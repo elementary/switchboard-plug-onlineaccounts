@@ -66,7 +66,11 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         var manager = new Ag.Manager ();
         
         foreach (var provider in manager.list_providers ()) {
-            if (plugins_manager.plugins_available.contains (provider.get_name ())) {
+            if (provider == null)
+                continue;
+            if (provider.get_plugin_name () == null)
+                continue;
+            if (plugins_manager.plugins_available.contains (provider.get_plugin_name ())) {
                 var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
                 Gtk.TreeIter iter;
                 list_store.append (out iter);
@@ -94,7 +98,9 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         list_store.get_iter (out iter, path);
         GLib.Value src;
         list_store.get_value (iter, 2, out src);
-        plugins_manager.use_plugin (((Ag.Provider)src).get_name ());
+        var manager = new Ag.Manager ();
+        var account = manager.create_account (((Ag.Provider)src).get_name ());
+        plugins_manager.use_plugin (account, true);
         this.hide ();
     }
     

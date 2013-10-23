@@ -51,14 +51,15 @@ namespace Signond {
 	[CCode (cheader_filename = "gsignond/gsignond-credentials.h", type_id = "gsignond_credentials_get_type ()")]
 	[Compact]
 	public class Credentials : GLib.Object {
+		[CCode (has_construct_function = false)]
 		public Credentials ();
 		public bool set_data (uint32 id, string username, string password);
 		public bool set_id (uint32 id);
 		public uint32 get_id ();
 		public bool set_username (string username);
-		public string get_username ();
+		public unowned string get_username ();
 		public bool set_password (string password);
-		public string get_password ();
+		public unowned string get_password ();
 		public bool equal (Signond.Credentials one, Signond.Credentials two);
 	}
 	

@@ -23,9 +23,9 @@
 public class OnlineAccounts.AccountView : Gtk.Grid {
     
     Gtk.Grid main_grid;
-    OnlineAccounts.ProviderPlugin plugin;
+    OnlineAccounts.Plugin plugin;
     
-    public AccountView (OnlineAccounts.ProviderPlugin plugin) {
+    public AccountView (OnlineAccounts.Plugin plugin) {
         this.plugin = plugin;
         main_grid = new Gtk.Grid ();
         main_grid.margin = 12;

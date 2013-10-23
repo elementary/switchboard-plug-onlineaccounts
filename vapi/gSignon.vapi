@@ -38,9 +38,9 @@ namespace Signon {
 		GLib.HashTable<string,string[]> methods, string caption, string realms, Signon.SecurityContext owner, GLib.List<Signon.SecurityContext> access_control_list, Signon.IdentityType type, Signon.IdentityStoreCredentialsCb cb);
 		public void store_credentials_with_info (Signon.IdentityInfo info, Signon.IdentityStoreCredentialsCb cb);
 		public void verify_secret (string secret, Signon.IdentityVerifyCb cb);
-		public void add_reference (string reference, Signon.IdentityReferenceAddedCb cb, void* user_data);
-		public void remove (Signon.IdentityRemovedCb cb, void* user_data);
-		public void remove_reference (string reference, Signon.IdentityReferenceRemovedCb cb, void* user_data);
+		public void add_reference (string reference, Signon.IdentityReferenceAddedCb cb);
+		public void remove (Signon.IdentityRemovedCb cb);
+		public void remove_reference (string reference, Signon.IdentityReferenceRemovedCb cb);
 		[NoAccessorMethod]
 		public string app_ctx { owned get; set; }
 		[NoAccessorMethod]
@@ -70,7 +70,7 @@ namespace Signon {
 		public void set_access_control_list (GLib.List<Signon.SecurityContext> access_control_list);
 		public void set_caption (string caption);
 		public void set_identity_type (Signon.IdentityType type);
-		public void set_method (string method, string mechanisms);
+		public void set_method (string method, [CCode (array_length = false, array_null_terminated = true)] string[] mechanisms);
 		public void set_methods (GLib.HashTable<string,string[]> methods);
 		public void set_owner (Signon.SecurityContext owner);
 		public void set_owner_from_values (string system_context, string application_context);
@@ -191,18 +191,18 @@ namespace Signon {
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 3.9)]
 	public delegate void AuthSessionQueryAvailableMechanismsCb (Signon.AuthSession self, [CCode (array_length = false, array_null_terminated = true)] owned string[] mechanisms, GLib.Error error);
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 3.9)]
-	public delegate void IdentityInfoCb (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error);
+	public delegate void IdentityInfoCb (Signon.Identity self, Signon.IdentityInfo? info, GLib.Error error);
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", has_target = false)]
 	public delegate void IdentitySessionReadyCb (Signon.AuthSession self, GLib.Error error, GLib.DBusConnection connection, string bus_name, string object_path);
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 3.9)]
 	public delegate void IdentityStoreCredentialsCb (Signon.Identity self, uint32 id, GLib.Error error);
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 3.9)]
 	public delegate void IdentityVerifyCb (Signon.Identity self, bool valid, GLib.Error error);
-	[CCode (cheader_filename = "libsignon-glib/signon-glib.h", instance_pos = 2.9)]
+	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 2.9)]
 	public delegate void IdentityReferenceAddedCb (Signon.Identity self, GLib.Error error);
-	[CCode (cheader_filename = "libsignon-glib/signon-glib.h", instance_pos = 2.9)]
+	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 2.9)]
 	public delegate void IdentityReferenceRemovedCb (Signon.Identity self, GLib.Error error);
-	[CCode (cheader_filename = "libsignon-glib/signon-glib.h", instance_pos = 2.9)]
+	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 2.9)]
 	public delegate void IdentityRemovedCb (Signon.Identity self, GLib.Error error);
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", instance_pos = 2.9)]
 	public delegate void IdentityVoidCb (Signon.Identity self, GLib.Error error);
