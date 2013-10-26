@@ -28,6 +28,8 @@ public abstract class OnlineAccounts.Plugin : GLib.Object {
     public string password;
     public bool need_authentification;
     public bool is_new;
+    public GLib.Variant session_data;
+    public GLib.Variant session_result;
     
     public const string gsignon_id = "CredentialsId";
     
@@ -42,11 +44,11 @@ public abstract class OnlineAccounts.Plugin : GLib.Object {
     public async void delete_account () {
         account.select_service (null);
         var v_id = account.get_variant (gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "switchboard");
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "");
         identity.remove ((Signon.IdentityRemovedCb) null);
         account.delete ();
         yield account.store_async (null);
     }
-    public abstract async void authenticate ();
+    public abstract void setup_authentification ();
 
 }

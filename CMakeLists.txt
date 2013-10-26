@@ -107,4 +107,4 @@ set(GLOBAL_VALAC_OPTIONS
 
 add_subdirectory(src)
 add_subdirectory(extension)
-add_subdirectory(plugins)
+add_subdirectory (plugins)

@@ -51,7 +51,6 @@ namespace OnlineAccounts {
             main_grid.show_all ();
             this.add (main_grid);
             
-            check_folder ();
             plugins_manager.activate ();
             plugins_manager.load_accounts ();
             
@@ -60,24 +59,6 @@ namespace OnlineAccounts {
         public void on_exit () {
             warning ("do real destruction here");
             base.on_exit ();
-        }
-        
-        private void check_folder () {
-            try {
-                File directory = File.new_for_path (GLib.Environment.get_user_config_dir () + "/gsignond/");
-                if (!directory.query_exists ()) {
-                    directory.make_directory_with_parents ();
-                }
-                File file = File.new_for_path (GLib.Environment.get_user_config_dir () + "/gsignond/gsignond.conf");
-                if (!file.query_exists ()) {
-                    debug ("creating gsignond config file");
-                    var iostream = file.create_readwrite (GLib.FileCreateFlags.NONE);
-                    iostream.output_stream.write (config_file.data);
-                    iostream.close ();
-                }
-            } catch (Error e) {
-                stdout.printf ("Error: %s\n", e.message);
-            }
         }
         
         private void account_selected (OnlineAccounts.Plugin plugin) {
@@ -114,9 +95,3 @@ public static int main (string[] args) {
     Gtk.main ();
     return 0;
 }
-
-const string config_file = """[General]
-Extension = pantheon
-[ObjectTimeouts]
-IdentityTimeout = 5
-AuthSessionTimeout = 5""";

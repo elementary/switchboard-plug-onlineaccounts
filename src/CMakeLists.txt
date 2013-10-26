@@ -21,6 +21,7 @@ vala_precompile (VALA_C ${PLUGNAME}
     Views/AccountView.vala
     Views/AccountPopOver.vala
     Plugin.vala
+    SubPlugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS

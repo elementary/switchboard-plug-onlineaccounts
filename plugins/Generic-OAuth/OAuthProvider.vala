@@ -21,19 +21,44 @@
 
 public class OnlineAccounts.Plugins.OAuth2 : Plugin {
 
+    private string[] method_a;
+    Ag.Manager manager;
+    public Ag.AuthData auth_data;
+    public Signon.Identity identity;
+    public Signon.IdentityInfo info;
+    public GLib.MainLoop main_loop;
+
     public OAuth2 (Ag.Account account, bool is_new = false) {
         base (account, is_new);
+        var account_service = new Ag.AccountService (account, null);
+        auth_data = account_service.get_auth_data ();
         if (is_new) {
-            authenticate.begin ();
+            setup_authentification ();
         }
     }
     
-    public override async void authenticate () {
+    ~OAuth2 () {
+        warning ("destroy OAuth2");
+    }
+    
+    public override void setup_authentification () {
+        main_loop = new GLib.MainLoop ();
+        manager = new Ag.Manager ();
+        info = new Signon.IdentityInfo ();
+        info.set_caption (account.provider);
+        info.set_identity_type (Signon.IdentityType.APP);
+        info.set_secret ("", true);
+        info.set_method ("oauth", {"oauth1", "oauth2", null});
+        info.access_control_list_append (new Signon.SecurityContext.from_values ("*", "*"));
+        identity = new Signon.Identity ("");
+        identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
+        main_loop.run ();
+    }
+    
+    public async void authenticate (Signon.Identity identity, uint32 id) {
         
-        var manager = new Ag.Manager ();
-        var provider = manager.get_provider (account.provider);
-        var identity = new Signon.Identity ("switchboard");
-        var session = identity.create_session ("oauth");
+        GLib.Variant? v_id = new GLib.Variant.uint32 (id);
+        account.set_variant (gsignon_id, v_id);
         var oauth_params_builder = new GLib.VariantBuilder (GLib.VariantType.VARDICT);
         var method = account.get_variant ("auth/method", null).get_string ();
         var mechanism = account.get_variant ("auth/mechanism", null).get_string ();
@@ -44,7 +69,7 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         else if (mechanism == "web_server" || mechanism == "user_agent")
             method_a = {"oauth2", null};
         else
-            return;
+            method_a = {"", null};
         
         var host = account.get_variant ("auth/%s/%s/Host".printf(method, mechanism), null);
         if (host != null) {
@@ -97,6 +122,7 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
             oauth_params_builder.add ("{sv}", "AllowedSchemes", new GLib.Variant.string (string_from_string_array (schemes.get_strv (), ",")));
         
         oauth_params_builder.add ("{sv}", "ForceClientAuthViaRequestBody", new GLib.Variant.boolean (true));
+        oauth_params_builder.add ("{sv}", "QueryUserName", new GLib.Variant.boolean (true));
         
         var display = account.get_variant ("auth/%s/%s/Display".printf(method, mechanism), null);
         if (display != null)
@@ -134,86 +160,50 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         if (mode != null)
             oauth_params_builder.add ("{sv}", "Mode", mode);
         
-        var oauth_params = oauth_params_builder.end ();
+        session_data = oauth_params_builder.end ();
+        session_data = auth_data.get_login_parameters (session_data);
+        
         try {
-            GLib.Variant val = yield session.process_async (oauth_params, method_a[0], null);
-            var token_type = val.lookup_value ("TokenType", null).dup_string ();
-            var duration = val.lookup_value ("Duration", null).get_int64 ();
-            var timestamp = val.lookup_value ("Timestamp", null).get_int64 ();
-            var access_token = val.lookup_value ("AccessToken", null).dup_string ();
-            VariantIter iter = oauth_params.iterator ();
-            GLib.Variant? vari = null;
-            string? key = null;
-
-            while (iter.next ("{sv}", &key, &vari)) {
-                account.set_variant (key, vari);
-            }
-            account.set_enabled (true);
-            var info = new Signon.IdentityInfo ();
-            info.set_method ("oauth", {"oauth2", null});
+            var session = identity.create_session ("oauth");
+            session_result = yield session.process_async (session_data, method_a[0], null);
+            var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
             info.set_secret (access_token, true);
-            identity.store_credentials_with_info (info, (self, id, error) => {IdentityStoreCredentialsCallback1 (self, id, error, this);});
+        
+            foreach (var entry in plugins_manager.subplugins_available.entries) {
+                if (entry.key != "generic-oauth")
+                    continue;
+                if (entry.value.get_name () != account.provider)
+                    continue;
+                entry.value.execute_function ("get_user_name", this);
+            }
+            identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
         } catch (Error e) {
             critical (e.message);
         }
         yield;
     }
     
-    public void query_info_from_callback (Signon.Identity id) {
-        id.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
-    }
-    
-    public void store_credentials_from_callback (Signon.Identity id, Signon.IdentityInfo info) {
-        account.set_display_name (info.get_username ());
-        id.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback2 (sel, ide, err, this);});
-    }
-    
-    /*private string query_mail_address (string token_type, string token) {
-        var session = new Soup.SessionSync ();
-        var msg = new Soup.Message ("GET", "https://www.googleapis.com/oauth2/v1/userinfo?access_token=" + token);
-        msg.request_headers.append ("Authorization", token_type + " " + token);
-        session.send_message (msg);
-        try {
-            var parser = new Json.Parser ();
-            parser.load_from_data ((string) msg.response_body.flatten ().data, -1);
-
-            var root_object = parser.get_root ().get_object ();
-            string mail = root_object.get_string_member ("email");
-            return mail;
-        } catch (Error e) {
-            critical (e.message);
-        }
-        return "";
-    }*/
-    
-    public static void IdentityStoreCredentialsCallback1 (Signon.Identity self, uint32 id, GLib.Error error, OAuth2 pr) {
+    // Callbacks
+    public static void IdentityStoreCredentialsCallback (Signon.Identity self, uint32 id, GLib.Error error, OAuth2 pr) {
         if (error != null) {
             critical (error.message);
+            pr.main_loop.quit ();
             return;
         }
-        pr.query_info_from_callback (self);
+        pr.authenticate.begin (self, id);
     }
-    
-    public static void IdentityStoreCredentialsCallback2 (Signon.Identity self, uint32 id, GLib.Error error, OAuth2 pr) {
+    public static void IdentityInfoCallback (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error, OAuth2 pr) {
         if (error != null) {
             critical (error.message);
+            pr.main_loop.quit ();
             return;
         }
-        
-        GLib.Variant? v_id = new GLib.Variant.uint32 (id);
-        pr.account.set_variant (gsignon_id, v_id);
+        pr.account.set_enabled (true);
         pr.account.store_async.begin (null);
         if (pr.is_new == true) {
             accounts_manager.add_account (pr);
             pr.is_new = false;
         }
-    }
-    
-    public static void IdentityInfoCallback (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error, OAuth2 pr) {
-        if (error != null) {
-            critical (error.message);
-            return;
-        }
-        pr.store_credentials_from_callback (self, info);
+        pr.main_loop.quit ();
     }
 }

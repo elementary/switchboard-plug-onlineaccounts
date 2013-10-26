@@ -1,6 +1,5 @@
 find_package (PkgConfig)
 
-
 pkg_check_modules(OAUTHPLUGIN ${CORE_LIBRARY_NAME} libaccounts-glib libgsignon-glib rest-0.7 json-glib-1.0 libsoup-2.4)
 
 if (OAUTHPLUGIN_FOUND)
@@ -16,9 +15,11 @@ set (OAUTH_PLUGIN_PKG_DEPS
     ${DEPS_PACKAGES}
     libsoup-2.4
     rest-0.7
-    json-glib-1.0)
+    json-glib-1.0
+    gmodule-2.0)
 
 set(TARGET_NAME generic-oauth)
+
 vala_precompile(OAUTHPLUGIN_VALA_C ${TARGET_NAME}
     OAuth.vala
     OAuthProvider.vala

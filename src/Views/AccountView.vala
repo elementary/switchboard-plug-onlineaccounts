@@ -32,7 +32,12 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         main_grid.column_spacing = 6;
         main_grid.row_spacing = 6;
         
-        var label_str = "%s - %s".printf (plugin.account.get_display_name (), plugin.account.manager.get_provider (plugin.account.provider).get_display_name ());
+        string label_str;
+        var name = plugin.account.get_display_name ();
+        if (name == "" || name == null)
+            label_str = plugin.account.manager.get_provider (plugin.account.provider).get_display_name ();
+        else
+            label_str = "%s - %s".printf (plugin.account.get_display_name (), plugin.account.manager.get_provider (plugin.account.provider).get_display_name ());
         var user_label = new Gtk.Label (label_str);
         Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.H2, user_label);
         user_label.hexpand = true;

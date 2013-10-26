@@ -42,9 +42,11 @@ public class OnlineAccounts.Plugins.Manager : Object {
     
     public OnlineAccounts.Plugins.Interface plugin_iface { private set; get; }
     public Gee.ArrayList<string> plugins_available;
+    public Gee.HashMap<string, SubPlugin> subplugins_available;
 
     public Manager (string d, string? e, string? argument_set) {
         plugins_available = new Gee.ArrayList<string> ();
+        subplugins_available = new Gee.HashMap<string, SubPlugin> ();
         plugin_iface = new OnlineAccounts.Plugins.Interface (this);
         plugin_iface.argument = argument_set;
         plugin_iface.set_name = e ?? "online accounts";
@@ -104,6 +106,10 @@ public class OnlineAccounts.Plugins.Manager : Object {
     
     public void register_plugin (string plugin) {
         plugins_available.add (plugin);
+    }
+    
+    public void register_subplugin (string plugin_name, SubPlugin plugin) {
+        subplugins_available.set (plugin_name, plugin);
     }
 }
 

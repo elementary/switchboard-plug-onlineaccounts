@@ -26,6 +26,7 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
     private Gtk.TreeView tree_view;
     private Gee.HashMap<string, Gtk.TreeIter?> iter_map;
     private Gtk.TreeIter default_iter;
+    private Ag.Manager manager;
 
     private enum Columns {
         ICON,
@@ -63,7 +64,7 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         var selection = tree_view.get_selection ();
         selection.mode = Gtk.SelectionMode.BROWSE;
         
-        var manager = new Ag.Manager ();
+        manager = new Ag.Manager ();
         
         foreach (var provider in manager.list_providers ()) {
             if (provider == null)
@@ -98,10 +99,9 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         list_store.get_iter (out iter, path);
         GLib.Value src;
         list_store.get_value (iter, 2, out src);
-        var manager = new Ag.Manager ();
         var account = manager.create_account (((Ag.Provider)src).get_name ());
-        plugins_manager.use_plugin (account, true);
         this.hide ();
+        plugins_manager.use_plugin (account, true);
     }
     
 }
