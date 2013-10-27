@@ -5,7 +5,6 @@
   <icon>office-calendar</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>
-
   
   <template>
     <group name="auth">

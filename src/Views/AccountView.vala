@@ -71,7 +71,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
                 service_image.margin_left = 12;
                 
                 var service_label = new Gtk.Label ("");
-                service_label.set_markup ("<big>" + GLib.dgettext (i18n_domain, app.get_desktop_app_info ().get_string ("Name") + "</big>"));
+                service_label.set_markup ("<big>" + GLib.dgettext (i18n_domain, app.get_desktop_app_info ().get_string ("Name")) + "</big>");
                 service_label.xalign = 0;
                 
                 var service_description_label = new Gtk.Label (GLib.dgettext (app.get_i18n_domain (), app.get_service_usage (service)));

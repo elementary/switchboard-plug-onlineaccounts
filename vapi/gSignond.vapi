@@ -69,4 +69,99 @@ namespace Signond {
 		[CCode (has_construct_function = false)]
 		public AccessControlManager ();
 	}
+	
+	[CCode (cheader_filename = "gsignond/gsignond-credentials.h", copy_function = "gsignond_dictionary_copy", type_id = "gsignond_credentials_get_type ()")]
+	[Compact]
+	public class Dictionary : GLib.HashTable<string, GLib.Variant> {
+		[CCode (has_construct_function = false)]
+		public Dictionary ();
+		public Dictionary.new_from_variant (GLib.Variant variant);
+		public GLib.Variant to_variant ();
+		public unowned GLib.VariantBuilder to_variant_builder ();
+		public GLib.Variant get (string key);
+		public bool set (string key, GLib.Variant value);
+		public bool get_boolean (string key, out bool value);
+		public bool set_boolean (string key, bool value);
+		public bool get_int32 (string key, out int value);
+		public bool set_int32 (string key, int value);
+		public bool get_uint32 (string key, out uint value);
+		public bool set_uint32 (string key, uint32 value);
+		public bool get_int64 (string key, out int64 value);
+		public bool set_int64 (string key, int64 value);
+		public bool get_uint64 (string key, out uint64 value);
+		public bool set_uint64 (string key, uint64 value);
+		public unowned string get_string (string key);
+		public bool set_string (string key, string value);
+		public bool remove (string key);
+		public bool contains (string key);
+		public Signond.Dictionary @ref ();
+		public void unref ();
+	}
+	
+	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h")]
+	[Compact]
+	public enum SignonuiError {
+		NONE,
+		GENERAL,
+		NO_SIGNONUI,
+		BAD_PARAMETERS,
+		CANCELED,
+		NOT_AVAILABLE,
+		BAD_URL,
+		BAD_CAPTCHA,
+		BAD_CAPTCHA_URL,
+		REFRESH_FAILED,
+		FORBIDDEN,
+		FORGOT_PASSWORD
+	}
+	
+	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h")]
+	[Compact]
+	public class SignonuiData : Signond.Dictionary {
+		[CCode (has_construct_function = false)]
+		public SignonuiData ();
+		public string get_captcha_response ();
+		public void set_captcha_response (string response);
+		public string get_captcha_url ();
+		public void set_captcha_url (string url);
+		public string get_caption ();
+		public void set_caption (string caption);
+		public bool get_confirm (out bool confirm);
+		public void set_confirm (bool confirm);
+		public string get_final_url ();
+		public void set_final_url (string url);
+		public string get_forgot_password ();
+		public void set_forgot_password (string forgot);
+		public string get_forgot_password_url ();
+		public void set_forgot_password_url (string url);
+		public string get_message ();
+		public void set_message (string message);
+		public string get_open_url ();
+		public void set_open_url (string url);
+		public string get_password ();
+		public void set_password (string password);
+		public bool get_query_error (out SignonuiError error);
+		public void set_query_error (SignonuiError error);
+		public bool get_query_password (out bool query_password);
+		public void set_query_password (bool query);
+		public bool get_query_username (out bool query_username);
+		public void set_query_username (bool query);
+		public bool get_remember_password (out bool remember_password);
+		public void set_remember_password (bool remember);
+		public string get_request_id ();
+		public void set_request_id (string id);
+		public string get_test_reply ();
+		public void set_test_reply (string reply);
+		public string get_title ();
+		public void set_title (string title);
+		public string get_url_response ();
+		public void set_url_response (string response);
+		public string get_username ();
+		public void data_set_username (string username);
+	}
+}
+
+[CCode (cprefix = "G", lower_case_cprefix = "g_", cheader_filename = "glib.h", gir_namespace = "GObject", gir_version = "2.0")]
+namespace GLib.Signal {
+	public static void emitv (GLib.Value instance_and_params, uint signal_id, Quark detail, out GLib.Value return_value);
 }

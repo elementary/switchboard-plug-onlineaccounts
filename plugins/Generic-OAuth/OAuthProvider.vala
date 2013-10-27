@@ -37,10 +37,6 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         }
     }
     
-    ~OAuth2 () {
-        warning ("destroy OAuth2");
-    }
-    
     public override void setup_authentification () {
         main_loop = new GLib.MainLoop ();
         manager = new Ag.Manager ();
@@ -63,7 +59,6 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         var method = account.get_variant ("auth/method", null).get_string ();
         var mechanism = account.get_variant ("auth/mechanism", null).get_string ();
         
-        string[] method_a;
         if (mechanism == "PLAINTEXT" || mechanism == "HMAC-SHA1" || mechanism == "RSA-SHA1")
             method_a = {"oauth1", null};
         else if (mechanism == "web_server" || mechanism == "user_agent")

@@ -30,6 +30,7 @@ namespace OnlineAccounts {
         
         Gtk.Grid grid;
         AccountView account_view;
+        gSSOui.Server gsso_server;
         
         public Plug () {
             plug_name = _("Online Accounts");
@@ -53,7 +54,7 @@ namespace OnlineAccounts {
             
             plugins_manager.activate ();
             plugins_manager.load_accounts ();
-            
+            gsso_server = new gSSOui.Server (0);
         }
         
         public void on_exit () {

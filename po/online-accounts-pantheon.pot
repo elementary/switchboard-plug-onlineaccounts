@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-19 12:02+0200\n"
+"POT-Creation-Date: 2013-10-28 00:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:110
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//gSSO-ui/gsso-ui-dialog.c:189
+msgid "Enter your credentials"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:36
 msgid "Online Accounts"
 msgstr ""
 
@@ -31,32 +35,44 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:31
-msgid "<big>User name:</big>"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:42
-msgid "Remove Account"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:53
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:100
+msgid "<b>There is no application using this account.</b>"
 msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountDialog.vala:27
 msgid "Add an Account"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/google.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//OAuth-Subplugins/Facebook/facebook.vala:37
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Generic-OAuth/OAuth.vala:34
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:27
-msgid "Connect your Google Account"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+msgid "Google Calendar"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:93
-#, c-format
-msgid ""
-"Expected status 200 when requesting access token, instead got status %d (%s)"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Google Contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+msgid "Google Drive"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "GMail"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+msgid "Google Talk"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Picasa"
 msgstr ""

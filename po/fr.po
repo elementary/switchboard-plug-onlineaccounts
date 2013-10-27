@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-19 12:02+0200\n"
-"PO-Revision-Date: 2013-10-19 12:06+0100\n"
+"POT-Creation-Date: 2013-10-27 23:54+0100\n"
+"PO-Revision-Date: 2013-10-27 23:55+0100\n"
 "Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
 "Language-Team: Fr <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-02-07 05:18+0000\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:110
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//gSSO-ui/gsso-ui-dialog.c:189
+msgid "Enter your credentials"
+msgstr "Saisissez vos identifiants"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:36
 msgid "Online Accounts"
 msgstr "Comptes en-ligne"
 
@@ -32,39 +36,69 @@ msgstr "Ajouter…"
 msgid "Remove"
 msgstr "Retirer"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:31
-msgid "<big>User name:</big>"
-msgstr "<big>Nom d'utilisateur :</big>"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:42
-msgid "Remove Account"
-msgstr "Supprimer le compte"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:53
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
 msgstr "<b>Applications utilisant ce service :</b>"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:100
+msgid "<b>There is no application using this account.</b>"
+msgstr "<b>Aucune application n'utilise ce compte.</b>"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountDialog.vala:27
 msgid "Add an Account"
 msgstr "Ajouter un compte"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/google.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//OAuth-Subplugins/Facebook/facebook.vala:37
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Generic-OAuth/OAuth.vala:34
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr ""
 "Inclus la gestion des contacts, de Gmail, Google Documents, Google+, Youtube "
 "et Picasa"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:27
-msgid "Connect your Google Account"
-msgstr "Connectez-vous à votre compte Google"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+msgid "Google Calendar"
+msgstr "Calendrier Google"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Google/webview.vala:93
-#, c-format
-msgid ""
-"Expected status 200 when requesting access token, instead got status %d (%s)"
-msgstr ""
-"État 200 attendu lors de la requête du jeton d'accès, état %d (%s) reçu à la "
-"place"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Google Contacts"
+msgstr "Contacts Google"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "GMail"
+msgstr "GMail"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+msgid "Google Talk"
+msgstr "Google Talk"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Picasa"
+msgstr "Picasa"
+
+#, fuzzy
+#~ msgid "</big>"
+#~ msgstr "<b><big>   </big></b>"
+
+#~ msgid "<big>User name:</big>"
+#~ msgstr "<big>Nom d'utilisateur :</big>"
+
+#~ msgid "Remove Account"
+#~ msgstr "Supprimer le compte"
+
+#~ msgid "Connect your Google Account"
+#~ msgstr "Connectez-vous à votre compte Google"
+
+#~ msgid ""
+#~ "Expected status 200 when requesting access token, instead got status %d "
+#~ "(%s)"
+#~ msgstr ""
+#~ "État 200 attendu lors de la requête du jeton d'accès, état %d (%s) reçu à "
+#~ "la place"
 
 #~ msgid ""
 #~ "There are currently no applications installed which integrate with your "
@@ -72,9 +106,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Il n'y a actuellement aucune application installée utilisant votre compte "
 #~ "%s."
-
-#~ msgid "The following applications integrate with your %s account:"
-#~ msgstr "Les applications suivantes peuvent utiliser votre compte %s :"
 
 #~ msgid "Grant access"
 #~ msgstr "Autoriser l'accès"

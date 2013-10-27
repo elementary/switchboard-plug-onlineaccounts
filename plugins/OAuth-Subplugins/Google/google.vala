@@ -33,10 +33,6 @@ namespace OnlineAccounts.Plugins.OAuth.Google {
             GLib.Object ();
         }
         
-        internal void translation () {
-            var desc = _("Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa");
-        }
-        
         public void activate () {
             debug ("Activating Google plugin");
             subplugin = new SubPlugin ();

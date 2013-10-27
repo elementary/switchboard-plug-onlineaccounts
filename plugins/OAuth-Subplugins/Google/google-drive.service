@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="service">
   <type>documents</type>
-  <name>GoogleDrive</name>
+  <name>Google Drive</name>
   <icon>system-file-manager</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>

@@ -71,6 +71,7 @@ set(DEPS_PACKAGES
     libpeas-1.0
     json-glib-1.0
     libsecret-1
+    webkitgtk-3.0
 )
 
 set(DEPS_PKG
@@ -87,6 +88,7 @@ set(DEPS_PKG
     libpeas-1.0
     json-glib-1.0
     libsecret-1
+    webkitgtk-3.0
 )
 
 add_subdirectory (po)

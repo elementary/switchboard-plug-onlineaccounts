@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="google-im">
   <type>IM</type>
-  <name>GoogleTalk</name>
+  <name>Google Talk</name>
   <icon>im-google-talk</icon>
   <provider>google</provider>
   <translations>online-accounts-plug</translations>
- 
   
   <template>
     <group name="telepathy">
