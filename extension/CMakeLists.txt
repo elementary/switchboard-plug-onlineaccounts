@@ -1,25 +1,6 @@
 find_package (PkgConfig)
 
 set (CMAKE_INCLUDE_CURRENT_DIR ON)
-#
-# SQLHeavy: Use version 0.2 if it is available; otherwise, fall back to 0.1
-#
-pkg_check_modules(SQLHEAVY2 QUIET sqlheavy-0.2)
-if (SQLHEAVY2_FOUND)
-    message("-- Will use sqlheavy-0.2")
-    set(DEPS_PACKAGES ${DEPS_PACKAGES} sqlheavy-0.2)
-    set(SQLHEAVY_CFLAGS ${SQLHEAVY2_CFLAGS})
-    set(SQLHEAVY_LIBRARY_DIRS ${SQLHEAVY2_LIBRARY_DIRS})
-    set(SQLHEAVY_LIBRARIES ${SQLHEAVY2_LIBRARIES})
-else ()
-    message("-- Will use sqlheavy-0.1")
-    pkg_check_modules(SQLHEAVY REQUIRED sqlheavy-0.1)
-    set(DEPS_PACKAGES ${DEPS_PACKAGES} sqlheavy-0.1)
-endif ()
-
-set(DEPS_CFLAGS ${DEPS_CFLAGS} ${SQLHEAVY_CFLAGS})
-set(DEPS_LIBRARIES ${DEPS_LIBRARIES} ${SQLHEAVY_LIBRARIES})
-set(DEPS_LIBRARY_DIRS ${DEPS_LIBRARY_DIRS} ${SQLHEAVY_LIBRARY_DIRS})
 
 #
 # Libnotify
