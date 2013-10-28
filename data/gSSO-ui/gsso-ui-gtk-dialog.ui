@@ -137,17 +137,13 @@
           <object class="GtkHButtonBox" id="btnbx_ok_cancel">
             <child>
               <object class="GtkButton" id="btn_ok">
-                <property name="label">gtk-ok</property>
+                <property name="label">Save</property>
                 <property name="sensitive">FALSE</property>
-                <property name="use-stock">TRUE</property>
-                <property name="always-show-image">TRUE</property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="btn_cancel">
-                <property name="label">gtk-cancel</property>
-                <property name="use-stock">TRUE</property>
-                <property name="always-show-image">TRUE</property>
+                <property name="label">Cancel</property>
               </object>
             </child>
           </object>

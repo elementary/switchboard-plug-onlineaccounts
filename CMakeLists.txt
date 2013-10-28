@@ -7,7 +7,7 @@ cmake_policy (VERSION 2.6)
 # Set the Properties of your Plug
 
 # Set the Name of the plug, should be an executable command, lowercase, no spaces 
-set (PLUGNAME "online-accounts-pantheon")
+set (PLUGNAME "pantheon-online-accounts")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
 set (PLUGCATEGORY "network")

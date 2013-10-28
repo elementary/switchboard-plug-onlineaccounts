@@ -140,7 +140,7 @@ gsso_ui_dialog_init (GSSOUIDialog *self)
     self->error_code = GSSO_UI_QUERY_ERROR_NONE;
     self->destroy_handler_id = 0;
     self->builder = gtk_builder_new ();
-    gtk_builder_set_translation_domain  (self->builder, "online-accounts-pantheon");
+    gtk_builder_set_translation_domain  (self->builder, "pantheon-online-accounts");
 }
 
 static gboolean

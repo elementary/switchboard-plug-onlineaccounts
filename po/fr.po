@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 23:54+0100\n"
-"PO-Revision-Date: 2013-10-27 23:55+0100\n"
+"POT-Creation-Date: 2013-10-28 22:50+0100\n"
+"PO-Revision-Date: 2013-10-28 22:53+0100\n"
 "Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
 "Language-Team: Fr <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,8 +49,6 @@ msgid "Add an Account"
 msgstr "Ajouter un compte"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//OAuth-Subplugins/Facebook/facebook.vala:37
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../plugins//Generic-OAuth/OAuth.vala:34
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr ""
 "Inclus la gestion des contacts, de Gmail, Google Documents, Google+, Youtube "
@@ -79,6 +77,62 @@ msgstr "Google Talk"
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
 msgstr "Picasa"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
+msgid "&lt;b&gt;Username&lt;/b&gt;"
+msgstr "&lt;b&gt;Nom d'utilisateur&lt;/b&gt;"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Enter username"
+msgstr "Saisir le nom d'utilisateur"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
+msgid "&lt;b&gt;Password&lt;/b&gt;"
+msgstr "&lt;b&gt;Mot de passe&lt;/b&gt;"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+msgid "Password"
+msgstr "Mot de Passe"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "&lt;b&gt;New Password&lt;/b&gt;"
+msgstr "&lt;b&gt;Nouveau mot de passe&lt;/b&gt;"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
+msgid "New password"
+msgstr "Nouveau mot de Passe"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
+msgid "&lt;b&gt;Confirm Password&lt;/b&gt;"
+msgstr "&lt;b&gt;Confirmer le mot de passe&lt;/b&gt;"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:38
+msgid "Re-type new password"
+msgstr "Re-saisir le mot de passe"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:39
+msgid "Remember password"
+msgstr "Se souvenir du mot de passe"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:40
+msgid "Forgot password"
+msgstr "Mot de passe oublié"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:41
+msgid "Enter above text here"
+msgstr "Saisir le texte ci-dessus"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:42
+msgid "Message"
+msgstr "Message"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:43
+msgid "Save"
+msgstr "Enregistrer"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:44
+msgid "Cancel"
+msgstr "Annuler"
 
 #, fuzzy
 #~ msgid "</big>"
