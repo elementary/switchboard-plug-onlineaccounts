@@ -48,8 +48,8 @@ Depends: ${misc:Depends},
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plug for Switchboard (development files)
  This plug allow you to enable online accounts sync.
- 
- This package contains the header and development files
+ .
+ This package contains the header files.
 
 Package: online-accounts-pantheon-plugin-generic-oauth
 Architecture: any
