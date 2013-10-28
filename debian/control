@@ -8,14 +8,14 @@ Build-Depends: cmake (>= 2.8),
                libgee-dev (>= 0.5.3),
                libgtk-3-dev (>= 3.10.0),
                libgranite-dev,
-               libpantheon-dev
-               libaccounts-glib-dev
-               libgsignon-glib-dev
-               libgsignond-common-dev
-               libpeas-dev
-               libjson-glib-dev
-               libsecret-1-dev
-               libwebkitgtk-3.0-dev
+               libpantheon-dev,
+               libaccounts-glib-dev,
+               libgsignon-glib-dev,
+               libgsignond-common-dev,
+               libpeas-dev,
+               libjson-glib-dev,
+               libsecret-1-dev,
+               libwebkitgtk-3.0-dev,
                valac-0.22 | valac (>= 0.22)
 Standards-Version: 0.1.0
 Homepage: https://launchpad.net/switchboard-plug-onlineaccounts
@@ -43,7 +43,8 @@ Description:  gSSO extension for the pantheon desktop
 
 Package: libonline-accounts-pantheon-dev
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plug for Switchboard (development files)
  This plug allow you to enable online accounts sync.
