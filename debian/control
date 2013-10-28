@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
 Build-Depends: cmake (>= 2.8),
-               debhelper (>= 7.0.50~),
+               debhelper (>= 9),
                libglib2.0-dev (>= 2.26.0),
                libgee-dev (>= 0.5.3),
                libgtk-3-dev (>= 3.8.0),
@@ -16,7 +16,7 @@ Build-Depends: cmake (>= 2.8),
                libjson-glib-dev,
                libsecret-1-dev,
                libwebkitgtk-3.0-dev,
-               valac-0.22 | valac (>= 0.22)
+               valac (>= 0.22) | valac-0.22
 Standards-Version: 0.1.0
 Homepage: https://launchpad.net/switchboard-plug-onlineaccounts
 Vcs-Bzr: lp:switchboard-plug-onlineaccounts
@@ -41,7 +41,7 @@ Description:  gSSO extension for the pantheon desktop
  gSSO is a single sign-on framework, providing secure storage and single sign-on
   service.
 
-Package: libonline-accounts-pantheon-dev
+Package: libpantheon-online-accounts-dev
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
@@ -51,7 +51,7 @@ Description: Online Accounts plug for Switchboard (development files)
  .
  This package contains the header files.
 
-Package: online-accounts-pantheon-plugin-generic-oauth
+Package: pantheon-online-accounts-plugin-generic-oauth
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
@@ -60,30 +60,30 @@ Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Generic OAuth
  Online accounts plugin for single signon
 
-Package: online-accounts-pantheon-plugin-facebook
+Package: pantheon-online-accounts-plugin-facebook
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         online-accounts-pantheon-plugin-generic-oauth,
+         pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Facebook
  Online accounts plugin for single signon
 
-Package: online-accounts-pantheon-plugin-microsoft
+Package: pantheon-online-accounts-plugin-microsoft
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         online-accounts-pantheon-plugin-generic-oauth,
+         pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Microsoft
  Online accounts plugin for single signon
 
-Package: online-accounts-pantheon-plugin-google
+Package: pantheon-online-accounts-plugin-google
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         online-accounts-pantheon-plugin-generic-oauth,
+         pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
