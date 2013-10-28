@@ -30,6 +30,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
     }
     
     Secret.Schema schema = null;
+    Error error = null;
     public override bool open_db () {
         if (schema == null)
         schema = new Secret.Schema ("com.ubuntu.OnlineAccounts.Secrets", Secret.SchemaFlags.DONT_MATCH_NAME,
@@ -75,6 +76,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
             return Secret.password_clear_sync (schema, null, "signon-id", id);
         } catch (Error e) {
             critical (e.message);
+            error = e;
             return false;
         }
     }
@@ -94,6 +96,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
                     result.set (entries[0], GLib.Variant.parse (null, entries[1]));
                 } catch (Error e) {
                     critical (e.message);
+                    error = e;
                 }
             }
         }
@@ -113,12 +116,13 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
             return Secret.password_clear_sync (schema, null, "signon-id", id, "signon-method", method);
         } catch (Error e) {
             critical (e.message);
+            error = e;
             return false;
         }
     }
     
     public override GLib.Error get_last_error () {
-        return null;
+        return error;
     }
     
     public bool store_password (int type, int id, int method, string password) {
@@ -128,6 +132,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
                                         "signon-method", method);
         } catch (Error e) {
             critical (e.message);
+            error = e;
             return false;
         }
     }
@@ -141,6 +146,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
                                         signonMethod, method);
         } catch (Error e) {
             critical (e.message);
+            error = e;
             return false;
         }
         
@@ -156,6 +162,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
             secret = data;
         } catch (Error e) {
             warning (e.message);
+            error = e;
             return false;
         }
         return true;

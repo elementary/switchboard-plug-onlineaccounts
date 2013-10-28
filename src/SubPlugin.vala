@@ -22,6 +22,7 @@
 
 public abstract class OnlineAccounts.SubPlugin : GLib.Object {
     
+    public abstract string get_plugin_name ();
     public abstract string get_name ();
     public abstract void execute_function (string function_name, GLib.Object arg);
 

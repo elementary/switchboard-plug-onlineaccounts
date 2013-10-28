@@ -47,4 +47,8 @@ public class OnlineAccounts.Plugins.OAuth.Microsoft.SubPlugin : OnlineAccounts.S
     public override string get_name () {
         return subplugin_name;
     }
+    
+    public override string get_plugin_name () {
+        return plugin_name;
+    }
 }

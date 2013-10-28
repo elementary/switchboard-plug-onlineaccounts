@@ -23,30 +23,16 @@ public class OnlineAccounts.Plugins.OAuth.Facebook.SubPlugin : OnlineAccounts.Su
     
     public override void execute_function (string function_name, GLib.Object arg) {
         if (function_name == "get_user_name") {
-            var plugin = arg as OnlineAccounts.Plugin;
-            var token_type = plugin.session_result.lookup_value ("TokenType", null).dup_string ();
-            var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
-            var session = new Soup.SessionSync ();
-            var msg = new Soup.Message ("GET", "https://www.googleapis.com/oauth2/v1/userinfo?access_token=" + token);
-            msg.request_headers.append ("Authorization", token_type + " " + token);
-            session.send_message (msg);
-            try {
-                var parser = new Json.Parser ();
-                parser.load_from_data ((string) msg.response_body.flatten ().data, -1);
-
-                var root_object = parser.get_root ().get_object ();
-                string mail = root_object.get_string_member ("email");
-                
-                plugin.account.set_display_name (mail);
-                
-            } catch (Error e) {
-                critical (e.message);
-            }
+            
             
         }
     }
     
     public override string get_name () {
         return subplugin_name;
+    }
+    
+    public override string get_plugin_name () {
+        return plugin_name;
     }
 }

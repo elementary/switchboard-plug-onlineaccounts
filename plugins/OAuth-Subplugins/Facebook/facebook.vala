@@ -33,14 +33,10 @@ namespace OnlineAccounts.Plugins.OAuth.Facebook {
             GLib.Object ();
         }
         
-        internal void translation () {
-            var desc = _("Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa");
-        }
-        
         public void activate () {
             debug ("Activating Facebook plugin");
             subplugin = new SubPlugin ();
-            plugins_manager.register_subplugin (plugin_name, subplugin);
+            plugins_manager.register_subplugin (subplugin);
         }
 
         public void deactivate () {

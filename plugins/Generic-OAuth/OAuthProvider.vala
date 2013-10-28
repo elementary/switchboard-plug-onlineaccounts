@@ -164,12 +164,12 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
             var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
             info.set_secret (access_token, true);
         
-            foreach (var entry in plugins_manager.subplugins_available.entries) {
-                if (entry.key != "generic-oauth")
+            foreach (var subplugin in plugins_manager.subplugins_available) {
+                if (subplugin.get_plugin_name () != "generic-oauth")
                     continue;
-                if (entry.value.get_name () != account.provider)
+                if (subplugin.get_name () != account.provider)
                     continue;
-                entry.value.execute_function ("get_user_name", this);
+                subplugin.execute_function ("get_user_name", this);
             }
             identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
         } catch (Error e) {

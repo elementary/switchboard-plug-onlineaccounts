@@ -34,7 +34,7 @@ public class OnlineAccounts.AccountsManager : Object {
     }
     ~AccountsManager () {
         if (to_delete != null) {
-            to_delete.delete_account ();
+            to_delete.delete_account.begin ();
         }
     }
     
@@ -46,7 +46,7 @@ public class OnlineAccounts.AccountsManager : Object {
     public void remove_account (Plugin account) {
         accounts_available.remove (account);
         if (to_delete != null) {
-            to_delete.delete_account ();
+            to_delete.delete_account.begin ();
         }
         to_delete = account;
         

@@ -36,9 +36,7 @@ public class OnlineAccounts.Plugins.OAuth.Google.SubPlugin : OnlineAccounts.SubP
 
                 var root_object = parser.get_root ().get_object ();
                 string mail = root_object.get_string_member ("email");
-                
                 plugin.account.set_display_name (mail);
-                
             } catch (Error e) {
                 critical (e.message);
             }
@@ -48,5 +46,9 @@ public class OnlineAccounts.Plugins.OAuth.Google.SubPlugin : OnlineAccounts.SubP
     
     public override string get_name () {
         return subplugin_name;
+    }
+    
+    public override string get_plugin_name () {
+        return plugin_name;
     }
 }

@@ -36,7 +36,7 @@ namespace OnlineAccounts.Plugins.OAuth.Microsoft {
         public void activate () {
             debug ("Activating Microsoft plugin");
             subplugin = new SubPlugin ();
-            plugins_manager.register_subplugin (plugin_name, subplugin);
+            plugins_manager.register_subplugin (subplugin);
         }
 
         public void deactivate () {

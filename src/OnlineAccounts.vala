@@ -57,9 +57,8 @@ namespace OnlineAccounts {
             gsso_server = new gSSOui.Server (0);
         }
         
-        public void on_exit () {
+        ~Plug () {
             warning ("do real destruction here");
-            base.on_exit ();
         }
         
         private void account_selected (OnlineAccounts.Plugin plugin) {
