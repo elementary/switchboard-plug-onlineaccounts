@@ -2,3 +2,4 @@
 /usr/share/pantheon-online-accounts/generic-oauth-plugins/microsoft.plugin
 /usr/share/icons/hicolor/scalable/apps/microsoft.svg
 /usr/etc/signon-ui/webkit-options.d/login.live.com.conf
+usr/share/accounts/providers/microsoft*

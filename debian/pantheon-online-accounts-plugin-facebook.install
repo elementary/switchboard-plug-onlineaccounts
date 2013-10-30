@@ -3,3 +3,4 @@
 /usr/share/icons/hicolor/scalable/apps/facebook.svg
 /usr/etc/signon-ui/webkit-options.d/www.facebook.com.conf
 usr/share/accounts/providers/facebook*
+usr/share/accounts/services/facebook*
