@@ -2,3 +2,4 @@
 /usr/share/pantheon-online-accounts/generic-oauth-plugins/facebook.plugin
 /usr/share/icons/hicolor/scalable/apps/facebook.svg
 /usr/etc/signon-ui/webkit-options.d/www.facebook.com.conf
+usr/share/accounts/providers/facebook*

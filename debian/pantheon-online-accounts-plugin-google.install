@@ -2,3 +2,4 @@
 /usr/share/pantheon-online-accounts/generic-oauth-plugins/google.plugin
 /usr/share/icons/hicolor/scalable/apps/google.svg
 /usr/etc/signon-ui/webkit-options.d/accounts.google.com.conf
+usr/share/accounts/providers/google*
