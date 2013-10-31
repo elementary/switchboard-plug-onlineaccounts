@@ -79,7 +79,7 @@ set(DEPS_PKG
     gio-2.0
     gio-unix-2.0
     gee-1.0
-    gtk+-3.0
+    gtk+-3.0>=3.8
     granite
     pantheon
     libaccounts-glib
