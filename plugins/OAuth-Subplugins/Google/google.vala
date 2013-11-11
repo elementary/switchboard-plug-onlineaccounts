@@ -19,40 +19,22 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
-
-namespace OnlineAccounts.Plugins.OAuth.Google {
-    
-    private const string plugin_name = "generic-oauth";
-    private const string subplugin_name = "google";
-        
-    public class Plugin : Peas.ExtensionBase, Peas.Activatable {
-        public GLib.Object object { owned get; construct; }
-        public SubPlugin subplugin;
-
-        public Plugin () {
-            GLib.Object ();
-        }
-        
-        public void activate () {
-            debug ("Activating Google plugin");
-            subplugin = new SubPlugin ();
-            plugins_manager.register_subplugin (subplugin);
-        }
-
-        public void deactivate () {
-            debug ("Deactivating Google plugin");
-        }
-
-        public void update_state () {
-            // do nothing
-        }
-        
-    }
+[ModuleInit]
+void plugin_init (GLib.TypeModule type_module)
+{
+    if (OnlineAccounts.plugins_manager.subplugins_name_available.contains (OnlineAccounts.Plugins.OAuth.subplugin_name))
+        return;
+    debug ("Activating Google plugin");
+    OnlineAccounts.plugins_manager.subplugins_name_available.add (OnlineAccounts.Plugins.OAuth.subplugin_name);
+    OnlineAccounts.plugins_manager.get_subplugins.connect (register_subplugin);
 }
 
-[ModuleInit]
-public void peas_register_types (GLib.TypeModule module) {
-    var objmodule = module as Peas.ObjectModule;
-    objmodule.register_extension_type (typeof (Peas.Activatable),
-                                     typeof (OnlineAccounts.Plugins.OAuth.Google.Plugin));
+private void register_subplugin () {
+    var subplugin = new OnlineAccounts.Plugins.OAuth.Google.SubPlugin ();
+    OnlineAccounts.plugins_manager.register_subplugin (subplugin);
+}
+
+namespace OnlineAccounts.Plugins.OAuth {
+    private const string plugin_name = "generic-oauth";
+    private const string subplugin_name = "google";
 }

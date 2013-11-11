@@ -25,12 +25,14 @@
 public class OnlineAccounts.AccountsManager : Object {
     
     public Gee.ArrayList<unowned Plugin> accounts_available;
+    public Gee.ArrayList<unowned Plugin> accounts_to_add;
     private Plugin to_delete; // Store it here and wait until the user is sure to remove it.
     
-    public signal void account_added (Plugin account);
+    public signal void account_added ();
 
     public AccountsManager () {
         accounts_available = new Gee.ArrayList<unowned Plugin> ();
+        accounts_to_add = new Gee.ArrayList<unowned Plugin> ();
     }
     ~AccountsManager () {
         if (to_delete != null) {
@@ -39,8 +41,8 @@ public class OnlineAccounts.AccountsManager : Object {
     }
     
     public void add_account (Plugin account) {
-        accounts_available.add (account);
-        account_added (account);
+        accounts_to_add.add (account);
+        account_added ();
     }
     
     public void remove_account (Plugin account) {

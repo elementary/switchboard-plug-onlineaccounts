@@ -24,6 +24,7 @@
 #include "config.h"
 #endif
 #include "gsso-ui-utils.h"
+#include "config.c"
 
 
 GHashTable * g_variant_map_to_hash_table (GVariant *params)
@@ -79,5 +80,5 @@ g_hash_map_get_bool (GHashTable *map, const gchar *key)
 
 const gchar * get_ui_files_dir ()
 {
-    return "/usr/lib/plugs/pantheon/online-accounts";
+    return BUILD_PKG_DATADIR;
 }

@@ -23,10 +23,12 @@ namespace Signond {
 	[CCode (cheader_filename = "gsignond/gsignond-storage-manager.h", type_id = "gsignond_storage_manager_get_type ()")]
 	public class StorageManager : GLib.Object {
 		[CCode (has_construct_function = false)]
-		public StorageManager ();
+		public StorageManager (Config config);
+		[NoAccessorMethod]
+		public Config config { owned get; set;}
 		public virtual bool initialize_storage ();
 		public virtual bool delete_storage ();
-		public virtual bool is_initialized ();
+		public virtual bool storage_is_initialized ();
 		public virtual string mount_filesystem ();
 		public virtual bool unmount_filesystem ();
 		public virtual bool filesystem_is_mounted ();

@@ -29,6 +29,8 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     
     private Gtk.ToolButton remove_button;
     private Gtk.ToolButton add_button;
+    
+    private Plugin last_selected;
 
     private enum Columns {
         ICON,
@@ -37,11 +39,11 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         N_COLUMNS
     }
     
-    public signal void account_selected (OnlineAccounts.Plugin plugin);
+    public signal void account_selected ();
     
     public SourceSelector () {
         
-        list_store = new Gtk.ListStore (Columns.N_COLUMNS, typeof (string), typeof (string), typeof (OnlineAccounts.Plugin));
+        list_store = new Gtk.ListStore (Columns.N_COLUMNS, typeof (string), typeof (string), typeof (Object));
         tree_view = new Gtk.TreeView.with_model (list_store);
         tree_view.activate_on_single_click = true;
         iter_map = new Gee.HashMap<string, Gtk.TreeIter?> ();
@@ -106,27 +108,39 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         attach (toolbar, 0, 1, 1, 1);
         
         tree_view.row_activated.connect ((path, column) => {
-            Gtk.TreeIter iter;
-            list_store.get_iter (out iter, path);
-            OnlineAccounts.Plugin plugin;
-            list_store.get (iter, Columns.PLUGIN, out plugin);
-            account_selected (plugin);
+            account_selected ();
         });
     }
     
-    private void add_plugin_callback (OnlineAccounts.Plugin plugin) {
-        var provider = plugin.account.get_manager ().get_provider (plugin.account.provider);
-        Gtk.TreeIter iter;
-        list_store.append (out iter);
-        list_store.set (iter, Columns.ICON, provider.get_icon_name (), 
-                               Columns.TEXT, "<b>" + provider.get_display_name () + "</b>\n"+ plugin.account.display_name,
-                               Columns.PLUGIN, plugin);
+    private void add_plugin_callback () {
+        foreach (var plugin in accounts_manager.accounts_to_add) {
+            var provider = plugin.account.get_manager ().get_provider (plugin.account.provider);
+            Gtk.TreeIter iter;
+            list_store.append (out iter);
+            list_store.set (iter, Columns.ICON, provider.get_icon_name (), 
+                                   Columns.TEXT, "<b>" + provider.get_display_name () + "</b>\n"+ plugin.account.display_name,
+                                   Columns.PLUGIN, plugin);
+            var selection = tree_view.get_selection ();
+            if (selection.count_selected_rows () <= 0) {
+                selection.select_iter (iter);
+                last_selected = plugin;
+                account_selected ();
+            }
+            accounts_manager.accounts_available.add (plugin);
+        }
+        accounts_manager.accounts_to_add.clear ();
+    }
+    
+    public OnlineAccounts.Plugin? get_selected_account () {
+        Gtk.TreeModel model;
+        Gtk.TreeIter? iter;
         var selection = tree_view.get_selection ();
-        if (selection.count_selected_rows () <= 0) {
-            list_store.get_iter_first (out iter);
-            selection.unselect_all ();
-            selection.select_iter (iter);
-            account_selected (plugin);
+        if (selection.get_selected (out model, out iter)) {
+            OnlineAccounts.Plugin plugin;
+            list_store.get (iter, Columns.PLUGIN, out plugin);
+            return plugin;
+        } else {
+            return last_selected;
         }
     }
     
@@ -137,33 +151,36 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     }
     
     private void remove_source () {
-        Gtk.TreeModel model;
-        Gtk.TreeIter? iter;
-        var selection = tree_view.get_selection ();
-        if (selection.get_selected (out model, out iter)) {
-            OnlineAccounts.Plugin plugin;
-            list_store.get (iter, Columns.PLUGIN, out plugin);
-            accounts_manager.remove_account (plugin);
-            bool show_welcome = false;
-            list_store.remove (iter);
-            selection = tree_view.get_selection ();
-            selection.get_selected (out model, out iter);
-            if (iter == null) {
-                if (!model.get_iter_first (out iter)) {
-                    show_welcome = true;
-                } else {
-                    selection.unselect_all ();
+        var account = get_selected_account ();
+        if (account != null) {
+            var selection = tree_view.get_selection ();
+            Gtk.TreeModel model;
+            Gtk.TreeIter? iter;
+            if (selection.get_selected (out model, out iter)) {
+                list_store.remove (iter);
+                accounts_manager.remove_account (account);
+                if (list_store.get_iter_first (out iter)) {
                     selection.select_iter (iter);
+                    OnlineAccounts.Plugin plugin;
+                    list_store.get (iter, Columns.PLUGIN, out plugin);
+                    last_selected = null;
+                    account_selected ();
+                }
+            } else {
+                if (list_store.get_iter_first (out iter)) {
+                    list_store.remove (iter);
+                    accounts_manager.remove_account (account);
+                    if (list_store.get_iter_first (out iter)) {
+                        selection.select_iter (iter);
+                        OnlineAccounts.Plugin plugin;
+                        list_store.get (iter, Columns.PLUGIN, out plugin);
+                        last_selected = null;
+                        account_selected ();
+                    }
                 }
             }
-            
-            if (!show_welcome) {
-                model.get (iter, Columns.PLUGIN, out plugin);
-                account_selected (plugin);
-            } else {
-                //TODO: show_welcome !
-            }
-            
+        } else {
+            //Show welcome.
         }
     }
     

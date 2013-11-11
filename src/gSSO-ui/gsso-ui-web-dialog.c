@@ -90,6 +90,31 @@ _get_reply (GSSOUIDialog *dialog)
     return reply;
 }
 
+#ifdef ENABLE_TESTS
+static gboolean
+_handle_test_reply (GSSOUIDialog *dialog, const gchar *test_reply)
+{
+    char **iter;
+    char **pairs = NULL;
+    GSSOUIWebDialog *self = GSSO_UI_WEB_DIALOG(dialog);
+
+    if (!self || !test_reply) return FALSE;
+
+    pairs = g_strsplit (test_reply, ",", 0);
+    for (iter = pairs; *iter; iter++) {
+        char **pair = g_strsplit (*iter, ":", 2);
+        if (g_strv_length (pair) == 2) {
+            if (g_strcmp0 (pair[0], GSSO_UI_KEY_URL_RESPONSE) == 0) {
+                self->oauth_response = g_strdup (pair[1]);
+            }
+        }
+        g_strfreev (pair);
+    }
+    g_strfreev (pairs);
+
+    return TRUE;
+}
+#endif
 
 static void
 gsso_ui_web_dialog_class_init (GSSOUIWebDialogClass *klass)
@@ -100,6 +125,9 @@ gsso_ui_web_dialog_class_init (GSSOUIWebDialogClass *klass)
     g_klass->finalize = _finalize;
 
     GSSO_UI_DIALOG_CLASS(klass)->get_reply = _get_reply;
+#ifdef ENABLE_TESTS
+    GSSO_UI_DIALOG_CLASS(klass)->handle_test_reply = _handle_test_reply;
+#endif
 }
 
 static void
@@ -239,7 +267,6 @@ gsso_ui_web_dialog_set_parameters (GSSOUIWebDialog *self, GHashTable *params)
 GSSOUIDialog *
 gsso_ui_web_dialog_new (GHashTable *params)
 {
-    GValue lang = G_VALUE_INIT;
     gchar *ui_file =  g_build_filename (get_ui_files_dir(), "gsso-ui-web-dialog.ui", NULL);
     GSSOUIDialog *dialog = g_object_new (
             GSSO_TYPE_UI_WEB_DIALOG,
@@ -247,11 +274,9 @@ gsso_ui_web_dialog_new (GHashTable *params)
             "parameters", params, NULL);
 
     g_free (ui_file);
-    
+
     SoupSession *session = webkit_get_default_session ();
-    g_value_init (&lang, G_TYPE_BOOLEAN);
-    g_value_set_boolean (&lang, true);
-    g_object_set_property (G_OBJECT (session), SOUP_SESSION_ACCEPT_LANGUAGE_AUTO, &lang);
+    g_object_set (G_OBJECT (session), SOUP_SESSION_ACCEPT_LANGUAGE_AUTO, TRUE, NULL);
 
     gsso_ui_web_dialog_set_parameters (GSSO_UI_WEB_DIALOG(dialog), params);
 

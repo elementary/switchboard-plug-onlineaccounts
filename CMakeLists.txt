@@ -22,10 +22,10 @@ project (${PLUGNAME})
 # Only alter stuff below if you know what you are doing #
 #########################################################
 
-set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/plugs")
+set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/switchboard")
 set (PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/share/${PLUGNAME}")
 set (ACCOUNTS_DIR "${CMAKE_INSTALL_PREFIX}/share/accounts")
-set (PKGDATADIR "${DATADIR}/pantheon/online-accounts")
+set (PKGDATADIR "${DATADIR}/network/pantheon-online-accounts")
 set (GETTEXT_PACKAGE "${PLUGNAME}")
 
 
@@ -42,8 +42,8 @@ set(SRC_TARGET ${CMAKE_PROJECT_NAME})
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (plug.plug ${CMAKE_BINARY_DIR}/${PLUGNAME}.plug)
-install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plug DESTINATION ${PKGDATADIR})
+configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
+install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\" -w)
 
 
@@ -64,7 +64,7 @@ set(DEPS_PACKAGES
     gtk+-3.0
     posix
     granite
-    pantheon
+    switchboard
     accounts
     gSignon
     gSignond
@@ -72,6 +72,7 @@ set(DEPS_PACKAGES
     json-glib-1.0
     libsecret-1
     webkitgtk-3.0
+    gmodule-2.0
 )
 
 set(DEPS_PKG
@@ -81,7 +82,7 @@ set(DEPS_PKG
     gee-1.0
     gtk+-3.0>=3.8
     granite
-    pantheon
+    switchboard
     libaccounts-glib
     libgsignon-glib
     gsignond
@@ -89,6 +90,7 @@ set(DEPS_PKG
     json-glib-1.0
     libsecret-1
     webkitgtk-3.0
+    gmodule-2.0
 )
 
 add_subdirectory (po)
@@ -107,6 +109,6 @@ set(GLOBAL_VALAC_OPTIONS
     --thread
 )
 
-add_subdirectory(src)
-add_subdirectory(extension)
+add_subdirectory (src)
+add_subdirectory (extension)
 add_subdirectory (plugins)

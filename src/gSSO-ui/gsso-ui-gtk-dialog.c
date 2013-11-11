@@ -181,6 +181,43 @@ _refresh_captcha (GSSOUIDialog *dialog, const gchar *uri)
     return TRUE;
 }
 
+#ifdef ENABLE_TESTS
+static gboolean
+_handle_test_reply (GSSOUIDialog *dialog, const gchar *test_reply)
+{
+    char **iter;
+    char **pairs = g_strsplit (test_reply, ",", 0);
+    GSSOUIGtkDialog *self = GSSO_UI_GTK_DIALOG(dialog);
+
+    if (!self || !test_reply) return FALSE;
+
+    for (iter = pairs; *iter; iter++) {
+        char **pair = g_strsplit (*iter, ":", 2);
+        if (g_strv_length (pair) == 2) {
+            if (g_strcmp0 (pair[0], GSSO_UI_KEY_CAPTCHA_RESPONSE) == 0) {
+                gtk_entry_set_text (self->txt_captcha, pair[1]);
+            } else if (g_strcmp0 (pair[0], GSSO_UI_KEY_PASSWORD) == 0) {
+                gtk_entry_set_text (self->txt_password, pair[1]);
+            } else if (g_strcmp0 (pair[0], GSSO_UI_KEY_CONFIRM_SECRET) == 0) {
+                gtk_entry_set_text (self->txt_new_password, pair[1]); 
+                gtk_entry_set_text (self->txt_confirm_password, pair[1]); 
+            } else if (g_strcmp0 (pair[0], GSSO_UI_KEY_QUERY_ERROR_CODE) == 0) {
+                dialog->error_code = atoi(pair[1]);
+            } else if (g_strcmp0 (pair[0], GSSO_UI_KEY_REMEMBER_PASSWORD) == 0) {
+                gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->chk_remember_password),
+                    !g_ascii_strcasecmp (pair[1], "true"));
+            } else if (g_strcmp0 (pair[0], GSSO_UI_KEY_USERNAME) == 0) {
+                    gtk_entry_set_text (self->txt_username, pair[1]);
+            }
+        }
+        g_strfreev (pair);
+    }
+    g_strfreev (pairs);
+
+    return TRUE;
+}
+#endif
+
 static void
 gsso_ui_gtk_dialog_class_init (GSSOUIGtkDialogClass *klass)
 {
@@ -190,6 +227,9 @@ gsso_ui_gtk_dialog_class_init (GSSOUIGtkDialogClass *klass)
     g_klass->dispose = _dispose;
     dialog_klass->get_reply = _get_reply;
     dialog_klass->refresh_captcha = _refresh_captcha;
+#ifdef ENABLE_TESTS
+    dialog_klass->handle_test_reply = _handle_test_reply;
+#endif
 
     signals[REFRES_CAPTCHA_SIGNAL] =
         g_signal_new ("refresh-captcha",

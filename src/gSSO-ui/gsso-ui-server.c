@@ -46,6 +46,10 @@ struct _GSSOUIServer
     GHashTable *dialog_services;
     GSSOUIRequestQueue *request_queue;
     guint32 timeout;
+#ifdef ENABLE_TIMEOUT
+    gulong request_queue_notify_handler_id;
+    guint daemon_timer_id;
+#endif
 };
 
 G_DEFINE_TYPE(GSSOUIServer, gsso_ui_server, G_TYPE_OBJECT)
@@ -75,6 +79,17 @@ DBG("{");
         g_free (self->socket_file_path);
         self->socket_file_path = NULL;
     }
+#ifdef ENABLE_TIMEOUT
+    if (self->daemon_timer_id) {
+        g_source_remove (self->daemon_timer_id);
+        self->daemon_timer_id = 0;
+    }
+    if (self->request_queue_notify_handler_id) {
+        g_signal_handler_disconnect (self->request_queue,
+                    self->request_queue_notify_handler_id);
+        self->request_queue_notify_handler_id = 0;
+    }
+#endif
     if (self->dialog_services) {
         g_hash_table_foreach (self->dialog_services, 
             _disconnect_connection_close_handler, self);
@@ -94,6 +109,41 @@ gsso_ui_server_class_init (GSSOUIServerClass *klass)
     G_OBJECT_CLASS (klass)->dispose = _dispose;
 }
 
+#ifdef ENABLE_TIMEOUT
+static gboolean
+_close_server (gpointer data)
+{
+    GSSOUIServer *self = GSSO_UI_SERVER (data);
+
+    if (!self) return FALSE;
+ 
+    g_source_remove (self->daemon_timer_id);
+    self->daemon_timer_id = 0;
+
+    DBG ("closing serve as its timed out");
+    g_object_unref (self);
+
+    return FALSE;
+}
+
+static void
+_on_request_queue_notify (GSSOUIServer *self, GParamSpec *pspec, GSSOUIRequestQueue *queue)
+{
+    gboolean is_idle = gsso_ui_request_queue_is_idle (queue);
+    
+    if (self->daemon_timer_id) {
+        g_source_remove (self->daemon_timer_id);
+        self->daemon_timer_id = 0;
+    }
+
+    if (is_idle && self->timeout) {
+        DBG ("setting dameon timeout to %d seconds", self->timeout);
+        self->daemon_timer_id = g_timeout_add_seconds (
+                self->timeout, _close_server, self);
+    }
+}
+#endif
+
 static void
 gsso_ui_server_init (GSSOUIServer *self)
 {
@@ -104,6 +154,12 @@ gsso_ui_server_init (GSSOUIServer *self)
     self->dialog_services = g_hash_table_new_full (
         g_direct_hash, g_direct_equal, NULL, g_object_unref);
     self->request_queue = gsso_ui_request_queue_new ();
+#ifdef ENABLE_TIMEOUT
+    self->request_queue_notify_handler_id = g_signal_connect_swapped (
+            self->request_queue, "notify::is-idle", 
+            G_CALLBACK(_on_request_queue_notify), self);
+    _on_request_queue_notify (self, NULL, self->request_queue);
+#endif
 }
 
 static void

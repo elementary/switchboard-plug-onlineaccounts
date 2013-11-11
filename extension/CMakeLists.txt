@@ -28,6 +28,7 @@ vala_precompile(EXTENSION_VALA_C ${EXTENSION_NAME}
     Extension.vala
     Keyring.vala
     Tables.vala
+    StorageManager.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS

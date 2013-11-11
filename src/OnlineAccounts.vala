@@ -25,49 +25,80 @@ namespace OnlineAccounts {
     
     public Plugins.Manager plugins_manager;
     public AccountsManager accounts_manager;
+    public UIManager ui_manager;
     
-    public class Plug : Pantheon.Switchboard.Plug {
+    public class Plug : Switchboard.Plug {
         
         Gtk.Grid grid;
+        Gtk.Grid main_grid;
         AccountView account_view;
+        SourceSelector source_selector;
+        Granite.Widgets.ThinPaned paned;
         gSSOui.Server gsso_server;
-        
+        Gtk.Widget current_widget_ui;
+
         public Plug () {
-            plug_name = _("Online Accounts");
-            plugins_manager = new Plugins.Manager (Build.PLUGIN_DIR, "online-accounts", null);
+            plugins_manager = new Plugins.Manager ();
             accounts_manager = new AccountsManager ();
-            
-            var main_grid = new Gtk.Grid ();
-            var paned = new Granite.Widgets.ThinPaned ();
-            var source_selector = new SourceSelector ();
-            source_selector.account_selected.connect (account_selected);
-            grid = new Gtk.Grid ();
-            grid.expand = true;
-            
-            paned.pack1 (source_selector, false, false);
-            paned.pack2 (grid, true, false);
-            paned.set_position (200);
-            
-            main_grid.attach (paned, 0, 0, 1, 1);
-            main_grid.show_all ();
-            this.add (main_grid);
-            
-            plugins_manager.activate ();
-            plugins_manager.load_accounts ();
-            gsso_server = new gSSOui.Server (0);
+            ui_manager = new UIManager ();
+            category = Category.NETWORK;
+            code_name = "network-pantheon-online-accounts"; // The name it is recognised with the open-plug command
+            display_name = _("Online Accounts");
+            description = _("Synchronize your computer with all your online accounts around the web.");
+            icon = "preferences-desktop-online-accounts";
         }
-        
         ~Plug () {
-            warning ("do real destruction here");
+            debug ("do real destruction here");
         }
         
-        private void account_selected (OnlineAccounts.Plugin plugin) {
+        public override Gtk.Widget get_widget () {
+            if (main_grid == null) {
+                main_grid = new Gtk.Grid ();
+                paned = new Granite.Widgets.ThinPaned ();
+                source_selector = new SourceSelector ();
+                source_selector.account_selected.connect (account_selected);
+                grid = new Gtk.Grid ();
+                grid.expand = true;
+                
+                paned.pack1 (source_selector, false, false);
+                paned.pack2 (grid, true, false);
+                paned.set_position (200);
+                
+                main_grid.attach (paned, 0, 0, 1, 1);
+                main_grid.show_all ();
+                plugins_manager.activate ();
+                plugins_manager.load_accounts ();
+                gsso_server = new gSSOui.Server (0);
+                ui_manager.widget_registered.connect (new_account_widget);
+            }
+            return main_grid;
+        }
+        
+        public override void close () {
+        
+        }
+        
+        // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+        public override async Gee.TreeMap<string, string> search (string search) {
+            return new Gee.TreeMap<string, string> (null, null);
+        }
+        
+        private void account_selected () {
             if (account_view != null) {
                 account_view.hide ();
             }
-            account_view = new AccountView (plugin);
+            account_view = new AccountView (source_selector.get_selected_account ());
             grid.attach (account_view, 0, 0, 1, 1);
             account_view.show_all ();
+        }
+        
+        private void new_account_widget () {
+            if (current_widget_ui != null)
+                return;
+            paned.hide ();
+            current_widget_ui = ui_manager.widgets_available.peek ();
+            main_grid.attach (current_widget_ui, 0, 0, 1, 1);
+            current_widget_ui.show ();
         }
 
     }
@@ -85,13 +116,4 @@ namespace OnlineAccounts {
         }
         return output;
     }
-}
-public static int main (string[] args) {
-
-    Gtk.init (ref args);
-    var plug = new OnlineAccounts.Plug ();
-    plug.register (plug.plug_name);
-    plug.show_all ();
-    Gtk.main ();
-    return 0;
 }

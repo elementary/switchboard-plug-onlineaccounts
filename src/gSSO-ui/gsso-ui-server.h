@@ -46,10 +46,6 @@ GType gsso_ui_server_get_type();
 
 GSSOUIServer* gsso_ui_server_new ();
 
-gboolean gsso_ui_server_start ();
-
-void gsso_ui_server_stop();
-
 void gsso_ui_server_push_dialog (GSSOUIServer *self,
                                  GSSOUIDialogService *serive,
                                  GDBusMethodInvocation *invocation,

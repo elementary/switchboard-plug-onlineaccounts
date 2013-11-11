@@ -17,26 +17,24 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Zeeshan Ali (Khattak) <zeeshanak@gnome.org> (from Rygel)
+ *              Lucas Baudin <xapantu@gmail.com> (from Pantheon Files)
+ *              Corentin Noël <tintou@mailoo.org>
  */
 
-[ModuleInit]
-void plugin_init (GLib.TypeModule type_module)
-{
-    if (OnlineAccounts.plugins_manager.plugins_available.contains (OnlineAccounts.Plugins.OAuth.subplugin_name))
-        return;
-    debug ("Activating Facebook plugin");
-    OnlineAccounts.plugins_manager.subplugins_name_available.add (OnlineAccounts.Plugins.OAuth.subplugin_name);
-    OnlineAccounts.plugins_manager.get_subplugins.connect (register_subplugin);
-}
-
-private void register_subplugin () {
-    var subplugin = new OnlineAccounts.Plugins.OAuth.Facebook.SubPlugin ();
-    OnlineAccounts.plugins_manager.register_subplugin (subplugin);
+public class OnlineAccounts.UIManager : GLib.Object {
     
-}
-
-namespace OnlineAccounts.Plugins.OAuth {
-    private const string plugin_name = "generic-oauth";
-    private const string subplugin_name = "facebook";
+    public signal void widget_registered ();
+    
+    public Gee.LinkedList<Gtk.Widget> widgets_available;
+    
+    public UIManager () {
+        widgets_available = new Gee.LinkedList<Gtk.Widget> ();
+    }
+    
+    public void register_widget (Gtk.Widget widget) {
+        warning ("");
+        widgets_available.add (widget);
+        widget_registered ();
+    }
 }

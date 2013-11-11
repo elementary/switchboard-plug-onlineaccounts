@@ -26,7 +26,6 @@
 #include "gsso-ui-dialog.h"
 #include "gsso-ui-log.h"
 #include "gsso-ui-utils.h"
-#include <glib/gi18n-lib.h>
 
 G_DEFINE_TYPE (GSSOUIDialog, gsso_ui_dialog, G_TYPE_OBJECT)
 
@@ -140,7 +139,6 @@ gsso_ui_dialog_init (GSSOUIDialog *self)
     self->error_code = GSSO_UI_QUERY_ERROR_NONE;
     self->destroy_handler_id = 0;
     self->builder = gtk_builder_new ();
-    gtk_builder_set_translation_domain  (self->builder, "pantheon-online-accounts");
 }
 
 static gboolean
@@ -186,7 +184,7 @@ gsso_ui_dialog_set_parameters (GSSOUIDialog *dialog, GHashTable *params)
 
     caption = g_hash_map_get_string (params, GSSO_UI_KEY_CAPTION);
     title = g_hash_map_get_string (params, GSSO_UI_KEY_TITLE);
-    if (!title) title = _("Enter your credentials");
+    if (!title) title = "Enter your credentials";
 
     dialog_title = caption ? g_strdup_printf("%s-%s", caption, title)
                            : g_strdup_printf("%s", title);

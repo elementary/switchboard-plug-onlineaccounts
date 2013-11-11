@@ -25,6 +25,7 @@ namespace OnlineAccounts {
     public class Extension : Signond.Extension {
         
         OnlineAccounts.Keyring keyring;
+        OnlineAccounts.StorageManager storage_manager;
         
         public override string get_extension_name () {
             return "pantheon";
@@ -35,7 +36,11 @@ namespace OnlineAccounts {
         }
         
         public override Signond.StorageManager get_storage_manager (Signond.Config config) {
-            return base.get_storage_manager (config);
+            if (storage_manager == null) {
+                storage_manager = (OnlineAccounts.StorageManager)GLib.Object.new (typeof(OnlineAccounts.StorageManager), "config", config, null);
+            }
+            return storage_manager;
+        
         }
         
         public override Signond.SecretStorage get_secret_storage (Signond.Config config) {

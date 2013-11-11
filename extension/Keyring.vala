@@ -89,6 +89,8 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
         var result = new GLib.HashTable<string, GLib.Variant>(null, null);
         string data_serialized;
         load_secret (SignonSecretType.DATA, id, method, out data_serialized);
+        if (data_serialized == null)
+            return result;
         foreach (var entry in data_serialized.split ("\n")) {
             if (entry != null) {
                 var entries = entry.split ("<!separator>", 2);

@@ -20,23 +20,30 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
-[ModuleInit]
-void plugin_init (GLib.TypeModule type_module)
-{
-    if (OnlineAccounts.plugins_manager.plugins_available.contains (OnlineAccounts.Plugins.OAuth.subplugin_name))
-        return;
-    debug ("Activating Facebook plugin");
-    OnlineAccounts.plugins_manager.subplugins_name_available.add (OnlineAccounts.Plugins.OAuth.subplugin_name);
-    OnlineAccounts.plugins_manager.get_subplugins.connect (register_subplugin);
-}
+public class OnlineAccounts.Widget.WebDialog : GLib.Object {
 
-private void register_subplugin () {
-    var subplugin = new OnlineAccounts.Plugins.OAuth.Facebook.SubPlugin ();
-    OnlineAccounts.plugins_manager.register_subplugin (subplugin);
+    GLib.HashTable<string, GLib.Variant> params;
+    Gtk.Widget webview;
+    const string oauth_open_url;
+    const string oauth_final_url;
+    string oauth_response;
+    ulong webkit_redirect_handler_id;
+    GSSOUIQueryError error_code;
     
-}
+    public WebDialog (GLib.HashTable<string, GLib.Variant> params) {
+        this.params = params;
+    }
+    
+    public async void delete_account () {
+        account.select_service (null);
+        var v_id = account.get_variant (gsignon_id, null);
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "");
+        identity.remove ((Signon.IdentityRemovedCb) null);
+        account.delete ();
+        yield account.store_async (null);
+    }
+    public virtual void setup_authentification () {
+    
+    }
 
-namespace OnlineAccounts.Plugins.OAuth {
-    private const string plugin_name = "generic-oauth";
-    private const string subplugin_name = "facebook";
 }

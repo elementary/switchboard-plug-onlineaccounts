@@ -23,7 +23,7 @@
 #ifndef _GSSO_UI_WEB_DIALOG_H_
 #define _GSSO_UI_WEB_DIALOG_H_
 
-#include "gsso-ui-dialog.h"
+#include <gsso-ui-dialog.h>
 
 #define GSSO_TYPE_UI_WEB_DIALOG (gsso_ui_web_dialog_get_type())
 #define GSSO_UI_WEB_DIALOG(o)   (G_TYPE_CHECK_INSTANCE_CAST ((o), GSSO_TYPE_UI_WEB_DIALOG, GSSOUIWebDialog))

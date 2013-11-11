@@ -20,7 +20,7 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
-public abstract class OnlineAccounts.Plugin : GLib.Object {
+public class OnlineAccounts.Plugin : GLib.Object {
 
     public Ag.Account account;
     public Ag.Provider provider;
@@ -49,6 +49,8 @@ public abstract class OnlineAccounts.Plugin : GLib.Object {
         account.delete ();
         yield account.store_async (null);
     }
-    public abstract void setup_authentification ();
+    public virtual void setup_authentification () {
+    
+    }
 
 }

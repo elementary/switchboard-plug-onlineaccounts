@@ -1230,8 +1230,12 @@ _sso_dbus_uidialog_skeleton_handle_method_call (
   g_value_set_object (&paramv[n++], invocation);
   if (info->pass_fdlist)
     {
+#ifdef G_OS_UNIX
       g_value_init (&paramv[n], G_TYPE_UNIX_FD_LIST);
       g_value_set_object (&paramv[n++], g_dbus_message_get_unix_fd_list (g_dbus_method_invocation_get_message (invocation)));
+#else
+      g_assert_not_reached ();
+#endif
     }
   g_variant_iter_init (&iter, parameters);
   while ((child = g_variant_iter_next_value (&iter)) != NULL)

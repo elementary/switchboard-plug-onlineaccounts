@@ -19,48 +19,24 @@
  *      Alberto Mardegan <alberto.mardegan@canonical.com>
  */
 
-namespace OnlineAccounts.Plugins.OAuth {
-    
-    private const string plugin_name = "generic-oauth";
-        
-    public class Plugin : Peas.ExtensionBase, Peas.Activatable {
-        public GLib.Object object { owned get; construct; }
-
-        public Plugin () {
-            GLib.Object ();
-        }
-        
-        public void activate () {
-            debug ("Activating OAuth plugin");
-            plugins_manager.use_plugin.connect (use_plugin);
-            plugins_manager.register_plugin (plugin_name);
-        }
-
-        public void deactivate () {
-            debug ("Deactivating OAuth plugin");
-            plugins_manager.use_plugin.disconnect (use_plugin);
-        }
-
-        public void update_state () {
-            // do nothing
-        }
-        
-        public void use_plugin (Ag.Account account, bool is_new = false) {
-            var manager = new Ag.Manager ();
-            var provider = manager.get_provider (account.provider);
-            if (provider.get_plugin_name () == plugin_name) {
-                var plu = new OAuth2 (account, is_new);
-                if (is_new == false)
-                    accounts_manager.add_account (plu);
-            }
-        }
-        
-    }
-}
-
 [ModuleInit]
-public void peas_register_types (GLib.TypeModule module) {
-    var objmodule = module as Peas.ObjectModule;
-    objmodule.register_extension_type (typeof (Peas.Activatable),
-                                     typeof (OnlineAccounts.Plugins.OAuth.Plugin));
+void plugin_init (GLib.TypeModule type_module)
+{
+    if (OnlineAccounts.plugins_manager.plugins_available.contains (OnlineAccounts.Plugins.OAuth.plugin_name))
+        return;
+    message ("Activating Generic OAuth plugin");
+    OnlineAccounts.plugins_manager.register_plugin (OnlineAccounts.Plugins.OAuth.plugin_name);
+    OnlineAccounts.plugins_manager.use_plugin.connect (OnlineAccounts.Plugins.OAuth.use_plugin);
+}
+namespace OnlineAccounts.Plugins.OAuth {
+    private const string plugin_name = "generic-oauth";
+    public static void use_plugin (Ag.Account account, bool is_new = false) {
+        var manager = new Ag.Manager ();
+        var provider = manager.get_provider (account.provider);
+        if (provider.get_plugin_name () == plugin_name) {
+            var plu = new OAuth2 (account, is_new);
+            if (is_new == false)
+                accounts_manager.add_account (plu);
+        }
+    }
 }

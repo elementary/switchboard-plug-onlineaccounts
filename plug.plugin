@@ -1,0 +1,7 @@
+[Plugin]
+Module=@PLUGNAME@
+Name=POA
+Description=POA
+Authors=Switchboard Developers
+Copyright=Copyright © 2013 Switchboard Developers
+Website=http://launchpad.net/switchboard

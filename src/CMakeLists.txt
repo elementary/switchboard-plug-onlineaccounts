@@ -18,11 +18,13 @@ vala_precompile (VALA_C ${PLUGNAME}
     OnlineAccounts.vala
     AccountsManager.vala
     PluginManager.vala
+    UIManager.vala
     Threads.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
     Views/AccountPopOver.vala
     Plugin.vala
+    Plug.vala
     SubPlugin.vala
 CUSTOM_VAPIS
     gSSO-ui/gSSO-ui.vapi
@@ -37,7 +39,6 @@ GENERATE_HEADER
 )
 
 if (BUILD_SHARED_LIBS)
-    install(TARGETS ${CLIENT_LIBRARY_NAME} DESTINATION lib)
     # Install lib stuffs
     install (FILES ${CMAKE_BINARY_DIR}/src/${PLUGNAME}.pc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig/)
     install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.vapi DESTINATION share/vala/vapi/)
@@ -45,7 +46,7 @@ if (BUILD_SHARED_LIBS)
     install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.h DESTINATION include/${PLUGNAME}/)
 endif ()
 
-add_executable (${PLUGNAME} 
+add_library (${PLUGNAME} MODULE 
     gSSO-ui/gsso-ui-dbus-glue.c
     gSSO-ui/gsso-ui-dialog.c
     gSSO-ui/gsso-ui-dialog-dbus-glue.c
