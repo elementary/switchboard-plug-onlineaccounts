@@ -22,7 +22,8 @@ project (${PLUGNAME})
 # Only alter stuff below if you know what you are doing #
 #########################################################
 
-set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/switchboard")
+include (GNUInstallDirs)
+set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
 set (PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/share/${PLUGNAME}")
 set (ACCOUNTS_DIR "${CMAKE_INSTALL_PREFIX}/share/accounts")
 set (PKGDATADIR "${DATADIR}/network/pantheon-online-accounts")
@@ -64,7 +65,7 @@ set(DEPS_PACKAGES
     gtk+-3.0
     posix
     granite
-    switchboard
+    switchboard-2.0
     accounts
     gSignon
     gSignond
@@ -82,7 +83,7 @@ set(DEPS_PKG
     gee-1.0
     gtk+-3.0>=3.8
     granite
-    switchboard
+    switchboard-2.0
     libaccounts-glib
     libgsignon-glib
     gsignond

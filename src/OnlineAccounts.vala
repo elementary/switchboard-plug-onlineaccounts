@@ -38,14 +38,14 @@ namespace OnlineAccounts {
         Gtk.Widget current_widget_ui;
 
         public Plug () {
+            Object (category: Category.NETWORK,
+                    code_name: "network-pantheon-online-accounts",
+                    display_name: _("Online Accounts"),
+                    description: _("Synchronize your computer with all your online accounts around the web."),
+                    icon: "preferences-desktop-online-accounts");
             plugins_manager = new Plugins.Manager ();
             accounts_manager = new AccountsManager ();
             ui_manager = new UIManager ();
-            category = Category.NETWORK;
-            code_name = "network-pantheon-online-accounts"; // The name it is recognised with the open-plug command
-            display_name = _("Online Accounts");
-            description = _("Synchronize your computer with all your online accounts around the web.");
-            icon = "preferences-desktop-online-accounts";
         }
         ~Plug () {
             debug ("do real destruction here");
@@ -74,7 +74,15 @@ namespace OnlineAccounts {
             return main_grid;
         }
         
-        public override void close () {
+        public override void shown () {
+        
+        }
+        
+        public override void hidden () {
+        
+        }
+        
+        public override void search_callback (string location) {
         
         }
         
@@ -101,6 +109,20 @@ namespace OnlineAccounts {
             current_widget_ui.show ();
         }
 
+        public override void activate () {
+            message ("Activating OA plugin");
+            var plug = new OnlineAccounts.Plug ();
+            Switchboard.PlugsManager.get_default ().register_plug (plug);
+        }
+
+        public override void deactivate () {
+            message ("Deactivating OA plugin");
+        }
+
+        public override void update_state () {
+            
+        }
+
     }
     
     public static string string_from_string_array (string[] strv, string separator = " ") {
@@ -116,4 +138,11 @@ namespace OnlineAccounts {
         }
         return output;
     }
+}
+
+[ModuleInit]
+private void peas_register_types (GLib.TypeModule module) {
+    var objmodule = module as Peas.ObjectModule;
+    objmodule.register_extension_type (typeof (Peas.Activatable),
+                                     typeof (OnlineAccounts.Plug));
 }

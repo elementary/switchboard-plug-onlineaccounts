@@ -24,7 +24,6 @@ vala_precompile (VALA_C ${PLUGNAME}
     Views/AccountView.vala
     Views/AccountPopOver.vala
     Plugin.vala
-    Plug.vala
     SubPlugin.vala
 CUSTOM_VAPIS
     gSSO-ui/gSSO-ui.vapi
@@ -40,7 +39,7 @@ GENERATE_HEADER
 
 if (BUILD_SHARED_LIBS)
     # Install lib stuffs
-    install (FILES ${CMAKE_BINARY_DIR}/src/${PLUGNAME}.pc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig/)
+    install (FILES ${CMAKE_BINARY_DIR}/src/${PLUGNAME}.pc DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig/)
     install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.vapi DESTINATION share/vala/vapi/)
     install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/${PLUGNAME}.deps DESTINATION share/vala/vapi/)
     install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.h DESTINATION include/${PLUGNAME}/)
