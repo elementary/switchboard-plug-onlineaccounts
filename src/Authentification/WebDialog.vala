@@ -20,7 +20,7 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
-public class OnlineAccounts.Widget.WebDialog : GLib.Object {
+public class OnlineAccounts.WebDialog : GLib.Object {
 
     GLib.HashTable<string, GLib.Variant> params;
     Gtk.Widget webview;
@@ -28,22 +28,10 @@ public class OnlineAccounts.Widget.WebDialog : GLib.Object {
     const string oauth_final_url;
     string oauth_response;
     ulong webkit_redirect_handler_id;
-    GSSOUIQueryError error_code;
     
     public WebDialog (GLib.HashTable<string, GLib.Variant> params) {
         this.params = params;
     }
     
-    public async void delete_account () {
-        account.select_service (null);
-        var v_id = account.get_variant (gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "");
-        identity.remove ((Signon.IdentityRemovedCb) null);
-        account.delete ();
-        yield account.store_async (null);
-    }
-    public virtual void setup_authentification () {
-    
-    }
 
 }

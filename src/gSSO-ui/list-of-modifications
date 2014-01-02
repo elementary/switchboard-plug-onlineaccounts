@@ -1,7 +1,0 @@
-In gsso-ui-utils.c:
-
-const gchar * get_ui_files_dir ()
-{
-    return BUILD_PKG_DATADIR;
-}
-

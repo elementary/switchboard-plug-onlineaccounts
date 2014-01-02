@@ -2,8 +2,6 @@ find_package (PkgConfig)
 # Add all your dependencies to the list below
 pkg_check_modules (DEPS REQUIRED ${DEPS_PKG})
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gSSO-ui)
-
 add_definitions (${DEPS_CFLAGS})
 link_libraries (${DEPS_LIBRARIES})
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -25,8 +23,10 @@ vala_precompile (VALA_C ${PLUGNAME}
     Views/AccountPopOver.vala
     Plugin.vala
     SubPlugin.vala
+    Authentification/Server.vala
+    Authentification/DialogService.vala
 CUSTOM_VAPIS
-    gSSO-ui/gSSO-ui.vapi
+    ../vapi/glib-addons.vapi
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS
@@ -45,17 +45,7 @@ if (BUILD_SHARED_LIBS)
     install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.h DESTINATION include/${PLUGNAME}/)
 endif ()
 
-add_library (${PLUGNAME} MODULE 
-    gSSO-ui/gsso-ui-dbus-glue.c
-    gSSO-ui/gsso-ui-dialog.c
-    gSSO-ui/gsso-ui-dialog-dbus-glue.c
-    gSSO-ui/gsso-ui-dialog-service.c
-    gSSO-ui/gsso-ui-gtk-dialog.c
-    gSSO-ui/gsso-ui-request-queue.c
-    gSSO-ui/gsso-ui-server.c
-    gSSO-ui/gsso-ui-utils.c
-    gSSO-ui/gsso-ui-web-dialog.c
-    ${VALA_C})
+add_library (${PLUGNAME} MODULE ${VALA_C})
 target_link_libraries(${PLUGNAME} ${DEPS_LIBRARIES})
 
 # Installation

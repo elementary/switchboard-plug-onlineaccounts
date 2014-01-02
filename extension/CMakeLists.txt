@@ -38,4 +38,4 @@ OPTIONS
 add_library(${EXTENSION_NAME} MODULE ${EXTENSION_VALA_C})
 target_link_libraries (${EXTENSION_NAME} ${DEPS_LIBRARIES})
 
-install(TARGETS ${EXTENSION_NAME} DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gsignond/extensions")
+install(TARGETS ${EXTENSION_NAME} DESTINATION "${CMAKE_INSTALL_LIBDIR}/gsignond/extensions")

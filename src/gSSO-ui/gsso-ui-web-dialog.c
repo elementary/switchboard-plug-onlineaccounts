@@ -28,6 +28,7 @@
 #include "gsso-ui-log.h"
 #include "gsso-ui-utils.h"
 #include <gtk/gtk.h>
+#include <libsoup/soup.h>
 
 #ifdef HAVE_WEBKIT2GTK
 #include <webkit2/webkit2.h>
@@ -43,6 +44,7 @@ struct _GSSOUIWebDialog
     const gchar *oauth_final_url;
     gchar *oauth_response;
     gulong webkit_redirect_handler_id;
+    gulong webkit_load_failed_handler_id;
 };
 
 G_DEFINE_TYPE (GSSOUIWebDialog, gsso_ui_web_dialog, GSSO_TYPE_UI_DIALOG)
@@ -55,6 +57,11 @@ DBG("{");
     if (self->webkit_redirect_handler_id) {
         g_signal_handler_disconnect (self->webview, self->webkit_redirect_handler_id);
         self->webkit_redirect_handler_id = 0;
+    }
+
+    if (self->webkit_load_failed_handler_id) {
+        g_signal_handler_disconnect (self->webview, self->webkit_load_failed_handler_id);
+        self->webkit_load_failed_handler_id = 0;
     }
 
     G_OBJECT_CLASS (gsso_ui_web_dialog_parent_class)->dispose (object);
@@ -137,6 +144,7 @@ gsso_ui_web_dialog_init (GSSOUIWebDialog *self)
     self->oauth_final_url = NULL;
     self->oauth_response = NULL;
     self->webkit_redirect_handler_id = 0;
+    self->webkit_load_failed_handler_id = 0;
 }
 
 static gboolean
@@ -146,12 +154,48 @@ _close_window(gpointer self)
     
     return FALSE;
 }
+#if HAVE_WEBKIT2GTK
+static gboolean
+_on_load_uri_failed (GSSOUIWebDialog *self,
+                     WebKitLoadEvent  load_event,
+                     gchar           *failed_uri,
+                     GError          *error,
+                     WebKitWebView   *web_view)
+{
+    WARN ("Loading uri '%s' failed, error : %s", failed_uri, error->message);
+    g_error_free (error);
+
+    if (g_strcmp0 (failed_uri, self->oauth_open_url) == 0) {
+        GSSO_UI_DIALOG (self)->error_code = GSSO_UI_QUERY_ERROR_NOT_AVAILABLE;
+        g_idle_add (_close_window, self);
+    }
+
+    return TRUE;
+}
+#else
+static void
+_on_load_uri_failed (GSSOUIWebDialog   *self,
+                     WebKitWebFrame    *web_frame,
+                     WebKitWebResource *web_resource,
+                     GError            *error,
+                     WebKitWebView     *web_view)  
+{
+    const gchar *failed_uri = webkit_web_resource_get_uri (web_resource);
+    WARN ("Loading uri '%s' failed, error : %s", failed_uri, error->message);
+    g_error_free (error);
+
+    if (g_strcmp0 (failed_uri, self->oauth_open_url) == 0) {
+        GSSO_UI_DIALOG (self)->error_code = GSSO_UI_QUERY_ERROR_NOT_AVAILABLE;
+        g_idle_add (_close_window, self);
+    }
+}
+#endif
 
 static void
 #if HAVE_WEBKIT2GTK
 _on_webview_load (GSSOUIWebDialog  *self,
-                  WebKitLoadEvent load_event,
-                  WebKitWebView  *web_view)
+                  WebKitLoadEvent   load_event,
+                  WebKitWebView    *web_view)
 {
     const gchar *redirect_uri = NULL;
     const gchar *params = NULL;
@@ -234,8 +278,7 @@ _validate_params (GSSOUIWebDialog *self, GHashTable *params)
     return TRUE;
 }
 
-
-gboolean 
+gboolean
 gsso_ui_web_dialog_set_parameters (GSSOUIWebDialog *self, GHashTable *params)
 {
     GSSOUIDialog *dialog = GSSO_UI_DIALOG (self);
@@ -254,9 +297,14 @@ gsso_ui_web_dialog_set_parameters (GSSOUIWebDialog *self, GHashTable *params)
 #if HAVE_WEBKIT2GTK
     self->webkit_redirect_handler_id = g_signal_connect_swapped (self->webview, "load-changed", 
             G_CALLBACK(_on_webview_load), self);
+    self->webkit_load_failed_handler_id = g_signal_connect_swapped (self->webview, "load-failed",
+            G_CALLBACK(_on_load_uri_failed), self);
 #else
     self->webkit_redirect_handler_id = g_signal_connect_swapped (self->webview, "resource-request-starting",
             G_CALLBACK(_on_resource_request_starting), self);
+    self->webkit_load_failed_handler_id = g_signal_connect_swapped (self->webview, "resource-request-failed",
+            G_CALLBACK(_on_load_uri_failed), self);
+
 #endif
 
     webkit_web_view_load_uri (WEBKIT_WEB_VIEW(self->webview), self->oauth_open_url);
@@ -275,8 +323,13 @@ gsso_ui_web_dialog_new (GHashTable *params)
 
     g_free (ui_file);
 
+#if HAVE_WEBKIT2GTK
+    webkit_web_context_set_preferred_languages (
+        webkit_web_context_get_default(), g_get_language_names ());
+#else
     SoupSession *session = webkit_get_default_session ();
     g_object_set (G_OBJECT (session), SOUP_SESSION_ACCEPT_LANGUAGE_AUTO, TRUE, NULL);
+#endif
 
     gsso_ui_web_dialog_set_parameters (GSSO_UI_WEB_DIALOG(dialog), params);
 

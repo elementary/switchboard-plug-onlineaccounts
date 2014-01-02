@@ -17,7 +17,6 @@ add_library(${F_NAME} MODULE ${OAUTH_F_PLUGIN_VALA_C})
 target_link_libraries (${F_NAME} ${DEPS_LIBRARIES})
 
 install(TARGETS ${F_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
-install(FILES facebook.plugin DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES facebook.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
 install(FILES www.facebook.com.conf DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/signon-ui/webkit-options.d/)
 install(FILES facebook.provider DESTINATION ${ACCOUNTS_DIR}/providers/)

@@ -58,6 +58,7 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         var oauth_params_builder = new GLib.VariantBuilder (GLib.VariantType.VARDICT);
         var method = account.get_variant ("auth/method", null).get_string ();
         var mechanism = account.get_variant ("auth/mechanism", null).get_string ();
+        string host_name = null;
         
         if (mechanism == "PLAINTEXT" || mechanism == "HMAC-SHA1" || mechanism == "RSA-SHA1")
             method_a = {"oauth1", null};
@@ -70,6 +71,7 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         if (host != null) {
             oauth_params_builder.add ("{sv}", "AuthHost", host);
             oauth_params_builder.add ("{sv}", "TokenHost", host);
+            host_name = host.get_string ();
         }
         
         var path = account.get_variant ("auth/%s/%s/AuthPath".printf(method, mechanism), null);
@@ -105,15 +107,15 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         oauth_params_builder.add ("{sv}", "UiPolicy", new GLib.Variant.int32 (Signon.SessionDataUiPolicy.DEFAULT));
         
         var scope = account.get_variant ("auth/%s/%s/Scope".printf(method, mechanism), null);
-        if (scope.is_of_type (GLib.VariantType.STRING))
+        if (scope.is_of_type (GLib.VariantType.STRING) && scope != null)
             oauth_params_builder.add ("{sv}", "Scope", scope, null);
-        else if(scope.is_of_type (GLib.VariantType.STRING_ARRAY))
+        else if(scope.is_of_type (GLib.VariantType.STRING_ARRAY) && scope != null)
             oauth_params_builder.add ("{sv}", "Scope", new GLib.Variant.string (string_from_string_array (scope.get_strv ())));
         
         var schemes = account.get_variant ("auth/%s/%s/AllowedSchemes".printf(method, mechanism), null);
-        if (schemes.is_of_type (GLib.VariantType.STRING))
+        if (schemes.is_of_type (GLib.VariantType.STRING) && schemes != null)
             oauth_params_builder.add ("{sv}", "AllowedSchemes", scope);
-        else if(schemes.is_of_type (GLib.VariantType.STRING_ARRAY))
+        else if(schemes.is_of_type (GLib.VariantType.STRING_ARRAY) && schemes != null)
             oauth_params_builder.add ("{sv}", "AllowedSchemes", new GLib.Variant.string (string_from_string_array (schemes.get_strv (), ",")));
         
         oauth_params_builder.add ("{sv}", "ForceClientAuthViaRequestBody", new GLib.Variant.boolean (true));
@@ -155,11 +157,16 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         if (mode != null)
             oauth_params_builder.add ("{sv}", "Mode", mode);
         
+        oauth_params_builder.add ("{sv}", "AllowedRealms", new Variant.strv ({host_name, null}));
+        oauth_params_builder.add ("{sv}", "Realms", new Variant.strv ({host_name, null}));
+        
         session_data = oauth_params_builder.end ();
         session_data = auth_data.get_login_parameters (session_data);
         
         try {
             var session = identity.create_session ("oauth");
+            string[] realms = {host_name, null};
+            var sequence = Signond.copy_array_to_sequence (realms);
             session_result = yield session.process_async (session_data, method_a[0], null);
             var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
             info.set_secret (access_token, true);

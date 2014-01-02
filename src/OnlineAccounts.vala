@@ -34,7 +34,7 @@ namespace OnlineAccounts {
         AccountView account_view;
         SourceSelector source_selector;
         Granite.Widgets.ThinPaned paned;
-        gSSOui.Server gsso_server;
+        OnlineAccounts.Server oa_server;
         Gtk.Widget current_widget_ui;
 
         public Plug () {
@@ -68,7 +68,7 @@ namespace OnlineAccounts {
                 main_grid.show_all ();
                 plugins_manager.activate ();
                 plugins_manager.load_accounts ();
-                gsso_server = new gSSOui.Server (0);
+                oa_server = new OnlineAccounts.Server ();
                 ui_manager.widget_registered.connect (new_account_widget);
             }
             return main_grid;
@@ -109,20 +109,6 @@ namespace OnlineAccounts {
             current_widget_ui.show ();
         }
 
-        public override void activate () {
-            message ("Activating OA plugin");
-            var plug = new OnlineAccounts.Plug ();
-            Switchboard.PlugsManager.get_default ().register_plug (plug);
-        }
-
-        public override void deactivate () {
-            message ("Deactivating OA plugin");
-        }
-
-        public override void update_state () {
-            
-        }
-
     }
     
     public static string string_from_string_array (string[] strv, string separator = " ") {
@@ -140,9 +126,8 @@ namespace OnlineAccounts {
     }
 }
 
-[ModuleInit]
-private void peas_register_types (GLib.TypeModule module) {
-    var objmodule = module as Peas.ObjectModule;
-    objmodule.register_extension_type (typeof (Peas.Activatable),
-                                     typeof (OnlineAccounts.Plug));
+public Switchboard.Plug get_plug (Module module) {
+    debug ("Activating Online Accounts plug");
+    var plug = new OnlineAccounts.Plug ();
+    return plug;
 }

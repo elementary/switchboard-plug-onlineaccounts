@@ -17,5 +17,3 @@ add_library(${TARGET_NAME} MODULE ${OAUTHPLUGIN_VALA_C})
 target_link_libraries (${TARGET_NAME} ${DEPS_LIBRARIES})
 
 install(TARGETS ${TARGET_NAME} DESTINATION ${PLUGIN_DIR})
-install(FILES generic-oauth.plugin DESTINATION ${PLUGIN_DIR})
-

@@ -72,7 +72,7 @@ namespace Signond {
 		public AccessControlManager ();
 	}
 	
-	[CCode (cheader_filename = "gsignond/gsignond-credentials.h", copy_function = "gsignond_dictionary_copy", type_id = "gsignond_credentials_get_type ()")]
+	[CCode (cheader_filename = "gsignond/gsignond-credentials.h", copy_function = "gsignond_dictionary_copy", ref_function = "gsignond_dictionary_ref", unref_function = "gsignond_dictionary_unref")]
 	[Compact]
 	public class Dictionary : GLib.HashTable<string, GLib.Variant> {
 		[CCode (has_construct_function = false)]
@@ -96,13 +96,11 @@ namespace Signond {
 		public bool set_string (string key, string value);
 		public bool remove (string key);
 		public bool contains (string key);
-		public Signond.Dictionary @ref ();
-		public void unref ();
 	}
 	
-	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h")]
+	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h", cprefix = "SIGNONUI_ERROR_")]
 	[Compact]
-	public enum SignonuiError {
+	public enum SignonUIError {
 		NONE,
 		GENERAL,
 		NO_SIGNONUI,
@@ -115,6 +113,42 @@ namespace Signond {
 		REFRESH_FAILED,
 		FORBIDDEN,
 		FORGOT_PASSWORD
+	}
+	
+	[CCode (cheader_filename = "gsignond/gsignond-session-data.h", cprefix = "GSIGNOND_UI_POLICY_")]
+	[Compact]
+	public enum UiPolicy {
+		DEFAULT,
+		REQUEST_PASSWORD,
+		NO_USER_INTERACTION,
+		VALIDATION
+	}
+	
+	[CCode (cheader_filename = "gsignond/gsignond-session-data.h")]
+	[Compact]
+	public class SessionData : Signond.Dictionary {
+		[CCode (has_construct_function = false)]
+		public SessionData ();
+		public string get_username ();
+		public void set_username (string username);
+		public string get_secret ();
+		public void set_secret (string secret);
+		public string get_realm ();
+		public void set_realm (string realm);
+		public GLib.Sequence<string> get_allowed_realms ();
+		public void set_allowed_realms (GLib.Sequence<string> realms);
+		public string get_caption ();
+		public void set_caption (string caption);
+		public bool get_renew_token (out bool renew_token);
+		public void set_renew_token (bool renew_token);
+		public bool get_ui_policy (out UiPolicy ui_policy);
+		public void set_ui_policy (UiPolicy ui_policy);
+		public string get_network_proxy ();
+		public void set_network_proxy (string network_proxy);
+		public bool get_network_timeout (out uint32 network_timeout);
+		public void set_network_timeout (uint32 network_timeout);
+		public bool get_window_id (out uint32 window_id);
+		public void set_window_id (uint32 window_id);
 	}
 	
 	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h")]
@@ -142,8 +176,8 @@ namespace Signond {
 		public void set_open_url (string url);
 		public string get_password ();
 		public void set_password (string password);
-		public bool get_query_error (out SignonuiError error);
-		public void set_query_error (SignonuiError error);
+		public bool get_query_error (out SignonUIError error);
+		public void set_query_error (SignonUIError error);
 		public bool get_query_password (out bool query_password);
 		public void set_query_password (bool query);
 		public bool get_query_username (out bool query_username);
@@ -161,6 +195,8 @@ namespace Signond {
 		public string get_username ();
 		public void data_set_username (string username);
 	}
+	[CCode (cheader_filename = "gsignond/gsignond-utils.h")]
+	public static GLib.Sequence<string> copy_array_to_sequence ([CCode (array_length = false, array_null_terminated = true)] string[] array);
 }
 
 [CCode (cprefix = "G", lower_case_cprefix = "g_", cheader_filename = "glib.h", gir_namespace = "GObject", gir_version = "2.0")]

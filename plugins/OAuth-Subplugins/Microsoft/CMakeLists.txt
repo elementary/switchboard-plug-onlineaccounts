@@ -17,7 +17,6 @@ add_library(${M_NAME} MODULE ${OAUTH_M_PLUGIN_VALA_C})
 target_link_libraries (${M_NAME} ${DEPS_LIBRARIES})
 
 install(TARGETS ${M_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
-install(FILES microsoft.plugin DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES microsoft.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
 install(FILES login.live.com.conf DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/signon-ui/webkit-options.d/)
 install(FILES microsoft.provider DESTINATION ${ACCOUNTS_DIR}/providers/)

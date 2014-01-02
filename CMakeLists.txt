@@ -43,8 +43,6 @@ set(SRC_TARGET ${CMAKE_PROJECT_NAME})
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
-install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\" -w)
 
 
@@ -69,10 +67,11 @@ set(DEPS_PACKAGES
     accounts
     gSignon
     gSignond
-    libpeas-1.0
     json-glib-1.0
     libsecret-1
-    webkitgtk-3.0
+    webkit2-3.0
+    libsoup-2.4
+    javascriptcore-3.0
     gmodule-2.0
 )
 
@@ -87,10 +86,11 @@ set(DEPS_PKG
     libaccounts-glib
     libgsignon-glib
     gsignond
-    libpeas-1.0
     json-glib-1.0
     libsecret-1
-    webkitgtk-3.0
+    webkit2-3.0
+    libsoup-2.4
+    javascriptcore-3.0
     gmodule-2.0
 )
 

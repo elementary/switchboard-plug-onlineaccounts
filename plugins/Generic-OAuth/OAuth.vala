@@ -24,7 +24,7 @@ void plugin_init (GLib.TypeModule type_module)
 {
     if (OnlineAccounts.plugins_manager.plugins_available.contains (OnlineAccounts.Plugins.OAuth.plugin_name))
         return;
-    message ("Activating Generic OAuth plugin");
+    debug ("Activating Generic OAuth plugin");
     OnlineAccounts.plugins_manager.register_plugin (OnlineAccounts.Plugins.OAuth.plugin_name);
     OnlineAccounts.plugins_manager.use_plugin.connect (OnlineAccounts.Plugins.OAuth.use_plugin);
 }

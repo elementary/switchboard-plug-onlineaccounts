@@ -1,8 +1,0 @@
-[Plugin]
-Module=facebook
-IAge=2
-Name=Facebook integration
-Description=Enable Facebook support
-Authors=Switchboard Developers
-Copyright=Copyright © 2013 Switchboard Developers
-Website=http://launchpad.net/switchboard
