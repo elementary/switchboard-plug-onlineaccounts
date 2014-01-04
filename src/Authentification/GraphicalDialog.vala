@@ -51,7 +51,17 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
     public GraphicalDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
-
+        
+        column_spacing = 12;
+        row_spacing = 6;
+        
+        var fake_grid_left = new Gtk.Grid ();
+        fake_grid_left.hexpand = true;
+        var fake_grid_right = new Gtk.Grid ();
+        fake_grid_right.hexpand = true;
+        attach (fake_grid_left, 0, 0, 1, 1);
+        attach (fake_grid_right, 3, 0, 1, 1);
+        
         var username_label = new Gtk.Label (_("Username:"));
         username_entry = new Gtk.Entry ();
         username_entry.placeholder_text = _("john_doe");
@@ -88,8 +98,8 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         set_parameters (params);
 
         if (query_username == true) {
-            attach (username_label, 0, 0, 1, 1);
-            attach (username_entry, 1, 0, 1, 1);
+            attach (username_label, 1, 0, 1, 1);
+            attach (username_entry, 2, 0, 1, 1);
         }
 
         if (query_password == true) {
