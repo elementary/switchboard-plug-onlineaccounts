@@ -41,7 +41,11 @@ public class OnlineAccounts.Account : GLib.Object {
         var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "");
         identity.remove ((Signon.IdentityRemovedCb) null);
         account.delete ();
-        yield account.store_async (null);
+        try {
+            yield account.store_async (null);
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
     public virtual void setup_authentification () {
     

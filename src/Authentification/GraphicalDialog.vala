@@ -30,7 +30,6 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     Gtk.Entry confirm_password_entry;
     Gtk.Entry captcha_entry;
     Gtk.Button save_button;
-    Gtk.Button cancel_button;
     Gtk.CheckButton remember_button;
     Gtk.LinkButton forgot_button;
     Gtk.Image captcha_image;
@@ -54,13 +53,25 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         
         column_spacing = 12;
         row_spacing = 6;
+
+        var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
+        var container = infobar.get_content_area () as Gtk.Container;
+        var container_grid = new Gtk.Grid ();
+        var info_label = new Gtk.Label (_("Please enter your credentials…"));
+        info_label.valign = Gtk.Align.CENTER;
+        container.add (info_label);
+        infobar.response.connect (() => {
+            error_code = Signond.SignonUIError.CANCELED;
+            finished ();
+            this.destroy ();
+        });
         
         var fake_grid_left = new Gtk.Grid ();
         fake_grid_left.hexpand = true;
         var fake_grid_right = new Gtk.Grid ();
         fake_grid_right.hexpand = true;
-        attach (fake_grid_left, 0, 0, 1, 1);
-        attach (fake_grid_right, 3, 0, 1, 1);
+        attach (fake_grid_left, 0, 1, 1, 1);
+        attach (fake_grid_right, 3, 1, 1, 1);
         
         var username_label = new Gtk.Label (_("Username:"));
         username_entry = new Gtk.Entry ();
@@ -93,37 +104,42 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         message_label.no_show_all = true;
 
         save_button = new Gtk.Button.with_label (_("Save"));
-        cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
         set_parameters (params);
 
         if (query_username == true) {
-            attach (username_label, 1, 0, 1, 1);
-            attach (username_entry, 2, 0, 1, 1);
+            attach (username_label, 1, 1, 1, 1);
+            attach (username_entry, 2, 1, 1, 1);
         }
 
         if (query_password == true) {
-            attach (password_label, 1, 1, 1, 1);
-            attach (password_entry, 2, 1, 1, 1);
-            attach (remember_button, 1, 4, 2, 1);
+            attach (password_label, 1, 2, 1, 1);
+            attach (password_entry, 2, 2, 1, 1);
+            attach (remember_button, 1, 5, 2, 1);
         }
         
         if (forgot_password_url != null) {
-            attach (forgot_button, 1, 5, 2, 1);
+            attach (forgot_button, 1, 6, 2, 1);
         }
 
         if (query_confirm == true) {
-            attach (new_password_label, 1, 2, 1, 1);
-            attach (new_password_entry, 2, 2, 1, 1);
-            attach (confirm_password_label, 1, 3, 1, 1);
-            attach (confirm_password_entry, 2, 3, 1, 1);
+            attach (new_password_label, 1, 3, 1, 1);
+            attach (new_password_entry, 2, 3, 1, 1);
+            attach (confirm_password_label, 1, 4, 1, 1);
+            attach (confirm_password_entry, 2, 4, 1, 1);
         }
 
         if (query_captcha == true) {
-            attach (captcha_image, 1, 6, 2, 1);
-            attach (captcha_entry, 1, 7, 2, 1);
+            attach (captcha_image, 1, 7, 2, 1);
+            attach (captcha_entry, 1, 8, 2, 1);
         }
-        attach (message_label, 1, 8, 2, 1);
+
+        attach (message_label, 1, 9, 2, 1);
+        Gtk.ButtonBox save_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
+        save_box.set_layout (Gtk.ButtonBoxStyle.END);
+        save_box.add (save_button);
+        save_button.clicked.connect (() => finished ());
+        attach (save_box, 1, 10, 2, 1);
     }
 
     public override bool set_parameters (HashTable<string, Variant> params) {
@@ -247,7 +263,13 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             return false;
         }
 
-        var filename = GLib.Filename.from_uri (uri);
+        string filename = null;
+        try {
+            filename = GLib.Filename.from_uri (uri);
+        } catch (Error e) {
+            critical (e.message);
+        }
+
         if (filename == null) {
             warning ("invalid captcha value : %s", uri);
             error_code = Signond.SignonUIError.BAD_CAPTCHA_URL;
