@@ -17,7 +17,6 @@ target_link_libraries (${F_NAME} ${DEPS_LIBRARIES})
 
 install(TARGETS ${F_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES facebook.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
-install(FILES www.facebook.com.conf DESTINATION ${CMAKE_INSTALL_PREFIX}/etc/signon-ui/webkit-options.d/)
 install(FILES facebook.provider DESTINATION ${ACCOUNTS_DIR}/providers/)
 install(FILES facebook-sharing.service DESTINATION ${ACCOUNTS_DIR}/services/)
 install(FILES facebook-microblog.service DESTINATION ${ACCOUNTS_DIR}/services/)

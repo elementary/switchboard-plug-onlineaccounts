@@ -26,7 +26,7 @@ project (${PLUGNAME})
 
 include (GNUInstallDirs)
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
-set (PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/share/${PLUGNAME}")
+set (PLUGIN_DIR "${CMAKE_INSTALL_FULL_LIBDIR}/${PLUGNAME}")
 set (ACCOUNTS_DIR "${CMAKE_INSTALL_PREFIX}/share/accounts")
 set (PKGDATADIR "${DATADIR}/network/${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}")
