@@ -1,4 +1,11 @@
-switchboard-plug-onlineaccounts (0.1.0) unstable; urgency=low
+switchboard-plug-onlineaccounts (0.2.0) UNRELEASED; urgency=low
+
+  * Ported to the new switchboard-2.0
+    Now everything is in vala and included into the plug (no more dialogs).
+
+ -- Corentin "tintou" Noël <tintou@mailoo.org>  Sat, 04 Jan 2014 16:03:05 +0100
+
+switchboard-plug-onlineaccounts (0.1.0) UNRELEASED; urgency=low
 
   * Initial Release.
 

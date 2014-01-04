@@ -1,6 +1,4 @@
-/usr/share/pantheon-online-accounts/generic-oauth-plugins/libgoogle.so
-/usr/share/pantheon-online-accounts/generic-oauth-plugins/google.plugin
-/usr/share/icons/hicolor/scalable/apps/google.svg
-/usr/etc/signon-ui/webkit-options.d/accounts.google.com.conf
-/usr/share/accounts/providers/google*
-/usr/share/accounts/services/google*
+usr/lib/*/pantheon-online-accounts/generic-oauth-plugins/libgoogle.so
+usr/share/icons/hicolor/scalable/apps/google.svg
+usr/share/accounts/providers/google*
+usr/share/accounts/services/google*

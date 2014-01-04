@@ -1,4 +1,3 @@
-/usr/lib/plugs/pantheon/online-accounts/*
-usr/share/locale
+usr/lib/*/switchboard/network/*
+usr/share/locale/*
 usr/share/dbus-1/services/com.google.code.AccountsSSO.gSingleSignOnUI.service
-usr/share/accounts/service_types/*
