@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="facebook">
   <name>Facebook</name>
+  <description>Includes Contacts, Chat, Events, Wall Posts and Photos</description>
   <icon>facebook</icon>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
   <domains>.*facebook\.com</domains>
   <plugin>generic-oauth</plugin>
 

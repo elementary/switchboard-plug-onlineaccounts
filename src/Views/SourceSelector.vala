@@ -64,8 +64,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
  
         tree_view.set_headers_visible (false);
         
-        var backend_map = new Gee.HashMap<string, Gtk.TreeIter?>();
-        
         var selection = tree_view.get_selection ();
         selection.mode = Gtk.SelectionMode.BROWSE;
         
@@ -130,7 +128,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
             last_selected = plugin;
             account_selected ();
         }
-        accounts_manager.accounts_available.add (plugin);
     }
     
     public OnlineAccounts.Account? get_selected_account () {
@@ -184,9 +181,5 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         } else {
             //Show welcome.
         }
-    }
-    
-    private void edit_source () {
-        
     }
 }

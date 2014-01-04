@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-28 22:50+0100\n"
+"POT-Creation-Date: 2014-01-04 17:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,116 +17,138 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//gSSO-ui/gsso-ui-dialog.c:189
-msgid "Enter your credentials"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:36
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:92
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:93
-msgid "Add…"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:47
+msgid "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:97
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:98
-msgid "Remove"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:57
+msgid "Cancel"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:60
+msgid "Restore"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:100
-msgid "<b>There is no application using this account.</b>"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:102
+#, c-format
+msgid "Account '%s' Removed."
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountDialog.vala:27
-msgid "Add an Account"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:116
+msgid "You don't have any online account."
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:116
+msgid "Start linking one with your computer"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
-msgid "Google Calendar"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:121
+msgid "Loading…"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
-msgid "Google Contacts"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:115
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:59
+msgid "Please enter your credentials…"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
-msgid "Google Drive"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
-msgid "GMail"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Talk"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
-msgid "Picasa"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "&lt;b&gt;Username&lt;/b&gt;"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
-msgid "Enter username"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
-msgid "&lt;b&gt;Password&lt;/b&gt;"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
-msgid "Password"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
-msgid "&lt;b&gt;New Password&lt;/b&gt;"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
-msgid "New password"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
-msgid "&lt;b&gt;Confirm Password&lt;/b&gt;"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:38
-msgid "Re-type new password"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:39
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:40
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:41
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:42
-msgid "Message"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:43
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:44
-msgid "Cancel"
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/AccountView.vala:46
+msgid "<b>Applications that use this service:</b>"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/AccountView.vala:100
+msgid "<b>There is no application using this account.</b>"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:89
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:24
+msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:25
+msgid "Google Calendar"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:26
+msgid "Google Contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:27
+msgid "Google Drive"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:28
+msgid "GMail"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:29
+msgid "Google Talk"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:30
+msgid "Picasa"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:31
+msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:32
+msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr ""

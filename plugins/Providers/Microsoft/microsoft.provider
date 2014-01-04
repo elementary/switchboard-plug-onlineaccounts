@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="microsoft">
   <name>Microsoft</name>
+  <description>Includes Outlook Calendars, Contacts, Mails and SkyDrive</description>
   <icon>microsoft</icon>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
   <domains>.*live\.com</domains>
   <plugin>generic-oauth</plugin>
 

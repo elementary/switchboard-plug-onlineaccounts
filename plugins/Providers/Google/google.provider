@@ -3,7 +3,7 @@
   <name>Google</name>
   <description>Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa</description>
   <icon>google</icon>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
   <domains>.*google\.com</domains>
   <plugin>generic-oauth</plugin>
 

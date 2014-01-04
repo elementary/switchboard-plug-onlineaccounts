@@ -4,7 +4,7 @@
   <name>Facebook</name>
   <icon>facebook</icon>
   <provider>facebook</provider>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
 
   
   <template>

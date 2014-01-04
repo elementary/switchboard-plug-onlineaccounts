@@ -43,19 +43,24 @@ public class OnlineAccounts.AccountsManager : Object {
         accounts_available = new Gee.ArrayList<OnlineAccounts.Account> ();
     }
     ~AccountsManager () {
-        if (to_delete != null) {
-            to_delete.delete_account.begin ();
-        }
+        remove_cached_account ();
     }
     
     public void add_account (OnlineAccounts.Account account) {
-        account_added (account);
         accounts_available.add (account);
+        account_added (account);
     }
     
     public void remove_cached_account () {
         if (to_delete != null) {
             to_delete.delete_account.begin ();
+        }
+        to_delete = null;
+    }
+    
+    public void restore_cached_account () {
+        if (to_delete != null) {
+            add_account (to_delete);
         }
         to_delete = null;
     }

@@ -24,8 +24,6 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
     
     private Gtk.ListStore list_store;
     private Gtk.TreeView tree_view;
-    private Gee.HashMap<string, Gtk.TreeIter?> iter_map;
-    private Gtk.TreeIter default_iter;
 
     private enum Columns {
         ICON,

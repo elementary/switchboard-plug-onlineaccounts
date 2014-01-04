@@ -112,11 +112,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
     private void on_service_switch_activated (bool enabled, Ag.Service service) {
         plugin.account.select_service (service);
         plugin.account.set_enabled (enabled);
-        try {
-            plugin.account.store_async.begin (null);
-        } catch (Error e) {
-            critical (e.message);
-        }
+        plugin.account.store_async.begin (null);
         plugin.account.select_service (null);
     }
     

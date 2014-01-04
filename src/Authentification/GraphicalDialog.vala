@@ -56,7 +56,6 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
         var container = infobar.get_content_area () as Gtk.Container;
-        var container_grid = new Gtk.Grid ();
         var info_label = new Gtk.Label (_("Please enter your credentials…"));
         info_label.valign = Gtk.Align.CENTER;
         container.add (info_label);
