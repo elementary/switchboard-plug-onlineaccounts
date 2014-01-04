@@ -19,38 +19,24 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
-
-public class OnlineAccounts.Plugin : GLib.Object {
-
-    public Ag.Account account;
-    public Ag.Provider provider;
-    public string username;
-    public string password;
-    public bool need_authentification;
-    public bool is_new;
-    public GLib.Variant session_data;
-    public GLib.Variant session_result;
+public class OnlineAccounts.Plugins.OAuth.Facebook.ProviderPlugin : OnlineAccounts.ProviderPlugin {
     
-    public const string gsignon_id = "CredentialsId";
-    
-    public signal void removed ();
-    public signal void complete ();
-    
-    public Plugin (Ag.Account account, bool is_new = false) {
-        this.account = account;
-        this.is_new = is_new;
+    public ProviderPlugin () {
+        Object (plugin_name: "generic-oauth",
+                provider_name: "facebook");
     }
     
-    public async void delete_account () {
-        account.select_service (null);
-        var v_id = account.get_variant (gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "");
-        identity.remove ((Signon.IdentityRemovedCb) null);
-        account.delete ();
-        yield account.store_async (null);
+    public override void get_user_name (OnlineAccounts.Account plugin) {
+        
     }
-    public virtual void setup_authentification () {
     
+    public override void get_user_image (OnlineAccounts.Account plugin) {
+        
     }
+}
 
+public OnlineAccounts.ProviderPlugin get_provider_plugin (Module module) {
+    debug ("OnlineAccouts: Activating Facebook plugin");
+    var plugin = new OnlineAccounts.Plugins.OAuth.Facebook.ProviderPlugin ();
+    return plugin;
 }

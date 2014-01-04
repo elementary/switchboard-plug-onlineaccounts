@@ -30,7 +30,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     private Gtk.ToolButton remove_button;
     private Gtk.ToolButton add_button;
     
-    private Plugin last_selected;
+    private OnlineAccounts.Account last_selected;
 
     private enum Columns {
         ICON,
@@ -70,8 +70,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         var selection = tree_view.get_selection ();
         selection.mode = Gtk.SelectionMode.BROWSE;
         
-        accounts_manager.account_added.connect (add_plugin_callback);
-        
         var scroll = new Gtk.ScrolledWindow (null, null);
         scroll.set_size_request (150, 150);
         scroll.hscrollbar_policy = Gtk.PolicyType.NEVER;
@@ -106,37 +104,42 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         
         attach (scroll, 0, 0, 1, 1);
         attach (toolbar, 0, 1, 1, 1);
+        var accounts_manager = AccountsManager.get_default ();
+        foreach (var account in accounts_manager.accounts_available) {
+            add_plugin_callback (account);
+        }
+        accounts_manager.account_added.connect (add_plugin_callback);
         
         tree_view.row_activated.connect ((path, column) => {
             account_selected ();
         });
     }
     
-    private void add_plugin_callback () {
-        foreach (var plugin in accounts_manager.accounts_to_add) {
-            var provider = plugin.account.get_manager ().get_provider (plugin.account.provider);
-            Gtk.TreeIter iter;
-            list_store.append (out iter);
-            list_store.set (iter, Columns.ICON, provider.get_icon_name (), 
-                                   Columns.TEXT, "<b>" + provider.get_display_name () + "</b>\n"+ plugin.account.display_name,
-                                   Columns.PLUGIN, plugin);
-            var selection = tree_view.get_selection ();
-            if (selection.count_selected_rows () <= 0) {
-                selection.select_iter (iter);
-                last_selected = plugin;
-                account_selected ();
-            }
-            accounts_manager.accounts_available.add (plugin);
+    private void add_plugin_callback (OnlineAccounts.Account plugin) {
+        var accounts_manager = AccountsManager.get_default ();
+        var provider = plugin.account.get_manager ().get_provider (plugin.account.provider);
+        if (provider == null)
+            return;
+        Gtk.TreeIter iter;
+        list_store.append (out iter);
+        list_store.set (iter, Columns.ICON, provider.get_icon_name (), 
+                               Columns.TEXT, "<b>" + provider.get_display_name () + "</b>\n"+ plugin.account.display_name,
+                               Columns.PLUGIN, plugin);
+        var selection = tree_view.get_selection ();
+        if (selection.count_selected_rows () <= 0) {
+            selection.select_iter (iter);
+            last_selected = plugin;
+            account_selected ();
         }
-        accounts_manager.accounts_to_add.clear ();
+        accounts_manager.accounts_available.add (plugin);
     }
     
-    public OnlineAccounts.Plugin? get_selected_account () {
+    public OnlineAccounts.Account? get_selected_account () {
         Gtk.TreeModel model;
         Gtk.TreeIter? iter;
         var selection = tree_view.get_selection ();
         if (selection.get_selected (out model, out iter)) {
-            OnlineAccounts.Plugin plugin;
+            OnlineAccounts.Account plugin;
             list_store.get (iter, Columns.PLUGIN, out plugin);
             return plugin;
         } else {
@@ -147,7 +150,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     private void create_source () {
         var popover = new AccountPopOver ();
         popover.move_to_widget (add_button, true);
-        popover.present ();
+        popover.run ();
     }
     
     private void remove_source () {
@@ -158,10 +161,10 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
             Gtk.TreeIter? iter;
             if (selection.get_selected (out model, out iter)) {
                 list_store.remove (iter);
-                accounts_manager.remove_account (account);
+                AccountsManager.get_default ().remove_account (account);
                 if (list_store.get_iter_first (out iter)) {
                     selection.select_iter (iter);
-                    OnlineAccounts.Plugin plugin;
+                    OnlineAccounts.MethodPlugin plugin;
                     list_store.get (iter, Columns.PLUGIN, out plugin);
                     last_selected = null;
                     account_selected ();
@@ -169,10 +172,10 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
             } else {
                 if (list_store.get_iter_first (out iter)) {
                     list_store.remove (iter);
-                    accounts_manager.remove_account (account);
+                    AccountsManager.get_default ().remove_account (account);
                     if (list_store.get_iter_first (out iter)) {
                         selection.select_iter (iter);
-                        OnlineAccounts.Plugin plugin;
+                        OnlineAccounts.MethodPlugin plugin;
                         list_store.get (iter, Columns.PLUGIN, out plugin);
                         last_selected = null;
                         account_selected ();

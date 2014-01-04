@@ -19,17 +19,18 @@
  *      Alberto Mardegan <alberto.mardegan@canonical.com>
  */
 
-public class OnlineAccounts.Plugins.OAuth2 : Plugin {
+public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
 
     private string[] method_a;
     Ag.Manager manager;
     public Ag.AuthData auth_data;
-    public Signon.Identity identity;
     public Signon.IdentityInfo info;
     public GLib.MainLoop main_loop;
+    bool is_new = false;
 
     public OAuth2 (Ag.Account account, bool is_new = false) {
-        base (account, is_new);
+        this.account = account;
+        this.is_new = is_new;
         var account_service = new Ag.AccountService (account, null);
         auth_data = account_service.get_auth_data ();
         if (is_new) {
@@ -46,8 +47,9 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         info.set_secret ("", true);
         info.set_method ("oauth", {"oauth1", "oauth2", null});
         info.access_control_list_append (new Signon.SecurityContext.from_values ("*", "*"));
-        identity = new Signon.Identity ("");
+        var identity = new Signon.Identity ("switchboard");
         identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
+        
         main_loop.run ();
     }
     
@@ -162,26 +164,25 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         
         session_data = oauth_params_builder.end ();
         session_data = auth_data.get_login_parameters (session_data);
-        
-        try {
-            var session = identity.create_session ("oauth");
-            string[] realms = {host_name, null};
-            var sequence = Signond.copy_array_to_sequence (realms);
-            session_result = yield session.process_async (session_data, method_a[0], null);
-            var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
-            info.set_secret (access_token, true);
-        
-            foreach (var subplugin in plugins_manager.subplugins_available) {
-                if (subplugin.get_plugin_name () != "generic-oauth")
-                    continue;
-                if (subplugin.get_name () != account.provider)
-                    continue;
-                subplugin.execute_function ("get_user_name", this);
+            try {
+                var session = identity.create_session ("oauth");
+                string[] realms = {host_name, null};
+                var sequence = Signond.copy_array_to_sequence (realms);
+                session_result = yield session.process_async (session_data, method_a[0], null);
+                var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
+                info.set_secret (access_token, true);
+            
+                foreach (var provider_plugin in OnlineAccounts.PluginsManager.get_default ().get_provider_plugins ()) {
+                    if (provider_plugin.plugin_name != "generic-oauth")
+                        continue;
+                    if (provider_plugin.provider_name != account.provider)
+                        continue;
+                    provider_plugin.get_user_name (this);
+                }
+                identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
+            } catch (Error e) {
+                critical (e.message);
             }
-            identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
-        } catch (Error e) {
-            critical (e.message);
-        }
         yield;
     }
     
@@ -203,7 +204,7 @@ public class OnlineAccounts.Plugins.OAuth2 : Plugin {
         pr.account.set_enabled (true);
         pr.account.store_async.begin (null);
         if (pr.is_new == true) {
-            accounts_manager.add_account (pr);
+            AccountsManager.get_default ().add_account (pr);
             pr.is_new = false;
         }
         pr.main_loop.quit ();

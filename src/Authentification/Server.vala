@@ -46,18 +46,12 @@ public class OnlineAccounts.Server : GLib.Object {
     GLib.DBusServer bus_server;
     string socket_file_path;
     int socket_file_id = 0;
-    uint32 timeout = 0;
-    DialogService dialog_service;
     
     public Server () {
         
-        bus_owner_id = GLib.Bus.own_name (GLib.BusType.SESSION,
-             BUS_NAME,
+        bus_owner_id = GLib.Bus.own_name (GLib.BusType.SESSION, BUS_NAME,
              GLib.BusNameOwnerFlags.ALLOW_REPLACEMENT | GLib.BusNameOwnerFlags.REPLACE,
-             on_bus_acquired,
-             on_name_acquired,
-             on_name_lost);
-             
+             on_bus_acquired, on_name_acquired, on_name_lost);
     }
     void on_name_acquired (GLib.DBusConnection connection, string name) {
         debug ("D-Bus name acquired");
@@ -75,13 +69,9 @@ public class OnlineAccounts.Server : GLib.Object {
         socket_file_path = base_path + "ui-XXXXXX";
         socket_file_id = GLib.FileUtils.mkstemp (socket_file_path);
         debug ("Socket File path : %s", socket_file_path);
-        if (socket_file_id == -1) {
-            GLib.FileUtils.unlink (socket_file_path);
-        } else {
-            var errno = GLib.DirUtils.create_with_parents (base_path, 700);
-            if (errno == -1) {
-                warning ("Could not create '%s', error: %s", base_path, GLib.strerror (errno));
-            }
+        var errno = GLib.DirUtils.create_with_parents (base_path, 0700);
+        if (errno == -1) {
+            warning ("Could not create '%s', error: %s", base_path, GLib.strerror (errno));
         }
         GLib.FileUtils.unlink (socket_file_path);
 
@@ -89,14 +79,14 @@ public class OnlineAccounts.Server : GLib.Object {
 
         string guid = GLib.DBus.generate_guid ();
         try {
-            bus_server = new GLib.DBusServer.sync (address, GLib.DBusServerFlags.NONE, guid);
+            bus_server = new GLib.DBusServer.sync (address, GLib.DBusServerFlags.RUN_IN_THREAD, guid);
         } catch (Error error) {
             warning ("Could not start dbus server at address '%s' : %s", address, error.message);
             socket_file_path = null;
             return ;
         }
+        GLib.FileUtils.chmod (socket_file_path, 0600);
 
-        GLib.FileUtils.chmod (socket_file_path, 700);
         bus_server.new_connection.connect (on_client_connection);
 
         /* expose interface */
@@ -115,14 +105,12 @@ public class OnlineAccounts.Server : GLib.Object {
     bool on_client_connection (DBusConnection connection) {
 
         try {
-            dialog_service = new DialogService ();
+            var dialog_service = new DialogService ();
             connection.register_object ("/Dialog", dialog_service);
         } catch (IOError e) {
             warning ("Failed to export interface: %s", e.message);
             return false;
         }
-
-        debug ("connection");
 
         return true;
     }

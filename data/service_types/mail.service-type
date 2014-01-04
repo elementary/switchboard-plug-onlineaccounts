@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service-type id="mail">
-  <name>Mail</name>
-  <description>Integrate your mailboxes</description>
-  <icon>emblem-mail</icon>
-  <translations>online-accounts-plug</translations>
-</service-type>

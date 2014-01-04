@@ -24,15 +24,22 @@
 
 public class OnlineAccounts.AccountsManager : Object {
     
-    public Gee.ArrayList<unowned Plugin> accounts_available;
-    public Gee.ArrayList<unowned Plugin> accounts_to_add;
-    private Plugin to_delete; // Store it here and wait until the user is sure to remove it.
+    public Gee.ArrayList<OnlineAccounts.Account> accounts_available;
+    private OnlineAccounts.Account to_delete; // Store it here and wait until the user is sure to remove it.
     
-    public signal void account_added ();
+    public signal void account_added (OnlineAccounts.Account account);
+    
+    private static OnlineAccounts.AccountsManager? accounts_manager = null;
+    
+    public static AccountsManager get_default () {
+        if (accounts_manager == null) {
+            accounts_manager = new AccountsManager ();
+        }
+        return accounts_manager;
+    }
 
-    public AccountsManager () {
-        accounts_available = new Gee.ArrayList<unowned Plugin> ();
-        accounts_to_add = new Gee.ArrayList<unowned Plugin> ();
+    private AccountsManager () {
+        accounts_available = new Gee.ArrayList<OnlineAccounts.Account> ();
     }
     ~AccountsManager () {
         if (to_delete != null) {
@@ -40,12 +47,12 @@ public class OnlineAccounts.AccountsManager : Object {
         }
     }
     
-    public void add_account (Plugin account) {
-        accounts_to_add.add (account);
-        account_added ();
+    public void add_account (OnlineAccounts.Account account) {
+        account_added (account);
+        accounts_available.add (account);
     }
     
-    public void remove_account (Plugin account) {
+    public void remove_account (OnlineAccounts.Account account) {
         accounts_available.remove (account);
         if (to_delete != null) {
             to_delete.delete_account.begin ();

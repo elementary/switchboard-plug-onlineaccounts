@@ -98,7 +98,7 @@ namespace Signond {
 		public bool contains (string key);
 	}
 	
-	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h", cprefix = "SIGNONUI_ERROR_")]
+	[CCode (cheader_filename = "gsignond/gsignond-signonui-data.h", cprefix = "SIGNONUI_ERROR_", cname = "GSignondSignonuiError")]
 	[Compact]
 	public enum SignonUIError {
 		NONE,
@@ -197,9 +197,4 @@ namespace Signond {
 	}
 	[CCode (cheader_filename = "gsignond/gsignond-utils.h")]
 	public static GLib.Sequence<string> copy_array_to_sequence ([CCode (array_length = false, array_null_terminated = true)] string[] array);
-}
-
-[CCode (cprefix = "G", lower_case_cprefix = "g_", cheader_filename = "glib.h", gir_namespace = "GObject", gir_version = "2.0")]
-namespace GLib.Signal {
-	public static void emitv (GLib.Value instance_and_params, uint signal_id, Quark detail, out GLib.Value return_value);
 }

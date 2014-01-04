@@ -19,24 +19,18 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
-
-[ModuleInit]
-void plugin_init (GLib.TypeModule type_module)
-{
-    if (OnlineAccounts.plugins_manager.plugins_available.contains (OnlineAccounts.Plugins.OAuth.subplugin_name))
-        return;
-    debug ("Activating Facebook plugin");
-    OnlineAccounts.plugins_manager.subplugins_name_available.add (OnlineAccounts.Plugins.OAuth.subplugin_name);
-    OnlineAccounts.plugins_manager.get_subplugins.connect (register_subplugin);
-}
-
-private void register_subplugin () {
-    var subplugin = new OnlineAccounts.Plugins.OAuth.Facebook.SubPlugin ();
-    OnlineAccounts.plugins_manager.register_subplugin (subplugin);
+ 
+public class OnlineAccounts.RequestInfo : Object {
     
-}
-
-namespace OnlineAccounts.Plugins.OAuth {
-    private const string plugin_name = "generic-oauth";
-    private const string subplugin_name = "facebook";
+    public HashTable<string, Variant> parameters;
+    public DialogService service;
+    
+    public RequestInfo (HashTable<string, Variant> parameter, DialogService service) {
+        this.parameters = parameter;
+        this.service = service;
+    }
+    
+    public void push_dialog () {
+    
+    }
 }

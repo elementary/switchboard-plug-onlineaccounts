@@ -8,4 +8,5 @@ namespace Build {
     public const string VERSION = "@VERSION@";
     public const string VERSION_INFO = "@VERSION_INFO@";
     public const string CMAKE_INSTALL_PREFIX = "@CMAKE_INSTALL_PREFIX@";
+    public const string PLUGCODENAME = "@PLUGCODENAME@";
 }

@@ -21,14 +21,10 @@
  */
 namespace OnlineAccounts {
 
-    string dialog_bus_address;
-    
-    public Plugins.Manager plugins_manager;
-    public AccountsManager accounts_manager;
-    public UIManager ui_manager;
-    
+    public static Plug plug;
+
     public class Plug : Switchboard.Plug {
-        
+        Gtk.Stack stack;
         Gtk.Grid grid;
         Gtk.Grid main_grid;
         AccountView account_view;
@@ -36,61 +32,62 @@ namespace OnlineAccounts {
         Granite.Widgets.ThinPaned paned;
         OnlineAccounts.Server oa_server;
         Gtk.Widget current_widget_ui;
+        PluginsManager plugins_manager;
 
         public Plug () {
             Object (category: Category.NETWORK,
-                    code_name: "network-pantheon-online-accounts",
+                    code_name: Build.PLUGCODENAME,
                     display_name: _("Online Accounts"),
                     description: _("Synchronize your computer with all your online accounts around the web."),
                     icon: "preferences-desktop-online-accounts");
-            plugins_manager = new Plugins.Manager ();
-            accounts_manager = new AccountsManager ();
-            ui_manager = new UIManager ();
+            plugins_manager = PluginsManager.get_default ();
+            plug = this;
         }
+
         ~Plug () {
             debug ("do real destruction here");
         }
-        
+
         public override Gtk.Widget get_widget () {
-            if (main_grid == null) {
+            if (stack == null) {
+                stack = new Gtk.Stack ();
                 main_grid = new Gtk.Grid ();
                 paned = new Granite.Widgets.ThinPaned ();
                 source_selector = new SourceSelector ();
                 source_selector.account_selected.connect (account_selected);
                 grid = new Gtk.Grid ();
                 grid.expand = true;
-                
+
                 paned.pack1 (source_selector, false, false);
                 paned.pack2 (grid, true, false);
                 paned.set_position (200);
-                
+
                 main_grid.attach (paned, 0, 0, 1, 1);
-                main_grid.show_all ();
-                plugins_manager.activate ();
-                plugins_manager.load_accounts ();
+                stack.add_named (main_grid, "main");
+                stack.show_all ();
                 oa_server = new OnlineAccounts.Server ();
-                ui_manager.widget_registered.connect (new_account_widget);
             }
-            return main_grid;
+
+            return stack;
         }
-        
+
         public override void shown () {
-        
+            
         }
-        
+
         public override void hidden () {
-        
+            
         }
-        
+
         public override void search_callback (string location) {
-        
+            
         }
-        
+
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
             return new Gee.TreeMap<string, string> (null, null);
         }
-        
+
         private void account_selected () {
             if (account_view != null) {
                 account_view.hide ();
@@ -99,18 +96,20 @@ namespace OnlineAccounts {
             grid.attach (account_view, 0, 0, 1, 1);
             account_view.show_all ();
         }
-        
-        private void new_account_widget () {
-            if (current_widget_ui != null)
-                return;
-            paned.hide ();
-            current_widget_ui = ui_manager.widgets_available.peek ();
-            main_grid.attach (current_widget_ui, 0, 0, 1, 1);
-            current_widget_ui.show ();
+
+        public void add_widget_to_stack (Gtk.Widget widget, string name) {
+            stack.add_named (widget, name);
         }
 
+        public void switch_to_widget (string name) {
+            stack.set_visible_child_full (name, Gtk.StackTransitionType.SLIDE_LEFT);
+        }
+
+        public void switch_to_main () {
+            stack.set_visible_child_full ("main", Gtk.StackTransitionType.SLIDE_RIGHT);
+        }
     }
-    
+
     public static string string_from_string_array (string[] strv, string separator = " ") {
         string output = "";
         bool first = true;
@@ -122,6 +121,7 @@ namespace OnlineAccounts {
                 output = output + separator + str;
             }
         }
+
         return output;
     }
 }

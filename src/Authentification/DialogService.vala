@@ -23,11 +23,24 @@
 [DBus (name = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog")]
 public class OnlineAccounts.DialogService : Object {
     const string DIALOG_BUS_NAME = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog";
+    [DBus (visible = false)]
+    public GLib.MainLoop main_loop;
+    
+    public DialogService () {
+        main_loop = new GLib.MainLoop ();
+    }
     
     [DBus (name = "queryDialog")]
-    public HashTable<string, Variant> query_dialog(HashTable<string, Variant> parameter) {
-        warning ("");
-        return parameter;
+    public async HashTable<string, Variant> query_dialog(HashTable<string, Variant> parameter) {
+        var dialog = RequestQueue.get_default ().push_dialog (parameter, this);
+        main_loop.run ();
+        if (dialog is WebDialog) {
+            WebDialog webdialog = dialog as WebDialog;
+            return webdialog.get_reply ();
+        } else {
+            GraphicalDialog graphicaldialog = dialog as GraphicalDialog;
+            return graphicaldialog.get_reply ();
+        }
     }
     
     [DBus (name = "refreshDialog")]

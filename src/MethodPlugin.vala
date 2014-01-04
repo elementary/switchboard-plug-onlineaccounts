@@ -19,22 +19,14 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
-[ModuleInit]
-void plugin_init (GLib.TypeModule type_module)
-{
-    if (OnlineAccounts.plugins_manager.subplugins_name_available.contains (OnlineAccounts.Plugins.OAuth.subplugin_name))
-        return;
-    debug ("Activating Google plugin");
-    OnlineAccounts.plugins_manager.subplugins_name_available.add (OnlineAccounts.Plugins.OAuth.subplugin_name);
-    OnlineAccounts.plugins_manager.get_subplugins.connect (register_subplugin);
-}
 
-private void register_subplugin () {
-    var subplugin = new OnlineAccounts.Plugins.OAuth.Google.SubPlugin ();
-    OnlineAccounts.plugins_manager.register_subplugin (subplugin);
-}
+public abstract class OnlineAccounts.MethodPlugin : GLib.Object {
+    
+    public string plugin_name { get; construct; }
+    
+    public abstract OnlineAccounts.Account? add_account (Ag.Account account);
+    
+    public abstract OnlineAccounts.Account? get_account (Ag.Account account);
+    
 
-namespace OnlineAccounts.Plugins.OAuth {
-    private const string plugin_name = "generic-oauth";
-    private const string subplugin_name = "google";
 }

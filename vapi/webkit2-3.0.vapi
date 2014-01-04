@@ -4020,7 +4020,7 @@ namespace WebKit {
 		public virtual signal void insecure_content_detected (WebKit.InsecureContentEvent event);
 		public virtual signal bool leave_fullscreen ();
 		public virtual signal void load_changed (WebKit.LoadEvent load_event);
-		public virtual signal bool load_failed (WebKit.LoadEvent load_event, string failing_uri, void* error);
+		public virtual signal bool load_failed (WebKit.LoadEvent load_event, string failing_uri, GLib.Error error);
 		public virtual signal bool load_failed_with_tls_errors (WebKit.CertificateInfo info, string host);
 		public virtual signal void mouse_target_changed (WebKit.HitTestResult hit_test_result, uint modifiers);
 		public virtual signal bool permission_request (WebKit.PermissionRequest permission_request);

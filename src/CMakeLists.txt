@@ -14,17 +14,23 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${PLUGNAME}.pc.cmake ${CMAKE_CURRENT_
 vala_precompile (VALA_C ${PLUGNAME}
     ${CONFIG_FILE}
     OnlineAccounts.vala
+    Account.vala
     AccountsManager.vala
     PluginManager.vala
-    UIManager.vala
     Threads.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
     Views/AccountPopOver.vala
-    Plugin.vala
-    SubPlugin.vala
+    MethodPlugin.vala
+    ProviderPlugin.vala
     Authentification/Server.vala
     Authentification/DialogService.vala
+    Authentification/RequestQueue.vala
+    Authentification/RequestInfo.vala
+    Authentification/Key.vala
+    Authentification/Dialog.vala
+    Authentification/WebDialog.vala
+    Authentification/GraphicalDialog.vala
 CUSTOM_VAPIS
     ../vapi/glib-addons.vapi
 PACKAGES

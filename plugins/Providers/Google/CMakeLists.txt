@@ -7,7 +7,6 @@ set(G_NAME google)
 
 vala_precompile(OAUTH_G_PLUGIN_VALA_C ${G_NAME}
     google.vala
-    Plugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS

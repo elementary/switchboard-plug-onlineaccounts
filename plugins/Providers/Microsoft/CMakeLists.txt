@@ -6,7 +6,6 @@ set(M_NAME microsoft)
 
 vala_precompile(OAUTH_M_PLUGIN_VALA_C ${M_NAME}
     microsoft.vala
-    Plugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS

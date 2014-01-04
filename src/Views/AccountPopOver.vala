@@ -26,7 +26,6 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
     private Gtk.TreeView tree_view;
     private Gee.HashMap<string, Gtk.TreeIter?> iter_map;
     private Gtk.TreeIter default_iter;
-    private Ag.Manager manager;
 
     private enum Columns {
         ICON,
@@ -64,14 +63,16 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         var selection = tree_view.get_selection ();
         selection.mode = Gtk.SelectionMode.BROWSE;
         
-        manager = new Ag.Manager ();
+        var manager = new Ag.Manager ();
         
         foreach (var provider in manager.list_providers ()) {
             if (provider == null)
                 continue;
             if (provider.get_plugin_name () == null)
                 continue;
-            if (plugins_manager.plugins_available.contains (provider.get_plugin_name ())) {
+            foreach (var method_plugin in PluginsManager.get_default ().get_method_plugins ()) {
+                if (provider.get_plugin_name ().collate (method_plugin.plugin_name) != 0)
+                    continue;
                 var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
                 Gtk.TreeIter iter;
                 list_store.append (out iter);
@@ -99,9 +100,17 @@ public class OnlineAccounts.AccountPopOver : Granite.Widgets.PopOver {
         list_store.get_iter (out iter, path);
         GLib.Value src;
         list_store.get_value (iter, 2, out src);
+        var manager = new Ag.Manager ();
         var account = manager.create_account (((Ag.Provider)src).get_name ());
-        this.hide ();
-        plugins_manager.use_plugin (account, true);
+        this.destroy ();
+        var provider = manager.get_provider (account.provider);
+        var plugin_name = provider.get_plugin_name ();
+        foreach (var providerplugin in PluginsManager.get_default ().get_method_plugins ()) {
+            if (providerplugin.plugin_name == plugin_name) {
+                providerplugin.add_account (account);
+                break;
+            }
+        }
     }
     
 }

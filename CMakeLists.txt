@@ -16,6 +16,8 @@ set (PLUGTITLE "Online Accounts")
 # The symbolic name of the Icon to use for the plug
 set (PLUGICON "preferences-desktop-online-accounts")
 
+set (PLUGCODENAME "network-pantheon-online-accounts")
+
 project (${PLUGNAME})
 
 #########################################################
@@ -26,7 +28,7 @@ include (GNUInstallDirs)
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
 set (PLUGIN_DIR "${CMAKE_INSTALL_PREFIX}/share/${PLUGNAME}")
 set (ACCOUNTS_DIR "${CMAKE_INSTALL_PREFIX}/share/accounts")
-set (PKGDATADIR "${DATADIR}/network/pantheon-online-accounts")
+set (PKGDATADIR "${DATADIR}/network/${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}")
 
 
@@ -88,9 +90,9 @@ set(DEPS_PKG
     gsignond
     json-glib-1.0
     libsecret-1
-    webkit2-3.0
+    webkit2gtk-3.0
     libsoup-2.4
-    javascriptcore-3.0
+    javascriptcoregtk-3.0
     gmodule-2.0
 )
 

@@ -17,117 +17,151 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Zeeshan Ali (Khattak) <zeeshanak@gnome.org> (from Rygel)
- *              Lucas Baudin <xapantu@gmail.com> (from Pantheon Files)
- *              Corentin Noël <tintou@mailoo.org>
+ * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 
-namespace OnlineAccounts.Plugins {
-    public class Manager : Object {
-        public signal void use_plugin (Ag.Account account, bool new_account = false);
-        public signal void get_subplugins ();
-        
-        public Gee.ArrayList<string> plugins_available;
-        public Gee.ArrayList<SubPlugin> subplugins_available;
-        public Gee.ArrayList<string> subplugins_name_available;
-        
-        static Gee.LinkedList<TypeModule> modules;
-        
-        public Manager () {
-            plugins_available = new Gee.ArrayList<string> ();
-            subplugins_available = new Gee.ArrayList<SubPlugin> ();
-            subplugins_name_available = new Gee.ArrayList<string> ();
-            modules = new Gee.LinkedList<TypeModule> ();
-        }
-        
-        public void activate () {
-            var file = GLib.File.new_for_path (Build.PLUGIN_DIR);
-            list_children (file, Build.PLUGIN_DIR);
-        }
-        
-        private void list_children (File file, string path) throws Error {
-            FileEnumerator enumerator = file.enumerate_children (GLib.FileAttribute.STANDARD_NAME, FileQueryInfoFlags.NOFOLLOW_SYMLINKS, null);
 
-            FileInfo info = null;
-            while ((info = enumerator.next_file (null)) != null) {
-                if (info.get_file_type () == FileType.DIRECTORY) {
-                    File subdir = file.resolve_relative_path (info.get_name ());
-                    list_children (subdir, subdir.get_path ());
-                } else {
-                    var name = info.get_name ();
-                    if (name.has_suffix(".so")) {
-                        name = name.replace(".so", "");
-                        name = name.replace("lib", "");
-                        TypeModule module = new OAModule(name, path);
-                        
-                        modules.add (module);
-                        module.load ();
-                    }
+public class OnlineAccounts.PluginsManager : GLib.Object {
+    
+    private static OnlineAccounts.PluginsManager? plugins_manager = null;
+    
+    public static PluginsManager get_default () {
+        if (plugins_manager == null)
+            plugins_manager = new PluginsManager ();
+        return plugins_manager;
+    }
+    
+    [CCode (has_target = false)]
+    private delegate OnlineAccounts.MethodPlugin RegisterMethodPluginFunction (Module module);
+    
+    [CCode (has_target = false)]
+    private delegate OnlineAccounts.ProviderPlugin RegisterProviderPluginFunction (Module module);
+    
+    private Gee.LinkedList<OnlineAccounts.MethodPlugin> method_plugins;
+    private Gee.LinkedList<OnlineAccounts.ProviderPlugin> provider_plugins;
+    
+    public signal void method_plugin_added (OnlineAccounts.MethodPlugin plug);
+    public signal void provider_plugin_added (OnlineAccounts.ProviderPlugin plug);
+    
+    private PluginsManager () {
+        method_plugins = new Gee.LinkedList<OnlineAccounts.MethodPlugin> ();
+        provider_plugins = new Gee.LinkedList<OnlineAccounts.ProviderPlugin> ();
+        var base_folder = File.new_for_path (Build.PLUGIN_DIR);
+        find_plugins (base_folder);
+        load_accounts ();
+    }
+
+    private void load (string path) {
+        if (Module.supported () == false) {
+            error ("Pantheon Online Accounts is not supported by this system!");
+        }
+
+        Module module = Module.open (path, ModuleFlags.BIND_LAZY);
+        if (module == null) {
+            critical (Module.error ());
+            return;
+        }
+        
+        bool is_method = true;
+
+        void* function;
+        module.symbol ("get_method_plugin", out function);
+        if (function == null) {
+            is_method = false;
+        }
+        
+        if (is_method) {
+            
+            RegisterMethodPluginFunction register_plugin = (RegisterMethodPluginFunction) function;
+            OnlineAccounts.MethodPlugin method = register_plugin (module);
+            if (method == null) {
+                critical ("Unknown plugin type for %s !", path);
+                return;
+            }
+            module.make_resident ();
+            register_method_plugin (method);
+        } else {
+            
+            module.symbol ("get_provider_plugin", out function);
+            if (function == null) {
+                critical ("neither get_method_plugin () nor get_provider_plugin () functions found in %s", path);
+                return;
+            }
+            
+            RegisterProviderPluginFunction register_plugin = (RegisterProviderPluginFunction) function;
+            OnlineAccounts.ProviderPlugin provider = register_plugin (module);
+            if (provider == null) {
+                critical ("Unknown plugin type for %s !", path);
+                return;
+            }
+            module.make_resident ();
+            register_provider_plugin (provider);
+        }
+    }
+    
+    private void find_plugins (File base_folder) {
+        FileInfo file_info = null;
+        try {
+            var enumerator = base_folder.enumerate_children (FileAttribute.STANDARD_NAME + "," + FileAttribute.STANDARD_TYPE + "," + FileAttribute.STANDARD_CONTENT_TYPE, 0);
+            while ((file_info = enumerator.next_file ()) != null) {
+                var file = base_folder.get_child (file_info.get_name ());
+
+                if (file_info.get_file_type () == FileType.REGULAR && GLib.ContentType.equals (file_info.get_content_type (), "application/x-sharedlib")) {
+                    load (file.get_path ());
+                } else if (file_info.get_file_type () == FileType.DIRECTORY) {
+                    find_plugins (file);
                 }
             }
+        } catch (Error err) {
+            warning("Unable to scan plugins folder: %s\n", err.message);
         }
-        
-        public void load_accounts () {
-            var manager = new Ag.Manager ();
-            foreach (var accountid in manager.list_enabled ()) {
+    }
+    
+    public void load_accounts () {
+        var manager = new Ag.Manager ();
+        foreach (var accountid in manager.list_enabled ()) {
+            foreach (var method in method_plugins) {
                 try {
                     var account = manager.load_account (accountid);
-                    use_plugin (account, false);
+                    var provider = manager.get_provider (account.get_provider_name ());
+                    if (provider == null)
+                        continue;
+                    if (provider.get_plugin_name ().collate (method.plugin_name) == 0)
+                        method.get_account (account);
                 } catch (Error e) {
                     critical (e.message);
                 }
             }
-            get_subplugins ();
-        }
-        
-        public void register_plugin (string plugin) {
-            plugins_available.add (plugin);
-        }
-        
-        public void register_subplugin (SubPlugin plugin) {
-            subplugins_available.add (plugin);
         }
     }
-
-    class OAModule : TypeModule {
-        [CCode (has_target = false)]
-        private delegate Type PluginInitFunc (TypeModule module);
-        
-        private GLib.Module module = null;
-        
-        private string name = null;
-        private string path = null;
-        
-        public OAModule (string name, string path)
-        {
-            this.name = name;
-            this.path = path;
-        }
-        
-        public override bool load ()
-        {
-            string path = Module.build_path (path, name);
-            module = Module.open (path, GLib.ModuleFlags.BIND_LAZY);
-            if(null == module) {
-                    critical ("Module not found in path: %s", path);
-            }
-            
-            module.make_resident ();
-            void * plugin_init = null;
-            if(! module.symbol("plugin_init", out plugin_init)) {
-                    critical ("No 'plugin_init' symbol for module %s in %s", name, path);
-            }
-            
-            ((PluginInitFunc) plugin_init)(this);
-            
-            return true;
-        }
-        
-        public override void unload ()
-        {
-            module = null;
-            
-            message("Library unloaded");
-        }
+    
+    private void register_method_plugin (OnlineAccounts.MethodPlugin plug) {
+        if (method_plugins.contains (plug))
+            return;
+        method_plugins.add (plug);
+        method_plugin_added (plug);
+    }
+    
+    public bool has_method_plugins () {
+        return !method_plugins.is_empty;
+    }
+    
+    public Gee.Collection<OnlineAccounts.MethodPlugin> get_method_plugins () {
+        return method_plugins.read_only_view;
+    }
+    
+    private void register_provider_plugin (OnlineAccounts.ProviderPlugin plug) {
+        if (provider_plugins.contains (plug))
+            return;
+        provider_plugins.add (plug);
+        provider_plugin_added (plug);
+    }
+    
+    public bool has_provider_plugins () {
+        return !provider_plugins.is_empty;
+    }
+    
+    public Gee.Collection<OnlineAccounts.ProviderPlugin> get_provider_plugins () {
+        return provider_plugins.read_only_view;
     }
 }

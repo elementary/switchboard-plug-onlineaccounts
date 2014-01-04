@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service-type id="contacts">
-  <name>Contacts</name>
-  <description>Integrate your contacts</description>
-  <icon>x-office-address-book</icon>
-  <translations>online-accounts-plug</translations>
-</service-type>

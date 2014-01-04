@@ -6,7 +6,6 @@ set(F_NAME facebook)
 
 vala_precompile(OAUTH_F_PLUGIN_VALA_C ${F_NAME}
     facebook.vala
-    Plugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
 OPTIONS
