@@ -23,14 +23,10 @@
 public class OnlineAccounts.RequestInfo : Object {
     
     public HashTable<string, Variant> parameters;
-    public DialogService service;
+    public GLib.MainLoop main_loop;
     
-    public RequestInfo (HashTable<string, Variant> parameter, DialogService service) {
+    public RequestInfo (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
         this.parameters = parameter;
-        this.service = service;
-    }
-    
-    public void push_dialog () {
-    
+        this.main_loop = main_loop;
     }
 }

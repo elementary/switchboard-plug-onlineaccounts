@@ -482,4 +482,3 @@ gsso_ui_gtk_dialog_new (GHashTable *params)
 
     return dialog;
 }
-

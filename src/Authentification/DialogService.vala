@@ -23,36 +23,59 @@
 [DBus (name = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog")]
 public class OnlineAccounts.DialogService : Object {
     const string DIALOG_BUS_NAME = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog";
-    [DBus (visible = false)]
-    public GLib.MainLoop main_loop;
     
     public DialogService () {
-        main_loop = new GLib.MainLoop ();
     }
     
     [DBus (name = "queryDialog")]
     public async HashTable<string, Variant> query_dialog(HashTable<string, Variant> parameter) {
-        var dialog = RequestQueue.get_default ().push_dialog (parameter, this);
+        var main_loop = new GLib.MainLoop ();
+        var dialog = RequestQueue.get_default ().push_dialog (parameter, main_loop);
         main_loop.run ();
+        HashTable<string, Variant> reply;
         if (dialog is WebDialog) {
             WebDialog webdialog = dialog as WebDialog;
-            return webdialog.get_reply ();
+            reply = webdialog.get_reply ();
         } else {
             GraphicalDialog graphicaldialog = dialog as GraphicalDialog;
-            return graphicaldialog.get_reply ();
+            graphicaldialog.refresh_captcha_needed.connect (() => {refresh (dialog.request_id);});
+            reply = graphicaldialog.get_reply ();
         }
+        dialog.destroy ();
+        return reply;
     }
     
     [DBus (name = "refreshDialog")]
     public void refresh_dialog (HashTable<string, Variant> parameter) {
+        GLib.Variant value = parameter.lookup (OnlineAccounts.Key.REQUEST_ID);
+        if ((value == null) || value.is_of_type (GLib.VariantType.STRING) == false) {
+            debug ("Wrong request id : %s", value != null ? value.get_type_string () : "null request id"); 
+            return;
+        }
+
+        var dialog = RequestQueue.get_default ().get_dialog_from_request_id (value.get_string ());
+        if (dialog == null)
+            return;
+        if (dialog is WebDialog) {
+            WebDialog webdialog = dialog as WebDialog;
+            webdialog.set_parameters (parameter);
+        } else {
+            GraphicalDialog graphicaldialog = dialog as GraphicalDialog;
+            graphicaldialog.set_parameters (parameter);
+        }
         return;
     }
     
     [DBus (name = "cancelUiRequest")]
     public void cancel_ui_request (string request_id) {
+        var dialog = RequestQueue.get_default ().get_dialog_from_request_id (request_id);
+        if (dialog != null) {
+            dialog.error_code = Signond.SignonUIError.CANCELED;
+            dialog.finished ();
+        }
         return;
     }
     
     [DBus (name = "refresh")]
-    public signal void refresh(string request_id);
+    public signal void refresh (string request_id);
 }

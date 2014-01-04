@@ -24,6 +24,9 @@ namespace OnlineAccounts {
     public static Plug plug;
 
     public class Plug : Switchboard.Plug {
+        
+        public signal void hide_request ();
+        
         Gtk.Stack stack;
         Gtk.Grid grid;
         Gtk.Grid main_grid;
@@ -63,9 +66,10 @@ namespace OnlineAccounts {
                 paned.set_position (200);
 
                 main_grid.attach (paned, 0, 0, 1, 1);
+                main_grid.show_all ();
                 stack.add_named (main_grid, "main");
                 stack.show_all ();
-                oa_server = new OnlineAccounts.Server ();
+                var oa_server = new OnlineAccounts.Server ();
             }
 
             return stack;
@@ -76,7 +80,7 @@ namespace OnlineAccounts {
         }
 
         public override void hidden () {
-            
+            hide_request ();
         }
 
         public override void search_callback (string location) {

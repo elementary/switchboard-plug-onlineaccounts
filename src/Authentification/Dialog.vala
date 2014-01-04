@@ -29,6 +29,10 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
 
     public Dialog (HashTable<string, Variant> parameter) {
         this.parameters = parameter;
+        plug.hide_request.connect (() => {
+            error_code = Signond.SignonUIError.CANCELED;
+            finished ();
+        });
     }
 
     public virtual HashTable<string, Variant> get_reply () {

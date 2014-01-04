@@ -28,6 +28,7 @@ public class OnlineAccounts.AccountsManager : Object {
     private OnlineAccounts.Account to_delete; // Store it here and wait until the user is sure to remove it.
     
     public signal void account_added (OnlineAccounts.Account account);
+    public signal void account_removed (OnlineAccounts.Account account);
     
     private static OnlineAccounts.AccountsManager? accounts_manager = null;
     
@@ -52,12 +53,19 @@ public class OnlineAccounts.AccountsManager : Object {
         accounts_available.add (account);
     }
     
+    public void remove_cached_account () {
+        if (to_delete != null) {
+            to_delete.delete_account.begin ();
+        }
+        to_delete = null;
+    }
+    
     public void remove_account (OnlineAccounts.Account account) {
         accounts_available.remove (account);
         if (to_delete != null) {
             to_delete.delete_account.begin ();
         }
         to_delete = account;
-        
+        account_removed (account);
     }
 }

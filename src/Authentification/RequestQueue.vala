@@ -30,15 +30,17 @@ public class OnlineAccounts.RequestQueue : Object {
     }
     
     Gee.LinkedList<string> widgets_to_show;
+    Gee.LinkedList<Dialog> dialogs;
     
     private bool is_idle = true;
     
     private RequestQueue () {
         widgets_to_show = new Gee.LinkedList<string> ();
+        dialogs = new Gee.LinkedList<Dialog> ();
     }
     
-    public Dialog push_dialog (HashTable<string, Variant> parameter, DialogService service) {
-        var request_info = new RequestInfo (parameter, service);
+    public Dialog push_dialog (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
+        var request_info = new RequestInfo (parameter, main_loop);
         return process_next (request_info);
     }
     
@@ -51,56 +53,37 @@ public class OnlineAccounts.RequestQueue : Object {
     }
 
     public Dialog process_next (OnlineAccounts.RequestInfo info) {
-
+        Dialog dialog;
         if (info.parameters.contains (OnlineAccounts.Key.OPEN_URL)) {
-            var dialog = new WebDialog (info.parameters);
+            dialog = new WebDialog (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);
-            if (is_idle == true) {
-                is_idle = false;
-                plug.switch_to_widget (dialog.request_id);
-            }
-            dialog.finished.connect (() => {
-                is_idle = true;
-                info.service.main_loop.quit ();
-                plug.switch_to_main ();
-                show_next_process.begin ();
-            });
-            return dialog;
         } else {
-            var dialog = new GraphicalDialog (info.parameters);
+            dialog = new GraphicalDialog (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);
-            if (is_idle == true) {
-                is_idle = false;
-                plug.switch_to_widget (dialog.request_id);
-            }
-            dialog.finished.connect (() => {
-                is_idle = true;
-                info.service.main_loop.quit ();
-                plug.switch_to_main ();
-                show_next_process.begin ();
-            });
-            return dialog;
+        }
+        dialogs.add (dialog);
+
+        if (is_idle == true) {
+            is_idle = false;
+            plug.switch_to_widget (dialog.request_id);
         }
 
-        /*dialog = is_web_dialog ? gsso_ui_web_dialog_new (info->params) 
-                               : gsso_ui_gtk_dialog_new (info->params);
+        dialog.finished.connect (() => {
+            is_idle = true;
+            dialogs.remove (dialog);
+            info.main_loop.quit ();
+            plug.switch_to_main ();
+            show_next_process.begin ();
+        });
 
-        if (!gsso_ui_dialog_show (dialog)) {
-
-            _on_dialog_close (dialog, self);
-
-            return;
+        return dialog;
+    }
+    
+    public Dialog? get_dialog_from_request_id (string request_id) {
+        foreach (var dialog in dialogs) {
+            if (GLib.strcmp (dialog.request_id, request_id) == 0)
+                return dialog;
         }
-
-        g_object_set_data (G_OBJECT (dialog), "service", (gpointer)info->service);
-
-        g_signal_connect(dialog, "close", G_CALLBACK (_on_dialog_close), self);
-
-        if (!is_web_dialog) 
-            g_signal_connect(dialog, "refresh-captcha",
-                G_CALLBACK (_on_dialog_refresh_captcha), self);
-
-        self->active_dialog = dialog;
-        _set_is_idle (self, FALSE);*/
+        return null;
     }
 }

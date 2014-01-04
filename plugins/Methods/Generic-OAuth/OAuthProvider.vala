@@ -182,6 +182,7 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
                 identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
             } catch (Error e) {
                 critical (e.message);
+                main_loop.quit ();
             }
         yield;
     }

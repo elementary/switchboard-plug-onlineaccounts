@@ -25,14 +25,23 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
     string oauth_open_url;
     string oauth_final_url;
     string oauth_response;
+    Gtk.Label info_label;
+    Gtk.Spinner spinner;
 
     public WebDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
         var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
         var container = infobar.get_content_area () as Gtk.Container;
-        var info_label = new Gtk.Label (_("Please enter your credentials…"));
-        container.add (info_label);
+        var container_grid = new Gtk.Grid ();
+        container_grid.column_spacing = 12;
+        info_label = new Gtk.Label (_("Loading…"));
+        container_grid.valign = Gtk.Align.CENTER;
+        spinner = new Gtk.Spinner ();
+        spinner.start ();
+        container_grid.attach (spinner, 0, 0, 1, 1);
+        container_grid.attach (info_label, 1, 0, 1, 1);
+        container.add (container_grid);
         infobar.response.connect (() => {
             error_code = Signond.SignonUIError.CANCELED;
             finished ();
@@ -42,8 +51,12 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         WebKit.WebContext.get_default ().set_preferred_languages (GLib.Intl.get_language_names ());
         webview = new WebKit.WebView ();
         webview.expand = true;
+        var event_box = new Gtk.EventBox ();
+        event_box.add (webview);
+        event_box.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
+        event_box.expand = true;
         attach (infobar, 0, 0, 1, 1);
-        attach (webview, 0, 1, 1, 1);
+        attach (event_box, 0, 1, 1, 1);
         show_all ();
         set_parameters (params);
     }
@@ -52,13 +65,15 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         if (base.set_parameters (params) == false) {
             return false;
         }
-        
+
         webview.load_changed.connect (on_webview_load);
         webview.load_failed.connect (on_load_uri_failed);
-        
-        validate_params (params);
-        webview.load_uri (oauth_open_url);
 
+        if (validate_params (params) == false) {
+            return false;
+        }
+
+        webview.load_uri (oauth_open_url);
         return true;
     }
 
@@ -96,6 +111,18 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
     }
 
     private void on_webview_load (WebKit.LoadEvent load_event) {
+        if (load_event == WebKit.LoadEvent.FINISHED) {
+            info_label.label = _("Please enter your credentials…");
+            spinner.stop ();
+            spinner.hide ();
+        }
+
+        if (load_event == WebKit.LoadEvent.STARTED) {
+            info_label.label = _("Loading…");
+            spinner.start ();
+            spinner.show ();
+        }
+
         if (load_event != WebKit.LoadEvent.REDIRECTED)
             return;
 

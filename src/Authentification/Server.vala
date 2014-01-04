@@ -53,6 +53,11 @@ public class OnlineAccounts.Server : GLib.Object {
              GLib.BusNameOwnerFlags.ALLOW_REPLACEMENT | GLib.BusNameOwnerFlags.REPLACE,
              on_bus_acquired, on_name_acquired, on_name_lost);
     }
+    ~Server () {
+        bus_server.stop ();
+        GLib.Bus.unown_name (bus_owner_id);
+    }
+    
     void on_name_acquired (GLib.DBusConnection connection, string name) {
         debug ("D-Bus name acquired");
     }
@@ -97,7 +102,6 @@ public class OnlineAccounts.Server : GLib.Object {
             warning ("Failed to export interface: %s", e.message);
             return;
         }
-
         bus_server.start ();
         debug ("UI Dialog server started at : %s", bus_server.get_client_address ());
     }

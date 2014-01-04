@@ -25,7 +25,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     private Gtk.ListStore list_store;
     private Gtk.TreeView tree_view;
     private Gee.HashMap<string, Gtk.TreeIter?> iter_map;
-    private Gtk.TreeIter default_iter;
     
     private Gtk.ToolButton remove_button;
     private Gtk.ToolButton add_button;
