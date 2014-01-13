@@ -24,10 +24,14 @@ Vcs-Browser: https://code.launchpad.net/~elementary-apps/switchboard-plug-online
 
 Package: switchboard-plug-online-accounts
 Architecture: any
-Depends: ${misc:Depends},
+Depends: gsignond-extension-pantheon,
+         ${misc:Depends},
          ${shlibs:Depends}
 Enhances: switchboard
 Pre-Depends: dpkg (>= 1.15.6)
+Recommends: pantheon-online-accounts-plugin-google,
+            pantheon-online-accounts-plugin-microsoft,
+            pantheon-online-accounts-plugin-facebook
 Description: Online Accounts plug for Switchboard
  This plug allow you to enable online accounts sync.
 
@@ -55,6 +59,7 @@ Description: Online Accounts plug for Switchboard (development files)
 Package: pantheon-online-accounts-plugin-generic-oauth
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         gsignond-plugin-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
