@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="fastmail">
+  <name>FastMail</name>
+  <description>Includes Contacts, Mails, and Instant Messaging</description>
+  <icon>yahoo</icon>
+  <translations>pantheon-online-accounts</translations>
+  <plugin>password</plugin>
+
+  <template>
+    <group name="password">
+      <setting name="ForgotPasswordUrl">https://www.fastmail.fm/html/?MSignal=LostPassword-*</setting>
+    </group>
+  </template>
+</provider>

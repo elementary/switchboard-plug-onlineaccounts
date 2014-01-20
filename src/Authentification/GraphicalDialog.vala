@@ -138,7 +138,9 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         save_box.set_layout (Gtk.ButtonBoxStyle.END);
         save_box.add (save_button);
         save_button.clicked.connect (() => finished ());
+        attach (infobar, 0, 0, 4, 1);
         attach (save_box, 1, 10, 2, 1);
+        show_all ();
     }
 
     public override bool set_parameters (HashTable<string, Variant> params) {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="yahoo">
+  <name>Yahoo!</name>
+  <description>Includes Contacts, Mails, and Instant Messaging</description>
+  <icon>yahoo</icon>
+  <translations>pantheon-online-accounts</translations>
+  <plugin>generic-oauth</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth1</setting>
+      <setting name="mechanism">HMAC-SHA1</setting>
+      <group name="oauth1">
+        <group name="HMAC-SHA1">
+          <setting name="Host">api.login.yahoo.com</setting>
+          <setting name="Callback">http://elementaryos.org</setting>
+          <setting name="RequestEndpoint">https://api.login.yahoo.com/oauth/v2/get_request_token</setting>
+          <setting name="TokenEndpoint">https://api.login.yahoo.com/oauth/v2/get_token</setting>
+          <setting name="AuthorizationEndpoint">https://api.login.yahoo.com/oauth/v2/request_auth</setting>
+          <setting name="ConsumerKey">dj0yJmk9cTR3bkxCTWswWjVJJmQ9WVdrOVNISTJXbEJ1TjJVbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1hNg--</setting>
+          <setting name="ConsumerSecret">ce620be48839bb3d5ff72e31856bae807f40d509</setting>
+          <setting type="as" name="AllowedSchemes">['https','http']</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

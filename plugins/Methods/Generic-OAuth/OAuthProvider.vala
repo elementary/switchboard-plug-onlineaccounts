@@ -60,20 +60,38 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         var oauth_params_builder = new GLib.VariantBuilder (GLib.VariantType.VARDICT);
         var method = account.get_variant ("auth/method", null).get_string ();
         var mechanism = account.get_variant ("auth/mechanism", null).get_string ();
-        string host_name = null;
+        string[3] host_names = {null, null, null};
+        int hosts_count = 0;
         
-        if (mechanism == "PLAINTEXT" || mechanism == "HMAC-SHA1" || mechanism == "RSA-SHA1")
+        if (mechanism == "PLAINTEXT" || mechanism == "HMAC-SHA1" || mechanism == "RSA-SHA1") {
+            oauth_params_builder.add ("{sv}", "SignatureMethod", account.get_variant ("auth/mechanism", null));
             method_a = {"oauth1", null};
-        else if (mechanism == "web_server" || mechanism == "user_agent")
+        } else if (mechanism == "web_server" || mechanism == "user_agent") {
             method_a = {"oauth2", null};
-        else
+        } else {
             method_a = {"", null};
+        }
         
         var host = account.get_variant ("auth/%s/%s/Host".printf(method, mechanism), null);
         if (host != null) {
             oauth_params_builder.add ("{sv}", "AuthHost", host);
             oauth_params_builder.add ("{sv}", "TokenHost", host);
-            host_name = host.get_string ();
+            host_names[hosts_count] = host.get_string ();
+            hosts_count++;
+        }
+        
+        var auth_host = account.get_variant ("auth/%s/%s/AuthHost".printf(method, mechanism), null);
+        if (auth_host != null) {
+            oauth_params_builder.add ("{sv}", "AuthHost", auth_host);
+            host_names[hosts_count] = auth_host.get_string ();
+            hosts_count++;
+        }
+        
+        var token_host = account.get_variant ("auth/%s/%s/TokenHost".printf(method, mechanism), null);
+        if (token_host != null) {
+            oauth_params_builder.add ("{sv}", "TokenHost", token_host);
+            host_names[hosts_count] = token_host.get_string ();
+            hosts_count++;
         }
         
         var path = account.get_variant ("auth/%s/%s/AuthPath".printf(method, mechanism), null);
@@ -131,6 +149,10 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         if (rqend != null)
         oauth_params_builder.add ("{sv}", "RequestEndpoint", rqend);
         
+        var callback = account.get_variant ("auth/%s/%s/Callback".printf(method, mechanism), null);
+        if (callback != null)
+        oauth_params_builder.add ("{sv}", "Callback", callback);
+        
         var tkend = account.get_variant ("auth/%s/%s/TokenEndpoint".printf(method, mechanism), null);
         if (tkend != null)
             oauth_params_builder.add ("{sv}", "TokenEndpoint", tkend);
@@ -159,15 +181,14 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         if (mode != null)
             oauth_params_builder.add ("{sv}", "Mode", mode);
         
-        oauth_params_builder.add ("{sv}", "AllowedRealms", new Variant.strv ({host_name, null}));
-        oauth_params_builder.add ("{sv}", "Realms", new Variant.strv ({host_name, null}));
+        oauth_params_builder.add ("{sv}", "AllowedRealms", new Variant.strv (host_names));
+        oauth_params_builder.add ("{sv}", "Realms", new Variant.strv (host_names));
         
         session_data = oauth_params_builder.end ();
         session_data = auth_data.get_login_parameters (session_data);
             try {
                 var session = identity.create_session ("oauth");
-                string[] realms = {host_name, null};
-                var sequence = Signond.copy_array_to_sequence (realms);
+                var sequence = Signond.copy_array_to_sequence (host_names);
                 session_result = yield session.process_async (session_data, method_a[0], null);
                 var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
                 info.set_secret (access_token, true);
