@@ -27,7 +27,6 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
     }
     
     public override void get_user_name (OnlineAccounts.Account plugin) {
-        var token_type = plugin.session_result.lookup_value ("TokenType", null).dup_string ();
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
         var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
         var auth_endpoint = plugin.session_data.lookup_value ("RedirectUri", null).dup_string ();
@@ -52,7 +51,6 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
     }
     
     public override void get_user_image (OnlineAccounts.Account plugin) {
-        var token_type = plugin.session_result.lookup_value ("TokenType", null).dup_string ();
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
         var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
         var auth_endpoint = plugin.session_data.lookup_value ("RedirectUri", null).dup_string ();

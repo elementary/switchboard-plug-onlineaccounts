@@ -28,22 +28,28 @@ public class OnlineAccounts.Plugins.OAuth.Microsoft.ProviderPlugin : OnlineAccou
     }
     
     public override void get_user_name (OnlineAccounts.Account plugin) {
-            var token_type = plugin.session_result.lookup_value ("TokenType", null).dup_string ();
-            var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
-            var session = new Soup.SessionSync ();
-            var msg = new Soup.Message ("GET", "https://apis.live.net/v5.0/me?access_token=" + token);
-            session.send_message (msg);
-            try {
-                var parser = new Json.Parser ();
-                parser.load_from_data ((string) msg.response_body.flatten ().data, -1);
+        var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
+        var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
+        var auth_endpoint = plugin.session_data.lookup_value ("RedirectUri", null).dup_string ();
+        var proxy = new Rest.OAuth2Proxy.with_token (client_id, token, auth_endpoint, "https://apis.live.net/v5.0/me", false);
+        var call = proxy.new_call ();
+        call.set_method ("GET");
+        try {
+            call.run ();
+        } catch (Error e) {
+            critical (e.message);
+        }
+        try {
+            var parser = new Json.Parser ();
+            parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
 
-                var root_object = parser.get_root ().get_object ();
-                var mails_member = root_object.get_object_member ("emails");
-                string mail = mails_member.get_string_member ("account");
-                plugin.account.set_display_name (mail);
-            } catch (Error e) {
-                critical (e.message);
-            }
+            var root_object = parser.get_root ().get_object ();
+            var mails_member = root_object.get_object_member ("emails");
+            string mail = mails_member.get_string_member ("account");
+            plugin.account.set_display_name (mail);
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
     
     public override void get_user_image (OnlineAccounts.Account plugin) {
