@@ -64,9 +64,9 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
     }
     
     public override bool update_credentials (Signond.Credentials creds) {
-        if (creds.get_password () != null)
+        if (creds.get_password () != null || creds.get_password () != "")
             store_secret (SignonSecretType.PASSWORD, creds.get_id (), 0, creds.get_password ());
-        if (creds.get_username () != null)
+        if (creds.get_username () != null || creds.get_username () != "")
             store_secret (SignonSecretType.USERNAME, creds.get_id (), 0, creds.get_username ());
         return true;
     }
@@ -128,6 +128,8 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
     }
     
     public bool store_password (int type, int id, int method, string password) {
+        if (password == null || password == "")
+            return false;
         try {
             return Secret.password_store_sync (schema, Secret.COLLECTION_DEFAULT, "Online Account",
                                         password, null, "signon-type", type, "signon-id", id,
@@ -140,6 +142,8 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
     }
     
     public bool store_secret (SignonSecretType type, uint32 id, uint32 method, string secret) {
+        if (secret == null || secret == "")
+            return false;
         var display_name = "Web Account: id %u-%u".printf (id, type);
         string? signonMethod = (type == SignonSecretType.DATA) ? "signon-method" : null;
         try {
@@ -170,4 +174,3 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
         return true;
     }
 }
-

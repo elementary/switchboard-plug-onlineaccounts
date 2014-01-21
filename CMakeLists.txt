@@ -75,6 +75,7 @@ set(DEPS_PACKAGES
     libsoup-2.4
     javascriptcore-3.0
     gmodule-2.0
+    rest-0.7
 )
 
 set(DEPS_PKG
@@ -94,6 +95,7 @@ set(DEPS_PKG
     libsoup-2.4
     javascriptcoregtk-3.0
     gmodule-2.0
+    rest-0.7
 )
 
 add_subdirectory (po)

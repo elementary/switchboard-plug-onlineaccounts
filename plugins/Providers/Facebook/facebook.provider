@@ -13,9 +13,11 @@
       <setting name="mechanism">user_agent</setting>
       <group name="oauth2">
         <group name="user_agent">
-          <setting name="Host">www.facebook.com</setting>
+          <setting name="AuthHost">www.facebook.com</setting>
+          <setting name="TokenHost">graph.facebook.com</setting>
           <setting name="AuthPath">/dialog/oauth</setting>
-          <setting name="RedirectUri">http://elementaryos.org</setting>
+          <setting name="TokenPath">/oauth/access_token</setting>
+          <setting name="RedirectUri">http://elementaryos.org/</setting>
           <setting name="UseDisplay">popup</setting>
           <setting type="as" name="Scope">['publish_stream','read_stream','status_update','user_photos','friends_photos','xmpp_login']</setting>
           <setting name="ClientId">217719465038528</setting>

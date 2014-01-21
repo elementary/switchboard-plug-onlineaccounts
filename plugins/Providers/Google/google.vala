@@ -29,13 +29,19 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
     public override void get_user_name (OnlineAccounts.Account plugin) {
         var token_type = plugin.session_result.lookup_value ("TokenType", null).dup_string ();
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
-        var session = new Soup.SessionSync ();
-        var msg = new Soup.Message ("GET", "https://www.googleapis.com/oauth2/v1/userinfo?access_token=" + token);
-        msg.request_headers.append ("Authorization", token_type + " " + token);
-        session.send_message (msg);
+        var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
+        var auth_endpoint = plugin.session_data.lookup_value ("RedirectUri", null).dup_string ();
+        var proxy = new Rest.OAuth2Proxy.with_token (client_id, token, auth_endpoint, "https://www.googleapis.com/oauth2/v1/userinfo", false);
+        var call = proxy.new_call ();
+        call.set_method ("GET");
+        try {
+            call.run ();
+        } catch (Error e) {
+            critical (e.message);
+        }
         try {
             var parser = new Json.Parser ();
-            parser.load_from_data ((string) msg.response_body.flatten ().data, -1);
+            parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
 
             var root_object = parser.get_root ().get_object ();
             string mail = root_object.get_string_member ("email");
@@ -48,13 +54,19 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
     public override void get_user_image (OnlineAccounts.Account plugin) {
         var token_type = plugin.session_result.lookup_value ("TokenType", null).dup_string ();
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
-        var session = new Soup.SessionSync ();
-        var msg = new Soup.Message ("GET", "https://www.googleapis.com/oauth2/v1/userinfo?access_token=" + token);
-        msg.request_headers.append ("Authorization", token_type + " " + token);
-        session.send_message (msg);
+        var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
+        var auth_endpoint = plugin.session_data.lookup_value ("RedirectUri", null).dup_string ();
+        var proxy = new Rest.OAuth2Proxy.with_token (client_id, token, auth_endpoint, "https://www.googleapis.com/oauth2/v1/userinfo", false);
+        var call = proxy.new_call ();
+        call.set_method ("GET");
+        try {
+            call.run ();
+        } catch (Error e) {
+            critical (e.message);
+        }
         try {
             var parser = new Json.Parser ();
-            parser.load_from_data ((string) msg.response_body.flatten ().data, -1);
+            parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
 
             var root_object = parser.get_root ().get_object ();
             string picture = root_object.get_string_member ("picture");
