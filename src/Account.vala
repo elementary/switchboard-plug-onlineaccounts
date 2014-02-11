@@ -38,7 +38,7 @@ public class OnlineAccounts.Account : GLib.Object {
     public async void delete_account () {
         account.select_service (null);
         var v_id = account.get_variant (gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 (), "");
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
         identity.remove ((Signon.IdentityRemovedCb) null);
         account.delete ();
         try {

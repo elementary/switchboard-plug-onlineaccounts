@@ -105,6 +105,14 @@ find_package (Vala REQUIRED)
 include (ValaVersion)
 ensure_vala_version ("0.21.2" MINIMUM)
 
+find_package (PkgConfig)
+# Add all your dependencies to the list below
+pkg_check_modules (DEPS REQUIRED ${DEPS_PKG})
+
+add_definitions (${DEPS_CFLAGS})
+link_libraries (${DEPS_LIBRARIES})
+link_directories (${DEPS_LIBRARY_DIRS})
+
 include (ValaPrecompile)
 
 set(GLOBAL_VALAC_OPTIONS

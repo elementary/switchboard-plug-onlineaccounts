@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="fastmail">
   <name>FastMail</name>
-  <description>Includes Contacts, Mails, and Instant Messaging</description>
-  <icon>yahoo</icon>
+  <description>Includes Contacts, Mails, and Calendar</description>
+  <icon>fastmail</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>password</plugin>
 

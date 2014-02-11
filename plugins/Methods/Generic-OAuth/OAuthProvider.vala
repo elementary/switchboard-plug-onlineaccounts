@@ -47,7 +47,7 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         info.set_secret ("", true);
         info.set_method ("oauth", {"oauth1", "oauth2", null});
         info.access_control_list_append (new Signon.SecurityContext.from_values ("*", "*"));
-        var identity = new Signon.Identity ("switchboard");
+        var identity = new Signon.Identity ();
         identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
         
         main_loop.run ();
