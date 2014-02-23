@@ -61,7 +61,7 @@ set(DEPS_PACKAGES
     glib-2.0
     gio-2.0
     gio-unix-2.0
-    gee-1.0
+    gee-0.8
     gtk+-3.0
     posix
     granite
@@ -82,7 +82,7 @@ set(DEPS_PKG
     glib-2.0
     gio-2.0
     gio-unix-2.0
-    gee-1.0
+    gee-0.8
     gtk+-3.0>=3.8
     granite
     switchboard-2.0
