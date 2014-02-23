@@ -24,10 +24,16 @@ Vcs-Browser: https://code.launchpad.net/~elementary-apps/switchboard-plug-online
 
 Package: switchboard-plug-online-accounts
 Architecture: any
-Depends: ${misc:Depends},
+Depends: gsignond-extension-pantheon,
+         ${misc:Depends},
          ${shlibs:Depends}
 Enhances: switchboard
 Pre-Depends: dpkg (>= 1.15.6)
+Recommends: pantheon-online-accounts-plugin-google,
+            pantheon-online-accounts-plugin-microsoft,
+            pantheon-online-accounts-plugin-facebook,
+            pantheon-online-accounts-plugin-yahoo,
+            pantheon-online-accounts-plugin-fastmail
 Description: Online Accounts plug for Switchboard
  This plug allow you to enable online accounts sync.
 
@@ -55,10 +61,20 @@ Description: Online Accounts plug for Switchboard (development files)
 Package: pantheon-online-accounts-plugin-generic-oauth
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         gsignond-plugin-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Generic OAuth
+ Online accounts plugin for single signon
+
+Package: pantheon-online-accounts-plugin-password
+Architecture: any
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Online Accounts plugin for single signon - Password
  Online accounts plugin for single signon
 
 Package: pantheon-online-accounts-plugin-facebook
@@ -89,4 +105,24 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Google
+ Online accounts plugin for single signon
+
+Package: pantheon-online-accounts-plugin-yahoo
+Architecture: any
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         pantheon-online-accounts-plugin-generic-oauth,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Online Accounts plugin for single signon - Yahoo
+ Online accounts plugin for single signon
+
+Package: pantheon-online-accounts-plugin-fastmail
+Architecture: any
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         pantheon-online-accounts-plugin-password,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Online Accounts plugin for single signon - FastMail
  Online accounts plugin for single signon
