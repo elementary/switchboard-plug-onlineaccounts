@@ -5,7 +5,7 @@ Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libglib2.0-dev (>= 2.26.0),
-               libgee-dev (>= 0.5.3),
+               libgee-0.8-dev (>= 0.5.3),
                libgtk-3-dev (>= 3.10.0),
                libgranite-dev,
                libswitchboard-2.0-dev,
