@@ -138,7 +138,9 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         save_box.set_layout (Gtk.ButtonBoxStyle.END);
         save_box.add (save_button);
         save_button.clicked.connect (() => finished ());
+        attach (infobar, 0, 0, 4, 1);
         attach (save_box, 1, 10, 2, 1);
+        show_all ();
     }
 
     public override bool set_parameters (HashTable<string, Variant> params) {
@@ -158,6 +160,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             forgot_button.label = temp_string ?? _("Forgot password");
             forgot_button.uri = forgot_password_url;
             forgot_button.activate_link.connect (() =>{
+                warning ("forgot password");
                 error_code = Signond.SignonUIError.FORGOT_PASSWORD;
                 finished ();
                 return false;
@@ -223,6 +226,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
                 }
             });
         }
+        reset_ok ();
 
         return true;
     }
@@ -293,7 +297,14 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         return true;
     }
-    
+
+    public override HashTable<string, Variant> get_reply () {
+        var table = base.get_reply ();
+        table.insert (OnlineAccounts.Key.USERNAME, new Variant.string (username_entry.text));
+        table.insert (OnlineAccounts.Key.PASSWORD, new Variant.string (password_entry.text));
+        return table;
+    }
+
     private void reset_ok () {
         bool state = false;
 

@@ -113,7 +113,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     }
     
     private void add_plugin_callback (OnlineAccounts.Account plugin) {
-        var accounts_manager = AccountsManager.get_default ();
         var provider = plugin.account.get_manager ().get_provider (plugin.account.provider);
         if (provider == null)
             return;

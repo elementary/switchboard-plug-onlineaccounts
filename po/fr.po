@@ -35,7 +35,7 @@ msgstr "Annuler"
 
 #: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
-msgstr "Annuler"
+msgstr "Restaurer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:102
 #, c-format

@@ -27,10 +27,10 @@ namespace Signon {
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", type_id = "signon_identity_get_type ()")]
 	public class Identity : GLib.Object {
 		[CCode (has_construct_function = false)]
-		public Identity (string application_context);
+		public Identity ();
 		public Signon.AuthSession create_session (string method) throws GLib.Error;
 		[CCode (has_construct_function = false)]
-		public Identity.from_db (uint32 id, string application_context);
+		public Identity.from_db (uint32 id);
 		public void get_auth_session (Signon.AuthSession session, string method, Signon.IdentitySessionReadyCb cb);
 		public unowned GLib.Error get_last_error ();
 		public void query_info (Signon.IdentityInfoCb cb);

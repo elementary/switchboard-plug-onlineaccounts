@@ -1,11 +1,3 @@
-find_package (PkgConfig)
-# Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED ${DEPS_PKG})
-
-add_definitions (${DEPS_CFLAGS})
-link_libraries (${DEPS_LIBRARIES})
-link_directories (${DEPS_LIBRARY_DIRS})
-
 set(CONFIG_FILE ${CMAKE_CURRENT_BINARY_DIR}/config.vala)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.vala.cmake ${CONFIG_FILE})
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${PLUGNAME}.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.pc)

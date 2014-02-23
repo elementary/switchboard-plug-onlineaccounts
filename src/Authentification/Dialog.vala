@@ -25,9 +25,10 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     
     public HashTable<string, Variant> parameters;
     public string request_id;
-    public Signond.SignonUIError error_code = Signond.SignonUIError.NONE;
+    public Signond.SignonUIError error_code;
 
     public Dialog (HashTable<string, Variant> parameter) {
+        error_code = Signond.SignonUIError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {
             error_code = Signond.SignonUIError.CANCELED;

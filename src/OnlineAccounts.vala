@@ -57,7 +57,7 @@ namespace OnlineAccounts {
 
         public override Gtk.Widget get_widget () {
             if (stack == null) {
-                infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0, _("Restore"), 1);
+                infobar = new Gtk.InfoBar.with_buttons (_("Close"), 0, _("Restore"), 1);
                 infobar.no_show_all = true;
                 var action_box = infobar.get_action_area () as Gtk.Box;
                 action_box.orientation = Gtk.Orientation.HORIZONTAL;

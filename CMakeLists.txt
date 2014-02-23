@@ -75,6 +75,7 @@ set(DEPS_PACKAGES
     libsoup-2.4
     javascriptcore-3.0
     gmodule-2.0
+    rest-0.7
 )
 
 set(DEPS_PKG
@@ -94,6 +95,7 @@ set(DEPS_PKG
     libsoup-2.4
     javascriptcoregtk-3.0
     gmodule-2.0
+    rest-0.7
 )
 
 add_subdirectory (po)
@@ -102,6 +104,14 @@ add_subdirectory (data)
 find_package (Vala REQUIRED)
 include (ValaVersion)
 ensure_vala_version ("0.21.2" MINIMUM)
+
+find_package (PkgConfig)
+# Add all your dependencies to the list below
+pkg_check_modules (DEPS REQUIRED ${DEPS_PKG})
+
+add_definitions (${DEPS_CFLAGS})
+link_libraries (${DEPS_LIBRARIES})
+link_directories (${DEPS_LIBRARY_DIRS})
 
 include (ValaPrecompile)
 
