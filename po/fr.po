@@ -7,252 +7,159 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-04 17:45+0100\n"
-"PO-Revision-Date: 2014-01-04 17:47+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-02-23 22:01+0100\n"
+"PO-Revision-Date: 2014-02-24 18:37+0000\n"
+"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
 "Language-Team: Fr <LL@li.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2013-02-07 05:18+0000\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Launchpad-Export-Date: 2014-02-25 06:25+0000\n"
+"X-Generator: Launchpad (build 16926)\n"
+"Language: fr\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:46
-msgid "Online Accounts"
-msgstr "Comptes en-ligne"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:47
-msgid "Synchronize your computer with all your online accounts around the web."
-msgstr "Synchronisez votre ordinateur avec tous vos comptes en-ligne."
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:60
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:34
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:34
 msgid "Cancel"
 msgstr "Annuler"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:60
-msgid "Restore"
-msgstr "Restaurer"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:102
-#, c-format
-msgid "Account '%s' Removed."
-msgstr "Compte \"%s\" supprimé."
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:116
-msgid "You don't have any online account."
-msgstr "Vous n'avez aucun compte associé."
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//OnlineAccounts.vala:116
-msgid "Start linking one with your computer"
-msgstr "Commencez à en ajouter"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "Chargement…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/WebDialog.vala:115
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:115
 msgid "Please enter your credentials…"
 msgstr "Veuillez saisir vos identifiants…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:75
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:77
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
 msgstr "jean_dupont"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:79
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
 msgstr "Mot de passe :"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:83
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
 msgstr "Nouveau mot de passe :"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:87
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
 msgstr "Confirmation du mot de passe :"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr "Se souvenir du mot de passe"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:158
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
 msgstr "Mot de passe oublié"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:99
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
 msgstr "Actualiser le Captcha"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:100
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr "Saisir le texte ci-dessus"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Authentification/GraphicalDialog.vala:105
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
 msgstr "Enregistrer"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
-msgstr "<b>Applications utilisant ce service :</b>"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:121
+msgid "Loading…"
+msgstr "Chargement…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/AccountView.vala:100
-msgid "<b>There is no application using this account.</b>"
-msgstr "<b>Aucune application n'utilise ce compte.</b>"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:89
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Ajouter…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Retirer"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:24
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr ""
 "Inclus la gestion des contacts, de Gmail, Google Documents, Google+, Youtube "
 "et Picasa"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:25
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Calendrier Google"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:26
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:26
 msgid "Google Contacts"
 msgstr "Contacts Google"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:27
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:27
 msgid "Google Drive"
 msgstr "Google Drive"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:28
 msgid "GMail"
 msgstr "GMail"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:29
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:29
 msgid "Google Talk"
 msgstr "Google Talk"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:30
 msgid "Picasa"
 msgstr "Picasa"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:31
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
 msgstr ""
 "Inclus la gestion des contacts, du calendrier et des addresses électroniques "
 "Outlook ansi que SkyDrive"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-new-libpeas/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr ""
 "Inclus la gestion des contacts, du chat, des événements, des messages du mur "
 "et des photos"
 
-#~ msgid "&lt;b&gt;Username&lt;/b&gt;"
-#~ msgstr "&lt;b&gt;Nom d'utilisateur&lt;/b&gt;"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:46
+msgid "Online Accounts"
+msgstr "Comptes en-ligne"
 
-#~ msgid "Enter username"
-#~ msgstr "Saisir le nom d'utilisateur"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:47
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr "Synchronisez votre ordinateur avec tous vos comptes en-ligne."
 
-#~ msgid "&lt;b&gt;Password&lt;/b&gt;"
-#~ msgstr "&lt;b&gt;Mot de passe&lt;/b&gt;"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+msgid "Close"
+msgstr "Fermer"
 
-#~ msgid "Password"
-#~ msgstr "Mot de Passe"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+msgid "Restore"
+msgstr "Annuler"
 
-#~ msgid "&lt;b&gt;New Password&lt;/b&gt;"
-#~ msgstr "&lt;b&gt;Nouveau mot de passe&lt;/b&gt;"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:102
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "Compte \"%s\" supprimé."
 
-#~ msgid "New password"
-#~ msgstr "Nouveau mot de Passe"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
+msgid "You don't have any online account."
+msgstr "Vous n'avez aucun compte associé."
 
-#~ msgid "&lt;b&gt;Confirm Password&lt;/b&gt;"
-#~ msgstr "&lt;b&gt;Confirmer le mot de passe&lt;/b&gt;"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
+msgid "Start linking one with your computer"
+msgstr "Commencez à en ajouter"
 
-#~ msgid "Re-type new password"
-#~ msgstr "Re-saisir le mot de passe"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:89
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Ajouter…"
 
-#~ msgid "Message"
-#~ msgstr "Message"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Retirer"
 
-#~ msgid "Add an Account"
-#~ msgstr "Ajouter un compte"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:46
+msgid "<b>Applications that use this service:</b>"
+msgstr "<b>Applications utilisant ce service :</b>"
 
-#, fuzzy
-#~ msgid "</big>"
-#~ msgstr "<b><big>   </big></b>"
-
-#~ msgid "<big>User name:</big>"
-#~ msgstr "<big>Nom d'utilisateur :</big>"
-
-#~ msgid "Remove Account"
-#~ msgstr "Supprimer le compte"
-
-#~ msgid "Connect your Google Account"
-#~ msgstr "Connectez-vous à votre compte Google"
-
-#~ msgid ""
-#~ "Expected status 200 when requesting access token, instead got status %d "
-#~ "(%s)"
-#~ msgstr ""
-#~ "État 200 attendu lors de la requête du jeton d'accès, état %d (%s) reçu à "
-#~ "la place"
-
-#~ msgid ""
-#~ "There are currently no applications installed which integrate with your "
-#~ "%s account."
-#~ msgstr ""
-#~ "Il n'y a actuellement aucune application installée utilisant votre compte "
-#~ "%s."
-
-#~ msgid "Grant access"
-#~ msgstr "Autoriser l'accès"
-
-#~ msgid "Edit Options"
-#~ msgstr "Éditer les paramètres"
-
-#~ msgid "Options"
-#~ msgstr "Paramètres"
-
-#~ msgid "Please authorize %s to access your %s account:"
-#~ msgstr "Veuillez autoriser %s à accéder à votre compte %s :"
-
-#~ msgid "Are you sure that you wish to remove this Web Account?"
-#~ msgstr "Voulez-vous vraiment supprimer ce compte en-ligne ?"
-
-#~ msgid ""
-#~ "The Web Account which manages the integration of %s with your "
-#~ "applications will be removed."
-#~ msgstr ""
-#~ "Toute intégration de votre compte %s avec vos applications sera supprimé."
-
-#~ msgid "Your online %s account is not affected."
-#~ msgstr "Votre compte en-ligne %s ne sera néanmoins pas modifié."
-
-#~ msgid "All applications"
-#~ msgstr "Toutes les applications"
-
-#~ msgid "Show accounts that integrate with:"
-#~ msgstr "Afficher les comptes s'intégrant à :"
-
-#~ msgid ""
-#~ "There are currently no account providers available which integrate with "
-#~ "this application"
-#~ msgstr ""
-#~ "Il n'y a actuellement aucun compte pouvant s'intégrer à cette application."
-
-#~ msgid "Select to configure a new %s account"
-#~ msgstr "Sélectionnez pour configurer un nouveau compte %s"
+#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:100
+msgid "<b>There is no application using this account.</b>"
+msgstr "<b>Aucune application n'utilise ce compte.</b>"
