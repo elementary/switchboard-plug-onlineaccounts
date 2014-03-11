@@ -61,17 +61,31 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         int i = 0;
         foreach (var service in plugin.account.list_services ()) {
             foreach (var app in plugin.account.manager.list_applications_by_service (service)) {
-                string i18n_domain = app.get_desktop_app_info ().get_string ("X-GNOME-Gettext-Domain");
-                if (i18n_domain == null)
-                    i18n_domain = app.get_desktop_app_info ().get_string ("X-Ubuntu-Gettext-Domain");
+                if (app == null)
+                    continue;
+                var app_info = app.get_desktop_app_info ();
+                string i18n_domain = null;
+                if (app_info != null) {
+                    i18n_domain = app_info.get_string ("X-GNOME-Gettext-Domain");
+                    if (i18n_domain == null)
+                        i18n_domain = app_info.get_string ("X-Ubuntu-Gettext-Domain");
+                }
                 if (i18n_domain == null)
                     i18n_domain = app.get_i18n_domain ();
                 
-                var service_image = new Gtk.Image.from_gicon (app.get_desktop_app_info ().get_icon (), Gtk.IconSize.DIALOG);
+                Gtk.Image service_image;
+                if (app_info != null)
+                    service_image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.DIALOG);
+                else
+                    service_image = new Gtk.Image.from_icon_name ("application-default-icon", Gtk.IconSize.DIALOG);
                 service_image.margin_left = 12;
                 
                 var service_label = new Gtk.Label ("");
-                service_label.set_markup ("<big>" + GLib.dgettext (i18n_domain, app.get_desktop_app_info ().get_string ("Name")) + "</big>");
+                if (app_info != null)
+                    service_label.set_markup ("<big>" + GLib.dgettext (i18n_domain, app_info.get_string ("Name")) + "</big>");
+                else
+                    service_label.set_markup ("<big>" + GLib.dgettext (i18n_domain, app.get_name ()) + "</big>");
+                    
                 service_label.xalign = 0;
                 
                 var service_description_label = new Gtk.Label (GLib.dgettext (app.get_i18n_domain (), app.get_service_usage (service)));
