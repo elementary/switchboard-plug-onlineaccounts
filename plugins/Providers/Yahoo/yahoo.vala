@@ -31,48 +31,51 @@ public class OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin : OnlineAccounts.
         var consumer_key = plugin.session_data.lookup_value ("ConsumerKey", null).dup_string ();
         var consumer_secret = plugin.session_data.lookup_value ("ConsumerSecret", null).dup_string ();
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
-        var proxy = new Rest.OAuthProxy.with_token (consumer_key, consumer_secret, token, token_secret, "http://social.yahooapis.com/v1/me/guid", false);
-        var call = proxy.new_call ();
-        call.set_method ("GET");
-        call.add_param ("format", "xml");
 
         try {
+            var proxy = new Rest.OAuthProxy.with_token (consumer_key, consumer_secret, token, token_secret, "http://social.yahooapis.com/v1/me/guid", false);
+            var call = proxy.new_call ();
+            call.set_method ("GET");
+            call.add_param ("format", "xml");
             call.run ();
+            string content = get_string_from_call (call);
+            if (content == null)
+                return;
+            string guid = content.split ("<value>", 2)[1].split ("</value>", 2)[0];
+            if (guid == null || guid == "")
+                return;
+            proxy.url_format = "http://social.yahooapis.com/v1/user/%s/profile/usercard".printf (guid);
+            try {
+                var call2 = proxy.new_call ();
+                call2.set_method ("GET");
+                call2.add_param ("format", "xml");
+                call2.run ();
+                content = get_string_from_call (call2);
+                if (content == null)
+                    return;
+                string name = content.split ("<nickname>", 2)[1].split ("</nickname>", 2)[0];
+
+                plugin.account.set_display_name (name);
+            } catch (Error e) {
+                critical (e.message);
+            }
         } catch (Error e) {
             critical (e.message);
         }
-
-        var parser = new Rest.XmlParser ();
-        Rest.XmlNode root = parser.parse_from_data (call.get_payload (), call.get_payload_length ());
-        Rest.XmlNode node = root.find ("value");
-        if (node == null) {
-            warning ("null");
-            return;
-        }
-        string guid = node.content;
-        proxy = new Rest.OAuthProxy.with_token (consumer_key, consumer_secret, token, token_secret, "http://social.yahooapis.com/v1/user/%s/profile/usercard".printf (guid), false);
-        call = proxy.new_call ();
-        call.set_method ("GET");
-        call.add_param ("format", "xml");
-
-        try {
-            call.run ();
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        parser = new Rest.XmlParser ();
-        root = parser.parse_from_data (call.get_payload (), call.get_payload_length ());
-        node = root.find ("nickname");
-        if (node == null) {
-            warning ("null");
-            return;
-        }
-        plugin.account.set_display_name (node.content);
     }
     
     public override void get_user_image (OnlineAccounts.Account plugin) {
         
+    }
+    
+    private string get_string_from_call (Rest.ProxyCall call) {
+        string payload = call.get_payload ();
+        int64 len = call.get_payload_length ();
+
+        // We interpret the result as data:
+        unowned uint8[] arr = (uint8[]) payload;
+        arr.length = (int) len;
+        return (string) arr;
     }
 }
 

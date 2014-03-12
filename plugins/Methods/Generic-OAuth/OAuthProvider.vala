@@ -181,6 +181,11 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         if (mode != null)
             oauth_params_builder.add ("{sv}", "Mode", mode);
         
+        // XXX:Avoid some warnings…
+        while (hosts_count < 3) {
+            host_names[hosts_count] = "";
+            hosts_count++;
+        }
         oauth_params_builder.add ("{sv}", "AllowedRealms", new Variant.strv (host_names));
         oauth_params_builder.add ("{sv}", "Realms", new Variant.strv (host_names));
         
@@ -188,7 +193,6 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         session_data = auth_data.get_login_parameters (session_data);
             try {
                 var session = identity.create_session ("oauth");
-                var sequence = Signond.copy_array_to_sequence (host_names);
                 session_result = yield session.process_async (session_data, method_a[0], null);
                 var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
                 info.set_secret (access_token, true);
