@@ -84,6 +84,7 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
+Conflicts: account-plugin-facebook
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Facebook
  Online accounts plugin for single signon
@@ -94,6 +95,7 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
+Conflicts: account-plugin-windows-live
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Microsoft
  Online accounts plugin for single signon
@@ -104,7 +106,8 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
-Conflicts: evolution-data-server-online-accounts
+Conflicts: evolution-data-server-online-accounts,
+           account-plugin-google
 Replaces: evolution-data-server-online-accounts
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Google
@@ -116,7 +119,9 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          pantheon-online-accounts-plugin-generic-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
-Conflicts: evolution-data-server-online-accounts
+Conflicts: evolution-data-server-online-accounts,
+           account-plugin-yahoo,
+           account-plugin-flickr
 Replaces: evolution-data-server-online-accounts
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Yahoo
