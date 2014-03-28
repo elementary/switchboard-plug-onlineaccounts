@@ -113,7 +113,7 @@ namespace OnlineAccounts {
         }
         
         private void create_welcome () {
-            welcome = new Granite.Widgets.Welcome (_("Connect Your Online Accounts"), _("Sign in to connect your online accounts with apps like Mail, Contacts, and Calendar."));
+            welcome = new Granite.Widgets.Welcome (_("Connect Your Online Accounts"), _("Sign in to connect with apps like Mail, Contacts, and Calendar."));
             welcome.expand = true;
             main_grid.attach (welcome, 0, 1, 1, 1);
         
