@@ -7,155 +7,155 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-02-23 22:01+0100\n"
+"POT-Creation-Date: 2014-04-01 16:06+0200\n"
 "PO-Revision-Date: 2014-02-26 09:22+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-19 06:30+0000\n"
-"X-Generator: Launchpad (build 16963)\n"
+"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
+"X-Generator: Launchpad (build 16967)\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Peru"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Anna käyttäjätietosi…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Käyttäjätunnus:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Salasana:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Uusi salasana:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Vahvista salasana:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Muista salasana"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Päivitä captcha-varmiste"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Kirjoita yllä oleva teksti tähän"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Tallenna"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "Ladataan…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:24
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr ""
 "Sisältää yhteystiedot, Gmailin, Google-asiakirjat, Google+:n, YouTuben ja "
 "Picasan"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:25
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Google-kalenteri"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:26
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
 msgstr "Google-yhteystiedot"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:27
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
 msgstr "Google Drive"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:28
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
 msgstr "GMail"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:29
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
 msgstr "Google Talk"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:30
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
 msgstr "Picasa"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:31
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
 msgstr "Sisältää Outlook-kalenterit, yhteystiedot, sähköpostit ja SkyDriven"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:32
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr ""
 "Sisältää yhteystiedot, keskustelun, tapahtumat, seinäviestit ja valokuvat"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:46
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "Verkkotilit"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:47
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Synkronoi tietokoneesi verkkotiliesi kanssa."
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Close"
 msgstr "Sulje"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:102
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Tili '%s' poistettu."
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
-msgid "You don't have any online account."
-msgstr "Sinulla ei ole yhtäkään verkkotiliä."
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+msgid "Connect Your Online Accounts"
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
-msgid "Start linking one with your computer"
-msgstr "Linkitä tili koneesi kanssa"
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:89
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:90
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 msgid "Add…"
 msgstr "Lisää…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:95
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
 msgid "Remove"
 msgstr "Poista"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:46
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
 msgstr "<b>Tätä palvelua käyttävät sovellukset:</b>"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:100
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
 msgstr "<b>Mikään sovellus ei käytä tätä tiliä.</b>"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+msgid "Cancel"
+msgstr "Peru"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
+msgid "Loading…"
+msgstr "Ladataan…"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+msgid "Please enter your credentials…"
+msgstr "Anna käyttäjätietosi…"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr ""
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Salasana:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Uusi salasana:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Vahvista salasana:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Muista salasana"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr ""
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Päivitä captcha-varmiste"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Kirjoita yllä oleva teksti tähän"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Tallenna"

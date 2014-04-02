@@ -7,153 +7,153 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-23 22:01+0100\n"
+"POT-Creation-Date: 2014-04-01 16:06+0200\n"
 "PO-Revision-Date: 2014-01-30 06:34+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-19 06:31+0000\n"
-"X-Generator: Launchpad (build 16963)\n"
+"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
+"X-Generator: Launchpad (build 16967)\n"
 "Language: \n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "取消"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "請輸入您的憑證資訊…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "使用者名稱："
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "john_doe"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "密碼："
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "新密碼："
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "確認密碼："
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "記住密碼"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "忘記密碼"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "重新整理 Captcha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "請在此輸入上文"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "儲存"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "載入中…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:24
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr "包含聯絡人、Gmail、Google Docs、Google+、YouTube、Picasa 等"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:25
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Google 行事曆"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:26
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
 msgstr "Google 聯絡人"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:27
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
 msgstr "Google 雲端硬碟"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:28
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
 msgstr "GMail"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:29
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
 msgstr "Google Talk"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:30
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
 msgstr "Picasa"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:31
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
 msgstr "包含 Outlook 行事曆、聯絡人、郵件、SkyDrive 等"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:32
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr "包含聯絡人、聊天、活動、塗鴉牆貼文、相片等"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:46
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "線上帳號"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:47
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "讓您的電腦與網路上的各種線上帳號同步。"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Close"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
 msgstr "還原"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:102
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "帳號「%s」已移除。"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
-msgid "You don't have any online account."
-msgstr "您尚未設有線上帳號。"
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+msgid "Connect Your Online Accounts"
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
-msgid "Start linking one with your computer"
-msgstr "現在就將線上帳號與電腦相連"
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:89
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:90
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 msgid "Add…"
 msgstr "加入…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:95
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
 msgid "Remove"
 msgstr "移除"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:46
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
 msgstr "<b>使用此服務的應用程式：</b>"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:100
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
 msgstr "<b>沒有使用此帳號的應用程式。</b>"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+msgid "Cancel"
+msgstr "取消"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
+msgid "Loading…"
+msgstr "載入中…"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+msgid "Please enter your credentials…"
+msgstr "請輸入您的憑證資訊…"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "使用者名稱："
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "john_doe"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "密碼："
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "新密碼："
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "確認密碼："
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "記住密碼"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "忘記密碼"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "重新整理 Captcha"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "請在此輸入上文"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "儲存"

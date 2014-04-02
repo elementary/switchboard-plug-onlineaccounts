@@ -7,153 +7,153 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-02-23 22:01+0100\n"
+"POT-Creation-Date: 2014-04-01 16:06+0200\n"
 "PO-Revision-Date: 2014-02-22 16:55+0000\n"
 "Last-Translator: Leonardo Lemos <leonardolemos@live.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-19 06:31+0000\n"
-"X-Generator: Launchpad (build 16963)\n"
+"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
+"X-Generator: Launchpad (build 16967)\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Por favor, entre com suas credenciais..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Usuário:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "john_doe"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Senha:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Nova senha:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Confirmar senha:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Lembrar senha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Esqueceu a senha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Recarregar captcha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Digite o texto acima aqui"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Salvar"
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "Carregando..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:24
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
 msgstr "Incluir Contatos, Gmail, Google Docs, Google+, YouTube e Picasa."
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:25
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Google Calendário"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:26
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
 msgstr "Google Contatos"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:27
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
 msgstr "Google Drive"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:28
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
 msgstr "GMail"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:29
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
 msgstr "Google Talk"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:30
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
 msgstr "Picasa"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:31
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
 msgstr "Inclui Calendários do Outlook, Contatos, E-Mails e SkyDrive"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Translation.vala:32
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr "Inclui Contatos, Bate-papo, Eventos, Postagens do mural e Fotos"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:46
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "Contas online"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:47
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 "Sincronize seu computador com todas suas contas online em torno da web."
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Close"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:60
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
 msgstr "Restaurar"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:102
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Conta '%s' removida."
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
-msgid "You don't have any online account."
-msgstr "Você possui nenhuma conta online."
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+msgid "Connect Your Online Accounts"
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//OnlineAccounts.vala:116
-msgid "Start linking one with your computer"
-msgstr "Comece conectando uma ao seu computador"
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:89
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:90
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 msgid "Add…"
 msgstr "Adicionar..."
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/SourceSelector.vala:95
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
 msgid "Remove"
 msgstr "Excluir"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:46
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
 msgstr "<b>Aplicações que utilizam este serviço:</b>"
 
-#: /home/noelco/switchboard-plug-onlineaccounts-yahoo-fastmail/po/../src//Views/AccountView.vala:100
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
 msgstr "<b>Não há aplicações utilizando esta conta.</b>"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
+msgid "Loading…"
+msgstr "Carregando..."
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+msgid "Please enter your credentials…"
+msgstr "Por favor, entre com suas credenciais..."
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Usuário:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "john_doe"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Senha:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Nova senha:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Confirmar senha:"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Lembrar senha"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Esqueceu a senha"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Recarregar captcha"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Digite o texto acima aqui"
+
+#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Salvar"
