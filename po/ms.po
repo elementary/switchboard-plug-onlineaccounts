@@ -8,85 +8,87 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-01 16:06+0200\n"
-"PO-Revision-Date: 2014-01-19 05:34+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"PO-Revision-Date: 2014-04-05 22:50+0000\n"
+"Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-04-06 06:54+0000\n"
+"X-Generator: Launchpad (build 16976)\n"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr ""
+msgstr "Sertakan Kenalan, Gmail, Google Docs, Google+, YouTube dan Picasa"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
-msgstr ""
+msgstr "Kalendar Google"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
-msgstr ""
+msgstr "Kenalan Google"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
-msgstr ""
+msgstr "Google Drive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
-msgstr ""
+msgstr "GMail"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
-msgstr ""
+msgstr "Google Talk"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
-msgstr ""
+msgstr "Picasa"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr ""
+msgstr "Sertakan Kalendar Outlook, Kenalan, Mel dan SkyDrive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
-msgstr ""
+msgstr "Sertakan Kenalan, Sembang, Peristiwa, Pos Dinding dan Foto"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
-msgstr ""
+msgstr "Akaun Atas Talian"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
+"Segerak komputer anda dengan semua akaun atas talian diserata sesawang."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Close"
-msgstr ""
+msgstr "Tutup"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
-msgstr ""
+msgstr "Pulih"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
 #, c-format
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "Akaun '%s' Dibuang."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Sambung Akaun Atas Talian Anda"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"Daftar masuk untuk sambung dengan apl seperti Mel, Kenalan, dan Kalendar."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 msgid "Add…"
-msgstr ""
+msgstr "Tambah..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
@@ -95,11 +97,11 @@ msgstr "Buang"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
-msgstr ""
+msgstr "<b>Aplikasi yang guna perkhidmatan ini:</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
-msgstr ""
+msgstr "<b>Tiada aplikasi yang guna akaun ini.</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
@@ -109,50 +111,50 @@ msgstr "Batal"
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
 msgid "Loading…"
-msgstr ""
+msgstr "Memuatkan..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Sila masukkan kelayakan anda..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
-msgstr ""
+msgstr "Nama Pengguna:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
-msgstr ""
+msgstr "abuyop"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
-msgstr ""
+msgstr "Kata laluan:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
-msgstr ""
+msgstr "Kata Laluan Baharu:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
-msgstr ""
+msgstr "Sahkan Kata Laluan:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
-msgstr ""
+msgstr "Ingat kata laluan"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
-msgstr ""
+msgstr "Lupa kata laluan"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "Segar Semula Captcha"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
-msgstr ""
+msgstr "Masukkan teks atas di sini"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
-msgstr ""
+msgstr "Simpan"
