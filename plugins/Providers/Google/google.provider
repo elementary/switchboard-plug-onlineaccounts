@@ -9,9 +9,9 @@
 
   <template>
     <group name="auth">
-      <setting name="method">oauth2</setting>
+      <setting name="method">oauth</setting>
       <setting name="mechanism">user_agent</setting>
-      <group name="oauth2">
+      <group name="oauth">
         <group name="user_agent">
           <setting name="Host">accounts.google.com</setting>
           <setting name="AuthPath">/o/oauth2/auth</setting>

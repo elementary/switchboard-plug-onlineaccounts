@@ -8,7 +8,7 @@
   
   <template>
     <group name="auth">
-      <group name="oauth2">
+      <group name="oauth">
         <group name="user_agent">
           <setting type="as" name="Scope">["https://picasaweb.google.com/data/"]</setting>
         </group>

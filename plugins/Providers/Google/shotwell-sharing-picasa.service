@@ -7,7 +7,7 @@
   <translations>online-accounts-plug</translations>
   
   <template>
-    <group name="auth/oauth2">
+    <group name="auth/oauth">
       <group name="user_agent">
         <setting type="as" name="Scope">['http://picasaweb.google.com/data/','https://picasaweb.google.com/data/','https://www.googleapis.com/auth/userinfo.profile']</setting>
       </group>

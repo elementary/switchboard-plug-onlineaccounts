@@ -9,9 +9,9 @@
 
   <template>
     <group name="auth">
-      <setting name="method">oauth2</setting>
+      <setting name="method">oauth</setting>
       <setting name="mechanism">user_agent</setting>
-      <group name="oauth2">
+      <group name="oauth">
         <group name="user_agent">
           <setting name="Host">login.live.com</setting>
           <setting name="AuthPath">/oauth20_authorize.srf</setting>
