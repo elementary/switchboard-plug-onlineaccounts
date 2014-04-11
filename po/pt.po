@@ -8,85 +8,86 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-01 16:06+0200\n"
-"PO-Revision-Date: 2014-01-19 05:43+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"PO-Revision-Date: 2014-04-10 12:25+0000\n"
+"Last-Translator: Sérgio Marques <Unknown>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-04-11 05:59+0000\n"
+"X-Generator: Launchpad (build 16976)\n"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr ""
+msgstr "Inclui contactos, Gmail, Google Docs, Google+, YouTube e Picasa"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
-msgstr ""
+msgstr "Calendário Google"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
-msgstr ""
+msgstr "Contactos Google"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
-msgstr ""
+msgstr "Google Drive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
-msgstr ""
+msgstr "GMail"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
-msgstr ""
+msgstr "Google Talk"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
-msgstr ""
+msgstr "Picasa"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr ""
+msgstr "Inclui calendários do Outlook, mensagens, contactos e e SkyDrive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
-msgstr ""
+msgstr "Inclui contactos, eventos, publicações e fotos"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
-msgstr ""
+msgstr "Contas na web"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr ""
+msgstr "Sincronize o seu computador com todas as suas contas na web."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Close"
-msgstr ""
+msgstr "Próximas"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
-msgstr ""
+msgstr "Repôr"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
 #, c-format
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "Conta %s removida."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Estabelecer ligação às suas contas web"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"Iniciar sessão para estabelecer ligação ao correio, contactos e calendários."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 msgid "Add…"
-msgstr ""
+msgstr "Adicionar…"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
@@ -95,11 +96,11 @@ msgstr "Remover"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
-msgstr ""
+msgstr "<b>Aplicações que utilizam este serviço:</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
-msgstr ""
+msgstr "<b>Não existem aplicações que utilizem esta conta.</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
@@ -109,50 +110,50 @@ msgstr "Cancelar"
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
 msgid "Loading…"
-msgstr ""
+msgstr "A carregar…"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Introduza as suas credenciais..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
-msgstr ""
+msgstr "Utilizador:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
-msgstr ""
+msgstr "eu"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
-msgstr ""
+msgstr "Senha:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
-msgstr ""
+msgstr "Nova senha:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
-msgstr ""
+msgstr "Confirmação de senha"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
-msgstr ""
+msgstr "Memorizar senha"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
-msgstr ""
+msgstr "Descartar senha"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "Recarregar Captcha"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
-msgstr ""
+msgstr "Escreva aqui o texto"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
