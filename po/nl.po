@@ -8,86 +8,86 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-01 16:06+0200\n"
-"PO-Revision-Date: 2014-01-19 05:39+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"PO-Revision-Date: 2014-04-11 18:53+0000\n"
+"Last-Translator: Thomas Berends <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-04-12 09:43+0000\n"
+"X-Generator: Launchpad (build 16976)\n"
 "Language: nl\n"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr ""
+msgstr "Bevat contacten, Gmail, Google Docs, Google+, YouTube en Picasa"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
-msgstr ""
+msgstr "Google Calendar"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
-msgstr ""
+msgstr "Google contacten"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
-msgstr ""
+msgstr "Google Drive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
-msgstr ""
+msgstr "GMail"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
-msgstr ""
+msgstr "Google Talk"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
-msgstr ""
+msgstr "Picasa"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr ""
+msgstr "Bevat Outlook Calendars, Contacts, Mails en SkyDrive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
-msgstr ""
+msgstr "Bevat contacten, chat, evenementen, berichten en foto's"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
-msgstr ""
+msgstr "Online accounts"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr ""
+msgstr "Syncroniseer je computer met al je online accounts op het web"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
 msgid "Restore"
-msgstr ""
+msgstr "Herstel"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
 #, c-format
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "Account '%s' verwijderd."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Verbind je online accounts"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
+msgstr "Log in om te verbinden met apps zoals mail, contacten en agenda."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 msgid "Add…"
-msgstr ""
+msgstr "Voeg toe..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
@@ -96,11 +96,11 @@ msgstr "Verwijderen"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
-msgstr ""
+msgstr "<b>Apps die deze service gebruiken:</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
-msgstr ""
+msgstr "<b>Er zijn geen apps die dit account gebruiken.</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
@@ -110,50 +110,50 @@ msgstr "Annuleren"
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
 msgid "Loading…"
-msgstr ""
+msgstr "Laden…"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Vul je gegevens in..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
-msgstr ""
+msgstr "Gebruikersnaam:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
-msgstr ""
+msgstr "john_doe"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
-msgstr ""
+msgstr "Wachtwoord:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
-msgstr ""
+msgstr "Nieuw wachtwoord:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
-msgstr ""
+msgstr "Bevestig wachtwoord:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
-msgstr ""
+msgstr "Onthoud wachtwoord"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
-msgstr ""
+msgstr "Wachtwoord vergeten"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "Ververs captcha"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
-msgstr ""
+msgstr "Vul de bovenstaande tekst hier in"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
