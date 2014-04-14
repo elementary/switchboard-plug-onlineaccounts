@@ -8,42 +8,42 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-04-01 16:06+0200\n"
-"PO-Revision-Date: 2014-04-12 23:00+0000\n"
+"PO-Revision-Date: 2014-04-14 00:13+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-13 06:21+0000\n"
+"X-Launchpad-Export-Date: 2014-04-14 06:00+0000\n"
 "X-Generator: Launchpad (build 16976)\n"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr ""
+msgstr "ግንኙነቶች፡ ጂሜይል፡ ጉግል ሰነድ፡ ጉግል+, ዩቲዩብ እና ፒካሳን ያካትታል"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
-msgstr ""
+msgstr "የ ጉግል ቀን መቁጠሪያ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Google Contacts"
-msgstr ""
+msgstr "የ ጉግል ግንኙነቶች"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Drive"
-msgstr ""
+msgstr "የ ጉግል Drive"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "GMail"
-msgstr ""
+msgstr "ጂሜይል"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Talk"
-msgstr ""
+msgstr "የ ጉግል ውይይት"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Picasa"
-msgstr ""
+msgstr "ፒካሳ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
 msgid "Online Accounts"
-msgstr ""
+msgstr "የ መስመር ላይ መግለጫዎች"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
 msgid ""
@@ -77,7 +77,7 @@ msgstr "መገለጫው '%s' ተወግዷል"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "የ እርስዎን የመስመር ላይ መግለጫ መገናኛ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
@@ -95,21 +95,21 @@ msgstr "ማስወገጃ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
 msgid "<b>Applications that use this service:</b>"
-msgstr ""
+msgstr "<b>ይህን ግልጋሎት የሚጠቀሙ መተግበሪያዎች:</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
 msgid "<b>There is no application using this account.</b>"
-msgstr ""
+msgstr "<b>ይህን መግለጫ የሚጠቀም መተግበሪያ የለም</b>"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
 msgid "Cancel"
-msgstr ""
+msgstr "መሰረዣ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
 msgid "Loading…"
-msgstr ""
+msgstr "በመጫን ላይ..."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
@@ -118,41 +118,41 @@ msgstr ""
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
-msgstr ""
+msgstr "የተጠቃሚ ስም:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
-msgstr ""
+msgstr "ጆን_ዶ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
-msgstr ""
+msgstr "የመግቢያ ቃል:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
-msgstr ""
+msgstr "አዲስ የመግቢያ ቃል:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
-msgstr ""
+msgstr "የመግቢያ ቃል ማረጋገጫ:"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
-msgstr ""
+msgstr "የመግቢያ ቃሉን አስታውስ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
-msgstr ""
+msgstr "የመግቢያ ቃሉን ረሱት"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "Captcha ማነቃቂያ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
-msgstr ""
+msgstr "ከላይ ያለውን ጽሁፍ ያስገቡ"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
-msgstr ""
+msgstr "ማስቀመጫ"
