@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Online Accounts
+Comment=Synchronize your computer with all your online accounts around the web…
+Exec=switchboard -o network-pantheon-online-accounts
+Icon=preferences-desktop-online-accounts
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=X-PANTHEON-Switchboard-Plugs;
+OnlyShowIn=Pantheon;
+Keywords=Power;Energy;Battery
+X-Ubuntu-Gettext-Domain=switchboard
+X-GNOME-Gettext-Domain=switchboard
