@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-01 16:06+0200\n"
-"PO-Revision-Date: 2014-03-05 08:10+0000\n"
+"PO-Revision-Date: 2014-04-28 19:41+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-04-29 06:41+0000\n"
+"X-Generator: Launchpad (build 16985)\n"
 "Language: gl\n"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
@@ -79,11 +79,12 @@ msgstr "A conta «%s» foi retirada."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Conecte coas súas contas en liña"
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"Acceda para conectarse con aplicativos de correo, contactos e calendario."
 
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
 #: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
