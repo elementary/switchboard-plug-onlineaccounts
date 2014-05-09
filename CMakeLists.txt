@@ -66,7 +66,7 @@ set(DEPS_PACKAGES
     posix
     granite
     switchboard-2.0
-    accounts
+    libaccounts-glib
     gSignon
     gSignond
     json-glib-1.0

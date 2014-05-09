@@ -41,7 +41,7 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
         main_loop = new GLib.MainLoop ();
         manager = new Ag.Manager ();
         info = new Signon.IdentityInfo ();
-        info.set_caption (account.provider);
+        info.set_caption (account.get_provider_name ());
         info.set_identity_type (Signon.IdentityType.APP);
         info.set_secret ("", true);
         info.set_method ("password", {"password", null});

@@ -8,9 +8,23 @@
   
   <template>
     <group name="auth">
+      <setting name="method">oauth</setting>
+      <setting name="mechanism">user_agent</setting>
       <group name="oauth">
         <group name="user_agent">
-          <setting type="as" name="Scope">['https://www.googleapis.com/auth/userinfo.email','https://mail.google.com/','https://www.google.com/m8/feeds/','https://www.googleapis.com/auth/calendar']</setting>
+          <setting name="AuthHost">accounts.google.com</setting>
+          <setting name="TokenHost">accounts.google.com</setting>
+          <setting name="AuthPath">/o/oauth2/auth</setting>
+          <setting name="TokenPath">/o/oauth2/token</setting>
+          <setting name="UiPolicy">0</setting>
+          <setting name="RedirectUri">http://elementaryos.org</setting>
+          <setting name="ResponseType">code</setting>
+          <setting name="Scope">https://www.googleapis.com/auth/userinfo.profile https://docs.google.com/feeds/ https://www.googleapis.com/auth/googletalk https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login https://picasaweb.google.com/data/ https://www.google.com/m8/feeds/ https://www.google.com/m8/feeds/&amp;access_type=offline&amp;approval_prompt=force</setting>
+          <setting name="ClientId">14954701535-q8brnt0l1o1sknuftm7tt3iqlaa1c95f.apps.googleusercontent.com</setting>
+          <setting name="ClientSecret">9sUlZ0q5-xBgAf5Rw7ZtuSjC</setting>
+          <setting type="as" name="AllowedSchemes">['https','http']</setting>
+          <setting type="as" name="AllowedRealms">['accounts.google.com']</setting>
+          <setting type="as" name="Realms">['accounts.google.com']</setting>
         </group>
       </group>
     </group>

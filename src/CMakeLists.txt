@@ -12,7 +12,6 @@ vala_precompile (VALA_C ${PLUGNAME}
     Threads.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
-    Views/AccountPopOver.vala
     MethodPlugin.vala
     ProviderPlugin.vala
     Authentification/Server.vala

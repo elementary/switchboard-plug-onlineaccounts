@@ -54,20 +54,20 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
 
     public override Signond.Credentials load_credentials (uint32 id) {
         var credidential = new Signond.Credentials ();
-        string username;
-        load_secret (SignonSecretType.USERNAME, id, 0, out username);
-        string password;
-        load_secret (SignonSecretType.PASSWORD, id, 0, out password);
+        string username = "";
+        load_secret (SignonSecretType.USERNAME, id, 0, ref username);
+        string password = "";
+        load_secret (SignonSecretType.PASSWORD, id, 0, ref password);
         credidential.set_data (id, username, password);
         return credidential;
     }
 
     public override bool update_credentials (Signond.Credentials creds) {
-        if (creds.get_password () != null || creds.get_password () != "")
-            store_secret (SignonSecretType.PASSWORD, creds.get_id (), 0, creds.get_password ());
-        if (creds.get_username () != null || creds.get_username () != "")
-            store_secret (SignonSecretType.USERNAME, creds.get_id (), 0, creds.get_username ());
-        return true;
+        if (creds.get_password () != null && creds.get_password () != "")
+            return store_secret (SignonSecretType.PASSWORD, creds.get_id (), 0, creds.get_password ());
+        if (creds.get_username () != null && creds.get_username () != "")
+            return store_secret (SignonSecretType.USERNAME, creds.get_id (), 0, creds.get_username ());
+        return false;
     }
 
     public override bool remove_credentials (uint32 id) {
@@ -86,8 +86,8 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
 
     public override GLib.HashTable<string, GLib.Variant> load_data (uint32 id, uint32 method) {
         var result = new GLib.HashTable<string, GLib.Variant>(null, null);
-        string data_serialized;
-        load_secret (SignonSecretType.DATA, id, method, out data_serialized);
+        string data_serialized = "";
+        load_secret (SignonSecretType.DATA, id, method, ref data_serialized);
         if (data_serialized == null)
             return result;
         foreach (var entry in data_serialized.split ("\n")) {
@@ -120,7 +120,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
 
     public override bool remove_data (uint32 id, uint32 method) {
         try {
-            return Secret.password_clear_sync (schema, null, "signon-id", id, "signon-method", method);
+            return Secret.password_clear_sync (schema, null, "signon-id", id, "signon-method", method, null);
         } catch (Error e) {
             critical (e.message);
             error = e;
@@ -139,7 +139,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
         try {
             return Secret.password_store_sync (schema, Secret.COLLECTION_DEFAULT, "Online Account",
                                         password, null, "signon-type", type, "signon-id", id,
-                                        "signon-method", method);
+                                        "signon-method", method, null);
         } catch (Error e) {
             critical (e.message);
             error = e;
@@ -165,7 +165,7 @@ public class OnlineAccounts.Keyring : Signond.SecretStorage {
         return true;
     }
 
-    public bool load_secret (SignonSecretType type, uint32 id, uint32 method, out string secret) {
+    public bool load_secret (SignonSecretType type, uint32 id, uint32 method, ref string secret) {
         string? signonMethod = (type == SignonSecretType.DATA) ? "signon-method" : null;
         try {
             string data = Secret.password_lookup_sync(schema, null, "signon-type", type,
