@@ -129,7 +129,7 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         else if(scope.is_of_type (GLib.VariantType.STRING_ARRAY) && scope != null)
             oauth_params_builder.add ("{sv}", "Scope", new GLib.Variant.string (string_from_string_array (scope.dup_strv ())));
 
-        var schemes = account.get_variant ("auth/%s/%s/AllowedSchemes".printf(method, mechanism), null);
+        var schemes = account.get_variant ("auth/%s/%s/AllowedSchemes".printf (method, mechanism), null);
         if (schemes.is_of_type (GLib.VariantType.STRING) && schemes != null)
             oauth_params_builder.add ("{sv}", "AllowedSchemes", scope);
         else if(schemes.is_of_type (GLib.VariantType.STRING_ARRAY) && schemes != null)
@@ -138,45 +138,53 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         oauth_params_builder.add ("{sv}", "ForceClientAuthViaRequestBody", new GLib.Variant.boolean (true));
         oauth_params_builder.add ("{sv}", "QueryUserName", new GLib.Variant.boolean (true));
 
-        var display = account.get_variant ("auth/%s/%s/Display".printf(method, mechanism), null);
+        var display = account.get_variant ("auth/%s/%s/Display".printf (method, mechanism), null);
         if (display != null)
             oauth_params_builder.add ("{sv}", "Display", display);
 
-        var rqend = account.get_variant ("auth/%s/%s/RequestEndpoint".printf(method, mechanism), null);
+        var rqend = account.get_variant ("auth/%s/%s/RequestEndpoint".printf (method, mechanism), null);
         if (rqend != null)
         oauth_params_builder.add ("{sv}", "RequestEndpoint", rqend);
 
-        var callback = account.get_variant ("auth/%s/%s/Callback".printf(method, mechanism), null);
+        var callback = account.get_variant ("auth/%s/%s/Callback".printf (method, mechanism), null);
         if (callback != null)
         oauth_params_builder.add ("{sv}", "Callback", callback);
 
-        var tkend = account.get_variant ("auth/%s/%s/TokenEndpoint".printf(method, mechanism), null);
+        var tkend = account.get_variant ("auth/%s/%s/TokenEndpoint".printf (method, mechanism), null);
         if (tkend != null)
             oauth_params_builder.add ("{sv}", "TokenEndpoint", tkend);
 
-        var authend = account.get_variant ("auth/%s/%s/AuthorizationEndpoint".printf(method, mechanism), null);
+        var authend = account.get_variant ("auth/%s/%s/AuthorizationEndpoint".printf (method, mechanism), null);
         if (authend != null)
             oauth_params_builder.add ("{sv}", "AuthorizationEndpoint", authend);
 
-        var cb = account.get_variant ("auth/%s/%s/Callback".printf(method, mechanism), null);
+        var cb = account.get_variant ("auth/%s/%s/Callback".printf (method, mechanism), null);
         if (cb != null)
             oauth_params_builder.add ("{sv}", "Callback", cb);
 
-        var consumer_key = account.get_variant ("auth/%s/%s/ConsumerKey".printf(method, mechanism), null);
+        var consumer_key = account.get_variant ("auth/%s/%s/ConsumerKey".printf (method, mechanism), null);
         if (consumer_key != null)
             oauth_params_builder.add ("{sv}", "ConsumerKey", consumer_key);
 
-        var consumer_secret = account.get_variant ("auth/%s/%s/ConsumerSecret".printf(method, mechanism), null);
+        var consumer_secret = account.get_variant ("auth/%s/%s/ConsumerSecret".printf (method, mechanism), null);
         if (consumer_secret != null)
             oauth_params_builder.add ("{sv}", "ConsumerSecret", consumer_secret);
 
-        var source = account.get_variant ("auth/%s/%s/Source".printf(method, mechanism), null);
+        var source = account.get_variant ("auth/%s/%s/Source".printf (method, mechanism), null);
         if (source != null)
             oauth_params_builder.add ("{sv}", "Source", source);
 
-        var mode = account.get_variant ("auth/%s/%s/Mode".printf(method, mechanism), null);
+        var mode = account.get_variant ("auth/%s/%s/Mode".printf (method, mechanism), null);
         if (mode != null)
             oauth_params_builder.add ("{sv}", "Mode", mode);
+
+        var tokenquery = account.get_variant ("auth/%s/%s/TokenQuery".printf (method, mechanism), null);
+        if (tokenquery != null)
+            oauth_params_builder.add ("{sv}", "TokenQuery", tokenquery);
+
+        var authquery = account.get_variant ("auth/%s/%s/AuthQuery".printf (method, mechanism), null);
+        if (authquery != null)
+            oauth_params_builder.add ("{sv}", "AuthQuery", authquery);
 
         // XXX:Avoid some warnings…
         while (hosts_count < 3) {
