@@ -20,7 +20,8 @@
           <setting name="RedirectUri">http://elementaryos.org</setting>
           <setting name="ClientId">14954701535-q8brnt0l1o1sknuftm7tt3iqlaa1c95f.apps.googleusercontent.com</setting>
           <setting name="ClientSecret">9sUlZ0q5-xBgAf5Rw7ZtuSjC</setting>
-          <setting type="as" name="Scope">['https://www.googleapis.com/auth/userinfo.email','https://mail.google.com/','https://www.google.com/m8/feeds/&amp;access_type=offline&amp;approval_prompt=force','https://www.googleapis.com/auth/calendar']</setting>
+          <setting type="as" name="Scope">['https://www.googleapis.com/auth/userinfo.email','https://mail.google.com/','https://www.google.com/m8/feeds/','https://www.googleapis.com/auth/calendar']</setting>
+          <setting name="AuthQuery">access_type=offline&amp;approval_prompt=force</setting>
           <setting name="UiPolicy">0</setting>
           <setting name="ResponseType">code</setting>
           <setting type="as" name="AllowedSchemes">['https','http']</setting>
