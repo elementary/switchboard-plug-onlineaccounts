@@ -2,9 +2,10 @@
 <service id="google-contacts">
   <type>contacts</type>
   <name>Google Contacts</name>
+  <description>Sync your contacts</description>
   <icon>office-address-book</icon>
   <provider>google</provider>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
   
   <template>
     <group name="auth">
@@ -24,8 +25,6 @@
           <setting name="ClientId">14954701535-q8brnt0l1o1sknuftm7tt3iqlaa1c95f.apps.googleusercontent.com</setting>
           <setting name="ClientSecret">9sUlZ0q5-xBgAf5Rw7ZtuSjC</setting>
           <setting type="as" name="AllowedSchemes">['https','http']</setting>
-          <setting type="as" name="AllowedRealms">['google.com']</setting>
-          <setting type="as" name="Realms">['accounts.google.com']</setting>
         </group>
       </group>
     </group>

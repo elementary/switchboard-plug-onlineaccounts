@@ -115,12 +115,14 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
             info_label.label = _("Please enter your credentials…");
             spinner.stop ();
             spinner.hide ();
+            return;
         }
 
         if (load_event == WebKit.LoadEvent.STARTED) {
             info_label.label = _("Loading…");
             spinner.start ();
             spinner.show ();
+            return;
         }
 
         if (load_event != WebKit.LoadEvent.REDIRECTED)

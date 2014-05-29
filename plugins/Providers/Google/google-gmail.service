@@ -2,9 +2,10 @@
 <service id="google-gmail">
   <type>mail</type>
   <name>GMail</name>
+  <description>Sync your emails</description>
   <icon>internet-mail</icon>
   <provider>google</provider>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
 
   
   <template>

@@ -2,9 +2,10 @@
 <service id="google-calendar">
   <type>calendar</type>
   <name>Google Calendar</name>
+  <description>Sync your calendars</description>
   <icon>office-calendar</icon>
   <provider>google</provider>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
   
   <template>
     <group name="auth">

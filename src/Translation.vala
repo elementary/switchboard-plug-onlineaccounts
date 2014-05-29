@@ -21,12 +21,16 @@
  */
 
 // WARNING! This should never be included in valac
-_("Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa");
+_("Access all Google services on your computer");
 _("Google Calendar");
+_("Sync your calendars");
 _("Google Contacts");
+_("Sync your contacts");
 _("Google Drive");
+_("Sync your files");
 _("GMail");
-_("Google Talk");
+_("Sync your emails");
 _("Picasa");
-_("Includes Outlook Calendars, Contacts, Mails and SkyDrive");
+_("Sync your photos");
+_("Access all Outlook and OneDrive services on your computer");
 _("Includes Contacts, Chat, Events, Wall Posts and Photos");

@@ -2,9 +2,10 @@
 <service id="service">
   <type>sharing</type>
   <name>Picasa</name>
-  <icon>shotwell</icon>
+  <description>Sync your photos</description>
+  <icon>multimedia-photo-manager</icon>
   <provider>google</provider>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
   
   <template>
     <group name="auth">

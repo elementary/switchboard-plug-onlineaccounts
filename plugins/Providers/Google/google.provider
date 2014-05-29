@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <provider id="google">
   <name>Google</name>
-  <description>Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa</description>
+  <description>Access all Google services on your computer</description>
   <icon>google</icon>
   <translations>pantheon-online-accounts</translations>
-  <domains>.*google\.com</domains>
   <plugin>generic-oauth</plugin>
 
   <template>
@@ -13,6 +12,7 @@
       <setting name="mechanism">user_agent</setting>
       <group name="oauth">
         <group name="user_agent">
+          <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
           <setting name="AuthHost">accounts.google.com</setting>
           <setting name="TokenHost">accounts.google.com</setting>
           <setting name="AuthPath">/o/oauth2/auth</setting>

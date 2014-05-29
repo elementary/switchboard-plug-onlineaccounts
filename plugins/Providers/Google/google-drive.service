@@ -3,8 +3,9 @@
   <type>documents</type>
   <name>Google Drive</name>
   <icon>system-file-manager</icon>
+  <description>Sync your files</description>
   <provider>google</provider>
-  <translations>online-accounts-plug</translations>
+  <translations>pantheon-online-accounts</translations>
 
   
   <template>
