@@ -7,157 +7,177 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-01 16:06+0200\n"
+"POT-Creation-Date: 2014-05-29 17:50+0200\n"
 "PO-Revision-Date: 2014-04-19 01:18+0000\n"
 "Last-Translator: ITPROJECTS <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-20 05:59+0000\n"
-"X-Generator: Launchpad (build 16985)\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
 "Language: bg\n"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr "Включително Гугъл Контакти, Поща, Бомаги, Г+, ЮТюб и Пикаса"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+msgid "Access all Google services on your computer"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Гугълски Календар"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Sync your calendars"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Contacts"
 msgstr "Гугълски Контакти"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "Sync your contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Drive"
 msgstr "Гугълски Диск"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Sync your files"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "GMail"
 msgstr "Е-поща от Гугъл"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Talk"
-msgstr "Гугъл Толк"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Sync your emails"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Picasa"
 msgstr "Пикаса"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr "Включително Аутлук Календар, Контакти, Поща и СкайДрайв"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+msgid "Sync your photos"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr "Включително Контакти, Разгорови, Събития, Стенни Бележки и Снимки"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+msgid "Content to synchronise:"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+msgid "There is no service linked this account."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr "Добавяне…"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "Премахване"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
 msgstr "Мрежови Абонаменти"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 "Сверете вашият компютър със всички ваши мрежови абонаментни потребители из "
 "мрежата."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
 msgstr "Затвори"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "Възстанови"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
-#, c-format
-msgid "Account '%s' Removed."
-msgstr "Потребителски Абонамент  '%s' Премахнат."
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Отказ"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
 msgstr "Свържете Вашите Мрежови Потребителски Абонаменти"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Впишете се, за да де свържете с приложения като Поща, Контакти, и Календар."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Добавяне…"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "Потребителски Абонамент  '%s' Премахнат."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Премахване"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
-msgstr "<b>Приложения, които ползват тази услуга:</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
-msgid "<b>There is no application using this account.</b>"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+msgid "Add a new account…"
 msgstr ""
-"<b>Няма приложение, което да ползва този потребителски абонамент.</b>"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-msgid "Cancel"
-msgstr "Отказ"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "Зареждане..."
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
 msgid "Please enter your credentials…"
 msgstr "Моля въведете си данните..."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
 msgstr "иван_петров"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
 msgstr "Парола:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
 msgstr "Нова Парола:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
 msgstr "Потвърдете паролата:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr "Запомни паролата"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
 msgstr "Забравена парола"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
 msgstr "Обновете Снимкопаролата"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr "Въведете погорния текст тук"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
 msgstr "Съхрани"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
+msgid "Loading…"
+msgstr "Зареждане..."

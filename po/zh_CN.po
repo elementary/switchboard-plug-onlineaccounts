@@ -7,152 +7,173 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-04-01 16:06+0200\n"
+"POT-Creation-Date: 2014-05-29 17:50+0200\n"
 "PO-Revision-Date: 2014-01-19 05:55+0000\n"
 "Last-Translator: Daniel Fore <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr "包括联系人、Gmail、Google 文档、Google+、Youtube 和 Picasa"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+msgid "Access all Google services on your computer"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Google 日历"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Sync your calendars"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Contacts"
 msgstr "Google 联系人"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "Sync your contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Drive"
 msgstr "Google 云端硬盘"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Sync your files"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "GMail"
 msgstr "GMail"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Talk"
-msgstr "Google Talk"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Sync your emails"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Picasa"
 msgstr "Picasa"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr "包括 Outlook 日历、联系人、邮件和 SkyDrive"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+msgid "Sync your photos"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr "包括联系人、聊天、活动和照片"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+msgid "Content to synchronise:"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+msgid "There is no service linked this account."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr "添加..."
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "删除"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
 msgstr "在线帐户"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "同步您的本地电脑与在线帐户。"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "恢复"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "取消"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+msgid "Connect Your Online Accounts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "帐户“%s”已经删除。"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
-msgid "Connect Your Online Accounts"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+msgid "Add a new account…"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "添加..."
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "删除"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
-msgstr "<b>使用该服务的应用程序：</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
-msgid "<b>There is no application using this account.</b>"
-msgstr "<b>无使用该帐户的应用程序。</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-msgid "Cancel"
-msgstr "取消"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "正在加载..."
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
 msgid "Please enter your credentials…"
 msgstr "请输入认证信息..."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
 msgstr "用户名："
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
 msgstr "john_doe"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
 msgstr "密码："
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
 msgstr "新密码："
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
 msgstr "确认密码："
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr "记住密码"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
 msgstr "忘记密码"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
 msgstr "刷新验证码"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr "请输入上面的文本"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
 msgstr "保存"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
+msgid "Loading…"
+msgstr "正在加载..."

@@ -7,153 +7,174 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-01 16:06+0200\n"
+"POT-Creation-Date: 2014-05-29 17:50+0200\n"
 "PO-Revision-Date: 2014-01-19 05:19+0000\n"
 "Last-Translator: Marek Suchánek <suchm@seznam.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
 "Language: cs\n"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+msgid "Access all Google services on your computer"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Sync your calendars"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Contacts"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "Sync your contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Drive"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Sync your files"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "GMail"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Talk"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Sync your emails"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Picasa"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+msgid "Sync your photos"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+msgid "Content to synchronise:"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+msgid "There is no service linked this account."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "Odebrat"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+msgid "Connect Your Online Accounts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
 msgid "Account '%s' Removed."
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
-msgid "Connect Your Online Accounts"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+msgid "Add a new account…"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Odebrat"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
-msgid "<b>There is no application using this account.</b>"
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
 msgid "Please enter your credentials…"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
+msgid "Loading…"
 msgstr ""

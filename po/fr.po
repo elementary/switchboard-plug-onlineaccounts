@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-29 17:47+0200\n"
-"PO-Revision-Date: 2014-05-29 17:51+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-05-29 17:50+0200\n"
+"PO-Revision-Date: 2014-04-01 14:15+0000\n"
+"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
 "Language-Team: Fr <LL@li.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
+"Language: fr\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Access all Google services on your computer"
-msgstr "Accéder aux services Google sur votre ordinateur"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
@@ -28,7 +28,7 @@ msgstr "Calendrier Google"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Sync your calendars"
-msgstr "Synchronier vos calendriers"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Contacts"
@@ -36,7 +36,7 @@ msgstr "Contacts Google"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your contacts"
-msgstr "Synchronier vos contacts"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Drive"
@@ -44,7 +44,7 @@ msgstr "Google Drive"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your files"
-msgstr "Synchronier vos fichiers"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "GMail"
@@ -52,7 +52,7 @@ msgstr "GMail"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Sync your emails"
-msgstr "Synchronier vos e-mails"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Picasa"
@@ -60,11 +60,11 @@ msgstr "Picasa"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Sync your photos"
-msgstr "Synchronier vos photos"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Accéder à Outlook, OneDrive sur votre ordinateur"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
@@ -74,11 +74,11 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr "Contenu à synchroniser :"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
-msgstr "Aucun service n'est lié à ce compte."
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
@@ -95,7 +95,8 @@ msgid "Online Accounts"
 msgstr "Comptes en-ligne"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
-msgid "Synchronize your computer with all your online accounts around the web."
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
 msgstr "Synchronisez votre ordinateur avec tous vos comptes en-ligne."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
@@ -118,7 +119,9 @@ msgstr "Connectez vos comptes en-ligne"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Connectez-vous pour utiliser votre compte sur cet ordinateur."
+msgstr ""
+"Connectez-vous pour utiliser votre compte dans les applications E-Mail, "
+"Contacts et Calendrier."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
@@ -127,7 +130,7 @@ msgstr "Compte \"%s\" supprimé."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
-msgstr "Ajouter un nouveau compte…"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
@@ -179,19 +182,3 @@ msgstr "Enregistrer"
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
 msgid "Loading…"
 msgstr "Chargement…"
-
-#~ msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-#~ msgstr ""
-#~ "Inclus la gestion des contacts, de Gmail, Google Documents, Google+, "
-#~ "Youtube et Picasa"
-
-#~ msgid "Google Talk"
-#~ msgstr "Google Talk"
-
-#~ msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-#~ msgstr ""
-#~ "Inclus la gestion des contacts, du calendrier et des addresses "
-#~ "électroniques Outlook ansi que SkyDrive"
-
-#~ msgid "<b>Applications that use this service:</b>"
-#~ msgstr "<b>Applications utilisant ce service :</b>"

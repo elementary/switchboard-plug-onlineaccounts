@@ -7,153 +7,174 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-04-01 16:06+0200\n"
+"POT-Creation-Date: 2014-05-29 17:50+0200\n"
 "PO-Revision-Date: 2014-04-10 12:25+0000\n"
 "Last-Translator: Sérgio Marques <Unknown>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-11 05:59+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr "Inclui contactos, Gmail, Google Docs, Google+, YouTube e Picasa"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+msgid "Access all Google services on your computer"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Calendário Google"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Sync your calendars"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Contacts"
 msgstr "Contactos Google"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "Sync your contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Drive"
 msgstr "Google Drive"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Sync your files"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "GMail"
 msgstr "GMail"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Talk"
-msgstr "Google Talk"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Sync your emails"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Picasa"
 msgstr "Picasa"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr "Inclui calendários do Outlook, mensagens, contactos e e SkyDrive"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+msgid "Sync your photos"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr "Inclui contactos, eventos, publicações e fotos"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+msgid "Content to synchronise:"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+msgid "There is no service linked this account."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr "Adicionar…"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "Remover"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
 msgstr "Contas na web"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Sincronize o seu computador com todas as suas contas na web."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
 msgstr "Próximas"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "Repôr"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
-#, c-format
-msgid "Account '%s' Removed."
-msgstr "Conta %s removida."
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Cancelar"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
 msgstr "Estabelecer ligação às suas contas web"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Iniciar sessão para estabelecer ligação ao correio, contactos e calendários."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Adicionar…"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "Conta %s removida."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Remover"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+msgid "Add a new account…"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
-msgstr "<b>Aplicações que utilizam este serviço:</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
-msgid "<b>There is no application using this account.</b>"
-msgstr "<b>Não existem aplicações que utilizem esta conta.</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "A carregar…"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
 msgid "Please enter your credentials…"
 msgstr "Introduza as suas credenciais..."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
 msgstr "Utilizador:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
 msgstr "eu"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
 msgstr "Senha:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
 msgstr "Nova senha:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
 msgstr "Confirmação de senha"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr "Memorizar senha"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
 msgstr "Descartar senha"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
 msgstr "Recarregar Captcha"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr "Escreva aqui o texto"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
 msgstr "Guardar"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
+msgid "Loading…"
+msgstr "A carregar…"

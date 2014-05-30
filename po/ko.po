@@ -7,152 +7,173 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-04-01 16:06+0200\n"
+"POT-Creation-Date: 2014-05-29 17:50+0200\n"
 "PO-Revision-Date: 2014-02-12 22:36+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-02 06:47+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Includes Contacts, Gmail, Google Docs, Google+, YouTube and Picasa"
-msgstr "주소록, G메일, 구글 닥스, 구글+, 유투브, 피카사 포함"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+msgid "Access all Google services on your computer"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Google Calendar"
 msgstr "Google 캘린더"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Sync your calendars"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Google Contacts"
 msgstr "구글 연락처"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+msgid "Sync your contacts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Google Drive"
 msgstr "Google 드라이브"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+msgid "Sync your files"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "GMail"
 msgstr "G메일"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Talk"
-msgstr "구글 토크"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Sync your emails"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Picasa"
 msgstr "피카사"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "Includes Outlook Calendars, Contacts, Mails and SkyDrive"
-msgstr "아웃룩 달력, 주소록, 메일, 스카이드라이브 포함"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+msgid "Sync your photos"
+msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
 msgstr "주소록, 채팅, 이벤트, 담벼락 게시물 및 사진 포함"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:46
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+msgid "Content to synchronise:"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+msgid "There is no service linked this account."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr "추가…"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "제거"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
 msgstr "온라인 계정"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:47
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "인터넷 상의 온라인 계정과 컴퓨터를 동기화합니다."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:60
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "복원"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:102
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "취소"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+msgid "Connect Your Online Accounts"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "계정 '%s'가 제거되었습니다."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
-msgid "Connect Your Online Accounts"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+msgid "Add a new account…"
 msgstr ""
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:116
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:89
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "추가…"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "제거"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:46
-msgid "<b>Applications that use this service:</b>"
-msgstr "<b>이 서비스를 사용하는 애플리케이션:</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:114
-msgid "<b>There is no application using this account.</b>"
-msgstr "<b>이 계정을 사용하는 애플리케이션이 없습니다.</b>"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-msgid "Cancel"
-msgstr "취소"
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:121
-msgid "Loading…"
-msgstr "불러오는 중..."
-
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
 msgid "Please enter your credentials…"
 msgstr "로그인 정보를 입력하세요..."
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
 msgstr "사용자 이름:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
 msgstr "john_doe"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
 msgstr "비밀번호:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
 msgstr "새로운 비밀번호"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
 msgstr "암호 확인:"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
 msgstr "비밀번호 기억하기"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
 msgstr "비밀번호 찾기"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
 msgstr "캡차 (Captcha) 새로고침"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
 msgstr "텍스트 위에 입력하기"
 
-#: /tmp/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
 msgstr "저장"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
+msgid "Loading…"
+msgstr "불러오는 중..."
