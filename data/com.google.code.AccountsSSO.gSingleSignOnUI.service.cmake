@@ -1,3 +1,3 @@
 [D-BUS Service]
 Name=com.google.code.AccountsSSO.gSingleSignOn.UI
-Exec=switchboard -o @PLUGCODENAME@
+Exec=@CMAKE_INSTALL_FULL_BINDIR@/switchboard -o @PLUGCODENAME@
