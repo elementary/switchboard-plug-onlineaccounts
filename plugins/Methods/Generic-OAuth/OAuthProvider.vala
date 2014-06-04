@@ -32,6 +32,7 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         this.is_new = is_new;
         var account_service = new Ag.AccountService (account, null);
         auth_data = account_service.get_auth_data ();
+        session_data = auth_data.get_login_parameters (null);
         if (is_new) {
             setup_authentification ();
         }
@@ -45,6 +46,8 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         info.set_secret ("", true);
         info.set_method ("oauth", {"oauth1", "oauth2", null});
         info.access_control_list_append (new Signon.SecurityContext.from_values ("*", "*"));
+        var allowed_realms = session_data.lookup_value ("AllowedRealms", null).dup_strv ();
+        info.set_realms (allowed_realms);
         var identity = new Signon.Identity ();
         identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
         main_loop.run ();
@@ -64,8 +67,6 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
             method = mechanism;
         }
 
-        session_data = auth_data.get_login_parameters (null);
-        var cid = session_data.lookup_value ("ClientId", null).dup_string ();
         try {
             var session = identity.create_session ("oauth");
             session_result = yield session.process_async (session_data, method, null);

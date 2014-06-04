@@ -74,7 +74,7 @@ namespace Signon {
 		public void set_methods (GLib.HashTable<string,string[]> methods);
 		public void set_owner (Signon.SecurityContext owner);
 		public void set_owner_from_values (string system_context, string application_context);
-		public void set_realms (string realms);
+		public void set_realms ([CCode (array_length = false, array_null_terminated = false)] string[] realms);
 		public void set_secret (string secret, bool store_secret);
 		public void set_username (string username);
 	}

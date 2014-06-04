@@ -17,7 +17,7 @@
           <setting name="TokenHost">accounts.google.com</setting>
           <setting name="AuthPath">/o/oauth2/auth</setting>
           <setting name="TokenPath">/o/oauth2/token</setting>
-          <setting name="UiPolicy">0</setting>
+          <setting type="int" name="UiPolicy">0</setting>
           <setting name="RedirectUri">http://elementaryos.org</setting>
           <setting name="ResponseType">code</setting>
           <setting name="Scope">https://www.googleapis.com/auth/userinfo.profile https://docs.google.com/feeds/ https://www.googleapis.com/auth/googletalk https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login https://picasaweb.google.com/data/ https://www.google.com/m8/feeds/</setting>
