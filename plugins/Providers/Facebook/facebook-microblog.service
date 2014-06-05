@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="facebook-microblog">
   <type>microblogging</type>
-  <name>Facebook</name>
-  <icon>facebook</icon>
+  <name>Posts</name>
+  <description>Watch your newsfeed.</description>
+  <icon>applications-chat</icon>
   <provider>facebook</provider>
   <translations>pantheon-online-accounts</translations>
-
   
   <template>
     <group name="friends">

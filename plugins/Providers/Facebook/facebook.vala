@@ -27,7 +27,27 @@ public class OnlineAccounts.Plugins.OAuth.Facebook.ProviderPlugin : OnlineAccoun
     }
     
     public override void get_user_name (OnlineAccounts.Account plugin) {
-        
+        var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
+        var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
+        var auth_endpoint = plugin.session_data.lookup_value ("RedirectUri", null).dup_string ();
+        var proxy = new Rest.OAuth2Proxy.with_token (client_id, token, auth_endpoint, "https://graph.facebook.com/me", false);
+        var call = proxy.new_call ();
+        call.set_method ("GET");
+        try {
+            call.run ();
+        } catch (Error e) {
+            critical (e.message);
+        }
+        try {
+            var parser = new Json.Parser ();
+            parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
+
+            var root_object = parser.get_root ().get_object ();
+            string username = root_object.get_string_member ("username");
+            plugin.account.set_display_name (username);
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
     
     public override void get_user_image (OnlineAccounts.Account plugin) {

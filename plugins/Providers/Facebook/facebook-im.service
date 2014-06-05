@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="facebook-im">
   <type>IM</type>
-  <name>Facebook</name>
-  <icon>facebook</icon>
+  <name>Messenger</name>
+  <description>Chat with your friends</description>
+  <icon>internet-chat</icon>
   <provider>facebook</provider>
   <translations>pantheon-online-accounts</translations>
 
