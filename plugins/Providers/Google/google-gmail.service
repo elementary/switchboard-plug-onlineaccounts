@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="google-gmail">
   <type>mail</type>
-  <name>GMail</name>
+  <name>Emails</name>
   <description>Sync your emails</description>
   <icon>internet-mail</icon>
   <provider>google</provider>

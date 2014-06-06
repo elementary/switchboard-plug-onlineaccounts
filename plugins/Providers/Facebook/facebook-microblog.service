@@ -2,7 +2,7 @@
 <service id="facebook-microblog">
   <type>microblogging</type>
   <name>Posts</name>
-  <description>Watch your newsfeed.</description>
+  <description>Watch your newsfeed</description>
   <icon>applications-chat</icon>
   <provider>facebook</provider>
   <translations>pantheon-online-accounts</translations>

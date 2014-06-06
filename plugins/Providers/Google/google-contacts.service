@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="google-contacts">
   <type>contacts</type>
-  <name>Google Contacts</name>
+  <name>Contacts</name>
   <description>Sync your contacts</description>
   <icon>office-address-book</icon>
   <provider>google</provider>

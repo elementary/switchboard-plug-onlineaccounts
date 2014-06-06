@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<provider id="yahoo">
-  <name>Yahoo!</name>
-  <description>Access all Yahoo! services on your computer</description>
-  <icon>yahoo</icon>
+<service id="yahoo-calendar">
+  <type>calendar</type>
+  <name>Calendars</name>
+  <description>Sync your calendars</description>
+  <icon>office-calendar</icon>
   <translations>pantheon-online-accounts</translations>
-  <plugin>generic-oauth</plugin>
 
   <template>
     <group name="auth">
@@ -28,4 +28,4 @@
       </group>
     </group>
   </template>
-</provider>
+</service>
