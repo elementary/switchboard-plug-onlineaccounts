@@ -7,68 +7,72 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-29 17:50+0200\n"
+"POT-Creation-Date: 2014-06-06 13:12+0200\n"
 "PO-Revision-Date: 2014-05-20 18:33+0000\n"
 "Last-Translator: Joachim Johansson <Unknown>\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-30 05:57+0000\n"
-"X-Generator: Launchpad (build 17023)\n"
+"X-Launchpad-Export-Date: 2014-06-07 06:30+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
 "X-Poedit-Language: Swedish\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
-msgid "Access all Google services on your computer"
+msgid "Calendars"
 msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
-msgid "Google Calendar"
-msgstr "Google Calendar"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Sync your calendars"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
-msgid "Google Contacts"
-msgstr "Google Contacts"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+msgid "Contacts"
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Sync your contacts"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
-msgid "Google Drive"
-msgstr "Google Drive"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your files"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
-msgid "GMail"
-msgstr "GMail"
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+msgid "Emails"
+msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
-msgid "Picasa"
-msgstr "Picasa"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+msgid "Watch your newsfeed"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
+msgid "Chat with your friends"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr ""
 
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+msgid "Access all Yahoo! services on your computer"
+msgstr ""
+
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
-msgid "Includes Contacts, Chat, Events, Wall Posts and Photos"
-msgstr "Inkluderar kontakter, meddelanden, evenemang, nyheter och foton"
+msgid "Access all Facebook contents on your computer"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
+msgid "Access all Google services on your computer"
+msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
@@ -129,7 +133,7 @@ msgid "Add a new account…"
 msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:116
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 msgid "Please enter your credentials…"
 msgstr "Skriv in dina inloggningsuppgifter..."
 
@@ -175,6 +179,6 @@ msgid "Save"
 msgstr "Spara"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:123
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
 msgid "Loading…"
 msgstr "Läser in..."
