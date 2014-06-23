@@ -8,79 +8,78 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-06 13:12+0200\n"
-"PO-Revision-Date: 2014-01-30 06:34+0000\n"
+"PO-Revision-Date: 2014-06-23 01:16+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-07 06:30+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
-"Language: \n"
+"X-Launchpad-Export-Date: 2014-06-23 06:07+0000\n"
+"X-Generator: Launchpad (build 17065)\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "行事曆"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "同步您的行事曆"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "連絡人"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "同步您的連絡人"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "同步您的檔案"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "電子郵件"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "同步您的電子郵件"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "同步您的相片"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "關注您的新聞來源"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "與您的朋友聊天"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "在您的電腦上存取所有的 Outlook 與 OneDrive 服務"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "在您的電腦上存取所有的 Yahoo! 服務"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "在您的電腦上存取所有的 Facebook 內容"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "在您的電腦上存取所有的 Google 服務"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "要同步的內容："
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
-msgstr ""
+msgstr "沒有服務與此帳號連結。"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
@@ -103,7 +102,7 @@ msgstr "讓您的電腦與網路上的各種線上帳號同步。"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
@@ -117,11 +116,11 @@ msgstr "取消"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "連接您的線上帳號"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
+msgstr "登入以與程式連接，如郵件、聯絡人、行事曆等。"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
@@ -130,7 +129,7 @@ msgstr "帳號「%s」已移除。"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
-msgstr ""
+msgstr "加入新帳號..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
