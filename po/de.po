@@ -8,47 +8,47 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-06 13:12+0200\n"
-"PO-Revision-Date: 2014-05-23 11:58+0000\n"
+"PO-Revision-Date: 2014-06-23 10:22+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-07 06:30+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-06-24 06:31+0000\n"
+"X-Generator: Launchpad (build 17065)\n"
 "Language: de\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Kalender"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Kalender synchronisieren"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Kontakte"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Kontakte synchronisieren"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Dateien synchronisieren"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "E-Mails"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "E-Mails synchronisieren"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Fotos synchronisieren"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Watch your newsfeed"
@@ -56,31 +56,31 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "Mit Freunden schreiben"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "Zugriff auf alle Outlook- und OneDrive-Dienste auf Ihrem Computer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "Zugriff auf alle Yahoo!-Dienste auf Ihrem Computer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "Zugriff auf alle Facebook-Inhalte auf Ihrem Computer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Zugriff auf alle Google-Dienste auf Ihrem Computer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "Inhalte zum synchronisieren:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
-msgstr ""
+msgstr "Es sind keine Dienste mit diesem Konto verbunden."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
@@ -132,7 +132,7 @@ msgstr "Konto »%s« entfernt."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
-msgstr ""
+msgstr "Neues Konto hinzufügen …"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
