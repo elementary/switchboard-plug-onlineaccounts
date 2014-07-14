@@ -1,184 +1,184 @@
-# Hungarian translation for noise
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the noise package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# Afrikaans translation for switchboard-plug-onlineaccounts
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the switchboard-plug-onlineaccounts package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: noise\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: switchboard-plug-onlineaccounts\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-06 13:12+0200\n"
-"PO-Revision-Date: 2014-07-13 10:23+0000\n"
-"Last-Translator: Mark Lutring <marcus@elitemail.hu>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"PO-Revision-Date: 2014-07-13 16:12+0000\n"
+"Last-Translator: Jacques Strydom <jacquesafro@gmail.com>\n"
+"Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-07-14 07:08+0000\n"
 "X-Generator: Launchpad (build 17111)\n"
-"Language: hu\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Calendars"
-msgstr "Naptárak"
+msgstr "Kalenders"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr "Naptárak szinkronizálása"
+msgstr "Sinchroniseer jou kalenders"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Contacts"
-msgstr "Névjegyek"
+msgstr "Kontakte"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr "Névjegyek szinkronizálása"
+msgstr "Sinchroniseer jou kontakte"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your files"
-msgstr "Fájlok szinkronizálása"
+msgstr "Sinchroniseer jou dokumente"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Emails"
-msgstr "E-mailek"
+msgstr "E-posse"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr "E-mailek szinkronizálása"
+msgstr "Sinchroniseer jou e-posse"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr "Képek szinkronizálása"
+msgstr "Sinchroniseer jou foto's"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Kyk jou nuusvoer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr "Beszélgessen barátaival"
+msgstr "Gesels met jou vriende"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "Toegang tot alle Outlook en OneDrive dienste op jou rekenaar"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "Toegang tot alle Yahoo! dienste op jou rekenaar"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "Toegang tot alle Facebook inhoud op jou rekenaar"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Toegang tot alle Google-dienste op jou rekenaar"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "Inhoud om te sinchroniseer:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
-msgstr ""
+msgstr "Daar is geen diens aan hierdie rekening gekoppel."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
 msgid "Add…"
-msgstr "Hozzáadás…"
+msgstr "Byvoeg"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
 msgid "Remove"
-msgstr "Eltávolítás"
+msgstr "Verwyder"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
-msgstr "Online fiókok"
+msgstr "Aanlyn Rekeninge"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr "A számítógépe szinkronizálása az összes online fiókjával a weben."
+msgstr ""
+"Sinchroniseer jou rekenaar met al jou aanlyn rekeninge rondom die web."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
-msgstr "Bezárás"
+msgstr "Sluit"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
-msgstr "Visszaállítás"
+msgstr "Restoureer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Kanselleer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Verbind jou Aanlyn Rekeninge"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
+msgstr "Teken in om te verbind met programme soos pos, kontakte en kalender."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
 msgid "Account '%s' Removed."
-msgstr "„%s” fiók eltávolítva"
+msgstr "Rekening '%s' Verwyder."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
-msgstr ""
+msgstr "Voeg 'n nuwe rekening by..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Tik asseblief jou aansluit besonderhede in..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
-msgstr ""
+msgstr "Gebruikernaam:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
 msgid "john_doe"
-msgstr ""
+msgstr "john_doe"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
 msgid "Password:"
-msgstr "Jelszó:"
+msgstr "Wagwoord:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
-msgstr "Új jelszó:"
+msgstr "Nuwe wagwoord:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
-msgstr "Jelszó megerősítése:"
+msgstr "Bevestig wagwoord:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
-msgstr "A jelszó megjegyzése"
+msgstr "Onthou wagwoord"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
 msgid "Forgot password"
-msgstr ""
+msgstr "Vergeet wagwoord"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
 msgid "Refresh Captcha"
-msgstr "Captcha frissítése"
+msgstr "Verfris  Captcha"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
-msgstr "Írja be a fenti szöveget ide"
+msgstr "Tik bogenoemde teks hier"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
-msgstr ""
+msgstr "Stoor"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
 msgid "Loading…"
-msgstr "Betöltés…"
+msgstr "Laai tans…"
