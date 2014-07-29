@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-06 13:12+0200\n"
-"PO-Revision-Date: 2014-05-11 16:40+0000\n"
-"Last-Translator: Israel <isra1998isra@hotmail.com>\n"
+"PO-Revision-Date: 2014-07-29 01:35+0000\n"
+"Last-Translator: Krzysztof Statkiewicz <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-07 06:30+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-07-29 06:46+0000\n"
+"X-Generator: Launchpad (build 17131)\n"
 "Language: es\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
@@ -24,7 +24,7 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Sincronizar calendarios"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Contacts"
@@ -32,11 +32,11 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Sincronizar contactos"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Sincronizar archivos"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Emails"
@@ -44,11 +44,11 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "Sincronizar mensajes"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Sincronizar fotos"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Watch your newsfeed"
@@ -80,7 +80,7 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
-msgstr ""
+msgstr "No existen servicios relacionados con esta cuenta."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
@@ -130,7 +130,7 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
-msgstr ""
+msgstr "Añadir una cuenta nueva..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
@@ -172,7 +172,7 @@ msgstr ""
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
 msgid "Enter above text here"
-msgstr ""
+msgstr "Inserte el texto anterior aquí"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
