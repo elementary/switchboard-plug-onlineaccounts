@@ -7,16 +7,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-06 13:12+0200\n"
+"POT-Creation-Date: 2014-08-06 22:07-0500\n"
 "PO-Revision-Date: 2014-04-28 19:41+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-07 06:30+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:24+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 "Language: gl\n"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr "Escriba as súas credenciais..."
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Nome de usuario:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "xan_perillan"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Contrasinal:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Contrasinal novo:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Repita o contrasinal:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Lembrar o contrasinal"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Esqueceu o contrasinal"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Actualizar o captcha"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Escriba aquí o texto anterior"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Gardar"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Cargando…"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Calendars"
@@ -109,12 +166,6 @@ msgstr "Pechar"
 msgid "Restore"
 msgstr "Restabelecer"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Cancelar"
-
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
 msgstr "Conecte coas súas contas en liña"
@@ -132,54 +183,3 @@ msgstr "A conta «%s» foi retirada."
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
 msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Escriba as súas credenciais..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Nome de usuario:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "xan_perillan"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Contrasinal:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Contrasinal novo:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Repita o contrasinal:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Lembrar o contrasinal"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Esqueceu o contrasinal"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Actualizar o captcha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Escriba aquí o texto anterior"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Gardar"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Cargando…"

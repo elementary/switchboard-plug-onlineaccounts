@@ -7,15 +7,72 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-06 13:12+0200\n"
+"POT-Creation-Date: 2014-08-06 22:07-0500\n"
 "PO-Revision-Date: 2014-06-08 20:57+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-09 06:31+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:24+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+msgid "Cancel"
+msgstr "መሰረዣ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr ""
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "የተጠቃሚ ስም:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "ጆን_ዶ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "የመግቢያ ቃል:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "አዲስ የመግቢያ ቃል:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "የመግቢያ ቃል ማረጋገጫ:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "የመግቢያ ቃሉን አስታውስ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "የመግቢያ ቃሉን ረሱት"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Captcha ማነቃቂያ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "ከላይ ያለውን ጽሁፍ ያስገቡ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "ማስቀመጫ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "በመጫን ላይ..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Calendars"
@@ -108,12 +165,6 @@ msgstr "መዝጊያ"
 msgid "Restore"
 msgstr "እንደነበር መመለሻ"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "መሰረዣ"
-
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
 msgstr "የ እርስዎን የመስመር ላይ መግለጫ መገናኛ"
@@ -130,54 +181,3 @@ msgstr "መገለጫው '%s' ተወግዷል"
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
 msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "የተጠቃሚ ስም:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "ጆን_ዶ"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "የመግቢያ ቃል:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "አዲስ የመግቢያ ቃል:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "የመግቢያ ቃል ማረጋገጫ:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "የመግቢያ ቃሉን አስታውስ"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "የመግቢያ ቃሉን ረሱት"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Captcha ማነቃቂያ"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "ከላይ ያለውን ጽሁፍ ያስገቡ"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "ማስቀመጫ"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "በመጫን ላይ..."

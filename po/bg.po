@@ -7,16 +7,73 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-06 13:12+0200\n"
+"POT-Creation-Date: 2014-08-06 22:07-0500\n"
 "PO-Revision-Date: 2014-04-19 01:18+0000\n"
 "Last-Translator: ITPROJECTS <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-07 06:30+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:24+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 "Language: bg\n"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
+msgid "Cancel"
+msgstr "Отказ"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr "Моля въведете си данните..."
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Потребителско име:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "иван_петров"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Парола:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Нова Парола:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Потвърдете паролата:"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Запомни паролата"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Забравена парола"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Обновете Снимкопаролата"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Въведете погорния текст тук"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Съхрани"
+
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
+#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Зареждане..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
 msgid "Calendars"
@@ -111,12 +168,6 @@ msgstr "Затвори"
 msgid "Restore"
 msgstr "Възстанови"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Отказ"
-
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
 msgstr "Свържете Вашите Мрежови Потребителски Абонаменти"
@@ -134,54 +185,3 @@ msgstr "Потребителски Абонамент  '%s' Премахнат."
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
 msgstr ""
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Моля въведете си данните..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Потребителско име:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "иван_петров"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Парола:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Нова Парола:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Потвърдете паролата:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Запомни паролата"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Забравена парола"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Обновете Снимкопаролата"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Въведете погорния текст тук"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Съхрани"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Зареждане..."
