@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-06 22:07-0500\n"
-"PO-Revision-Date: 2014-07-17 10:47+0000\n"
-"Last-Translator: Fabio Gaudenzi <bafio.fruges@gmail.com>\n"
+"PO-Revision-Date: 2014-08-13 13:32+0000\n"
+"Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 06:59+0000\n"
+"X-Launchpad-Export-Date: 2014-08-14 07:31+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
@@ -42,15 +42,15 @@ msgstr "Password:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
 msgid "New Password:"
-msgstr "Nuova Password:"
+msgstr "Nuova password:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
 msgid "Confirm Password:"
-msgstr "Conferma Password:"
+msgstr "Conferma password:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
 msgid "Remember password"
-msgstr "Ricorda Password"
+msgstr "Ricorda la password"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
@@ -67,7 +67,7 @@ msgstr "Inserisci il testo qui sopra"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
 msgid "Save"
-msgstr "Salvare"
+msgstr "Salva"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
@@ -96,11 +96,11 @@ msgstr "Sincronizza i tuoi file"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Emails"
-msgstr "Email"
+msgstr "Posta elettronica"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr "Sincronizza le tue Email"
+msgstr "Sincronizza la posta elettronica"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
@@ -112,7 +112,7 @@ msgstr "Guarda il tuo newsfeed"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr "Chiacchiera con i tuoi amici"
+msgstr "Chatta con i tuoi amici"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -132,7 +132,7 @@ msgstr "Accedi a tutti i servizi Google sul tuo computer"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr "Contenuto da sincronizzare"
+msgstr "Contenuto da sincronizzare:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
@@ -146,7 +146,7 @@ msgstr "Aggiungi..."
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
 msgid "Remove"
-msgstr "Elimina"
+msgstr "Rimuovi"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
@@ -155,8 +155,7 @@ msgstr "Account Online"
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr ""
-"Sincronizzare il computer con tutti i tuoi account online in tutto il web."
+msgstr "Sincronizza il computer con tutti i tuoi account online sul web."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
@@ -164,7 +163,7 @@ msgstr "Chiudi"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
 msgid "Restore"
-msgstr "Ripristinare"
+msgstr "Ripristina"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
@@ -172,13 +171,12 @@ msgstr "Connetti i tuoi Account Online"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Effettua il login per connettere applicazioni come Mail, Contacts e Calendar."
+msgstr "Accedi per connettere applicazioni come Mail, Contatti e Calendario."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
 msgid "Account '%s' Removed."
-msgstr "Account '% s' rimosso."
+msgstr "Account '%s' rimosso."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
