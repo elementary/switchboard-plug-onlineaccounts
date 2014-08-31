@@ -22,11 +22,9 @@
 namespace OnlineAccounts {
 
     public static Plug plug;
-
     public class Plug : Switchboard.Plug {
-        
         public signal void hide_request ();
-        
+
         Gtk.Stack stack;
         Gtk.Grid grid;
         Gtk.Grid main_grid;
@@ -103,6 +101,7 @@ namespace OnlineAccounts {
                     add_return ();
                     switch_to_welcome ();
                 });
+
                 paned.pack1 (source_selector, false, false);
                 paned.pack2 (grid, true, false);
                 paned.set_position (200);

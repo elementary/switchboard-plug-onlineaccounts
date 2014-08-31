@@ -146,36 +146,28 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     }
     
     private void remove_source () {
-        var account = get_selected_account ();
-        if (account != null) {
-            var selection = tree_view.get_selection ();
-            Gtk.TreeModel model;
-            Gtk.TreeIter? iter;
-            if (selection.get_selected (out model, out iter)) {
-                list_store.remove (iter);
-                AccountsManager.get_default ().remove_account (account);
-                if (list_store.get_iter_first (out iter)) {
-                    selection.select_iter (iter);
-                    OnlineAccounts.Account plugin;
-                    list_store.get (iter, Columns.PLUGIN, out plugin);
-                    last_selected = null;
-                    account_selected (plugin);
-                }
-            } else {
-                if (list_store.get_iter_first (out iter)) {
-                    list_store.remove (iter);
-                    AccountsManager.get_default ().remove_account (account);
-                    if (list_store.get_iter_first (out iter)) {
-                        selection.select_iter (iter);
-                        OnlineAccounts.Account plugin;
-                        list_store.get (iter, Columns.PLUGIN, out plugin);
-                        last_selected = null;
-                        account_selected (plugin);
-                    }
-                }
-            }
+        Gtk.TreePath path;
+        Gtk.TreeViewColumn column;
+        tree_view.get_cursor (out path, out column);
+        Gtk.TreeIter iter;
+        list_store.get_iter (out iter, path);
+        Value plugin;
+        list_store.get_value (iter, Columns.PLUGIN, out plugin);
+        AccountsManager.get_default ().remove_account ((OnlineAccounts.Account)plugin.get_object ());
+        // check if the item is the last one, then go to the previous or go to welcome screen.
+        if (list_store.iter_next (ref iter) == true) {
+            tree_view.row_activated (list_store.get_path (iter), column);
+            list_store.iter_previous (ref iter);
         } else {
-            //Show welcome.
+            list_store.get_iter (out iter, path);
+            if (list_store.iter_previous (ref iter) == true) {
+                tree_view.row_activated (list_store.get_path (iter), column);
+                list_store.iter_next (ref iter);
+            } else {
+                list_store.get_iter (out iter, path);
+            }
         }
+
+        list_store.remove (iter);
     }
 }
