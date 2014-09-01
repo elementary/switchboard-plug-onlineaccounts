@@ -61,9 +61,9 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         var services = plugin.account.list_services ();
         foreach (var service in services) {
             string i18n_domain = service.get_i18n_domain ();
+            string tooltip = GLib.dgettext (i18n_domain, service.get_description ());
 
-            Gtk.Image service_image = new Gtk.Image.from_icon_name (service.get_icon_name (), Gtk.IconSize.DIALOG);
-
+            var service_image = new Gtk.Image.from_icon_name (service.get_icon_name (), Gtk.IconSize.DIALOG);
             service_image.margin_left = 12;
 
             var service_label = new Gtk.Label ("");
@@ -71,23 +71,15 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
 
             service_label.xalign = 0;
 
-            var service_description_label = new Gtk.Label (GLib.dgettext (i18n_domain, service.get_description ()));
-            service_description_label.xalign = 0;
-
-            var service_labels_grid = new Gtk.Grid ();
-            service_labels_grid.margin = 6;
-            service_labels_grid.row_spacing = 6;
-            service_labels_grid.attach (service_label, 0, 0, 1, 1);
-            service_labels_grid.attach (service_description_label, 0, 1, 1, 1);
-
             var service_switch = new Gtk.Switch ();
             service_switch.valign = Gtk.Align.CENTER;
+            service_switch.tooltip_text = tooltip;
             plugin.account.select_service (service);
             service_switch.active = plugin.account.get_enabled ();
             service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service);});
 
             apps_grid.attach (service_image, 1, i, 1, 1);
-            apps_grid.attach (service_labels_grid, 2, i, 1, 1);
+            apps_grid.attach (service_label, 2, i, 1, 1);
             apps_grid.attach (service_switch, 3, i, 1, 1);
             i++;
         }
