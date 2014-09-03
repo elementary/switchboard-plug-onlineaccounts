@@ -30,5 +30,8 @@
         </group>
       </group>
     </group>
+    <group name="evolution">
+      <setting name="BackendName">outlook</setting>
+    </group>
   </template>
 </service>
