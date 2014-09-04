@@ -22,6 +22,7 @@
 public class OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin : OnlineAccounts.ProviderPlugin {
     
     public ProviderPlugin () {
+        warning ("HERE");
         Object (plugin_name: "generic-oauth",
                 provider_name: "yahoo");
     }
@@ -39,12 +40,14 @@ public class OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin : OnlineAccounts.
             call.add_param ("format", "xml");
             call.run ();
             string content = get_string_from_call (call);
+            warning (content);
             if (content == null)
                 return;
             string guid = content.split ("<value>", 2)[1].split ("</value>", 2)[0];
             if (guid == null || guid == "")
                 return;
             proxy.url_format = "http://social.yahooapis.com/v1/user/%s/profile/usercard".printf (guid);
+            warning ("http://social.yahooapis.com/v1/user/%s/profile/usercard".printf (guid));
             try {
                 var call2 = proxy.new_call ();
                 call2.set_method ("GET");

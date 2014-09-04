@@ -17,8 +17,8 @@
           <setting name="RequestEndpoint">https://api.login.yahoo.com/oauth/v2/get_request_token</setting>
           <setting name="TokenEndpoint">https://api.login.yahoo.com/oauth/v2/get_token</setting>
           <setting name="AuthorizationEndpoint">https://api.login.yahoo.com/oauth/v2/request_auth</setting>
-          <setting name="ConsumerKey">dj0yJmk9cTR3bkxCTWswWjVJJmQ9WVdrOVNISTJXbEJ1TjJVbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1hNg--</setting>
-          <setting name="ConsumerSecret">ce620be48839bb3d5ff72e31856bae807f40d509</setting>
+          <setting name="ConsumerKey">dj0yJmk9eGhmZ09ueUJoTElaJmQ9WVdrOVVVODBSRnBwTkhNbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD00MA--</setting>
+          <setting name="ConsumerSecret">cdb54599d34adbd21854f4fcc0292bec1fcb8389</setting>
           <setting name="SignatureMethod">HMAC-SHA1</setting>
           <setting type="int" name="UiPolicy">0</setting>
           <setting type="as" name="AllowedSchemes">['https','http']</setting>

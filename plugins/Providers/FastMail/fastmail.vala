@@ -19,56 +19,15 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
-public class OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin : OnlineAccounts.ProviderPlugin {
+public class OnlineAccounts.Plugins.OAuth.FastMail.ProviderPlugin : OnlineAccounts.ProviderPlugin {
     
     public ProviderPlugin () {
-        Object (plugin_name: "generic-oauth",
-                provider_name: "yahoo");
+        Object (plugin_name: "password",
+                provider_name: "fastmail");
     }
     
     public override void get_user_name (OnlineAccounts.Account plugin) {
-        var token_secret = plugin.session_result.lookup_value ("TokenSecret", null).dup_string ();
-        var consumer_key = plugin.session_data.lookup_value ("ConsumerKey", null).dup_string ();
-        var consumer_secret = plugin.session_data.lookup_value ("ConsumerSecret", null).dup_string ();
-        var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
-        var proxy = new Rest.OAuthProxy.with_token (consumer_key, consumer_secret, token, token_secret, "http://social.yahooapis.com/v1/me/guid", false);
-        var call = proxy.new_call ();
-        call.set_method ("GET");
-        call.add_param ("format", "xml");
 
-        try {
-            call.run ();
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        var parser = new Rest.XmlParser ();
-        Rest.XmlNode root = parser.parse_from_data (call.get_payload (), call.get_payload_length ());
-        Rest.XmlNode node = root.find ("value");
-        if (node == null) {
-            warning ("null");
-            return;
-        }
-        string guid = node.content;
-        proxy = new Rest.OAuthProxy.with_token (consumer_key, consumer_secret, token, token_secret, "http://social.yahooapis.com/v1/user/%s/profile/usercard".printf (guid), false);
-        call = proxy.new_call ();
-        call.set_method ("GET");
-        call.add_param ("format", "xml");
-
-        try {
-            call.run ();
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        parser = new Rest.XmlParser ();
-        root = parser.parse_from_data (call.get_payload (), call.get_payload_length ());
-        node = root.find ("nickname");
-        if (node == null) {
-            warning ("null");
-            return;
-        }
-        plugin.account.set_display_name (node.content);
     }
     
     public override void get_user_image (OnlineAccounts.Account plugin) {
@@ -77,7 +36,7 @@ public class OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin : OnlineAccounts.
 }
 
 public OnlineAccounts.ProviderPlugin get_provider_plugin (Module module) {
-    debug ("OnlineAccouts: Activating Yahoo plugin");
-    var plugin = new OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin ();
+    debug ("OnlineAccouts: Activating FastMail plugin");
+    var plugin = new OnlineAccounts.Plugins.OAuth.FastMail.ProviderPlugin ();
     return plugin;
 }
