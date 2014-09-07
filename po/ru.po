@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-06 22:07-0500\n"
-"PO-Revision-Date: 2014-09-05 23:40+0000\n"
+"PO-Revision-Date: 2014-09-06 13:40+0000\n"
 "Last-Translator: Artem Anufrij <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:29+0000\n"
+"X-Launchpad-Export-Date: 2014-09-07 06:54+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
@@ -26,7 +26,7 @@ msgstr "Отмена"
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
 msgid "Please enter your credentials…"
-msgstr "Пожалуйста, введите данные для входа..."
+msgstr "Введите данные для входа..."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
 msgid "Username:"
@@ -80,7 +80,7 @@ msgstr "Календари"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Синхронизация календаря"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
 msgid "Contacts"
@@ -88,51 +88,51 @@ msgstr "Контакты"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Синхронизация контактов"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Синхронизация файлов"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "Почта"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "Синхронизация почты"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Синхронизация фотографий"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Просмотр ленты новостей"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "Общение с друзьями"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "Соедините сервисы Outlook и OneDrive с вашим компьютером"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "Соедините все сервисы Yahoo! с вашим компьютером"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "Соедините всё содержание Facebook с вашим компьютером"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Соедините все сервисы Google с вашим компьютером"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "Объем синхронизации:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
@@ -150,12 +150,13 @@ msgstr "Удалить"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
 msgid "Online Accounts"
-msgstr ""
+msgstr "Сетевые профили"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
+"Синхронизируйте ваш компьютер с вашими сетевыми профилями в интернете."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
@@ -167,11 +168,12 @@ msgstr "Восстановить"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Соедините ваши сетевые профили"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"Войдите чтобы соединить приложения такие как Почта, Контакты и Календарь."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
 #, c-format
@@ -180,4 +182,4 @@ msgstr "Профиль '%s' удален."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
 msgid "Add a new account…"
-msgstr ""
+msgstr "Добавить сетевой профиль..."
