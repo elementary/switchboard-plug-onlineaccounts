@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-06 22:07-0500\n"
-"PO-Revision-Date: 2014-07-03 21:37+0000\n"
-"Last-Translator: Tobias Bannert <Unknown>\n"
+"PO-Revision-Date: 2014-09-09 17:28+0000\n"
+"Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 06:59+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-10 07:56+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 "Language: de\n"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
@@ -134,7 +134,7 @@ msgstr "Auf alle Google-Dienste von Ihrem Rechner aus zugreifen"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr "Inhalte zum synchronisieren:"
+msgstr "Inhalte, die synchronisiert werden sollen:"
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
 msgid "There is no service linked this account."
@@ -157,7 +157,9 @@ msgstr "Online-Konten"
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr "Synchronisiert Ihren Rechner mit allen Online-Konten."
+msgstr ""
+"Auf diesem Rechner gespeicherte Daten mit Ihren Online-Konten "
+"synchronisieren."
 
 #: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
 msgid "Close"
