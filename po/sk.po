@@ -7,179 +7,180 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-06 22:07-0500\n"
+"POT-Creation-Date: 2014-09-20 11:59+0200\n"
 "PO-Revision-Date: 2014-06-22 12:48+0000\n"
 "Last-Translator: Milan Slovák <Unknown>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 06:59+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-msgid "Cancel"
-msgstr "Zrušiť"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Prosím, zadajte svoje prihlasovacie údaje..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Meno používateľa:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "john_doe"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Heslo:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Nové heslo:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Potvrdiť heslo:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Zapamätať heslo"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Zabudnuté heslo"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Obnoviť captcha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Zadajte nad textom tu"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Uložiť"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Načítava sa…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+#: ../src//Translation.vala:24
 msgid "Calendars"
 msgstr "Kalendáre"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: ../src//Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Synchronizovať vaše kalendáre"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: ../src//Translation.vala:26
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: ../src//Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Synchronizovať vaše kontakty"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: ../src//Translation.vala:28
 msgid "Sync your files"
 msgstr "Synchronizovať vaše súbory"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+#: ../src//Translation.vala:29
 msgid "Emails"
 msgstr "Emaily"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: ../src//Translation.vala:30
 msgid "Sync your emails"
 msgstr "Synchronizovať vaše emaily"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
+#: ../src//Translation.vala:31
 msgid "Sync your photos"
 msgstr "Synchronizovať vaše fotografie"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Pozrieť vaše zdroje správ"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
+#: ../src//Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Dopisuj si s priateľmi"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+#: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Sprístupniť všetky Outlook a OneDrive služby na vašom počítači"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+#: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Sprístupniť všetky služby Yahoo! na vašom počítači"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
+#: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Sprístupniť obsah Facebook-u na vašom počítači"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
+#: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Sprístupniť všetky služby Google na vašom počítači"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+#: ../src//Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr ""
+
+#: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
 msgstr "Synchronizovať obsah:"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:88
 msgid "There is no service linked this account."
 msgstr "Neexistuje žiadna služba spojená s daným účtom."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
 msgstr "Pridať…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
+#: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Online účty"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
+#: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 "Synchronizujte svoj ​​počítač so všetkými online kontami na celom webe."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
+#: ../src//OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Zatvoriť"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
+#: ../src//OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Obnoviť"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:64
+#: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Pripojiť k vašim online kontám"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Prihláste sa do spojenia s aplikáciami, ako je pošta, kontakty a kalendár."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
-#, c-format
+#: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Účet '%s' odstránený."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+#: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Pridať nový účet"
+
+#: ../src//Authentification/GraphicalDialog.vala:59
+#: ../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr "Prosím, zadajte svoje prihlasovacie údaje..."
+
+#: ../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Meno používateľa:"
+
+#: ../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "john_doe"
+
+#: ../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Heslo:"
+
+#: ../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Nové heslo:"
+
+#: ../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Potvrdiť heslo:"
+
+#: ../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Zapamätať heslo"
+
+#: ../src//Authentification/GraphicalDialog.vala:94
+#: ../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Zabudnuté heslo"
+
+#: ../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Obnoviť captcha"
+
+#: ../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Zadajte nad textom tu"
+
+#: ../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Uložiť"
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Načítava sa…"

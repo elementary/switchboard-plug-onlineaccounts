@@ -7,180 +7,181 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-06 22:07-0500\n"
+"POT-Creation-Date: 2014-09-20 11:59+0200\n"
 "PO-Revision-Date: 2014-08-04 11:11+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: polski <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 06:59+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 "Language: \n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-msgid "Cancel"
-msgstr "Anuluj"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Proszę wpisać swoje dane dostępowe"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Nazwa użytkownika:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "jan_kowalski"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Hasło:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Nowe hasło:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Potwierdź hasło:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Zapamiętaj hasło"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Zapomniałem hasła"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Odśwież Captcha"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Przepisz powyższy tekst"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Zapisz"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Wczytywanie…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+#: ../src//Translation.vala:24
 msgid "Calendars"
 msgstr "Kalendarze"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: ../src//Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Synchronizuj swoje kalendarze"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: ../src//Translation.vala:26
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: ../src//Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Synchronizuj swoje kontakty"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: ../src//Translation.vala:28
 msgid "Sync your files"
 msgstr "Synchronizuj swoje pliki"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+#: ../src//Translation.vala:29
 msgid "Emails"
 msgstr "E-maile"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: ../src//Translation.vala:30
 msgid "Sync your emails"
 msgstr "Synchronizuj swoje e-maile"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
+#: ../src//Translation.vala:31
 msgid "Sync your photos"
 msgstr "Synchronizuj swoje zdjęcia"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Przeglądaj swoje kanały informacyjne"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
+#: ../src//Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Rozmawiaj z przyjaciółmi"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+#: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Dostęp do wszystkich serwisów Outlook i OneDrive na Twoim komputerze"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+#: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Dostęp do wszystkich serwisów Yahoo! na Twoim komputerze"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
+#: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Dostęp do wszystkich zawartości Facebooka na Twoim komputerze"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
+#: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Dostęp do wszystkich serwisów Google na Twoim komputerze"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+#: ../src//Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr ""
+
+#: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
 msgstr "Zawartość do synchronizowania:"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:88
 msgid "There is no service linked this account."
 msgstr "Nie ma usług połączonych z tym kontem."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
 msgstr "Dodaj…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
 msgstr "Usuń"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
+#: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Konta on-line"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
+#: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Synchronizuje zawartość komputera z kontami internetowymi."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
+#: ../src//OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Zamknij"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
+#: ../src//OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Przywróć"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:64
+#: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Połącz swoje konta on-line"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Zaloguj się, aby połączyć się z programami takimi jak Poczta, Kontakty i "
 "Kalendarz."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
-#, c-format
+#: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Konto '%s' zostało usunięte."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+#: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Dodaj nowe konto..."
+
+#: ../src//Authentification/GraphicalDialog.vala:59
+#: ../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr "Proszę wpisać swoje dane dostępowe"
+
+#: ../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Nazwa użytkownika:"
+
+#: ../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "jan_kowalski"
+
+#: ../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Hasło:"
+
+#: ../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Nowe hasło:"
+
+#: ../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Potwierdź hasło:"
+
+#: ../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Zapamiętaj hasło"
+
+#: ../src//Authentification/GraphicalDialog.vala:94
+#: ../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Zapomniałem hasła"
+
+#: ../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Odśwież Captcha"
+
+#: ../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Przepisz powyższy tekst"
+
+#: ../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Zapisz"
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Wczytywanie…"

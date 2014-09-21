@@ -7,178 +7,179 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-06 22:07-0500\n"
+"POT-Creation-Date: 2014-09-20 11:59+0200\n"
 "PO-Revision-Date: 2014-08-29 21:15+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-30 07:34+0000\n"
-"X-Generator: Launchpad (build 17176)\n"
+"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-msgid "Cancel"
-msgstr "Одустани"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Молим да унесете ваше акредитиве..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Корисничко име:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "милан_милановић"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Лозинка:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Нова лозинка:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Потврди лозинку:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Запамти лозинку"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Заборавили сте лозинку?"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Освежи слику"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Унесите горњи текст овде"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Сачувај"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Учитавам…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+#: ../src//Translation.vala:24
 msgid "Calendars"
 msgstr "Календари"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: ../src//Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Синхронизујте ваше календаре"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: ../src//Translation.vala:26
 msgid "Contacts"
 msgstr "Контакти"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: ../src//Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Синхронизујте ваше контакте"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: ../src//Translation.vala:28
 msgid "Sync your files"
 msgstr "Синхронизујте ваше датотеке"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+#: ../src//Translation.vala:29
 msgid "Emails"
 msgstr "Е-писма"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: ../src//Translation.vala:30
 msgid "Sync your emails"
 msgstr "Синхронизујте вашу епошту"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
+#: ../src//Translation.vala:31
 msgid "Sync your photos"
 msgstr "Синхронизујте ваше слике"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Пратите доток вести"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
+#: ../src//Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Ћаскајте са пријатељима"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+#: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Приступите Аутлук и ОнеДрајв сервисима рачунаром"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+#: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Приступите свим Yahoo! сервисима рачунаром"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
+#: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Приступите свим Фејсбук садржајима рачунаром"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
+#: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Приступите свим Гугл сервисима рачунаром"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+#: ../src//Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr ""
+
+#: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
 msgstr "Садржај за синхронизацију:"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:88
 msgid "There is no service linked this account."
 msgstr "Нема сервиса позаног са овим налогом."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
 msgstr "Додај…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
 msgstr "Уклони"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
+#: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Налози на мрежи"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
+#: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Синхронизујте рачунар са свим вашим мрежним налозима са веба."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
+#: ../src//OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Затвори"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
+#: ../src//OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Поврати"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:64
+#: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Одустани"
+
+#: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Повежите ваше мрежне налоге"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Упишите се да би се повезали са апликацијама као Пошта, Контакти и Каленар."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
-#, c-format
+#: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Налог '%s' Уклоњен."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+#: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Додај нови налог…"
+
+#: ../src//Authentification/GraphicalDialog.vala:59
+#: ../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr "Молим да унесете ваше акредитиве..."
+
+#: ../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Корисничко име:"
+
+#: ../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "милан_милановић"
+
+#: ../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: ../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Нова лозинка:"
+
+#: ../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Потврди лозинку:"
+
+#: ../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Запамти лозинку"
+
+#: ../src//Authentification/GraphicalDialog.vala:94
+#: ../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Заборавили сте лозинку?"
+
+#: ../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Освежи слику"
+
+#: ../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Унесите горњи текст овде"
+
+#: ../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Сачувај"
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Учитавам…"

@@ -7,180 +7,181 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-06 22:07-0500\n"
+"POT-Creation-Date: 2014-09-20 11:59+0200\n"
 "PO-Revision-Date: 2014-07-22 11:27+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 06:59+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 "Language: et\n"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:57
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:34
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:66
-msgid "Cancel"
-msgstr "Loobu"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:59
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Sisesta oma konto andmed..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Kasutajanimi:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "juhan_julm"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Parool:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Uus parool:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Kinnita parool:"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Parooli meelde jätmine"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:94
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Unustasin parooli"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Värskenda turvakoodi"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Sisesta ülevalolev tekst siia..."
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Salvesta"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:38
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Laadimine…"
-
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:24
+#: ../src//Translation.vala:24
 msgid "Calendars"
 msgstr "Kalendrid"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:25
+#: ../src//Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Kalendrite sünkroniseerimine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:26
+#: ../src//Translation.vala:26
 msgid "Contacts"
 msgstr "Kontaktid"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:27
+#: ../src//Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Kontaktide sünkroniseerimine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:28
+#: ../src//Translation.vala:28
 msgid "Sync your files"
 msgstr "Failide sünkroniseerimine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:29
+#: ../src//Translation.vala:29
 msgid "Emails"
 msgstr "E-kirjad"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:30
+#: ../src//Translation.vala:30
 msgid "Sync your emails"
 msgstr "E-mailide sünkroniseerimine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:31
+#: ../src//Translation.vala:31
 msgid "Sync your photos"
 msgstr "Fotode sünkroniseerimine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:32
+#: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Uudistevoo kuvamine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:33
+#: ../src//Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Vestlemine sõpradega"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:34
+#: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Outlook'i ja OneDrive'i teenused"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:35
+#: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Yahoo! teenused"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:36
+#: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Facebook'i vestlused, postitused ja teised teenused"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Translation.vala:37
+#: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Google teenused"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:45
+#: ../src//Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr ""
+
+#: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
 msgstr "Sünkroniseeritavad andmed:"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:88
 msgid "There is no service linked this account."
 msgstr "Selle kontoga pole ühendatud ühtegi veebiteenust."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:90
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:91
+#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
 msgstr "Lisa…"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:95
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//Views/SourceSelector.vala:96
+#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
 msgstr "Eemalda"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:49
+#: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Veebikontod"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:50
+#: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Arvuti sünkroniseerimine online kontodega"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:64
+#: ../src//OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Sulge"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:65
+#: ../src//OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Taasta"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:64
+#: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Loobu"
+
+#: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Veebikontode sidumine"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:146
+#: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "E-mailide, kontaktide, kalendrite ning enama jaoks tuleb kõigepealt sisse "
 "logida"
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:244
-#, c-format
+#: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Konto \"%s\" eemaldati."
 
-#: /home/noelco/switchboard-plug-onlineaccounts/po/../src//OnlineAccounts.vala:257
+#: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Uue konto lisamine…"
+
+#: ../src//Authentification/GraphicalDialog.vala:59
+#: ../src//Authentification/WebDialog.vala:115
+msgid "Please enter your credentials…"
+msgstr "Sisesta oma konto andmed..."
+
+#: ../src//Authentification/GraphicalDialog.vala:75
+msgid "Username:"
+msgstr "Kasutajanimi:"
+
+#: ../src//Authentification/GraphicalDialog.vala:77
+msgid "john_doe"
+msgstr "juhan_julm"
+
+#: ../src//Authentification/GraphicalDialog.vala:79
+msgid "Password:"
+msgstr "Parool:"
+
+#: ../src//Authentification/GraphicalDialog.vala:83
+msgid "New Password:"
+msgstr "Uus parool:"
+
+#: ../src//Authentification/GraphicalDialog.vala:87
+msgid "Confirm Password:"
+msgstr "Kinnita parool:"
+
+#: ../src//Authentification/GraphicalDialog.vala:92
+msgid "Remember password"
+msgstr "Parooli meelde jätmine"
+
+#: ../src//Authentification/GraphicalDialog.vala:94
+#: ../src//Authentification/GraphicalDialog.vala:160
+msgid "Forgot password"
+msgstr "Unustasin parooli"
+
+#: ../src//Authentification/GraphicalDialog.vala:99
+msgid "Refresh Captcha"
+msgstr "Värskenda turvakoodi"
+
+#: ../src//Authentification/GraphicalDialog.vala:100
+msgid "Enter above text here"
+msgstr "Sisesta ülevalolev tekst siia..."
+
+#: ../src//Authentification/GraphicalDialog.vala:105
+msgid "Save"
+msgstr "Salvesta"
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Laadimine…"
