@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-06-09 05:22+0000\n"
+"PO-Revision-Date: 2014-09-29 08:55+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
+"X-Launchpad-Export-Date: 2014-09-30 07:01+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src//Translation.vala:24
@@ -75,7 +75,7 @@ msgstr "在您的电脑上开启所有 Google 服务"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "包括联系人、邮件和日历"
 
 #: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
