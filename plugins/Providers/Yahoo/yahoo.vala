@@ -22,7 +22,6 @@
 public class OnlineAccounts.Plugins.OAuth.Yahoo.ProviderPlugin : OnlineAccounts.ProviderPlugin {
     
     public ProviderPlugin () {
-        warning ("HERE");
         Object (plugin_name: "generic-oauth",
                 provider_name: "yahoo");
     }

@@ -60,6 +60,10 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         int i = 1;
         var services = plugin.account.list_services ();
         foreach (var service in services) {
+            var applications = new Ag.Manager ().list_applications_by_service (service);
+            if (applications.length () == 0)
+                continue;
+
             string i18n_domain = service.get_i18n_domain ();
             string tooltip = GLib.dgettext (i18n_domain, service.get_description ());
 
