@@ -25,8 +25,10 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
     OnlineAccounts.Account plugin;
 
     public AccountView (OnlineAccounts.Account plugin) {
+        orientation = Gtk.Orientation.VERTICAL;
         this.plugin = plugin;
         main_grid = new Gtk.Grid ();
+        main_grid.orientation = Gtk.Orientation.VERTICAL;
         main_grid.margin = 12;
         main_grid.column_spacing = 6;
         main_grid.row_spacing = 6;
@@ -89,7 +91,23 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         }
 
         if (i == 1) {
-            apps_label.set_markup ("<b>%s</b>".printf (Markup.escape_text (_("There is no service linked this account."))));
+            var no_service_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+            var provider_name = plugin.account.manager.get_provider (plugin.account.get_provider_name ()).get_display_name ();
+            var no_service_label = new Gtk.Label (_("There are no apps currently installed that link to your %s account").printf (provider_name));
+            no_service_label.selectable = true;
+            no_service_label.wrap = true;
+            no_service_label.hexpand = true;
+            no_service_label.justify = Gtk.Justification.CENTER;
+            no_service_label.get_style_context ().add_class (Granite.StyleClass.H2_TEXT);
+            var no_service_image = new Gtk.Image.from_icon_name ("applications-internet-symbolic", Gtk.IconSize.DIALOG);
+            var no_service_grid = new Gtk.Grid ();
+            no_service_grid.orientation = Gtk.Orientation.VERTICAL;
+            no_service_grid.row_spacing = 6;
+            no_service_grid.add (no_service_image);
+            no_service_grid.add (no_service_label);
+            no_service_box.set_center_widget (no_service_grid);
+            no_service_box.expand = true;
+            this.add (no_service_box);
         } else {
             var fake_grid_l = new Gtk.Grid ();
             fake_grid_l.hexpand = true;
@@ -97,15 +115,15 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             fake_grid_r.hexpand = true;
             apps_grid.attach (fake_grid_l, 0, 0, 1, 1);
             apps_grid.attach (fake_grid_r, 4, 0, 1, 1);
+
+            scrolled_window.add_with_viewport (apps_grid);
+            main_grid.add (user_label);
+            this.add (main_grid);
+            this.add (scrolled_window);
+            apps_grid.attach (apps_label, 1, 0, 2, 1);
         }
 
-        apps_grid.attach (apps_label, 1, 0, 2, 1);
         plugin.account.select_service (null);
-
-        scrolled_window.add_with_viewport (apps_grid);
-        main_grid.attach (user_label, 0, 0, 1, 1);
-        this.attach (main_grid, 0, 0, 1, 1);
-        this.attach (scrolled_window, 0, 1, 1, 1);
     }
 
     private void on_service_switch_activated (bool enabled, Ag.Service service) {
