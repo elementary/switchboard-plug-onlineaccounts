@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-09-25 16:06+0000\n"
+"PO-Revision-Date: 2014-10-12 06:01+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-26 06:48+0000\n"
+"X-Launchpad-Export-Date: 2014-10-12 06:52+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 "Language: nb\n"
 
@@ -56,7 +56,7 @@ msgstr "Sjekk din nyhetsstrøm"
 
 #: ../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr "Sludre med venner"
+msgstr "Nettprat med dine venner"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -123,7 +123,8 @@ msgstr "Koble til dine nettkontoer"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Logg inn for å koble til app-er som epost, kontakter og kalender."
+msgstr ""
+"Logg inn for å koble til applikasjoner som e-post, kontakter og kalender."
 
 #: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
