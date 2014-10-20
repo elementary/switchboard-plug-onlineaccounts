@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-09-22 13:44+0000\n"
+"PO-Revision-Date: 2014-10-20 06:47+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-23 07:10+0000\n"
+"X-Launchpad-Export-Date: 2014-10-20 07:02+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src//Translation.vala:24
@@ -59,19 +59,19 @@ msgstr "Keskustele kavereidesi kanssa"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Kytkeydy Outlook- ja OneDrive-palveluihin tietokoneellasi"
+msgstr "Yhdistä Outlook- ja OneDrive-palveluihin"
 
 #: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr "Kytkeydy kaikkiin Yahoo!-palveluihin tietokoneeltasi"
+msgstr "Yhdistä kaikkiin Yahoo!-palveluihin"
 
 #: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr "Kytkeydy Facebook-sisältöösi tietokoneeltasi"
+msgstr "Yhdistä Facebook-sisältöösi"
 
 #: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr "Kytkeydy kaikkiin Googlen palveluihin tietokoneellasi"
+msgstr "Yhdistä kaikkiin Googlen palveluihin"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
@@ -123,8 +123,8 @@ msgstr "Yhdistä verkkotileihisi"
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Kirjaudu sisään yhdistääksesi sähköpostin, yhteystiedot, kalenterin ja muita "
-"sovelluksia."
+"Kirjaudu sisään muodostaaksesi yhteyden sähköpostiin,\r\n"
+"yhteystietoihin, kalenteriin ja muihin sovelluksiin."
 
 #: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
