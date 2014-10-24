@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-07-22 11:27+0000\n"
+"PO-Revision-Date: 2014-10-23 14:14+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-10-24 06:35+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 "Language: et\n"
 
 #: ../src//Translation.vala:24
@@ -44,7 +44,7 @@ msgstr "E-kirjad"
 
 #: ../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr "E-mailide sünkroniseerimine"
+msgstr "E-kirjade sünkroniseerimine"
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
@@ -76,7 +76,7 @@ msgstr "Google teenused"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Kontaktid, e-kirjad, kalender"
 
 #: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
@@ -124,7 +124,7 @@ msgstr "Veebikontode sidumine"
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"E-mailide, kontaktide, kalendrite ning enama jaoks tuleb kõigepealt sisse "
+"E-kirjade, kontaktide, kalendrite ning enama jaoks tuleb kõigepealt sisse "
 "logida"
 
 #: ../src//OnlineAccounts.vala:243
