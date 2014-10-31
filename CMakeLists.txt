@@ -70,7 +70,6 @@ set(DEPS_PACKAGES
     gSignon
     gSignond
     json-glib-1.0
-    libsecret-1
     webkit2-3.0
     libsoup-2.4
     javascriptcore-3.0
@@ -90,7 +89,6 @@ set(DEPS_PKG
     libgsignon-glib
     gsignond
     json-glib-1.0
-    libsecret-1
     webkit2gtk-3.0
     libsoup-2.4
     javascriptcoregtk-3.0
@@ -123,5 +121,4 @@ set(GLOBAL_VALAC_OPTIONS
 )
 
 add_subdirectory (src)
-add_subdirectory (extension)
 add_subdirectory (plugins)
