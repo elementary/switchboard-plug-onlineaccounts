@@ -14,7 +14,6 @@ Build-Depends: cmake (>= 2.8),
                libgsignond-common-dev,
                libjson-glib-dev,
                librest-dev (>= 0.7),
-               libsecret-1-dev,
                libwebkit2gtk-3.0-dev,
                libjavascriptcoregtk-3.0-dev,
                valac (>= 0.22) | valac-0.22
@@ -37,16 +36,6 @@ Recommends: pantheon-online-accounts-plugin-google,
             pantheon-online-accounts-plugin-fastmail
 Description: Online Accounts plug for Switchboard
  This plug allow you to enable online accounts sync.
-
-Package: gsignond-extension-pantheon
-Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
-Enhances: gsignond
-Pre-Depends: dpkg (>= 1.15.6)
-Description:  gSSO extension for the pantheon desktop
- gSSO is a single sign-on framework, providing secure storage and single sign-on
-  service.
 
 Package: libpantheon-online-accounts-dev
 Architecture: any
