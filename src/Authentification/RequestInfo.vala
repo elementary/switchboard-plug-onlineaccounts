@@ -19,12 +19,11 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
- 
+
 public class OnlineAccounts.RequestInfo : Object {
-    
     public HashTable<string, Variant> parameters;
     public GLib.MainLoop main_loop;
-    
+
     public RequestInfo (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
         this.parameters = parameter;
         this.main_loop = main_loop;

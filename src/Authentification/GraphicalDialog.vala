@@ -21,9 +21,7 @@
  */
 
 public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
-
     public signal void refresh_captcha_needed ();
-
     Gtk.Entry username_entry;
     Gtk.Entry password_entry;
     Gtk.Entry new_password_entry;
@@ -50,7 +48,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
     public GraphicalDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
-        
+
         column_spacing = 12;
         row_spacing = 6;
 
@@ -64,14 +62,14 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             finished ();
             this.destroy ();
         });
-        
+
         var fake_grid_left = new Gtk.Grid ();
         fake_grid_left.hexpand = true;
         var fake_grid_right = new Gtk.Grid ();
         fake_grid_right.hexpand = true;
         attach (fake_grid_left, 0, 1, 1, 1);
         attach (fake_grid_right, 3, 1, 1, 1);
-        
+
         var username_label = new Gtk.Label (_("Username:"));
         username_entry = new Gtk.Entry ();
         username_entry.placeholder_text = _("john_doe");
@@ -220,6 +218,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
                 is_captcha_valid = (captcha_entry.text.char_count () > 0);
                 reset_ok ();
             });
+
             captcha_entry.icon_release.connect ((pos, event) => {
                 if (pos == Gtk.EntryIconPosition.SECONDARY) {
                     refresh_captcha_needed ();
@@ -230,7 +229,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         return true;
     }
-    
+
     private bool validate_params (HashTable<string, Variant> params) {
         /* determine query type and its validate its value */
         query_username = params.get (OnlineAccounts.Key.QUERY_USERNAME).get_boolean ();
@@ -280,21 +279,16 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         }
 
         debug ("setting captcha : %s", filename);
-     
         captcha_image.set_from_file (filename);
-
         var used_filename = captcha_image.file;
-
         debug ("Used file : %s", used_filename);
         var is_valid = GLib.strcmp (filename, used_filename) == 0;
-
         if (is_valid == false) {
             error_code = Signond.SignonUIError.BAD_CAPTCHA;
             return false;
         }
 
         query_captcha = true;
-
         return true;
     }
 

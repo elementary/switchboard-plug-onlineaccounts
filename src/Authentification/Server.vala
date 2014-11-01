@@ -26,12 +26,12 @@ public class OnlineAccounts.UIServer : Object {
     public UIServer (string bus_address) {
         this.bus_address = bus_address;
     }
-    
+
     [DBus (visible = false)]
     public signal void handle_get_bus_address ();
 
     private string bus_address;
-    
+
     [DBus (name = "getBusAddress")]
     public string get_bus_address () {
         handle_get_bus_address ();
@@ -41,23 +41,23 @@ public class OnlineAccounts.UIServer : Object {
 
 public class OnlineAccounts.Server : GLib.Object {
     const string BUS_NAME = "com.google.code.AccountsSSO.gSingleSignOn.UI";
-    
+
     uint bus_owner_id = 0;
     GLib.DBusServer bus_server;
     string socket_file_path;
     int socket_file_id = 0;
-    
+
     public Server () {
-        
         bus_owner_id = GLib.Bus.own_name (GLib.BusType.SESSION, BUS_NAME,
              GLib.BusNameOwnerFlags.ALLOW_REPLACEMENT | GLib.BusNameOwnerFlags.REPLACE,
              on_bus_acquired, on_name_acquired, on_name_lost);
     }
+
     ~Server () {
         bus_server.stop ();
         GLib.Bus.unown_name (bus_owner_id);
     }
-    
+
     void on_name_acquired (GLib.DBusConnection connection, string name) {
         debug ("D-Bus name acquired");
     }
@@ -67,7 +67,6 @@ public class OnlineAccounts.Server : GLib.Object {
     }
 
     void on_bus_acquired (GLib.DBusConnection connection, string name) {
-
         debug ("D-Bus bus acquired");
 
         var base_path = "%s/gsignond/".printf (GLib.Environment.get_user_runtime_dir ());
@@ -78,10 +77,9 @@ public class OnlineAccounts.Server : GLib.Object {
         if (errno == -1) {
             warning ("Could not create '%s', error: %s", base_path, GLib.strerror (errno));
         }
+
         GLib.FileUtils.unlink (socket_file_path);
-
         var address = "unix:path=%s".printf (socket_file_path);
-
         string guid = GLib.DBus.generate_guid ();
         try {
             bus_server = new GLib.DBusServer.sync (address, GLib.DBusServerFlags.RUN_IN_THREAD, guid);
@@ -90,24 +88,23 @@ public class OnlineAccounts.Server : GLib.Object {
             socket_file_path = null;
             return ;
         }
-        GLib.FileUtils.chmod (socket_file_path, 0600);
 
+        GLib.FileUtils.chmod (socket_file_path, 0600);
         bus_server.new_connection.connect (on_client_connection);
 
         /* expose interface */
-
         try {
             connection.register_object ("/", new UIServer (address));
         } catch (IOError e) {
             warning ("Failed to export interface: %s", e.message);
             return;
         }
+
         bus_server.start ();
         debug ("UI Dialog server started at : %s", bus_server.get_client_address ());
     }
-    
-    bool on_client_connection (DBusConnection connection) {
 
+    bool on_client_connection (DBusConnection connection) {
         try {
             var dialog_service = new DialogService ();
             connection.register_object ("/Dialog", dialog_service);
