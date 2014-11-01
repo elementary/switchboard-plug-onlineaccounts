@@ -19,31 +19,30 @@
  *
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
- 
+
 public class OnlineAccounts.RequestQueue : Object {
-    
     private static RequestQueue request_queue;
     public static RequestQueue get_default () {
         if (request_queue == null)
             request_queue = new RequestQueue ();
         return request_queue;
     }
-    
+
     Gee.LinkedList<string> widgets_to_show;
     Gee.LinkedList<Dialog> dialogs;
-    
+
     private bool is_idle = true;
-    
+
     private RequestQueue () {
         widgets_to_show = new Gee.LinkedList<string> ();
         dialogs = new Gee.LinkedList<Dialog> ();
     }
-    
+
     public Dialog push_dialog (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
         var request_info = new RequestInfo (parameter, main_loop);
         return process_next (request_info);
     }
-    
+
     public async void show_next_process () {
         if (is_idle == true && widgets_to_show.is_empty == false) {
             var name = widgets_to_show.peek_head ();
@@ -61,8 +60,8 @@ public class OnlineAccounts.RequestQueue : Object {
             dialog = new GraphicalDialog (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);
         }
-        dialogs.add (dialog);
 
+        dialogs.add (dialog);
         if (is_idle == true) {
             is_idle = false;
             plug.switch_to_widget (dialog.request_id);
@@ -78,12 +77,13 @@ public class OnlineAccounts.RequestQueue : Object {
 
         return dialog;
     }
-    
+
     public Dialog? get_dialog_from_request_id (string request_id) {
         foreach (var dialog in dialogs) {
             if (GLib.strcmp (dialog.request_id, request_id) == 0)
                 return dialog;
         }
+
         return null;
     }
 }

@@ -23,10 +23,10 @@
 [DBus (name = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog")]
 public class OnlineAccounts.DialogService : Object {
     const string DIALOG_BUS_NAME = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog";
-    
+
     public DialogService () {
     }
-    
+
     [DBus (name = "queryDialog")]
     public async HashTable<string, Variant> query_dialog(HashTable<string, Variant> parameter) {
         var main_loop = new GLib.MainLoop ();
@@ -41,6 +41,7 @@ public class OnlineAccounts.DialogService : Object {
             graphicaldialog.refresh_captcha_needed.connect (() => {refresh (dialog.request_id);});
             reply = graphicaldialog.get_reply ();
         }
+
         dialog.destroy ();
         return reply;
     }
@@ -56,6 +57,7 @@ public class OnlineAccounts.DialogService : Object {
         var dialog = RequestQueue.get_default ().get_dialog_from_request_id (value.get_string ());
         if (dialog == null)
             return;
+
         if (dialog is WebDialog) {
             WebDialog webdialog = dialog as WebDialog;
             webdialog.set_parameters (parameter);
@@ -63,7 +65,6 @@ public class OnlineAccounts.DialogService : Object {
             GraphicalDialog graphicaldialog = dialog as GraphicalDialog;
             graphicaldialog.set_parameters (parameter);
         }
-        return;
     }
     
     [DBus (name = "cancelUiRequest")]
@@ -73,7 +74,6 @@ public class OnlineAccounts.DialogService : Object {
             dialog.error_code = Signond.SignonUIError.CANCELED;
             dialog.finished ();
         }
-        return;
     }
     
     [DBus (name = "refresh")]

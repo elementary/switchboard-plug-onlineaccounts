@@ -21,7 +21,6 @@
  */
 
 namespace OnlineAccounts.Key {
-
     const string QUERY_PASSWORD = "QueryPassword";  // bool
     const string QUERY_USERNAME = "QueryUserName";  // bool
     const string CONFIRM = "Confirm";               // bool
@@ -42,5 +41,4 @@ namespace OnlineAccounts.Key {
     const string QUERY_ERROR_CODE = "QueryErrorCode";   // int32
     const string URL_RESPONSE = "UrlResponse";          // string:url
     const string CAPTCHA_RESPONSE = "CaptchaResponse";  // string
-
 }
