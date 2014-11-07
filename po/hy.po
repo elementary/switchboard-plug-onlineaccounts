@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-11-04 07:42+0000\n"
+"PO-Revision-Date: 2014-11-06 07:39+0000\n"
 "Last-Translator: Vahan Harutyunyan <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-11-05 07:02+0000\n"
-"X-Generator: Launchpad (build 17223)\n"
+"X-Launchpad-Export-Date: 2014-11-07 06:50+0000\n"
+"X-Generator: Launchpad (build 17231)\n"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -55,10 +55,11 @@ msgstr "Զրուցել ընկերների հետ"
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr ""
+"Մուտք Ձեր համակարգչում առկա բոլոր Outlook և OneDrive ծառայություններին"
 
 #: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "Մուտք Ձեր համակարգչում առկա բոլոր Yahoo! ծառայություններին"
 
 #: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
@@ -66,7 +67,7 @@ msgstr ""
 
 #: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Մուտք Ձեր համակարգչում առկա բոլոր  Google ծառայություններին"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
