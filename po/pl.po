@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-08-04 11:11+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"PO-Revision-Date: 2014-11-08 12:53+0000\n"
+"Last-Translator: Lu <zarok@poczta.onet.pl>\n"
 "Language-Team: polski <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-11-09 06:51+0000\n"
+"X-Generator: Launchpad (build 17231)\n"
 "Language: \n"
 
 #: ../src//Translation.vala:24
@@ -76,7 +76,7 @@ msgstr "Dostęp do wszystkich serwisów Google na Twoim komputerze"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Zawiera kontakty, wiadomości oraz wydarzenia"
 
 #: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
