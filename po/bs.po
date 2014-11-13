@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-11-11 11:10+0000\n"
+"PO-Revision-Date: 2014-11-12 15:57+0000\n"
 "Last-Translator: Coa_brate <aleksandar.todorovic@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-11-12 06:44+0000\n"
+"X-Launchpad-Export-Date: 2014-11-13 06:33+0000\n"
 "X-Generator: Launchpad (build 17241)\n"
 
 #: ../src//Translation.vala:24
@@ -18,7 +18,7 @@ msgstr "Kalendari"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr "Sinhronizujte vaše kalendare"
+msgstr "Sinhorizuj kalendare"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
