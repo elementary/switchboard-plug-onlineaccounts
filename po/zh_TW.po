@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-06-23 01:16+0000\n"
+"PO-Revision-Date: 2014-11-13 13:35+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-11-14 06:32+0000\n"
+"X-Generator: Launchpad (build 17241)\n"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -75,7 +75,7 @@ msgstr "在您的電腦上存取所有的 Google 服務"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "包含聯絡人、郵件與行事曆"
 
 #: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
