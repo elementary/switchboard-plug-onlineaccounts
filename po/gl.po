@@ -8,83 +8,83 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-04-28 19:41+0000\n"
+"PO-Revision-Date: 2014-12-11 07:24+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-11 08:08+0000\n"
+"X-Generator: Launchpad (build 17283)\n"
 "Language: gl\n"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Calendarios"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Sincroniza os seus calendarios"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Contactos"
 
 #: ../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Sincroniza os seus contactos"
 
 #: ../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Sincroniza os seus ficheiros"
 
 #: ../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "Correos"
 
 #: ../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "Sincroniza os seus correos"
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Sincroniza as súas fotos"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Vexa asfontes de novas"
 
 #: ../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "Converse cos seus amigos"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "Aceda a todos os servizos do Outlook e OneDrive na súa computadora"
 
 #: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "Aceda a todos os servizos do Yahoo! na súa computadora"
 
 #: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "Aceda a todos os contidos do Facebook na súa computadora"
 
 #: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Aceda a todos os servizos do Google na súa computadora"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Inclúe contactos, correos e calendário"
 
 #: ../src//Views/AccountView.vala:45
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "Contido para sincronizar:"
 
 #: ../src//Views/AccountView.vala:88
 msgid "There is no service linked this account."
-msgstr ""
+msgstr "Non existen servizos relacionados con esta conta."
 
 #: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
@@ -132,7 +132,7 @@ msgstr "A conta «%s» foi retirada."
 
 #: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
-msgstr ""
+msgstr "Engadir unha conta nova..."
 
 #: ../src//Authentification/GraphicalDialog.vala:59
 #: ../src//Authentification/WebDialog.vala:115
