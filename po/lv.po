@@ -3,46 +3,46 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-09-20 14:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-12-22 10:40+0000\n"
+"Last-Translator: ERX <eriksh@inbox.lv>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-23 07:16+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Kalendāri"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Kalendāru sinhronizācija"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Kontakti"
 
 #: ../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Kontaktu sinhronizācija"
 
 #: ../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Failu sinhronizācija"
 
 #: ../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "E-pasts"
 
 #: ../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "E-past sinhronizācija"
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Fotogrāfiju sinhronizācija"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: ../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "Tērzējiet ar saviem draugiem"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
