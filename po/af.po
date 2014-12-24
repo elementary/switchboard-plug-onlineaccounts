@@ -7,15 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-20 11:59+0200\n"
+"POT-Creation-Date: 2014-12-23 15:19-0600\n"
 "PO-Revision-Date: 2014-07-13 16:12+0000\n"
 "Last-Translator: Jacques Strydom <jacquesafro@gmail.com>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-24 06:51+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
+
+#: ../src//OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Aanlyn Rekeninge"
+
+#: ../src//OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr ""
+"Sinchroniseer jou rekenaar met al jou aanlyn rekeninge rondom die web."
+
+#: ../src//OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Sluit"
+
+#: ../src//OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Restoureer"
+
+#: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
+#: ../src//Authentification/GraphicalDialog.vala:55
+msgid "Cancel"
+msgstr "Kanselleer"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Verbind jou Aanlyn Rekeninge"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "Teken in om te verbind met programme soos pos, kontakte en kalender."
+
+#: ../src//OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "Rekening '%s' Verwyder."
+
+#: ../src//OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Voeg 'n nuwe rekening by..."
+
+#: ../src//Views/AccountView.vala:47
+msgid "Content to synchronise:"
+msgstr "Inhoud om te sinchroniseer:"
+
+#: ../src//Views/AccountView.vala:96
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+
+#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr "Byvoeg"
+
+#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "Verwyder"
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:122
+msgid "Loading…"
+msgstr "Laai tans…"
+
+#: ../src//Authentification/WebDialog.vala:115
+#: ../src//Authentification/GraphicalDialog.vala:57
+msgid "Please enter your credentials…"
+msgstr "Tik asseblief jou aansluit besonderhede in..."
+
+#: ../src//Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Gebruikernaam:"
+
+#: ../src//Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "john_doe"
+
+#: ../src//Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Wagwoord:"
+
+#: ../src//Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Nuwe wagwoord:"
+
+#: ../src//Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Bevestig wagwoord:"
+
+#: ../src//Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Onthou wagwoord"
+
+#: ../src//Authentification/GraphicalDialog.vala:92
+#: ../src//Authentification/GraphicalDialog.vala:158
+msgid "Forgot password"
+msgstr "Vergeet wagwoord"
+
+#: ../src//Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Verfris  Captcha"
+
+#: ../src//Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Tik bogenoemde teks hier"
+
+#: ../src//Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Stoor"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -76,110 +182,3 @@ msgstr "Toegang tot alle Google-dienste op jou rekenaar"
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr ""
-
-#: ../src//Views/AccountView.vala:45
-msgid "Content to synchronise:"
-msgstr "Inhoud om te sinchroniseer:"
-
-#: ../src//Views/AccountView.vala:88
-msgid "There is no service linked this account."
-msgstr "Daar is geen diens aan hierdie rekening gekoppel."
-
-#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
-msgid "Add…"
-msgstr "Byvoeg"
-
-#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
-msgid "Remove"
-msgstr "Verwyder"
-
-#: ../src//OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Aanlyn Rekeninge"
-
-#: ../src//OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr ""
-"Sinchroniseer jou rekenaar met al jou aanlyn rekeninge rondom die web."
-
-#: ../src//OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Sluit"
-
-#: ../src//OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Restoureer"
-
-#: ../src//OnlineAccounts.vala:64
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Kanselleer"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Verbind jou Aanlyn Rekeninge"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Teken in om te verbind met programme soos pos, kontakte en kalender."
-
-#: ../src//OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Rekening '%s' Verwyder."
-
-#: ../src//OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Voeg 'n nuwe rekening by..."
-
-#: ../src//Authentification/GraphicalDialog.vala:59
-#: ../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr "Tik asseblief jou aansluit besonderhede in..."
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr "Gebruikernaam:"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr "john_doe"
-
-#: ../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr "Wagwoord:"
-
-#: ../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr "Nuwe wagwoord:"
-
-#: ../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr "Bevestig wagwoord:"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr "Onthou wagwoord"
-
-#: ../src//Authentification/GraphicalDialog.vala:94
-#: ../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr "Vergeet wagwoord"
-
-#: ../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr "Verfris  Captcha"
-
-#: ../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr "Tik bogenoemde teks hier"
-
-#: ../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr "Stoor"
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Laai tans…"

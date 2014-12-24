@@ -7,179 +7,179 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-20 11:59+0200\n"
-"PO-Revision-Date: 2014-01-19 05:19+0000\n"
-"Last-Translator: Marek Suchánek <suchm@seznam.cz>\n"
+"POT-Creation-Date: 2014-12-23 15:19-0600\n"
+"PO-Revision-Date: 2014-12-23 17:32+0000\n"
+"Last-Translator: Marek Doležel <marekdolezel@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-21 06:22+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-12-24 06:51+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 "Language: cs\n"
-
-#: ../src//Translation.vala:24
-msgid "Calendars"
-msgstr ""
-
-#: ../src//Translation.vala:25
-msgid "Sync your calendars"
-msgstr ""
-
-#: ../src//Translation.vala:26
-msgid "Contacts"
-msgstr ""
-
-#: ../src//Translation.vala:27
-msgid "Sync your contacts"
-msgstr ""
-
-#: ../src//Translation.vala:28
-msgid "Sync your files"
-msgstr ""
-
-#: ../src//Translation.vala:29
-msgid "Emails"
-msgstr ""
-
-#: ../src//Translation.vala:30
-msgid "Sync your emails"
-msgstr ""
-
-#: ../src//Translation.vala:31
-msgid "Sync your photos"
-msgstr ""
-
-#: ../src//Translation.vala:32
-msgid "Watch your newsfeed"
-msgstr ""
-
-#: ../src//Translation.vala:33
-msgid "Chat with your friends"
-msgstr ""
-
-#: ../src//Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
-
-#: ../src//Views/AccountView.vala:45
-msgid "Content to synchronise:"
-msgstr ""
-
-#: ../src//Views/AccountView.vala:88
-msgid "There is no service linked this account."
-msgstr ""
-
-#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
-msgid "Add…"
-msgstr ""
-
-#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
-msgid "Remove"
-msgstr "Odebrat"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr ""
+msgstr "On-line účty"
 
 #: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr ""
+msgstr "Sychronizujte váš počítač se všemi online účty na webu."
 
 #: ../src//OnlineAccounts.vala:62
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: ../src//OnlineAccounts.vala:63
 msgid "Restore"
-msgstr ""
+msgstr "Obnovit"
 
-#: ../src//OnlineAccounts.vala:64
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:34
+#: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
+#: ../src//Authentification/GraphicalDialog.vala:55
 msgid "Cancel"
 msgstr "Zrušit"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Připojit vaše online účty"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"Přihlašte se pro připojení s aplikacemi jako Mail, Kontakty a Kalendář."
 
 #: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "Účet '%s' byl odebrán."
 
 #: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
+msgstr "Přidat nový účet..."
+
+#: ../src//Views/AccountView.vala:47
+msgid "Content to synchronise:"
+msgstr "Obsah k synchronizaci:"
+
+#: ../src//Views/AccountView.vala:96
+msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
 
-#: ../src//Authentification/GraphicalDialog.vala:59
-#: ../src//Authentification/WebDialog.vala:115
-msgid "Please enter your credentials…"
-msgstr ""
+#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
+msgid "Add…"
+msgstr "Přidat…"
 
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "Username:"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "john_doe"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:79
-msgid "Password:"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:83
-msgid "New Password:"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:87
-msgid "Confirm Password:"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Remember password"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:94
-#: ../src//Authentification/GraphicalDialog.vala:160
-msgid "Forgot password"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:99
-msgid "Refresh Captcha"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:100
-msgid "Enter above text here"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:105
-msgid "Save"
-msgstr ""
+#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
+msgid "Remove"
+msgstr "Odebrat"
 
 #: ../src//Authentification/WebDialog.vala:38
 #: ../src//Authentification/WebDialog.vala:122
 msgid "Loading…"
-msgstr ""
+msgstr "Načítání…"
+
+#: ../src//Authentification/WebDialog.vala:115
+#: ../src//Authentification/GraphicalDialog.vala:57
+msgid "Please enter your credentials…"
+msgstr "Zadejte prosím vaše přihlašovací údaje..."
+
+#: ../src//Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Uživatelské jméno:"
+
+#: ../src//Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "john_doe"
+
+#: ../src//Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Heslo:"
+
+#: ../src//Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Nové heslo:"
+
+#: ../src//Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Potvrďte heslo:"
+
+#: ../src//Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Zapamatovat si heslo"
+
+#: ../src//Authentification/GraphicalDialog.vala:92
+#: ../src//Authentification/GraphicalDialog.vala:158
+msgid "Forgot password"
+msgstr "Zapomněl jsem heslo"
+
+#: ../src//Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Obnovit Captcha"
+
+#: ../src//Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Zadejte zde text výše"
+
+#: ../src//Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Uložit"
+
+#: ../src//Translation.vala:24
+msgid "Calendars"
+msgstr "Kalendáře"
+
+#: ../src//Translation.vala:25
+msgid "Sync your calendars"
+msgstr "Synchronizovat kalendáře"
+
+#: ../src//Translation.vala:26
+msgid "Contacts"
+msgstr "Kontakty"
+
+#: ../src//Translation.vala:27
+msgid "Sync your contacts"
+msgstr "Synchronizovat kontakty"
+
+#: ../src//Translation.vala:28
+msgid "Sync your files"
+msgstr "Synchronizovat soubory"
+
+#: ../src//Translation.vala:29
+msgid "Emails"
+msgstr "Emaily"
+
+#: ../src//Translation.vala:30
+msgid "Sync your emails"
+msgstr "Synchronizovat emaily"
+
+#: ../src//Translation.vala:31
+msgid "Sync your photos"
+msgstr "Synchronizovat fotografie"
+
+#: ../src//Translation.vala:32
+msgid "Watch your newsfeed"
+msgstr "Sledovat newsfeed"
+
+#: ../src//Translation.vala:33
+msgid "Chat with your friends"
+msgstr "Bavte se se svými přáteli"
+
+#: ../src//Translation.vala:34
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "Přistupujte ke všem službám Outlook a OneDrive z vašeho počítače"
+
+#: ../src//Translation.vala:35
+msgid "Access all Yahoo! services on your computer"
+msgstr "Přistupujte ke všem službám Yahoo! z vašeho počítače"
+
+#: ../src//Translation.vala:36
+msgid "Access all Facebook contents on your computer"
+msgstr "Přistupujte k jakémukoliv obsahu z Facebooku z vašeho počítače"
+
+#: ../src//Translation.vala:37
+msgid "Access all Google services on your computer"
+msgstr "Přistupujte ke všem službám Google z vašeho počítače"
+
+#: ../src//Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr "Zahrnuje Kontakty, Maily a Kalendář"
