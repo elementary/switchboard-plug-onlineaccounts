@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2014-11-12 22:01+0000\n"
+"PO-Revision-Date: 2014-12-25 10:27+0000\n"
 "Last-Translator: Ivan Vrljić <vrlja92@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-24 06:52+0000\n"
+"X-Launchpad-Export-Date: 2014-12-26 06:22+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
 
 #: ../src//OnlineAccounts.vala:47
@@ -36,7 +36,7 @@ msgstr "Otkaži"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Poveži svoje online račune"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
@@ -58,7 +58,7 @@ msgstr "Sadržaj za sinkronizaciju:"
 
 #: ../src//Views/AccountView.vala:96
 msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
+msgstr "Nema instaliranih aplikacija koje se povezuju sa Vašim %s računom"
 
 #: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
@@ -76,7 +76,7 @@ msgstr "Učitavanje..."
 #: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Unesite podatke za potvrdu..."
 
 #: ../src//Authentification/GraphicalDialog.vala:73
 msgid "Username:"
@@ -84,7 +84,7 @@ msgstr "Korisničko Ime"
 
 #: ../src//Authentification/GraphicalDialog.vala:75
 msgid "john_doe"
-msgstr ""
+msgstr "john_doe"
 
 #: ../src//Authentification/GraphicalDialog.vala:77
 msgid "Password:"
@@ -153,7 +153,7 @@ msgstr "Sinkronizoraj slike"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Pogledaj svoje novosti"
 
 #: ../src//Translation.vala:33
 msgid "Chat with your friends"
