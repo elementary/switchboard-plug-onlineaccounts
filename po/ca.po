@@ -8,32 +8,32 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2014-01-19 05:17+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"PO-Revision-Date: 2015-01-17 15:30+0000\n"
+"Last-Translator: devaleitzer <devaleitzer@aim.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-24 06:51+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-01-18 05:01+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
 "Language: ca\n"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr ""
+msgstr "Comptes en línia"
 
 #: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr ""
+msgstr "Sincronitzeu el vostre ordinador amb tots els comptes online del web"
 
 #: ../src//OnlineAccounts.vala:62
 msgid "Close"
-msgstr ""
+msgstr "Tanca"
 
 #: ../src//OnlineAccounts.vala:63
 msgid "Restore"
-msgstr ""
+msgstr "Restaura"
 
 #: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
 #: ../src//Authentification/GraphicalDialog.vala:55
@@ -50,11 +50,11 @@ msgstr ""
 
 #: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "S’ha suprimit el compte «%s»."
 
 #: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
-msgstr ""
+msgstr "Afegeix un compte…"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
-msgstr ""
+msgstr "Afegeix…"
 
 #: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
@@ -75,16 +75,16 @@ msgstr "Suprimeix"
 #: ../src//Authentification/WebDialog.vala:38
 #: ../src//Authentification/WebDialog.vala:122
 msgid "Loading…"
-msgstr ""
+msgstr "S'està carregant…"
 
 #: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Introduïu les vostres dades d’accès…"
 
 #: ../src//Authentification/GraphicalDialog.vala:73
 msgid "Username:"
-msgstr ""
+msgstr "Nom d’usuari:"
 
 #: ../src//Authentification/GraphicalDialog.vala:75
 msgid "john_doe"
@@ -92,24 +92,24 @@ msgstr ""
 
 #: ../src//Authentification/GraphicalDialog.vala:77
 msgid "Password:"
-msgstr ""
+msgstr "Contrasenya:"
 
 #: ../src//Authentification/GraphicalDialog.vala:81
 msgid "New Password:"
-msgstr ""
+msgstr "Contrasenya nova:"
 
 #: ../src//Authentification/GraphicalDialog.vala:85
 msgid "Confirm Password:"
-msgstr ""
+msgstr "Confirmeu la contrasenya:"
 
 #: ../src//Authentification/GraphicalDialog.vala:90
 msgid "Remember password"
-msgstr ""
+msgstr "Recorda la contrasenya"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
 #: ../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
-msgstr ""
+msgstr "He oblidat la contrasenya"
 
 #: ../src//Authentification/GraphicalDialog.vala:97
 msgid "Refresh Captcha"
@@ -121,11 +121,11 @@ msgstr ""
 
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
-msgstr ""
+msgstr "Desa"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Calendaris"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
@@ -133,7 +133,7 @@ msgstr ""
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Contactes"
 
 #: ../src//Translation.vala:27
 msgid "Sync your contacts"
@@ -141,11 +141,11 @@ msgstr ""
 
 #: ../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Sincronitzeu els vostres fitxers"
 
 #: ../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "Missatges de correu"
 
 #: ../src//Translation.vala:30
 msgid "Sync your emails"
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Sincronitzeu les vostres fotos"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
