@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2014-01-19 05:34+0000\n"
-"Last-Translator: Julien Spautz <spautz.julien@gmail.com>\n"
+"PO-Revision-Date: 2015-02-12 16:37+0000\n"
+"Last-Translator: Yvo Marques <macghivo@gmail.com>\n"
 "Language-Team: Luxembourgish <lb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-24 06:52+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-13 06:51+0000\n"
+"X-Generator: Launchpad (build 17336)\n"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr ""
+msgstr "Online-Konten"
 
 #: ../src//OnlineAccounts.vala:48
 msgid ""
@@ -28,11 +28,11 @@ msgstr ""
 
 #: ../src//OnlineAccounts.vala:62
 msgid "Close"
-msgstr ""
+msgstr "Zoumaachen"
 
 #: ../src//OnlineAccounts.vala:63
 msgid "Restore"
-msgstr ""
+msgstr "Widderhierstellen"
 
 #: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
 #: ../src//Authentification/GraphicalDialog.vala:55
@@ -41,7 +41,7 @@ msgstr "Ofbriechen"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Verbann deng Online-Konten"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
@@ -57,7 +57,7 @@ msgstr ""
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "Inhalt zum synchroniséieren:"
 
 #: ../src//Views/AccountView.vala:96
 msgid "There are no apps currently installed that link to your %s account"
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
-msgstr ""
+msgstr "Läschen"
 
 #: ../src//Authentification/WebDialog.vala:38
 #: ../src//Authentification/WebDialog.vala:122
@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../src//Authentification/GraphicalDialog.vala:73
 msgid "Username:"
-msgstr ""
+msgstr "Benotzernumm:"
 
 #: ../src//Authentification/GraphicalDialog.vala:75
 msgid "john_doe"
@@ -91,24 +91,24 @@ msgstr ""
 
 #: ../src//Authentification/GraphicalDialog.vala:77
 msgid "Password:"
-msgstr ""
+msgstr "Passwuert:"
 
 #: ../src//Authentification/GraphicalDialog.vala:81
 msgid "New Password:"
-msgstr ""
+msgstr "Neien Passwuert:"
 
 #: ../src//Authentification/GraphicalDialog.vala:85
 msgid "Confirm Password:"
-msgstr ""
+msgstr "Passwuert bestätegen:"
 
 #: ../src//Authentification/GraphicalDialog.vala:90
 msgid "Remember password"
-msgstr ""
+msgstr "Passwuert verhalen"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
 #: ../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
-msgstr ""
+msgstr "Passwuerd vergiessen"
 
 #: ../src//Authentification/GraphicalDialog.vala:97
 msgid "Refresh Captcha"
@@ -120,23 +120,23 @@ msgstr ""
 
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
-msgstr ""
+msgstr "Späicheren"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Kalenneren"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Sync deing Kalenneren"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Kontakter"
 
 #: ../src//Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Sync déing Kontaker"
 
 #: ../src//Translation.vala:28
 msgid "Sync your files"
@@ -144,15 +144,15 @@ msgstr ""
 
 #: ../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "E-mailen"
 
 #: ../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "Sync déing e-mails"
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "FSync déing Fotoen"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
