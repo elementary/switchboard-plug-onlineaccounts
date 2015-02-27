@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2015-02-22 11:22+0000\n"
+"PO-Revision-Date: 2015-02-26 16:25+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-23 05:33+0000\n"
-"X-Generator: Launchpad (build 17355)\n"
+"X-Launchpad-Export-Date: 2015-02-27 05:52+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr ""
+msgstr "Llogaritë në Rrjet"
 
 #: ../src//OnlineAccounts.vala:48
 msgid ""
@@ -36,7 +36,7 @@ msgstr "Anulo"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Lidh llogaritë tuaja në rrjet"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
