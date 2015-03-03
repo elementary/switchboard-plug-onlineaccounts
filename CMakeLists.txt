@@ -70,9 +70,8 @@ set(DEPS_PACKAGES
     gSignon
     gSignond
     json-glib-1.0
-    webkit2-3.0
+    webkit2gtk-4.0
     libsoup-2.4
-    javascriptcore-3.0
     gmodule-2.0
     rest-0.7
 )
@@ -91,7 +90,6 @@ set(DEPS_PKG
     json-glib-1.0
     webkit2gtk-3.0
     libsoup-2.4
-    javascriptcoregtk-3.0
     gmodule-2.0
     rest-0.7
 )
@@ -101,7 +99,7 @@ add_subdirectory (data)
 
 find_package (Vala REQUIRED)
 include (ValaVersion)
-ensure_vala_version ("0.21.2" MINIMUM)
+ensure_vala_version ("0.26.0" MINIMUM)
 
 find_package (PkgConfig)
 # Add all your dependencies to the list below

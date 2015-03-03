@@ -101,9 +101,10 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         return true;
     }
 
-    private bool on_load_uri_failed (WebKit.LoadEvent load_event, string failed_uri, GLib.Error error) {
-        warning ("Loading uri '%s' failed, error : %s", failed_uri, error.message);
-        if (GLib.strcmp (failed_uri, oauth_open_url) == 0) {
+    private bool on_load_uri_failed (WebKit.LoadEvent load_event, string failing_uri, void* _error) {
+        var error = (GLib.Error)_error;
+        warning ("Loading uri '%s' failed, error : %s", failing_uri, error.message);
+        if (GLib.strcmp (failing_uri, oauth_open_url) == 0) {
             error_code = Signond.SignonUIError.NOT_AVAILABLE;
         }
 

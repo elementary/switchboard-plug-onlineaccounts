@@ -31,7 +31,7 @@ namespace OnlineAccounts {
         Gtk.Label info_label;
         AccountView account_view;
         SourceSelector source_selector;
-        Granite.Widgets.ThinPaned paned;
+        Gtk.Paned paned;
         OnlineAccounts.Server oa_server;
         PluginsManager plugins_manager;
         Gtk.InfoBar infobar;
@@ -87,7 +87,7 @@ namespace OnlineAccounts {
                 stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
                 main_grid = new Gtk.Grid ();
                 main_grid.orientation = Gtk.Orientation.VERTICAL;
-                paned = new Granite.Widgets.ThinPaned ();
+                paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
 
                 grid = new Gtk.Grid ();
                 grid.expand = true;
