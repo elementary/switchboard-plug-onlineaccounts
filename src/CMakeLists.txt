@@ -9,7 +9,6 @@ vala_precompile (VALA_C ${PLUGNAME}
     Account.vala
     AccountsManager.vala
     PluginManager.vala
-    Threads.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
     MethodPlugin.vala
