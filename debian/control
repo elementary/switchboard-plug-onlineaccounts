@@ -16,7 +16,7 @@ Build-Depends: cmake (>= 2.8),
                librest-dev (>= 0.7),
                libwebkit2gtk-3.0-dev,
                libjavascriptcoregtk-3.0-dev,
-               valac (>= 0.22) | valac-0.22
+               valac (>= 0.26) | valac-0.26
 Standards-Version: 3.9.5
 Homepage: https://launchpad.net/switchboard-plug-onlineaccounts
 Vcs-Bzr: lp:switchboard-plug-onlineaccounts
