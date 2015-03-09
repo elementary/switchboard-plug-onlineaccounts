@@ -67,8 +67,8 @@ set(DEPS_PACKAGES
     granite
     switchboard-2.0
     libaccounts-glib
-    gSignon
-    gSignond
+    libgsignon-glib
+    gsignond
     json-glib-1.0
     webkit2gtk-4.0
     libsoup-2.4

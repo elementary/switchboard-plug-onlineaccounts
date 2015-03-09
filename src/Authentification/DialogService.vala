@@ -71,7 +71,7 @@ public class OnlineAccounts.DialogService : Object {
     public void cancel_ui_request (string request_id) {
         var dialog = RequestQueue.get_default ().get_dialog_from_request_id (request_id);
         if (dialog != null) {
-            dialog.error_code = Signond.SignonUIError.CANCELED;
+            dialog.error_code = GSignond.SignonuiError.CANCELED;
             dialog.finished ();
         }
     }

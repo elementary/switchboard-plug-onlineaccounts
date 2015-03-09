@@ -25,13 +25,13 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     
     public HashTable<string, Variant> parameters;
     public string request_id;
-    public Signond.SignonUIError error_code;
+    public GSignond.SignonuiError error_code;
 
     public Dialog (HashTable<string, Variant> parameter) {
-        error_code = Signond.SignonUIError.NONE;
+        error_code = GSignond.SignonuiError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {
-            error_code = Signond.SignonUIError.CANCELED;
+            error_code = GSignond.SignonuiError.CANCELED;
             finished ();
         });
     }
@@ -46,7 +46,7 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     public virtual bool set_parameters (HashTable<string, Variant> params) {
         this.parameters = params;
         if (!validate_params (params)) {
-            error_code = Signond.SignonUIError.BAD_PARAMETERS;
+            error_code = GSignond.SignonuiError.BAD_PARAMETERS;
             warning ("Bad parameters");
             return false;
         }

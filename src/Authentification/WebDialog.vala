@@ -43,7 +43,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         container_grid.attach (info_label, 1, 0, 1, 1);
         container.add (container_grid);
         infobar.response.connect (() => {
-            error_code = Signond.SignonUIError.CANCELED;
+            error_code = GSignond.SignonuiError.CANCELED;
             finished ();
             this.destroy ();
         });
@@ -105,7 +105,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         var error = (GLib.Error)_error;
         warning ("Loading uri '%s' failed, error : %s", failing_uri, error.message);
         if (GLib.strcmp (failing_uri, oauth_open_url) == 0) {
-            error_code = Signond.SignonUIError.NOT_AVAILABLE;
+            error_code = GSignond.SignonuiError.NOT_AVAILABLE;
         }
 
         return true;
@@ -138,7 +138,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         webview.load_changed.disconnect (on_webview_load);
         oauth_response = redirect_uri;
         debug ("Found OAUTH Response : %s", oauth_response);
-        error_code = Signond.SignonUIError.NONE;
+        error_code = GSignond.SignonuiError.NONE;
         finished ();
     }
 

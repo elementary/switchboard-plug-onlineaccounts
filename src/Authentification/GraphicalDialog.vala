@@ -58,7 +58,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         info_label.valign = Gtk.Align.CENTER;
         container.add (info_label);
         infobar.response.connect (() => {
-            error_code = Signond.SignonUIError.CANCELED;
+            error_code = GSignond.SignonuiError.CANCELED;
             finished ();
             this.destroy ();
         });
@@ -159,7 +159,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             forgot_button.uri = forgot_password_url;
             forgot_button.activate_link.connect (() =>{
                 warning ("forgot password");
-                error_code = Signond.SignonUIError.FORGOT_PASSWORD;
+                error_code = GSignond.SignonuiError.FORGOT_PASSWORD;
                 finished ();
                 return false;
             });
@@ -261,7 +261,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     public override bool refresh_captcha (string uri) {
         if (uri == null) {
             warning ("invalid captcha value : %s", uri);
-            error_code = Signond.SignonUIError.BAD_CAPTCHA_URL;
+            error_code = GSignond.SignonuiError.BAD_CAPTCHA_URL;
             return false;
         }
 
@@ -274,7 +274,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         if (filename == null) {
             warning ("invalid captcha value : %s", uri);
-            error_code = Signond.SignonUIError.BAD_CAPTCHA_URL;
+            error_code = GSignond.SignonuiError.BAD_CAPTCHA_URL;
             return false;
         }
 
@@ -284,7 +284,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         debug ("Used file : %s", used_filename);
         var is_valid = GLib.strcmp (filename, used_filename) == 0;
         if (is_valid == false) {
-            error_code = Signond.SignonUIError.BAD_CAPTCHA;
+            error_code = GSignond.SignonuiError.BAD_CAPTCHA;
             return false;
         }
 
