@@ -25,6 +25,8 @@ project (${PLUGNAME})
 #########################################################
 
 include (GNUInstallDirs)
+set (PREFIX ${CMAKE_INSTALL_PREFIX})
+set (DOLLAR "$") # You hear that? It's kittens being killed by the gods of cmake
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
 set (PLUGIN_DIR "${CMAKE_INSTALL_FULL_LIBDIR}/${PLUGNAME}")
 set (ACCOUNTS_DIR "${CMAKE_INSTALL_PREFIX}/share/accounts")
