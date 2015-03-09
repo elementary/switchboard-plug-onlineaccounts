@@ -3,25 +3,14 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.vala.cmake ${CONFIG_FILE})
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${PLUGNAME}.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.pc)
 
 # Add all your vala files and requires packages to the List below to include them in the build
-vala_precompile (VALA_C ${PLUGNAME}
-    ${CONFIG_FILE}
-    OnlineAccounts.vala
-    Account.vala
+vala_precompile (POA_VALA_C "libpoa"
     AccountsManager.vala
+    Account.vala
     PluginManager.vala
-    Views/SourceSelector.vala
-    Views/AccountView.vala
     MethodPlugin.vala
     ProviderPlugin.vala
-    Authentification/Server.vala
-    Authentification/DialogService.vala
-    Authentification/RequestQueue.vala
-    Authentification/RequestInfo.vala
-    Authentification/Key.vala
-    Authentification/Dialog.vala
-    Authentification/WebDialog.vala
-    Authentification/GraphicalDialog.vala
 CUSTOM_VAPIS
+    ${CONFIG_FILE}
     ../vapi/glib-addons.vapi
 PACKAGES
     ${DEPS_PACKAGES}
@@ -33,6 +22,32 @@ GENERATE_HEADER
     ${PLUGNAME}
 )
 
+vala_precompile (VALA_C ${PLUGNAME}
+    ${CONFIG_FILE}
+    OnlineAccounts.vala
+    Views/SourceSelector.vala
+    Views/AccountView.vala
+    Authentification/Server.vala
+    Authentification/DialogService.vala
+    Authentification/RequestQueue.vala
+    Authentification/RequestInfo.vala
+    Authentification/Key.vala
+    Authentification/Dialog.vala
+    Authentification/WebDialog.vala
+    Authentification/GraphicalDialog.vala
+CUSTOM_VAPIS
+    ../vapi/glib-addons.vapi
+    Account.vala
+    AccountsManager.vala
+    PluginManager.vala
+    MethodPlugin.vala
+    ProviderPlugin.vala
+PACKAGES
+    ${DEPS_PACKAGES}
+OPTIONS
+    ${GLOBAL_VALAC_OPTIONS}
+)
+
 if (BUILD_SHARED_LIBS)
     # Install lib stuffs
     install (FILES ${CMAKE_BINARY_DIR}/src/${PLUGNAME}.pc DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig/)
@@ -41,7 +56,7 @@ if (BUILD_SHARED_LIBS)
     install (FILES ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.h DESTINATION include/${PLUGNAME}/)
 endif ()
 
-add_library (${PLUGNAME} MODULE ${VALA_C})
+add_library (${PLUGNAME} MODULE ${POA_VALA_C} ${VALA_C})
 target_link_libraries(${PLUGNAME} ${DEPS_LIBRARIES})
 
 # Installation
