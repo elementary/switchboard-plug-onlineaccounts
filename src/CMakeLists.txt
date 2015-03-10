@@ -64,8 +64,7 @@ target_link_libraries(${PLUGSONAME} ${DEPS_LIBRARIES})
 
 
 add_library (${PLUGNAME} SHARED ${POA_VALA_C})
-set_target_properties (${LIB_NAME} PROPERTIES
-  OUTPUT_NAME ${PLUGNAME}
+set_target_properties (${PLUGNAME} PROPERTIES
   VERSION 0.1
   SOVERSION 0
 )
