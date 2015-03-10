@@ -37,9 +37,22 @@ Recommends: pantheon-online-accounts-plugin-google,
 Description: Online Accounts plug for Switchboard
  This plug allow you to enable online accounts sync.
 
-Package: libpantheon-online-accounts-dev
+Package: libpantheon-online-accounts0
 Architecture: any
 Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Multi-Arch: same
+Pre-Depends: dpkg (>= 1.15.6)
+Section: lib
+Description: Online Accounts plug for Switchboard (library)
+ This plug allow you to enable online accounts sync.
+ .
+ This package contains the library.
+
+Package: libpantheon-online-accounts-dev
+Architecture: any
+Depends: libpantheon-online-accounts0 (= ${binary:Version}),
+         ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Section: libdevel
