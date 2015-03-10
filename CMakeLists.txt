@@ -33,15 +33,6 @@ set (ACCOUNTS_DIR "${CMAKE_INSTALL_PREFIX}/share/accounts")
 set (PKGDATADIR "${DATADIR}/network/${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}")
 
-
-option(BUILD_SHARED_LIBS "Switch between shared and static libraries" ON)
-
-if (BUILD_SHARED_LIBS)
-    message("-- Shared libraries enabled")
-else ()
-    message("-- Shared libraries disabled")
-endif ()
-
 set(SRC_TARGET ${CMAKE_PROJECT_NAME})
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
