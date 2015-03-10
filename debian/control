@@ -43,7 +43,6 @@ Depends: ${misc:Depends},
          ${shlibs:Depends}
 Multi-Arch: same
 Pre-Depends: dpkg (>= 1.15.6)
-Section: lib
 Description: Online Accounts plug for Switchboard (library)
  This plug allow you to enable online accounts sync.
  .
