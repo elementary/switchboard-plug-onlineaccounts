@@ -15,6 +15,7 @@ OPTIONS
 
 add_library(${Y_NAME} MODULE ${OAUTH_Y_PLUGIN_VALA_C})
 target_link_libraries (${Y_NAME} ${DEPS_LIBRARIES})
+add_dependencies(${Y_NAME} ${PLUGNAME})
 
 install(TARGETS ${Y_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES yahoo.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)

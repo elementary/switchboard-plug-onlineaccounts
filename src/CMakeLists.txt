@@ -1,3 +1,4 @@
+
 set(CONFIG_FILE ${CMAKE_CURRENT_BINARY_DIR}/config.vala)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.vala.cmake ${CONFIG_FILE})
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${PLUGNAME}.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PLUGNAME}.pc)
@@ -11,9 +12,9 @@ vala_precompile (POA_VALA_C "libpoa"
     ProviderPlugin.vala
 CUSTOM_VAPIS
     ${CONFIG_FILE}
-    ../vapi/glib-addons.vapi
 PACKAGES
     ${DEPS_PACKAGES}
+    glib-addons
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}
 GENERATE_VAPI
@@ -36,7 +37,6 @@ vala_precompile (VALA_C ${PLUGNAME}
     Authentification/WebDialog.vala
     Authentification/GraphicalDialog.vala
 CUSTOM_VAPIS
-    ../vapi/glib-addons.vapi
     Account.vala
     AccountsManager.vala
     PluginManager.vala
@@ -44,6 +44,7 @@ CUSTOM_VAPIS
     ProviderPlugin.vala
 PACKAGES
     ${DEPS_PACKAGES}
+    glib-addons
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}
 )

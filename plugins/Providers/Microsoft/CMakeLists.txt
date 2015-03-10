@@ -14,6 +14,7 @@ OPTIONS
 
 add_library(${M_NAME} MODULE ${OAUTH_M_PLUGIN_VALA_C})
 target_link_libraries (${M_NAME} ${DEPS_LIBRARIES})
+add_dependencies(${M_NAME} ${PLUGNAME})
 
 install(TARGETS ${M_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES microsoft.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)

@@ -15,6 +15,7 @@ OPTIONS
 
 add_library(${FM_NAME} MODULE ${OAUTH_FM_PLUGIN_VALA_C})
 target_link_libraries (${FM_NAME} ${DEPS_LIBRARIES})
+add_dependencies(${FM_NAME} ${PLUGNAME})
 
 install(TARGETS ${FM_NAME} DESTINATION ${PLUGIN_DIR}/password-plugins/)
 install(FILES fastmail.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)

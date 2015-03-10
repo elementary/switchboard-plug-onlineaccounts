@@ -15,6 +15,7 @@ OPTIONS
 
 add_library(${G_NAME} MODULE ${OAUTH_G_PLUGIN_VALA_C})
 target_link_libraries (${G_NAME} ${DEPS_LIBRARIES})
+add_dependencies(${G_NAME} ${PLUGNAME})
 
 install(TARGETS ${G_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES google.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)

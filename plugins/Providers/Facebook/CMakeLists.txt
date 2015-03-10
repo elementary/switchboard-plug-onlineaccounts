@@ -14,6 +14,7 @@ OPTIONS
 
 add_library(${F_NAME} MODULE ${OAUTH_F_PLUGIN_VALA_C})
 target_link_libraries (${F_NAME} ${DEPS_LIBRARIES})
+add_dependencies(${F_NAME} ${PLUGNAME})
 
 install(TARGETS ${F_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
 install(FILES facebook.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
