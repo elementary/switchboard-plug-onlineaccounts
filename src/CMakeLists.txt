@@ -48,7 +48,7 @@ set (PLUGSONAME ${PLUGNAME}-plug)
 
 add_library (${PLUGSONAME} MODULE ${POA_VALA_C} ${VALA_C})
 target_link_libraries(${PLUGSONAME} ${DEPS_LIBRARIES})
-add_dependencies(${PLUGSONAME} ${PLUGNAME})
+target_link_libraries(${PLUGSONAME} ${PLUGNAME})
 
 
 add_library (${PLUGNAME} SHARED ${POA_VALA_C})
