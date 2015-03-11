@@ -63,7 +63,7 @@ set(DEPS_PACKAGES
     libgsignon-glib
     gsignond
     json-glib-1.0
-    webkit2gtk-4.0
+    webkit2gtk-3.0
     libsoup-2.4
     gmodule-2.0
     rest-0.7
@@ -74,7 +74,7 @@ set(DEPS_PKG
     gio-2.0
     gio-unix-2.0
     gee-0.8
-    gtk+-3.0>=3.8
+    gtk+-3.0>=3.12
     granite
     switchboard-2.0
     libaccounts-glib
@@ -92,7 +92,7 @@ add_subdirectory (data)
 
 find_package (Vala REQUIRED)
 include (ValaVersion)
-ensure_vala_version ("0.26.0" MINIMUM)
+ensure_vala_version ("0.24.0" MINIMUM)
 
 find_package (PkgConfig)
 # Add all your dependencies to the list below
