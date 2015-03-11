@@ -29,7 +29,6 @@ Depends: gsignond-extension-pantheon,
          ${misc:Depends},
          ${shlibs:Depends}
 Enhances: switchboard
-Pre-Depends: dpkg (>= 1.15.6)
 Recommends: pantheon-online-accounts-plugin-google,
             pantheon-online-accounts-plugin-microsoft,
             pantheon-online-accounts-plugin-facebook,
@@ -43,7 +42,6 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Multi-Arch: same
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plug for Switchboard (library)
  This plug allow you to enable online accounts sync.
  .
@@ -54,7 +52,6 @@ Architecture: any
 Depends: libpantheon-online-accounts0 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Pre-Depends: dpkg (>= 1.15.6)
 Section: libdevel
 Description: Online Accounts plug for Switchboard (development files)
  This plug allow you to enable online accounts sync.
@@ -67,7 +64,6 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          gsignond-plugin-oauth,
          ${misc:Depends},
          ${shlibs:Depends}
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Generic OAuth
  Online accounts plugin for single signon
 
@@ -76,7 +72,6 @@ Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Password
  Online accounts plugin for single signon
 
@@ -87,7 +82,6 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: account-plugin-facebook
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Facebook
  Online accounts plugin for single signon
 
@@ -98,7 +92,6 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: account-plugin-windows-live
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Microsoft
  Online accounts plugin for single signon
 
@@ -111,7 +104,6 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
 Conflicts: evolution-data-server-online-accounts,
            account-plugin-google
 Replaces: evolution-data-server-online-accounts
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Google
  Online accounts plugin for single signon
 
@@ -125,7 +117,6 @@ Conflicts: evolution-data-server-online-accounts,
            account-plugin-yahoo,
            account-plugin-flickr
 Replaces: evolution-data-server-online-accounts
-Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Yahoo
  Online accounts plugin for single signon
 

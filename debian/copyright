@@ -27,6 +27,7 @@ License: LGPL-2
 Files: debian/*
 Copyright: 2011-2013, Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
            2013, Corentin Noël <tintou@mailoo.org>
+           2015, Rico Tzschichholz <ricotz@ubuntu.com>
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
