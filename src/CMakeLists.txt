@@ -46,7 +46,7 @@ OPTIONS
 
 set (PLUGSONAME ${PLUGNAME}-plug)
 
-add_library (${PLUGSONAME} MODULE ${POA_VALA_C} ${VALA_C})
+add_library (${PLUGSONAME} MODULE ${VALA_C})
 target_link_libraries(${PLUGSONAME} ${DEPS_LIBRARIES})
 target_link_libraries(${PLUGSONAME} ${PLUGNAME})
 
