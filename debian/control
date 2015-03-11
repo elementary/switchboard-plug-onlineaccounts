@@ -25,6 +25,7 @@ Vcs-Browser: https://code.launchpad.net/~elementary-apps/switchboard-plug-online
 Package: switchboard-plug-online-accounts
 Architecture: any
 Depends: gsignond-extension-pantheon,
+         libpantheon-online-accounts0 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Enhances: switchboard
