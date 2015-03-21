@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2014-12-28 11:50+0000\n"
+"PO-Revision-Date: 2015-03-20 14:56+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-29 06:20+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-03-21 05:39+0000\n"
+"X-Generator: Launchpad (build 17405)\n"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
@@ -24,7 +24,7 @@ msgstr "在线帐户"
 #: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr "将您的电脑与所有在线帐户同步。"
+msgstr "将您的电脑与所有在线帐户同步"
 
 #: ../src//OnlineAccounts.vala:62
 msgid "Close"
@@ -61,7 +61,7 @@ msgstr "要同步的内容："
 
 #: ../src//Views/AccountView.vala:96
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "当前没有安装任何与您 %s 账户相连接的应用程序"
+msgstr "当前没有安装任与您 %s 账户相连接的应用程序"
 
 #: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
@@ -180,4 +180,4 @@ msgstr "在您的电脑上开启所有 Google 服务"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr "包括联系人、邮件和日历"
+msgstr "包括联系人、邮件和日历等服务"
