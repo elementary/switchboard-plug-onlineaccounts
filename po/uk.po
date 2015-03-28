@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2014-12-28 13:25+0000\n"
-"Last-Translator: Andre <Chipqq1@gmail.com>\n"
+"PO-Revision-Date: 2015-03-27 21:25+0000\n"
+"Last-Translator: lem8r <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-29 06:20+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-03-28 05:30+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 "Language: uk\n"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr "Мережеві Облікові Записи"
+msgstr "Мережеві облікові записи"
 
 #: ../src//OnlineAccounts.vala:48
 msgid ""
@@ -43,15 +43,16 @@ msgstr "Скасувати"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr "Увійдіть у Ваші Онлайн Акаунти"
+msgstr "Під’єднайте ваші онлайн акаунти"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Увійдіть та підключайте додатки Пошта, Контакти, та Календар."
+msgstr ""
+"Увійдіть, щоб підключити такі додатки як Пошта, Контакти, та Календар."
 
 #: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
-msgstr "Обліковий Запис '%s' Вилучений."
+msgstr "Обліковий запис '%s' вилучено."
 
 #: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
@@ -59,7 +60,7 @@ msgstr "Додати новий акаунт..."
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "Вміст, який потрібно синхронізувати:"
 
 #: ../src//Views/AccountView.vala:96
 msgid "There are no apps currently installed that link to your %s account"
@@ -97,7 +98,7 @@ msgstr "Пароль:"
 
 #: ../src//Authentification/GraphicalDialog.vala:81
 msgid "New Password:"
-msgstr "Новий Пароль:"
+msgstr "Новий пароль:"
 
 #: ../src//Authentification/GraphicalDialog.vala:85
 msgid "Confirm Password:"
@@ -114,7 +115,7 @@ msgstr "Не пам’ятаю пароль"
 
 #: ../src//Authentification/GraphicalDialog.vala:97
 msgid "Refresh Captcha"
-msgstr "Оновити Captcha"
+msgstr "Оновити капчу"
 
 #: ../src//Authentification/GraphicalDialog.vala:98
 msgid "Enter above text here"
@@ -126,7 +127,7 @@ msgstr "Зберегти"
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Календарі"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
@@ -134,7 +135,7 @@ msgstr "Синхронізуйте ваші календарі"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Контакти"
 
 #: ../src//Translation.vala:27
 msgid "Sync your contacts"
@@ -146,11 +147,11 @@ msgstr "Синхронізуйте ваші файли"
 
 #: ../src//Translation.vala:29
 msgid "Emails"
-msgstr ""
+msgstr "Адреси ел. пошти"
 
 #: ../src//Translation.vala:30
 msgid "Sync your emails"
-msgstr ""
+msgstr "Синхронізуйте вашу ел. пошту"
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
@@ -158,11 +159,11 @@ msgstr "Синхронізуйте ваші фото"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Переглянути ваші стрічки новин"
 
 #: ../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr "Спілкуйтеся з друзями"
+msgstr "Спілкування з вашими друзями"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -182,4 +183,4 @@ msgstr "Підключіть всі сервіси Google до вашого ко
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Доступі Контакти, Пошта та Календар"
