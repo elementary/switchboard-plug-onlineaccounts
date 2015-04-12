@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2015-03-16 11:13+0000\n"
+"PO-Revision-Date: 2015-04-11 16:51+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-03-17 05:41+0000\n"
-"X-Generator: Launchpad (build 17389)\n"
+"X-Launchpad-Export-Date: 2015-04-12 05:59+0000\n"
+"X-Generator: Launchpad (build 17423)\n"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
@@ -27,7 +27,7 @@ msgstr "Mbyll"
 
 #: ../src//OnlineAccounts.vala:63
 msgid "Restore"
-msgstr ""
+msgstr "Rikthe"
 
 #: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
 #: ../src//Authentification/GraphicalDialog.vala:55
@@ -99,7 +99,7 @@ msgstr "Konfirmo fjalëkalimin:"
 
 #: ../src//Authentification/GraphicalDialog.vala:90
 msgid "Remember password"
-msgstr ""
+msgstr "Kujto fjalëkalimin"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
 #: ../src//Authentification/GraphicalDialog.vala:158
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../src//Authentification/GraphicalDialog.vala:98
 msgid "Enter above text here"
-msgstr ""
+msgstr "Shkruani tekstin e sipërm këtu"
 
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
@@ -124,7 +124,7 @@ msgstr "Kalendarët"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Sinkronizoni kalendarin tuaj"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../src//Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Sinkronizoni skedarët tuaj"
 
 #: ../src//Translation.vala:29
 msgid "Emails"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../src//Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Sinkronizoni fotot tuaja"
 
 #: ../src//Translation.vala:32
 msgid "Watch your newsfeed"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../src//Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "Bisedoni me miqtë tuaj"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
