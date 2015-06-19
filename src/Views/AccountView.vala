@@ -45,7 +45,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
 
         var apps_label = new Gtk.Label ("");
         apps_label.set_markup ("<b>%s</b>".printf (Markup.escape_text (_("Content to synchronise:"))));
-        apps_label.xalign = 0;
+        ((Gtk.Misc) apps_label).xalign = 0;
         apps_label.margin_top = 12;
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
@@ -75,7 +75,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             var service_label = new Gtk.Label ("");
             service_label.set_markup ("<big>%s</big>".printf (Markup.escape_text (GLib.dgettext (i18n_domain, service.get_display_name ()))));
 
-            service_label.xalign = 0;
+            ((Gtk.Misc) service_label).xalign = 0;
 
             var service_switch = new Gtk.Switch ();
             service_switch.valign = Gtk.Align.CENTER;
