@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-23 15:19-0600\n"
-"PO-Revision-Date: 2015-06-15 09:31+0000\n"
-"Last-Translator: needhelp007 <iempie3@hotmail.com>\n"
+"PO-Revision-Date: 2015-08-15 11:39+0000\n"
+"Last-Translator: Tom Martens <martens.tom@scarlet.be>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-16 11:17+0000\n"
-"X-Generator: Launchpad (build 17557)\n"
+"X-Launchpad-Export-Date: 2015-08-16 04:58+0000\n"
+"X-Generator: Launchpad (build 17686)\n"
 "Language: nl\n"
 
 #: ../src//OnlineAccounts.vala:47
@@ -25,7 +25,7 @@ msgstr "Online accounts"
 #: ../src//OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr "Syncroniseer je computer met al je online accounts op het web"
+msgstr "Synchroniseer je computer met al je online accounts op het web."
 
 #: ../src//OnlineAccounts.vala:62
 msgid "Close"
@@ -33,7 +33,7 @@ msgstr "Sluiten"
 
 #: ../src//OnlineAccounts.vala:63
 msgid "Restore"
-msgstr "Herstel"
+msgstr "Herstellen"
 
 #: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
 #: ../src//Authentification/GraphicalDialog.vala:55
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
 msgid "Add…"
-msgstr "Voeg toe..."
+msgstr "Toevoegen…"
 
 #: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
 msgid "Remove"
@@ -81,7 +81,7 @@ msgstr "Laden…"
 #: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
 msgid "Please enter your credentials…"
-msgstr "Vul je gegevens in..."
+msgstr "Vul uw gegevens in..."
 
 #: ../src//Authentification/GraphicalDialog.vala:73
 msgid "Username:"
@@ -105,7 +105,7 @@ msgstr "Bevestig wachtwoord:"
 
 #: ../src//Authentification/GraphicalDialog.vala:90
 msgid "Remember password"
-msgstr "Onthoud wachtwoord"
+msgstr "Wachtwoord onthouden"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
 #: ../src//Authentification/GraphicalDialog.vala:158
@@ -114,11 +114,11 @@ msgstr "Wachtwoord vergeten"
 
 #: ../src//Authentification/GraphicalDialog.vala:97
 msgid "Refresh Captcha"
-msgstr "Ververs captcha"
+msgstr "Captcha vernieuwen"
 
 #: ../src//Authentification/GraphicalDialog.vala:98
 msgid "Enter above text here"
-msgstr "Vul de bovenstaande tekst hier in"
+msgstr "Vul bovenstaande tekst hier in"
 
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
