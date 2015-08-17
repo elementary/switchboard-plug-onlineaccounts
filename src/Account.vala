@@ -21,7 +21,6 @@
  */
 
 public class OnlineAccounts.Account : GLib.Object {
-
     public Ag.Account account;
     public Ag.Provider provider;
     public string username;
@@ -29,12 +28,12 @@ public class OnlineAccounts.Account : GLib.Object {
     public bool need_authentification;
     public GLib.Variant session_data;
     public GLib.Variant session_result;
-    
+
     public const string gsignon_id = "CredentialsId";
-    
+
     public signal void removed ();
     public signal void complete ();
-    
+
     public async void delete_account () {
         account.select_service (null);
         var v_id = account.get_variant (gsignon_id, null);
@@ -47,8 +46,8 @@ public class OnlineAccounts.Account : GLib.Object {
             critical (e.message);
         }
     }
-    public virtual void setup_authentification () {
-    
-    }
 
+    public virtual void setup_authentification () {
+        
+    }
 }

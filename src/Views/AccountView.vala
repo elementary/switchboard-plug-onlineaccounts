@@ -60,14 +60,11 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         apps_grid.row_spacing = 6;
 
         int i = 1;
-        var services = plugin.account.list_services ();
-        foreach (var service in services) {
-            var applications = new Ag.Manager ().list_applications_by_service (service);
-            if (applications.length () == 0)
-                continue;
+        plugin.account.list_services ().foreach ((service) => {
+            if (plugin.account.manager.list_applications_by_service (service).length () == 0)
+                return;
 
-            string i18n_domain = service.get_i18n_domain ();
-            string tooltip = GLib.dgettext (i18n_domain, service.get_description ());
+            unowned string i18n_domain = service.get_i18n_domain ();
 
             var service_image = new Gtk.Image.from_icon_name (service.get_icon_name (), Gtk.IconSize.DIALOG);
             service_image.margin_left = 12;
@@ -79,7 +76,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
 
             var service_switch = new Gtk.Switch ();
             service_switch.valign = Gtk.Align.CENTER;
-            service_switch.tooltip_text = tooltip;
+            service_switch.tooltip_text = GLib.dgettext (i18n_domain, service.get_description ());
             plugin.account.select_service (service);
             service_switch.active = plugin.account.get_enabled ();
             service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service);});
@@ -88,7 +85,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             apps_grid.attach (service_label, 2, i, 1, 1);
             apps_grid.attach (service_switch, 3, i, 1, 1);
             i++;
-        }
+        });
 
         if (i == 1) {
             var no_service_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -129,8 +126,71 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
     private void on_service_switch_activated (bool enabled, Ag.Service service) {
         plugin.account.select_service (service);
         plugin.account.set_enabled (enabled);
+        plugin.account.manager.list_applications_by_service (service).foreach ((app) => {
+            var app_info = app.get_desktop_app_info ();
+            unowned string exec = app_info.get_executable ();
+            if (enabled) {
+                allow_app ("/usr/bin/%s".printf (exec));
+            } else {
+                deny_app ("/usr/bin/%s".printf (exec));
+            }
+        });
+
         plugin.account.store_async.begin (null);
-        plugin.account.select_service (null);
     }
-    
+
+    private void allow_app (string app) {
+        plugin.account.select_service (null);
+        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
+        var main_loop = new GLib.MainLoop ();
+        identity.query_info ((self, info, error) => {
+            if (error != null) {
+                critical (error.message);
+                return;
+            }
+
+            info.access_control_list_append (new Signon.SecurityContext.from_values (app, "*"));
+            identity.store_credentials_with_info (info, (self, id, error) => {
+                if (error != null) {
+                    critical (error.message);
+                }
+
+                main_loop.quit ();
+            });
+        });
+
+        main_loop.run ();
+    }
+
+    private void deny_app (string app) {
+        plugin.account.select_service (null);
+        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
+        var main_loop = new GLib.MainLoop ();
+        identity.query_info ((self, info, error) => {
+            if (error != null) {
+                critical (error.message);
+                return;
+            }
+
+            unowned List<Signon.SecurityContext> acl = info.get_access_control_list ();
+            for (unowned List<Signon.SecurityContext> nth = acl.first (); nth != null; nth = nth.next) {
+                if (nth.data.sys_ctx == app) {
+                    acl.remove (nth.data);
+                }
+            }
+
+            info.set_access_control_list ((Signon.SecurityContextList) acl);
+            identity.store_credentials_with_info (info, (self, id, error) => {
+                if (error != null) {
+                    critical (error.message);
+                }
+
+                main_loop.quit ();
+            });
+        });
+
+        main_loop.run ();
+    }
 }

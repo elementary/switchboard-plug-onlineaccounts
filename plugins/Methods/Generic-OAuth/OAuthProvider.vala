@@ -45,7 +45,7 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         info.set_identity_type (Signon.IdentityType.APP);
         info.set_secret ("", true);
         info.set_method ("oauth", {"oauth1", "oauth2", null});
-        info.access_control_list_append (new Signon.SecurityContext.from_values ("*", "*"));
+        info.access_control_list_append (new Signon.SecurityContext.from_values ("%s/bin/switchboard".printf (Build.CMAKE_INSTALL_PREFIX), "*"));
         var allowed_realms = session_data.lookup_value ("AllowedRealms", null).dup_strv ();
         info.set_realms (allowed_realms);
         var identity = new Signon.Identity ();

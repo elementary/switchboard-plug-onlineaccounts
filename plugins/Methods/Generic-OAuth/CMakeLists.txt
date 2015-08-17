@@ -9,8 +9,10 @@ vala_precompile(OAUTHPLUGIN_VALA_C ${TARGET_NAME}
     OAuthProvider.vala
 PACKAGES
     ${DEPS_PACKAGES}
+    config
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}
+    --vapidir ${CMAKE_SOURCE_DIR}/src
 )
 
 add_library(${TARGET_NAME} MODULE ${OAUTHPLUGIN_VALA_C})

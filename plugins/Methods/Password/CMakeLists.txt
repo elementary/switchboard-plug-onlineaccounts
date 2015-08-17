@@ -9,8 +9,10 @@ vala_precompile(PASSWORDPLUGIN_VALA_C ${TARGET_NAME}
     PasswordProvider.vala
 PACKAGES
     ${DEPS_PACKAGES}
+    config
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}
+    --vapidir ${CMAKE_SOURCE_DIR}/src
 )
 
 add_library(${TARGET_NAME} MODULE ${PASSWORDPLUGIN_VALA_C})

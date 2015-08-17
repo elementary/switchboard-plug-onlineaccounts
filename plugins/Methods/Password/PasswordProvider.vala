@@ -45,7 +45,7 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
         info.set_identity_type (Signon.IdentityType.APP);
         info.set_secret ("", true);
         info.set_method ("password", {"password", null});
-        info.access_control_list_append (new Signon.SecurityContext.from_values ("*", "*"));
+        info.access_control_list_append (new Signon.SecurityContext.from_values ("%s/bin/switchboard".printf (Build.CMAKE_INSTALL_PREFIX), "*"));
         var identity = new Signon.Identity ();
         identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
         

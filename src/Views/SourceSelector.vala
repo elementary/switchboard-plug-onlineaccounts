@@ -72,7 +72,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         scroll.set_size_request (150, 150);
         scroll.hscrollbar_policy = Gtk.PolicyType.NEVER;
         scroll.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
-        scroll.shadow_type = Gtk.ShadowType.IN;
         scroll.expand = true;
         scroll.add (tree_view);
 
