@@ -20,9 +20,8 @@
           <setting name="TokenHost">graph.facebook.com</setting>
           <setting name="AuthPath">/dialog/oauth</setting>
           <setting name="TokenPath">/oauth/access_token</setting>
-          <setting name="RedirectUri">http://elementaryos.org/</setting>
-          <setting name="AuthQuery">display=popup</setting>
-          <setting name="Scope">publish_stream,read_stream,status_update,user_photos,friends_photos,xmpp_login</setting>
+          <setting name="RedirectUri">http://elementary.io/</setting>
+          <setting name="Scope">public_profile,email,user_friends</setting>
           <setting name="ClientId">217719465038528</setting>
           <setting name="ClientSecret">394982b75bcd14e6859ffc2c6884ac23</setting>
           <setting type="as" name="AllowedSchemes">['https','http']</setting>

@@ -41,9 +41,8 @@ public class OnlineAccounts.Plugins.OAuth.Facebook.ProviderPlugin : OnlineAccoun
         try {
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
-
             var root_object = parser.get_root ().get_object ();
-            string username = root_object.get_string_member ("username");
+            string username = root_object.get_string_member ("name");
             plugin.account.set_display_name (username);
         } catch (Error e) {
             critical (e.message);
