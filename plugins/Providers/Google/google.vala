@@ -37,13 +37,14 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
             call.run ();
         } catch (Error e) {
             critical (e.message);
+            return;
         }
         try {
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
 
-            var root_object = parser.get_root ().get_object ();
-            string mail = root_object.get_string_member ("email");
+            weak Json.Object root_object = parser.get_root ().get_object ();
+            unowned string mail = root_object.get_string_member ("email");
             plugin.account.set_display_name (mail);
         } catch (Error e) {
             critical (e.message);
@@ -66,8 +67,8 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
 
-            var root_object = parser.get_root ().get_object ();
-            string picture = root_object.get_string_member ("picture");
+            weak Json.Object root_object = parser.get_root ().get_object ();
+            unowned string picture = root_object.get_string_member ("picture");
             plugin.account.set_display_name (picture);
         } catch (Error e) {
             critical (e.message);

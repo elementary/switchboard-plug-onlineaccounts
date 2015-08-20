@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013 Pantheon Developers (http://launchpad.net/online-accounts-plug)
+ * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
 public class OnlineAccounts.RequestQueue : Object {

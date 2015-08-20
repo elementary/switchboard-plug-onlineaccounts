@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013 Pantheon Developers (http://launchpad.net/online-accounts-plug)
+ * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
 public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
@@ -89,7 +89,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         remember_button = new Gtk.CheckButton.with_label (_("Remember password"));
 
-        forgot_button = new Gtk.LinkButton.with_label ("http://elementaryos.org", _("Forgot password"));
+        forgot_button = new Gtk.LinkButton.with_label ("http://elementary.io", _("Forgot password"));
 
         captcha_entry = new Gtk.Entry ();
         captcha_entry.secondary_icon_name = "view-refresh";
@@ -150,12 +150,13 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             return false;
         }
 
-        var temp_string = params.get (OnlineAccounts.Key.USERNAME).get_string ();
+        weak Variant temp_string = params.get (OnlineAccounts.Key.USERNAME);
         username_entry.sensitive = query_username;
-        username_entry.text = temp_string ?? "";
+        if (temp_string != null)
+            username_entry.text = temp_string.get_string () ?? "";
+
         if (forgot_password_url != null) {
-            temp_string = params.get (OnlineAccounts.Key.FORGOT_PASSWORD).get_string ();
-            forgot_button.label = temp_string ?? _("Forgot password");
+            forgot_button.label = _("Forgot password…");
             forgot_button.uri = forgot_password_url;
             forgot_button.activate_link.connect (() =>{
                 warning ("forgot password");
@@ -165,17 +166,17 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             });
         }
 
-        temp_string = params.get (OnlineAccounts.Key.MESSAGE).get_string ();
+        temp_string = params.get (OnlineAccounts.Key.MESSAGE);
         if (temp_string != null) {
-            message_label.label = temp_string;
+            message_label.label = temp_string.get_string ();
             message_label.show ();
         } else {
             message_label.hide ();
         }
 
-        temp_string = params.get (OnlineAccounts.Key.CAPTCHA_URL).get_string ();
+        temp_string = params.get (OnlineAccounts.Key.CAPTCHA_URL);
         if (temp_string != null) {
-            query_captcha = refresh_captcha (temp_string);
+            query_captcha = refresh_captcha (temp_string.get_string ());
         }
 
         if (query_username  == true) {
@@ -232,29 +233,40 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
     private bool validate_params (HashTable<string, Variant> params) {
         /* determine query type and its validate its value */
-        query_username = params.get (OnlineAccounts.Key.QUERY_USERNAME).get_boolean ();
-        query_password = params.get (OnlineAccounts.Key.QUERY_PASSWORD).get_boolean ();
-        query_confirm = params.get (OnlineAccounts.Key.CONFIRM).get_boolean ();
+        if (OnlineAccounts.Key.QUERY_USERNAME in params) {
+            query_username = params.get (OnlineAccounts.Key.QUERY_USERNAME).get_boolean ();
+        }
+
+        if (OnlineAccounts.Key.QUERY_PASSWORD in params) {
+            query_password = params.get (OnlineAccounts.Key.QUERY_PASSWORD).get_boolean ();
+        }
+
+        if (OnlineAccounts.Key.CONFIRM in params) {
+            query_confirm = params.get (OnlineAccounts.Key.CONFIRM).get_boolean ();
+        }
 
         if (query_username == false && query_password == false && query_confirm == false) {
             warning ("No Valid Query found");
             return false;
         }
 
-        if (query_username == true && params.get (OnlineAccounts.Key.PASSWORD) == null) {
-            warning ("No username found, for query type non QueryUsername");
-            /* TODO: Is it a real issue */ 
-            //return false;
+        if (OnlineAccounts.Key.PASSWORD in params) {
+            old_password = params.get (OnlineAccounts.Key.PASSWORD).get_string ();
         }
-
-        old_password = params.get (OnlineAccounts.Key.PASSWORD).get_string ();
 
         if (query_confirm == true && old_password == null) {
             warning ("Wrong params for confirm query");
             return false;
         }
 
-        forgot_password_url = params.get (OnlineAccounts.Key.FORGOT_PASSWORD_URL).get_string ();
+        if (OnlineAccounts.Key.FORGOT_PASSWORD_URL in params) {
+            forgot_password_url = params.get (OnlineAccounts.Key.FORGOT_PASSWORD_URL).get_string ();
+        }
+
+        params.get_keys ().foreach ((key) => {
+            warning (key);
+        });
+
         return true;
     }
 

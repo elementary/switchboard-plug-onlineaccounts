@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013 Pantheon Developers (http://launchpad.net/online-accounts-plug)
+ * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
 public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
@@ -86,8 +86,16 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
     }
 
     private bool validate_params (HashTable<string, Variant> params) {
-        oauth_open_url = params.get (OnlineAccounts.Key.OPEN_URL).get_string ();
-        oauth_final_url = params.get (OnlineAccounts.Key.FINAL_URL).get_string ();
+        weak Variant open_url_var = params.get (OnlineAccounts.Key.OPEN_URL);
+        if (open_url_var != null) {
+            oauth_open_url = open_url_var.get_string ();
+        }
+
+        weak Variant final_url_var = params.get (OnlineAccounts.Key.FINAL_URL);
+        if (final_url_var != null) {
+            oauth_final_url = final_url_var.get_string ();
+        }
+
         if (oauth_open_url == null || oauth_final_url == null) {
             warning ("Missing open_url or final_url");
             return false;

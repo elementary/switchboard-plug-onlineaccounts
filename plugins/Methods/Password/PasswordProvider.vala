@@ -1,22 +1,23 @@
-/*
- * Copyright (C) 2012 Canonical, Inc
+// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
+/*-
+ * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 as
- * published by the Free Software Foundation.
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
+ * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
- * USA.
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
  *
- * Authors:
- *      Alberto Mardegan <alberto.mardegan@canonical.com>
+ * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
 public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
@@ -32,6 +33,7 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
         this.is_new = is_new;
         var account_service = new Ag.AccountService (account, null);
         auth_data = account_service.get_auth_data ();
+        session_data = auth_data.get_login_parameters (null);
         if (is_new) {
             setup_authentification ();
         }
@@ -53,44 +55,20 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
     }
     
     public async void authenticate (Signon.Identity identity, uint32 id) {
-        
         GLib.Variant? v_id = new GLib.Variant.uint32 (id);
         account.set_variant (gsignon_id, v_id);
-        var oauth_params_builder = new GLib.VariantBuilder (GLib.VariantType.VARDICT);
-        
-        var captcha_url = account.get_variant ("password/CaptchaUrl", null);
-        if (captcha_url != null)
-            oauth_params_builder.add ("{sv}", "CaptchaUrl", captcha_url);
-        
-        var forgot_url = account.get_variant ("password/ForgotPasswordUrl", null);
-        if (forgot_url != null) {
-            oauth_params_builder.add ("{sv}", "ForgotPasswordUrl", forgot_url);
-            oauth_params_builder.add ("{sv}", "ForgotPassword", new GLib.Variant.boolean (true));
+        try {
+            var session = identity.create_session ("password");
+            session_result = yield session.process_async (session_data, "password", null);
+            var access_token = session_result.lookup_value ("Secret", null).dup_string ();
+            info.set_secret (access_token, true);
+            var username = session_result.lookup_value ("UserName", null).dup_string ();
+            account.set_display_name (username);
+            identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
+        } catch (Error e) {
+            critical (e.message);
+            main_loop.quit ();
         }
-        
-        var query_user = account.get_variant ("password/QueryUserName", null);
-        if (query_user != null) {
-            oauth_params_builder.add ("{sv}", "QueryUserName", new GLib.Variant.boolean (bool.parse (query_user.get_string ())));
-        } else {
-            oauth_params_builder.add ("{sv}", "QueryUserName", new GLib.Variant.boolean (true));
-        }
-        
-        oauth_params_builder.add ("{sv}", "UiPolicy", new GLib.Variant.int32 (Signon.SessionDataUiPolicy.DEFAULT));
-        
-        session_data = oauth_params_builder.end ();
-        session_data = auth_data.get_login_parameters (session_data);
-            try {
-                var session = identity.create_session ("password");
-                session_result = yield session.process_async (session_data, "password", null);
-                var access_token = session_result.lookup_value ("Secret", null).dup_string ();
-                info.set_secret (access_token, true);
-                var username = session_result.lookup_value ("UserName", null).dup_string ();
-                account.set_display_name (username);
-                identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
-            } catch (Error e) {
-                critical (e.message);
-                main_loop.quit ();
-            }
         yield;
     }
     
