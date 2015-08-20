@@ -21,12 +21,11 @@
  */
 
 public class OnlineAccounts.Plugins.OAuth.Microsoft.ProviderPlugin : OnlineAccounts.ProviderPlugin {
-    
     public ProviderPlugin () {
         Object (plugin_name: "generic-oauth",
                 provider_name: "microsoft");
     }
-    
+
     public override void get_user_name (OnlineAccounts.Account plugin) {
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
         var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
@@ -39,21 +38,21 @@ public class OnlineAccounts.Plugins.OAuth.Microsoft.ProviderPlugin : OnlineAccou
         } catch (Error e) {
             critical (e.message);
         }
+
         try {
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
 
             var root_object = parser.get_root ().get_object ();
-            var mails_member = root_object.get_object_member ("emails");
-            string mail = mails_member.get_string_member ("account");
+            weak Json.Object mails_member = root_object.get_object_member ("emails");
+            unowned string mail = mails_member.get_string_member ("account");
             plugin.account.set_display_name (mail);
         } catch (Error e) {
             critical (e.message);
         }
     }
-    
+
     public override void get_user_image (OnlineAccounts.Account plugin) {
-        
         
     }
 }

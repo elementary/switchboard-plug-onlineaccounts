@@ -20,12 +20,11 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts.ProviderPlugin {
-    
     public ProviderPlugin () {
         Object (plugin_name: "generic-oauth",
                 provider_name: "google");
     }
-    
+
     public override void get_user_name (OnlineAccounts.Account plugin) {
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
         var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
@@ -39,6 +38,7 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
             critical (e.message);
             return;
         }
+
         try {
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
@@ -62,7 +62,9 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
             call.run ();
         } catch (Error e) {
             critical (e.message);
+            return;
         }
+
         try {
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
@@ -73,7 +75,6 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
         } catch (Error e) {
             critical (e.message);
         }
-        
     }
 }
 

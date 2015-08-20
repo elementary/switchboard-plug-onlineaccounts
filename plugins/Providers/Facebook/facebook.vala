@@ -20,12 +20,11 @@
  * Authored by: Corentin Noël <tintou@mailoo.org>
  */
 public class OnlineAccounts.Plugins.OAuth.Facebook.ProviderPlugin : OnlineAccounts.ProviderPlugin {
-    
     public ProviderPlugin () {
         Object (plugin_name: "generic-oauth",
                 provider_name: "facebook");
     }
-    
+
     public override void get_user_name (OnlineAccounts.Account plugin) {
         var token = plugin.session_result.lookup_value ("AccessToken", null).dup_string ();
         var client_id = plugin.session_data.lookup_value ("ClientId", null).dup_string ();
@@ -38,17 +37,18 @@ public class OnlineAccounts.Plugins.OAuth.Facebook.ProviderPlugin : OnlineAccoun
         } catch (Error e) {
             critical (e.message);
         }
+
         try {
             var parser = new Json.Parser ();
             parser.load_from_data (call.get_payload (), (ssize_t)call.get_payload_length ());
-            var root_object = parser.get_root ().get_object ();
-            string username = root_object.get_string_member ("name");
+            weak Json.Object root_object = parser.get_root ().get_object ();
+            unowned string username = root_object.get_string_member ("name");
             plugin.account.set_display_name (username);
         } catch (Error e) {
             critical (e.message);
         }
     }
-    
+
     public override void get_user_image (OnlineAccounts.Account plugin) {
         
     }
