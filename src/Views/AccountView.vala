@@ -88,23 +88,10 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         });
 
         if (i == 1) {
-            var no_service_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             var provider_name = plugin.account.manager.get_provider (plugin.account.get_provider_name ()).get_display_name ();
-            var no_service_label = new Gtk.Label (_("There are no apps currently installed that link to your %s account").printf (provider_name));
-            no_service_label.selectable = true;
-            no_service_label.wrap = true;
-            no_service_label.hexpand = true;
-            no_service_label.justify = Gtk.Justification.CENTER;
-            no_service_label.get_style_context ().add_class (Granite.StyleClass.H2_TEXT);
-            var no_service_image = new Gtk.Image.from_icon_name ("applications-internet-symbolic", Gtk.IconSize.DIALOG);
-            var no_service_grid = new Gtk.Grid ();
-            no_service_grid.orientation = Gtk.Orientation.VERTICAL;
-            no_service_grid.row_spacing = 6;
-            no_service_grid.add (no_service_image);
-            no_service_grid.add (no_service_label);
-            no_service_box.set_center_widget (no_service_grid);
-            no_service_box.expand = true;
-            this.add (no_service_box);
+            var no_service_label = _("There are no apps currently installed that link to your %s account").printf (provider_name);
+            var alert = new Granite.Widgets.AlertView (_("No Apps"), no_service_label, "applications-internet-symbolic");
+            this.add (alert);
         } else {
             var fake_grid_l = new Gtk.Grid ();
             fake_grid_l.hexpand = true;
