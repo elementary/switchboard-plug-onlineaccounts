@@ -22,7 +22,7 @@
           <setting type="int" name="UiPolicy">0</setting>
           <setting name="RedirectUri">http://elementaryos.org</setting>
           <setting name="ResponseType">code</setting>
-          <setting name="Scope">https://www.googleapis.com/auth/userinfo.profile https://docs.google.com/feeds/ https://www.googleapis.com/auth/googletalk https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login https://picasaweb.google.com/data/ https://www.google.com/m8/feeds/ https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly</setting>
+          <setting name="Scope">https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/drive</setting>
           <setting name="AuthQuery">access_type=offline&amp;approval_prompt=force</setting>
           <setting name="ClientId">14954701535-q8brnt0l1o1sknuftm7tt3iqlaa1c95f.apps.googleusercontent.com</setting>
           <setting name="ClientSecret">9sUlZ0q5-xBgAf5Rw7ZtuSjC</setting>
