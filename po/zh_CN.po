@@ -7,77 +7,43 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-12-23 15:19-0600\n"
+"POT-Creation-Date: 2015-09-23 14:26+0200\n"
 "PO-Revision-Date: 2015-04-24 04:36+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-25 05:36+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
+"X-Generator: Launchpad (build 17749)\n"
 
-#: ../src//OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "在线帐户"
+#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "添加..."
 
-#: ../src//OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr "将您的电脑与所有在线帐户同步"
-
-#: ../src//OnlineAccounts.vala:62
-msgid "Close"
-msgstr "关闭"
-
-#: ../src//OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "恢复"
-
-#: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
-#: ../src//Authentification/GraphicalDialog.vala:55
-msgid "Cancel"
-msgstr "取消"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "连接您的在线账户"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "登录以连接您的邮件、联系人和日历等应用。"
-
-#: ../src//OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "帐户“%s”已经删除。"
-
-#: ../src//OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "添加一个新账户..."
+#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "删除"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
 msgstr "要同步的内容："
 
-#: ../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:92
 msgid "There are no apps currently installed that link to your %s account"
 msgstr "当前没有安装任与您 %s 账户相连接的应用程序"
 
-#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
-msgid "Add…"
-msgstr "添加..."
+#: ../src//Views/AccountView.vala:93
+msgid "No Apps"
+msgstr ""
 
-#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
-msgid "Remove"
-msgstr "删除"
+#: ../src//Authentification/GraphicalDialog.vala:55
+#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "取消"
 
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "正在载入..."
-
-#: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:124
 msgid "Please enter your credentials…"
 msgstr "请输入您的认证信息..."
 
@@ -106,7 +72,6 @@ msgid "Remember password"
 msgstr "记住密码"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
-#: ../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
 msgstr "忘记密码"
 
@@ -121,6 +86,15 @@ msgstr "请输入上面的文本"
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
 msgstr "保存"
+
+#: ../src//Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "正在载入..."
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -181,3 +155,36 @@ msgstr "在您的电脑上启用所有 Google 服务"
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "包括联系人、邮件和日历等服务"
+
+#: ../src//OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "在线帐户"
+
+#: ../src//OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr "将您的电脑与所有在线帐户同步"
+
+#: ../src//OnlineAccounts.vala:62
+msgid "Close"
+msgstr "关闭"
+
+#: ../src//OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "恢复"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "连接您的在线账户"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "登录以连接您的邮件、联系人和日历等应用。"
+
+#: ../src//OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "帐户“%s”已经删除。"
+
+#: ../src//OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "添加一个新账户..."

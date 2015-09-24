@@ -7,80 +7,46 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-12-23 15:19-0600\n"
+"POT-Creation-Date: 2015-09-23 14:26+0200\n"
 "PO-Revision-Date: 2015-03-04 10:39+0000\n"
 "Last-Translator: Joachim Johansson <Unknown>\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-23 06:45+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
+"X-Generator: Launchpad (build 17749)\n"
 "X-Poedit-Language: Swedish\n"
 
-#: ../src//OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Online-konton"
+#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Lägg till…"
 
-#: ../src//OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr "Synkronisera din dator med alla dina online-konton på webben."
-
-#: ../src//OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Stäng"
-
-#: ../src//OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Återskapa"
-
-#: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
-#: ../src//Authentification/GraphicalDialog.vala:55
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Anslut dina online-konton"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Logga in för att ansluta till appar som Mail, Kontakter och Kalender"
-
-#: ../src//OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Kontot '%s' togs bort."
-
-#: ../src//OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Lägg till ett nytt konto..."
+#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Radera"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
 msgstr "Innehåll att synkronisera:"
 
-#: ../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:92
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
 "Det finns för tillfället inget program installerat som är anslutet till ditt "
 "%s-konto"
 
-#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
-msgid "Add…"
-msgstr "Lägg till…"
+#: ../src//Views/AccountView.vala:93
+msgid "No Apps"
+msgstr ""
 
-#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
-msgid "Remove"
-msgstr "Radera"
+#: ../src//Authentification/GraphicalDialog.vala:55
+#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Avbryt"
 
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Läser in..."
-
-#: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:124
 msgid "Please enter your credentials…"
 msgstr "Skriv in dina inloggningsuppgifter..."
 
@@ -109,7 +75,6 @@ msgid "Remember password"
 msgstr "Kom ihåg lösenord"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
-#: ../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
 msgstr "Bortglömt lösenord"
 
@@ -124,6 +89,15 @@ msgstr "Skriv in ovanstående text här"
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
 msgstr "Spara"
+
+#: ../src//Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Läser in..."
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -184,3 +158,36 @@ msgstr "Kom åt alla Google-tjänster på din dator"
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "Inkluderar Kontakter, Mail, och Kalendrar"
+
+#: ../src//OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Online-konton"
+
+#: ../src//OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr "Synkronisera din dator med alla dina online-konton på webben."
+
+#: ../src//OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Stäng"
+
+#: ../src//OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Återskapa"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Anslut dina online-konton"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "Logga in för att ansluta till appar som Mail, Kontakter och Kalender"
+
+#: ../src//OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "Kontot '%s' togs bort."
+
+#: ../src//OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Lägg till ett nytt konto..."

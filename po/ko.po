@@ -7,77 +7,43 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-12-23 15:19-0600\n"
+"POT-Creation-Date: 2015-09-23 14:26+0200\n"
 "PO-Revision-Date: 2015-03-20 11:40+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-23 06:45+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
+"X-Generator: Launchpad (build 17749)\n"
 
-#: ../src//OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "온라인 계정"
+#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "추가…"
 
-#: ../src//OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr "인터넷 상의 온라인 계정과 컴퓨터를 동기화합니다."
-
-#: ../src//OnlineAccounts.vala:62
-msgid "Close"
-msgstr "닫기"
-
-#: ../src//OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "복원"
-
-#: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
-#: ../src//Authentification/GraphicalDialog.vala:55
-msgid "Cancel"
-msgstr "취소"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "온라인 계정 연결"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "메일, 주소록, 일정표 등의 프로그램에 접속하기 위해 가입하기."
-
-#: ../src//OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "계정 '%s'가 제거되었습니다."
-
-#: ../src//OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "새로 계정 만들기…"
+#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "제거"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
 msgstr "동기화할 항목:"
 
-#: ../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:92
 msgid "There are no apps currently installed that link to your %s account"
 msgstr "현재 사용자의 %s 계정에 연결하기 위한 프로그램이 설치되어 있지 않습니다"
 
-#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
-msgid "Add…"
-msgstr "추가…"
+#: ../src//Views/AccountView.vala:93
+msgid "No Apps"
+msgstr ""
 
-#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
-msgid "Remove"
-msgstr "제거"
+#: ../src//Authentification/GraphicalDialog.vala:55
+#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "취소"
 
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "불러오는 중..."
-
-#: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:124
 msgid "Please enter your credentials…"
 msgstr "로그인 정보를 입력하세요..."
 
@@ -106,7 +72,6 @@ msgid "Remember password"
 msgstr "비밀번호 기억하기"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
-#: ../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
 msgstr "비밀번호 찾기"
 
@@ -121,6 +86,15 @@ msgstr "텍스트 위에 입력하기"
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
 msgstr "저장"
+
+#: ../src//Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "불러오는 중..."
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -181,3 +155,36 @@ msgstr "사용자 컴퓨터의 모든 구글 서비스에 접속하기"
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "연락처, 메일, 일정표 포함하기"
+
+#: ../src//OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "온라인 계정"
+
+#: ../src//OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr "인터넷 상의 온라인 계정과 컴퓨터를 동기화합니다."
+
+#: ../src//OnlineAccounts.vala:62
+msgid "Close"
+msgstr "닫기"
+
+#: ../src//OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "복원"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "온라인 계정 연결"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "메일, 주소록, 일정표 등의 프로그램에 접속하기 위해 가입하기."
+
+#: ../src//OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "계정 '%s'가 제거되었습니다."
+
+#: ../src//OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "새로 계정 만들기…"

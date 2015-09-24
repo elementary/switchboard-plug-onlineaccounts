@@ -7,81 +7,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-23 15:19-0600\n"
+"POT-Creation-Date: 2015-09-23 14:26+0200\n"
 "PO-Revision-Date: 2014-10-12 11:03+0000\n"
 "Last-Translator: Yennefer of Vengerberg <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-23 06:45+0000\n"
-"X-Generator: Launchpad (build 17430)\n"
+"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
+"X-Generator: Launchpad (build 17749)\n"
 "Language: bg\n"
 
-#: ../src//OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Мрежови Абонаменти"
+#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Добавяне…"
 
-#: ../src//OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr ""
-"Сверете вашият компютър със всички ваши мрежови абонаментни потребители из "
-"мрежата."
-
-#: ../src//OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Затвори"
-
-#: ../src//OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Възстанови"
-
-#: ../src//OnlineAccounts.vala:64 ../src//Authentification/WebDialog.vala:34
-#: ../src//Authentification/GraphicalDialog.vala:55
-msgid "Cancel"
-msgstr "Отказ"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Свържете Вашите Мрежови Потребителски Абонаменти"
-
-#: ../src//OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Впишете се, за да де свържете с приложения като Поща, Контакти, и Календар."
-
-#: ../src//OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Потребителски Абонамент  '%s' Премахнат."
-
-#: ../src//OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Добави нов акаунт..."
+#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Премахване"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
 msgstr "Съдържание за синхронизиране:"
 
-#: ../src//Views/AccountView.vala:96
+#: ../src//Views/AccountView.vala:92
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
 
-#: ../src//Views/SourceSelector.vala:90 ../src//Views/SourceSelector.vala:91
-msgid "Add…"
-msgstr "Добавяне…"
+#: ../src//Views/AccountView.vala:93
+msgid "No Apps"
+msgstr ""
 
-#: ../src//Views/SourceSelector.vala:95 ../src//Views/SourceSelector.vala:96
-msgid "Remove"
-msgstr "Премахване"
+#: ../src//Authentification/GraphicalDialog.vala:55
+#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Отказ"
 
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:122
-msgid "Loading…"
-msgstr "Зареждане..."
-
-#: ../src//Authentification/WebDialog.vala:115
 #: ../src//Authentification/GraphicalDialog.vala:57
+#: ../src//Authentification/WebDialog.vala:124
 msgid "Please enter your credentials…"
 msgstr "Моля въведете си данните..."
 
@@ -110,7 +73,6 @@ msgid "Remember password"
 msgstr "Запомни паролата"
 
 #: ../src//Authentification/GraphicalDialog.vala:92
-#: ../src//Authentification/GraphicalDialog.vala:158
 msgid "Forgot password"
 msgstr "Забравена парола"
 
@@ -125,6 +87,15 @@ msgstr "Въведете погорния текст тук"
 #: ../src//Authentification/GraphicalDialog.vala:103
 msgid "Save"
 msgstr "Съхрани"
+
+#: ../src//Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src//Authentification/WebDialog.vala:38
+#: ../src//Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Зареждане..."
 
 #: ../src//Translation.vala:24
 msgid "Calendars"
@@ -185,3 +156,39 @@ msgstr "Достъпи всички Google услуги на своя компю
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "Включва контакти, поща и календар"
+
+#: ../src//OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Мрежови Абонаменти"
+
+#: ../src//OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr ""
+"Сверете вашият компютър със всички ваши мрежови абонаментни потребители из "
+"мрежата."
+
+#: ../src//OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Затвори"
+
+#: ../src//OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Възстанови"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Свържете Вашите Мрежови Потребителски Абонаменти"
+
+#: ../src//OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Впишете се, за да де свържете с приложения като Поща, Контакти, и Календар."
+
+#: ../src//OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "Потребителски Абонамент  '%s' Премахнат."
+
+#: ../src//OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Добави нов акаунт..."
