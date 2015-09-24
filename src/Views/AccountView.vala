@@ -67,11 +67,9 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             unowned string i18n_domain = service.get_i18n_domain ();
 
             var service_image = new Gtk.Image.from_icon_name (service.get_icon_name (), Gtk.IconSize.DIALOG);
-            service_image.margin_left = 12;
 
             var service_label = new Gtk.Label ("");
             service_label.set_markup ("<big>%s</big>".printf (Markup.escape_text (GLib.dgettext (i18n_domain, service.get_display_name ()))));
-
             ((Gtk.Misc) service_label).xalign = 0;
 
             var service_switch = new Gtk.Switch ();
@@ -81,9 +79,13 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             service_switch.active = plugin.account.get_enabled ();
             service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service);});
 
+            plugin.account.select_service (null);
+            var app_button = create_app_button (service);
+
             apps_grid.attach (service_image, 1, i, 1, 1);
             apps_grid.attach (service_label, 2, i, 1, 1);
             apps_grid.attach (service_switch, 3, i, 1, 1);
+            apps_grid.attach (app_button, 4, i, 1, 1);
             i++;
         });
 
@@ -98,7 +100,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             var fake_grid_r = new Gtk.Grid ();
             fake_grid_r.hexpand = true;
             apps_grid.attach (fake_grid_l, 0, 0, 1, 1);
-            apps_grid.attach (fake_grid_r, 4, 0, 1, 1);
+            apps_grid.attach (fake_grid_r, 5, 0, 1, 1);
 
             scrolled_window.add_with_viewport (apps_grid);
             main_grid.add (user_label);
@@ -106,8 +108,6 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             this.add (scrolled_window);
             apps_grid.attach (apps_label, 1, 0, 2, 1);
         }
-
-        plugin.account.select_service (null);
     }
 
     private void on_service_switch_activated (bool enabled, Ag.Service service) {
@@ -184,5 +184,85 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         });
 
         main_loop.run ();
+    }
+
+    private Gtk.Widget create_app_button (Ag.Service service) {
+        var button = new Gtk.ToggleButton ();
+        button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        button.image = new Gtk.Image.from_icon_name ("application-menu-symbolic", Gtk.IconSize.MENU);
+        var popover = new Gtk.Popover (button);
+        var popover_app_grid = new Gtk.Grid ();
+        popover_app_grid.column_spacing = 6;
+        popover_app_grid.row_spacing = 6;
+        var popover_scrolled = new Gtk.ScrolledWindow (null, null);
+        popover_scrolled.margin = 6;
+        popover_scrolled.add_with_viewport (popover_app_grid);
+        popover_scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
+        popover_scrolled.height_request = 50;
+        popover.add (popover_scrolled);
+        popover.hide.connect (() => {
+            button.active = false;
+        });
+
+        button.toggled.connect (() => {
+            if (button.active) {
+                popover.show_all ();
+            }
+        });
+        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
+        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
+        var main_loop = new GLib.MainLoop ();
+        unowned List<Signon.SecurityContext> acl = null;
+        identity.query_info ((self, info, error) => {
+            if (error != null) {
+                critical (error.message);
+                main_loop.quit ();
+                return;
+            }
+
+            acl = info.get_access_control_list ();
+            main_loop.quit ();
+        });
+
+        main_loop.run ();
+        int i = 0;
+        plugin.account.manager.list_applications_by_service (service).foreach ((app) => {
+            var app_info = app.get_desktop_app_info ();
+            unowned string exec = app_info.get_executable ();
+            string path = exec;
+            if (exec.contains ("/") == false) {
+                path = Environment.find_program_in_path (exec);
+            }
+
+            bool found = false;
+            for (unowned List<Signon.SecurityContext> nth = acl.first (); nth != null; nth = nth.next) {
+                if (nth.data.sys_ctx == path) {
+                    found = true;
+                    break;
+                }
+            }
+
+            var app_image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
+            var app_name = new Gtk.Label (app_info.get_display_name ());
+            app_name.hexpand = true;
+            var app_switch = new Gtk.Switch ();
+            app_switch.active = found;
+            app_switch.activate.connect (() => {
+                if (app_switch.active) {
+                    allow_app (path);
+                } else {
+                    deny_app (path);
+                }
+            });
+            popover_app_grid.attach (app_image, 0, i, 1, 1);
+            popover_app_grid.attach (app_name, 1, i, 1, 1);
+            popover_app_grid.attach (app_switch, 2, i, 1, 1);
+            i++;
+        });
+
+        var grid = new Gtk.Grid ();
+        grid.valign = Gtk.Align.CENTER;
+        grid.add (button);
+        return grid;
     }
 }
