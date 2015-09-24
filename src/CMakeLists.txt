@@ -12,6 +12,7 @@ vala_precompile (POA_VALA_C "libpoa"
 PACKAGES
     ${DEPS_PACKAGES}
     config
+    glib-addons
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}
     --vapidir ${CMAKE_CURRENT_SOURCE_DIR}
@@ -37,6 +38,7 @@ vala_precompile (VALA_C ${PLUGNAME}
 PACKAGES
     ${DEPS_PACKAGES}
     config
+    glib-addons
     ${PLUGNAME}
 OPTIONS
     ${GLOBAL_VALAC_OPTIONS}

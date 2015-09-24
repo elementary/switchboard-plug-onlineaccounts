@@ -92,11 +92,6 @@ find_package (Vala REQUIRED)
 include (ValaVersion)
 ensure_vala_version ("0.24.0" MINIMUM)
 
-# Some glib functions are not in the vapi for valac < 0.30
-if(${VALA_VERSION} VERSION_LESS "0.30.0")
-  set(DEPS_PACKAGES ${DEPS_PACKAGES} glib-addons)
-endif()
-
 find_package (PkgConfig)
 # Add all your dependencies to the list below
 pkg_check_modules (DEPS REQUIRED ${DEPS_PKG})
