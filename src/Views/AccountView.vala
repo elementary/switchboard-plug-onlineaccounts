@@ -23,6 +23,7 @@
 public class OnlineAccounts.AccountView : Gtk.Grid {
     Gtk.Grid main_grid;
     OnlineAccounts.Account plugin;
+    Signon.Identity identity;
 
     public AccountView (OnlineAccounts.Account plugin) {
         orientation = Gtk.Orientation.VERTICAL;
@@ -32,6 +33,10 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         main_grid.margin = 12;
         main_grid.column_spacing = 6;
         main_grid.row_spacing = 6;
+
+        plugin.account.select_service (null);
+        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
+        identity = new Signon.Identity.from_db (v_id.get_uint32 ());
 
         string label_str = plugin.account.manager.get_provider (plugin.account.get_provider_name ()).get_display_name ();
         var name = plugin.account.get_display_name ();
@@ -77,15 +82,33 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             service_switch.tooltip_text = GLib.dgettext (i18n_domain, service.get_description ());
             plugin.account.select_service (service);
             service_switch.active = plugin.account.get_enabled ();
-            service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service);});
 
-            plugin.account.select_service (null);
-            var app_button = create_app_button (service);
+            var app_button = new Gtk.ToggleButton ();
+            app_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            app_button.image = new Gtk.Image.from_icon_name ("application-menu-symbolic", Gtk.IconSize.MENU);
+            app_button.sensitive = plugin.account.get_enabled ();
+
+            var popover = new ACLPopover (plugin.account, service, identity);
+            popover.relative_to = app_button;
+            popover.hide.connect (() => {
+                app_button.active = false;
+            });
+
+            app_button.toggled.connect (() => {
+                if (app_button.active) {
+                    popover.show_all ();
+                }
+            });
+
+            var app_button_grid = new Gtk.Grid ();
+            app_button_grid.valign = Gtk.Align.CENTER;
+            app_button_grid.add (app_button);
+            service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service, app_button, popover);});
 
             apps_grid.attach (service_image, 1, i, 1, 1);
             apps_grid.attach (service_label, 2, i, 1, 1);
             apps_grid.attach (service_switch, 3, i, 1, 1);
-            apps_grid.attach (app_button, 4, i, 1, 1);
+            apps_grid.attach (app_button_grid, 4, i, 1, 1);
             i++;
         });
 
@@ -110,159 +133,14 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         }
     }
 
-    private void on_service_switch_activated (bool enabled, Ag.Service service) {
+    private void on_service_switch_activated (bool enabled, Ag.Service service, Gtk.Button button, ACLPopover popover) {
+        button.sensitive = enabled;
         plugin.account.select_service (service);
         plugin.account.set_enabled (enabled);
-        plugin.account.manager.list_applications_by_service (service).foreach ((app) => {
-            var app_info = app.get_desktop_app_info ();
-            unowned string exec = app_info.get_executable ();
-            string path = exec;
-            if (exec.contains ("/") == false) {
-                path = Environment.find_program_in_path (exec);
-            }
-
-            if (enabled) {
-                allow_app (path);
-            } else {
-                deny_app (path);
-            }
-        });
-
-        plugin.account.store_async.begin (null);
-    }
-
-    private void allow_app (string app) {
-        plugin.account.select_service (null);
-        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
-        var main_loop = new GLib.MainLoop ();
-        identity.query_info ((self, info, error) => {
-            if (error != null) {
-                critical (error.message);
-                return;
-            }
-
-            info.access_control_list_append (new Signon.SecurityContext.from_values (app, "*"));
-            identity.store_credentials_with_info (info, (self, id, error) => {
-                if (error != null) {
-                    critical (error.message);
-                }
-
-                main_loop.quit ();
-            });
-        });
-
-        main_loop.run ();
-    }
-
-    private void deny_app (string app) {
-        plugin.account.select_service (null);
-        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
-        var main_loop = new GLib.MainLoop ();
-        identity.query_info ((self, info, error) => {
-            if (error != null) {
-                critical (error.message);
-                return;
-            }
-
-            unowned List<Signon.SecurityContext> acl = info.get_access_control_list ();
-            for (unowned List<Signon.SecurityContext> nth = acl.first (); nth != null; nth = nth.next) {
-                if (nth.data.sys_ctx == app) {
-                    acl.remove (nth.data);
-                }
-            }
-
-            info.set_access_control_list ((Signon.SecurityContextList) acl);
-            identity.store_credentials_with_info (info, (self, id, error) => {
-                if (error != null) {
-                    critical (error.message);
-                }
-
-                main_loop.quit ();
-            });
-        });
-
-        main_loop.run ();
-    }
-
-    private Gtk.Widget create_app_button (Ag.Service service) {
-        var button = new Gtk.ToggleButton ();
-        button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        button.image = new Gtk.Image.from_icon_name ("application-menu-symbolic", Gtk.IconSize.MENU);
-        var popover = new Gtk.Popover (button);
-        var popover_app_grid = new Gtk.Grid ();
-        popover_app_grid.column_spacing = 6;
-        popover_app_grid.row_spacing = 6;
-        var popover_scrolled = new Gtk.ScrolledWindow (null, null);
-        popover_scrolled.margin = 6;
-        popover_scrolled.add_with_viewport (popover_app_grid);
-        popover_scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
-        popover_scrolled.height_request = 50;
-        popover.add (popover_scrolled);
-        popover.hide.connect (() => {
-            button.active = false;
-        });
-
-        button.toggled.connect (() => {
-            if (button.active) {
-                popover.show_all ();
-            }
-        });
-        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
-        var main_loop = new GLib.MainLoop ();
-        unowned List<Signon.SecurityContext> acl = null;
-        identity.query_info ((self, info, error) => {
-            if (error != null) {
-                critical (error.message);
-                main_loop.quit ();
-                return;
-            }
-
-            acl = info.get_access_control_list ();
-            main_loop.quit ();
-        });
-
-        main_loop.run ();
-        int i = 0;
-        plugin.account.manager.list_applications_by_service (service).foreach ((app) => {
-            var app_info = app.get_desktop_app_info ();
-            unowned string exec = app_info.get_executable ();
-            string path = exec;
-            if (exec.contains ("/") == false) {
-                path = Environment.find_program_in_path (exec);
-            }
-
-            bool found = false;
-            for (unowned List<Signon.SecurityContext> nth = acl.first (); nth != null; nth = nth.next) {
-                if (nth.data.sys_ctx == path) {
-                    found = true;
-                    break;
-                }
-            }
-
-            var app_image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
-            var app_name = new Gtk.Label (app_info.get_display_name ());
-            app_name.hexpand = true;
-            var app_switch = new Gtk.Switch ();
-            app_switch.active = found;
-            app_switch.activate.connect (() => {
-                if (app_switch.active) {
-                    allow_app (path);
-                } else {
-                    deny_app (path);
-                }
-            });
-            popover_app_grid.attach (app_image, 0, i, 1, 1);
-            popover_app_grid.attach (app_name, 1, i, 1, 1);
-            popover_app_grid.attach (app_switch, 2, i, 1, 1);
-            i++;
-        });
-
-        var grid = new Gtk.Grid ();
-        grid.valign = Gtk.Align.CENTER;
-        grid.add (button);
-        return grid;
+        if (enabled) {
+            popover.allow_service ();
+        } else {
+            popover.deny_service ();
+        }
     }
 }
