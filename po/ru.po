@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-09-23 14:26+0200\n"
-"PO-Revision-Date: 2015-10-19 23:54+0000\n"
+"PO-Revision-Date: 2015-10-20 15:41+0000\n"
 "Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-20 05:41+0000\n"
+"X-Launchpad-Export-Date: 2015-10-21 06:15+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
@@ -27,11 +27,11 @@ msgstr "Удалить"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
-msgstr "Объем синхронизации:"
+msgstr "Синхронизируемые данные:"
 
 #: ../src//Views/AccountView.vala:92
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "Нет установленных приложений для коммуникации с учётной записи %s"
+msgstr "Нет установленных приложений для синхронизации с учётной записью %s"
 
 #: ../src//Views/AccountView.vala:93
 msgid "No Apps"
@@ -40,7 +40,7 @@ msgstr "Нет приложений"
 #: ../src//Authentification/GraphicalDialog.vala:55
 #: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "Отменить"
 
 #: ../src//Authentification/GraphicalDialog.vala:57
 #: ../src//Authentification/WebDialog.vala:124
@@ -102,7 +102,7 @@ msgstr "Календари"
 
 #: ../src//Translation.vala:25
 msgid "Sync your calendars"
-msgstr "Синхронизация календаря"
+msgstr "Синхронизация календарей"
 
 #: ../src//Translation.vala:26
 msgid "Contacts"
@@ -138,23 +138,23 @@ msgstr "Общение с друзьями"
 
 #: ../src//Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Соединить сервисы Outlook и OneDrive с вашим компьютером"
+msgstr "Синхронизировать сервисы Outlook и OneDrive с вашим компьютером"
 
 #: ../src//Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr "Соединить все сервисы Yahoo! с вашим компьютером"
+msgstr "Синхронизировать все сервисы Yahoo! с вашим компьютером"
 
 #: ../src//Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr "Соединить всё содержание Facebook с вашим компьютером"
+msgstr "Синхронизировать все данные Facebook с вашим компьютером"
 
 #: ../src//Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr "Соединить все сервисы Google с вашим компьютером"
+msgstr "Синхронизировать все сервисы Google с вашим компьютером"
 
 #: ../src//Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr "Соединить контакты, почту и календарь с вашим компьютером"
+msgstr "Синхронизировать контакты, почту и календарь с вашим компьютером"
 
 #: ../src//OnlineAccounts.vala:47
 msgid "Online Accounts"
@@ -176,12 +176,13 @@ msgstr "Восстановить"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr "Соедините ваши сетевые профили"
+msgstr "Подключите Ваши сетевые профили"
 
 #: ../src//OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Войдите чтобы соединить приложения такие как Почта, Контакты и Календарь."
+"Войдите, чтобы синхронизировать приложения, такие как Почта, Контакты и "
+"Календарь."
 
 #: ../src//OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
@@ -189,4 +190,4 @@ msgstr "Профиль '%s' удален."
 
 #: ../src//OnlineAccounts.vala:256
 msgid "Add a new account…"
-msgstr "Добавить сетевой профиль..."
+msgstr "Добавить новый аккаунт..."
