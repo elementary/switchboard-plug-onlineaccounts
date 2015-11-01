@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-09-23 14:26+0200\n"
-"PO-Revision-Date: 2015-01-11 18:48+0000\n"
-"Last-Translator: Leonardo Lemos <leonardolemos@live.com>\n"
+"PO-Revision-Date: 2015-10-31 23:45+0000\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-11-01 05:33+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
 msgid "Add…"
@@ -35,7 +35,7 @@ msgstr "Não há aplicativos instalados relacionados à sua conta do %s"
 
 #: ../src//Views/AccountView.vala:93
 msgid "No Apps"
-msgstr ""
+msgstr "Nenhum aplicativo"
 
 #: ../src//Authentification/GraphicalDialog.vala:55
 #: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
@@ -89,7 +89,7 @@ msgstr "Salvar"
 
 #: ../src//Authentification/GraphicalDialog.vala:159
 msgid "Forgot password…"
-msgstr ""
+msgstr "Esqueci minha senha..."
 
 #: ../src//Authentification/WebDialog.vala:38
 #: ../src//Authentification/WebDialog.vala:131
