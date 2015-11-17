@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-09-23 14:26+0200\n"
-"PO-Revision-Date: 2014-01-19 05:33+0000\n"
+"PO-Revision-Date: 2015-11-17 00:32+0000\n"
 "Last-Translator: Beqa Arabuli <arabulibeqa@yahoo.com>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-11-17 05:52+0000\n"
+"X-Generator: Launchpad (build 17847)\n"
 
 #: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
 msgid "Add…"
-msgstr ""
+msgstr "დამატება..."
 
 #: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
 msgid "Remove"
-msgstr ""
+msgstr "წაშლა"
 
 #: ../src//Views/AccountView.vala:47
 msgid "Content to synchronise:"
