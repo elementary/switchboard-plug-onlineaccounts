@@ -36,3 +36,4 @@ _("Access all Yahoo! services on your computer");
 _("Access all Facebook contents on your computer");
 _("Access all Google services on your computer");
 _("Includes Contacts, Mails, and Calendar");
+_("Scrobble your music");
