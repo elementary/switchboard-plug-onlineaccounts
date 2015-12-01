@@ -2,189 +2,193 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 14:26+0200\n"
+"POT-Creation-Date: 2015-11-27 15:01-0200\n"
 "PO-Revision-Date: 2015-06-18 09:38+0000\n"
 "Last-Translator: Adnan <ado.pasa.ado@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
-#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Dodaj..."
+#: ../src/Translation.vala:24
+msgid "Calendars"
+msgstr "Kalendari"
 
-#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Ukloni"
+#: ../src/Translation.vala:25
+msgid "Sync your calendars"
+msgstr "Sinhorizuj kalendare"
 
-#: ../src//Views/AccountView.vala:47
+#: ../src/Translation.vala:26
+msgid "Contacts"
+msgstr "Kontakti"
+
+#: ../src/Translation.vala:27
+msgid "Sync your contacts"
+msgstr "Sinhronizujte vaše kontakte"
+
+#: ../src/Translation.vala:28
+msgid "Sync your files"
+msgstr "Sinhronizujte vaše datoteke"
+
+#: ../src/Translation.vala:29
+msgid "Emails"
+msgstr "Elektronska pošta"
+
+#: ../src/Translation.vala:30
+msgid "Sync your emails"
+msgstr "Sinhronizujte vašu elektronsku poštu"
+
+#: ../src/Translation.vala:31
+msgid "Sync your photos"
+msgstr "Sinhronizujte vaše fotografije"
+
+#: ../src/Translation.vala:32
+msgid "Watch your newsfeed"
+msgstr "Čitajte vašu listu vijesti"
+
+#: ../src/Translation.vala:33
+msgid "Chat with your friends"
+msgstr "Ćaskajte sa prijateljima"
+
+#: ../src/Translation.vala:34
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "Pristupite svim Outlook i OneDrive servisima na vašem računaru"
+
+#: ../src/Translation.vala:35
+msgid "Access all Yahoo! services on your computer"
+msgstr "Pristupite svim Yahoo! servisima na vašem računaru"
+
+#: ../src/Translation.vala:36
+msgid "Access all Facebook contents on your computer"
+msgstr "Pristupite svom Facebook sadržaju na vašem računaru"
+
+#: ../src/Translation.vala:37
+msgid "Access all Google services on your computer"
+msgstr "Pristupite svim Google servisima na vašem računaru"
+
+#: ../src/Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr "Uključuje kontakte, elektronsku poštu i kalendar"
+
+#: ../src/Translation.vala:39
+msgid "Scrobble your music"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: ../src/Authentification/GraphicalDialog.vala:57
+#: ../src/Authentification/WebDialog.vala:124
+msgid "Please enter your credentials…"
+msgstr "Molimo unesite vaše podatke za prijavu..."
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Korisničko ime:"
+
+#: ../src/Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "marko_marković"
+
+#: ../src/Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Šifra:"
+
+#: ../src/Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Nova šifra:"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Potvrdite šifru:"
+
+#: ../src/Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Zapamti šifru"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Forgot password"
+msgstr "Zaboravljena šifra"
+
+#: ../src/Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Ponovo učitaj kod za provjeru"
+
+#: ../src/Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Ovdje unesite tekst iznad"
+
+#: ../src/Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Sačuvaj"
+
+#: ../src/Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Učitavam..."
+
+#: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr "Sadržaj za sinhronizaciju:"
 
-#: ../src//Views/AccountView.vala:92
+#: ../src/Views/AccountView.vala:117
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
 "Trenutno nema instaliranih aplikacija koje se povezuju sa Vašim %s računom"
 
-#: ../src//Views/AccountView.vala:93
+#: ../src/Views/AccountView.vala:118
 msgid "No Apps"
 msgstr ""
 
-#: ../src//Authentification/GraphicalDialog.vala:55
-#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Otkaži"
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Dodaj..."
 
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:124
-msgid "Please enter your credentials…"
-msgstr "Molimo unesite vaše podatke za prijavu..."
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Ukloni"
 
-#: ../src//Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "Korisničko ime:"
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "marko_marković"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "Šifra:"
-
-#: ../src//Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "Nova šifra:"
-
-#: ../src//Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "Potvrdite šifru:"
-
-#: ../src//Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "Zapamti šifru"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "Zaboravljena šifra"
-
-#: ../src//Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "Ponovo učitaj kod za provjeru"
-
-#: ../src//Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "Ovdje unesite tekst iznad"
-
-#: ../src//Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "Sačuvaj"
-
-#: ../src//Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr ""
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:131
-msgid "Loading…"
-msgstr "Učitavam..."
-
-#: ../src//Translation.vala:24
-msgid "Calendars"
-msgstr "Kalendari"
-
-#: ../src//Translation.vala:25
-msgid "Sync your calendars"
-msgstr "Sinhorizuj kalendare"
-
-#: ../src//Translation.vala:26
-msgid "Contacts"
-msgstr "Kontakti"
-
-#: ../src//Translation.vala:27
-msgid "Sync your contacts"
-msgstr "Sinhronizujte vaše kontakte"
-
-#: ../src//Translation.vala:28
-msgid "Sync your files"
-msgstr "Sinhronizujte vaše datoteke"
-
-#: ../src//Translation.vala:29
-msgid "Emails"
-msgstr "Elektronska pošta"
-
-#: ../src//Translation.vala:30
-msgid "Sync your emails"
-msgstr "Sinhronizujte vašu elektronsku poštu"
-
-#: ../src//Translation.vala:31
-msgid "Sync your photos"
-msgstr "Sinhronizujte vaše fotografije"
-
-#: ../src//Translation.vala:32
-msgid "Watch your newsfeed"
-msgstr "Čitajte vašu listu vijesti"
-
-#: ../src//Translation.vala:33
-msgid "Chat with your friends"
-msgstr "Ćaskajte sa prijateljima"
-
-#: ../src//Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Pristupite svim Outlook i OneDrive servisima na vašem računaru"
-
-#: ../src//Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr "Pristupite svim Yahoo! servisima na vašem računaru"
-
-#: ../src//Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr "Pristupite svom Facebook sadržaju na vašem računaru"
-
-#: ../src//Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr "Pristupite svim Google servisima na vašem računaru"
-
-#: ../src//Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr "Uključuje kontakte, elektronsku poštu i kalendar"
-
-#: ../src//OnlineAccounts.vala:47
+#: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Online korisnički računi"
 
-#: ../src//OnlineAccounts.vala:48
+#: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 "Sinhronizujte vaš računar sa svim vašim online korisničkim računima širom "
 "interneta."
 
-#: ../src//OnlineAccounts.vala:62
+#: ../src/OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Zatvori"
 
-#: ../src//OnlineAccounts.vala:63
+#: ../src/OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Vrati"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Konektuj vaše online korisničke račune"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Prijavite se da se konektujete sa aplikacijama kao što su elektronska pošta, "
 "kontakti i kalendar."
 
-#: ../src//OnlineAccounts.vala:243
+#: ../src/OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "'%s' korisnički račun uklonjen."
 
-#: ../src//OnlineAccounts.vala:256
+#: ../src/OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Dodaj novi korisnički račun..."

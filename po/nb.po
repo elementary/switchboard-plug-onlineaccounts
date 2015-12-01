@@ -7,186 +7,190 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 14:26+0200\n"
+"POT-Creation-Date: 2015-11-27 15:01-0200\n"
 "PO-Revision-Date: 2015-09-25 08:15+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-26 06:31+0000\n"
-"X-Generator: Launchpad (build 17754)\n"
+"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 "Language: nb\n"
 
-#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Legg til …"
-
-#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Fjern"
-
-#: ../src//Views/AccountView.vala:47
-msgid "Content to synchronise:"
-msgstr "Innhold å synkronisere:"
-
-#: ../src//Views/AccountView.vala:92
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Det er ingen applikasjoner installert som kobler til din %s konto"
-
-#: ../src//Views/AccountView.vala:93
-msgid "No Apps"
-msgstr "Ingen applikasjoner"
-
-#: ../src//Authentification/GraphicalDialog.vala:55
-#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:124
-msgid "Please enter your credentials…"
-msgstr "Skriv inn brukerdetaljer..."
-
-#: ../src//Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "Brukernavn:"
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "Ola_Nordmann"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "Passord:"
-
-#: ../src//Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "Nytt passord:"
-
-#: ../src//Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "Bekreft passord:"
-
-#: ../src//Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "Husk passord"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "Glemt passord"
-
-#: ../src//Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "Nytt sikkerhetsbilde"
-
-#: ../src//Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "Skriv inn teksten over"
-
-#: ../src//Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "Lagre"
-
-#: ../src//Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr "Glemt passord..."
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:131
-msgid "Loading…"
-msgstr "Laster…"
-
-#: ../src//Translation.vala:24
+#: ../src/Translation.vala:24
 msgid "Calendars"
 msgstr "Kalendere"
 
-#: ../src//Translation.vala:25
+#: ../src/Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Synkroniser dine kalendere"
 
-#: ../src//Translation.vala:26
+#: ../src/Translation.vala:26
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: ../src//Translation.vala:27
+#: ../src/Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Synkroniser dine kontakter"
 
-#: ../src//Translation.vala:28
+#: ../src/Translation.vala:28
 msgid "Sync your files"
 msgstr "Synkroniser dine filer"
 
-#: ../src//Translation.vala:29
+#: ../src/Translation.vala:29
 msgid "Emails"
 msgstr "E-poster"
 
-#: ../src//Translation.vala:30
+#: ../src/Translation.vala:30
 msgid "Sync your emails"
 msgstr "Synkroniser dine e-poster"
 
-#: ../src//Translation.vala:31
+#: ../src/Translation.vala:31
 msgid "Sync your photos"
 msgstr "Synkroniser dine bilder"
 
-#: ../src//Translation.vala:32
+#: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Sjekk din nyhetsstrøm"
 
-#: ../src//Translation.vala:33
+#: ../src/Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Nettprat med dine venner"
 
-#: ../src//Translation.vala:34
+#: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Få tilgang til alle Outlook og OneDrive -tjenester på din maskin"
 
-#: ../src//Translation.vala:35
+#: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Få tilgang til alle Yahoo! -tjenester på din maskin"
 
-#: ../src//Translation.vala:36
+#: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Få tilgang til alt Facebook-innhold på din maskin"
 
-#: ../src//Translation.vala:37
+#: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Få tilgang til alle Google-tjenester på din maskin"
 
-#: ../src//Translation.vala:38
+#: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "Inkluderer kontakter, e-post og kalender"
 
-#: ../src//OnlineAccounts.vala:47
+#: ../src/Translation.vala:39
+msgid "Scrobble your music"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../src/Authentification/GraphicalDialog.vala:57
+#: ../src/Authentification/WebDialog.vala:124
+msgid "Please enter your credentials…"
+msgstr "Skriv inn brukerdetaljer..."
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Brukernavn:"
+
+#: ../src/Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "Ola_Nordmann"
+
+#: ../src/Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Passord:"
+
+#: ../src/Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Nytt passord:"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Bekreft passord:"
+
+#: ../src/Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Husk passord"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Forgot password"
+msgstr "Glemt passord"
+
+#: ../src/Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Nytt sikkerhetsbilde"
+
+#: ../src/Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Skriv inn teksten over"
+
+#: ../src/Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Lagre"
+
+#: ../src/Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr "Glemt passord..."
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Laster…"
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Innhold å synkronisere:"
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "Det er ingen applikasjoner installert som kobler til din %s konto"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr "Ingen applikasjoner"
+
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Legg til …"
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Fjern"
+
+#: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Nettkontoer"
 
-#: ../src//OnlineAccounts.vala:48
+#: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Synkroniser din maskin med nettkontoene dine fra rundt omkring."
 
-#: ../src//OnlineAccounts.vala:62
+#: ../src/OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Lukk"
 
-#: ../src//OnlineAccounts.vala:63
+#: ../src/OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Gjenopprett"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Koble til dine nettkontoer"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Logg inn for å koble til applikasjoner som e-post, kontakter og kalender."
 
-#: ../src//OnlineAccounts.vala:243
+#: ../src/OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Kontoen '%s' fjernet."
 
-#: ../src//OnlineAccounts.vala:256
+#: ../src/OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Legg til ny konto..."

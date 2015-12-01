@@ -2,185 +2,189 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 14:26+0200\n"
+"POT-Creation-Date: 2015-11-27 15:01-0200\n"
 "PO-Revision-Date: 2015-06-25 18:31+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
-#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Shto..."
+#: ../src/Translation.vala:24
+msgid "Calendars"
+msgstr "Kalendarët"
 
-#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Hiq"
+#: ../src/Translation.vala:25
+msgid "Sync your calendars"
+msgstr "Sinkronizoni kalendarin tuaj"
 
-#: ../src//Views/AccountView.vala:47
+#: ../src/Translation.vala:26
+msgid "Contacts"
+msgstr "Kontaktet"
+
+#: ../src/Translation.vala:27
+msgid "Sync your contacts"
+msgstr "Sinkronizoni kontaktet tuaj"
+
+#: ../src/Translation.vala:28
+msgid "Sync your files"
+msgstr "Sinkronizoni skedarët tuaj"
+
+#: ../src/Translation.vala:29
+msgid "Emails"
+msgstr ""
+
+#: ../src/Translation.vala:30
+msgid "Sync your emails"
+msgstr ""
+
+#: ../src/Translation.vala:31
+msgid "Sync your photos"
+msgstr "Sinkronizoni fotot tuaja"
+
+#: ../src/Translation.vala:32
+msgid "Watch your newsfeed"
+msgstr ""
+
+#: ../src/Translation.vala:33
+msgid "Chat with your friends"
+msgstr "Bisedoni me miqtë tuaj"
+
+#: ../src/Translation.vala:34
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: ../src/Translation.vala:35
+msgid "Access all Yahoo! services on your computer"
+msgstr ""
+
+#: ../src/Translation.vala:36
+msgid "Access all Facebook contents on your computer"
+msgstr ""
+
+#: ../src/Translation.vala:37
+msgid "Access all Google services on your computer"
+msgstr ""
+
+#: ../src/Translation.vala:38
+msgid "Includes Contacts, Mails, and Calendar"
+msgstr "Përfshin Kontaktet, Mail, dhe Kalendarin"
+
+#: ../src/Translation.vala:39
+msgid "Scrobble your music"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Anulo"
+
+#: ../src/Authentification/GraphicalDialog.vala:57
+#: ../src/Authentification/WebDialog.vala:124
+msgid "Please enter your credentials…"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Përdoruesi:"
+
+#: ../src/Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "john_doe"
+
+#: ../src/Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Fjalëkalimi:"
+
+#: ../src/Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Fjalëkalimi i ri:"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Konfirmo fjalëkalimin:"
+
+#: ../src/Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Kujto fjalëkalimin"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Forgot password"
+msgstr "Fjalëkalim i harruar"
+
+#: ../src/Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Rifresco Captcha-n"
+
+#: ../src/Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Shkruani tekstin e sipërm këtu"
+
+#: ../src/Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Ruaj"
+
+#: ../src/Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Duke ngarkuar..."
+
+#: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr "Përmbajtja për t'u sinkronizuar:"
 
-#: ../src//Views/AccountView.vala:92
+#: ../src/Views/AccountView.vala:117
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
 "Nuk ka programe aktualisht të instaluara që lidhen me llogarinë tënde %s"
 
-#: ../src//Views/AccountView.vala:93
+#: ../src/Views/AccountView.vala:118
 msgid "No Apps"
 msgstr ""
 
-#: ../src//Authentification/GraphicalDialog.vala:55
-#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Anulo"
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Shto..."
 
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:124
-msgid "Please enter your credentials…"
-msgstr ""
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Hiq"
 
-#: ../src//Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "Përdoruesi:"
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "john_doe"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "Fjalëkalimi:"
-
-#: ../src//Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "Fjalëkalimi i ri:"
-
-#: ../src//Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "Konfirmo fjalëkalimin:"
-
-#: ../src//Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "Kujto fjalëkalimin"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "Fjalëkalim i harruar"
-
-#: ../src//Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "Rifresco Captcha-n"
-
-#: ../src//Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "Shkruani tekstin e sipërm këtu"
-
-#: ../src//Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "Ruaj"
-
-#: ../src//Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr ""
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:131
-msgid "Loading…"
-msgstr "Duke ngarkuar..."
-
-#: ../src//Translation.vala:24
-msgid "Calendars"
-msgstr "Kalendarët"
-
-#: ../src//Translation.vala:25
-msgid "Sync your calendars"
-msgstr "Sinkronizoni kalendarin tuaj"
-
-#: ../src//Translation.vala:26
-msgid "Contacts"
-msgstr "Kontaktet"
-
-#: ../src//Translation.vala:27
-msgid "Sync your contacts"
-msgstr "Sinkronizoni kontaktet tuaj"
-
-#: ../src//Translation.vala:28
-msgid "Sync your files"
-msgstr "Sinkronizoni skedarët tuaj"
-
-#: ../src//Translation.vala:29
-msgid "Emails"
-msgstr ""
-
-#: ../src//Translation.vala:30
-msgid "Sync your emails"
-msgstr ""
-
-#: ../src//Translation.vala:31
-msgid "Sync your photos"
-msgstr "Sinkronizoni fotot tuaja"
-
-#: ../src//Translation.vala:32
-msgid "Watch your newsfeed"
-msgstr ""
-
-#: ../src//Translation.vala:33
-msgid "Chat with your friends"
-msgstr "Bisedoni me miqtë tuaj"
-
-#: ../src//Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr ""
-
-#: ../src//Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr "Përfshin Kontaktet, Mail, dhe Kalendarin"
-
-#: ../src//OnlineAccounts.vala:47
+#: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Llogaritë në linjë"
 
-#: ../src//OnlineAccounts.vala:48
+#: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Sinkronizo kompjuterin tënd me të gjitha llogaritë tuaja në linjë."
 
-#: ../src//OnlineAccounts.vala:62
+#: ../src/OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Mbyll"
 
-#: ../src//OnlineAccounts.vala:63
+#: ../src/OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Rikthe"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Lidh llogaritë tuaja në linjë"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 
-#: ../src//OnlineAccounts.vala:243
+#: ../src/OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Llogaria '%s' u hoq."
 
-#: ../src//OnlineAccounts.vala:256
+#: ../src/OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Shto një llogari të re..."

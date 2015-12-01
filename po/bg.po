@@ -7,188 +7,192 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 14:26+0200\n"
+"POT-Creation-Date: 2015-11-27 15:01-0200\n"
 "PO-Revision-Date: 2014-10-12 11:03+0000\n"
 "Last-Translator: Yennefer of Vengerberg <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-24 05:54+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 "Language: bg\n"
 
-#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Добавяне…"
-
-#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Премахване"
-
-#: ../src//Views/AccountView.vala:47
-msgid "Content to synchronise:"
-msgstr "Съдържание за синхронизиране:"
-
-#: ../src//Views/AccountView.vala:92
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-
-#: ../src//Views/AccountView.vala:93
-msgid "No Apps"
-msgstr ""
-
-#: ../src//Authentification/GraphicalDialog.vala:55
-#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Отказ"
-
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:124
-msgid "Please enter your credentials…"
-msgstr "Моля въведете си данните..."
-
-#: ../src//Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "Потребителско име:"
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "иван_петров"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "Парола:"
-
-#: ../src//Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "Нова Парола:"
-
-#: ../src//Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "Потвърдете паролата:"
-
-#: ../src//Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "Запомни паролата"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "Забравена парола"
-
-#: ../src//Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "Обновете Снимкопаролата"
-
-#: ../src//Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "Въведете погорния текст тук"
-
-#: ../src//Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "Съхрани"
-
-#: ../src//Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr ""
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:131
-msgid "Loading…"
-msgstr "Зареждане..."
-
-#: ../src//Translation.vala:24
+#: ../src/Translation.vala:24
 msgid "Calendars"
 msgstr "Календари"
 
-#: ../src//Translation.vala:25
+#: ../src/Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Синхронизидай календарите"
 
-#: ../src//Translation.vala:26
+#: ../src/Translation.vala:26
 msgid "Contacts"
 msgstr "Контакти"
 
-#: ../src//Translation.vala:27
+#: ../src/Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Синхронизирай контакти"
 
-#: ../src//Translation.vala:28
+#: ../src/Translation.vala:28
 msgid "Sync your files"
 msgstr "Синхронизирай фаилове"
 
-#: ../src//Translation.vala:29
+#: ../src/Translation.vala:29
 msgid "Emails"
 msgstr "Имейли"
 
-#: ../src//Translation.vala:30
+#: ../src/Translation.vala:30
 msgid "Sync your emails"
 msgstr "Синхронизидай имейли"
 
-#: ../src//Translation.vala:31
+#: ../src/Translation.vala:31
 msgid "Sync your photos"
 msgstr "Синхронизидай снимки"
 
-#: ../src//Translation.vala:32
+#: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Разгледай новини"
 
-#: ../src//Translation.vala:33
+#: ../src/Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Пиши на приятели"
 
-#: ../src//Translation.vala:34
+#: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Достъпи всички Outlook и OneDrive услуги на своя компютър"
 
-#: ../src//Translation.vala:35
+#: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Достъпи всички Yahoo! услуги на своя компютър"
 
-#: ../src//Translation.vala:36
+#: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Достъпи всички Facebook услуги на своя компютър"
 
-#: ../src//Translation.vala:37
+#: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Достъпи всички Google услуги на своя компютър"
 
-#: ../src//Translation.vala:38
+#: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "Включва контакти, поща и календар"
 
-#: ../src//OnlineAccounts.vala:47
+#: ../src/Translation.vala:39
+msgid "Scrobble your music"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Отказ"
+
+#: ../src/Authentification/GraphicalDialog.vala:57
+#: ../src/Authentification/WebDialog.vala:124
+msgid "Please enter your credentials…"
+msgstr "Моля въведете си данните..."
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Потребителско име:"
+
+#: ../src/Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "иван_петров"
+
+#: ../src/Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Парола:"
+
+#: ../src/Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Нова Парола:"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Потвърдете паролата:"
+
+#: ../src/Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Запомни паролата"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Forgot password"
+msgstr "Забравена парола"
+
+#: ../src/Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Обновете Снимкопаролата"
+
+#: ../src/Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Въведете погорния текст тук"
+
+#: ../src/Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Съхрани"
+
+#: ../src/Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr ""
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Зареждане..."
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Съдържание за синхронизиране:"
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Добавяне…"
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Премахване"
+
+#: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Мрежови Абонаменти"
 
-#: ../src//OnlineAccounts.vala:48
+#: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr ""
 "Сверете вашият компютър със всички ваши мрежови абонаментни потребители из "
 "мрежата."
 
-#: ../src//OnlineAccounts.vala:62
+#: ../src/OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Затвори"
 
-#: ../src//OnlineAccounts.vala:63
+#: ../src/OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Възстанови"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Свържете Вашите Мрежови Потребителски Абонаменти"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Впишете се, за да де свържете с приложения като Поща, Контакти, и Календар."
 
-#: ../src//OnlineAccounts.vala:243
+#: ../src/OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Потребителски Абонамент  '%s' Премахнат."
 
-#: ../src//OnlineAccounts.vala:256
+#: ../src/OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Добави нов акаунт..."

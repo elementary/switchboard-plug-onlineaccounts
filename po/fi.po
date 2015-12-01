@@ -7,186 +7,190 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-09-23 14:26+0200\n"
+"POT-Creation-Date: 2015-11-27 15:01-0200\n"
 "PO-Revision-Date: 2015-09-24 12:09+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-25 05:49+0000\n"
-"X-Generator: Launchpad (build 17754)\n"
+"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
-#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Lisää…"
-
-#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Poista"
-
-#: ../src//Views/AccountView.vala:47
-msgid "Content to synchronise:"
-msgstr "Synkronoitava sisältö:"
-
-#: ../src//Views/AccountView.vala:92
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Ei asennettuja sovelluksia, jotka olisivat yhteydessä %s-tiliisi"
-
-#: ../src//Views/AccountView.vala:93
-msgid "No Apps"
-msgstr "Ei sovelluksia"
-
-#: ../src//Authentification/GraphicalDialog.vala:55
-#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Peru"
-
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:124
-msgid "Please enter your credentials…"
-msgstr "Anna käyttäjätietosi…"
-
-#: ../src//Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "Käyttäjätunnus:"
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "matti_meikalainen"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "Salasana:"
-
-#: ../src//Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "Uusi salasana:"
-
-#: ../src//Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "Vahvista salasana:"
-
-#: ../src//Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "Muista salasana"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "Unohdin salasanan"
-
-#: ../src//Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "Päivitä captcha-varmiste"
-
-#: ../src//Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "Kirjoita yllä oleva teksti tähän"
-
-#: ../src//Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "Tallenna"
-
-#: ../src//Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr "Unohdin salasanan…"
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:131
-msgid "Loading…"
-msgstr "Ladataan…"
-
-#: ../src//Translation.vala:24
+#: ../src/Translation.vala:24
 msgid "Calendars"
 msgstr "Kalenterit"
 
-#: ../src//Translation.vala:25
+#: ../src/Translation.vala:25
 msgid "Sync your calendars"
 msgstr "Synkronoi kalenterit"
 
-#: ../src//Translation.vala:26
+#: ../src/Translation.vala:26
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: ../src//Translation.vala:27
+#: ../src/Translation.vala:27
 msgid "Sync your contacts"
 msgstr "Synkronoi yhteystiedot"
 
-#: ../src//Translation.vala:28
+#: ../src/Translation.vala:28
 msgid "Sync your files"
 msgstr "Synkronoi tiedostot"
 
-#: ../src//Translation.vala:29
+#: ../src/Translation.vala:29
 msgid "Emails"
 msgstr "Sähköpostit"
 
-#: ../src//Translation.vala:30
+#: ../src/Translation.vala:30
 msgid "Sync your emails"
 msgstr "Synkronoi sähköpostit"
 
-#: ../src//Translation.vala:31
+#: ../src/Translation.vala:31
 msgid "Sync your photos"
 msgstr "Synkronoi kuvat"
 
-#: ../src//Translation.vala:32
+#: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "Seuraa uutisvirtaa"
 
-#: ../src//Translation.vala:33
+#: ../src/Translation.vala:33
 msgid "Chat with your friends"
 msgstr "Keskustele kavereidesi kanssa"
 
-#: ../src//Translation.vala:34
+#: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Yhdistä Outlook- ja OneDrive-palveluihin"
 
-#: ../src//Translation.vala:35
+#: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "Yhdistä kaikkiin Yahoo!-palveluihin"
 
-#: ../src//Translation.vala:36
+#: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "Yhdistä Facebook-sisältöösi"
 
-#: ../src//Translation.vala:37
+#: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "Yhdistä kaikkiin Googlen palveluihin"
 
-#: ../src//Translation.vala:38
+#: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "Sisältää yhteystiedot, sähköpostin ja kalenterin"
 
-#: ../src//OnlineAccounts.vala:47
+#: ../src/Translation.vala:39
+msgid "Scrobble your music"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "Peru"
+
+#: ../src/Authentification/GraphicalDialog.vala:57
+#: ../src/Authentification/WebDialog.vala:124
+msgid "Please enter your credentials…"
+msgstr "Anna käyttäjätietosi…"
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+#: ../src/Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "matti_meikalainen"
+
+#: ../src/Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "Salasana:"
+
+#: ../src/Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "Uusi salasana:"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "Vahvista salasana:"
+
+#: ../src/Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "Muista salasana"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Forgot password"
+msgstr "Unohdin salasanan"
+
+#: ../src/Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "Päivitä captcha-varmiste"
+
+#: ../src/Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "Kirjoita yllä oleva teksti tähän"
+
+#: ../src/Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "Tallenna"
+
+#: ../src/Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr "Unohdin salasanan…"
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "Ladataan…"
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Synkronoitava sisältö:"
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "Ei asennettuja sovelluksia, jotka olisivat yhteydessä %s-tiliisi"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr "Ei sovelluksia"
+
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Lisää…"
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Poista"
+
+#: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "Verkkotilit"
 
-#: ../src//OnlineAccounts.vala:48
+#: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "Synkronoi tietokoneesi verkkotiliesi kanssa."
 
-#: ../src//OnlineAccounts.vala:62
+#: ../src/OnlineAccounts.vala:62
 msgid "Close"
 msgstr "Sulje"
 
-#: ../src//OnlineAccounts.vala:63
+#: ../src/OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "Palauta"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "Yhdistä verkkotileihisi"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Kirjaudu sisään muodostaaksesi yhteyden sähköpostiin,\r\n"
 "yhteystietoihin, kalenteriin ja muihin sovelluksiin."
 
-#: ../src//OnlineAccounts.vala:243
+#: ../src/OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "Tili '%s' poistettu."
 
-#: ../src//OnlineAccounts.vala:256
+#: ../src/OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "Lisää uusi tili…"

@@ -7,184 +7,188 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 14:26+0200\n"
+"POT-Creation-Date: 2015-11-27 15:01-0200\n"
 "PO-Revision-Date: 2015-09-25 14:38+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-26 06:31+0000\n"
-"X-Generator: Launchpad (build 17754)\n"
+"X-Launchpad-Export-Date: 2015-12-01 05:34+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
-#: ../src//Views/SourceSelector.vala:89 ../src//Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "加入…"
-
-#: ../src//Views/SourceSelector.vala:94 ../src//Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "移除"
-
-#: ../src//Views/AccountView.vala:47
-msgid "Content to synchronise:"
-msgstr "要同步的內容："
-
-#: ../src//Views/AccountView.vala:92
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "目前尚無連結至您 %s 帳號的程式"
-
-#: ../src//Views/AccountView.vala:93
-msgid "No Apps"
-msgstr "無程式"
-
-#: ../src//Authentification/GraphicalDialog.vala:55
-#: ../src//Authentification/WebDialog.vala:34 ../src//OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "取消"
-
-#: ../src//Authentification/GraphicalDialog.vala:57
-#: ../src//Authentification/WebDialog.vala:124
-msgid "Please enter your credentials…"
-msgstr "請輸入您的憑證資訊…"
-
-#: ../src//Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "使用者名稱："
-
-#: ../src//Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "john_doe"
-
-#: ../src//Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "密碼："
-
-#: ../src//Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "新密碼："
-
-#: ../src//Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "確認密碼："
-
-#: ../src//Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "記住密碼"
-
-#: ../src//Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "忘記密碼"
-
-#: ../src//Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "重新整理 Captcha"
-
-#: ../src//Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "請在此輸入上文"
-
-#: ../src//Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "儲存"
-
-#: ../src//Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr "忘記密碼…"
-
-#: ../src//Authentification/WebDialog.vala:38
-#: ../src//Authentification/WebDialog.vala:131
-msgid "Loading…"
-msgstr "載入中…"
-
-#: ../src//Translation.vala:24
+#: ../src/Translation.vala:24
 msgid "Calendars"
 msgstr "行事曆"
 
-#: ../src//Translation.vala:25
+#: ../src/Translation.vala:25
 msgid "Sync your calendars"
 msgstr "同步您的行事曆"
 
-#: ../src//Translation.vala:26
+#: ../src/Translation.vala:26
 msgid "Contacts"
 msgstr "連絡人"
 
-#: ../src//Translation.vala:27
+#: ../src/Translation.vala:27
 msgid "Sync your contacts"
 msgstr "同步您的連絡人"
 
-#: ../src//Translation.vala:28
+#: ../src/Translation.vala:28
 msgid "Sync your files"
 msgstr "同步您的檔案"
 
-#: ../src//Translation.vala:29
+#: ../src/Translation.vala:29
 msgid "Emails"
 msgstr "電子郵件"
 
-#: ../src//Translation.vala:30
+#: ../src/Translation.vala:30
 msgid "Sync your emails"
 msgstr "同步您的電子郵件"
 
-#: ../src//Translation.vala:31
+#: ../src/Translation.vala:31
 msgid "Sync your photos"
 msgstr "同步您的相片"
 
-#: ../src//Translation.vala:32
+#: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
 msgstr "關注您的新聞來源"
 
-#: ../src//Translation.vala:33
+#: ../src/Translation.vala:33
 msgid "Chat with your friends"
 msgstr "與您的朋友聊天"
 
-#: ../src//Translation.vala:34
+#: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "在您的電腦上存取所有的 Outlook 與 OneDrive 服務"
 
-#: ../src//Translation.vala:35
+#: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
 msgstr "在您的電腦上存取所有的 Yahoo! 服務"
 
-#: ../src//Translation.vala:36
+#: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
 msgstr "在您的電腦上存取所有的 Facebook 內容"
 
-#: ../src//Translation.vala:37
+#: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
 msgstr "在您的電腦上存取所有的 Google 服務"
 
-#: ../src//Translation.vala:38
+#: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
 msgstr "包含聯絡人、郵件與行事曆"
 
-#: ../src//OnlineAccounts.vala:47
+#: ../src/Translation.vala:39
+msgid "Scrobble your music"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
+msgid "Cancel"
+msgstr "取消"
+
+#: ../src/Authentification/GraphicalDialog.vala:57
+#: ../src/Authentification/WebDialog.vala:124
+msgid "Please enter your credentials…"
+msgstr "請輸入您的憑證資訊…"
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Username:"
+msgstr "使用者名稱："
+
+#: ../src/Authentification/GraphicalDialog.vala:75
+msgid "john_doe"
+msgstr "john_doe"
+
+#: ../src/Authentification/GraphicalDialog.vala:77
+msgid "Password:"
+msgstr "密碼："
+
+#: ../src/Authentification/GraphicalDialog.vala:81
+msgid "New Password:"
+msgstr "新密碼："
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Confirm Password:"
+msgstr "確認密碼："
+
+#: ../src/Authentification/GraphicalDialog.vala:90
+msgid "Remember password"
+msgstr "記住密碼"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Forgot password"
+msgstr "忘記密碼"
+
+#: ../src/Authentification/GraphicalDialog.vala:97
+msgid "Refresh Captcha"
+msgstr "重新整理 Captcha"
+
+#: ../src/Authentification/GraphicalDialog.vala:98
+msgid "Enter above text here"
+msgstr "請在此輸入上文"
+
+#: ../src/Authentification/GraphicalDialog.vala:103
+msgid "Save"
+msgstr "儲存"
+
+#: ../src/Authentification/GraphicalDialog.vala:159
+msgid "Forgot password…"
+msgstr "忘記密碼…"
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:131
+msgid "Loading…"
+msgstr "載入中…"
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "要同步的內容："
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "目前尚無連結至您 %s 帳號的程式"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr "無程式"
+
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "加入…"
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "移除"
+
+#: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
 msgstr "線上帳號"
 
-#: ../src//OnlineAccounts.vala:48
+#: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
 msgstr "讓您的電腦與網路上的各種線上帳號同步。"
 
-#: ../src//OnlineAccounts.vala:62
+#: ../src/OnlineAccounts.vala:62
 msgid "Close"
 msgstr "關閉"
 
-#: ../src//OnlineAccounts.vala:63
+#: ../src/OnlineAccounts.vala:63
 msgid "Restore"
 msgstr "還原"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
 msgstr "連接您的線上帳號"
 
-#: ../src//OnlineAccounts.vala:145
+#: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "登入以與程式連接，如郵件、聯絡人、行事曆等。"
 
-#: ../src//OnlineAccounts.vala:243
+#: ../src/OnlineAccounts.vala:243
 msgid "Account '%s' Removed."
 msgstr "帳號「%s」已移除。"
 
-#: ../src//OnlineAccounts.vala:256
+#: ../src/OnlineAccounts.vala:256
 msgid "Add a new account…"
 msgstr "加入新帳號..."
