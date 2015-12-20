@@ -45,7 +45,7 @@ namespace OnlineAccounts {
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Online Accounts"),
-                    description: _("Synchronize your computer with all your online accounts around the web."),
+                    description: _("Manage online accounts and connected applications"),
                     icon: "preferences-desktop-online-accounts");
             plugins_manager = PluginsManager.get_default ();
             providers_map = new Gee.HashMap<int, Ag.Provider> (null, null);
