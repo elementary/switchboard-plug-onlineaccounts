@@ -7,15 +7,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-27 15:01-0200\n"
-"PO-Revision-Date: 2015-11-30 16:36+0000\n"
-"Last-Translator: Maxim Taranov <png2378@protonmail.ch>\n"
+"POT-Creation-Date: 2015-12-17 08:30-0200\n"
+"PO-Revision-Date: 2015-12-21 22:21+0000\n"
+"Last-Translator: Djaler <djaler1@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
+
+#: ../src/OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Сетевые профили"
+
+#: ../src/OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr ""
+"Синхронизация системы с вашими аккаунтами на различных онлайн-сервисах"
+
+#: ../src/OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Закрыть"
+
+#: ../src/OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Восстановить"
+
+#: ../src/OnlineAccounts.vala:64
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Отменить"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Подключите ваши сетевые профили"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Войдите, чтобы синхронизировать приложения, такие как Почта, Контакты и "
+"Календарь."
+
+#: ../src/OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "Профиль '%s' удалён."
+
+#: ../src/OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Добавить новый аккаунт..."
 
 #: ../src/Translation.vala:24
 msgid "Calendars"
@@ -81,10 +123,9 @@ msgstr "Синхронизация контактов, почты и кален�
 msgid "Scrobble your music"
 msgstr "Скробблинг вашей музыки"
 
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Отменить"
+#: ../src/Translation.vala:40
+msgid "Scrobble"
+msgstr "Скробблинг"
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
@@ -140,6 +181,14 @@ msgstr "Забыл пароль..."
 msgid "Loading…"
 msgstr "Загрузка..."
 
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Добавить…"
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Удалить"
+
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr "Синхронизируемые данные:"
@@ -151,47 +200,3 @@ msgstr "Нет установленных приложений для синхр
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
 msgstr "Нет приложений"
-
-#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Добавить…"
-
-#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Удалить"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Сетевые профили"
-
-#: ../src/OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr ""
-"Синхронизация системы с вашими аккаунтами на различных онлайн-сервисах"
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Закрыть"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Восстановить"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Подключите ваши сетевые профили"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Войдите, чтобы синхронизировать приложения, такие как Почта, Контакты и "
-"Календарь."
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Профиль '%s' удалён."
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Добавить новый аккаунт..."

@@ -7,15 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-27 15:01-0200\n"
+"POT-Creation-Date: 2015-12-17 08:30-0200\n"
 "PO-Revision-Date: 2015-12-11 11:26+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-12 05:42+0000\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
+
+#: ../src/OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "在线帐户"
+
+#: ../src/OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr "将您的电脑与所有在线帐户同步"
+
+#: ../src/OnlineAccounts.vala:62
+msgid "Close"
+msgstr "关闭"
+
+#: ../src/OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "恢复"
+
+#: ../src/OnlineAccounts.vala:64
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "取消"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "连接您的在线账户"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "登录以连接您的邮件、联系人和日历等应用。"
+
+#: ../src/OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "帐户“%s”已经删除。"
+
+#: ../src/OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "添加一个新账户..."
 
 #: ../src/Translation.vala:24
 msgid "Calendars"
@@ -81,10 +120,9 @@ msgstr "包括联系人、邮件和日历等服务"
 msgid "Scrobble your music"
 msgstr "同步您的音乐"
 
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "取消"
+#: ../src/Translation.vala:40
+msgid "Scrobble"
+msgstr ""
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
@@ -140,6 +178,14 @@ msgstr "忘记密码..."
 msgid "Loading…"
 msgstr "正在载入..."
 
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "添加..."
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "删除"
+
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr "要同步的内容："
@@ -151,44 +197,3 @@ msgstr "当前没有安装任与您 %s 账户相连接的应用程序"
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
 msgstr "无应用"
-
-#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "添加..."
-
-#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "删除"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "在线帐户"
-
-#: ../src/OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr "将您的电脑与所有在线帐户同步"
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "关闭"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "恢复"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "连接您的在线账户"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "登录以连接您的邮件、联系人和日历等应用。"
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "帐户“%s”已经删除。"
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "添加一个新账户..."

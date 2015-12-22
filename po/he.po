@@ -2,16 +2,55 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 15:01-0200\n"
+"POT-Creation-Date: 2015-12-17 08:30-0200\n"
 "PO-Revision-Date: 2014-01-19 05:30+0000\n"
 "Last-Translator: Roy Elazary <Roy.Hagever@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Language: \n"
+
+#: ../src/OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:62
+msgid "Close"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:63
+msgid "Restore"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:64
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "ביטול"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr ""
 
 #: ../src/Translation.vala:24
 msgid "Calendars"
@@ -77,10 +116,9 @@ msgstr ""
 msgid "Scrobble your music"
 msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "ביטול"
+#: ../src/Translation.vala:40
+msgid "Scrobble"
+msgstr ""
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
@@ -136,6 +174,14 @@ msgstr ""
 msgid "Loading…"
 msgstr ""
 
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "הסרה"
+
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr ""
@@ -146,45 +192,4 @@ msgstr ""
 
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
-msgstr ""
-
-#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr ""
-
-#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "הסרה"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
 msgstr ""

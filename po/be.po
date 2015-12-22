@@ -2,15 +2,55 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 15:01-0200\n"
+"POT-Creation-Date: 2015-12-17 08:30-0200\n"
 "PO-Revision-Date: 2015-05-26 12:17+0000\n"
 "Last-Translator: Viktuk <register885@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
+
+#: ../src/OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Анлайн рахункі"
+
+#: ../src/OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr ""
+"Сінхранізацыя кампутара з усімі вашымі онлайн-рахункаў па ўсім Інтэрнэту."
+
+#: ../src/OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Зачыніць"
+
+#: ../src/OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Аднавіць"
+
+#: ../src/OnlineAccounts.vala:64
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Скасаваць"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Падлучыце інтэрнэт-рахунак"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "Увайсці, каб злучыцца з прыкладаннямі, як Пошта, Кантакты, Каляндар."
+
+#: ../src/OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "Рахунак '%s' выдалены."
+
+#: ../src/OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Дадаць новы рахунак..."
 
 #: ../src/Translation.vala:24
 msgid "Calendars"
@@ -76,10 +116,9 @@ msgstr "Ўключае ў сябе кантакты, пошту і калянд�
 msgid "Scrobble your music"
 msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Скасаваць"
+#: ../src/Translation.vala:40
+msgid "Scrobble"
+msgstr ""
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
@@ -135,6 +174,14 @@ msgstr ""
 msgid "Loading…"
 msgstr "Чытанне..."
 
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Дадаць..."
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Выдаліць"
+
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr "Змесціва для сінхранізацыі:"
@@ -146,45 +193,3 @@ msgstr "Няма ніякіх прыкладанняў з устанавленн
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
 msgstr ""
-
-#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Дадаць..."
-
-#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Выдаліць"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Анлайн рахункі"
-
-#: ../src/OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr ""
-"Сінхранізацыя кампутара з усімі вашымі онлайн-рахункаў па ўсім Інтэрнэту."
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Зачыніць"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Аднавіць"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Падлучыце інтэрнэт-рахунак"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Увайсці, каб злучыцца з прыкладаннямі, як Пошта, Кантакты, Каляндар."
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Рахунак '%s' выдалены."
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Дадаць новы рахунак..."

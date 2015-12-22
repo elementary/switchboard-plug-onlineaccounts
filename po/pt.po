@@ -7,15 +7,55 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-11-27 15:01-0200\n"
+"POT-Creation-Date: 2015-12-17 08:30-0200\n"
 "PO-Revision-Date: 2015-11-29 22:51+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-01 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
+
+#: ../src/OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Contas na web"
+
+#: ../src/OnlineAccounts.vala:48
+msgid ""
+"Synchronize your computer with all your online accounts around the web."
+msgstr "Sincronize o seu computador com todas as suas contas na web."
+
+#: ../src/OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Fechar"
+
+#: ../src/OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Repôr"
+
+#: ../src/OnlineAccounts.vala:64
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Estabelecer ligação às suas contas web"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Iniciar sessão para estabelecer ligação ao correio, contactos e calendários."
+
+#: ../src/OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "Conta %s removida."
+
+#: ../src/OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Adicionar nova conta..."
 
 #: ../src/Translation.vala:24
 msgid "Calendars"
@@ -81,10 +121,9 @@ msgstr "Inclui Contactos, Emails e Calendário"
 msgid "Scrobble your music"
 msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:64
-msgid "Cancel"
-msgstr "Cancelar"
+#: ../src/Translation.vala:40
+msgid "Scrobble"
+msgstr ""
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
@@ -140,6 +179,14 @@ msgstr "Esqueceu-se da palavra-passe..."
 msgid "Loading…"
 msgstr "A carregar…"
 
+#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
+msgid "Add…"
+msgstr "Adicionar…"
+
+#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
+msgid "Remove"
+msgstr "Remover"
+
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
 msgstr "Conteúdo a sincronizar:"
@@ -151,45 +198,3 @@ msgstr "De momento não há nenhuma aplicação instalada que use a sua conta %s
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
 msgstr "Sem Aplicações"
-
-#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Adicionar…"
-
-#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Remover"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Contas na web"
-
-#: ../src/OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr "Sincronize o seu computador com todas as suas contas na web."
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Fechar"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Repôr"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Estabelecer ligação às suas contas web"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Iniciar sessão para estabelecer ligação ao correio, contactos e calendários."
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Conta %s removida."
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Adicionar nova conta..."
