@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-17 08:30-0200\n"
-"PO-Revision-Date: 2015-12-07 11:34+0000\n"
+"PO-Revision-Date: 2015-12-22 14:01+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: polski <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
+"X-Launchpad-Export-Date: 2015-12-23 05:15+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 "Language: \n"
 
 #: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr "Konta on-line"
+msgstr "Konta sieciowe"
 
 #: ../src/OnlineAccounts.vala:48
 msgid ""
@@ -43,7 +43,7 @@ msgstr "Anuluj"
 
 #: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr "Połącz swoje konta on-line"
+msgstr "Połącz swoje konta sieciowe"
 
 #: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
@@ -117,7 +117,7 @@ msgstr "Dostęp do wszystkich serwisów Google na Twoim komputerze"
 
 #: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr "Zawiera kontakty, wiadomości oraz wydarzenia"
+msgstr "Zawiera kontakty, e-maile oraz kalendarz"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
@@ -125,7 +125,7 @@ msgstr "Scrobbluj swoją muzykę"
 
 #: ../src/Translation.vala:40
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble"
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
