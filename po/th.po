@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-17 08:30-0200\n"
-"PO-Revision-Date: 2014-09-20 14:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-12-24 14:47+0000\n"
+"Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:05+0000\n"
+"X-Launchpad-Export-Date: 2015-12-25 05:33+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr ""
+msgstr "บัญชีออนไลน์"
 
 #: ../src/OnlineAccounts.vala:48
 msgid ""
