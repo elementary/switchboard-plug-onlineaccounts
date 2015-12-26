@@ -32,7 +32,7 @@
       </group>
     </group>
     <group name="evolution">
-      <setting name="BackendName">google2</setting>
+      <setting name="BackendName">google</setting>
     </group>
   </template>
 </service>
