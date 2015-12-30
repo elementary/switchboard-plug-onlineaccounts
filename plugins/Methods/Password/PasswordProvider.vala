@@ -22,10 +22,10 @@
 
 public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
 
-    Ag.Manager manager;
-    public Ag.AuthData auth_data;
-    public Signon.IdentityInfo info;
-    public GLib.MainLoop main_loop;
+    private Ag.Manager manager;
+    private Ag.AuthData auth_data;
+    private Signon.IdentityInfo info;
+    private Signon.Identity identity;
     bool is_new = false;
 
     public PasswordAccount (Ag.Account account, bool is_new = false) {
@@ -40,7 +40,6 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
     }
     
     public override void setup_authentification () {
-        main_loop = new GLib.MainLoop ();
         manager = new Ag.Manager ();
         info = new Signon.IdentityInfo ();
         info.set_caption (account.get_provider_name ());
@@ -48,12 +47,10 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
         info.set_secret ("", true);
         info.set_method ("password", {"password", null});
         info.access_control_list_append (new Signon.SecurityContext.from_values ("%s/bin/switchboard".printf (Build.CMAKE_INSTALL_PREFIX), "*"));
-        var identity = new Signon.Identity ();
-        identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
-        
-        main_loop.run ();
+        identity = new Signon.Identity ();
+        identity.store_credentials_with_info (info, IdentityStoreCredentialsCallback);
     }
-    
+
     public async void authenticate (Signon.Identity identity, uint32 id) {
         GLib.Variant? v_id = new GLib.Variant.uint32 (id);
         account.set_variant (gsignon_id, v_id);
@@ -64,35 +61,37 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
             info.set_secret (access_token, true);
             var username = session_result.lookup_value ("UserName", null).dup_string ();
             account.set_display_name (username);
-            identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
+            identity.query_info (IdentityInfoCallback);
         } catch (Error e) {
             critical (e.message);
-            main_loop.quit ();
         }
+
         yield;
     }
-    
+
     // Callbacks
-    public static void IdentityStoreCredentialsCallback (Signon.Identity self, uint32 id, GLib.Error error, PasswordAccount pr) {
+    [CCode (instance_pos = -1)]
+    public void IdentityStoreCredentialsCallback (Signon.Identity self, uint32 id, GLib.Error error) {
         if (error != null) {
             critical (error.message);
-            pr.main_loop.quit ();
             return;
         }
-        pr.authenticate.begin (self, id);
+
+        authenticate.begin (self, id);
     }
-    public static void IdentityInfoCallback (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error, PasswordAccount pr) {
+
+    [CCode (instance_pos = -1)]
+    public void IdentityInfoCallback (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error) {
         if (error != null) {
             critical (error.message);
-            pr.main_loop.quit ();
             return;
         }
-        pr.account.set_enabled (true);
-        pr.account.store_async.begin (null);
-        if (pr.is_new == true) {
-            AccountsManager.get_default ().add_account (pr);
-            pr.is_new = false;
+
+        account.set_enabled (true);
+        account.store_async.begin (null);
+        if (is_new == true) {
+            AccountsManager.get_default ().add_account (this);
+            is_new = false;
         }
-        pr.main_loop.quit ();
     }
 }

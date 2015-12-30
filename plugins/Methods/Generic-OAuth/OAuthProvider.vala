@@ -21,10 +21,10 @@
 
 public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
 
-    private string method;
+    private string mechanism;
     public Ag.AuthData auth_data;
     public Signon.IdentityInfo info;
-    public GLib.MainLoop main_loop;
+    private Signon.Identity identity;
     bool is_new = false;
 
     public OAuth2 (Ag.Account account, bool is_new = false) {
@@ -39,7 +39,6 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
     }
 
     public override void setup_authentification () {
-        main_loop = new GLib.MainLoop ();
         info = new Signon.IdentityInfo ();
         info.set_caption (account.get_provider_name ());
         info.set_identity_type (Signon.IdentityType.APP);
@@ -48,28 +47,25 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
         info.access_control_list_append (new Signon.SecurityContext.from_values ("%s/bin/switchboard".printf (Build.CMAKE_INSTALL_PREFIX), "*"));
         var allowed_realms = session_data.lookup_value ("AllowedRealms", null).dup_strv ();
         info.set_realms (allowed_realms);
-        var identity = new Signon.Identity ();
-        identity.store_credentials_with_info (info, (sel, ide, err) => {IdentityStoreCredentialsCallback (sel, ide, err, this);});
-        main_loop.run ();
+        identity = new Signon.Identity ();
+        identity.store_credentials_with_info (info, IdentityStoreCredentialsCallback);
     }
 
     public async void authenticate (Signon.Identity identity, uint32 id) {
         GLib.Variant? v_id = new GLib.Variant.uint32 (id);
         account.set_variant (gsignon_id, v_id);
         var mechanism_variant = account.get_variant ("auth/mechanism", null);
-        var mechanism = mechanism_variant.get_string ();
+        mechanism = mechanism_variant.get_string ();
 
         if (mechanism == "PLAINTEXT" || mechanism == "HMAC-SHA1" || mechanism == "RSA-SHA1") {
-            method = "oauth1";
+            mechanism = "oauth1";
         } else if (mechanism == "web_server" || mechanism == "user_agent") {
-            method = "oauth2";
-        } else {
-            method = mechanism;
+            mechanism = "oauth2";
         }
 
         try {
             var session = identity.create_session ("oauth");
-            session_result = yield session.process_async (session_data, method, null);
+            session_result = yield session.process_async (session_data, mechanism, null);
             var access_token = session_result.lookup_value ("AccessToken", null).dup_string ();
             info.set_secret (access_token, true);
             foreach (var provider_plugin in OnlineAccounts.PluginsManager.get_default ().get_provider_plugins ()) {
@@ -80,40 +76,36 @@ public class OnlineAccounts.Plugins.OAuth2 : OnlineAccounts.Account {
                 provider_plugin.get_user_name (this);
             }
 
-            identity.query_info ((s, i, err) => {IdentityInfoCallback (s, i, err, this);});
+            identity.query_info (IdentityInfoCallback);
         } catch (Error e) {
             critical (e.message);
-            main_loop.quit ();
         }
 
         yield;
     }
 
-    // Callbacks
-    public static void IdentityStoreCredentialsCallback (Signon.Identity self, uint32 id, GLib.Error error, OAuth2 pr) {
+    [CCode (instance_pos = -1)]
+    public void IdentityStoreCredentialsCallback (Signon.Identity self, uint32 id, GLib.Error error) {
         if (error != null) {
             critical (error.message);
-            pr.main_loop.quit ();
             return;
         }
 
-        pr.authenticate.begin (self, id);
+        authenticate.begin (self, id);
     }
 
-    public static void IdentityInfoCallback (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error, OAuth2 pr) {
+    [CCode (instance_pos = -1)]
+    public void IdentityInfoCallback (Signon.Identity self, Signon.IdentityInfo info, GLib.Error error) {
         if (error != null) {
             critical (error.message);
-            pr.main_loop.quit ();
             return;
         }
 
-        pr.account.set_enabled (true);
-        pr.account.store_async.begin (null);
-        if (pr.is_new == true) {
-            AccountsManager.get_default ().add_account (pr);
-            pr.is_new = false;
+        account.set_enabled (true);
+        account.store_async.begin (null);
+        if (is_new == true) {
+            AccountsManager.get_default ().add_account (this);
+            is_new = false;
         }
-
-        pr.main_loop.quit ();
     }
 }
