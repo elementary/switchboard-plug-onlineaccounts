@@ -120,27 +120,24 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
     }
 
     private void on_webview_load (WebKit.LoadEvent load_event) {
-        if (load_event == WebKit.LoadEvent.FINISHED) {
-            info_label.label = _("Please enter your credentials…");
-            spinner.stop ();
-            spinner.hide ();
-            return;
-        }
-
-        if (load_event == WebKit.LoadEvent.STARTED) {
-            info_label.label = _("Loading…");
-            spinner.start ();
-            spinner.show ();
-            return;
-        }
-
-        if (load_event != WebKit.LoadEvent.REDIRECTED)
-            return;
-
         var redirect_uri = webview.get_uri ();
+        if (redirect_uri == null || !redirect_uri.has_prefix (oauth_final_url)) {
+            if (load_event == WebKit.LoadEvent.FINISHED) {
+                info_label.label = _("Please enter your credentials…");
+                spinner.stop ();
+                spinner.hide ();
+                return;
+            }
 
-        if (redirect_uri == null || !redirect_uri.has_prefix (oauth_final_url))
+            if (load_event == WebKit.LoadEvent.STARTED) {
+                info_label.label = _("Loading…");
+                spinner.start ();
+                spinner.show ();
+                return;
+            }
+
             return;
+        }
 
         /* We got the redirect URI what we are interestead in, so disconnect handler */
         webview.load_changed.disconnect (on_webview_load);
