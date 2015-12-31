@@ -31,31 +31,24 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
         this.account = account;
         this.service = service;
         this.identity = identity;
-        list_box = new Gtk.ListBox ();
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
-        scrolled.margin = 6;
-        scrolled.add (list_box);
-        add (scrolled);
         account.manager.list_applications_by_service (service).foreach ((app) => {
             var row = new AppRow (account, app, service, identity);
             list_box.add (row);
+            row.show_all ();
         });
 
         update_acl.begin ();
     }
 
-    public override void get_preferred_height (out int minimum_height, out int natural_height) {
-        list_box.get_preferred_height (out minimum_height, out natural_height);
-        minimum_height += 6;
-        natural_height += 6;
-        if (minimum_height > 150) {
-            minimum_height = 150;
-        }
-
-        if (natural_height > 150) {
-            natural_height = 150;
-        }
+    construct {
+        height_request = 100;
+        list_box = new Gtk.ListBox ();
+        var scrolled = new Gtk.ScrolledWindow (null, null);
+        scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
+        scrolled.margin = 6;
+        scrolled.expand = true;
+        scrolled.add (list_box);
+        add (scrolled);
     }
 
     private async void update_acl () {
@@ -89,20 +82,29 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
 
     public class AppRow : Gtk.ListBoxRow {
         public Ag.Application app;
-        private Gtk.Switch app_switch;
         private Ag.Service service;
         private Ag.Account account;
         private Signon.Identity identity;
+
+        private Gtk.Image app_image;
+        private Gtk.Label app_name;
+        private Gtk.Switch app_switch;
         public AppRow (Ag.Account account, Ag.Application app, Ag.Service service, Signon.Identity identity) {
             this.account = account;
             this.app = app;
             this.service = service;
             this.identity = identity;
+            var app_info = app.get_desktop_app_info ();
+            app_image.gicon = app_info.get_icon ();
+            app_name.label = app_info.get_display_name ();
+        }
+
+        construct {
             activatable = false;
             selectable = false;
-            var app_info = app.get_desktop_app_info ();
-            var app_image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
-            var app_name = new Gtk.Label (app_info.get_display_name ());
+            app_image = new Gtk.Image ();
+            app_image.icon_size = Gtk.IconSize.LARGE_TOOLBAR;
+            app_name = new Gtk.Label (null);
             app_name.hexpand = true;
             app_switch = new Gtk.Switch ();
             app_switch.activate.connect (() => {
@@ -112,15 +114,14 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
                     deny_app ();
                 }
             });
-            
+
             var grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.HORIZONTAL;
-            grid.row_spacing = 12;
+            grid.column_spacing = 6;
             grid.add (app_image);
             grid.add (app_name);
             grid.add (app_switch);
             add (grid);
-            show_all ();
         }
 
         private string get_app_path () {

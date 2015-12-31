@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
+ * Copyright (c) 2013-2016 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -21,152 +21,128 @@
  */
 
 public class OnlineAccounts.SourceSelector : Gtk.Grid {
-
-    private Gtk.ListStore list_store;
-    private Gtk.TreeView tree_view;
-    private Gee.HashMap<string, Gtk.TreeIter?> iter_map;
-    
-    private Gtk.ToolButton remove_button;
-    private Gtk.ToolButton add_button;
-    
-    private OnlineAccounts.Account last_selected = null;
-
-    private enum Columns {
-        ICON,
-        TEXT,
-        PLUGIN,
-        N_COLUMNS
-    }
-    
     public signal void account_selected (OnlineAccounts.Account plugin);
     public signal void new_account_request ();
-    
+
+    private Gtk.ToolButton remove_button;
+    private Gtk.ToolButton add_button;
+    private Gtk.ListBox list_box;
+
     public SourceSelector () {
-        list_store = new Gtk.ListStore (Columns.N_COLUMNS, typeof (string), typeof (string), typeof (Object));
-        tree_view = new Gtk.TreeView.with_model (list_store);
-        tree_view.get_selection ().mode = Gtk.SelectionMode.BROWSE;
-        tree_view.activate_on_single_click = true;
-        iter_map = new Gee.HashMap<string, Gtk.TreeIter?> ();
-
-        var pixbuf = new Gtk.CellRendererPixbuf ();
-        pixbuf.stock_size = Gtk.IconSize.DIALOG;
-        var column = new Gtk.TreeViewColumn ();
-        column.pack_start (pixbuf, false);
-        column.add_attribute (pixbuf, "icon_name", Columns.ICON);
-        tree_view.append_column (column);
-
-        var text = new Gtk.CellRendererText ();
-        text.ellipsize = Pango.EllipsizeMode.END;
-        text.ellipsize_set = true;
-        column = new Gtk.TreeViewColumn ();
-        column.pack_start (text, true);
-        column.add_attribute (text, "markup", Columns.TEXT);
-        tree_view.append_column (column);
- 
-        tree_view.set_headers_visible (false);
-        
-        var selection = tree_view.get_selection ();
-        selection.mode = Gtk.SelectionMode.BROWSE;
-        
-        var scroll = new Gtk.ScrolledWindow (null, null);
-        scroll.set_size_request (150, 150);
-        scroll.hscrollbar_policy = Gtk.PolicyType.NEVER;
-        scroll.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
-        scroll.expand = true;
-        scroll.add (tree_view);
-
-        var toolbar = new Gtk.Toolbar();
-        toolbar.set_style (Gtk.ToolbarStyle.ICONS);
-        toolbar.get_style_context ().add_class ("inline-toolbar");
-        toolbar.set_icon_size (Gtk.IconSize.SMALL_TOOLBAR);
-        toolbar.set_show_arrow (false);
-        toolbar.hexpand = true;
-
-        scroll.get_style_context ().set_junction_sides (Gtk.JunctionSides.BOTTOM);
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-        toolbar.get_style_context ().set_junction_sides (Gtk.JunctionSides.TOP);
-        
-        add_button = new Gtk.ToolButton (null, _("Add…"));
-        add_button.set_tooltip_text (_("Add…"));
-        add_button.set_icon_name ("list-add-symbolic");
-        add_button.clicked.connect (() => {new_account_request ();});
-        
-        remove_button = new Gtk.ToolButton (null, _("Remove"));
-        remove_button.set_tooltip_text (_("Remove"));
-        remove_button.set_icon_name ("list-remove-symbolic");
-        remove_button.clicked.connect (remove_source);
-        
-        toolbar.insert (add_button, -1);
-        toolbar.insert (remove_button, -1);
-        
-        attach (scroll, 0, 0, 1, 1);
-        attach (toolbar, 0, 1, 1, 1);
         var accounts_manager = AccountsManager.get_default ();
         foreach (var account in accounts_manager.accounts_available) {
             add_plugin_callback (account);
         }
 
         accounts_manager.account_added.connect (add_plugin_callback);
+    }
 
-        tree_view.row_activated.connect ((path, column) => {
-            Gtk.TreeIter iter;
-            list_store.get_iter (out iter, path);
-            OnlineAccounts.Account plugin;
-            list_store.get (iter, Columns.PLUGIN, out plugin);
-            last_selected = plugin;
-            account_selected (plugin);
+    construct {
+        orientation = Gtk.Orientation.VERTICAL;
+        list_box = new Gtk.ListBox ();
+        list_box.selection_mode = Gtk.SelectionMode.BROWSE;
+        list_box.activate_on_single_click = true;
+
+        var scroll = new Gtk.ScrolledWindow (null, null);
+        scroll.set_size_request (150, 150);
+        scroll.hscrollbar_policy = Gtk.PolicyType.NEVER;
+        scroll.expand = true;
+        scroll.add (list_box);
+
+        add_button = new Gtk.ToolButton (null, null);
+        add_button.tooltip_text = _("Add…");
+        add_button.icon_name = "list-add-symbolic";
+        add_button.clicked.connect (() => {new_account_request ();});
+
+        remove_button = new Gtk.ToolButton (null, null);
+        remove_button.tooltip_text = _("Remove");
+        remove_button.icon_name = "list-remove-symbolic";
+        remove_button.clicked.connect (remove_source);
+
+        var toolbar = new Gtk.Toolbar();
+        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+        toolbar.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
+        toolbar.show_arrow = false;
+        toolbar.add (add_button);
+        toolbar.add (remove_button);
+
+        add (scroll);
+        add (toolbar);
+
+        list_box.row_activated.connect ((row) => {
+            account_selected (((AccountRow) row).account);
         });
     }
-    
-    private void add_plugin_callback (OnlineAccounts.Account plugin) {
-        var provider = plugin.account.get_manager ().get_provider (plugin.account.get_provider_name ());
+
+    private void add_plugin_callback (OnlineAccounts.Account account) {
+        var provider = account.account.get_manager ().get_provider (account.account.get_provider_name ());
         if (provider == null)
             return;
 
-        bool first_item = false;
-        Gtk.TreeIter iter;
-        if (list_store.get_iter_first (out iter) == false) {
-            first_item = true;
-        }
-
-        list_store.append (out iter);
-        list_store.set (iter, Columns.ICON, provider.get_icon_name (), 
-                               Columns.TEXT, "<b>" + provider.get_display_name () + "</b>\n"+ plugin.account.display_name,
-                               Columns.PLUGIN, plugin);
-        if (first_item == true) {
-            last_selected = plugin;
-            account_selected (plugin);
-            tree_view.get_selection ().select_iter (iter);
+        var row = new AccountRow (account, provider);
+        row.show_all ();
+        list_box.add (row);
+        if (list_box.get_children ().length () == 1) {
+            list_box.select_row (row);
+            list_box.row_activated (row);
         }
     }
-    
+
     public OnlineAccounts.Account? get_selected_account () {
-        return last_selected;
+        weak Gtk.ListBoxRow selection = list_box.get_selected_row ();
+        if (selection == null)
+            return null;
+
+        return ((AccountRow) selection).account;
     }
-    
+
     private void remove_source () {
-        Gtk.TreePath path;
-        Gtk.TreeViewColumn column;
-        tree_view.get_cursor (out path, out column);
-        Gtk.TreeIter iter;
-        list_store.get_iter (out iter, path);
-        Value plugin;
-        list_store.get_value (iter, Columns.PLUGIN, out plugin);
-        AccountsManager.get_default ().remove_account ((OnlineAccounts.Account)plugin.get_object ());
-        // check if the item is the last one, then go to the previous or go to welcome screen.
-        if (list_store.iter_next (ref iter) == true) {
-            tree_view.row_activated (list_store.get_path (iter), column);
-            list_store.iter_previous (ref iter);
-        } else {
-            list_store.get_iter (out iter, path);
-            if (list_store.iter_previous (ref iter) == true) {
-                tree_view.row_activated (list_store.get_path (iter), column);
-                list_store.iter_next (ref iter);
-            } else {
-                list_store.get_iter (out iter, path);
-            }
+        weak Gtk.ListBoxRow selection = list_box.get_selected_row ();
+        if (selection == null)
+            return;
+
+        var account = ((AccountRow) selection).account;
+        AccountsManager.get_default ().remove_account (account);
+        selection.destroy ();
+        selection = list_box.get_row_at_index (0);
+        if (selection != null) {
+            list_box.select_row (selection);
+            list_box.row_activated (selection);
+        }
+    }
+
+    public class AccountRow : Gtk.ListBoxRow {
+        public OnlineAccounts.Account account;
+        private Gtk.Image image;
+        private Gtk.Label username;
+        private Gtk.Label service;
+        public AccountRow (OnlineAccounts.Account account, Ag.Provider provider) {
+            this.account = account;
+            image.icon_name = provider.get_icon_name ();
+            username.label = account.account.display_name;
+            service.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (provider.get_display_name ()));
         }
 
-        list_store.remove (iter);
+        construct {
+            var grid = new Gtk.Grid ();
+            grid.margin = 6;
+            grid.column_spacing = 6;
+            image = new Gtk.Image ();
+            image.icon_size = Gtk.IconSize.DND;
+            image.use_fallback = true;
+            username = new Gtk.Label (null);
+            username.ellipsize = Pango.EllipsizeMode.END;
+            username.halign = Gtk.Align.START;
+            username.hexpand = true;
+            service = new Gtk.Label (null);
+            service.ellipsize = Pango.EllipsizeMode.END;
+            service.halign = Gtk.Align.START;
+            service.hexpand = true;
+            service.use_markup = true;
+            grid.attach (image, 0, 0, 1, 2);
+            grid.attach (username, 1, 0, 1, 1);
+            grid.attach (service, 1, 1, 1, 1);
+            add (grid);
+        }
     }
 }
