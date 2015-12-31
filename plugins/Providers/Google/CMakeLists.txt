@@ -18,7 +18,7 @@ target_link_libraries (${G_NAME} ${DEPS_LIBRARIES})
 add_dependencies(${G_NAME} ${PLUGNAME})
 
 install(TARGETS ${G_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
-install(FILES google.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
+install(FILES online-account-google.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
 install(FILES google.provider DESTINATION ${ACCOUNTS_DIR}/providers/)
 install(FILES google-calendar.service DESTINATION ${ACCOUNTS_DIR}/services/)
 install(FILES google-contacts.service DESTINATION ${ACCOUNTS_DIR}/services/)

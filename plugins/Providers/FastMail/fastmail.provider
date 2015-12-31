@@ -2,7 +2,7 @@
 <provider id="fastmail">
   <name>FastMail</name>
   <description>Includes Contacts, Mails, and Calendar</description>
-  <icon>fastmail</icon>
+  <icon>online-account-fastmail</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>password</plugin>
 

@@ -2,7 +2,7 @@
 <provider id="microsoft">
   <name>Microsoft</name>
   <description>Access all Outlook and OneDrive services on your computer</description>
-  <icon>microsoft</icon>
+  <icon>online-account-microsoft</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>generic-oauth</plugin>
 

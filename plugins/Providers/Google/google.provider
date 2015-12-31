@@ -2,7 +2,7 @@
 <provider id="google">
   <name>Google</name>
   <description>Access all Google services on your computer</description>
-  <icon>google</icon>
+  <icon>online-account-google</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>generic-oauth</plugin>
 

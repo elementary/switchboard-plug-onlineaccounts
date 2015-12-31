@@ -2,7 +2,7 @@
 <provider id="facebook">
   <name>Facebook</name>
   <description>Access all Facebook contents on your computer</description>
-  <icon>facebook</icon>
+  <icon>online-account-facebook</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>generic-oauth</plugin>
 

@@ -18,6 +18,6 @@ target_link_libraries (${Y_NAME} ${DEPS_LIBRARIES})
 add_dependencies(${Y_NAME} ${PLUGNAME})
 
 install(TARGETS ${Y_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
-install(FILES yahoo.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
+install(FILES online-account-yahoo.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
 install(FILES yahoo.provider DESTINATION ${ACCOUNTS_DIR}/providers/)
 install(FILES yahoo-calendar.service DESTINATION ${ACCOUNTS_DIR}/services/)

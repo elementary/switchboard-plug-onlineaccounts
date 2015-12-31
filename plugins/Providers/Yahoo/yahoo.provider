@@ -2,7 +2,7 @@
 <provider id="yahoo">
   <name>Yahoo!</name>
   <description>Access all Yahoo! services on your computer</description>
-  <icon>yahoo</icon>
+  <icon>online-account-yahoo</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>generic-oauth</plugin>
 

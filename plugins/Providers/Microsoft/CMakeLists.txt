@@ -17,7 +17,7 @@ target_link_libraries (${M_NAME} ${DEPS_LIBRARIES})
 add_dependencies(${M_NAME} ${PLUGNAME})
 
 install(TARGETS ${M_NAME} DESTINATION ${PLUGIN_DIR}/generic-oauth-plugins/)
-install(FILES microsoft.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
+install(FILES online-account-microsoft.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
 install(FILES microsoft.provider DESTINATION ${ACCOUNTS_DIR}/providers/)
 install(FILES microsoft-contacts.service DESTINATION ${ACCOUNTS_DIR}/services/)
 install(FILES microsoft-calendar.service DESTINATION ${ACCOUNTS_DIR}/services/)
