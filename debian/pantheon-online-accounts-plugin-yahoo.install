@@ -1,4 +1,4 @@
 usr/lib/*/pantheon-online-accounts/generic-oauth-plugins/libyahoo.so
 usr/share/accounts/providers/yahoo*
 usr/share/accounts/services/yahoo*
-usr/share/icons/hicolor/scalable/apps/yahoo.svg
+usr/share/icons/hicolor/scalable/apps/online-account-yahoo.svg
