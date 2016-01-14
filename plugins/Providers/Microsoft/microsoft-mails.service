@@ -8,28 +8,6 @@
   <translations>pantheon-online-accounts</translations>
   
   <template>
-    <group name="auth">
-      <setting name="method">oauth</setting>
-      <setting name="mechanism">user_agent</setting>
-      <group name="oauth">
-        <group name="user_agent">
-          <setting name="ResponseType">code</setting>
-          <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
-          <setting name="UiPolicy">0</setting>
-          <setting name="AuthHost">login.live.com</setting>
-          <setting name="AuthPath">/oauth20_authorize.srf</setting>
-          <setting name="TokenHost">login.live.com</setting>
-          <setting name="TokenPath">/oauth20_token.srf</setting>
-          <setting name="RedirectUri">http://elementaryos.org</setting>
-          <setting name="Scope">wl.basic wl.birthday wl.emails wl.imap wl.offline_access wl.postal_addresses wl.phone_numbers wl.calendars_update wl.events_create wl.contacts_photos wl.contacts_create wl.contacts_skydrive wl.skydrive_update</setting>
-          <setting name="ClientId">00000000400ECC75</setting>
-          <setting name="ClientSecret">SFHsDQX7IuyykXpSfGKJxh7xcRCKX1Gd</setting>
-          <setting type="as" name="AllowedSchemes">['https','http']</setting>
-          <setting type="as" name="AllowedRealms">['login.live.com']</setting>
-          <setting type="as" name="Realms">['login.live.com']</setting>
-        </group>
-      </group>
-    </group>
     <group name="evolution">
       <setting name="BackendName">outlook2</setting>
     </group>

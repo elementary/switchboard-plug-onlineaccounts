@@ -8,26 +8,6 @@
   <translations>pantheon-online-accounts</translations>
 
   <template>
-    <group name="auth">
-      <setting name="method">oauth1</setting>
-      <setting name="mechanism">HMAC-SHA1</setting>
-      <group name="oauth1">
-        <group name="HMAC-SHA1">
-          <setting name="Host">api.login.yahoo.com</setting>
-          <setting name="Callback">http://elementaryos.org</setting>
-          <setting name="RequestEndpoint">https://api.login.yahoo.com/oauth/v2/get_request_token</setting>
-          <setting name="TokenEndpoint">https://api.login.yahoo.com/oauth/v2/get_token</setting>
-          <setting name="AuthorizationEndpoint">https://api.login.yahoo.com/oauth/v2/request_auth</setting>
-          <setting name="ConsumerKey">dj0yJmk9eGhmZ09ueUJoTElaJmQ9WVdrOVVVODBSRnBwTkhNbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD00MA--</setting>
-          <setting name="ConsumerSecret">cdb54599d34adbd21854f4fcc0292bec1fcb8389</setting>
-          <setting name="SignatureMethod">HMAC-SHA1</setting>
-          <setting type="int" name="UiPolicy">0</setting>
-          <setting type="as" name="AllowedSchemes">['https','http']</setting>
-          <setting type="as" name="AllowedRealms">['yahoo.com']</setting>
-          <setting type="as" name="Realms">['api.login.yahoo.com']</setting>
-        </group>
-      </group>
-    </group>
     <group name="evolution">
       <setting name="BackendName">yahoo</setting>
     </group>
