@@ -46,6 +46,18 @@ public class OnlineAccounts.Plugins.OAuth.Google.ProviderPlugin : OnlineAccounts
             weak Json.Object root_object = parser.get_root ().get_object ();
             unowned string mail = root_object.get_string_member ("email");
             plugin.account.set_display_name (mail);
+            // Add the login_hint to the query so that the account name is automatically filled
+            var account_service = new Ag.AccountService (plugin.account, null);
+            var auth_data = account_service.get_auth_data ();
+            var key = "auth/%s/%s/AuthQuery".printf (auth_data.get_method (), auth_data.get_mechanism ());
+            var auth_query = account_service.get_variant (key, null);
+            if (auth_query != null) {
+                var variant = new Variant.string ("login_hint=%s&amp;%s".printf (mail, auth_query.get_string ()));
+                account_service.set_variant (key, variant);
+            } else {
+                var variant = new Variant.string ("login_hint=%s".printf (mail));
+                account_service.set_variant (key, variant);
+            }
         } catch (Error e) {
             critical (e.message);
         }
