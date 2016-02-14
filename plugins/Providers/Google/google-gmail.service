@@ -14,7 +14,7 @@
       <setting name="mechanism">user_agent</setting>
       <group name="oauth">
         <group name="user_agent">
-          <setting name="Scope">https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login https://mail.google.com/</setting>
+          <setting name="Scope">https://www.googleapis.com/auth/plus.login email https://mail.google.com/</setting>
         </group>
       </group>
     </group>

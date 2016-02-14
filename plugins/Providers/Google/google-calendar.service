@@ -13,7 +13,7 @@
       <setting name="mechanism">user_agent</setting>
       <group name="oauth">
         <group name="user_agent">
-          <setting name="Scope">https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly</setting>
+          <setting name="Scope">https://www.googleapis.com/auth/plus.login email https://www.googleapis.com/auth/calendar</setting>
         </group>
       </group>
     </group>
