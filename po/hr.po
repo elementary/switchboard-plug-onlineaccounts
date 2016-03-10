@@ -3,23 +3,23 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-17 08:30-0200\n"
-"PO-Revision-Date: 2014-12-25 10:27+0000\n"
-"Last-Translator: Ivan Vrljić <vrlja92@gmail.com>\n"
+"PO-Revision-Date: 2016-03-09 18:50+0000\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-22 05:57+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-03-10 05:56+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 
 #: ../src/OnlineAccounts.vala:47
 msgid "Online Accounts"
-msgstr "Online računi"
+msgstr "Mrežni računi"
 
 #: ../src/OnlineAccounts.vala:48
 msgid ""
 "Synchronize your computer with all your online accounts around the web."
-msgstr "Sinkroniziraj svoje računalo sa svim online računima na internetu"
+msgstr "Uskladite svoje računalo sa svim mrežnim računima na Internetu"
 
 #: ../src/OnlineAccounts.vala:62
 msgid "Close"
@@ -33,16 +33,16 @@ msgstr "Vrati"
 #: ../src/Authentification/GraphicalDialog.vala:55
 #: ../src/Authentification/WebDialog.vala:34
 msgid "Cancel"
-msgstr "Otkaži"
+msgstr "Odustani"
 
 #: ../src/OnlineAccounts.vala:145
 msgid "Connect Your Online Accounts"
-msgstr "Poveži svoje online račune"
+msgstr "Poveži svoje mrežne račune"
 
 #: ../src/OnlineAccounts.vala:145
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Prijavi se za povezivanje sa aplikacijama kao što su e-pošta, kontakti i "
+"Prijavi se za povezivanje s aplikacijama kao što su e-pošta, kontakti i "
 "kalendar."
 
 #: ../src/OnlineAccounts.vala:243
@@ -59,7 +59,7 @@ msgstr "Kalendari"
 
 #: ../src/Translation.vala:25
 msgid "Sync your calendars"
-msgstr "Sinkronziraj kalendare"
+msgstr "Uskaldi kalendare"
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
@@ -67,11 +67,11 @@ msgstr "Kontakti"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
-msgstr "Sinkroniziraj kontakte"
+msgstr "Uskaldi kontakte"
 
 #: ../src/Translation.vala:28
 msgid "Sync your files"
-msgstr "Sinkroniziraj datoteke"
+msgstr "Uskaldi datoteke"
 
 #: ../src/Translation.vala:29
 msgid "Emails"
@@ -79,11 +79,11 @@ msgstr "E-pošta"
 
 #: ../src/Translation.vala:30
 msgid "Sync your emails"
-msgstr "Sinkroniziraj e-poštu"
+msgstr "Uskaldi e-poštu"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
-msgstr "Sinkronizoraj slike"
+msgstr "Uskaldi slike"
 
 #: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
@@ -91,7 +91,7 @@ msgstr "Pogledaj svoje novosti"
 
 #: ../src/Translation.vala:33
 msgid "Chat with your friends"
-msgstr "Čavrljaj sa prijateljima"
+msgstr "Čavrljaj s prijateljima"
 
 #: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -115,20 +115,20 @@ msgstr "Uključuje kontakte, e-poštu i kalendar"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Skroblajte svoju glazbu"
 
 #: ../src/Translation.vala:40
 msgid "Scrobble"
-msgstr ""
+msgstr "Skroblaj"
 
 #: ../src/Authentification/GraphicalDialog.vala:57
 #: ../src/Authentification/WebDialog.vala:124
 msgid "Please enter your credentials…"
-msgstr "Unesite podatke za potvrdu..."
+msgstr "Unesite podatke za ovjeru..."
 
 #: ../src/Authentification/GraphicalDialog.vala:73
 msgid "Username:"
-msgstr "Korisničko Ime"
+msgstr "Korisničko ime:"
 
 #: ../src/Authentification/GraphicalDialog.vala:75
 msgid "john_doe"
@@ -160,7 +160,7 @@ msgstr "Osvježi Captcha"
 
 #: ../src/Authentification/GraphicalDialog.vala:98
 msgid "Enter above text here"
-msgstr "Unesite gornji tekst ovdje"
+msgstr "Upišite gornji tekst ovdje"
 
 #: ../src/Authentification/GraphicalDialog.vala:103
 msgid "Save"
@@ -168,7 +168,7 @@ msgstr "Spremi"
 
 #: ../src/Authentification/GraphicalDialog.vala:159
 msgid "Forgot password…"
-msgstr ""
+msgstr "Zaboravi lozinku..."
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:131
@@ -185,12 +185,12 @@ msgstr "Ukloni"
 
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
-msgstr "Sadržaj za sinkronizaciju:"
+msgstr "Sadržaj za usklađivanje:"
 
 #: ../src/Views/AccountView.vala:117
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "Nema instaliranih aplikacija koje se povezuju sa Vašim %s računom"
+msgstr "Nema instaliranih aplikacija koje se povezuju s vašim %s računom"
 
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
-msgstr ""
+msgstr "Nema aplikacija"
