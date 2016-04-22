@@ -7,57 +7,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-17 08:30-0200\n"
+"POT-Creation-Date: 2016-04-21 09:17-0300\n"
 "PO-Revision-Date: 2015-08-20 11:57+0000\n"
 "Last-Translator: Papp Ferenc <Unknown>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-22 05:57+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-04-22 05:37+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: hu\n"
 
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Online fiókok"
-
-#: ../src/OnlineAccounts.vala:48
-msgid ""
-"Synchronize your computer with all your online accounts around the web."
-msgstr "A számítógépe szinkronizálása az összes online fiókjával a weben."
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Bezárás"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Visszaállítás"
-
-#: ../src/OnlineAccounts.vala:64
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Mégsem"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Kapcsolódás az online fiókokhoz"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Jelentkezzen be az email, címjegyzék és naptár alkalmazások használatához."
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "„%s” fiók eltávolítva"
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Új fiók hozzáadása..."
-
+#. //launchpad.net/switchboard-plug-onlineaccounts)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 2 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Corentin Noël <corentin@elementary.io>
+#. 
+#. WARNING! This should never be included in valac
 #: ../src/Translation.vala:24
 msgid "Calendars"
 msgstr "Naptárak"
@@ -126,8 +106,67 @@ msgstr ""
 msgid "Scrobble"
 msgstr ""
 
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Tartalom szinkronizálása:"
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "Nincs %s fiókhoz kapcsolódó alkalmazás telepítve"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "Hozzáadás…"
+
+#: ../src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ../src/OnlineAccounts.vala:47
+msgid "Online Accounts"
+msgstr "Online fiókok"
+
+#: ../src/OnlineAccounts.vala:48
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:62
+msgid "Close"
+msgstr "Bezárás"
+
+#: ../src/OnlineAccounts.vala:63
+msgid "Restore"
+msgstr "Visszaállítás"
+
+#: ../src/OnlineAccounts.vala:64
+#: ../src/Authentification/GraphicalDialog.vala:55
+#: ../src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Connect Your Online Accounts"
+msgstr "Kapcsolódás az online fiókokhoz"
+
+#: ../src/OnlineAccounts.vala:145
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Jelentkezzen be az email, címjegyzék és naptár alkalmazások használatához."
+
+#: ../src/OnlineAccounts.vala:243
+msgid "Account '%s' Removed."
+msgstr "„%s” fiók eltávolítva"
+
+#: ../src/OnlineAccounts.vala:256
+msgid "Add a new account…"
+msgstr "Új fiók hozzáadása..."
+
 #: ../src/Authentification/GraphicalDialog.vala:57
-#: ../src/Authentification/WebDialog.vala:124
+#: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Adja meg hitelesítő adatait...."
 
@@ -176,26 +215,6 @@ msgid "Forgot password…"
 msgstr ""
 
 #: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:131
+#: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
 msgstr "Betöltés…"
-
-#: ../src/Views/SourceSelector.vala:89 ../src/Views/SourceSelector.vala:90
-msgid "Add…"
-msgstr "Hozzáadás…"
-
-#: ../src/Views/SourceSelector.vala:94 ../src/Views/SourceSelector.vala:95
-msgid "Remove"
-msgstr "Eltávolítás"
-
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr "Tartalom szinkronizálása:"
-
-#: ../src/Views/AccountView.vala:117
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Nincs %s fiókhoz kapcsolódó alkalmazás telepítve"
-
-#: ../src/Views/AccountView.vala:118
-msgid "No Apps"
-msgstr ""
