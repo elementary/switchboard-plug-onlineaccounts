@@ -105,6 +105,7 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
             app_image = new Gtk.Image ();
             app_image.icon_size = Gtk.IconSize.LARGE_TOOLBAR;
             app_name = new Gtk.Label (null);
+            app_name.halign = Gtk.Align.START;
             app_name.hexpand = true;
             app_switch = new Gtk.Switch ();
             app_switch.activate.connect (() => {
