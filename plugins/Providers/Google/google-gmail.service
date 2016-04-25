@@ -7,17 +7,7 @@
   <provider>google</provider>
   <translations>pantheon-online-accounts</translations>
 
-  
   <template>
-    <group name="auth">
-      <setting name="method">oauth</setting>
-      <setting name="mechanism">user_agent</setting>
-      <group name="oauth">
-        <group name="user_agent">
-          <setting name="Scope">https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://mail.google.com/</setting>
-        </group>
-      </group>
-    </group>
     <group name="evolution">
       <setting name="BackendName">google</setting>
     </group>
