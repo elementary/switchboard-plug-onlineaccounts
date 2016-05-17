@@ -54,7 +54,7 @@ namespace OnlineAccounts {
             if (stack == null) {
 
                 var close_button = new Gtk.Button.from_icon_name ("close-symbolic", Gtk.IconSize.MENU);
-                close_button.get_style_context ().add_class ("circular");
+                close_button.get_style_context ().add_class ("close-button");
                 close_button.clicked.connect (() => {
                     AccountsManager.get_default ().remove_cached_account ();
                     app_notification.reveal_child = false;
@@ -69,9 +69,9 @@ namespace OnlineAccounts {
 
                 var notification_box = new Gtk.Grid ();
                 notification_box.column_spacing = 12;
+                notification_box.add (close_button);
                 notification_box.add (notification_label);
                 notification_box.add (restore_button);
-                notification_box.add (close_button);
 
                 var notification_frame = new Gtk.Frame (null);
                 notification_frame.get_style_context ().add_class ("app-notification");
