@@ -68,7 +68,7 @@ namespace OnlineAccounts {
                 });
 
                 var notification_box = new Gtk.Grid ();
-                notification_box.column_spacing = 6;
+                notification_box.column_spacing = 12;
                 notification_box.add (notification_label);
                 notification_box.add (restore_button);
                 notification_box.add (close_button);
