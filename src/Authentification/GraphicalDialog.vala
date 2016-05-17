@@ -27,6 +27,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     Gtk.Entry new_password_entry;
     Gtk.Entry confirm_password_entry;
     Gtk.Entry captcha_entry;
+    Gtk.Button cancel_button;
     Gtk.Button save_button;
     Gtk.CheckButton remember_button;
     Gtk.LinkButton forgot_button;
@@ -49,32 +50,19 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     public GraphicalDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
+        halign = Gtk.Align.CENTER;
+        valign = Gtk.Align.CENTER;
         column_spacing = 12;
         row_spacing = 6;
 
-        var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
-        var container = infobar.get_content_area () as Gtk.Container;
-        var info_label = new Gtk.Label (_("Please enter your credentials…"));
-        info_label.valign = Gtk.Align.CENTER;
-        container.add (info_label);
-        infobar.response.connect (() => {
-            error_code = GSignond.SignonuiError.CANCELED;
-            finished ();
-            this.destroy ();
-        });
-
-        var fake_grid_left = new Gtk.Grid ();
-        fake_grid_left.hexpand = true;
-        var fake_grid_right = new Gtk.Grid ();
-        fake_grid_right.hexpand = true;
-        attach (fake_grid_left, 0, 1, 1, 1);
-        attach (fake_grid_right, 3, 1, 1, 1);
-
         var username_label = new Gtk.Label (_("Username:"));
+        username_label.halign = Gtk.Align.END;
         username_entry = new Gtk.Entry ();
         username_entry.placeholder_text = _("john_doe");
+        username_entry.width_request = 256;
 
         var password_label = new Gtk.Label (_("Password:"));
+        password_label.halign = Gtk.Align.END;
         password_entry = new Gtk.Entry ();
         password_entry.visibility = false;
         password_entry.input_purpose = Gtk.InputPurpose.PASSWORD;
@@ -100,7 +88,9 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         message_label = new Gtk.Label ("");
         message_label.no_show_all = true;
 
-        save_button = new Gtk.Button.with_label (_("Save"));
+        cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        save_button = new Gtk.Button.with_label (_("Log In"));
+        save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         set_parameters (params);
 
@@ -112,7 +102,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         if (query_password == true) {
             attach (password_label, 1, 2, 1, 1);
             attach (password_entry, 2, 2, 1, 1);
-            attach (remember_button, 1, 5, 2, 1);
+            attach (remember_button, 2, 5, 1, 1);
         }
         
         if (forgot_password_url != null) {
@@ -133,10 +123,17 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         attach (message_label, 1, 9, 2, 1);
         Gtk.ButtonBox save_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
+        save_box.margin_top = 12;
+        save_box.spacing = 6;
         save_box.set_layout (Gtk.ButtonBoxStyle.END);
+        save_box.add (cancel_button);
         save_box.add (save_button);
         save_button.clicked.connect (() => finished ());
-        attach (infobar, 0, 0, 4, 1);
+        cancel_button.clicked.connect (() => {
+            error_code = GSignond.SignonuiError.CANCELED;
+            finished ();
+            this.destroy ();
+        });
         attach (save_box, 1, 10, 2, 1);
         show_all ();
     }
