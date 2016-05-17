@@ -28,18 +28,16 @@ namespace OnlineAccounts {
         Gtk.Stack stack;
         Gtk.Grid grid;
         Gtk.Grid main_grid;
-        Gtk.Label info_label;
+        Gtk.Label notification_label;
         AccountView account_view;
         SourceSelector source_selector;
         Gtk.Paned paned;
         OnlineAccounts.Server oa_server;
         PluginsManager plugins_manager;
         Gtk.InfoBar infobar;
+        Gtk.Revealer app_notification;
         Gee.HashMap<int, Ag.Provider> providers_map;
         Granite.Widgets.Welcome welcome;
-        Gtk.Button close_button;
-        Gtk.Button restore_button;
-        Gtk.Button cancel_button;
 
         public Plug () {
             Object (category: Category.NETWORK,
@@ -54,31 +52,47 @@ namespace OnlineAccounts {
 
         public override Gtk.Widget get_widget () {
             if (stack == null) {
-                info_label = new Gtk.Label ("");
-                info_label.valign = Gtk.Align.CENTER;
+
+                var close_button = new Gtk.Button.from_icon_name ("close-symbolic", Gtk.IconSize.MENU);
+                close_button.get_style_context ().add_class ("close-button");
+                close_button.clicked.connect (() => {
+                    AccountsManager.get_default ().remove_cached_account ();
+                    app_notification.reveal_child = false;
+                });
+
+                notification_label = new Gtk.Label ("");
+                var restore_button = new Gtk.Button.with_label (_("Restore"));
+                restore_button.clicked.connect (() => {
+                    AccountsManager.get_default ().restore_cached_account ();
+                    app_notification.reveal_child = false;
+                });
+
+                var notification_box = new Gtk.Grid ();
+                notification_box.column_spacing = 12;
+                notification_box.add (close_button);
+                notification_box.add (notification_label);
+                notification_box.add (restore_button);
+
+                var notification_frame = new Gtk.Frame (null);
+                notification_frame.get_style_context ().add_class ("app-notification");
+                notification_frame.add (notification_box);
+
+                app_notification = new Gtk.Revealer ();
+                app_notification.margin = 3;
+                app_notification.halign = Gtk.Align.CENTER;
+                app_notification.valign = Gtk.Align.START;
+                app_notification.add (notification_frame);
+
+                var info_label = new Gtk.Label (_("Add a new account…"));
                 info_label.show ();
 
                 infobar = new Gtk.InfoBar ();
-                close_button = infobar.add_button (_("Close"), 0);
-                restore_button = infobar.add_button (_("Restore"), 1);
-                cancel_button = infobar.add_button (_("Cancel"), 2);
+                infobar.add_button (_("Cancel"), 0);
                 infobar.no_show_all = true;
                 infobar.response.connect ((id) => {
-                    var accounts_manager = AccountsManager.get_default ();
-                    if (id == 0) {
-                        accounts_manager.remove_cached_account ();
-                        infobar.hide ();
-                    } else if (id == 1) {
-                        accounts_manager.restore_cached_account ();
-                        infobar.hide ();
-                    } else {
-                        switch_to_main ();
-                        infobar.hide ();
-                    }
+                    switch_to_main ();
+                    infobar.hide ();
                 });
-
-                var action_box = infobar.get_action_area () as Gtk.Box;
-                action_box.orientation = Gtk.Orientation.HORIZONTAL;
 
                 var container = infobar.get_content_area () as Gtk.Container;
                 container.add (info_label);
@@ -116,8 +130,16 @@ namespace OnlineAccounts {
                 stack.add_named (paned, "main");
                 stack.show_all ();
 
-                main_grid.add (infobar);
-                main_grid.add (stack);
+                var overlay_grid = new Gtk.Grid ();
+                overlay_grid.orientation = Gtk.Orientation.VERTICAL;
+                overlay_grid.add (infobar);
+                overlay_grid.add (stack);
+
+                var overlay = new Gtk.Overlay ();
+                overlay.add_overlay (overlay_grid);
+                overlay.add_overlay (app_notification);
+
+                main_grid.add (overlay);
 
                 main_grid.show_all ();
                 oa_server = new OnlineAccounts.Server ();
@@ -180,6 +202,7 @@ namespace OnlineAccounts {
         public override void hidden () {
             hide_request ();
             AccountsManager.get_default ().remove_cached_account ();
+            app_notification.reveal_child = false;
             infobar.hide ();
         }
 
@@ -216,6 +239,7 @@ namespace OnlineAccounts {
         }
 
         public void switch_to_widget (string name) {
+            app_notification.reveal_child = false;
             infobar.hide ();
             stack.set_visible_child_name (name);
         }
@@ -234,26 +258,14 @@ namespace OnlineAccounts {
         }
 
         private void account_removed (string account_name) {
-            close_button.no_show_all = false;
-            close_button.show ();
-            restore_button.no_show_all = false;
-            restore_button.show ();
-            cancel_button.no_show_all = true;
-            cancel_button.hide ();
-            info_label.label = _("Account '%s' Removed.").printf (account_name);
-            infobar.show ();
+            notification_label.label = _("Account '%s' Removed.").printf (account_name);
+            app_notification.reveal_child = true;
             if (AccountsManager.get_default ().accounts_available.size <= 0)
                 switch_to_welcome ();
         }
 
         private void add_return () {
-            close_button.no_show_all = true;
-            close_button.hide ();
-            restore_button.no_show_all = true;
-            restore_button.hide ();
-            cancel_button.no_show_all = false;
-            cancel_button.show ();
-            info_label.label = _("Add a new account…");
+            app_notification.reveal_child = false;
             infobar.show ();
         }
     }
