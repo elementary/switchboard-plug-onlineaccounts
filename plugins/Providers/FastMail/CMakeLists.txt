@@ -18,5 +18,6 @@ target_link_libraries (${FM_NAME} ${DEPS_LIBRARIES})
 add_dependencies(${FM_NAME} ${PLUGNAME})
 
 install(TARGETS ${FM_NAME} DESTINATION ${PLUGIN_DIR}/password-plugins/)
-install(FILES online-account-fastmail.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps)
+install(FILES 32/online-account-fastmail.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/32x32/apps)
+install(FILES 48/online-account-fastmail.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps)
 install(FILES fastmail.provider DESTINATION ${ACCOUNTS_DIR}/providers/)
