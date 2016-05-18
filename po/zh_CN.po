@@ -7,15 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-21 09:17-0300\n"
+"POT-Creation-Date: 2016-05-17 13:54-0700\n"
 "PO-Revision-Date: 2016-04-24 00:46+0000\n"
 "Last-Translator: colindemian <dengmengpc@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-25 05:30+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-18 05:44+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
+
+#: ../src/OnlineAccounts.vala:45
+msgid "Online Accounts"
+msgstr "在线帐户"
+
+#: ../src/OnlineAccounts.vala:46
+msgid "Manage online accounts and connected applications"
+msgstr "管理在线账户和已连接的应用"
+
+#: ../src/OnlineAccounts.vala:64
+msgid "Restore"
+msgstr "恢复"
+
+#: ../src/OnlineAccounts.vala:86
+msgid "Add a new account…"
+msgstr "添加一个新账户..."
+
+#: ../src/OnlineAccounts.vala:90 ../src/Authentification/WebDialog.vala:34
+#: ../src/Authentification/GraphicalDialog.vala:91
+msgid "Cancel"
+msgstr "取消"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Connect Your Online Accounts"
+msgstr "连接您的在线账户"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "登录以连接您的邮件、联系人和日历等应用。"
+
+#: ../src/OnlineAccounts.vala:261
+msgid "Account '%s' Removed."
+msgstr "帐户“%s”已经删除。"
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "要同步的内容："
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "当前没有安装任与您 %s 账户相连接的应用程序"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr "无应用"
+
+#: ../src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "添加..."
+
+#: ../src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "删除"
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr "正在载入..."
+
+#: ../src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr "请输入您的认证信息..."
+
+#: ../src/Authentification/GraphicalDialog.vala:58
+msgid "Username:"
+msgstr "用户名："
+
+#: ../src/Authentification/GraphicalDialog.vala:61
+msgid "john_doe"
+msgstr "如：John"
+
+#: ../src/Authentification/GraphicalDialog.vala:64
+msgid "Password:"
+msgstr "密码："
+
+#: ../src/Authentification/GraphicalDialog.vala:69
+msgid "New Password:"
+msgstr "新密码："
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Confirm Password:"
+msgstr "确认密码："
+
+#: ../src/Authentification/GraphicalDialog.vala:78
+msgid "Remember password"
+msgstr "记住密码"
+
+#: ../src/Authentification/GraphicalDialog.vala:80
+msgid "Forgot password"
+msgstr "忘记密码"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Refresh Captcha"
+msgstr "刷新验证码"
+
+#: ../src/Authentification/GraphicalDialog.vala:86
+msgid "Enter above text here"
+msgstr "请输入上面的文本"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Log In"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:156
+msgid "Forgot password…"
+msgstr "忘记密码..."
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -105,114 +211,8 @@ msgstr "同步您的音乐"
 msgid "Scrobble"
 msgstr "同步"
 
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr "要同步的内容："
+#~ msgid "Save"
+#~ msgstr "保存"
 
-#: ../src/Views/AccountView.vala:117
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "当前没有安装任与您 %s 账户相连接的应用程序"
-
-#: ../src/Views/AccountView.vala:118
-msgid "No Apps"
-msgstr "无应用"
-
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "添加..."
-
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "删除"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "在线帐户"
-
-#: ../src/OnlineAccounts.vala:48
-msgid "Manage online accounts and connected applications"
-msgstr "管理在线账户和已连接的应用"
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "关闭"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "恢复"
-
-#: ../src/OnlineAccounts.vala:64
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "取消"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "连接您的在线账户"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "登录以连接您的邮件、联系人和日历等应用。"
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "帐户“%s”已经删除。"
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "添加一个新账户..."
-
-#: ../src/Authentification/GraphicalDialog.vala:57
-#: ../src/Authentification/WebDialog.vala:126
-msgid "Please enter your credentials…"
-msgstr "请输入您的认证信息..."
-
-#: ../src/Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "用户名："
-
-#: ../src/Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "如：John"
-
-#: ../src/Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "密码："
-
-#: ../src/Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "新密码："
-
-#: ../src/Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "确认密码："
-
-#: ../src/Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "记住密码"
-
-#: ../src/Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "忘记密码"
-
-#: ../src/Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "刷新验证码"
-
-#: ../src/Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "请输入上面的文本"
-
-#: ../src/Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "保存"
-
-#: ../src/Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr "忘记密码..."
-
-#: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "正在载入..."
+#~ msgid "Close"
+#~ msgstr "关闭"

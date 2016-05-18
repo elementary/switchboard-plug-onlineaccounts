@@ -7,15 +7,123 @@ msgid ""
 msgstr ""
 "Project-Id-Version: noise\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-21 09:17-0300\n"
+"POT-Creation-Date: 2016-05-17 13:54-0700\n"
 "PO-Revision-Date: 2015-03-09 22:45+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-22 05:38+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-18 05:44+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
+
+#: ../src/OnlineAccounts.vala:45
+msgid "Online Accounts"
+msgstr "Akaun Atas Talian"
+
+#: ../src/OnlineAccounts.vala:46
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:64
+msgid "Restore"
+msgstr "Pulih"
+
+#: ../src/OnlineAccounts.vala:86
+msgid "Add a new account…"
+msgstr "Tambah satu akaun baharu..."
+
+#: ../src/OnlineAccounts.vala:90 ../src/Authentification/WebDialog.vala:34
+#: ../src/Authentification/GraphicalDialog.vala:91
+msgid "Cancel"
+msgstr "Batal"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Connect Your Online Accounts"
+msgstr "Sambung Akaun Atas Talian Anda"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Daftar masuk untuk sambung dengan apl seperti Mel, Kenalan, dan Kalendar."
+
+#: ../src/OnlineAccounts.vala:261
+msgid "Account '%s' Removed."
+msgstr "Akaun '%s' Dibuang."
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Kandungan yang disegerak:"
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+"Tiada apl buat masa ini dipasang dengan pautan tersebut ke akaun %s anda"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "Tambah..."
+
+#: ../src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "Buang"
+
+#: ../src/Authentification/WebDialog.vala:38
+#: ../src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr "Memuatkan..."
+
+#: ../src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr "Sila masukkan kelayakan anda..."
+
+#: ../src/Authentification/GraphicalDialog.vala:58
+msgid "Username:"
+msgstr "Nama Pengguna:"
+
+#: ../src/Authentification/GraphicalDialog.vala:61
+msgid "john_doe"
+msgstr "abuyop"
+
+#: ../src/Authentification/GraphicalDialog.vala:64
+msgid "Password:"
+msgstr "Kata laluan:"
+
+#: ../src/Authentification/GraphicalDialog.vala:69
+msgid "New Password:"
+msgstr "Kata Laluan Baharu:"
+
+#: ../src/Authentification/GraphicalDialog.vala:73
+msgid "Confirm Password:"
+msgstr "Sahkan Kata Laluan:"
+
+#: ../src/Authentification/GraphicalDialog.vala:78
+msgid "Remember password"
+msgstr "Ingat kata laluan"
+
+#: ../src/Authentification/GraphicalDialog.vala:80
+msgid "Forgot password"
+msgstr "Lupa kata laluan"
+
+#: ../src/Authentification/GraphicalDialog.vala:85
+msgid "Refresh Captcha"
+msgstr "Segar Semula Captcha"
+
+#: ../src/Authentification/GraphicalDialog.vala:86
+msgid "Enter above text here"
+msgstr "Masukkan teks atas di sini"
+
+#: ../src/Authentification/GraphicalDialog.vala:92
+msgid "Log In"
+msgstr ""
+
+#: ../src/Authentification/GraphicalDialog.vala:156
+msgid "Forgot password…"
+msgstr ""
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -105,116 +213,8 @@ msgstr ""
 msgid "Scrobble"
 msgstr ""
 
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr "Kandungan yang disegerak:"
+#~ msgid "Close"
+#~ msgstr "Tutup"
 
-#: ../src/Views/AccountView.vala:117
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-"Tiada apl buat masa ini dipasang dengan pautan tersebut ke akaun %s anda"
-
-#: ../src/Views/AccountView.vala:118
-msgid "No Apps"
-msgstr ""
-
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "Tambah..."
-
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "Buang"
-
-#: ../src/OnlineAccounts.vala:47
-msgid "Online Accounts"
-msgstr "Akaun Atas Talian"
-
-#: ../src/OnlineAccounts.vala:48
-msgid "Manage online accounts and connected applications"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:62
-msgid "Close"
-msgstr "Tutup"
-
-#: ../src/OnlineAccounts.vala:63
-msgid "Restore"
-msgstr "Pulih"
-
-#: ../src/OnlineAccounts.vala:64
-#: ../src/Authentification/GraphicalDialog.vala:55
-#: ../src/Authentification/WebDialog.vala:34
-msgid "Cancel"
-msgstr "Batal"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Connect Your Online Accounts"
-msgstr "Sambung Akaun Atas Talian Anda"
-
-#: ../src/OnlineAccounts.vala:145
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Daftar masuk untuk sambung dengan apl seperti Mel, Kenalan, dan Kalendar."
-
-#: ../src/OnlineAccounts.vala:243
-msgid "Account '%s' Removed."
-msgstr "Akaun '%s' Dibuang."
-
-#: ../src/OnlineAccounts.vala:256
-msgid "Add a new account…"
-msgstr "Tambah satu akaun baharu..."
-
-#: ../src/Authentification/GraphicalDialog.vala:57
-#: ../src/Authentification/WebDialog.vala:126
-msgid "Please enter your credentials…"
-msgstr "Sila masukkan kelayakan anda..."
-
-#: ../src/Authentification/GraphicalDialog.vala:73
-msgid "Username:"
-msgstr "Nama Pengguna:"
-
-#: ../src/Authentification/GraphicalDialog.vala:75
-msgid "john_doe"
-msgstr "abuyop"
-
-#: ../src/Authentification/GraphicalDialog.vala:77
-msgid "Password:"
-msgstr "Kata laluan:"
-
-#: ../src/Authentification/GraphicalDialog.vala:81
-msgid "New Password:"
-msgstr "Kata Laluan Baharu:"
-
-#: ../src/Authentification/GraphicalDialog.vala:85
-msgid "Confirm Password:"
-msgstr "Sahkan Kata Laluan:"
-
-#: ../src/Authentification/GraphicalDialog.vala:90
-msgid "Remember password"
-msgstr "Ingat kata laluan"
-
-#: ../src/Authentification/GraphicalDialog.vala:92
-msgid "Forgot password"
-msgstr "Lupa kata laluan"
-
-#: ../src/Authentification/GraphicalDialog.vala:97
-msgid "Refresh Captcha"
-msgstr "Segar Semula Captcha"
-
-#: ../src/Authentification/GraphicalDialog.vala:98
-msgid "Enter above text here"
-msgstr "Masukkan teks atas di sini"
-
-#: ../src/Authentification/GraphicalDialog.vala:103
-msgid "Save"
-msgstr "Simpan"
-
-#: ../src/Authentification/GraphicalDialog.vala:159
-msgid "Forgot password…"
-msgstr ""
-
-#: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "Memuatkan..."
+#~ msgid "Save"
+#~ msgstr "Simpan"
