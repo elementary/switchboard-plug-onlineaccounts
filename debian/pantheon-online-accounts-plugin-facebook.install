@@ -1,4 +1,4 @@
 usr/lib/*/pantheon-online-accounts/generic-oauth-plugins/libfacebook.so
 usr/share/accounts/providers/facebook*
 usr/share/accounts/services/facebook*
-usr/share/icons/hicolor/scalable/apps/online-account-facebook.svg
+usr/share/icons/hicolor/*/apps/online-account-facebook.svg
