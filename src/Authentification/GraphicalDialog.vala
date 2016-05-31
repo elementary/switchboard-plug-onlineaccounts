@@ -54,26 +54,35 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         valign = Gtk.Align.CENTER;
         column_spacing = 12;
         row_spacing = 6;
+        orientation = Gtk.Orientation.VERTICAL;
+        get_style_context ().add_class ("login");
 
-        var username_label = new Gtk.Label (_("Username:"));
-        username_label.halign = Gtk.Align.END;
+        var service_label = new Gtk.Label ("FastMail");
+        service_label.get_style_context ().add_class ("h1");
+        service_label.margin_bottom = 24;
+
         username_entry = new Gtk.Entry ();
-        username_entry.placeholder_text = _("john_doe");
+        username_entry.placeholder_text = _("Email Address");
         username_entry.width_request = 256;
 
-        var password_label = new Gtk.Label (_("Password:"));
-        password_label.halign = Gtk.Align.END;
         password_entry = new Gtk.Entry ();
+        password_entry.placeholder_text = _("Password");
         password_entry.visibility = false;
         password_entry.input_purpose = Gtk.InputPurpose.PASSWORD;
-        var new_password_label = new Gtk.Label (_("New Password:"));
+
         new_password_entry = new Gtk.Entry ();
+        new_password_entry.placeholder_text = _("New Password");
         new_password_entry.visibility = false;
         new_password_entry.input_purpose = Gtk.InputPurpose.PASSWORD;
-        var confirm_password_label = new Gtk.Label (_("Confirm Password:"));
+
         confirm_password_entry = new Gtk.Entry ();
+        confirm_password_entry.placeholder_text = _("Confirm Password");
         confirm_password_entry.visibility = false;
         confirm_password_entry.input_purpose = Gtk.InputPurpose.PASSWORD;
+
+        var entry_grid = new Gtk.Grid ();
+        entry_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
+        entry_grid.orientation = Gtk.Orientation.VERTICAL;
 
         remember_button = new Gtk.CheckButton.with_label (_("Remember password"));
 
@@ -89,52 +98,60 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         message_label.no_show_all = true;
 
         cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        cancel_button.hexpand = true;
         save_button = new Gtk.Button.with_label (_("Log In"));
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        save_button.hexpand = true;
+
+        var signup_button = new Gtk.LinkButton.with_label ("https://www.fastmail.com/signup/personal.html?STKI=15892889", _("Don't have an account? Sign Up"));
 
         set_parameters (params);
 
+        add (service_label);
+        add (entry_grid);
+
         if (query_username == true) {
-            attach (username_label, 1, 1, 1, 1);
-            attach (username_entry, 2, 1, 1, 1);
+            entry_grid.add (username_entry);
         }
 
         if (query_password == true) {
-            attach (password_label, 1, 2, 1, 1);
-            attach (password_entry, 2, 2, 1, 1);
-            attach (remember_button, 2, 5, 1, 1);
-        }
-        
-        if (forgot_password_url != null) {
-            attach (forgot_button, 1, 6, 2, 1);
+            entry_grid.add (password_entry);
+            add (remember_button);
         }
 
+        var save_box = new Gtk.Grid ();
+        save_box.margin_top = 12;
+        save_box.column_spacing = 6;
+        save_box.add (cancel_button);
+        save_box.add (save_button);
+
+        add (save_box);
+
+        if (forgot_password_url != null) {
+            add (forgot_button);
+        }
+
+        add (signup_button);
+
         if (query_confirm == true) {
-            attach (new_password_label, 1, 3, 1, 1);
-            attach (new_password_entry, 2, 3, 1, 1);
-            attach (confirm_password_label, 1, 4, 1, 1);
-            attach (confirm_password_entry, 2, 4, 1, 1);
+            entry_grid.add (new_password_entry);
+            entry_grid.add (confirm_password_entry);
         }
 
         if (query_captcha == true) {
-            attach (captcha_image, 1, 7, 2, 1);
-            attach (captcha_entry, 1, 8, 2, 1);
+            add (captcha_image);
+            add (captcha_entry);
         }
 
-        attach (message_label, 1, 9, 2, 1);
-        Gtk.ButtonBox save_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-        save_box.margin_top = 12;
-        save_box.spacing = 6;
-        save_box.set_layout (Gtk.ButtonBoxStyle.END);
-        save_box.add (cancel_button);
-        save_box.add (save_button);
+        add (message_label);
+
         save_button.clicked.connect (() => finished ());
         cancel_button.clicked.connect (() => {
             error_code = GSignond.SignonuiError.CANCELED;
             finished ();
             this.destroy ();
         });
-        attach (save_box, 1, 10, 2, 1);
+
         show_all ();
     }
 
