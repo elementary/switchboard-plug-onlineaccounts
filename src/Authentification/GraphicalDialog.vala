@@ -29,7 +29,6 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     Gtk.Entry captcha_entry;
     Gtk.Button cancel_button;
     Gtk.Button save_button;
-    Gtk.CheckButton remember_button;
     Gtk.LinkButton forgot_button;
     Gtk.Image captcha_image;
     Gtk.Label message_label;
@@ -84,8 +83,6 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         entry_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
         entry_grid.orientation = Gtk.Orientation.VERTICAL;
 
-        remember_button = new Gtk.CheckButton.with_label (_("Remember password"));
-
         forgot_button = new Gtk.LinkButton.with_label ("http://elementary.io", _("Forgot password"));
 
         captcha_entry = new Gtk.Entry ();
@@ -116,7 +113,6 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         if (query_password == true) {
             entry_grid.add (password_entry);
-            add (remember_button);
         }
 
         var save_box = new Gtk.Grid ();
