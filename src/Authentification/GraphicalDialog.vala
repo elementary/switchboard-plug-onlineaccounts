@@ -43,6 +43,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     bool is_new_password_valid = false;
     bool is_captcha_valid = false;
 
+    string display_name;
     string old_password;
     string forgot_password_url;
     string signup_url;
@@ -57,10 +58,9 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         orientation = Gtk.Orientation.VERTICAL;
         get_style_context ().add_class ("login");
 
-        var service_label = new Gtk.Label ("FastMail");
-        service_label.label = params.get (OnlineAccounts.Key.DISPLAY_NAME).get_string ();
-        service_label.get_style_context ().add_class ("h1");
-        service_label.margin_bottom = 24;
+        var provider_label = new Gtk.Label (display_name);
+        provider_label.get_style_context ().add_class ("h1");
+        provider_label.margin_bottom = 24;
 
         username_entry = new Gtk.Entry ();
         username_entry.placeholder_text = _("Email Address");
@@ -106,7 +106,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         set_parameters (params);
 
-        add (service_label);
+        if (display_name != null) {
+            add (provider_label);
+        }
+
         add (entry_grid);
 
         if (query_username == true) {
@@ -271,6 +274,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         if (query_confirm == true && old_password == null) {
             warning ("Wrong params for confirm query");
             return false;
+        }
+
+        if (OnlineAccounts.Key.DISPLAY_NAME in params) {
+            display_name = params.get (OnlineAccounts.Key.DISPLAY_NAME).get_string ();
         }
 
         if (OnlineAccounts.Key.FORGOT_PASSWORD_URL in params) {
