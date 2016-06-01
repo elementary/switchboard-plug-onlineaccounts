@@ -45,6 +45,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
     string old_password;
     string forgot_password_url;
+    string signup_url;
 
     public GraphicalDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
@@ -57,6 +58,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         get_style_context ().add_class ("login");
 
         var service_label = new Gtk.Label ("FastMail");
+        service_label.label = params.get (OnlineAccounts.Key.DISPLAY_NAME).get_string ();
         service_label.get_style_context ().add_class ("h1");
         service_label.margin_bottom = 24;
 
@@ -100,7 +102,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         save_button.hexpand = true;
 
-        var signup_button = new Gtk.LinkButton.with_label ("https://www.fastmail.com/signup/personal.html?STKI=15892889", _("Don't have an account? Sign Up"));
+        var signup_button = new Gtk.LinkButton.with_label ("%s".printf (signup_url), _("Don't have an account? Sign Up"));
 
         set_parameters (params);
 
@@ -127,7 +129,9 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             add (forgot_button);
         }
 
-        add (signup_button);
+        if (signup_url != null) {
+            add (signup_button);
+        }
 
         if (query_confirm == true) {
             entry_grid.add (new_password_entry);
@@ -271,6 +275,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         if (OnlineAccounts.Key.FORGOT_PASSWORD_URL in params) {
             forgot_password_url = params.get (OnlineAccounts.Key.FORGOT_PASSWORD_URL).get_string ();
+        }
+
+        if (OnlineAccounts.Key.SIGNUP_URL in params) {
+            signup_url = params.get (OnlineAccounts.Key.SIGNUP_URL).get_string ();
         }
 
         params.get_keys ().foreach ((key) => {
