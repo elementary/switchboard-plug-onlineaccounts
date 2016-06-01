@@ -85,7 +85,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         entry_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
         entry_grid.orientation = Gtk.Orientation.VERTICAL;
 
-        forgot_button = new Gtk.LinkButton.with_label ("http://elementary.io", _("Forgot password"));
+        forgot_button = new Gtk.LinkButton.with_label ("%s".printf (forgot_password_url), _("Forgot password"));
 
         captcha_entry = new Gtk.Entry ();
         captcha_entry.secondary_icon_name = "view-refresh";
