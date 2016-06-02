@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-17 13:54-0700\n"
+"POT-Creation-Date: 2016-06-02 13:44-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,57 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/OnlineAccounts.vala:45
-msgid "Online Accounts"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:46
-msgid "Manage online accounts and connected applications"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:64
-msgid "Restore"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:86
-msgid "Add a new account…"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:90 ../src/Authentification/WebDialog.vala:34
+#: ../src/Authentification/WebDialog.vala:34
 #: ../src/Authentification/GraphicalDialog.vala:91
+#: ../src/OnlineAccounts.vala:90
 msgid "Cancel"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:167
-msgid "Connect Your Online Accounts"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:167
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:261
-msgid "Account '%s' Removed."
-msgstr ""
-
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr ""
-
-#: ../src/Views/AccountView.vala:117
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-
-#: ../src/Views/AccountView.vala:118
-msgid "No Apps"
-msgstr ""
-
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr ""
-
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
 msgstr ""
 
 #: ../src/Authentification/WebDialog.vala:38
@@ -209,4 +162,52 @@ msgstr ""
 
 #: ../src/Translation.vala:40
 msgid "Scrobble"
+msgstr ""
+
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr ""
+
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:45
+msgid "Online Accounts"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:46
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:64
+msgid "Restore"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:86
+msgid "Add a new account…"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Connect Your Online Accounts"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:261
+msgid "Account '%s' Removed."
 msgstr ""
