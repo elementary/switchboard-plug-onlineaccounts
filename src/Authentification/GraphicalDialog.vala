@@ -148,6 +148,11 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         add (message_label);
 
+        password_entry.activate.connect (() => {
+            if (save_button.sensitive) {
+                save_button.activate ();
+            }
+        });
         save_button.clicked.connect (() => finished ());
         cancel_button.clicked.connect (() => {
             error_code = GSignond.SignonuiError.CANCELED;
