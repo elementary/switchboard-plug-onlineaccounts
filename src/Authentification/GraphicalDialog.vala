@@ -63,7 +63,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         provider_label.margin_bottom = 24;
 
         username_entry = new Gtk.Entry ();
-        username_entry.placeholder_text = _("Email Address");
+        username_entry.placeholder_text = _("Email");
         username_entry.width_request = 256;
 
         password_entry = new Gtk.Entry ();
