@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: noise\n"
+"Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-17 13:54-0700\n"
 "PO-Revision-Date: 2015-11-29 22:51+0000\n"
