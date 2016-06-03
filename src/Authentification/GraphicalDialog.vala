@@ -22,6 +22,7 @@
 
 public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     public signal void refresh_captcha_needed ();
+    Gtk.Entry url_entry;
     Gtk.Entry username_entry;
     Gtk.Entry password_entry;
     Gtk.Entry new_password_entry;
@@ -33,6 +34,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     Gtk.Image captcha_image;
     Gtk.Label message_label;
 
+    bool query_url = false;
     bool query_username = false;
     bool query_password = false;
     bool query_confirm = false;
@@ -61,6 +63,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         var provider_label = new Gtk.Label (display_name);
         provider_label.get_style_context ().add_class ("h1");
         provider_label.margin_bottom = 24;
+
+        url_entry = new Gtk.Entry ();
+        url_entry.placeholder_text = _("Url");
+        url_entry.input_purpose = Gtk.InputPurpose.URL;
 
         username_entry = new Gtk.Entry ();
         username_entry.placeholder_text = _("Email");
@@ -108,6 +114,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         if (display_name != null) {
             add (provider_label);
+        }
+
+        if (query_url == true) {
+            add (url_entry);
         }
 
         add (entry_grid);
@@ -257,6 +267,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         /* determine query type and its validate its value */
         if (OnlineAccounts.Key.QUERY_USERNAME in params) {
             query_username = params.get (OnlineAccounts.Key.QUERY_USERNAME).get_boolean ();
+        }
+
+        if (OnlineAccounts.Key.QUERY_URL in params) {
+            query_url = params.get (OnlineAccounts.Key.QUERY_URL).get_boolean ();
         }
 
         if (OnlineAccounts.Key.QUERY_PASSWORD in params) {

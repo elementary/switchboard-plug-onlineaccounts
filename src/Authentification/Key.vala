@@ -23,11 +23,12 @@
 namespace OnlineAccounts.Key {
     const string QUERY_PASSWORD = "QueryPassword";  // bool
     const string QUERY_USERNAME = "QueryUserName";  // bool
+    const string QUERY_URL = "QueryUrl";  // bool
     const string CONFIRM = "Confirm";               // bool
     const string OPEN_URL = "OpenUrl";              // string:url
     const string FINAL_URL = "FinalUrl";            // string:url
 
-    const string DISPLAY_NAME = "DisplayName";  // string
+    const string DISPLAY_NAME = "DisplayName";              // string
     const string REQUEST_ID = "RequestId";                  // string
     const string FORGOT_PASSWORD = "ForgotPassword";        // bool
     const string FORGOT_PASSWORD_URL = "ForgotPasswordUrl"; // string:url
@@ -38,7 +39,7 @@ namespace OnlineAccounts.Key {
     const string MESSAGE = "Message";                       // string ???
     const string REMEMBER_PASSWORD = "RememberPassword";    // bool
     const string CAPTCHA_URL = "CaptchaUrl";                // string:url
-    const string SIGNUP_URL = "SignUpURL";  // string
+    const string SIGNUP_URL = "SignUpURL";                  // string:url
 
     const string QUERY_ERROR_CODE = "QueryErrorCode";   // int32
     const string URL_RESPONSE = "UrlResponse";          // string:url
