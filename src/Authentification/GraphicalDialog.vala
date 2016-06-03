@@ -31,8 +31,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     Gtk.Button cancel_button;
     Gtk.Button save_button;
     Gtk.LinkButton forgot_button;
+    Gtk.LinkButton signup_button;
     Gtk.Image captcha_image;
     Gtk.Label message_label;
+    Gtk.Label provider_label;
 
     bool query_url = false;
     bool query_username = false;
@@ -60,7 +62,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         orientation = Gtk.Orientation.VERTICAL;
         get_style_context ().add_class ("login");
 
-        var provider_label = new Gtk.Label (display_name);
+        provider_label = new Gtk.Label ("");
         provider_label.get_style_context ().add_class ("h1");
         provider_label.margin_bottom = 24;
 
@@ -91,7 +93,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         entry_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
         entry_grid.orientation = Gtk.Orientation.VERTICAL;
 
-        forgot_button = new Gtk.LinkButton.with_label ("%s".printf (forgot_password_url), _("Forgot password"));
+        forgot_button = new Gtk.LinkButton.with_label ("", _("Forgot password…"));
 
         captcha_entry = new Gtk.Entry ();
         captcha_entry.secondary_icon_name = "view-refresh";
@@ -108,13 +110,11 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         save_button.hexpand = true;
 
-        var signup_button = new Gtk.LinkButton.with_label ("%s".printf (signup_url), _("Don't have an account? Sign Up"));
+        signup_button = new Gtk.LinkButton.with_label ("", _("Don't have an account? Sign Up"));
 
         set_parameters (params);
 
-        if (display_name != null) {
-            add (provider_label);
-        }
+        add (provider_label);
 
         if (query_url == true) {
             add (url_entry);
@@ -182,13 +182,14 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             return false;
         }
 
+        provider_label.label = display_name;
+
         weak Variant temp_string = params.get (OnlineAccounts.Key.USERNAME);
         username_entry.sensitive = query_username;
         if (temp_string != null)
             username_entry.text = temp_string.get_string () ?? "";
 
         if (forgot_password_url != null) {
-            forgot_button.label = _("Forgot password…");
             forgot_button.uri = forgot_password_url;
             forgot_button.activate_link.connect (() =>{
                 warning ("forgot password");
@@ -196,6 +197,10 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
                 finished ();
                 return false;
             });
+        }
+
+        if (signup_url != null) {
+            signup_button.uri = signup_url;
         }
 
         temp_string = params.get (OnlineAccounts.Key.MESSAGE);
@@ -297,6 +302,8 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         if (OnlineAccounts.Key.DISPLAY_NAME in params) {
             display_name = params.get (OnlineAccounts.Key.DISPLAY_NAME).get_string ();
+        } else {
+            display_name = _("Other Account");
         }
 
         if (OnlineAccounts.Key.FORGOT_PASSWORD_URL in params) {
