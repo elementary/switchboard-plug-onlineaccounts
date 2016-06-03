@@ -7,69 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-17 13:54-0700\n"
+"POT-Creation-Date: 2016-06-02 13:44-0500\n"
 "PO-Revision-Date: 2016-01-09 19:45+0000\n"
 "Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-18 05:44+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-06-03 06:15+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 
-#: ../src/OnlineAccounts.vala:45
-msgid "Online Accounts"
-msgstr "Online účty"
-
-#: ../src/OnlineAccounts.vala:46
-msgid "Manage online accounts and connected applications"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:64
-msgid "Restore"
-msgstr "Obnoviť"
-
-#: ../src/OnlineAccounts.vala:86
-msgid "Add a new account…"
-msgstr "Pridať nový účet"
-
-#: ../src/OnlineAccounts.vala:90 ../src/Authentification/WebDialog.vala:34
+#: ../src/Authentification/WebDialog.vala:34
 #: ../src/Authentification/GraphicalDialog.vala:91
+#: ../src/OnlineAccounts.vala:90
 msgid "Cancel"
 msgstr "Zrušiť"
-
-#: ../src/OnlineAccounts.vala:167
-msgid "Connect Your Online Accounts"
-msgstr "Pripojiť k vašim online kontám"
-
-#: ../src/OnlineAccounts.vala:167
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Prihláste sa do spojenia s aplikáciami, ako je pošta, kontakty a kalendár."
-
-#: ../src/OnlineAccounts.vala:261
-msgid "Account '%s' Removed."
-msgstr "Účet '%s' odstránený."
-
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr "Synchronizovať obsah:"
-
-#: ../src/Views/AccountView.vala:117
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Nemáte nainštalované žiadne aplikácie prepojené s vašim %s účtom"
-
-#: ../src/Views/AccountView.vala:118
-msgid "No Apps"
-msgstr "Žiadne aplikácie"
-
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "Pridať…"
-
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "Odstrániť"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -212,8 +164,51 @@ msgstr ""
 msgid "Scrobble"
 msgstr ""
 
-#~ msgid "Close"
-#~ msgstr "Zatvoriť"
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Synchronizovať obsah:"
 
-#~ msgid "Save"
-#~ msgstr "Uložiť"
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "Nemáte nainštalované žiadne aplikácie prepojené s vašim %s účtom"
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr "Žiadne aplikácie"
+
+#: ../src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "Pridať…"
+
+#: ../src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: ../src/OnlineAccounts.vala:45
+msgid "Online Accounts"
+msgstr "Online účty"
+
+#: ../src/OnlineAccounts.vala:46
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:64
+msgid "Restore"
+msgstr "Obnoviť"
+
+#: ../src/OnlineAccounts.vala:86
+msgid "Add a new account…"
+msgstr "Pridať nový účet"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Connect Your Online Accounts"
+msgstr "Pripojiť k vašim online kontám"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Prihláste sa do spojenia s aplikáciami, ako je pošta, kontakty a kalendár."
+
+#: ../src/OnlineAccounts.vala:261
+msgid "Account '%s' Removed."
+msgstr "Účet '%s' odstránený."

@@ -7,69 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-17 13:54-0700\n"
+"POT-Creation-Date: 2016-06-02 13:44-0500\n"
 "PO-Revision-Date: 2014-08-29 21:15+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-18 05:44+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-06-03 06:15+0000\n"
+"X-Generator: Launchpad (build 18086)\n"
 
-#: ../src/OnlineAccounts.vala:45
-msgid "Online Accounts"
-msgstr "Налози на мрежи"
-
-#: ../src/OnlineAccounts.vala:46
-msgid "Manage online accounts and connected applications"
-msgstr ""
-
-#: ../src/OnlineAccounts.vala:64
-msgid "Restore"
-msgstr "Поврати"
-
-#: ../src/OnlineAccounts.vala:86
-msgid "Add a new account…"
-msgstr "Додај нови налог…"
-
-#: ../src/OnlineAccounts.vala:90 ../src/Authentification/WebDialog.vala:34
+#: ../src/Authentification/WebDialog.vala:34
 #: ../src/Authentification/GraphicalDialog.vala:91
+#: ../src/OnlineAccounts.vala:90
 msgid "Cancel"
 msgstr "Одустани"
-
-#: ../src/OnlineAccounts.vala:167
-msgid "Connect Your Online Accounts"
-msgstr "Повежите ваше мрежне налоге"
-
-#: ../src/OnlineAccounts.vala:167
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Упишите се да би се повезали са апликацијама као Пошта, Контакти и Каленар."
-
-#: ../src/OnlineAccounts.vala:261
-msgid "Account '%s' Removed."
-msgstr "Налог '%s' Уклоњен."
-
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr "Садржај за синхронизацију:"
-
-#: ../src/Views/AccountView.vala:117
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-
-#: ../src/Views/AccountView.vala:118
-msgid "No Apps"
-msgstr ""
-
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "Додај…"
-
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "Уклони"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -212,8 +164,51 @@ msgstr ""
 msgid "Scrobble"
 msgstr ""
 
-#~ msgid "Save"
-#~ msgstr "Сачувај"
+#: ../src/Views/AccountView.vala:52
+msgid "Content to synchronise:"
+msgstr "Садржај за синхронизацију:"
 
-#~ msgid "Close"
-#~ msgstr "Затвори"
+#: ../src/Views/AccountView.vala:117
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+
+#: ../src/Views/AccountView.vala:118
+msgid "No Apps"
+msgstr ""
+
+#: ../src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "Додај…"
+
+#: ../src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "Уклони"
+
+#: ../src/OnlineAccounts.vala:45
+msgid "Online Accounts"
+msgstr "Налози на мрежи"
+
+#: ../src/OnlineAccounts.vala:46
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: ../src/OnlineAccounts.vala:64
+msgid "Restore"
+msgstr "Поврати"
+
+#: ../src/OnlineAccounts.vala:86
+msgid "Add a new account…"
+msgstr "Додај нови налог…"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Connect Your Online Accounts"
+msgstr "Повежите ваше мрежне налоге"
+
+#: ../src/OnlineAccounts.vala:167
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Упишите се да би се повезали са апликацијама као Пошта, Контакти и Каленар."
+
+#: ../src/OnlineAccounts.vala:261
+msgid "Account '%s' Removed."
+msgstr "Налог '%s' Уклоњен."
