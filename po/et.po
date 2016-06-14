@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 13:44-0500\n"
-"PO-Revision-Date: 2016-06-03 03:10+0000\n"
+"PO-Revision-Date: 2016-06-13 16:55+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-04 06:02+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-14 06:19+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 "Language: et\n"
 
 #: ../src/Authentification/WebDialog.vala:34
@@ -71,7 +71,7 @@ msgstr "Sisesta ülevalolev tekst siia..."
 
 #: ../src/Authentification/GraphicalDialog.vala:92
 msgid "Log In"
-msgstr ""
+msgstr "Logi sisse"
 
 #: ../src/Authentification/GraphicalDialog.vala:156
 msgid "Forgot password…"
@@ -192,7 +192,7 @@ msgstr "Veebikontod"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Online kontode ja ühendatud rakenduste haldamine"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
