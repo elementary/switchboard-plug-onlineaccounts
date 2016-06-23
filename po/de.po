@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-02 13:44-0500\n"
-"PO-Revision-Date: 2016-03-08 15:08+0000\n"
-"Last-Translator: Nico Du <nico_d@gmx.de>\n"
+"PO-Revision-Date: 2016-06-22 12:38+0000\n"
+"Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-03 06:15+0000\n"
-"X-Generator: Launchpad (build 18086)\n"
+"X-Launchpad-Export-Date: 2016-06-23 05:34+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 "Language: de\n"
 
 #: ../src/Authentification/WebDialog.vala:34
@@ -71,7 +71,7 @@ msgstr "Den oberen Text hier eingeben"
 
 #: ../src/Authentification/GraphicalDialog.vala:92
 msgid "Log In"
-msgstr ""
+msgstr "Anmelden"
 
 #: ../src/Authentification/GraphicalDialog.vala:156
 msgid "Forgot password…"
@@ -193,7 +193,7 @@ msgstr "Internetkonten"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Onlinekonten und verbundene Anwendungen verwalten"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
