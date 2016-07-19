@@ -116,17 +116,17 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
         add (provider_label);
 
-        if (query_url == true) {
+        if (query_url) {
             add (url_entry);
         }
 
         add (entry_grid);
 
-        if (query_username == true) {
+        if (query_username) {
             entry_grid.add (username_entry);
         }
 
-        if (query_password == true) {
+        if (query_password) {
             entry_grid.add (password_entry);
         }
 
@@ -146,12 +146,12 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             add (signup_button);
         }
 
-        if (query_confirm == true) {
+        if (query_confirm) {
             entry_grid.add (new_password_entry);
             entry_grid.add (confirm_password_entry);
         }
 
-        if (query_captcha == true) {
+        if (query_captcha) {
             add (captcha_image);
             add (captcha_entry);
         }
@@ -216,7 +216,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             query_captcha = refresh_captcha (temp_string.get_string ());
         }
 
-        if (query_username  == true) {
+        if (query_username) {
             username_entry.changed.connect (() => {
                 is_username_valid = (username_entry.text.char_count () > 0);
                 reset_ok ();
@@ -224,14 +224,14 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
 
             password_entry.changed.connect (() => {
                 is_password_valid = (password_entry.text.char_count () > 0);
-                if (query_confirm == true && is_password_valid && old_password != null)
+                if (query_confirm && is_password_valid && old_password != null)
                     is_password_valid = GLib.strcmp (old_password, password_entry.text) == 0;
 
                 reset_ok ();
             });
         }
 
-        if (query_confirm  == true) {
+        if (query_confirm) {
             new_password_entry.changed.connect (() => {
                 string new_password = new_password_entry.text;
                 string confirm = confirm_password_entry.text;
@@ -251,7 +251,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             });
         }
 
-        if (query_captcha  == true) {
+        if (query_captcha) {
             captcha_entry.changed.connect (() => {
                 is_captcha_valid = (captcha_entry.text.char_count () > 0);
                 reset_ok ();
@@ -295,7 +295,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
             old_password = params.get (OnlineAccounts.Key.PASSWORD).get_string ();
         }
 
-        if (query_confirm == true && old_password == null) {
+        if (query_confirm && old_password == null) {
             warning ("Wrong params for confirm query");
             return false;
         }
@@ -366,14 +366,14 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
         bool state = false;
 
         if (query_username)
-            state = is_username_valid == true && is_password_valid == true;
+            state = is_username_valid && is_password_valid;
         else if (query_password)
             state = is_password_valid;
         else if (query_confirm)
-            state = is_password_valid == true && is_new_password_valid == true;
+            state = is_password_valid && is_new_password_valid;
 
         if (query_captcha)
-            state = state && is_captcha_valid == true;
+            state = state && is_captcha_valid;
 
         if (save_button.sensitive != state)
             save_button.sensitive = state;

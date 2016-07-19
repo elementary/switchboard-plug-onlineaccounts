@@ -23,7 +23,7 @@
 namespace OnlineAccounts.Key {
     const string QUERY_PASSWORD = "QueryPassword";  // bool
     const string QUERY_USERNAME = "QueryUserName";  // bool
-    const string QUERY_URL = "QueryUrl";  // bool
+    const string QUERY_URL = "QueryUrl";            // bool
     const string CONFIRM = "Confirm";               // bool
     const string OPEN_URL = "OpenUrl";              // string:url
     const string FINAL_URL = "FinalUrl";            // string:url
