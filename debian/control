@@ -28,11 +28,12 @@ Depends: gsignond-extension-pantheon,
          ${misc:Depends},
          ${shlibs:Depends}
 Enhances: switchboard
-Recommends: pantheon-online-accounts-plugin-facebook,
-            pantheon-online-accounts-plugin-fastmail,
-            pantheon-online-accounts-plugin-google,
-            pantheon-online-accounts-plugin-microsoft,
-            pantheon-online-accounts-plugin-yahoo
+Recommends: pantheon-online-accounts-plugin-fastmail,
+            pantheon-online-accounts-plugin-lastfm
+#            pantheon-online-accounts-plugin-google,
+#            pantheon-online-accounts-plugin-microsoft,
+#            pantheon-online-accounts-plugin-yahoo,
+#            pantheon-online-accounts-plugin-facebook
 Description: Online Accounts plug for Switchboard
  This plug allow you to enable online accounts sync.
 
@@ -60,66 +61,66 @@ Description: Online Accounts plug for Switchboard (development files)
  .
  This package contains the header files.
 
-Package: pantheon-online-accounts-plugin-generic-oauth
-Architecture: any
-Depends: gsignond-plugin-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Description: Online Accounts plugin for single signon - Generic OAuth
- Online accounts plugin for single signon
+#Package: pantheon-online-accounts-plugin-generic-oauth
+#Architecture: any
+#Depends: gsignond-plugin-oauth,
+#         switchboard-plug-online-accounts (= ${binary:Version}),
+#         ${misc:Depends},
+#         ${shlibs:Depends}
+#Description: Online Accounts plugin for single signon - Generic OAuth
+# Online accounts plugin for single signon
 
-Package: pantheon-online-accounts-plugin-password
-Architecture: any
-Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Description: Online Accounts plugin for single signon - Password
- Online accounts plugin for single signon
+#Package: pantheon-online-accounts-plugin-password
+#Architecture: any
+#Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+#         ${misc:Depends},
+#         ${shlibs:Depends}
+#Description: Online Accounts plugin for single signon - Password
+# Online accounts plugin for single signon
 
-Package: pantheon-online-accounts-plugin-facebook
-Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Conflicts: account-plugin-facebook
-Description: Online Accounts plugin for single signon - Facebook
- Online accounts plugin for single signon
+#Package: pantheon-online-accounts-plugin-facebook
+#Architecture: any
+#Depends: pantheon-online-accounts-plugin-generic-oauth,
+#         switchboard-plug-online-accounts (= ${binary:Version}),
+#         ${misc:Depends},
+#         ${shlibs:Depends}
+#Conflicts: account-plugin-facebook
+#Description: Online Accounts plugin for single signon - Facebook
+# Online accounts plugin for single signon
 
-Package: pantheon-online-accounts-plugin-microsoft
-Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Conflicts: account-plugin-windows-live
-Description: Online Accounts plugin for single signon - Microsoft
- Online accounts plugin for single signon
+#Package: pantheon-online-accounts-plugin-microsoft
+#Architecture: any
+#Depends: pantheon-online-accounts-plugin-generic-oauth,
+#         switchboard-plug-online-accounts (= ${binary:Version}),
+#         ${misc:Depends},
+#         ${shlibs:Depends}
+#Conflicts: account-plugin-windows-live
+#Description: Online Accounts plugin for single signon - Microsoft
+# Online accounts plugin for single signon
 
-Package: pantheon-online-accounts-plugin-google
-Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Conflicts: account-plugin-google, evolution-data-server-online-accounts
-Replaces: evolution-data-server-online-accounts
-Description: Online Accounts plugin for single signon - Google
- Online accounts plugin for single signon
+#Package: pantheon-online-accounts-plugin-google
+#Architecture: any
+#Depends: pantheon-online-accounts-plugin-generic-oauth,
+#         switchboard-plug-online-accounts (= ${binary:Version}),
+#         ${misc:Depends},
+#         ${shlibs:Depends}
+#Conflicts: account-plugin-google, evolution-data-server-online-accounts
+#Replaces: evolution-data-server-online-accounts
+#Description: Online Accounts plugin for single signon - Google
+# Online accounts plugin for single signon
 
-Package: pantheon-online-accounts-plugin-yahoo
-Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Conflicts: account-plugin-flickr,
-           account-plugin-yahoo,
-           evolution-data-server-online-accounts
-Replaces: evolution-data-server-online-accounts
-Description: Online Accounts plugin for single signon - Yahoo
- Online accounts plugin for single signon
+#Package: pantheon-online-accounts-plugin-yahoo
+#Architecture: any
+#Depends: pantheon-online-accounts-plugin-generic-oauth,
+#         switchboard-plug-online-accounts (= ${binary:Version}),
+#         ${misc:Depends},
+#         ${shlibs:Depends}
+#Conflicts: account-plugin-flickr,
+#           account-plugin-yahoo,
+#           evolution-data-server-online-accounts
+#Replaces: evolution-data-server-online-accounts
+#Description: Online Accounts plugin for single signon - Yahoo
+# Online accounts plugin for single signon
 
 Package: pantheon-online-accounts-plugin-fastmail
 Architecture: any
