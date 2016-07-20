@@ -13,7 +13,9 @@
       <group name="password">
         <group name="password">
           <setting type="int" name="UiPolicy">0</setting>
+          <setting name="DisplayName">Fastmail</setting>
           <setting name="ForgotPasswordUrl">https://www.fastmail.fm/html/?MSignal=LostPassword-*</setting>
+          <setting name="SignUpURL">https://www.fastmail.com/signup/personal.html?STKI=15892889</setting>
         </group>
       </group>
     </group>
