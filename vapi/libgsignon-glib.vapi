@@ -111,12 +111,11 @@ namespace Signon {
 		public void set_application_context (string application_context);
 		public void set_system_context (string system_context);
 	}
-	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", free_function = "signon_security_context_list_free")]
+	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", copy_function = "signon_security_context_list_copy", free_function = "signon_security_context_list_free")]
+	[Compact]
 	public class SecurityContextList : GLib.List<Signon.SecurityContext> {
 		public GLib.Variant build_variant ();
-		public Signon.SecurityContextList copy ();
 		public SecurityContextList.deconstruct_variant (GLib.Variant variant);
-		public void free ();
 	}
 	[CCode (cheader_filename = "libgsignon-glib/signon-glib.h", cprefix = "SIGNON_IDENTITY_TYPE_", type_id = "signon_identity_type_get_type ()")]
 	[Flags]
