@@ -47,7 +47,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         var provider_label = new Gtk.Label (provider.get_display_name ());
         provider_label.xalign = 0;
 
-        var apps_label = new Gtk.Label (_("Content to synchronise:"));
+        var apps_label = new Gtk.Label (_("Content to synchronize:"));
         apps_label.get_style_context ().add_class ("h4");
         apps_label.margin = 6;
         apps_label.xalign = 0;
