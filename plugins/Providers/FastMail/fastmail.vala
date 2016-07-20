@@ -27,7 +27,10 @@ public class OnlineAccounts.Plugins.OAuth.FastMail.ProviderPlugin : OnlineAccoun
     }
     
     public override void get_user_name (OnlineAccounts.Account plugin) {
-
+        var name = plugin.session_result.lookup_value ("UserName", null).dup_string ();
+        if (!("@" in name)) {
+            plugin.account.set_display_name (name + "@fastmail.fm");
+        }
     }
     
     public override void get_user_image (OnlineAccounts.Account plugin) {

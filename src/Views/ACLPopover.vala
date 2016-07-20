@@ -23,7 +23,7 @@
 public class OnlineAccounts.ACLPopover : Gtk.Popover {
     Ag.Account account;
     Signon.Identity identity;
-    unowned List<Signon.SecurityContext> acl = null;
+    unowned Signon.SecurityContextList acl = null;
     Gtk.ListBox list_box;
     Ag.Service service;
 
@@ -179,12 +179,12 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
                 }
 
                 var path = get_app_path ();
-                unowned List<Signon.SecurityContext> acl = info.get_access_control_list ();
-                for (unowned List<Signon.SecurityContext> nth = acl.first (); nth != null; nth = nth.next) {
-                    if (nth.data.sys_ctx == path) {
-                        acl.remove (nth.data);
+                var acl = new List<Signon.SecurityContext> ();
+                info.get_access_control_list ().foreach ((nth) => {
+                    if (nth.sys_ctx != path) {
+                        acl.append (nth);
                     }
-                }
+                });
 
                 info.set_access_control_list ((Signon.SecurityContextList) acl);
                 identity.store_credentials_with_info (info, (self, id, error) => {

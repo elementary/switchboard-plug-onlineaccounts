@@ -61,6 +61,14 @@ public class OnlineAccounts.Plugins.PasswordAccount : OnlineAccounts.Account {
             info.set_secret (access_token, true);
             var username = session_result.lookup_value ("UserName", null).dup_string ();
             account.set_display_name (username);
+            foreach (var provider_plugin in OnlineAccounts.PluginsManager.get_default ().get_provider_plugins ()) {
+                if (provider_plugin.plugin_name != "password")
+                    continue;
+                if (provider_plugin.provider_name != account.get_provider_name ())
+                    continue;
+                provider_plugin.get_user_name (this);
+            }
+
             identity.query_info (IdentityInfoCallback);
         } catch (Error e) {
             critical (e.message);
