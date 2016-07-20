@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="fastmail-mail">
+  <type>mail</type>
+  <name>Emails</name>
+  <description>Sync your emails</description>
+  <icon>internet-mail</icon>
+  <provider>fastmail</provider>
+  <translations>pantheon-online-accounts</translations>
+
+  <template>
+    <group name="Configuration">
+      <group name="IMAP">
+        <setting name="Server">mail.messagingengine.com</setting>
+        <setting name="Port">993</setting>
+        <setting name="Security">SSL/TLS</setting>
+      </group>
+      <group name="SMTP">
+        <setting name="Server">mail.messagingengine.com</setting>
+        <setting name="Port">465</setting>
+        <setting name="Security">SSL/TLS</setting>
+      </group>
+    </group>
+  </template>
+</service>
