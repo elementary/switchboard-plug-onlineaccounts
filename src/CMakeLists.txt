@@ -26,7 +26,7 @@ vala_precompile (VALA_C ${PLUGNAME}
     OnlineAccounts.vala
     Views/SourceSelector.vala
     Views/AccountView.vala
-    Views/ACLPopover.vala
+    Views/ACListBox.vala
     Authentification/Server.vala
     Authentification/DialogService.vala
     Authentification/RequestQueue.vala
