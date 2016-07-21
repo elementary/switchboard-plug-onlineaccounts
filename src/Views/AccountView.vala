@@ -38,6 +38,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         var provider = plugin.account.get_manager ().get_provider (plugin.account.get_provider_name ());
 
         var provider_image = new Gtk.Image.from_icon_name (provider.get_icon_name (), Gtk.IconSize.DIALOG);
+        provider_image.use_fallback = true;
 
         var user_label = new Gtk.Label (Markup.escape_text (plugin.account.get_display_name ()));
         user_label.get_style_context ().add_class ("h2");
