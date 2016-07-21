@@ -2,4 +2,3 @@ usr/lib/*/switchboard/network/*
 usr/share/dbus-1/services/com.google.code.AccountsSSO.gSingleSignOnUI.service
 usr/share/locale/*
 usr/share/icons/hicolor/scalable/apps/online-account.svg
-usr/share/accounts/services/fastmail-mail.service
