@@ -20,35 +20,23 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.ACLPopover : Gtk.Popover {
+public class OnlineAccounts.ACListBox : Gtk.ListBox {
     Ag.Account account;
     Signon.Identity identity;
     unowned Signon.SecurityContextList acl = null;
-    Gtk.ListBox list_box;
     Ag.Service service;
 
-    public ACLPopover (Ag.Account account, Ag.Service service, Signon.Identity identity) {
+    public ACListBox (Ag.Account account, Ag.Service service, Signon.Identity identity) {
         this.account = account;
         this.service = service;
         this.identity = identity;
         account.manager.list_applications_by_service (service).foreach ((app) => {
             var row = new AppRow (account, app, service, identity);
-            list_box.add (row);
+            add (row);
             row.show_all ();
         });
 
         update_acl.begin ();
-    }
-
-    construct {
-        height_request = 100;
-        list_box = new Gtk.ListBox ();
-        var scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
-        scrolled.margin = 6;
-        scrolled.expand = true;
-        scrolled.add (list_box);
-        add (scrolled);
     }
 
     private async void update_acl () {
@@ -59,7 +47,7 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
             }
 
             acl = info.get_access_control_list ();
-            list_box.get_children ().foreach ((child) => {
+            get_children ().foreach ((child) => {
                 var approw = child as AppRow;
                 approw.check_acl (acl);
             });
@@ -67,14 +55,14 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
     }
 
     public void allow_service () {
-        list_box.get_children ().foreach ((child) => {
+        get_children ().foreach ((child) => {
             var approw = child as AppRow;
             approw.allow_app ();
         });
     }
 
     public void deny_service () {
-        list_box.get_children ().foreach ((child) => {
+        get_children ().foreach ((child) => {
             var approw = child as AppRow;
             approw.deny_app ();
         });
@@ -102,12 +90,15 @@ public class OnlineAccounts.ACLPopover : Gtk.Popover {
         construct {
             activatable = false;
             selectable = false;
+            margin = 6;
+
             app_image = new Gtk.Image ();
-            app_image.icon_size = Gtk.IconSize.LARGE_TOOLBAR;
+            app_image.icon_size = Gtk.IconSize.DND;
             app_name = new Gtk.Label (null);
             app_name.halign = Gtk.Align.START;
             app_name.hexpand = true;
             app_switch = new Gtk.Switch ();
+            app_switch.valign = Gtk.Align.CENTER;
             app_switch.activate.connect (() => {
                 if (app_switch.active) {
                     allow_app ();

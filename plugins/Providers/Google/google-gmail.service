@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="google-gmail">
   <type>mail</type>
-  <name>Emails</name>
-  <description>Sync your emails</description>
+  <name>Email</name>
+  <description>Sync your email</description>
   <icon>internet-mail</icon>
   <provider>google</provider>
   <translations>pantheon-online-accounts</translations>
