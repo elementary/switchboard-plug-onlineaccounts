@@ -47,39 +47,26 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         var provider_label = new Gtk.Label (provider.get_display_name ());
         provider_label.xalign = 0;
 
-        var apps_label = new Gtk.Label (_("Content to synchronize:"));
-        apps_label.get_style_context ().add_class ("h4");
-        apps_label.margin = 6;
-        apps_label.xalign = 0;
-
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
         scrolled_window.expand = true;
 
-        var frame = new Gtk.Frame (null);
-        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        frame.margin_top = 24;
-        frame.add (scrolled_window);
-
         var apps_grid = new Gtk.Grid ();
-        apps_grid.margin_left = 6;
-        apps_grid.margin_right = 6;
+        apps_grid.margin = 6;
+        apps_grid.margin_top = 12;
         apps_grid.column_spacing = 12;
         apps_grid.row_spacing = 6;
 
-        int i = 1;
+        int i = 0;
         plugin.account.list_services ().foreach ((service) => {
             if (plugin.account.manager.list_applications_by_service (service).length () == 0)
                 return;
 
             unowned string i18n_domain = service.get_i18n_domain ();
 
-            var service_image = new Gtk.Image.from_icon_name (service.get_icon_name (), Gtk.IconSize.DIALOG);
-            service_image.margin_start = 6;
-
-            var service_label = new Gtk.Label ("");
+            var service_label = new Gtk.Label (Markup.escape_text (GLib.dgettext (i18n_domain, service.get_display_name ())));
+            service_label.get_style_context ().add_class ("h4");
             service_label.hexpand = true;
-            service_label.set_markup ("<big>%s</big>".printf (Markup.escape_text (GLib.dgettext (i18n_domain, service.get_display_name ()))));
             service_label.xalign = 0;
 
             var service_switch = new Gtk.Switch ();
@@ -89,32 +76,23 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             plugin.account.select_service (service);
             service_switch.active = plugin.account.get_enabled ();
 
-            var app_button = new Gtk.ToggleButton ();
-            app_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            app_button.image = new Gtk.Image.from_icon_name ("application-menu-symbolic", Gtk.IconSize.MENU);
-            app_button.sensitive = plugin.account.get_enabled ();
+            var acl_list = new ACListBox (plugin.account, service, identity);
 
-            var popover = new ACLPopover (plugin.account, service, identity);
-            popover.relative_to = app_button;
-            popover.hide.connect (() => {
-                app_button.active = false;
-            });
+            var frame = new Gtk.Frame (null);
+            frame.margin_bottom = 12;
+            frame.add (acl_list);
 
-            app_button.toggled.connect (() => {
-                if (app_button.active) {
-                    popover.show_all ();
-                }
-            });
+            var acl_revealer = new Gtk.Revealer ();
+            acl_revealer.reveal_child = service_switch.active;
+            acl_revealer.add (frame);
 
-            var app_button_grid = new Gtk.Grid ();
-            app_button_grid.valign = Gtk.Align.CENTER;
-            app_button_grid.add (app_button);
-            service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service, app_button, popover);});
+            service_switch.bind_property ("active", acl_revealer, "reveal-child", BindingFlags.DEFAULT);
+            service_switch.notify["active"].connect (() => {on_service_switch_activated (service_switch.active, service, acl_list);});
 
-            apps_grid.attach (service_image, 0, i, 1, 1);
-            apps_grid.attach (service_label, 1, i, 1, 1);
-            apps_grid.attach (app_button_grid, 2, i, 1, 1);
-            apps_grid.attach (service_switch, 3, i, 1, 1);
+            apps_grid.attach (service_label, 0, i, 1, 1);
+            apps_grid.attach (service_switch, 1, i, 1, 1);
+            i++;
+            apps_grid.attach (acl_revealer, 0, i, 2, 1);
             i++;
         });
 
@@ -124,24 +102,22 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             var alert = new Granite.Widgets.AlertView (_("No Apps"), no_service_label, "applications-internet-symbolic");
             this.add (alert);
         } else {
-            apps_grid.attach (apps_label, 0, 0, 2, 1);
             scrolled_window.add_with_viewport (apps_grid);
 
             attach (provider_image, 0, 0, 1, 2);
             attach (user_label, 1, 0, 1, 1);
             attach (provider_label, 1, 1, 1, 1);
-            attach (frame, 0, 2, 2, 1);
+            attach (scrolled_window, 0, 2, 2, 1);
         }
     }
 
-    private void on_service_switch_activated (bool enabled, Ag.Service service, Gtk.Button button, ACLPopover popover) {
-        button.sensitive = enabled;
+    private void on_service_switch_activated (bool enabled, Ag.Service service, ACListBox listbox) {
         plugin.account.select_service (service);
         plugin.account.set_enabled (enabled);
         if (enabled) {
-            popover.allow_service ();
+            listbox.allow_service ();
         } else {
-            popover.deny_service ();
+            listbox.deny_service ();
         }
     }
 }
