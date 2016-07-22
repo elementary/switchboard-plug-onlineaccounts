@@ -76,7 +76,7 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
 
         private Gtk.Image app_image;
         private Gtk.Label app_name;
-        private Gtk.Switch app_switch;
+        private Gtk.CheckButton app_switch;
         public AppRow (Ag.Account account, Ag.Application app, Ag.Service service, Signon.Identity identity) {
             this.account = account;
             this.app = app;
@@ -95,10 +95,7 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             app_image = new Gtk.Image ();
             app_image.icon_size = Gtk.IconSize.DND;
             app_name = new Gtk.Label (null);
-            app_name.halign = Gtk.Align.START;
-            app_name.hexpand = true;
-            app_switch = new Gtk.Switch ();
-            app_switch.valign = Gtk.Align.CENTER;
+            app_switch = new Gtk.CheckButton ();
             app_switch.activate.connect (() => {
                 if (app_switch.active) {
                     allow_app ();
@@ -110,9 +107,9 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             var grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.HORIZONTAL;
             grid.column_spacing = 6;
+            grid.add (app_switch);
             grid.add (app_image);
             grid.add (app_name);
-            grid.add (app_switch);
             add (grid);
         }
 
