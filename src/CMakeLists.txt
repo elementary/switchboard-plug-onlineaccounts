@@ -34,7 +34,8 @@ vala_precompile (VALA_C ${PLUGNAME}
     Authentification/Key.vala
     Authentification/Dialog.vala
     Authentification/WebDialog.vala
-    Authentification/GraphicalDialog.vala
+    Authentification/PasswordDialog.vala
+    Authentification/MailDialog.vala
 PACKAGES
     ${DEPS_PACKAGES}
     config
