@@ -70,13 +70,13 @@ Description: Online Accounts plug for Switchboard (development files)
 #Description: Online Accounts plugin for single signon - Generic OAuth
 # Online accounts plugin for single signon
 
-#Package: pantheon-online-accounts-plugin-password
-#Architecture: any
-#Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-#         ${misc:Depends},
-#         ${shlibs:Depends}
-#Description: Online Accounts plugin for single signon - Password
-# Online accounts plugin for single signon
+Package: pantheon-online-accounts-plugin-password
+Architecture: any
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Online Accounts plugin for single signon - Password
+ Online accounts plugin for single signon
 
 #Package: pantheon-online-accounts-plugin-facebook
 #Architecture: any
