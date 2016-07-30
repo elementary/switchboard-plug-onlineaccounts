@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013 Pantheon Developers (http://launchpad.net/online-accounts-plug)
+ * Copyright (c) 2013-2016 elementary LLC. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,7 +17,7 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
 [DBus (name = "com.google.code.AccountsSSO.gSingleSignOn.UI.Dialog")]
@@ -36,8 +36,11 @@ public class OnlineAccounts.DialogService : Object {
         if (dialog is WebDialog) {
             WebDialog webdialog = dialog as WebDialog;
             reply = webdialog.get_reply ();
+        } else if (dialog is MailDialog) {
+            var maildialog = dialog as MailDialog;
+            reply = maildialog.get_reply ();
         } else {
-            GraphicalDialog graphicaldialog = dialog as GraphicalDialog;
+            var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.refresh_captcha_needed.connect (() => {refresh (dialog.request_id);});
             reply = graphicaldialog.get_reply ();
         }
@@ -61,8 +64,11 @@ public class OnlineAccounts.DialogService : Object {
         if (dialog is WebDialog) {
             WebDialog webdialog = dialog as WebDialog;
             webdialog.set_parameters (parameter);
+        } else if (dialog is MailDialog) {
+            var maildialog = dialog as MailDialog;
+            maildialog.set_parameters (parameter);
         } else {
-            GraphicalDialog graphicaldialog = dialog as GraphicalDialog;
+            var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.set_parameters (parameter);
         }
     }

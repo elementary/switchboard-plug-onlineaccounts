@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
+ * Copyright (c) 2013-2016 elementary LLC. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -20,7 +20,7 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
+public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
     public signal void refresh_captcha_needed ();
     Gtk.Entry url_entry;
     Gtk.Entry username_entry;
@@ -52,7 +52,7 @@ public class OnlineAccounts.GraphicalDialog : OnlineAccounts.Dialog {
     string forgot_password_url;
     string signup_url;
 
-    public GraphicalDialog (GLib.HashTable<string, GLib.Variant> params) {
+    public PasswordDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
         halign = Gtk.Align.CENTER;
