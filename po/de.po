@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2016-06-22 12:38+0000\n"
-"Last-Translator: Phillip Sz <Unknown>\n"
+"PO-Revision-Date: 2016-07-31 01:05+0000\n"
+"Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-21 05:49+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-31 05:59+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 "Language: de\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -41,23 +41,23 @@ msgstr "Keine Anwendungen"
 
 #: ../src/Authentification/GraphicalDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Adresse"
 
 #: ../src/Authentification/GraphicalDialog.vala:74
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 #: ../src/Authentification/GraphicalDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: ../src/Authentification/GraphicalDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Neues Passwort"
 
 #: ../src/Authentification/GraphicalDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Passwort bestätigen"
 
 #: ../src/Authentification/GraphicalDialog.vala:96
 msgid "Forgot password…"
@@ -82,16 +82,16 @@ msgstr "Anmelden"
 
 #: ../src/Authentification/GraphicalDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Sie haben keine Konto? Registrieren Sie sich!"
 
 #: ../src/Authentification/GraphicalDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Anderes Konto"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "Ladevorgang …"
+msgstr "Laden …"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
@@ -184,7 +184,7 @@ msgstr "Scrobblen Sie Ihre Musik"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Mit FastMail auf Ihre E-Mails zugreifen"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
@@ -208,7 +208,7 @@ msgstr "Neues Konto hinzufügen …"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
-msgstr "Zu Ihren Internetkonten verbinden"
+msgstr "Mit Ihren Internetkonten verbinden"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
