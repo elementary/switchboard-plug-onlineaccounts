@@ -29,7 +29,8 @@ Depends: gsignond-extension-pantheon,
          ${shlibs:Depends}
 Enhances: switchboard
 Recommends: pantheon-online-accounts-plugin-fastmail,
-            pantheon-online-accounts-plugin-lastfm
+            pantheon-online-accounts-plugin-lastfm,
+            pantheon-online-accounts-plugin-mail
 #            pantheon-online-accounts-plugin-google,
 #            pantheon-online-accounts-plugin-microsoft,
 #            pantheon-online-accounts-plugin-yahoo,
