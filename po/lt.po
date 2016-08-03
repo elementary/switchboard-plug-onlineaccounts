@@ -3,22 +3,22 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2014-09-20 14:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-02 21:49+0000\n"
+"Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-21 05:49+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-08-03 05:53+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
-msgstr ""
+msgstr "Pridėti…"
 
 #: ../src/Views/SourceSelector.vala:58
 msgid "Remove"
-msgstr ""
+msgstr "Šalinti"
 
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
@@ -30,27 +30,27 @@ msgstr ""
 
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
-msgstr ""
+msgstr "Nėra programų"
 
 #: ../src/Authentification/GraphicalDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: ../src/Authentification/GraphicalDialog.vala:74
 msgid "Email"
-msgstr ""
+msgstr "El. paštas"
 
 #: ../src/Authentification/GraphicalDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Slaptažodis"
 
 #: ../src/Authentification/GraphicalDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Naujas slaptažodis"
 
 #: ../src/Authentification/GraphicalDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Patvirtinkite slaptažodį"
 
 #: ../src/Authentification/GraphicalDialog.vala:96
 msgid "Forgot password…"
@@ -67,11 +67,11 @@ msgstr ""
 #: ../src/Authentification/GraphicalDialog.vala:107
 #: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:90
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: ../src/Authentification/GraphicalDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Prisijungti"
 
 #: ../src/Authentification/GraphicalDialog.vala:113
 msgid "Don't have an account? Sign Up"
@@ -84,7 +84,7 @@ msgstr ""
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr ""
+msgstr "Įkeliama..."
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
@@ -112,7 +112,7 @@ msgstr ""
 #. WARNING! This should never be included in valac
 #: ../src/Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Kalendoriai"
 
 #: ../src/Translation.vala:25
 msgid "Sync your calendars"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Kontaktai"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
@@ -184,15 +184,15 @@ msgstr ""
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
-msgstr ""
+msgstr "Internetinės paskyros"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Tvarkyti internetines paskyras ir prijungtas programas"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
-msgstr ""
+msgstr "Atkurti"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
