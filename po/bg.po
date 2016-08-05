@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2016-06-03 03:10+0000\n"
-"Last-Translator: Cody Garver <cody@elementaryos.org>\n"
+"PO-Revision-Date: 2016-08-04 19:07+0000\n"
+"Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-21 05:49+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-08-05 05:41+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 "Language: bg\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -32,35 +32,35 @@ msgstr "Съдържание за синхронизиране:"
 
 #: ../src/Views/AccountView.vala:117
 msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
+msgstr "Няма инсталирани приложения, които да се свързват с вашият %s акаунт"
 
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
-msgstr ""
+msgstr "Няма приложения"
 
 #: ../src/Authentification/GraphicalDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Адрес"
 
 #: ../src/Authentification/GraphicalDialog.vala:74
 msgid "Email"
-msgstr ""
+msgstr "Имейл"
 
 #: ../src/Authentification/GraphicalDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Парола"
 
 #: ../src/Authentification/GraphicalDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Нова парола"
 
 #: ../src/Authentification/GraphicalDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Потвърдете паролата"
 
 #: ../src/Authentification/GraphicalDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Забравена парола..."
 
 #: ../src/Authentification/GraphicalDialog.vala:101
 msgid "Refresh Captcha"
@@ -77,15 +77,15 @@ msgstr "Отказ"
 
 #: ../src/Authentification/GraphicalDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Влизане"
 
 #: ../src/Authentification/GraphicalDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Все още нямате акаунт? Регистрирайте се"
 
 #: ../src/Authentification/GraphicalDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Друг акаунт"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
