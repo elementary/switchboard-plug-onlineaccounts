@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2016-07-20 09:08+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"PO-Revision-Date: 2016-08-05 07:17+0000\n"
+"Last-Translator: Alexis Saettler <alexis@saettler.org>\n"
 "Language-Team: Fr <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-21 05:49+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-08-06 05:41+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 "Language: fr\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -166,7 +166,7 @@ msgstr "Accéder à tous les services Yahoo! sur votre ordinateur"
 
 #: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr "Accèder au contenu de Facebook depuis cet ordinateur"
+msgstr "Accéder au contenu de Facebook depuis cet ordinateur"
 
 #: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
@@ -182,7 +182,7 @@ msgstr "Scrobbler votre musique"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Accéder aux courriels avec FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"

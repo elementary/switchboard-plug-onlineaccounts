@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2016-08-04 19:07+0000\n"
+"PO-Revision-Date: 2016-08-05 14:54+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-05 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-08-06 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 "Language: bg\n"
 
@@ -32,7 +32,8 @@ msgstr "Съдържание за синхронизиране:"
 
 #: ../src/Views/AccountView.vala:117
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "Няма инсталирани приложения, които да се свързват с вашият %s акаунт"
+msgstr ""
+"В момента няма инсталирани приложения, които да се свързват с вашия %s акаунт"
 
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
@@ -44,7 +45,7 @@ msgstr "Адрес"
 
 #: ../src/Authentification/GraphicalDialog.vala:74
 msgid "Email"
-msgstr "Имейл"
+msgstr "Ел. поща"
 
 #: ../src/Authentification/GraphicalDialog.vala:78
 msgid "Password"
@@ -81,11 +82,11 @@ msgstr "Влизане"
 
 #: ../src/Authentification/GraphicalDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr "Все още нямате акаунт? Регистрирайте се"
+msgstr "Все още нямате сметка? Регистрирайте се"
 
 #: ../src/Authentification/GraphicalDialog.vala:306
 msgid "Other Account"
-msgstr "Друг акаунт"
+msgstr "Друга сметка"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -94,7 +95,7 @@ msgstr "Зареждане..."
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Моля въведете си данните..."
+msgstr "Моля, въведете данните си..."
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -122,7 +123,7 @@ msgstr "Календари"
 
 #: ../src/Translation.vala:25
 msgid "Sync your calendars"
-msgstr "Синхронизидай календарите"
+msgstr "Синхронизирайте календарите си"
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
@@ -130,31 +131,31 @@ msgstr "Контакти"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
-msgstr "Синхронизирай контакти"
+msgstr "Синхронизирайте контактите си"
 
 #: ../src/Translation.vala:28
 msgid "Sync your files"
-msgstr "Синхронизирай фаилове"
+msgstr "Синхронизирайте файловете си"
 
 #: ../src/Translation.vala:29
 msgid "Emails"
-msgstr "Имейли"
+msgstr "Електронни пощи"
 
 #: ../src/Translation.vala:30
 msgid "Sync your emails"
-msgstr "Синхронизидай имейли"
+msgstr "Синхронизирайте електронните си пощи"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
-msgstr "Синхронизидай снимки"
+msgstr "Синхронизирайте снимките си"
 
 #: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr "Разгледай новини"
+msgstr "Разгледайте новините"
 
 #: ../src/Translation.vala:33
 msgid "Chat with your friends"
-msgstr "Пиши на приятели"
+msgstr "Разговаряйте с приятели"
 
 #: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -194,15 +195,15 @@ msgstr "Мрежови Абонаменти"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Управлявайте своите мрежови абонаменти и свързани приложения"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
-msgstr "Възстанови"
+msgstr "Възстановяване"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Добави нов акаунт..."
+msgstr "Добавяне на нова сметка..."
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
@@ -215,4 +216,4 @@ msgstr ""
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
-msgstr "Потребителски Абонамент  '%s' Премахнат."
+msgstr "Абонаментът '%s' е премахнат."
