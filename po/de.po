@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2016-07-31 01:05+0000\n"
+"PO-Revision-Date: 2016-08-18 15:46+0000\n"
 "Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-01 05:34+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2016-08-19 05:41+0000\n"
+"X-Generator: Launchpad (build 18176)\n"
 "Language: de\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -180,7 +180,7 @@ msgstr "Kontakte, E-Mails und Termine"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr "Scrobblen Sie Ihre Musik"
+msgstr "Von Ihnen gehörte Musik scrobbeln"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
