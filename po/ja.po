@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-20 17:31+0200\n"
-"PO-Revision-Date: 2016-08-07 11:43+0000\n"
-"Last-Translator: Ryo Nakano <Unknown>\n"
+"PO-Revision-Date: 2016-08-23 12:58+0000\n"
+"Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-08 05:36+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2016-08-24 05:40+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 "Language: ja\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -28,11 +28,11 @@ msgstr "削除"
 
 #: ../src/Views/AccountView.vala:52
 msgid "Content to synchronise:"
-msgstr ""
+msgstr "同期するコンテンツ:"
 
 #: ../src/Views/AccountView.vala:117
 msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
+msgstr "あなたの %s アカウントにリンクするアプリがインストールされていません"
 
 #: ../src/Views/AccountView.vala:118
 msgid "No Apps"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../src/Authentification/GraphicalDialog.vala:102
 msgid "Enter above text here"
-msgstr ""
+msgstr "上のテキストをここに入力"
 
 #: ../src/Authentification/GraphicalDialog.vala:107
 #: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:90
@@ -94,7 +94,7 @@ msgstr "読み込み中..."
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "認証情報を入力してください…"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
