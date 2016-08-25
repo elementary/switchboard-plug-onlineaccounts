@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-20 17:31+0200\n"
+"POT-Creation-Date: 2016-08-24 23:15+0200\n"
 "PO-Revision-Date: 2016-07-22 19:31+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-23 05:38+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-08-25 05:41+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -25,68 +25,66 @@ msgstr "Aggiungi..."
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: ../src/Views/AccountView.vala:52
-msgid "Content to synchronise:"
-msgstr "Contenuto da sincronizzare:"
-
-#: ../src/Views/AccountView.vala:117
+#: ../src/Views/AccountView.vala:102
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
 "Non ci sono applicazioni attualmente installate che si collegano al tuo "
 "account %s"
 
-#: ../src/Views/AccountView.vala:118
+#: ../src/Views/AccountView.vala:103
 msgid "No Apps"
 msgstr "Nessuna applicazione"
 
-#: ../src/Authentification/GraphicalDialog.vala:70
-msgid "Url"
-msgstr "URL"
+#: ../src/Authentification/MailDialog.vala:58
+msgid "Mail Account"
+msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:74
+#: ../src/Authentification/MailDialog.vala:67
+#: ../src/Authentification/MailDialog.vala:111
+#: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
 msgstr "Posta elettronica"
 
-#: ../src/Authentification/GraphicalDialog.vala:78
+#: ../src/Authentification/MailDialog.vala:71
+#: ../src/Authentification/MailDialog.vala:115
+#: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
 msgstr "Password"
 
-#: ../src/Authentification/GraphicalDialog.vala:83
-msgid "New Password"
-msgstr "Nuova password"
+#: ../src/Authentification/MailDialog.vala:82
+#: ../src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:88
-msgid "Confirm Password"
-msgstr "Conferma la password"
+#: ../src/Authentification/MailDialog.vala:92
+#: ../src/Authentification/MailDialog.vala:142
+msgid "Encryption:"
+msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:96
-msgid "Forgot password…"
-msgstr "Password dimenticata..."
+#: ../src/Authentification/MailDialog.vala:96
+#: ../src/Authentification/MailDialog.vala:146
+msgid "None"
+msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:101
-msgid "Refresh Captcha"
-msgstr "Aggiorna Captcha"
+#: ../src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:102
-msgid "Enter above text here"
-msgstr "Inserisci il testo qui sopra"
+#: ../src/Authentification/MailDialog.vala:140
+msgid "No authentication required"
+msgstr ""
 
-#: ../src/Authentification/GraphicalDialog.vala:107
-#: ../src/Authentification/WebDialog.vala:34 ../src/OnlineAccounts.vala:90
+#: ../src/Authentification/MailDialog.vala:156
+#: ../src/Authentification/WebDialog.vala:34
+#: ../src/Authentification/PasswordDialog.vala:107
+#: ../src/OnlineAccounts.vala:90
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../src/Authentification/GraphicalDialog.vala:109
+#: ../src/Authentification/MailDialog.vala:159
+#: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
 msgstr "Accedi"
-
-#: ../src/Authentification/GraphicalDialog.vala:113
-msgid "Don't have an account? Sign Up"
-msgstr "Non hai ancora un account? Registrati"
-
-#: ../src/Authentification/GraphicalDialog.vala:306
-msgid "Other Account"
-msgstr "Altri account"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -96,6 +94,38 @@ msgstr "Caricamento..."
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Inserisci le tue credenziali..."
+
+#: ../src/Authentification/PasswordDialog.vala:70
+msgid "Url"
+msgstr "URL"
+
+#: ../src/Authentification/PasswordDialog.vala:83
+msgid "New Password"
+msgstr "Nuova password"
+
+#: ../src/Authentification/PasswordDialog.vala:88
+msgid "Confirm Password"
+msgstr "Conferma la password"
+
+#: ../src/Authentification/PasswordDialog.vala:96
+msgid "Forgot password…"
+msgstr "Password dimenticata..."
+
+#: ../src/Authentification/PasswordDialog.vala:101
+msgid "Refresh Captcha"
+msgstr "Aggiorna Captcha"
+
+#: ../src/Authentification/PasswordDialog.vala:102
+msgid "Enter above text here"
+msgstr "Inserisci il testo qui sopra"
+
+#: ../src/Authentification/PasswordDialog.vala:113
+msgid "Don't have an account? Sign Up"
+msgstr "Non hai ancora un account? Registrati"
+
+#: ../src/Authentification/PasswordDialog.vala:306
+msgid "Other Account"
+msgstr "Altri account"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -137,13 +167,9 @@ msgstr "Sincronizza i tuoi contatti"
 msgid "Sync your files"
 msgstr "Sincronizza i tuoi file"
 
-#: ../src/Translation.vala:29
-msgid "Emails"
-msgstr "Posta elettronica"
-
 #: ../src/Translation.vala:30
-msgid "Sync your emails"
-msgstr "Sincronizza la posta elettronica"
+msgid "Sync your email"
+msgstr ""
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
