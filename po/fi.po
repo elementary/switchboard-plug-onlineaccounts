@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-24 23:15+0200\n"
-"PO-Revision-Date: 2016-07-28 07:49+0000\n"
+"PO-Revision-Date: 2016-08-26 07:52+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-25 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-08-27 05:59+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -35,7 +35,7 @@ msgstr "Ei sovelluksia"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "Sähköpostitili"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
@@ -52,25 +52,25 @@ msgstr "Salasana"
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Palvelin"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Salaus:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Käytä IMAP-kirjautumistietoja"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Tunnistautumista ei vaadita"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -167,7 +167,7 @@ msgstr "Synkronoi tiedostot"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Synkronoi sähköpostisi"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"

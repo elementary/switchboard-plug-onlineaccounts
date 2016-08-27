@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-08-24 23:15+0200\n"
-"PO-Revision-Date: 2016-08-25 07:47+0000\n"
-"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
+"PO-Revision-Date: 2016-08-26 13:20+0000\n"
+"Last-Translator: Maxim Taranov <png2378@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-08-26 05:51+0000\n"
+"X-Launchpad-Export-Date: 2016-08-27 05:59+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -107,7 +107,7 @@ msgstr "Подтвердите пароль"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "Забыл пароль..."
+msgstr "Забыли пароль..."
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -115,7 +115,7 @@ msgstr "Обновить изображение"
 
 #: ../src/Authentification/PasswordDialog.vala:102
 msgid "Enter above text here"
-msgstr "Введите текст выше в это поле"
+msgstr "Введите вышеуказанный текст здесь"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
@@ -167,7 +167,7 @@ msgstr "Синхронизация файлов"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr "Синхронизировать почту"
+msgstr "Синхронизация почты"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
@@ -191,7 +191,7 @@ msgstr "Синхронизация всех сервисов Yahoo! с ваши�
 
 #: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr "Синхронизация всех данных Facebook с вашим компьютером"
+msgstr "Синхронизация всего содержимого Facebook с вашим компьютером"
 
 #: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
@@ -215,11 +215,11 @@ msgstr "Скробблинг"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
-msgstr "Сетевые профили"
+msgstr "Сетевые аккаунты"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr "Управление сетевыми профилями и связанными приложениями"
+msgstr "Управление сетевыми аккаунтами и связанными приложениями"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
@@ -227,7 +227,7 @@ msgstr "Восстановить"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Добавить новый аккаунт..."
+msgstr "Добавить новый аккаунт…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
@@ -241,4 +241,4 @@ msgstr ""
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
-msgstr "Профиль '%s' удалён."
+msgstr "Профиль «%s» удалён."
