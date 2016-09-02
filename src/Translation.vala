@@ -39,3 +39,4 @@ _("Includes Contacts, Mails, and Calendar");
 _("Scrobble your music");
 _("Access mail with FastMail");
 _("Scrobble");
+_("Fetch Email from IMAP Server");
