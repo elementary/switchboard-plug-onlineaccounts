@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2016-06-30 16:33+0000\n"
+"PO-Revision-Date: 2016-09-10 15:14+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-03 06:51+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2016-09-11 06:11+0000\n"
+"X-Generator: Launchpad (build 18186)\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -35,42 +35,42 @@ msgstr "Sem Aplicações"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "Conta de Email"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Palavra-passe"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Servidor"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Encriptação:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "Nenhuma"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Usar credenciais IMAP"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Não é necessária autenticação"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -95,15 +95,15 @@ msgstr "Introduza as suas credenciais..."
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Nova Palavra-passe"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirmar Palavra-passe"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
@@ -119,11 +119,11 @@ msgstr "Escreva aqui o texto"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Não tem uma conta? Inscreva-se"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Outra Conta"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -167,7 +167,7 @@ msgstr "Sincronize os seus ficheiros"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Sincronize o seu email"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
@@ -207,7 +207,7 @@ msgstr "Scrobble da sua música"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Aceda ao email com o FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
@@ -215,7 +215,7 @@ msgstr "Scrobble"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Consultar Email do Servidor IMAP"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
