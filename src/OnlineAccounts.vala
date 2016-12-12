@@ -40,11 +40,14 @@ namespace OnlineAccounts {
         Granite.Widgets.Welcome welcome;
 
         public Plug () {
+            var settings = new Gee.TreeMap<string, string?> (null, null);
+            settings.set ("accounts/online", null);
             Object (category: Category.NETWORK,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Online Accounts"),
                     description: _("Manage online accounts and connected applications"),
-                    icon: "preferences-desktop-online-accounts");
+                    icon: "preferences-desktop-online-accounts",
+                    supported_settings: settings);
             plugins_manager = PluginsManager.get_default ();
             providers_map = new Gee.HashMap<int, Ag.Provider> (null, null);
             plug = this;
