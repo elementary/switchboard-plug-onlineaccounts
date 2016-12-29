@@ -23,7 +23,7 @@
 public class OnlineAccounts.ACListBox : Gtk.ListBox {
     Ag.Account account;
     Signon.Identity identity;
-    unowned Signon.SecurityContextList acl = null;
+    unowned GLib.List<Signon.SecurityContext> acl = null;
     Ag.Service service;
 
     public ACListBox (Ag.Account account, Ag.Service service, Signon.Identity identity) {
@@ -174,7 +174,7 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
                     }
                 });
 
-                info.set_access_control_list ((Signon.SecurityContextList) acl);
+                info.set_access_control_list (acl);
                 identity.store_credentials_with_info (info, (self, id, error) => {
                     if (error != null) {
                         critical (error.message);

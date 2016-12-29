@@ -66,6 +66,7 @@ set(DEPS_PACKAGES
     libsoup-2.4
     gmodule-2.0
     rest-0.7
+    webkit2gtk-4.0
 )
 
 set(DEPS_PKG
@@ -83,6 +84,7 @@ set(DEPS_PKG
     libsoup-2.4
     gmodule-2.0
     rest-0.7
+    webkit2gtk-4.0
 )
 
 add_subdirectory (po)
@@ -95,16 +97,6 @@ ensure_vala_version ("0.24.0" MINIMUM)
 find_package (PkgConfig)
 # Add all your dependencies to the list below
 pkg_check_modules (DEPS REQUIRED ${DEPS_PKG})
-
-# Check for webkit2gtk-4.0 and fallback to webkit2gtk-3.0 if not available
-pkg_check_modules (WEBKIT2GTK webkit2gtk-4.0)
-
-if(WEBKIT2GTK_FOUND)
-  set(DEPS_PACKAGES ${DEPS_PACKAGES} webkit2gtk-4.0)
-else()
-  pkg_check_modules (WEBKIT2GTK REQUIRED webkit2gtk-3.0)
-  set(DEPS_PACKAGES ${DEPS_PACKAGES} webkit2gtk-3.0)
-endif()
 
 add_definitions (${DEPS_CFLAGS} ${WEBKIT2GTK_CFLAGS})
 link_libraries (${DEPS_LIBRARIES} ${WEBKIT2GTK_LIBRARIES})
