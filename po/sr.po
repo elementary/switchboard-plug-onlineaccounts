@@ -2,20 +2,21 @@
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the switchboard-plug-onlineaccounts package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
-#
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2014-08-29 21:15+0000\n"
-"Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
-"Language-Team: Serbian <sr@li.org>\n"
+"PO-Revision-Date: 2017-01-07 16:45+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <(nothing)>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
+"X-Launchpad-Export-Date: 2017-01-08 05:44+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
+"Language: sr\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -28,61 +29,62 @@ msgstr "Уклони"
 #: ../src/Views/AccountView.vala:102
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
+"Тренутно нема инсталираних програма који имају везу до вашег налога „%s“"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr ""
+msgstr "Нема програма"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "Налог поште"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "Е-пошта"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Лозинка"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Сервер"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Шифровање:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "Ништа"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Користи ИМАП уверења"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Није потребно потврђивање идентитета"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
 #: ../src/Authentification/PasswordDialog.vala:107
 #: ../src/OnlineAccounts.vala:90
 msgid "Cancel"
-msgstr "Одустани"
+msgstr "Откажи"
 
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Пријави ме"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -91,39 +93,39 @@ msgstr "Учитавам…"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Молим да унесете ваше акредитиве..."
+msgstr "Унесите појединости вашег налога…"
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Адреса"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Нова лозинка"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Потврди лозинку"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Заборави лозинку…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
-msgstr "Освежи слику"
+msgstr "Освежи стопку"
 
 #: ../src/Authentification/PasswordDialog.vala:102
 msgid "Enter above text here"
-msgstr "Унесите горњи текст овде"
+msgstr "Овде унесите горњи текст"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Немате налог? Учланите се"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Други налог"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -151,7 +153,7 @@ msgstr "Календари"
 
 #: ../src/Translation.vala:25
 msgid "Sync your calendars"
-msgstr "Синхронизујте ваше календаре"
+msgstr "Ускладите ваше календаре"
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
@@ -159,23 +161,23 @@ msgstr "Контакти"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
-msgstr "Синхронизујте ваше контакте"
+msgstr "Ускладите ваше налоге"
 
 #: ../src/Translation.vala:28
 msgid "Sync your files"
-msgstr "Синхронизујте ваше датотеке"
+msgstr "Ускладите ваше датотеке"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Ускладите вашу е-пошту"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
-msgstr "Синхронизујте ваше слике"
+msgstr "Ускладите ваше фотографије"
 
 #: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr "Пратите доток вести"
+msgstr "Гледајте ваше доводе вести"
 
 #: ../src/Translation.vala:33
 msgid "Chat with your friends"
@@ -183,39 +185,39 @@ msgstr "Ћаскајте са пријатељима"
 
 #: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Приступите Аутлук и ОнеДрајв сервисима рачунаром"
+msgstr "Приступите свим Аутлук и ОнеДрајв услугама на вашем рачунару"
 
 #: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr "Приступите свим Yahoo! сервисима рачунаром"
+msgstr "Приступите свим Јаху! услугама на вашем рачунару"
 
 #: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr "Приступите свим Фејсбук садржајима рачунаром"
+msgstr "Приступите сваком садржају Фејсбука на вашем рачунару"
 
 #: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr "Приступите свим Гугл сервисима рачунаром"
+msgstr "Приступите свим Гугл услугама на вашем рачунару"
 
 #: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Укључује контакте, пошти и календару"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Скроблујте вашу музику"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Приступите пошти са Брзом поштом"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
-msgstr ""
+msgstr "Скроблуј"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Довуци пошту са ИМАП сервера"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
@@ -223,7 +225,7 @@ msgstr "Налози на мрежи"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Управљајте налозима на мрежи и повезаним програмима"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
@@ -235,13 +237,13 @@ msgstr "Додај нови налог…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
-msgstr "Повежите ваше мрежне налоге"
+msgstr "Повежите ваше налоге на мрежи"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Упишите се да би се повезали са апликацијама као Пошта, Контакти и Каленар."
+"Упишите се да се повежете са програмима као што су Пошта, Контакти и Каленар."
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
-msgstr "Налог '%s' Уклоњен."
+msgstr "Налог „%s“ је уклоњен."
