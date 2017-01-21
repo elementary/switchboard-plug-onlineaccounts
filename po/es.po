@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2017-01-06 01:19+0000\n"
+"PO-Revision-Date: 2017-01-20 14:19+0000\n"
 "Last-Translator: Félix Brezo <felixbrezo@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-07 06:31+0000\n"
+"X-Launchpad-Export-Date: 2017-01-21 06:47+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: es\n"
 
@@ -214,11 +214,11 @@ msgstr "Accede al correo electrónico de FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Obtener correo electrónico desde el servidor IMAP"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
