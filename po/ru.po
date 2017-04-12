@@ -207,7 +207,7 @@ msgstr "Синхронизация контактов, почты и кален�
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr "Скробблинг вашей музыки"
+msgstr "Скробблинг музыки"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
