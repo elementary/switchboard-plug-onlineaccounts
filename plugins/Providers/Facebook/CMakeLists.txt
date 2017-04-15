@@ -1,6 +1,6 @@
 
 link_directories (${DEPS_LIBRARY_DIRS} ${CMAKE_CURRENT_BINARY_DIR}/../../lib)
-add_definitions (${DEPS_CFLAGS}"-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
+add_definitions (${DEPS_CFLAGS} "-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\"")
 
 set(F_NAME facebook)
 
