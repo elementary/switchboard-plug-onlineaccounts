@@ -67,7 +67,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         provider_label.margin_bottom = 24;
 
         url_entry = new Gtk.Entry ();
-        url_entry.placeholder_text = _("Url");
+        url_entry.placeholder_text = _("URL");
         url_entry.input_purpose = Gtk.InputPurpose.URL;
 
         username_entry = new Gtk.Entry ();
