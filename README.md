@@ -6,7 +6,6 @@
 You'll need the following dependencies:
 
 * cmake
-* gsignond
 * libaccounts-glib-dev
 * libgee-0.8-dev
 * libglib2.0-dev
