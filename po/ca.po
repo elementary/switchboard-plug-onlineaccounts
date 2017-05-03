@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2016-12-14 15:18+0000\n"
-"Last-Translator: Davidmp <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2017-05-03 14:21+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-onlineaccounts/ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
-"Language: ca\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -110,7 +112,7 @@ msgstr "Confirmeu la contrassenya"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "He oblidat la constrasenya..."
+msgstr "He oblidat la contrasenya…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -146,7 +148,7 @@ msgstr "Un altre compte"
 #. * Boston, MA 02111-1307, USA.
 #. *
 #. * Authored by: Corentin Noël <corentin@elementary.io>
-#. 
+#.
 #. WARNING! This should never be included in valac
 #: ../src/Translation.vala:24
 msgid "Calendars"
