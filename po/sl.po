@@ -8,19 +8,22 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2016-12-28 11:59+0000\n"
-"Last-Translator: Jernej Virag <Unknown>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"PO-Revision-Date: 2017-05-31 22:25+0000\n"
+"Last-Translator: Jernej Virag <jernej@virag.si>\n"
+"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-onlineaccounts/sl/>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
-"Language: sl\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
-msgstr "Dodaj ..."
+msgstr "Dodaj…"
 
 #: ../src/Views/SourceSelector.vala:58
 msgid "Remove"
@@ -32,7 +35,7 @@ msgstr "Trenuno nimate nameščenih aplikacij, ki bi uporabljale %s"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr "Ni programov."
+msgstr "Ni programov"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
@@ -88,11 +91,11 @@ msgstr "Prijava"
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "Nalaganje ..."
+msgstr "Nalaganje…"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Prosimo vpišite vaše uporabniško ime in geslo ..."
+msgstr "Prosimo vpišite vaše uporabniško ime in geslo…"
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
@@ -108,7 +111,7 @@ msgstr "Potrdi geslo"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "Pozabljeno geslo..."
+msgstr "Pozabljeno geslo…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -120,7 +123,7 @@ msgstr "Sem vnesite tekst s slike"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr "Nimate računa? Ustvarite ga."
+msgstr "Nimate računa? Ustvarite ga"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
@@ -144,7 +147,7 @@ msgstr "Drug račun"
 #. * Boston, MA 02111-1307, USA.
 #. *
 #. * Authored by: Corentin Noël <corentin@elementary.io>
-#. 
+#.
 #. WARNING! This should never be included in valac
 #: ../src/Translation.vala:24
 msgid "Calendars"
@@ -232,7 +235,7 @@ msgstr "Obnovi"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Dodaj nov račun..."
+msgstr "Dodaj nov račun…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
@@ -240,8 +243,7 @@ msgstr "Povežite se z vašimi spletnimi računi"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Prijavite se za povezavo z aplikacijami kot so Pošta, Stiki in Koledar"
+msgstr "Prijavite se za povezavo z aplikacijami kot so Pošta, Stiki in Koledar."
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
