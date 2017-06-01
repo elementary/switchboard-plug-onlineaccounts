@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2017-05-29 22:13+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"PO-Revision-Date: 2017-06-01 21:17+0000\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/nl/>\n"
 "Language: nl\n"
@@ -39,7 +39,7 @@ msgstr "Geen applicaties"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "E-mailaccount"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
@@ -51,17 +51,17 @@ msgstr "E-mail"
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Encryptie:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Geen authenticatie vereist"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -86,7 +86,7 @@ msgstr "Annuleren"
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Aanmelden"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -99,7 +99,7 @@ msgstr "Gelieve uw gegevens in te voeren…"
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
@@ -107,7 +107,7 @@ msgstr "Nieuw wachtwoord"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Bevestig wachtwoord"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
@@ -123,11 +123,11 @@ msgstr "Vul bovenstaande tekst hier in"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Geen account? Inschrijven"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Ander account"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -171,7 +171,7 @@ msgstr "Synchroniseer uw bestanden"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Synchroniseer uw e-mail"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
@@ -219,7 +219,7 @@ msgstr "Scrobble"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Haal e-mail van IMAP server"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
@@ -227,7 +227,7 @@ msgstr "Online accounts"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Beheer online accounts en geconnecteerde toepassingen"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
