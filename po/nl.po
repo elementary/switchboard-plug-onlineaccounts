@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2017-06-01 21:17+0000\n"
+"PO-Revision-Date: 2017-06-13 10:37+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/nl/>\n"
@@ -70,7 +70,7 @@ msgstr "Geen"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Gebruik IMAP inloggegevens"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
@@ -211,7 +211,7 @@ msgstr "Scrobble je muziek"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Verkrijg toegang tot e-mail met FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
