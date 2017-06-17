@@ -11,12 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2017-03-20 14:48+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-03-22 06:56+0000\n"
 "X-Generator: Launchpad (build 18334)\n"
-"Language: da\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -144,7 +144,7 @@ msgstr "Anden konto"
 #. * Boston, MA 02111-1307, USA.
 #. *
 #. * Authored by: Corentin Noël <corentin@elementary.io>
-#. 
+#.
 #. WARNING! This should never be included in valac
 #: ../src/Translation.vala:24
 msgid "Calendars"
