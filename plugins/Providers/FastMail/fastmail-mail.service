@@ -10,12 +10,12 @@
   <template>
     <group name="Configuration">
       <group name="IMAP">
-        <setting name="Server">mail.messagingengine.com</setting>
+        <setting name="Server">imap.fastmail.com</setting>
         <setting name="Port" type="q">993</setting>
         <setting name="Security">SSL/TLS</setting>
       </group>
       <group name="SMTP">
-        <setting name="Server">mail.messagingengine.com</setting>
+        <setting name="Server">smtp.fastmail.com</setting>
         <setting name="Port" type="q">465</setting>
         <setting name="Security">SSL/TLS</setting>
       </group>
