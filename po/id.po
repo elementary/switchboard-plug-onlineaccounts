@@ -2,25 +2,25 @@
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the beat-box package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2014-01-19 05:32+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"PO-Revision-Date: 2017-07-31 14:08+0700\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
-msgstr ""
+msgstr "Tambah…"
 
 #: ../src/Views/SourceSelector.vala:58
 msgid "Remove"
@@ -28,50 +28,50 @@ msgstr "Singkirkan"
 
 #: ../src/Views/AccountView.vala:102
 msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
+msgstr "Tidak ada aplikasi yang terpasang saat ini yang tertaut ke akun %s Anda"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr ""
+msgstr "Tidak Ada Aplikasi"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "Akun Surel"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "Surel"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Kata Sandi"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Enkripsi:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "Nihil"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Gunakan Kredensial IMAP"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Tidak diperlukan otentikasi"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -83,48 +83,48 @@ msgstr "Batal"
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Masuk"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr ""
+msgstr "Memuat…"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Harap masukkan kredensial Anda…"
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Kata Sandi Baru"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Konfirmasi Kata Sandi"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Lupa kata sandi…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "Segarkan Captcha"
 
 #: ../src/Authentification/PasswordDialog.vala:102
 msgid "Enter above text here"
-msgstr ""
+msgstr "Masukkan teks di atas sini"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Tidak punya akun? Daftar"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Akun Lainnya"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -148,100 +148,101 @@ msgstr ""
 #. WARNING! This should never be included in valac
 #: ../src/Translation.vala:24
 msgid "Calendars"
-msgstr ""
+msgstr "Kalender"
 
 #: ../src/Translation.vala:25
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Sinkronkan kalender Anda"
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "Kontak"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Sinkronkan kontak Anda"
 
 #: ../src/Translation.vala:28
 msgid "Sync your files"
-msgstr ""
+msgstr "Sinkronkan berkas Anda"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Sinkronkan surel Anda"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
-msgstr ""
+msgstr "Sinkronkan foto Anda"
 
 #: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Tonton newsfeed Anda"
 
 #: ../src/Translation.vala:33
 msgid "Chat with your friends"
-msgstr ""
+msgstr "Mengobrol dengan temanmu"
 
 #: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "Akses semua layanan Outlook dan OneDrive di komputer Anda"
 
 #: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr ""
+msgstr "Akses semua Layanan Yahoo! di komputer Anda"
 
 #: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "Akses semua konten Facebook di komputer Anda"
 
 #: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Akses semua layanan Google di komputer Anda"
 
 #: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Termasuk Kontak, Surel, dan Kalender"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Scrobble musik Anda"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Akses surel dengan FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Ambil Surel dari Server IMAP"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
-msgstr ""
+msgstr "Akun Daring"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Kelola akun daring dan aplikasi yang terhubung"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
-msgstr ""
+msgstr "Kembalikan"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr ""
+msgstr "Tambah akun baru…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Hubungkan Akun Daring Anda"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"Masuk untuk terhubung dengan aplikasi seperti Surel, Kontak, dan Kalender."
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "Akun '%s' Dihapus."
