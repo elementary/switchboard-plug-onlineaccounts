@@ -1,3 +1,9 @@
+switchboard-plug-onlineaccounts (0.3.1) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Fri, 18 Aug 2017 18:16:59 -0500
+
 switchboard-plug-onlineaccounts (0.3.0.1) xenial; urgency=medium
 
   * New upstream release.
