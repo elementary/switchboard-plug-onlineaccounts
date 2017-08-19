@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2016-09-03 13:46+0000\n"
-"Last-Translator: UweS <Unknown>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2017-08-19 13:00+0000\n"
+"Last-Translator: Jörg Arnold <j0ar@posteo.de>\n"
+"Language-Team: German <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-onlineaccounts/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -29,7 +31,7 @@ msgstr "Entfernen"
 #: ../src/Views/AccountView.vala:102
 msgid "There are no apps currently installed that link to your %s account"
 msgstr ""
-"Aktuell sind keine Anwendungen installiert, die zu Ihrem %s-Konto verbinden."
+"Aktuell sind keine Anwendungen installiert, die zu Ihrem %s-Konto verbinden"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
@@ -43,7 +45,7 @@ msgstr "E-Mail-Konto"
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr "Konto (E-Mail-Adresse)"
+msgstr "E-Mail"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
