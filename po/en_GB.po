@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2017-08-28 08:06+0000\n"
-"Last-Translator: Flyus Fly <fly_fly@popstar.com>\n"
+"PO-Revision-Date: 2017-09-16 01:09+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "onlineaccounts/en_GB/>\n"
@@ -81,7 +81,7 @@ msgstr ""
 #: ../src/Authentification/PasswordDialog.vala:107
 #: ../src/OnlineAccounts.vala:90
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Cancel"
 
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
