@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2016-06-03 03:10+0000\n"
-"Last-Translator: Giovanni Caligaris <giovannicaligaris@gmail.com>\n"
-"Language-Team: English (Canada) <en_CA@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-02-24 00:04+0000\n"
+"Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
+"Language-Team: English (Canada) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"onlineaccounts/en_CA/>\n"
+"Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
@@ -42,7 +45,7 @@ msgstr ""
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
@@ -63,7 +66,7 @@ msgstr ""
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
