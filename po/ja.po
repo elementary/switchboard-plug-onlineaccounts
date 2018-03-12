@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-02-05 00:12+0000\n"
+"PO-Revision-Date: 2018-03-14 00:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/ja/>\n"
@@ -106,7 +106,7 @@ msgstr "新しいパスワード"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr "パスワードの再入力"
+msgstr "パスワードの確認"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
