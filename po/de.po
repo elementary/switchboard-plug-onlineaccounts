@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-03-28 00:04+0000\n"
+"PO-Revision-Date: 2018-04-14 12:27+0000\n"
 "Last-Translator: Justin <justin.hucke@t-online.de>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/de/>\n"
@@ -106,9 +106,8 @@ msgid "New Password"
 msgstr "Neues Passwort"
 
 #: ../src/Authentification/PasswordDialog.vala:88
-#, fuzzy
 msgid "Confirm Password"
-msgstr "Neues Passwort bestätigen"
+msgstr "Passwort bestätigen"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
