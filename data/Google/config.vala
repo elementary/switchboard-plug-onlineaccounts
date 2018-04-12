@@ -2,8 +2,7 @@
 namespace OnlineAccounts.Plugins.Google.Config {
     
     const string[] schemes = {
-        "https",
-        "http"
+        "https"
     };
     
     const string[] scopes = {

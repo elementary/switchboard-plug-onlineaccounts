@@ -2,8 +2,7 @@
 namespace OnlineAccounts.Plugins.Microsoft.Config {
     
     const string[] schemes = {
-        "https",
-        "http"
+        "https"
     };
     
     const string[] scopes = {

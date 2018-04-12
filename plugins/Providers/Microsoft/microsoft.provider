@@ -23,7 +23,7 @@
           <setting name="Scope">wl.basic wl.birthday wl.emails wl.imap wl.offline_access wl.postal_addresses wl.phone_numbers wl.calendars_update wl.events_create wl.contacts_photos wl.contacts_create wl.contacts_skydrive wl.skydrive_update</setting>
           <setting name="ClientId">00000000400ECC75</setting>
           <setting name="ClientSecret">SFHsDQX7IuyykXpSfGKJxh7xcRCKX1Gd</setting>
-          <setting type="as" name="AllowedSchemes">['https','http']</setting>
+          <setting type="as" name="AllowedSchemes">['https']</setting>
           <setting type="as" name="AllowedRealms">['login.live.com']</setting>
           <setting type="as" name="Realms">['login.live.com']</setting>
         </group>
