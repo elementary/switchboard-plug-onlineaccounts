@@ -38,8 +38,7 @@ public class FlickrPlugin : Ap.OAuthPlugin {
         /* According to Flickr documentation, the callback is ignored */
         oauth_params.insert ("Callback", "https://wiki.ubuntu.com/");
         string[] schemes = {
-            "https",
-            "http"
+            "https"
         };
         oauth_params.insert ("AllowedSchemes", schemes);
         set_oauth_parameters (oauth_params);

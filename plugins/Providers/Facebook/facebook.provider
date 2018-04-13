@@ -23,7 +23,7 @@
           <setting name="Scope">public_profile,email,user_friends</setting>
           <setting name="ClientId">217719465038528</setting>
           <setting name="ClientSecret">394982b75bcd14e6859ffc2c6884ac23</setting>
-          <setting type="as" name="AllowedSchemes">['https','http']</setting>
+          <setting type="as" name="AllowedSchemes">['https']</setting>
           <setting type="as" name="AllowedRealms">['facebook.com']</setting>
           <setting type="as" name="Realms">['facebook.com']</setting>
         </group>

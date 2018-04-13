@@ -21,7 +21,7 @@
           <setting name="ConsumerSecret">0f438190f477b6773e1bbd1c1fa9406ff922ab7b</setting>
           <setting name="SignatureMethod">HMAC-SHA1</setting>
           <setting type="int" name="UiPolicy">0</setting>
-          <setting type="as" name="AllowedSchemes">['https','http']</setting>
+          <setting type="as" name="AllowedSchemes">['https']</setting>
           <setting type="as" name="AllowedRealms">['yahoo.com']</setting>
           <setting type="as" name="Realms">['api.login.yahoo.com']</setting>
         </group>
