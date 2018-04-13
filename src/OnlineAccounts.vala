@@ -33,7 +33,6 @@ namespace OnlineAccounts {
         SourceSelector source_selector;
         Gtk.Paned paned;
         OnlineAccounts.Server oa_server;
-        PluginsManager plugins_manager;
         Gtk.InfoBar infobar;
         Gtk.Revealer app_notification;
         Gee.HashMap<int, Ag.Provider> providers_map;
@@ -48,7 +47,6 @@ namespace OnlineAccounts {
                     description: _("Manage online accounts and connected applications"),
                     icon: "preferences-desktop-online-accounts",
                     supported_settings: settings);
-            plugins_manager = PluginsManager.get_default ();
             providers_map = new Gee.HashMap<int, Ag.Provider> (null, null);
             plug = this;
         }
