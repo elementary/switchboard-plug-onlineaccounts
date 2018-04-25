@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-04-20 00:12+0000\n"
+"PO-Revision-Date: 2018-04-26 00:04+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/cs/>\n"
@@ -45,7 +45,7 @@ msgstr ""
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
@@ -66,7 +66,7 @@ msgstr ""
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "Žádný"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
