@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-04-26 00:04+0000\n"
+"PO-Revision-Date: 2018-04-27 00:03+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/cs/>\n"
@@ -35,11 +35,11 @@ msgstr ""
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr ""
+msgstr "Žádné aplikace"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "Mailový účet"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
@@ -51,17 +51,17 @@ msgstr "Email"
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Šifrování:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
@@ -70,11 +70,11 @@ msgstr "Žádný"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Použít přihlašovací údaje IMAP"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Žádné ověření není vyžadováno"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -86,7 +86,7 @@ msgstr "Zrušit"
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Přihlásit se"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -99,7 +99,7 @@ msgstr "Zadejte prosím vaše přihlašovací údaje..."
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
@@ -111,7 +111,7 @@ msgstr "Potvrdit heslo"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Zapomenuté heslo…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -123,11 +123,11 @@ msgstr "Zadejte zde text výše"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Nemáte účet? Zaregistrujte se"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Jiný účet"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -171,7 +171,7 @@ msgstr "Synchronizovat soubory"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Synchronizovat váš email"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
@@ -211,7 +211,7 @@ msgstr ""
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Přistupovat k mailu pomocí FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
