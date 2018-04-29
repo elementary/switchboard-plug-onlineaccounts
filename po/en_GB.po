@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2017-09-16 01:09+0000\n"
-"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
+"PO-Revision-Date: 2018-04-29 14:04+0000\n"
+"Last-Translator: Ciaran Ainsworth <cda@whistlingkappa.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "onlineaccounts/en_GB/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.16\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -31,50 +31,50 @@ msgstr "Remove"
 
 #: ../src/Views/AccountView.vala:102
 msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
+msgstr "There are no apps currently installed that link to your %s account"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr ""
+msgstr "No Apps"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "Mail Account"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Encryption:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Use IMAP Credentials"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "No authentication required"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -86,7 +86,7 @@ msgstr "Cancel"
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Log In"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -99,19 +99,19 @@ msgstr "Please enter your credentials…"
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "New Password"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirm Password"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Forgot password…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -123,11 +123,11 @@ msgstr "Enter above text here"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Don't have an account? Sign Up"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Other Account"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -171,7 +171,7 @@ msgstr "Sync your files"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Sync your email"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
@@ -203,23 +203,23 @@ msgstr "Access all Google services on your computer"
 
 #: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
-msgstr ""
+msgstr "Includes Contacts, Mail, and Calendar"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Scrobble your music"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Access mail with FastMail"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Fetch Email from IMAP Server"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
@@ -227,7 +227,7 @@ msgstr "Online Accounts"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Manage online accounts and connected applications"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
