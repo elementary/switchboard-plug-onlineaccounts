@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-03-14 00:02+0000\n"
+"PO-Revision-Date: 2018-05-03 08:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/ja/>\n"
@@ -90,7 +90,7 @@ msgstr "ログイン"
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "読み込み中…"
+msgstr "読み込んでいます…"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
@@ -242,9 +242,7 @@ msgstr "オンラインアカウントを接続する"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"メール、連絡先、カレンダーのようなアプリケーションを接続するためにサインイン"
-"してください。"
+msgstr "メール、連絡先、カレンダーのようなアプリを接続するにはサインインしてください。"
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
