@@ -1,0 +1,3 @@
+usr/lib/*/pantheon-online-accounts/libemail.so
+usr/share/accounts/providers/mail*
+usr/share/accounts/services/mail*
