@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="mail">
+  <type>mail</type>
+  <name>Mail Account</name>
+  <description>Fetch Email from IMAP Server</description>
+  <icon>applications-development</icon>
+  <provider>mail</provider>
+  <translations>pantheon-online-accounts</translations>
+</service>
