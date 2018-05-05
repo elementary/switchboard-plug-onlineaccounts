@@ -17,9 +17,7 @@ Build-Depends: cmake (>= 2.8),
                libwebkit2gtk-4.0-dev,
                valac (>= 0.24)
 Standards-Version: 3.9.5
-Homepage: https://launchpad.net/switchboard-plug-onlineaccounts
-Vcs-Bzr: lp:switchboard-plug-onlineaccounts
-Vcs-Browser: https://code.launchpad.net/~elementary-apps/switchboard-plug-onlineaccounts/trunk
+Homepage: https://github.com/elementary/switchboard-plug-onlineaccounts
 
 Package: switchboard-plug-online-accounts
 Architecture: any
@@ -131,4 +129,13 @@ Depends: pantheon-online-accounts-plugin-password,
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - FastMail
+ Online accounts plugin for single signon
+
+Package: pantheon-online-accounts-plugin-mail
+Architecture: any
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Online Accounts plugin for single signon - Mail
  Online accounts plugin for single signon
