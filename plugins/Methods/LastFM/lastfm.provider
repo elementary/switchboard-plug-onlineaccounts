@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="lastfm">
+  <name>Last.fm</name>
+  <description>Scrobble your music</description>
+  <icon>lastfm</icon>
+  <translations>pantheon-online-accounts</translations>
+  <plugin>lastfm</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">lastfm</setting>
+      <setting name="mechanism">lastfm</setting>
+      <group name="lastfm">
+        <group name="lastfm">
+          <setting name="ClientId">8659cfc191c2cde0b33bb4970fcbbd49</setting>
+          <setting name="ClientSecret">f61323da870d6ed9322dc51c875357c6</setting>
+          <setting type="int" name="UiPolicy">0</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>
