@@ -1,7 +1,7 @@
 Source: switchboard-plug-onlineaccounts
 Section: admin
 Priority: optional
-Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+Maintainer: Corentin Noël <corentin@elementary.io>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libaccounts-glib-dev,
@@ -138,4 +138,13 @@ Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Description: Online Accounts plugin for single signon - Mail
+ Online accounts plugin for single signon
+
+Package: pantheon-online-accounts-plugin-lastfm
+Architecture: any
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: Online Accounts plugin for single signon - Last.fm
  Online accounts plugin for single signon
