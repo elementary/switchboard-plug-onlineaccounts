@@ -20,7 +20,6 @@
  */
 
 public class OnlineAccounts.Plugins.LastFMMethod : OnlineAccounts.MethodPlugin {
-    
     public LastFMMethod () {
         Object (plugin_name: "lastfm");
     }

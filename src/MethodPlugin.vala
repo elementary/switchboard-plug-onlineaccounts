@@ -21,12 +21,9 @@
  */
 
 public abstract class OnlineAccounts.MethodPlugin : GLib.Object {
-    
     public string plugin_name { get; construct; }
-    
-    public abstract OnlineAccounts.Account? add_account (Ag.Account account);
-    
-    public abstract OnlineAccounts.Account? get_account (Ag.Account account);
-    
 
+    public abstract OnlineAccounts.Account? add_account (Ag.Account account);
+
+    public abstract OnlineAccounts.Account? get_account (Ag.Account account);
 }

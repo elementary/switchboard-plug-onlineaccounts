@@ -2,7 +2,7 @@
 <provider id="lastfm">
   <name>Last.fm</name>
   <description>Scrobble your music</description>
-  <icon>lastfm</icon>
+  <icon>online-account-lastfm</icon>
   <translations>pantheon-online-accounts</translations>
   <plugin>lastfm</plugin>
 
