@@ -134,7 +134,7 @@ Description: Online Accounts plugin for single signon - FastMail
 Package: pantheon-online-accounts-plugin-mail
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         gsignond-plugin-mail (>= 0.2.0),
+         gsignond-plugin-mail (>= 0.2.0~r3),
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
@@ -144,7 +144,7 @@ Description: Online Accounts plugin for single signon - Mail
 Package: pantheon-online-accounts-plugin-lastfm
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         gsignond-plugin-lastfm (>= 0.2.0),
+         gsignond-plugin-lastfm (>= 0.2.0~r3),
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
