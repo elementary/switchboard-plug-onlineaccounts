@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-03-25 00:09+0000\n"
+"PO-Revision-Date: 2018-05-06 16:50+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/da/>\n"
@@ -222,7 +222,7 @@ msgstr "Hent e-mail fra IMAP server"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
-msgstr "Online-konti"
+msgstr "Online Konti"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
