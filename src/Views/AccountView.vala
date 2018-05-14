@@ -21,26 +21,31 @@
  */
 
 public class OnlineAccounts.AccountView : Gtk.Grid {
-    OnlineAccounts.Account plugin;
+    OnlineAccounts.Account account;
     Signon.Identity identity;
 
-    public AccountView (OnlineAccounts.Account plugin) {
+    public AccountView (OnlineAccounts.Account account) {
         column_spacing = 6;
         row_spacing = 3;
         margin = 24;
         orientation = Gtk.Orientation.VERTICAL;
-        this.plugin = plugin;
+        this.account = account;
 
-        plugin.account.select_service (null);
-        var v_id = plugin.account.get_variant (OnlineAccounts.Account.gsignon_id, null);
-        identity = new Signon.Identity.from_db (v_id.get_uint32 ());
+        var ag_account = account.ag_account;
+        var account_service = new Ag.AccountService (ag_account, null);
+        var auth_data = account_service.get_auth_data ();
+        identity = new Signon.Identity.from_db (auth_data.get_credentials_id ());
+        if (identity == null) {
+            critical ("null identity %u", auth_data.get_credentials_id ());
+            return;
+        }
 
-        var provider = plugin.account.get_manager ().get_provider (plugin.account.get_provider_name ());
+        var provider = ag_account.manager.get_provider (ag_account.get_provider_name ());
 
         var provider_image = new Gtk.Image.from_icon_name (provider.get_icon_name (), Gtk.IconSize.DIALOG);
         provider_image.use_fallback = true;
 
-        var user_label = new Gtk.Label (Markup.escape_text (plugin.account.get_display_name ()));
+        var user_label = new Gtk.Label (Markup.escape_text (ag_account.get_display_name () ?? _("New Account")));
         user_label.get_style_context ().add_class ("h2");
         user_label.hexpand = true;
         user_label.xalign = 0;
@@ -59,8 +64,8 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         apps_grid.row_spacing = 6;
 
         int i = 0;
-        plugin.account.list_services ().foreach ((service) => {
-            if (plugin.account.manager.list_applications_by_service (service).length () == 0)
+        ag_account.list_services ().foreach ((service) => {
+            if (ag_account.manager.list_applications_by_service (service).length () == 0)
                 return;
 
             unowned string i18n_domain = service.get_i18n_domain ();
@@ -74,10 +79,10 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             service_switch.margin_end = 6;
             service_switch.valign = Gtk.Align.CENTER;
             service_switch.tooltip_text = GLib.dgettext (i18n_domain, service.get_description ());
-            plugin.account.select_service (service);
-            service_switch.active = plugin.account.get_enabled ();
+            ag_account.select_service (service);
+            service_switch.active = ag_account.get_enabled ();
 
-            var acl_list = new ACListBox (plugin.account, service, identity);
+            var acl_list = new ACListBox (ag_account, service, identity);
 
             var frame = new Gtk.Frame (null);
             frame.margin_bottom = 12;
@@ -98,23 +103,28 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
         });
 
         if (i == 1) {
-            var provider_name = plugin.account.manager.get_provider (plugin.account.get_provider_name ()).get_display_name ();
+            var provider_name = ag_account.manager.get_provider (ag_account.get_provider_name ()).get_display_name ();
             var no_service_label = _("There are no apps currently installed that link to your %s account").printf (provider_name);
             var alert = new Granite.Widgets.AlertView (_("No Apps"), no_service_label, "applications-internet-symbolic");
             this.add (alert);
         } else {
-            scrolled_window.add_with_viewport (apps_grid);
+            scrolled_window.add (apps_grid);
 
             attach (provider_image, 0, 0, 1, 2);
             attach (user_label, 1, 0, 1, 1);
             attach (provider_label, 1, 1, 1, 1);
             attach (scrolled_window, 0, 2, 2, 1);
         }
+
+        ag_account.display_name_changed.connect (() => {
+            user_label.label = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
+        });
     }
 
     private void on_service_switch_activated (bool enabled, Ag.Service service, ACListBox listbox) {
-        plugin.account.select_service (service);
-        plugin.account.set_enabled (enabled);
+        var ag_account = account.ag_account;
+        ag_account.select_service (service);
+        ag_account.set_enabled (enabled);
         if (enabled) {
             listbox.allow_service ();
         } else {

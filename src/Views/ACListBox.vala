@@ -23,7 +23,6 @@
 public class OnlineAccounts.ACListBox : Gtk.ListBox {
     Ag.Account account;
     Signon.Identity identity;
-    unowned GLib.List<Signon.SecurityContext> acl = null;
     Ag.Service service;
 
     public ACListBox (Ag.Account account, Ag.Service service, Signon.Identity identity) {
@@ -40,31 +39,29 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
     }
 
     private async void update_acl () {
-        identity.query_info ((self, info, error) => {
-            if (error != null) {
-                critical (error.message);
-                return;
-            }
-
-            acl = info.get_access_control_list ();
+        try {
+            var info = yield identity.query_info (null);
+            unowned GLib.List<Signon.SecurityContext> acl = info.get_access_control_list ();
             get_children ().foreach ((child) => {
                 var approw = child as AppRow;
                 approw.check_acl (acl);
             });
-        });
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 
     public void allow_service () {
         get_children ().foreach ((child) => {
             var approw = child as AppRow;
-            approw.allow_app ();
+            approw.allow_app.begin ();
         });
     }
 
     public void deny_service () {
         get_children ().foreach ((child) => {
             var approw = child as AppRow;
-            approw.deny_app ();
+            approw.deny_app.begin ();
         });
     }
 
@@ -98,9 +95,9 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             app_switch = new Gtk.CheckButton ();
             app_switch.activate.connect (() => {
                 if (app_switch.active) {
-                    allow_app ();
+                    allow_app.begin ();
                 } else {
-                    deny_app ();
+                    deny_app.begin ();
                 }
             });
 
@@ -123,10 +120,10 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             return exec;
         }
 
-        public void check_acl (List<Signon.SecurityContext> acl) {
+        public void check_acl (GLib.List<Signon.SecurityContext> acl) {
             var path = get_app_path ();
             for (unowned List<Signon.SecurityContext> nth = acl.first (); nth != null; nth = nth.next) {
-                if (nth.data.sys_ctx == path) {
+                if (nth.data.get_system_context () == path) {
                     app_switch.active = true;
                     return;
                 }
@@ -135,56 +132,42 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             app_switch.active = false;
         }
 
-        public void allow_app () {
-            account.select_service (service);
-            identity.query_info ((self, info, error) => {
-                if (error != null) {
-                    critical (error.message);
-                    account.select_service (null);
-                    return;
-                }
-
-                info.access_control_list_append (new Signon.SecurityContext.from_values (get_app_path (), "*"));
-                identity.store_credentials_with_info (info, (self, id, error) => {
-                    if (error != null) {
-                        critical (error.message);
-                    }
-
-                    app_switch.active = true;
-                    account.store_async.begin (null);
-                    account.select_service (null);
-                });
-            });
+        public async void allow_app () {
+            try {
+                account.select_service (service);
+                Signon.IdentityInfo info = yield identity.query_info (null);
+                info.add_access_control (get_app_path (), "*");
+                yield identity.store_info (info, null);
+                app_switch.active = true;
+                account.select_service (null);
+                yield account.store_async (null);
+            } catch (Error e) {
+                critical (e.message);
+                account.select_service (null);
+            }
         }
 
-        public void deny_app () {
-            account.select_service (service);
-            identity.query_info ((self, info, error) => {
-                if (error != null) {
-                    critical (error.message);
-                    account.select_service (null);
-                    return;
-                }
-
+        public async void deny_app () {
+            try {
+                account.select_service (service);
+                Signon.IdentityInfo info = yield identity.query_info (null);
+                var list = new GLib.List<Signon.SecurityContext> ();
                 var path = get_app_path ();
-                var acl = new List<Signon.SecurityContext> ();
                 info.get_access_control_list ().foreach ((nth) => {
-                    if (nth.sys_ctx != path) {
-                        acl.append (nth);
+                    if (nth.get_system_context () != path) {
+                        list.append (nth.copy ());
                     }
                 });
 
-                info.set_access_control_list (acl);
-                identity.store_credentials_with_info (info, (self, id, error) => {
-                    if (error != null) {
-                        critical (error.message);
-                    }
-
-                    app_switch.active = false;
-                    account.store_async.begin (null);
-                    account.select_service (null);
-                });
-            });
+                info.set_access_control_list (list);
+                yield identity.store_info (info, null);
+                app_switch.active = false;
+                account.select_service (null);
+                yield account.store_async (null);
+            } catch (Error e) {
+                critical (e.message);
+                account.select_service (null);
+            }
         }
     }
 }

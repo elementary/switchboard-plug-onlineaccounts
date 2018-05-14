@@ -165,7 +165,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         });
         save_button.clicked.connect (() => finished ());
         cancel_button.clicked.connect (() => {
-            error_code = GSignond.SignonuiError.CANCELED;
+            error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();
         });
@@ -193,7 +193,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
             forgot_button.uri = forgot_password_url;
             forgot_button.activate_link.connect (() =>{
                 warning ("forgot password");
-                error_code = GSignond.SignonuiError.FORGOT_PASSWORD;
+                error_code = OnlineAccounts.SignonUIError.FORGOT_PASSWORD;
                 finished ();
                 return false;
             });
@@ -324,7 +324,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
     public override bool refresh_captcha (string uri) {
         if (uri == null) {
             warning ("invalid captcha value : %s", uri);
-            error_code = GSignond.SignonuiError.BAD_CAPTCHA_URL;
+            error_code = OnlineAccounts.SignonUIError.BAD_CAPTCHA_URL;
             return false;
         }
 
@@ -337,7 +337,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
 
         if (filename == null) {
             warning ("invalid captcha value : %s", uri);
-            error_code = GSignond.SignonuiError.BAD_CAPTCHA_URL;
+            error_code = OnlineAccounts.SignonUIError.BAD_CAPTCHA_URL;
             return false;
         }
 
@@ -347,7 +347,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         debug ("Used file : %s", used_filename);
         var is_valid = GLib.strcmp (filename, used_filename) == 0;
         if (is_valid == false) {
-            error_code = GSignond.SignonuiError.BAD_CAPTCHA;
+            error_code = OnlineAccounts.SignonUIError.BAD_CAPTCHA;
             return false;
         }
 

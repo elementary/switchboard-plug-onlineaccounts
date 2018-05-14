@@ -1,8 +1,0 @@
-[Plugin]
-Module=google
-IAge=2
-Name=Google integration
-Description=Enable Google support
-Authors=Switchboard Developers
-Copyright=Copyright © 2013 Switchboard Developers
-Website=http://launchpad.net/switchboard

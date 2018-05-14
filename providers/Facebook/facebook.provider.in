@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="facebook">
+  <name>Facebook</name>
+  <description>Access all Facebook contents on your computer</description>
+  <icon>online-account-facebook</icon>
+  <translations>pantheon-online-accounts</translations>
+  <plugin>generic-oauth</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth</setting>
+      <setting name="mechanism">oauth2</setting>
+      <group name="oauth">
+        <group name="oauth2">
+          <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
+          <setting type="int" name="UiPolicy">0</setting>
+          <setting name="ResponseType">code</setting>
+          <setting name="AuthHost">www.facebook.com</setting>
+          <setting name="TokenHost">graph.facebook.com</setting>
+          <setting name="AuthPath">/dialog/oauth</setting>
+          <setting name="TokenPath">/oauth/access_token</setting>
+          <setting name="RedirectUri">http://elementary.io/</setting>
+          <setting name="Scope">public_profile email user_friends</setting>
+          <setting name="ClientId">217719465038528</setting>
+          <setting name="ClientSecret">394982b75bcd14e6859ffc2c6884ac23</setting>
+          <setting type="as" name="AllowedSchemes">['https']</setting>
+          <setting type="as" name="AllowedRealms">['facebook.com']</setting>
+          <setting type="as" name="Realms">['facebook.com']</setting>
+        </group>
+      </group>
+    </group>
+    <group name="integration">
+      <setting name="executable">@CMAKE_INSTALL_FULL_LIBEXECDIR@/@INTEGRATION_EXEC@</setting>
+    </group>
+  </template>
+</provider>

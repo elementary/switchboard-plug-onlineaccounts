@@ -28,7 +28,7 @@ public class OnlineAccounts.DialogService : Object {
     }
 
     [DBus (name = "queryDialog")]
-    public async HashTable<string, Variant> query_dialog(HashTable<string, Variant> parameter) {
+    public async HashTable<string, Variant> query_dialog(HashTable<string, Variant> parameter) throws GLib.DBusError, GLib.IOError {
         var main_loop = new GLib.MainLoop ();
         var dialog = RequestQueue.get_default ().push_dialog (parameter, main_loop);
         main_loop.run ();
@@ -50,7 +50,7 @@ public class OnlineAccounts.DialogService : Object {
     }
     
     [DBus (name = "refreshDialog")]
-    public void refresh_dialog (HashTable<string, Variant> parameter) {
+    public void refresh_dialog (HashTable<string, Variant> parameter) throws GLib.DBusError, GLib.IOError {
         GLib.Variant value = parameter.lookup (OnlineAccounts.Key.REQUEST_ID);
         if ((value == null) || value.is_of_type (GLib.VariantType.STRING) == false) {
             debug ("Wrong request id : %s", value != null ? value.get_type_string () : "null request id"); 
@@ -74,10 +74,10 @@ public class OnlineAccounts.DialogService : Object {
     }
     
     [DBus (name = "cancelUiRequest")]
-    public void cancel_ui_request (string request_id) {
+    public void cancel_ui_request (string request_id) throws GLib.DBusError, GLib.IOError {
         var dialog = RequestQueue.get_default ().get_dialog_from_request_id (request_id);
         if (dialog != null) {
-            dialog.error_code = GSignond.SignonuiError.CANCELED;
+            dialog.error_code = OnlineAccounts.SignonUIError.CANCELED;
             dialog.finished ();
         }
     }

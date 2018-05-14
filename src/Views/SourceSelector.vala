@@ -21,7 +21,7 @@
  */
 
 public class OnlineAccounts.SourceSelector : Gtk.Grid {
-    public signal void account_selected (OnlineAccounts.Account plugin);
+    public signal void account_selected (OnlineAccounts.Account account);
     public signal void new_account_request ();
 
     private Gtk.ToolButton remove_button;
@@ -31,10 +31,10 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     public SourceSelector () {
         var accounts_manager = AccountsManager.get_default ();
         foreach (var account in accounts_manager.accounts_available) {
-            add_plugin_callback (account);
+            add_account_callback (account);
         }
 
-        accounts_manager.account_added.connect (add_plugin_callback);
+        accounts_manager.account_added.connect (add_account_callback);
     }
 
     construct {
@@ -74,8 +74,9 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         });
     }
 
-    private void add_plugin_callback (OnlineAccounts.Account account) {
-        var provider = account.account.get_manager ().get_provider (account.account.get_provider_name ());
+    private void add_account_callback (OnlineAccounts.Account account) {
+        var ag_account = account.ag_account;
+        var provider = ag_account.manager.get_provider (ag_account.get_provider_name ());
         if (provider == null)
             return;
 
@@ -119,8 +120,13 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         public AccountRow (OnlineAccounts.Account account, Ag.Provider provider) {
             this.account = account;
             image.icon_name = provider.get_icon_name ();
-            username.label = account.account.display_name;
+            var ag_account = account.ag_account;
+            username.label = ag_account.display_name ?? _("New Account");
             service.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (provider.get_display_name ()));
+
+            ag_account.display_name_changed.connect (() => {
+                username.label = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
+            });
         }
 
         construct {

@@ -60,8 +60,7 @@ set(DEPS_PACKAGES
     granite
     switchboard-2.0
     libaccounts-glib
-    libgsignon-glib
-    gsignond
+    libsignon-glib
     json-glib-1.0
     libsoup-2.4
     gmodule-2.0
@@ -78,8 +77,7 @@ set(DEPS_PKG
     granite
     switchboard-2.0
     libaccounts-glib
-    libgsignon-glib
-    gsignond
+    libsignon-glib
     json-glib-1.0
     libsoup-2.4
     gmodule-2.0
@@ -92,7 +90,7 @@ add_subdirectory (data)
 
 find_package (Vala REQUIRED)
 include (ValaVersion)
-ensure_vala_version ("0.24.0" MINIMUM)
+ensure_vala_version ("0.30.0" MINIMUM)
 
 find_package (PkgConfig)
 # Add all your dependencies to the list below
@@ -105,11 +103,10 @@ link_directories (${DEPS_LIBRARY_DIRS} ${WEBKIT2GTK_LIBRARY_DIRS})
 include (ValaPrecompile)
 
 set(GLOBAL_VALAC_OPTIONS
-    --vapidir=${CMAKE_SOURCE_DIR}/vapi
-    --vapidir=${CMAKE_BINARY_DIR}/src
     --target-glib=2.32
     --thread
+    --vapidir=${CMAKE_SOURCE_DIR}/vapi
 )
 
 add_subdirectory (src)
-add_subdirectory (plugins)
+add_subdirectory (providers)
