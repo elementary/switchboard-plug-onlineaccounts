@@ -3,6 +3,22 @@
 
 ## Building and Installation
 
+You'll need the following dependencies:
+
+* cmake
+* libaccounts-glib-dev
+* libgee-0.8-dev
+* libglib2.0-dev
+* libgranite-dev
+* libgsignon-glib-dev
+* libgsignond-common-dev
+* libgtk-3-dev
+* libjson-glib-dev
+* librest-dev
+* libswitchboard-2.0-dev
+* libwebkit2gtk-4.0-dev
+* valac
+
 It's recommended to create a clean build environment
 
     mkdir build
