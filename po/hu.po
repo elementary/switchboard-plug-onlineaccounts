@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-05-30 00:04+0000\n"
+"PO-Revision-Date: 2018-06-01 00:08+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/hu/>\n"
@@ -34,33 +34,33 @@ msgstr "Nincs %s fiókhoz kapcsolódó alkalmazás telepítve"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr ""
+msgstr "Nincsenek alkalmazások"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "E-mail fiók"
 
 #: ../src/Authentification/MailDialog.vala:67
 #: ../src/Authentification/MailDialog.vala:111
 #: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: ../src/Authentification/MailDialog.vala:71
 #: ../src/Authentification/MailDialog.vala:115
 #: ../src/Authentification/PasswordDialog.vala:78
 msgid "Password"
-msgstr ""
+msgstr "Jelszó"
 
 #: ../src/Authentification/MailDialog.vala:82
 #: ../src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Kiszolgáló"
 
 #: ../src/Authentification/MailDialog.vala:92
 #: ../src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Titkosítás:"
 
 #: ../src/Authentification/MailDialog.vala:96
 #: ../src/Authentification/MailDialog.vala:146
@@ -69,11 +69,11 @@ msgstr "Nincs"
 
 #: ../src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Az IMAP-hitelesítő adatok használata"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Nincs szükség hitelesítésre"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -85,7 +85,7 @@ msgstr "Mégsem"
 #: ../src/Authentification/MailDialog.vala:159
 #: ../src/Authentification/PasswordDialog.vala:109
 msgid "Log In"
-msgstr ""
+msgstr "Bejelentkezés"
 
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
@@ -98,15 +98,15 @@ msgstr "Adja meg hitelesítő adatait...."
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "Új jelszó"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "Jelszó megerősítése"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
@@ -122,11 +122,11 @@ msgstr "Írja be a fenti szöveget ide"
 
 #: ../src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Nincs még fiókja? Regisztráljon"
 
 #: ../src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
-msgstr ""
+msgstr "Másik fiók"
 
 #. //launchpad.net/switchboard-plug-onlineaccounts)
 #. *
@@ -210,7 +210,7 @@ msgstr ""
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "A levelek elérése a FastMail segítségével"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "E-mailek lekérése az IMAP-kiszolgálóról"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
@@ -226,7 +226,7 @@ msgstr "Online fiókok"
 
 #: ../src/OnlineAccounts.vala:46
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Kezelje online fiókjait és a kapcsolódó alkalmazásait"
 
 #: ../src/OnlineAccounts.vala:64
 msgid "Restore"
@@ -234,7 +234,7 @@ msgstr "Visszaállítás"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Új fiók hozzáadása..."
+msgstr "Új fiók hozzáadása…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
@@ -247,4 +247,4 @@ msgstr ""
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
-msgstr "„%s” fiók eltávolítva"
+msgstr "'%s' fiók eltávolítva."
