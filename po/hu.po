@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-06-01 00:08+0000\n"
+"PO-Revision-Date: 2018-06-02 00:06+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/hu/>\n"
@@ -30,7 +30,7 @@ msgstr "Eltávolítás"
 
 #: ../src/Views/AccountView.vala:102
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "Nincs %s fiókhoz kapcsolódó alkalmazás telepítve"
+msgstr "Nincs a(z) %s fiókhoz kapcsolódó alkalmazás telepítve"
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
@@ -247,4 +247,4 @@ msgstr ""
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
-msgstr "'%s' fiók eltávolítva."
+msgstr "A(z) '%s' fiók eltávolítva."
