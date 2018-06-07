@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-05-03 08:01+0000\n"
+"PO-Revision-Date: 2018-06-08 00:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/ja/>\n"
@@ -34,7 +34,7 @@ msgstr "あなたの %s アカウントにリンクするアプリがインス�
 
 #: ../src/Views/AccountView.vala:103
 msgid "No Apps"
-msgstr "アプリなし"
+msgstr "アプリがありません"
 
 #: ../src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
@@ -73,7 +73,7 @@ msgstr "IMAP クレジットを使用する"
 
 #: ../src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr "認証が要求されていません"
+msgstr "認証は不要"
 
 #: ../src/Authentification/MailDialog.vala:156
 #: ../src/Authentification/WebDialog.vala:34
@@ -154,7 +154,7 @@ msgstr "カレンダー"
 
 #: ../src/Translation.vala:25
 msgid "Sync your calendars"
-msgstr "カレンダーを同期する"
+msgstr "カレンダーを同期します"
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
@@ -162,43 +162,43 @@ msgstr "連絡先"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
-msgstr "連絡先を同期する"
+msgstr "連絡先を同期します"
 
 #: ../src/Translation.vala:28
 msgid "Sync your files"
-msgstr "ファイルを同期する"
+msgstr "ファイルを同期します"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr "メールを同期"
+msgstr "メールを同期します"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
-msgstr "写真を同期する"
+msgstr "写真を同期します"
 
 #: ../src/Translation.vala:32
 msgid "Watch your newsfeed"
-msgstr "ニュースフィードを参照する"
+msgstr "ニュースフィードを参照します"
 
 #: ../src/Translation.vala:33
 msgid "Chat with your friends"
-msgstr "友だちとチャットする"
+msgstr "友だちとチャットします"
 
 #: ../src/Translation.vala:34
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "コンピューター上ですべての Outlook や OneDrive のサービスにアクセス"
+msgstr "コンピューター上ですべての Outlook や OneDrive のサービスにアクセスします"
 
 #: ../src/Translation.vala:35
 msgid "Access all Yahoo! services on your computer"
-msgstr "コンピューター上ですべての Yahoo! のサービスにアクセス"
+msgstr "コンピューター上ですべての Yahoo! のサービスにアクセスします"
 
 #: ../src/Translation.vala:36
 msgid "Access all Facebook contents on your computer"
-msgstr "コンピューター上ですべての Facebook のコンテンツにアクセス"
+msgstr "コンピューター上ですべての Facebook のコンテンツにアクセスします"
 
 #: ../src/Translation.vala:37
 msgid "Access all Google services on your computer"
-msgstr "コンピューター上ですべての Google のサービスにアクセス"
+msgstr "コンピューター上ですべての Google のサービスにアクセスします"
 
 #: ../src/Translation.vala:38
 msgid "Includes Contacts, Mails, and Calendar"
@@ -206,11 +206,11 @@ msgstr "連絡先、メール、カレンダーを含みます"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr "音楽を Scrobble する"
+msgstr "音楽を Scrobble します"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
-msgstr "Fast メールでアクセス"
+msgstr "FastMail でメールにアクセスします"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
@@ -218,7 +218,7 @@ msgstr "Scrobble"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
-msgstr "IMAP サーバーからメールを取得する"
+msgstr "IMAP サーバーからメールを取得します"
 
 #: ../src/OnlineAccounts.vala:45
 msgid "Online Accounts"
