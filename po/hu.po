@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-06-14 08:44+0000\n"
+"PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/hu/>\n"
@@ -243,7 +243,7 @@ msgstr "Kapcsolódás az online fiókokhoz"
 #: ../src/OnlineAccounts.vala:167
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Jelentkezzen be az email, címjegyzék és naptár alkalmazások használatához."
+"Jelentkezzen be az e-mail, címjegyzék és naptár alkalmazások használatához."
 
 #: ../src/OnlineAccounts.vala:261
 msgid "Account '%s' Removed."
