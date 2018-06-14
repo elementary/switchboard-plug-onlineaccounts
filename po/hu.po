@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-06-02 00:06+0000\n"
+"PO-Revision-Date: 2018-06-14 08:44+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-onlineaccounts/hu/>\n"
@@ -110,7 +110,7 @@ msgstr "Jelszó megerősítése"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Elfelejtett jelszó…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -170,7 +170,7 @@ msgstr "Fájlok szinkronizálása"
 
 #: ../src/Translation.vala:30
 msgid "Sync your email"
-msgstr ""
+msgstr "Szinkronizálja e-mail fiókját"
 
 #: ../src/Translation.vala:31
 msgid "Sync your photos"
@@ -206,7 +206,7 @@ msgstr "Tartalmazza a címjegyzéket, levelezést és a naptárat"
 
 #: ../src/Translation.vala:39
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Vegye át zenéit"
 
 #: ../src/Translation.vala:40
 msgid "Access mail with FastMail"
@@ -214,7 +214,7 @@ msgstr "A levelek elérése a FastMail segítségével"
 
 #: ../src/Translation.vala:41
 msgid "Scrobble"
-msgstr ""
+msgstr "Átvétel"
 
 #: ../src/Translation.vala:42
 msgid "Fetch Email from IMAP Server"
