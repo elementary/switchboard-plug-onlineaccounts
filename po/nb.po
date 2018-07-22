@@ -8,17 +8,16 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-05-31 00:03+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål "
-"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
-"onlineaccounts/nb/>\n"
+"PO-Revision-Date: 2018-07-22 12:10+0000\n"
+"Last-Translator: Nils K <slx@nilsk.net>\n"
+"Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-onlineaccounts/nb/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -38,7 +37,6 @@ msgid "No Apps"
 msgstr "Ingen applikasjoner"
 
 #: ../src/Authentification/MailDialog.vala:58
-#, fuzzy
 msgid "Mail Account"
 msgstr "E-postkonto"
 
