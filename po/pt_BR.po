@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
 "PO-Revision-Date: 2018-08-30 00:08+0000\n"
-"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
-"\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -23,7 +22,7 @@ msgstr ""
 
 #: ../src/Views/SourceSelector.vala:53
 msgid "Add…"
-msgstr "Adicionar..."
+msgstr "Adicionar…"
 
 #: ../src/Views/SourceSelector.vala:58
 msgid "Remove"
@@ -91,11 +90,11 @@ msgstr "Entrar"
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "Carregando..."
+msgstr "Carregando…"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Por favor, entre com suas credenciais..."
+msgstr "Por favor, entre com suas credenciais…"
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
@@ -111,7 +110,7 @@ msgstr "Confirmar Senha"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "Esqueci minha senha..."
+msgstr "Esqueci minha senha…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -235,7 +234,7 @@ msgstr "Restaurar"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Adicionar nova conta..."
+msgstr "Adicionar nova conta…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
