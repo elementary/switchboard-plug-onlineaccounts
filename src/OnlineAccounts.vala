@@ -42,7 +42,7 @@ namespace OnlineAccounts {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts/online", null);
             Object (category: Category.NETWORK,
-                    code_name: Build.PLUGCODENAME,
+                    code_name: "network-pantheon-online-accounts",
                     display_name: _("Online Accounts"),
                     description: _("Manage online accounts and connected applications"),
                     icon: "preferences-desktop-online-accounts",

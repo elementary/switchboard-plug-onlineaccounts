@@ -1,6 +1,0 @@
-add_subdirectory (Facebook)
-add_subdirectory (FastMail)
-add_subdirectory (Google)
-add_subdirectory (LastFM)
-add_subdirectory (Mail)
-add_subdirectory (Microsoft)

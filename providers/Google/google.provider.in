@@ -31,7 +31,7 @@
       </group>
     </group>
     <group name="integration">
-      <setting name="executable">@CMAKE_INSTALL_FULL_LIBEXECDIR@/@INTEGRATION_EXEC@</setting>
+      <setting name="executable">@LIBEXECDIR@/@INTEGRATION_EXEC@</setting>
     </group>
   </template>
 </provider>

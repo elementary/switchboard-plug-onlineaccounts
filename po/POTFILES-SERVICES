@@ -1,0 +1,14 @@
+providers/Facebook/facebook-microblog.service
+providers/Facebook/facebook-contacts.service
+providers/Facebook/facebook-calendar.service
+providers/FastMail/fastmail-mail.service
+providers/Google/google-photos.service
+providers/Google/google-gmail.service
+providers/Google/google-drive.service
+providers/Google/google-contacts.service
+providers/Google/google-calendar.service
+providers/LastFM/lastfm-scrobble.service
+providers/Mail/mail.service
+providers/Microsoft/microsoft-mails.service
+providers/Microsoft/microsoft-contacts.service
+providers/Microsoft/microsoft-calendar.service

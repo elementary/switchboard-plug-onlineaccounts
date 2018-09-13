@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-02 19:26+0200\n"
+"POT-Creation-Date: 2018-09-13 22:38+0200\n"
 "PO-Revision-Date: 2018-05-06 16:50+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-onlineaccounts/da/>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,231 +20,269 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-22 06:56+0000\n"
 
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "Tilføj…"
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr ""
 
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "Fjern"
-
-#: ../src/Views/AccountView.vala:102
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Der er ingen applikationer installeret der gør brug af din %s-konto"
-
-#: ../src/Views/AccountView.vala:103
-msgid "No Apps"
-msgstr "Ingen applikationer"
-
-#: ../src/Authentification/MailDialog.vala:58
-msgid "Mail Account"
-msgstr "Mailkonto"
-
-#: ../src/Authentification/MailDialog.vala:67
-#: ../src/Authentification/MailDialog.vala:111
-#: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
-msgid "Email"
-msgstr "E-mail"
-
-#: ../src/Authentification/MailDialog.vala:71
-#: ../src/Authentification/MailDialog.vala:115
-#: ../src/Authentification/PasswordDialog.vala:78
-msgid "Password"
-msgstr "Adgangskode"
-
-#: ../src/Authentification/MailDialog.vala:82
-#: ../src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "Server"
-
-#: ../src/Authentification/MailDialog.vala:92
-#: ../src/Authentification/MailDialog.vala:142
-msgid "Encryption:"
-msgstr "Kryptering:"
-
-#: ../src/Authentification/MailDialog.vala:96
-#: ../src/Authentification/MailDialog.vala:146
-msgid "None"
-msgstr "Ingen"
-
-#: ../src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "Brug IMAP-logininfo"
-
-#: ../src/Authentification/MailDialog.vala:140
-msgid "No authentication required"
-msgstr "Ingen autentifikation påkrævet"
-
-#: ../src/Authentification/MailDialog.vala:156
-#: ../src/Authentification/WebDialog.vala:34
-#: ../src/Authentification/PasswordDialog.vala:107
-#: ../src/OnlineAccounts.vala:90
-msgid "Cancel"
-msgstr "Annuller"
-
-#: ../src/Authentification/MailDialog.vala:159
-#: ../src/Authentification/PasswordDialog.vala:109
-msgid "Log In"
-msgstr "Log Ind"
-
-#: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "Indlæser…"
-
-#: ../src/Authentification/WebDialog.vala:126
-msgid "Please enter your credentials…"
-msgstr "Indtast venligst dine brugeroplysninger…"
-
-#: ../src/Authentification/PasswordDialog.vala:70
-msgid "Url"
-msgstr "Url"
-
-#: ../src/Authentification/PasswordDialog.vala:83
-msgid "New Password"
-msgstr "Ny adgangskode"
-
-#: ../src/Authentification/PasswordDialog.vala:88
-msgid "Confirm Password"
-msgstr "Bekræft Password"
-
-#: ../src/Authentification/PasswordDialog.vala:96
-msgid "Forgot password…"
-msgstr "Glemt adgangskode…"
-
-#: ../src/Authentification/PasswordDialog.vala:101
-msgid "Refresh Captcha"
-msgstr "Genindlæs captcha"
-
-#: ../src/Authentification/PasswordDialog.vala:102
-msgid "Enter above text here"
-msgstr "Skriv ovenstående tekst her"
-
-#: ../src/Authentification/PasswordDialog.vala:113
-msgid "Don't have an account? Sign Up"
-msgstr "Har du ikke en konto? Tilmed dig"
-
-#: ../src/Authentification/PasswordDialog.vala:306
-msgid "Other Account"
-msgstr "Anden konto"
-
-#. //launchpad.net/switchboard-plug-onlineaccounts)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 2 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Corentin Noël <corentin@elementary.io>
-#.
-#. WARNING! This should never be included in valac
-#: ../src/Translation.vala:24
-msgid "Calendars"
-msgstr "Kalendere"
-
-#: ../src/Translation.vala:25
-msgid "Sync your calendars"
-msgstr "Synkronisér dine kalendere"
-
-#: ../src/Translation.vala:26
-msgid "Contacts"
-msgstr "Kontakter"
-
-#: ../src/Translation.vala:27
-msgid "Sync your contacts"
-msgstr "Synkronisér dine kontakter"
-
-#: ../src/Translation.vala:28
-msgid "Sync your files"
-msgstr "Synkronisér dine filer"
-
-#: ../src/Translation.vala:30
-msgid "Sync your email"
-msgstr "Synkronisér din e-mail"
-
-#: ../src/Translation.vala:31
-msgid "Sync your photos"
-msgstr "Synkronisér dine fotos"
-
-#: ../src/Translation.vala:32
+#: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
 msgstr "Se din nyhedsstrøm"
 
-#: ../src/Translation.vala:33
-msgid "Chat with your friends"
-msgstr "Chat med dine venner"
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "Kontakter"
 
-#: ../src/Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Anvend Outlook- og OneDrive-tjenester på din computer"
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "Synkronisér dine kontakter"
 
-#: ../src/Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr "Anvend Yahoo! tjenester på din computer"
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "Kalendere"
 
-#: ../src/Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr "Anvend Facebook indhold på din computer"
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "Synkronisér dine kalendere"
 
-#: ../src/Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr "Anvend alle Google-tjenester"
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:67
+#: src/Authentification/MailDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:74
+msgid "Email"
+msgstr "E-mail"
 
-#: ../src/Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr "Inkluderer Kontakter, Mail og Kalender"
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "Synkronisér din e-mail"
 
-#: ../src/Translation.vala:39
-msgid "Scrobble your music"
-msgstr "Scrobble din musik"
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr ""
 
-#: ../src/Translation.vala:40
-msgid "Access mail with FastMail"
-msgstr "Tilgå mail med FastMail"
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "Synkronisér dine fotos"
 
-#: ../src/Translation.vala:41
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr ""
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "Synkronisér dine filer"
+
+#: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
 msgstr "Scrobble"
 
-#: ../src/Translation.vala:42
+#: providers/LastFM/lastfm-scrobble.service:5
+#, fuzzy
+msgid "Scrobble all your music"
+msgstr "Scrobble din musik"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
+msgid "Mail Account"
+msgstr "Mailkonto"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
 msgstr "Hent e-mail fra IMAP server"
 
-#: ../src/OnlineAccounts.vala:45
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr ""
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "Anvend Facebook indhold på din computer"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "FastMail"
+msgstr ""
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with FastMail"
+msgstr "Tilgå mail med FastMail"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr ""
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "Anvend alle Google-tjenester"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr ""
+
+#: providers/LastFM/lastfm.provider:4
+#, fuzzy
+msgid "Scrobble your music"
+msgstr "Scrobble din musik"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr ""
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "Anvend Outlook- og OneDrive-tjenester på din computer"
+
+#: src/OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "Online Konti"
 
-#: ../src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:47
 msgid "Manage online accounts and connected applications"
 msgstr "Håndter online konti og forbundet applikationer"
 
-#: ../src/OnlineAccounts.vala:64
+#: src/OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "Gendan"
 
-#: ../src/OnlineAccounts.vala:86
+#: src/OnlineAccounts.vala:87
 msgid "Add a new account…"
 msgstr "Tilføj en ny konto…"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
+#: src/Authentification/PasswordDialog.vala:107
+#: src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Annuller"
+
+#: src/OnlineAccounts.vala:169
 msgid "Connect Your Online Accounts"
 msgstr "Forbind til dine online konti"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:169
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Log ind for at forbinde med programmer som Mail, Kontakter og Kalender."
 
-#: ../src/OnlineAccounts.vala:261
+#: src/OnlineAccounts.vala:254
+#, c-format
 msgid "Account '%s' Removed."
 msgstr "Kontoen '%s' blev fjernet."
+
+#: src/Authentification/MailDialog.vala:71
+#: src/Authentification/MailDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:78
+msgid "Password"
+msgstr "Adgangskode"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "Server"
+
+#: src/Authentification/MailDialog.vala:92
+#: src/Authentification/MailDialog.vala:142
+msgid "Encryption:"
+msgstr "Kryptering:"
+
+#: src/Authentification/MailDialog.vala:96
+#: src/Authentification/MailDialog.vala:146
+msgid "None"
+msgstr "Ingen"
+
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "Brug IMAP-logininfo"
+
+#: src/Authentification/MailDialog.vala:140
+msgid "No authentication required"
+msgstr "Ingen autentifikation påkrævet"
+
+#: src/Authentification/MailDialog.vala:159
+#: src/Authentification/PasswordDialog.vala:109
+msgid "Log In"
+msgstr "Log Ind"
+
+#: src/Authentification/PasswordDialog.vala:70
+msgid "URL"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:83
+msgid "New Password"
+msgstr "Ny adgangskode"
+
+#: src/Authentification/PasswordDialog.vala:88
+msgid "Confirm Password"
+msgstr "Bekræft Password"
+
+#: src/Authentification/PasswordDialog.vala:96
+msgid "Forgot password…"
+msgstr "Glemt adgangskode…"
+
+#: src/Authentification/PasswordDialog.vala:101
+msgid "Refresh Captcha"
+msgstr "Genindlæs captcha"
+
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Enter above text here"
+msgstr "Skriv ovenstående tekst her"
+
+#: src/Authentification/PasswordDialog.vala:113
+msgid "Don't have an account? Sign Up"
+msgstr "Har du ikke en konto? Tilmed dig"
+
+#: src/Authentification/PasswordDialog.vala:306
+msgid "Other Account"
+msgstr "Anden konto"
+
+#: src/Authentification/WebDialog.vala:38
+#: src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr "Indlæser…"
+
+#: src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr "Indtast venligst dine brugeroplysninger…"
+
+#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
+#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Anden konto"
+
+#: src/Views/AccountView.vala:107
+#, c-format
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "Der er ingen applikationer installeret der gør brug af din %s-konto"
+
+#: src/Views/AccountView.vala:108
+msgid "No Apps"
+msgstr "Ingen applikationer"
+
+#: src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "Tilføj…"
+
+#: src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "Fjern"
+
+#~ msgid "Url"
+#~ msgstr "Url"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "Chat med dine venner"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "Anvend Yahoo! tjenester på din computer"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "Inkluderer Kontakter, Mail og Kalender"

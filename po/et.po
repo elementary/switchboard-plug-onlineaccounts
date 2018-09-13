@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-02 19:26+0200\n"
+"POT-Creation-Date: 2018-09-13 22:38+0200\n"
 "PO-Revision-Date: 2016-09-03 20:10+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -18,233 +18,271 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "Lisa…"
-
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "Eemalda"
-
-#: ../src/Views/AccountView.vala:102
-msgid "There are no apps currently installed that link to your %s account"
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
 msgstr ""
-"Hetkel ei ole paigaldatud ühtegi rakendust, mis oleks seotud sinu kontoga %s"
 
-#: ../src/Views/AccountView.vala:103
-msgid "No Apps"
-msgstr "Rakendused puuduvad"
-
-#: ../src/Authentification/MailDialog.vala:58
-msgid "Mail Account"
-msgstr "E-posti konto"
-
-#: ../src/Authentification/MailDialog.vala:67
-#: ../src/Authentification/MailDialog.vala:111
-#: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
-msgid "Email"
-msgstr "E-post"
-
-#: ../src/Authentification/MailDialog.vala:71
-#: ../src/Authentification/MailDialog.vala:115
-#: ../src/Authentification/PasswordDialog.vala:78
-msgid "Password"
-msgstr "Parool"
-
-#: ../src/Authentification/MailDialog.vala:82
-#: ../src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "Server"
-
-#: ../src/Authentification/MailDialog.vala:92
-#: ../src/Authentification/MailDialog.vala:142
-msgid "Encryption:"
-msgstr "Krüpteering:"
-
-#: ../src/Authentification/MailDialog.vala:96
-#: ../src/Authentification/MailDialog.vala:146
-msgid "None"
-msgstr "Puudub"
-
-#: ../src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "IMAP-i konto kasutamine"
-
-#: ../src/Authentification/MailDialog.vala:140
-msgid "No authentication required"
-msgstr "Autentimine pole vajalik"
-
-#: ../src/Authentification/MailDialog.vala:156
-#: ../src/Authentification/WebDialog.vala:34
-#: ../src/Authentification/PasswordDialog.vala:107
-#: ../src/OnlineAccounts.vala:90
-msgid "Cancel"
-msgstr "Loobu"
-
-#: ../src/Authentification/MailDialog.vala:159
-#: ../src/Authentification/PasswordDialog.vala:109
-msgid "Log In"
-msgstr "Logi sisse"
-
-#: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "Laadimine…"
-
-#: ../src/Authentification/WebDialog.vala:126
-msgid "Please enter your credentials…"
-msgstr "Sisesta oma konto andmed..."
-
-#: ../src/Authentification/PasswordDialog.vala:70
-msgid "Url"
-msgstr "URL"
-
-#: ../src/Authentification/PasswordDialog.vala:83
-msgid "New Password"
-msgstr "Uus parool"
-
-#: ../src/Authentification/PasswordDialog.vala:88
-msgid "Confirm Password"
-msgstr "Parool uuesti"
-
-#: ../src/Authentification/PasswordDialog.vala:96
-msgid "Forgot password…"
-msgstr "Unustasin parooli…"
-
-#: ../src/Authentification/PasswordDialog.vala:101
-msgid "Refresh Captcha"
-msgstr "Värskenda turvakoodi"
-
-#: ../src/Authentification/PasswordDialog.vala:102
-msgid "Enter above text here"
-msgstr "Sisesta ülevalolev tekst siia..."
-
-#: ../src/Authentification/PasswordDialog.vala:113
-msgid "Don't have an account? Sign Up"
-msgstr "Sul pole veel kontot? Registreeri"
-
-#: ../src/Authentification/PasswordDialog.vala:306
-msgid "Other Account"
-msgstr "Teine konto"
-
-#. //launchpad.net/switchboard-plug-onlineaccounts)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 2 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Corentin Noël <corentin@elementary.io>
-#.
-#. WARNING! This should never be included in valac
-#: ../src/Translation.vala:24
-msgid "Calendars"
-msgstr "Kalendrid"
-
-#: ../src/Translation.vala:25
-msgid "Sync your calendars"
-msgstr "Kalendrite sünkroniseerimine"
-
-#: ../src/Translation.vala:26
-msgid "Contacts"
-msgstr "Kontaktid"
-
-#: ../src/Translation.vala:27
-msgid "Sync your contacts"
-msgstr "Kontaktide sünkroniseerimine"
-
-#: ../src/Translation.vala:28
-msgid "Sync your files"
-msgstr "Failide sünkroniseerimine"
-
-#: ../src/Translation.vala:30
-msgid "Sync your email"
-msgstr "E-kirjade sünkroniseerimine"
-
-#: ../src/Translation.vala:31
-msgid "Sync your photos"
-msgstr "Fotode sünkroniseerimine"
-
-#: ../src/Translation.vala:32
+#: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
 msgstr "Uudistevoo kuvamine"
 
-#: ../src/Translation.vala:33
-msgid "Chat with your friends"
-msgstr "Vestlemine sõpradega"
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "Kontaktid"
 
-#: ../src/Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Outlook'i ja OneDrive'i teenused"
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "Kontaktide sünkroniseerimine"
 
-#: ../src/Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr "Yahoo! teenused"
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "Kalendrid"
 
-#: ../src/Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr "Facebook'i vestlused, postitused ja teised teenused"
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "Kalendrite sünkroniseerimine"
 
-#: ../src/Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr "Google teenused"
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:67
+#: src/Authentification/MailDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:74
+msgid "Email"
+msgstr "E-post"
 
-#: ../src/Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr "Kontaktid, e-kirjad, kalender"
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "E-kirjade sünkroniseerimine"
 
-#: ../src/Translation.vala:39
-msgid "Scrobble your music"
-msgstr "Muusika scrobble'mine"
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr ""
 
-#: ../src/Translation.vala:40
-msgid "Access mail with FastMail"
-msgstr "E-posti kasutamine läbi FastMail'i"
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "Fotode sünkroniseerimine"
 
-#: ../src/Translation.vala:41
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr ""
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "Failide sünkroniseerimine"
+
+#: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
 msgstr "Scrobble"
 
-#: ../src/Translation.vala:42
+#: providers/LastFM/lastfm-scrobble.service:5
+#, fuzzy
+msgid "Scrobble all your music"
+msgstr "Muusika scrobble'mine"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
+msgid "Mail Account"
+msgstr "E-posti konto"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
 msgstr "E-kirjade allalaadimine IMAP-i serverist"
 
-#: ../src/OnlineAccounts.vala:45
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr ""
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "Facebook'i vestlused, postitused ja teised teenused"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "FastMail"
+msgstr ""
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with FastMail"
+msgstr "E-posti kasutamine läbi FastMail'i"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr ""
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "Google teenused"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr ""
+
+#: providers/LastFM/lastfm.provider:4
+#, fuzzy
+msgid "Scrobble your music"
+msgstr "Muusika scrobble'mine"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr ""
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "Outlook'i ja OneDrive'i teenused"
+
+#: src/OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "Veebikontod"
 
-#: ../src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:47
 msgid "Manage online accounts and connected applications"
 msgstr "Online kontode ja ühendatud rakenduste haldamine"
 
-#: ../src/OnlineAccounts.vala:64
+#: src/OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "Taasta"
 
-#: ../src/OnlineAccounts.vala:86
+#: src/OnlineAccounts.vala:87
 msgid "Add a new account…"
 msgstr "Uue konto lisamine…"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
+#: src/Authentification/PasswordDialog.vala:107
+#: src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "Loobu"
+
+#: src/OnlineAccounts.vala:169
 msgid "Connect Your Online Accounts"
 msgstr "Veebikontode sidumine"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:169
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "E-kirjade, kontaktide, kalendrite ning enama jaoks tuleb kõigepealt sisse "
 "logida"
 
-#: ../src/OnlineAccounts.vala:261
+#: src/OnlineAccounts.vala:254
+#, c-format
 msgid "Account '%s' Removed."
 msgstr "Konto \"%s\" eemaldati."
+
+#: src/Authentification/MailDialog.vala:71
+#: src/Authentification/MailDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:78
+msgid "Password"
+msgstr "Parool"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "Server"
+
+#: src/Authentification/MailDialog.vala:92
+#: src/Authentification/MailDialog.vala:142
+msgid "Encryption:"
+msgstr "Krüpteering:"
+
+#: src/Authentification/MailDialog.vala:96
+#: src/Authentification/MailDialog.vala:146
+msgid "None"
+msgstr "Puudub"
+
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "IMAP-i konto kasutamine"
+
+#: src/Authentification/MailDialog.vala:140
+msgid "No authentication required"
+msgstr "Autentimine pole vajalik"
+
+#: src/Authentification/MailDialog.vala:159
+#: src/Authentification/PasswordDialog.vala:109
+msgid "Log In"
+msgstr "Logi sisse"
+
+#: src/Authentification/PasswordDialog.vala:70
+msgid "URL"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:83
+msgid "New Password"
+msgstr "Uus parool"
+
+#: src/Authentification/PasswordDialog.vala:88
+msgid "Confirm Password"
+msgstr "Parool uuesti"
+
+#: src/Authentification/PasswordDialog.vala:96
+msgid "Forgot password…"
+msgstr "Unustasin parooli…"
+
+#: src/Authentification/PasswordDialog.vala:101
+msgid "Refresh Captcha"
+msgstr "Värskenda turvakoodi"
+
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Enter above text here"
+msgstr "Sisesta ülevalolev tekst siia..."
+
+#: src/Authentification/PasswordDialog.vala:113
+msgid "Don't have an account? Sign Up"
+msgstr "Sul pole veel kontot? Registreeri"
+
+#: src/Authentification/PasswordDialog.vala:306
+msgid "Other Account"
+msgstr "Teine konto"
+
+#: src/Authentification/WebDialog.vala:38
+#: src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr "Laadimine…"
+
+#: src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr "Sisesta oma konto andmed..."
+
+#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
+#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Teine konto"
+
+#: src/Views/AccountView.vala:107
+#, c-format
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+"Hetkel ei ole paigaldatud ühtegi rakendust, mis oleks seotud sinu kontoga %s"
+
+#: src/Views/AccountView.vala:108
+msgid "No Apps"
+msgstr "Rakendused puuduvad"
+
+#: src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "Lisa…"
+
+#: src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "Eemalda"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "Vestlemine sõpradega"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "Yahoo! teenused"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "Kontaktid, e-kirjad, kalender"

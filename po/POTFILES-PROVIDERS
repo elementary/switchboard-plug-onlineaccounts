@@ -1,0 +1,6 @@
+providers/Facebook/facebook.provider.in
+providers/FastMail/fastmail.provider
+providers/Google/google.provider.in
+providers/LastFM/lastfm.provider
+providers/Mail/mail.provider
+providers/Microsoft/microsoft.provider.in

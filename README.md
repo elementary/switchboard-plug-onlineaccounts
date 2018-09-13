@@ -5,31 +5,35 @@
 
 You'll need the following dependencies:
 
-* cmake
 * libaccounts-glib-dev
 * libgee-0.8-dev
 * libglib2.0-dev
 * libgranite-dev
-* libgsignon-glib-dev
-* libgsignond-common-dev
+* libsignon-glib-dev
 * libgtk-3-dev
 * libjson-glib-dev
 * librest-dev
 * libswitchboard-2.0-dev
 * libwebkit2gtk-4.0-dev
+* meson
 * valac
 
-It's recommended to create a clean build environment
+Run `meson` to configure the build environment and then `ninja` to build
 
-    mkdir build
-    cd build/
-    
-Run `cmake` to configure the build environment and then `make` to build
+    meson build --prefix=/usr
+    cd build
+    ninja
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-    make
-    
-To install, use `make install`, then execute with `switchboard`
+To install, use `ninja install`, then execute with `switchboard`
 
-    sudo make install
+    sudo ninja install
     switchboard
+
+## Regenerate the translation template
+
+Run the commands in the following order:
+
+    ninja po/services-pot
+    ninja po/providers-pot
+    ninja online-accounts-plug-pot
+    ninja online-accounts-plug-update-po

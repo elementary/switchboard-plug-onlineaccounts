@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<locatingRules>
+  <locatingRule name="Accounts Service Type" pattern="*.service-type">
+    <documentRule localName="service-type" target="accounts-service-type.its"/>
+  </locatingRule>
+</locatingRules>

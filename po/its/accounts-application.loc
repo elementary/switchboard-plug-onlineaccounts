@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<locatingRules>
+  <locatingRule name="Accounts Application" pattern="*.application">
+    <documentRule localName="application" target="accounts-application.its"/>
+  </locatingRule>
+</locatingRules>

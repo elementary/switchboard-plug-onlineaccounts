@@ -50,7 +50,7 @@ public class OnlineAccounts.Account : GLib.Object {
         info.set_identity_type (Signon.IdentityType.APP);
         info.set_secret ("", true);
         info.set_method (method, {mechanism, null});
-        info.add_access_control ("%s/bin/io.elementary.switchboard".printf (Build.CMAKE_INSTALL_PREFIX), "*");
+        info.add_access_control ("%s/bin/io.elementary.switchboard".printf (Build.PREFIX), "*");
         var integration_variant = ag_account.get_variant ("integration/executable", null);
         if (integration_variant != null) {
             info.add_access_control (integration_variant.dup_string (), "*");

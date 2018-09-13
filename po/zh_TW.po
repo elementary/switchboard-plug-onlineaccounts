@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-02 19:26+0200\n"
+"POT-Creation-Date: 2018-09-13 22:38+0200\n"
 "PO-Revision-Date: 2016-10-14 15:34+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: \n"
@@ -18,230 +18,268 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "加入…"
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr ""
 
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "移除"
-
-#: ../src/Views/AccountView.vala:102
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "目前尚無連結至您 %s 帳號的程式"
-
-#: ../src/Views/AccountView.vala:103
-msgid "No Apps"
-msgstr "無程式"
-
-#: ../src/Authentification/MailDialog.vala:58
-msgid "Mail Account"
-msgstr "郵件帳號"
-
-#: ../src/Authentification/MailDialog.vala:67
-#: ../src/Authentification/MailDialog.vala:111
-#: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
-msgid "Email"
-msgstr "電子郵件"
-
-#: ../src/Authentification/MailDialog.vala:71
-#: ../src/Authentification/MailDialog.vala:115
-#: ../src/Authentification/PasswordDialog.vala:78
-msgid "Password"
-msgstr "密碼"
-
-#: ../src/Authentification/MailDialog.vala:82
-#: ../src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "伺服器"
-
-#: ../src/Authentification/MailDialog.vala:92
-#: ../src/Authentification/MailDialog.vala:142
-msgid "Encryption:"
-msgstr "加密："
-
-#: ../src/Authentification/MailDialog.vala:96
-#: ../src/Authentification/MailDialog.vala:146
-msgid "None"
-msgstr "無"
-
-#: ../src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "使用 IMAP 憑證"
-
-#: ../src/Authentification/MailDialog.vala:140
-msgid "No authentication required"
-msgstr "不需核對身份"
-
-#: ../src/Authentification/MailDialog.vala:156
-#: ../src/Authentification/WebDialog.vala:34
-#: ../src/Authentification/PasswordDialog.vala:107
-#: ../src/OnlineAccounts.vala:90
-msgid "Cancel"
-msgstr "取消"
-
-#: ../src/Authentification/MailDialog.vala:159
-#: ../src/Authentification/PasswordDialog.vala:109
-msgid "Log In"
-msgstr "登入"
-
-#: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "載入中…"
-
-#: ../src/Authentification/WebDialog.vala:126
-msgid "Please enter your credentials…"
-msgstr "請輸入您的憑證資訊…"
-
-#: ../src/Authentification/PasswordDialog.vala:70
-msgid "Url"
-msgstr "URL"
-
-#: ../src/Authentification/PasswordDialog.vala:83
-msgid "New Password"
-msgstr "新密碼"
-
-#: ../src/Authentification/PasswordDialog.vala:88
-msgid "Confirm Password"
-msgstr "確認密碼"
-
-#: ../src/Authentification/PasswordDialog.vala:96
-msgid "Forgot password…"
-msgstr "忘記密碼…"
-
-#: ../src/Authentification/PasswordDialog.vala:101
-msgid "Refresh Captcha"
-msgstr "重新整理 Captcha"
-
-#: ../src/Authentification/PasswordDialog.vala:102
-msgid "Enter above text here"
-msgstr "請在此輸入上文"
-
-#: ../src/Authentification/PasswordDialog.vala:113
-msgid "Don't have an account? Sign Up"
-msgstr "還沒有帳號？請先註冊"
-
-#: ../src/Authentification/PasswordDialog.vala:306
-msgid "Other Account"
-msgstr "其他帳號"
-
-#. //launchpad.net/switchboard-plug-onlineaccounts)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 2 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Corentin Noël <corentin@elementary.io>
-#.
-#. WARNING! This should never be included in valac
-#: ../src/Translation.vala:24
-msgid "Calendars"
-msgstr "行事曆"
-
-#: ../src/Translation.vala:25
-msgid "Sync your calendars"
-msgstr "同步您的行事曆"
-
-#: ../src/Translation.vala:26
-msgid "Contacts"
-msgstr "連絡人"
-
-#: ../src/Translation.vala:27
-msgid "Sync your contacts"
-msgstr "同步您的連絡人"
-
-#: ../src/Translation.vala:28
-msgid "Sync your files"
-msgstr "同步您的檔案"
-
-#: ../src/Translation.vala:30
-msgid "Sync your email"
-msgstr "同步您的電子郵件"
-
-#: ../src/Translation.vala:31
-msgid "Sync your photos"
-msgstr "同步您的相片"
-
-#: ../src/Translation.vala:32
+#: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
 msgstr "關注您的新聞來源"
 
-#: ../src/Translation.vala:33
-msgid "Chat with your friends"
-msgstr "與您的朋友聊天"
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "連絡人"
 
-#: ../src/Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "在您的電腦上存取所有的 Outlook 與 OneDrive 服務"
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "同步您的連絡人"
 
-#: ../src/Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr "在您的電腦上存取所有的 Yahoo! 服務"
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "行事曆"
 
-#: ../src/Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr "在您的電腦上存取所有的 Facebook 內容"
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "同步您的行事曆"
 
-#: ../src/Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr "在您的電腦上存取所有的 Google 服務"
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:67
+#: src/Authentification/MailDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:74
+msgid "Email"
+msgstr "電子郵件"
 
-#: ../src/Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr "包含聯絡人、郵件與行事曆"
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "同步您的電子郵件"
 
-#: ../src/Translation.vala:39
-msgid "Scrobble your music"
-msgstr "隨播您的音樂"
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr ""
 
-#: ../src/Translation.vala:40
-msgid "Access mail with FastMail"
-msgstr "用 FastMail 存取郵件"
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "同步您的相片"
 
-#: ../src/Translation.vala:41
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr ""
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "同步您的檔案"
+
+#: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
 msgstr "Scrobble"
 
-#: ../src/Translation.vala:42
+#: providers/LastFM/lastfm-scrobble.service:5
+#, fuzzy
+msgid "Scrobble all your music"
+msgstr "隨播您的音樂"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
+msgid "Mail Account"
+msgstr "郵件帳號"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
 msgstr "從 IMAP 伺服器擷取電子郵件"
 
-#: ../src/OnlineAccounts.vala:45
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr ""
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "在您的電腦上存取所有的 Facebook 內容"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "FastMail"
+msgstr ""
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with FastMail"
+msgstr "用 FastMail 存取郵件"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr ""
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "在您的電腦上存取所有的 Google 服務"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr ""
+
+#: providers/LastFM/lastfm.provider:4
+#, fuzzy
+msgid "Scrobble your music"
+msgstr "隨播您的音樂"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr ""
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "在您的電腦上存取所有的 Outlook 與 OneDrive 服務"
+
+#: src/OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "線上帳號"
 
-#: ../src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:47
 msgid "Manage online accounts and connected applications"
 msgstr "管理線上帳號和連結的應用程式"
 
-#: ../src/OnlineAccounts.vala:64
+#: src/OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "還原"
 
-#: ../src/OnlineAccounts.vala:86
+#: src/OnlineAccounts.vala:87
 msgid "Add a new account…"
 msgstr "加入新帳號..."
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
+#: src/Authentification/PasswordDialog.vala:107
+#: src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "取消"
+
+#: src/OnlineAccounts.vala:169
 msgid "Connect Your Online Accounts"
 msgstr "連接您的線上帳號"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:169
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "登入以與程式連接，如郵件、聯絡人、行事曆等。"
 
-#: ../src/OnlineAccounts.vala:261
+#: src/OnlineAccounts.vala:254
+#, c-format
 msgid "Account '%s' Removed."
 msgstr "帳號「%s」已移除。"
+
+#: src/Authentification/MailDialog.vala:71
+#: src/Authentification/MailDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:78
+msgid "Password"
+msgstr "密碼"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "伺服器"
+
+#: src/Authentification/MailDialog.vala:92
+#: src/Authentification/MailDialog.vala:142
+msgid "Encryption:"
+msgstr "加密："
+
+#: src/Authentification/MailDialog.vala:96
+#: src/Authentification/MailDialog.vala:146
+msgid "None"
+msgstr "無"
+
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "使用 IMAP 憑證"
+
+#: src/Authentification/MailDialog.vala:140
+msgid "No authentication required"
+msgstr "不需核對身份"
+
+#: src/Authentification/MailDialog.vala:159
+#: src/Authentification/PasswordDialog.vala:109
+msgid "Log In"
+msgstr "登入"
+
+#: src/Authentification/PasswordDialog.vala:70
+msgid "URL"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:83
+msgid "New Password"
+msgstr "新密碼"
+
+#: src/Authentification/PasswordDialog.vala:88
+msgid "Confirm Password"
+msgstr "確認密碼"
+
+#: src/Authentification/PasswordDialog.vala:96
+msgid "Forgot password…"
+msgstr "忘記密碼…"
+
+#: src/Authentification/PasswordDialog.vala:101
+msgid "Refresh Captcha"
+msgstr "重新整理 Captcha"
+
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Enter above text here"
+msgstr "請在此輸入上文"
+
+#: src/Authentification/PasswordDialog.vala:113
+msgid "Don't have an account? Sign Up"
+msgstr "還沒有帳號？請先註冊"
+
+#: src/Authentification/PasswordDialog.vala:306
+msgid "Other Account"
+msgstr "其他帳號"
+
+#: src/Authentification/WebDialog.vala:38
+#: src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr "載入中…"
+
+#: src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr "請輸入您的憑證資訊…"
+
+#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
+#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "其他帳號"
+
+#: src/Views/AccountView.vala:107
+#, c-format
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "目前尚無連結至您 %s 帳號的程式"
+
+#: src/Views/AccountView.vala:108
+msgid "No Apps"
+msgstr "無程式"
+
+#: src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "加入…"
+
+#: src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "移除"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "與您的朋友聊天"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "在您的電腦上存取所有的 Yahoo! 服務"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "包含聯絡人、郵件與行事曆"

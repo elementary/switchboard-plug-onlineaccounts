@@ -1,0 +1,15 @@
+src/AccountsManager.vala
+src/Account.vala
+src/OnlineAccounts.vala
+src/Authentification/DialogService.vala
+src/Authentification/Dialog.vala
+src/Authentification/Key.vala
+src/Authentification/MailDialog.vala
+src/Authentification/PasswordDialog.vala
+src/Authentification/RequestInfo.vala
+src/Authentification/RequestQueue.vala
+src/Authentification/Server.vala
+src/Authentification/WebDialog.vala
+src/Views/AccountView.vala
+src/Views/ACListBox.vala
+src/Views/SourceSelector.vala
