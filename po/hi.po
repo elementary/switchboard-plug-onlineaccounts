@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
-"PO-Revision-Date: 2018-05-12 00:12+0000\n"
+"PO-Revision-Date: 2018-09-19 00:09+0000\n"
 "Last-Translator: Anand Kumar <anand@anandkumar.net>\n"
-"Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-onlineaccounts/hi/>\n"
+"Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: ../src/Views/SourceSelector.vala:53
@@ -90,7 +90,7 @@ msgstr ""
 #: ../src/Authentification/WebDialog.vala:38
 #: ../src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "लोड हो रहा है ..."
+msgstr "लोड हो रहा है…"
 
 #: ../src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
@@ -98,23 +98,23 @@ msgstr ""
 
 #: ../src/Authentification/PasswordDialog.vala:70
 msgid "Url"
-msgstr ""
+msgstr "यूआरएल"
 
 #: ../src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
-msgstr ""
+msgstr "नया कूटशब्द"
 
 #: ../src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr ""
+msgstr "कूटशब्द पुष्टि"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "कूटशब्द भूल गया…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "कैप्चा रिफ्रेश"
 
 #: ../src/Authentification/PasswordDialog.vala:102
 msgid "Enter above text here"
@@ -158,11 +158,11 @@ msgstr ""
 
 #: ../src/Translation.vala:26
 msgid "Contacts"
-msgstr ""
+msgstr "संपर्क"
 
 #: ../src/Translation.vala:27
 msgid "Sync your contacts"
-msgstr ""
+msgstr "अपने संपर्क सींक करेे"
 
 #: ../src/Translation.vala:28
 msgid "Sync your files"
