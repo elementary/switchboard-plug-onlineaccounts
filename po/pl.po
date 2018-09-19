@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
 "PO-Revision-Date: 2018-09-20 00:05+0000\n"
-"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pl/>\n"
 "Language: pl\n"
@@ -112,7 +112,7 @@ msgstr "Potwierdź hasło"
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "Zapomnij hasło..."
+msgstr "Zapomnij hasło…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -236,7 +236,7 @@ msgstr "Przywróć"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Dodaj nowe konto..."
+msgstr "Dodaj nowe konto…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
