@@ -3,7 +3,7 @@
   <name>Google</name>
   <description>Access all Google services on your computer</description>
   <icon>online-account-google</icon>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   <plugin>generic-oauth</plugin>
 
   <template>

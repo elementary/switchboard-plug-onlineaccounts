@@ -250,7 +250,7 @@ namespace OnlineAccounts {
             stack.set_visible_child_name ("welcome");
         }
 
-        private void account_removed (string account_name) {
+        private void account_removed (string? account_name) {
             notification_label.label = _("Account '%s' Removed.").printf (account_name);
             app_notification.reveal_child = true;
             if (AccountsManager.get_default ().accounts_available.size <= 0)

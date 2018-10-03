@@ -135,6 +135,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
             grid.column_spacing = 6;
             image = new Gtk.Image ();
             image.icon_size = Gtk.IconSize.DND;
+            image.pixel_size = 32;
             image.use_fallback = true;
             username = new Gtk.Label (null);
             username.ellipsize = Pango.EllipsizeMode.END;

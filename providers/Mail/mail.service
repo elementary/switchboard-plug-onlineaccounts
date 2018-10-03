@@ -5,5 +5,5 @@
   <description>Fetch Email from IMAP Server</description>
   <icon>applications-development</icon>
   <provider>mail</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
 </service>

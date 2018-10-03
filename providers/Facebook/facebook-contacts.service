@@ -5,5 +5,5 @@
   <description>Sync your contacts</description>
   <icon>office-address-book</icon>
   <provider>facebook</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
 </service>

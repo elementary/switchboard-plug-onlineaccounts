@@ -5,5 +5,5 @@
   <description>Sync your calendars</description>
   <icon>office-calendar</icon>
   <provider>facebook</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
 </service>

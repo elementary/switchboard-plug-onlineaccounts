@@ -3,7 +3,7 @@
   <name>Microsoft</name>
   <description>Access all Outlook and OneDrive services on your computer</description>
   <icon>online-account-microsoft</icon>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   <plugin>generic-oauth</plugin>
 
   <template>

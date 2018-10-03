@@ -3,7 +3,7 @@
   <name>FastMail</name>
   <description>Access mail with FastMail</description>
   <icon>online-account-fastmail</icon>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   <plugin>password</plugin>
 
   <template>

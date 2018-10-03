@@ -5,5 +5,5 @@
   <description>Sync your photos</description>
   <icon>multimedia-photo-manager</icon>
   <provider>google</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
 </service>

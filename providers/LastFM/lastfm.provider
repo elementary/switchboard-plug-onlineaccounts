@@ -3,7 +3,7 @@
   <name>Last.fm</name>
   <description>Scrobble your music</description>
   <icon>online-account-lastfm</icon>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   <plugin>lastfm</plugin>
 
   <template>

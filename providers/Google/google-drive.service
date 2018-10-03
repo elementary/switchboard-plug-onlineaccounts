@@ -5,5 +5,5 @@
   <icon>system-file-manager</icon>
   <description>Sync your files</description>
   <provider>google</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
 </service>

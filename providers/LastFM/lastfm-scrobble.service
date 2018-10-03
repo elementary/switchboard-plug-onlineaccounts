@@ -5,5 +5,5 @@
   <description>Scrobble all your music</description>
   <icon>multimedia-audio-player</icon>
   <provider>lastfm</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
 </service>

@@ -3,7 +3,7 @@
   <name>Email</name>
   <description>Fetch Email from IMAP Server</description>
   <icon>internet-mail</icon>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   <plugin>mail</plugin>
 
   <template>

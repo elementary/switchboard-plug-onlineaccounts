@@ -41,7 +41,7 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
     private async void update_acl () {
         try {
             var info = yield identity.query_info (null);
-            unowned GLib.List<Signon.SecurityContext> acl = info.get_access_control_list ();
+            var acl = info.get_access_control_list ();
             get_children ().foreach ((child) => {
                 var approw = child as AppRow;
                 approw.check_acl (acl);
@@ -151,11 +151,11 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             try {
                 account.select_service (service);
                 Signon.IdentityInfo info = yield identity.query_info (null);
-                var list = new GLib.List<Signon.SecurityContext> ();
+                var list = info.get_access_control_list ();
                 var path = get_app_path ();
-                info.get_access_control_list ().foreach ((nth) => {
-                    if (nth.get_system_context () != path) {
-                        list.append (nth.copy ());
+                list.foreach ((nth) => {
+                    if (nth.get_system_context () == path) {
+                        list.remove (nth);
                     }
                 });
 

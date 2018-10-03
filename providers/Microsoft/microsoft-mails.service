@@ -5,7 +5,7 @@
   <description>Sync your email</description>
   <icon>internet-mail</icon>
   <provider>microsoft</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   
   <template>
     <group name="evolution">

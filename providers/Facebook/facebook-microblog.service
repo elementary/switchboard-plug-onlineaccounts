@@ -5,7 +5,7 @@
   <description>Watch your newsfeed</description>
   <icon>applications-chat</icon>
   <provider>facebook</provider>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   
   <template>
     <group name="friends">

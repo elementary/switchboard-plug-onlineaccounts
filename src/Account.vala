@@ -58,7 +58,7 @@ public class OnlineAccounts.Account : GLib.Object {
 
         var session_data = auth_data.get_login_parameters (null);
 
-        var allowed_realms_val = session_data.lookup_value ("AllowedRealms", null);
+        var allowed_realms_val = session_data.lookup_value ("AllowedRealms", GLib.VariantType.STRING_ARRAY);
         if (allowed_realms_val != null) {
             info.set_realms (allowed_realms_val.get_strv ());
         }
@@ -69,10 +69,22 @@ public class OnlineAccounts.Account : GLib.Object {
 
             var session = identity.create_session (method);
             var session_result = yield session.process (session_data, mechanism, null);
-            var access_token = session_result.lookup_value ("AccessToken", null);
-
             ag_account.set_enabled (true);
             ag_account.set_variant ("CredentialsId", new GLib.Variant.uint32 (identity.get_id ()));
+            var username_var = session_result.lookup_value (Signon.SESSION_DATA_USERNAME, GLib.VariantType.STRING);
+            if (username_var != null) {
+                unowned string username = username_var.get_string ();
+                ag_account.set_display_name (username);
+                info.set_username (username);
+            }
+
+            var secret_var = session_result.lookup_value (Signon.SESSION_DATA_SECRET, GLib.VariantType.STRING);
+            if (secret_var != null) {
+                unowned string secret = secret_var.get_string ();
+                info.set_secret (secret, true);
+            }
+
+            yield identity.store_info (info, null);
             yield ag_account.store_async (null);
 
             if (integration_variant != null) {
