@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-02 19:26+0200\n"
 "PO-Revision-Date: 2018-10-08 00:05+0000\n"
-"Last-Translator: Axel Philip Advento <badwolf.bloodseeker.rev@gmail.com>\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Tagalog <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tl/>\n"
 "Language: tl\n"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: ../src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "Nakalimutan ang password..."
+msgstr "Nakalimutan ang password…"
 
 #: ../src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -235,7 +235,7 @@ msgstr "Ibalik"
 
 #: ../src/OnlineAccounts.vala:86
 msgid "Add a new account…"
-msgstr "Magdagdag ng bagong account..."
+msgstr "Magdagdag ng bagong account…"
 
 #: ../src/OnlineAccounts.vala:167
 msgid "Connect Your Online Accounts"
