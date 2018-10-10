@@ -4,10 +4,10 @@ services:
  - docker
 
 env:
- - DEPENDENCY_PACKAGES="cmake libaccounts-glib-dev libgee-0.8-dev libglib2.0-dev libgranite-dev libgsignon-glib-dev libgsignond-common-dev libgtk-3-dev libjson-glib-dev librest-dev libswitchboard-2.0-dev libwebkit2gtk-4.0-dev valac"
+ - DEPENDENCY_PACKAGES="meson libpolkit-gobject-1-dev libaccounts-glib-dev libgee-0.8-dev libglib2.0-dev libgranite-dev libgtk-3-dev libjson-glib-dev librest-dev libsignon-glib-dev libswitchboard-2.0-dev libwebkit2gtk-4.0-dev valac"
 
 install:
- - docker run -v "$PWD":/tmp/build-dir elementary/docker:juno-unstable /bin/sh -c "apt-get update && apt-get -y install $DEPENDENCY_PACKAGES && cd /tmp/build-dir && cmake . && make"
+ - docker run -v "$PWD":/tmp/build-dir elementary/docker:juno-unstable /bin/sh -c "apt-get update && apt-get -y install $DEPENDENCY_PACKAGES && cd /tmp/build-dir && meson build && ninja -C build"
 
 script:
  - echo BUILDS PASSED
