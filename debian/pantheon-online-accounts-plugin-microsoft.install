@@ -1,4 +1,4 @@
-usr/lib/*/pantheon-online-accounts/generic-oauth-plugins/libmicrosoft.so
 usr/share/accounts/providers/microsoft*
 usr/share/accounts/services/microsoft*
 usr/share/icons/hicolor/*/apps/online-account-microsoft.svg
+usr/lib/*/io.elementary.online-accounts.microsoft

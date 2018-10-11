@@ -1,4 +1,3 @@
-usr/lib/*/pantheon-online-accounts/password-plugins/libfastmail.so
 usr/share/accounts/providers/fastmail*
 usr/share/accounts/services/fastmail-mail.service
 usr/share/icons/hicolor/*/apps/online-account-fastmail.svg
