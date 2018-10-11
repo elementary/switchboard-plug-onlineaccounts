@@ -21,8 +21,7 @@ Homepage: https://github.com/elementary/switchboard-plug-onlineaccounts
 
 Package: switchboard-plug-online-accounts
 Architecture: any
-Depends: libpantheon-online-accounts0 (= ${binary:Version}),
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${shlibs:Depends}
 Enhances: switchboard
 Recommends: pantheon-online-accounts-plugin-fastmail,
