@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2018-05-27 00:06+0000\n"
 "Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
@@ -176,6 +176,13 @@ msgstr "Posta, Kişiler ve Takvim gibi uygulamalara bağlanmak için giriş yap�
 msgid "Account '%s' Removed."
 msgstr "'%s' hesabı kaldırıldı."
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Diğer Hesaplar"
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -250,12 +257,6 @@ msgstr "Yükleniyor..."
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Lütfen bilgilerinizi giriniz..."
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-#, fuzzy
-msgid "New Account"
-msgstr "Diğer Hesaplar"
 
 #: src/Views/AccountView.vala:107
 #, c-format

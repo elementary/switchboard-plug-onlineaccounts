@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2015-04-13 16:38+0000\n"
 "Last-Translator: Karen Yeghiazaryan <kareneghiazaryan@mail.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,6 +171,12 @@ msgstr ""
 msgid "Account '%s' Removed."
 msgstr "'%s' Օգտատերը հեռացված է"
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+msgid "New Account"
+msgstr ""
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -245,11 +251,6 @@ msgstr "Բեռնում..."
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Խնդրում ենք մուտքագրել Ձեր հավատարմագրերը..."
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-msgid "New Account"
-msgstr ""
 
 #: src/Views/AccountView.vala:107
 #, c-format

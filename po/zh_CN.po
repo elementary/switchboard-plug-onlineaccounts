@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2017-04-13 08:54+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -176,6 +176,13 @@ msgstr "登录以连接您的邮件、联系人和日历等应用。"
 msgid "Account '%s' Removed."
 msgstr "帐户“%s”已删除。"
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "其他帐户"
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -250,12 +257,6 @@ msgstr "载入中…"
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "请输入您的认证信息…"
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-#, fuzzy
-msgid "New Account"
-msgstr "其他帐户"
 
 #: src/Views/AccountView.vala:107
 #, c-format

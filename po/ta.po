@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2017-06-16 17:00+0000\n"
 "Last-Translator: Rajeev Kumar <irajeevankumar@gmail.com>\n"
 "Language-Team: Tamil <https://l10n.elementary.io/projects/switchboard/"
@@ -169,6 +169,12 @@ msgstr ""
 msgid "Account '%s' Removed."
 msgstr ""
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+msgid "New Account"
+msgstr ""
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -242,11 +248,6 @@ msgstr ""
 
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr ""
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-msgid "New Account"
 msgstr ""
 
 #: src/Views/AccountView.vala:107

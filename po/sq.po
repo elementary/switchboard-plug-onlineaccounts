@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2015-06-25 18:31+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,6 +168,13 @@ msgstr ""
 msgid "Account '%s' Removed."
 msgstr "Llogaria '%s' u hoq."
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Llogaritë në linjë"
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -243,12 +250,6 @@ msgstr "Duke ngarkuar..."
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr ""
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-#, fuzzy
-msgid "New Account"
-msgstr "Llogaritë në linjë"
 
 #: src/Views/AccountView.vala:107
 #, c-format

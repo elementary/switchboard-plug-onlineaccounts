@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2014-07-13 16:12+0000\n"
 "Last-Translator: Jacques Strydom <jacquesafro@gmail.com>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -173,6 +173,13 @@ msgstr "Teken in om te verbind met programme soos pos, kontakte en kalender."
 msgid "Account '%s' Removed."
 msgstr "Rekening '%s' Verwyder."
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Aanlyn Rekeninge"
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -248,12 +255,6 @@ msgstr "Laai tans…"
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Tik asseblief jou aansluit besonderhede in..."
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-#, fuzzy
-msgid "New Account"
-msgstr "Aanlyn Rekeninge"
 
 #: src/Views/AccountView.vala:107
 #, c-format

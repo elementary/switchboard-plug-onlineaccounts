@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2015-06-18 09:38+0000\n"
 "Last-Translator: Adnan <ado.pasa.ado@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,6 +170,13 @@ msgstr ""
 msgid "Account '%s' Removed."
 msgstr "'%s' korisnički račun uklonjen."
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Online korisnički računi"
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -245,12 +252,6 @@ msgstr "Učitavam..."
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Molimo unesite vaše podatke za prijavu..."
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-#, fuzzy
-msgid "New Account"
-msgstr "Online korisnički računi"
 
 #: src/Views/AccountView.vala:107
 #, c-format

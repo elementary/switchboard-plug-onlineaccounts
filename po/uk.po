@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2016-08-10 18:33+0000\n"
 "Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -175,6 +175,13 @@ msgstr "Увійдіть, щоб підключити такі додатки я
 msgid "Account '%s' Removed."
 msgstr "Обліковий запис '%s' вилучено."
 
+#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
+#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "Інший обліковий запис"
+
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:78
@@ -249,12 +256,6 @@ msgstr "Завантаження…"
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
 msgstr "Будь ласка, введіть свої облікові дані ..."
-
-#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
-#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
-#, fuzzy
-msgid "New Account"
-msgstr "Інший обліковий запис"
 
 #: src/Views/AccountView.vala:107
 #, c-format
