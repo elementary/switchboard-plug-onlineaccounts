@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2017-04-11 20:35+0000\n"
+"PO-Revision-Date: 2018-10-12 18:35+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "포스트"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -69,7 +69,7 @@ msgstr "이메일과 동기화합니다"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "사진"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -77,7 +77,7 @@ msgstr "사진 동기화하기"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "드라이브"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -88,7 +88,6 @@ msgid "Scrobble"
 msgstr "스크러블"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
 msgstr "음악 사용자 경험 저장"
 
@@ -102,7 +101,7 @@ msgstr "IMAP 서버에서 이메일 가져오기"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "페이스북"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -110,7 +109,7 @@ msgstr "사용자 컴퓨터의 모든 페이스북 내용에 접속하기"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
@@ -118,7 +117,7 @@ msgstr "FastMail로 접속 하기"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "구글"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -126,16 +125,15 @@ msgstr "사용자 컴퓨터의 모든 구글 서비스에 접속하기"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
 msgstr "음악 사용자 경험 저장"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "마이크로소프트"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -179,9 +177,8 @@ msgstr "계정 '%s'가 제거되었습니다."
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128
-#, fuzzy
 msgid "New Account"
-msgstr "다른 계정"
+msgstr "새 계정"
 
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
@@ -219,7 +216,7 @@ msgstr "로그인"
 
 #: src/Authentification/PasswordDialog.vala:70
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
