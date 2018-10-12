@@ -42,7 +42,7 @@ namespace OnlineAccounts {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts/online", null);
             Object (category: Category.NETWORK,
-                    code_name: Build.PLUGCODENAME,
+                    code_name: "network-pantheon-online-accounts",
                     display_name: _("Online Accounts"),
                     description: _("Manage online accounts and connected applications"),
                     icon: "preferences-desktop-online-accounts",
@@ -107,15 +107,6 @@ namespace OnlineAccounts {
                 grid = new Gtk.Grid ();
                 grid.expand = true;
                 source_selector = new SourceSelector ();
-                source_selector.account_selected.connect ((plugin) => {
-                    switch_to_main ();
-                    account_selected (plugin);
-                });
-
-                source_selector.new_account_request.connect (() => {
-                    add_return ();
-                    switch_to_welcome ();
-                });
 
                 paned.pack1 (source_selector, false, false);
                 paned.pack2 (grid, true, false);
@@ -141,8 +132,18 @@ namespace OnlineAccounts {
                 overlay.add_overlay (app_notification);
 
                 main_grid.add (overlay);
-
                 main_grid.show_all ();
+
+                source_selector.account_selected.connect ((account) => {
+                    switch_to_main ();
+                    account_selected (account);
+                });
+
+                source_selector.new_account_request.connect (() => {
+                    add_return ();
+                    switch_to_welcome ();
+                });
+
                 oa_server = new OnlineAccounts.Server ();
                 var accounts_manager = AccountsManager.get_default ();
 
@@ -153,7 +154,7 @@ namespace OnlineAccounts {
                 }
 
                 accounts_manager.account_removed.connect ((account) => {
-                    account_removed (account.account.get_display_name ());
+                    account_removed (account.ag_account.get_display_name ());
                 });
 
                 accounts_manager.account_added.connect ((account) => {
@@ -173,26 +174,17 @@ namespace OnlineAccounts {
                     continue;
                 if (provider.get_plugin_name () == null)
                     continue;
-                foreach (var method_plugin in PluginsManager.get_default ().get_method_plugins ()) {
-                    if (provider.get_plugin_name ().collate (method_plugin.plugin_name) != 0)
-                        continue;
-                    var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
-                    var id = welcome.append (provider.get_icon_name (), provider.get_display_name (), description ?? "");
-                    providers_map.set (id, provider);
-                }
+                var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
+                var id = welcome.append (provider.get_icon_name (), provider.get_display_name (), description ?? "");
+                providers_map.set (id, provider);
             }
 
             welcome.activated.connect ((id) => {
                 var prov = providers_map.get (id);
-                var account = manager.create_account (prov.get_name ());
-                var provider = manager.get_provider (account.get_provider_name ());
-                var plugin_name = provider.get_plugin_name ();
-                foreach (var providerplugin in PluginsManager.get_default ().get_method_plugins ()) {
-                    if (providerplugin.plugin_name == plugin_name) {
-                        providerplugin.add_account (account);
-                        break;
-                    }
-                }
+                var ag_manager = new Ag.Manager ();
+                var ag_account = ag_manager.create_account (prov.get_name ());
+                var account = new Account (ag_account);
+                account.authenticate.begin ();
             });
         }
 
@@ -216,7 +208,7 @@ namespace OnlineAccounts {
             return new Gee.TreeMap<string, string> (null, null);
         }
 
-        private void account_selected (OnlineAccounts.Account plugin) {
+        private void account_selected (OnlineAccounts.Account account) {
             if (account_view != null) {
                 account_view.hide ();
             }
@@ -230,7 +222,7 @@ namespace OnlineAccounts {
                 return;
             }
 
-            account_view = new AccountView (plugin);
+            account_view = new AccountView (account);
             grid.attach (account_view, 0, 0, 1, 1);
             account_view.show_all ();
         }
@@ -258,7 +250,7 @@ namespace OnlineAccounts {
             stack.set_visible_child_name ("welcome");
         }
 
-        private void account_removed (string account_name) {
+        private void account_removed (string? account_name) {
             notification_label.label = _("Account '%s' Removed.").printf (account_name);
             app_notification.reveal_child = true;
             if (AccountsManager.get_default ().accounts_available.size <= 0)

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="service">
-  <type>documents</type>
-  <name>Drive</name>
-  <icon>system-file-manager</icon>
-  <description>Sync your files</description>
-  <provider>google</provider>
-  <translations>pantheon-online-accounts</translations>
-</service>

@@ -20,18 +20,34 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
  
+public enum OnlineAccounts.SignonUIError {
+    NONE,
+    GENERAL,
+    NO_SIGNONUI,
+    BAD_PARAMETERS,
+    CANCELED,
+    NOT_AVAILABLE,
+    BAD_URL,
+    BAD_CAPTCHA,
+    BAD_CAPTCHA_URL,
+    REFRESH_FAILED,
+    FORBIDDEN,
+    FORGOT_PASSWORD
+}
+
 public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     public signal void finished ();
-    
+
+
     public HashTable<string, Variant> parameters;
     public string request_id;
-    public GSignond.SignonuiError error_code;
+    public OnlineAccounts.SignonUIError error_code;
 
     public Dialog (HashTable<string, Variant> parameter) {
-        error_code = GSignond.SignonuiError.NONE;
+        error_code = OnlineAccounts.SignonUIError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {
-            error_code = GSignond.SignonuiError.CANCELED;
+            error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
         });
     }
@@ -46,7 +62,7 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     public virtual bool set_parameters (HashTable<string, Variant> params) {
         this.parameters = params;
         if (!validate_params (params)) {
-            error_code = GSignond.SignonuiError.BAD_PARAMETERS;
+            error_code = OnlineAccounts.SignonUIError.BAD_PARAMETERS;
             warning ("Bad parameters");
             return false;
         }

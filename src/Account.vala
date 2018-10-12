@@ -21,33 +21,86 @@
  */
 
 public class OnlineAccounts.Account : GLib.Object {
-    public Ag.Account account;
-    public Ag.Provider provider;
-    public string username;
-    public string password;
-    public bool need_authentification;
-    public GLib.Variant session_data;
-    public GLib.Variant session_result;
-
-    public const string gsignon_id = "CredentialsId";
+    public Ag.Account ag_account;
 
     public signal void removed ();
     public signal void complete ();
 
-    public async void delete_account () {
-        account.select_service (null);
-        var v_id = account.get_variant (gsignon_id, null);
-        var identity = new Signon.Identity.from_db (v_id.get_uint32 ());
-        identity.remove ((Signon.IdentityRemovedCb) null);
-        account.delete ();
+    public Account (Ag.Account account) {
+        ag_account = account;
+    }
+
+    public async void delete_account () throws GLib.Error {
+        var account_service = new Ag.AccountService (ag_account, null);
+        var auth_data = account_service.get_auth_data ();
+        var identity = new Signon.Identity.from_db (auth_data.get_credentials_id ());
+        yield identity.remove (null);
+        ag_account.delete ();
+        yield ag_account.store_async (null);
+    }
+
+    public async void authenticate () {
+        var account_service = new Ag.AccountService (ag_account, null);
+        var auth_data = account_service.get_auth_data ();
+        var method = auth_data.get_method ();
+        var mechanism = auth_data.get_mechanism ();
+
+        var info = new Signon.IdentityInfo ();
+        info.set_caption (ag_account.get_provider_name ());
+        info.set_identity_type (Signon.IdentityType.APP);
+        info.set_secret ("", true);
+        info.set_method (method, {mechanism, null});
+        info.add_access_control ("%s/bin/io.elementary.switchboard".printf (Build.PREFIX), "*");
+        var integration_variant = ag_account.get_variant ("integration/executable", null);
+        if (integration_variant != null) {
+            info.add_access_control (integration_variant.dup_string (), "*");
+        }
+
+        var session_data = auth_data.get_login_parameters (null);
+
+        var allowed_realms_val = session_data.lookup_value ("AllowedRealms", GLib.VariantType.STRING_ARRAY);
+        if (allowed_realms_val != null) {
+            info.set_realms (allowed_realms_val.get_strv ());
+        }
+
+        var identity = new Signon.Identity ();
         try {
-            yield account.store_async (null);
+            yield identity.store_info (info, null);
+
+            var session = identity.create_session (method);
+            var session_result = yield session.process (session_data, mechanism, null);
+            ag_account.set_enabled (true);
+            ag_account.set_variant ("CredentialsId", new GLib.Variant.uint32 (identity.get_id ()));
+            var username_var = session_result.lookup_value (Signon.SESSION_DATA_USERNAME, GLib.VariantType.STRING);
+            if (username_var != null) {
+                unowned string username = username_var.get_string ();
+                ag_account.set_display_name (username);
+                info.set_username (username);
+            }
+
+            var secret_var = session_result.lookup_value (Signon.SESSION_DATA_SECRET, GLib.VariantType.STRING);
+            if (secret_var != null) {
+                unowned string secret = secret_var.get_string ();
+                info.set_secret (secret, true);
+            }
+
+            yield identity.store_info (info, null);
+            yield ag_account.store_async (null);
+
+            if (integration_variant != null) {
+                var command = "%s --method=UserName --account-id=%u".printf (integration_variant.get_string (), ag_account.id);
+
+                try {
+                    var appinfo = GLib.AppInfo.create_from_commandline (command, "Single Sign On Integration", GLib.AppInfoCreateFlags.NONE);
+                    appinfo.launch (null, null);
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            }
+
+            AccountsManager.get_default ().add_account (this);
         } catch (Error e) {
             critical (e.message);
         }
-    }
-
-    public virtual void setup_authentification () {
-        
     }
 }

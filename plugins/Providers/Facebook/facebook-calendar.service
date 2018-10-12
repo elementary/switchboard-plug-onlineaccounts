@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="facebook-calendar">
-  <type>calendar</type>
-  <name>Calendars</name>
-  <description>Sync your calendars</description>
-  <icon>office-calendar</icon>
-  <provider>facebook</provider>
-  <translations>pantheon-online-accounts</translations>
-</service>

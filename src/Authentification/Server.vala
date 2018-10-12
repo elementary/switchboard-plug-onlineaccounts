@@ -33,7 +33,7 @@ public class OnlineAccounts.UIServer : Object {
     private string bus_address;
 
     [DBus (name = "getBusAddress")]
-    public string get_bus_address () {
+    public string get_bus_address () throws GLib.DBusError, GLib.IOError {
         handle_get_bus_address ();
         return bus_address;
     }

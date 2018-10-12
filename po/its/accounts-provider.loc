@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<locatingRules>
+  <locatingRule name="Accounts Provider" pattern="*.provider">
+    <documentRule localName="provider" target="accounts-provider.its"/>
+  </locatingRule>
+</locatingRules>

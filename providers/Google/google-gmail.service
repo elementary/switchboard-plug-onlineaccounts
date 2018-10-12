@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="google-gmail">
+  <type>mail</type>
+  <name>Email</name>
+  <description>Sync your email</description>
+  <icon>internet-mail</icon>
+  <provider>google</provider>
+  <translations>online-accounts-plug</translations>
+
+  <template>
+    <group name="evolution">
+      <setting name="BackendName">google</setting>
+    </group>
+  </template>
+</service>

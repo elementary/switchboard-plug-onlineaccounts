@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="google-calendar">
+  <type>calendar</type>
+  <name>Calendars</name>
+  <description>Sync your calendars</description>
+  <icon>office-calendar</icon>
+  <provider>google</provider>
+  <translations>online-accounts-plug</translations>
+
+  <template>
+    <group name="evolution">
+      <setting name="BackendName">google</setting>
+    </group>
+  </template>
+</service>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="lastfm-scrobble">
+  <type>scrobbling</type>
+  <name>Scrobble</name>
+  <description>Scrobble all your music</description>
+  <icon>multimedia-audio-player</icon>
+  <provider>lastfm</provider>
+  <translations>online-accounts-plug</translations>
+</service>

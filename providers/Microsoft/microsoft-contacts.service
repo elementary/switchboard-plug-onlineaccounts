@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="microsoft-contacts">
+  <type>contacts</type>
+  <name>Contacts</name>
+  <description>Sync your contacts</description>
+  <icon>office-address-book</icon>
+  <provider>microsoft</provider>
+  <translations>online-accounts-plug</translations>
+  
+  <template>
+    <group name="evolution">
+      <setting name="BackendName">outlook2</setting>
+    </group>
+  </template>
+</service>

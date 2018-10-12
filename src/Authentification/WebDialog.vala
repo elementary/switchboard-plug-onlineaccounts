@@ -43,7 +43,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         container_grid.attach (info_label, 1, 0, 1, 1);
         container.add (container_grid);
         infobar.response.connect (() => {
-            error_code = GSignond.SignonuiError.CANCELED;
+            error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();
         });
@@ -53,7 +53,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         webview.expand = true;
         var event_box = new Gtk.EventBox ();
         event_box.add (webview);
-        event_box.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
+        event_box.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         event_box.expand = true;
         attach (infobar, 0, 0, 1, 1);
         attach (event_box, 0, 1, 1, 1);
@@ -113,7 +113,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         var error = (GLib.Error)_error;
         warning ("Loading uri '%s' failed, error : %s", failing_uri, error.message);
         if (GLib.strcmp (failing_uri, oauth_open_url) == 0) {
-            error_code = GSignond.SignonuiError.NOT_AVAILABLE;
+            error_code = OnlineAccounts.SignonUIError.NOT_AVAILABLE;
         }
 
         return true;
@@ -143,13 +143,16 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         webview.load_changed.disconnect (on_webview_load);
         oauth_response = redirect_uri;
         debug ("Found OAUTH Response : %s", oauth_response);
-        error_code = GSignond.SignonuiError.NONE;
+        error_code = OnlineAccounts.SignonUIError.NONE;
         finished ();
     }
 
     public override HashTable<string, Variant> get_reply () {
         var table = base.get_reply ();
-        table.insert (OnlineAccounts.Key.URL_RESPONSE, new Variant.string (oauth_response));
+        if (error_code == OnlineAccounts.SignonUIError.NONE) {
+            table.insert (OnlineAccounts.Key.URL_RESPONSE, new Variant.string (oauth_response));
+        }
+
         return table;
     }
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-02 19:26+0200\n"
+"POT-Creation-Date: 2018-09-13 22:38+0200\n"
 "PO-Revision-Date: 2018-07-13 00:04+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
@@ -20,230 +20,271 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: ../src/Views/SourceSelector.vala:53
-msgid "Add…"
-msgstr "追加…"
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr ""
 
-#: ../src/Views/SourceSelector.vala:58
-msgid "Remove"
-msgstr "削除"
-
-#: ../src/Views/AccountView.vala:102
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "あなたの %s アカウントにリンクするアプリがインストールされていません"
-
-#: ../src/Views/AccountView.vala:103
-msgid "No Apps"
-msgstr "アプリがありません"
-
-#: ../src/Authentification/MailDialog.vala:58
-msgid "Mail Account"
-msgstr "メールアカウント"
-
-#: ../src/Authentification/MailDialog.vala:67
-#: ../src/Authentification/MailDialog.vala:111
-#: ../src/Authentification/PasswordDialog.vala:74 ../src/Translation.vala:29
-msgid "Email"
-msgstr "メール"
-
-#: ../src/Authentification/MailDialog.vala:71
-#: ../src/Authentification/MailDialog.vala:115
-#: ../src/Authentification/PasswordDialog.vala:78
-msgid "Password"
-msgstr "パスワード"
-
-#: ../src/Authentification/MailDialog.vala:82
-#: ../src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "サーバー"
-
-#: ../src/Authentification/MailDialog.vala:92
-#: ../src/Authentification/MailDialog.vala:142
-msgid "Encryption:"
-msgstr "暗号化:"
-
-#: ../src/Authentification/MailDialog.vala:96
-#: ../src/Authentification/MailDialog.vala:146
-msgid "None"
-msgstr "なし"
-
-#: ../src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "IMAP クレジットを使用"
-
-#: ../src/Authentification/MailDialog.vala:140
-msgid "No authentication required"
-msgstr "認証は不要"
-
-#: ../src/Authentification/MailDialog.vala:156
-#: ../src/Authentification/WebDialog.vala:34
-#: ../src/Authentification/PasswordDialog.vala:107
-#: ../src/OnlineAccounts.vala:90
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: ../src/Authentification/MailDialog.vala:159
-#: ../src/Authentification/PasswordDialog.vala:109
-msgid "Log In"
-msgstr "ログイン"
-
-#: ../src/Authentification/WebDialog.vala:38
-#: ../src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "読み込んでいます…"
-
-#: ../src/Authentification/WebDialog.vala:126
-msgid "Please enter your credentials…"
-msgstr "認証情報を入力してください…"
-
-#: ../src/Authentification/PasswordDialog.vala:70
-msgid "Url"
-msgstr "URL"
-
-#: ../src/Authentification/PasswordDialog.vala:83
-msgid "New Password"
-msgstr "新しいパスワード"
-
-#: ../src/Authentification/PasswordDialog.vala:88
-msgid "Confirm Password"
-msgstr "パスワードの確認"
-
-#: ../src/Authentification/PasswordDialog.vala:96
-msgid "Forgot password…"
-msgstr "パスワードを忘れました…"
-
-#: ../src/Authentification/PasswordDialog.vala:101
-msgid "Refresh Captcha"
-msgstr "Captcha を再読み込みします"
-
-#: ../src/Authentification/PasswordDialog.vala:102
-msgid "Enter above text here"
-msgstr "上のテキストをここに入力"
-
-#: ../src/Authentification/PasswordDialog.vala:113
-msgid "Don't have an account? Sign Up"
-msgstr "アカウントをお持ちではありませんか？ サインアップ"
-
-#: ../src/Authentification/PasswordDialog.vala:306
-msgid "Other Account"
-msgstr "他のアカウント"
-
-#. //launchpad.net/switchboard-plug-onlineaccounts)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 2 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Corentin Noël <corentin@elementary.io>
-#.
-#. WARNING! This should never be included in valac
-#: ../src/Translation.vala:24
-msgid "Calendars"
-msgstr "カレンダー"
-
-#: ../src/Translation.vala:25
-msgid "Sync your calendars"
-msgstr "カレンダーを同期します"
-
-#: ../src/Translation.vala:26
-msgid "Contacts"
-msgstr "連絡先"
-
-#: ../src/Translation.vala:27
-msgid "Sync your contacts"
-msgstr "連絡先を同期します"
-
-#: ../src/Translation.vala:28
-msgid "Sync your files"
-msgstr "ファイルを同期します"
-
-#: ../src/Translation.vala:30
-msgid "Sync your email"
-msgstr "メールを同期します"
-
-#: ../src/Translation.vala:31
-msgid "Sync your photos"
-msgstr "写真を同期します"
-
-#: ../src/Translation.vala:32
+#: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
 msgstr "ニュースフィードを参照します"
 
-#: ../src/Translation.vala:33
-msgid "Chat with your friends"
-msgstr "友だちとチャットします"
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "連絡先"
 
-#: ../src/Translation.vala:34
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "コンピューター上ですべての Outlook や OneDrive のサービスにアクセスします"
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "連絡先を同期します"
 
-#: ../src/Translation.vala:35
-msgid "Access all Yahoo! services on your computer"
-msgstr "コンピューター上ですべての Yahoo! のサービスにアクセスします"
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "カレンダー"
 
-#: ../src/Translation.vala:36
-msgid "Access all Facebook contents on your computer"
-msgstr "コンピューター上ですべての Facebook のコンテンツにアクセスします"
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "カレンダーを同期します"
 
-#: ../src/Translation.vala:37
-msgid "Access all Google services on your computer"
-msgstr "コンピューター上ですべての Google のサービスにアクセスします"
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:67
+#: src/Authentification/MailDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:74
+msgid "Email"
+msgstr "メール"
 
-#: ../src/Translation.vala:38
-msgid "Includes Contacts, Mails, and Calendar"
-msgstr "連絡先、メール、カレンダーを含みます"
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "メールを同期します"
 
-#: ../src/Translation.vala:39
-msgid "Scrobble your music"
-msgstr "音楽を Scrobble します"
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr ""
 
-#: ../src/Translation.vala:40
-msgid "Access mail with FastMail"
-msgstr "FastMail でメールにアクセスします"
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "写真を同期します"
 
-#: ../src/Translation.vala:41
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr ""
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "ファイルを同期します"
+
+#: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
 msgstr "Scrobble"
 
-#: ../src/Translation.vala:42
+#: providers/LastFM/lastfm-scrobble.service:5
+#, fuzzy
+msgid "Scrobble all your music"
+msgstr "音楽を Scrobble します"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
+msgid "Mail Account"
+msgstr "メールアカウント"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
 msgstr "IMAP サーバーからメールを取得します"
 
-#: ../src/OnlineAccounts.vala:45
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr ""
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "コンピューター上ですべての Facebook のコンテンツにアクセスします"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "FastMail"
+msgstr ""
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with FastMail"
+msgstr "FastMail でメールにアクセスします"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr ""
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "コンピューター上ですべての Google のサービスにアクセスします"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr ""
+
+#: providers/LastFM/lastfm.provider:4
+#, fuzzy
+msgid "Scrobble your music"
+msgstr "音楽を Scrobble します"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr ""
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+"コンピューター上ですべての Outlook や OneDrive のサービスにアクセスします"
+
+#: src/OnlineAccounts.vala:46
 msgid "Online Accounts"
 msgstr "オンラインアカウント"
 
-#: ../src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:47
 msgid "Manage online accounts and connected applications"
 msgstr "オンラインアカウントと接続されたアプリケーションを管理します"
 
-#: ../src/OnlineAccounts.vala:64
+#: src/OnlineAccounts.vala:65
 msgid "Restore"
 msgstr "復元"
 
-#: ../src/OnlineAccounts.vala:86
+#: src/OnlineAccounts.vala:87
 msgid "Add a new account…"
 msgstr "新しいアカウントを追加…"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
+#: src/Authentification/PasswordDialog.vala:107
+#: src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/OnlineAccounts.vala:169
 msgid "Connect Your Online Accounts"
 msgstr "オンラインアカウントを接続しましょう"
 
-#: ../src/OnlineAccounts.vala:167
+#: src/OnlineAccounts.vala:169
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "メール、連絡先、カレンダーのようなアプリを接続するにはサインインしてください。"
+msgstr ""
+"メール、連絡先、カレンダーのようなアプリを接続するにはサインインしてくださ"
+"い。"
 
-#: ../src/OnlineAccounts.vala:261
+#: src/OnlineAccounts.vala:254
+#, c-format
 msgid "Account '%s' Removed."
 msgstr "アカウント '%s' を削除しました。"
+
+#: src/Authentification/MailDialog.vala:71
+#: src/Authentification/MailDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:78
+msgid "Password"
+msgstr "パスワード"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "サーバー"
+
+#: src/Authentification/MailDialog.vala:92
+#: src/Authentification/MailDialog.vala:142
+msgid "Encryption:"
+msgstr "暗号化:"
+
+#: src/Authentification/MailDialog.vala:96
+#: src/Authentification/MailDialog.vala:146
+msgid "None"
+msgstr "なし"
+
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "IMAP クレジットを使用"
+
+#: src/Authentification/MailDialog.vala:140
+msgid "No authentication required"
+msgstr "認証は不要"
+
+#: src/Authentification/MailDialog.vala:159
+#: src/Authentification/PasswordDialog.vala:109
+msgid "Log In"
+msgstr "ログイン"
+
+#: src/Authentification/PasswordDialog.vala:70
+msgid "URL"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:83
+msgid "New Password"
+msgstr "新しいパスワード"
+
+#: src/Authentification/PasswordDialog.vala:88
+msgid "Confirm Password"
+msgstr "パスワードの確認"
+
+#: src/Authentification/PasswordDialog.vala:96
+msgid "Forgot password…"
+msgstr "パスワードを忘れました…"
+
+#: src/Authentification/PasswordDialog.vala:101
+msgid "Refresh Captcha"
+msgstr "Captcha を再読み込みします"
+
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Enter above text here"
+msgstr "上のテキストをここに入力"
+
+#: src/Authentification/PasswordDialog.vala:113
+msgid "Don't have an account? Sign Up"
+msgstr "アカウントをお持ちではありませんか？ サインアップ"
+
+#: src/Authentification/PasswordDialog.vala:306
+msgid "Other Account"
+msgstr "他のアカウント"
+
+#: src/Authentification/WebDialog.vala:38
+#: src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr "読み込んでいます…"
+
+#: src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr "認証情報を入力してください…"
+
+#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
+#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
+#, fuzzy
+msgid "New Account"
+msgstr "他のアカウント"
+
+#: src/Views/AccountView.vala:107
+#, c-format
+msgid "There are no apps currently installed that link to your %s account"
+msgstr "あなたの %s アカウントにリンクするアプリがインストールされていません"
+
+#: src/Views/AccountView.vala:108
+msgid "No Apps"
+msgstr "アプリがありません"
+
+#: src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr "追加…"
+
+#: src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr "削除"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "友だちとチャットします"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "コンピューター上ですべての Yahoo! のサービスにアクセスします"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "連絡先、メール、カレンダーを含みます"

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<service id="google-photos">
-  <type>photos</type>
-  <name>Photos</name>
-  <description>Sync your photos</description>
-  <icon>multimedia-photo-manager</icon>
-  <provider>google</provider>
-  <translations>pantheon-online-accounts</translations>
-</service>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="facebook-contacts">
+  <type>contacts</type>
+  <name>Contacts</name>
+  <description>Sync your contacts</description>
+  <icon>office-address-book</icon>
+  <provider>facebook</provider>
+  <translations>online-accounts-plug</translations>
+</service>

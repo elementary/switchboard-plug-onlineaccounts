@@ -291,7 +291,7 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.Dialog {
 
         save_button.clicked.connect (() => finished ());
         cancel_button.clicked.connect (() => {
-            error_code = GSignond.SignonuiError.CANCELED;
+            error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();
         });

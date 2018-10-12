@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its"
+           version="2.0">
+  <its:translateRule selector="/service-type |
+                               /service-type/icon |
+                               /service-type/translations |
+                               /service-type/tags"
+                     translate="no"/>
+  <its:translateRule selector="/service-type/name |
+                               /service-type/description |
+                               /service-type/tags/tag"
+                     translate="yes"/>
+</its:rules>

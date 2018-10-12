@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="fastmail">
+  <name>FastMail</name>
+  <description>Access mail with FastMail</description>
+  <icon>online-account-fastmail</icon>
+  <translations>online-accounts-plug</translations>
+  <plugin>password</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">password</setting>
+      <setting name="mechanism">password</setting>
+      <group name="password">
+        <group name="password">
+          <setting type="int" name="UiPolicy">0</setting>
+          <setting name="DisplayName">FastMail</setting>
+          <setting name="ForgotPasswordUrl">https://www.fastmail.fm/html/?MSignal=LostPassword-*</setting>
+          <setting name="SignUpURL">https://www.fastmail.com/signup/personal.html?STKI=15892889</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

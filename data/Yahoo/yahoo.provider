@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="yahoo">
+  <name>Yahoo!</name>
+  <description>Access all Yahoo! services on your computer</description>
+  <icon>online-account-yahoo</icon>
+  <translations>pantheon-online-accounts</translations>
+  <plugin>generic-oauth</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">oauth</setting>
+      <setting name="mechanism">HMAC-SHA1</setting>
+      <group name="oauth">
+        <group name="HMAC-SHA1">
+          <setting name="Host">api.login.yahoo.com</setting>
+          <setting name="Callback">http://elementaryos.org</setting>
+          <setting name="RequestEndpoint">https://api.login.yahoo.com/oauth/v2/get_request_token</setting>
+          <setting name="TokenEndpoint">https://api.login.yahoo.com/oauth/v2/get_token</setting>
+          <setting name="AuthorizationEndpoint">https://api.login.yahoo.com/oauth/v2/request_auth</setting>
+          <setting name="ConsumerKey">dj0yJmk9QjV1Tnd2Wk1SUE1FJmQ9WVdrOVNGcEZjVmhwTldrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD0xMg--</setting>
+          <setting name="ConsumerSecret">0f438190f477b6773e1bbd1c1fa9406ff922ab7b</setting>
+          <setting name="SignatureMethod">HMAC-SHA1</setting>
+          <setting type="int" name="UiPolicy">0</setting>
+          <setting type="as" name="AllowedSchemes">['https']</setting>
+          <setting type="as" name="AllowedRealms">['yahoo.com']</setting>
+          <setting type="as" name="Realms">['api.login.yahoo.com']</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

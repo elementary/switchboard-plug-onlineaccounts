@@ -1,0 +1,268 @@
+# Akan translations for online-accounts-plug package.
+# Copyright (C) 2018 THE online-accounts-plug'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the online-accounts-plug package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: online-accounts-plug\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-13 22:38+0200\n"
+"PO-Revision-Date: 2018-09-13 18:54+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ak\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr ""
+
+#: providers/Facebook/facebook-microblog.service:5
+msgid "Watch your newsfeed"
+msgstr ""
+
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr ""
+
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr ""
+
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr ""
+
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr ""
+
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:67
+#: src/Authentification/MailDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:74
+msgid "Email"
+msgstr ""
+
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr ""
+
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr ""
+
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr ""
+
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr ""
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr ""
+
+#: providers/LastFM/lastfm-scrobble.service:4
+msgid "Scrobble"
+msgstr ""
+
+#: providers/LastFM/lastfm-scrobble.service:5
+msgid "Scrobble all your music"
+msgstr ""
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
+msgid "Mail Account"
+msgstr ""
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
+msgid "Fetch Email from IMAP Server"
+msgstr ""
+
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr ""
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr ""
+
+#: providers/FastMail/fastmail.provider:3
+msgid "FastMail"
+msgstr ""
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with FastMail"
+msgstr ""
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr ""
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr ""
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr ""
+
+#: providers/LastFM/lastfm.provider:4
+msgid "Scrobble your music"
+msgstr ""
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr ""
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr ""
+
+#: src/OnlineAccounts.vala:46
+msgid "Online Accounts"
+msgstr ""
+
+#: src/OnlineAccounts.vala:47
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: src/OnlineAccounts.vala:65
+msgid "Restore"
+msgstr ""
+
+#: src/OnlineAccounts.vala:87
+msgid "Add a new account…"
+msgstr ""
+
+#: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
+#: src/Authentification/PasswordDialog.vala:107
+#: src/Authentification/WebDialog.vala:34
+msgid "Cancel"
+msgstr ""
+
+#: src/OnlineAccounts.vala:169
+msgid "Connect Your Online Accounts"
+msgstr ""
+
+#: src/OnlineAccounts.vala:169
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+
+#: src/OnlineAccounts.vala:254
+#, c-format
+msgid "Account '%s' Removed."
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:71
+#: src/Authentification/MailDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:78
+msgid "Password"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:92
+#: src/Authentification/MailDialog.vala:142
+msgid "Encryption:"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:96
+#: src/Authentification/MailDialog.vala:146
+msgid "None"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:140
+msgid "No authentication required"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:159
+#: src/Authentification/PasswordDialog.vala:109
+msgid "Log In"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:70
+msgid "URL"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:83
+msgid "New Password"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:88
+msgid "Confirm Password"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:96
+msgid "Forgot password…"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:101
+msgid "Refresh Captcha"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Enter above text here"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:113
+msgid "Don't have an account? Sign Up"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:306
+msgid "Other Account"
+msgstr ""
+
+#: src/Authentification/WebDialog.vala:38
+#: src/Authentification/WebDialog.vala:133
+msgid "Loading…"
+msgstr ""
+
+#: src/Authentification/WebDialog.vala:126
+msgid "Please enter your credentials…"
+msgstr ""
+
+#: src/Views/AccountView.vala:48 src/Views/AccountView.vala:120
+#: src/Views/SourceSelector.vala:124 src/Views/SourceSelector.vala:128
+msgid "New Account"
+msgstr ""
+
+#: src/Views/AccountView.vala:107
+#, c-format
+msgid "There are no apps currently installed that link to your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:108
+msgid "No Apps"
+msgstr ""
+
+#: src/Views/SourceSelector.vala:53
+msgid "Add…"
+msgstr ""
+
+#: src/Views/SourceSelector.vala:58
+msgid "Remove"
+msgstr ""

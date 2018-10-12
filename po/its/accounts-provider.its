@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its"
+           version="2.0">
+  <its:translateRule selector="/provider |
+                               /provider/translations |
+                               /provider/icon |
+                               /provider/domains |
+                               /provider/plugin |
+                               /provider/single-account |
+                               /provider/template"
+                     translate="no"/>
+  <its:translateRule selector="/provider/name |
+                               /provider/description"
+                     translate="yes"/>
+</its:rules>
