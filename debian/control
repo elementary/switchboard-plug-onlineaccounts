@@ -2,35 +2,30 @@ Source: switchboard-plug-onlineaccounts
 Section: admin
 Priority: optional
 Maintainer: Corentin Noël <corentin@elementary.io>
-Build-Depends: cmake (>= 2.8),
-               debhelper (>= 9),
+Build-Depends: debhelper (>= 10.5.1),
                libaccounts-glib-dev,
                libgee-0.8-dev (>= 0.5.3),
                libglib2.0-dev (>= 2.32.0),
                libgranite-dev,
-               libsignon-glib-dev,
                libgsignond-common-dev,
                libgtk-3-dev (>= 3.12.0),
                libjson-glib-dev,
                librest-dev (>= 0.7),
+               libsignon-glib-dev,
                libswitchboard-2.0-dev,
                libwebkit2gtk-4.0-dev,
+               meson,
                valac (>= 0.24)
-Standards-Version: 3.9.5
+Standards-Version: 4.1.1
 Homepage: https://github.com/elementary/switchboard-plug-onlineaccounts
 
 Package: switchboard-plug-online-accounts
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Recommends: pantheon-online-accounts-plugin-fastmail,
             pantheon-online-accounts-plugin-lastfm,
             pantheon-online-accounts-plugin-mail
-#            pantheon-online-accounts-plugin-google,
-#            pantheon-online-accounts-plugin-microsoft,
-#            pantheon-online-accounts-plugin-yahoo,
-#            pantheon-online-accounts-plugin-facebook
 Description: Online Accounts plug for Switchboard
  This plug allow you to enable online accounts sync.
 
@@ -45,11 +40,11 @@ Description: Online Accounts plug for Switchboard (library)
 
 Package: libpantheon-online-accounts-dev
 Architecture: any
-Depends: libpantheon-online-accounts0 (= ${binary:Version}),
-         libaccounts-glib-dev,
+Depends: libaccounts-glib-dev,
          libgee-0.8-dev (>= 0.5.3),
          libglib2.0-dev (>= 2.32.0),
          libgtk-3-dev (>= 3.12.0),
+         libpantheon-online-accounts0 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Section: libdevel
@@ -94,18 +89,6 @@ Replaces: evolution-data-server-online-accounts
 Description: Online Accounts plugin for single signon - Google
  Online accounts plugin for single signon
 
-#Package: pantheon-online-accounts-plugin-yahoo
-#Architecture: any
-#Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-#         ${misc:Depends},
-#         ${shlibs:Depends}
-#Conflicts: account-plugin-flickr,
-#           account-plugin-yahoo,
-#           evolution-data-server-online-accounts
-#Replaces: evolution-data-server-online-accounts
-#Description: Online Accounts plugin for single signon - Yahoo
-# Online accounts plugin for single signon
-
 Package: pantheon-online-accounts-plugin-fastmail
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
@@ -116,8 +99,8 @@ Description: Online Accounts plugin for single signon - FastMail
 
 Package: pantheon-online-accounts-plugin-mail
 Architecture: any
-Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         gsignond-plugin-mail (>= 0.2.0~r3),
+Depends: gsignond-plugin-mail (>= 0.2.0~r3),
+         switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: Online Accounts plugin for single signon - Mail
@@ -125,8 +108,8 @@ Description: Online Accounts plugin for single signon - Mail
 
 Package: pantheon-online-accounts-plugin-lastfm
 Architecture: any
-Depends: switchboard-plug-online-accounts (= ${binary:Version}),
-         gsignond-plugin-lastfm (>= 0.2.0~r3),
+Depends: gsignond-plugin-lastfm (>= 0.2.0~r3),
+         switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: Online Accounts plugin for single signon - Last.fm

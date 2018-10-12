@@ -1,4 +1,4 @@
+usr/lib/*/io.elementary.online-accounts.google
 usr/share/accounts/providers/google*
 usr/share/accounts/services/google*
 usr/share/icons/hicolor/*/apps/online-account-google.svg
-usr/lib/*/io.elementary.online-accounts.google
