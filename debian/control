@@ -58,15 +58,6 @@ Description: Online Accounts plug for Switchboard (development files)
  .
  This package contains the header files.
 
-Package: pantheon-online-accounts-plugin-generic-oauth
-Architecture: any
-Depends: gsignond-plugin-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Description: Online Accounts plugin for single signon - Generic OAuth
- Online accounts plugin for single signon
-
 Package: pantheon-online-accounts-plugin-password
 Architecture: any
 Depends: switchboard-plug-online-accounts (= ${binary:Version}),
@@ -77,8 +68,7 @@ Description: Online Accounts plugin for single signon - Password
 
 Package: pantheon-online-accounts-plugin-facebook
 Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: account-plugin-facebook
@@ -87,8 +77,7 @@ Description: Online Accounts plugin for single signon - Facebook
 
 Package: pantheon-online-accounts-plugin-microsoft
 Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: account-plugin-windows-live
@@ -97,8 +86,7 @@ Description: Online Accounts plugin for single signon - Microsoft
 
 Package: pantheon-online-accounts-plugin-google
 Architecture: any
-Depends: pantheon-online-accounts-plugin-generic-oauth,
-         switchboard-plug-online-accounts (= ${binary:Version}),
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: account-plugin-google, evolution-data-server-online-accounts
@@ -108,8 +96,7 @@ Description: Online Accounts plugin for single signon - Google
 
 #Package: pantheon-online-accounts-plugin-yahoo
 #Architecture: any
-#Depends: pantheon-online-accounts-plugin-generic-oauth,
-#         switchboard-plug-online-accounts (= ${binary:Version}),
+#Depends: switchboard-plug-online-accounts (= ${binary:Version}),
 #         ${misc:Depends},
 #         ${shlibs:Depends}
 #Conflicts: account-plugin-flickr,
