@@ -251,7 +251,7 @@ namespace OnlineAccounts {
         }
 
         private void account_removed (string? account_name) {
-            notification_label.label = _("Account '%s' Removed.").printf (account_name);
+            notification_label.label = _("Account '%s' Removed.").printf (account_name ?? _("New Account"));
             app_notification.reveal_child = true;
             if (AccountsManager.get_default ().accounts_available.size <= 0)
                 switch_to_welcome ();
