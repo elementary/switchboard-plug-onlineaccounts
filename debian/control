@@ -108,8 +108,7 @@ Description: Online Accounts plugin for single signon - Google
 
 Package: pantheon-online-accounts-plugin-fastmail
 Architecture: any
-Depends: pantheon-online-accounts-plugin-password,
-         switchboard-plug-online-accounts (= ${binary:Version}),
+Depends: switchboard-plug-online-accounts (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: Online Accounts plugin for single signon - FastMail
