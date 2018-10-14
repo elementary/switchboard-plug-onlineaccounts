@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2018-09-01 00:09+0000\n"
+"PO-Revision-Date: 2018-10-14 02:18+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/pt_BR/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Postagens"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -69,7 +69,7 @@ msgstr "Sincronize seu email"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Fotos"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -77,7 +77,7 @@ msgstr "Sincronize suas fotos"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Drive"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -88,9 +88,8 @@ msgid "Scrobble"
 msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Dê um scrobble em suas músicas"
+msgstr "Scrobble toda sua música"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
@@ -102,7 +101,7 @@ msgstr "Obter email do servidor IMAP"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -110,7 +109,7 @@ msgstr "Acesse todo conteúdo do Facebook em seu computador"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
@@ -118,7 +117,7 @@ msgstr "Acessar e-mail com FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -126,16 +125,15 @@ msgstr "Acesse todos os serviços do Google em seu computador"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
-msgstr "Dê um scrobble em suas músicas"
+msgstr "Scrobble sua música"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -180,9 +178,8 @@ msgstr "Conta '%s' removida."
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128
-#, fuzzy
 msgid "New Account"
-msgstr "Outra conta"
+msgstr "Nova Conta"
 
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
@@ -220,7 +217,7 @@ msgstr "Entrar"
 
 #: src/Authentification/PasswordDialog.vala:70
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
