@@ -1,3 +1,9 @@
+switchboard-plug-onlineaccounts (2.0) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Mon, 15 Oct 2018 17:35:22 -0500
+
 switchboard-plug-onlineaccounts (2.0) UNRELEASED; urgency=medium
 
   * New upstream release.
