@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2018-04-25 00:03+0000\n"
+"PO-Revision-Date: 2018-10-15 16:38+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ca/>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Apunts"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -69,7 +69,7 @@ msgstr "Sincronitzeu el correu"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Fotografies"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -77,7 +77,7 @@ msgstr "Sincronitzeu les vostres fotos"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Unitat de disc"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -88,9 +88,8 @@ msgid "Scrobble"
 msgstr "Identifica"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Identifiqueu la música que escolteu"
+msgstr "Identifiqueu la música que escolteu."
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
@@ -102,7 +101,7 @@ msgstr "Recull correu del servidor IMAP"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -110,7 +109,7 @@ msgstr "Accediu a tots els continguts de Facebook des de l'ordinador"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
@@ -118,7 +117,7 @@ msgstr "Accedeix al correu amb FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -126,16 +125,15 @@ msgstr "Accediu a tots els serveis de Google des de l'ordinador"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
 msgstr "Identifiqueu la música que escolteu"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -181,9 +179,8 @@ msgstr "S’ha suprimit el compte «%s»."
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128
-#, fuzzy
 msgid "New Account"
-msgstr "Un altre compte"
+msgstr "Compte nou"
 
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
@@ -221,7 +218,7 @@ msgstr "Inici de sessió"
 
 #: src/Authentification/PasswordDialog.vala:70
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
