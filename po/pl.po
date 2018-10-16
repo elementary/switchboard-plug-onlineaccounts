@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2018-10-14 00:03+0000\n"
+"PO-Revision-Date: 2018-10-16 10:13+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pl/>\n"
@@ -89,9 +89,8 @@ msgid "Scrobble"
 msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Scrobbluj swoją muzykę"
+msgstr "Scrobbluj całą swoją muzykę"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
