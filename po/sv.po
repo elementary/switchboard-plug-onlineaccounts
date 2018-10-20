@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
 "PO-Revision-Date: 2018-10-23 08:14+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sv/>\n"
 "Language: sv\n"
@@ -168,7 +168,8 @@ msgstr "Anslut dina online-konton"
 
 #: src/OnlineAccounts.vala:169
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Logga in för att ansluta till appar som Mail, Kontakter och Kalender"
+msgstr ""
+"Logga in för att ansluta till program som E-post, Kontakter och Kalender."
 
 #: src/OnlineAccounts.vala:254
 #, c-format
