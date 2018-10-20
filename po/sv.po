@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2018-03-26 00:09+0000\n"
-"Last-Translator: H. Gerhard. A <henrik.ahlkvist@gmail.com>\n"
+"PO-Revision-Date: 2018-10-20 13:38+0000\n"
+"Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sv/>\n"
 "Language: sv\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 "X-Poedit-Language: Swedish\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Inlägg"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -65,13 +65,12 @@ msgstr "E-post"
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
-#, fuzzy
 msgid "Sync your email"
-msgstr "Synkronisera dina filer"
+msgstr "Synkronisera din e-post"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Foton"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -79,7 +78,7 @@ msgstr "Synkronisera dina foton"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Enhet"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -87,23 +86,23 @@ msgstr "Synkronisera dina filer"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr ""
+msgstr "Scrobbla all din musik"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
-msgstr ""
+msgstr "E-postkonto"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Hämta e-post från IMAP-server"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -111,15 +110,15 @@ msgstr "Kom åt allt Facebook-innehåll på din dator"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Få tillgång till e-post med FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -127,15 +126,15 @@ msgstr "Kom åt alla Google-tjänster på din dator"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Scrobbla din musik"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -179,9 +178,8 @@ msgstr "Kontot '%s' togs bort."
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128
-#, fuzzy
 msgid "New Account"
-msgstr "Online-konton"
+msgstr "Nytt konto"
 
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
@@ -192,25 +190,25 @@ msgstr "Lösenord"
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Server"
 
 #: src/Authentification/MailDialog.vala:92
 #: src/Authentification/MailDialog.vala:142
 msgid "Encryption:"
-msgstr ""
+msgstr "Kryptering:"
 
 #: src/Authentification/MailDialog.vala:96
 #: src/Authentification/MailDialog.vala:146
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Använd IMAP-inloggningsuppgifter"
 
 #: src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
-msgstr ""
+msgstr "Ingen autentisering krävs"
 
 #: src/Authentification/MailDialog.vala:159
 #: src/Authentification/PasswordDialog.vala:109
@@ -219,7 +217,7 @@ msgstr "Logga in"
 
 #: src/Authentification/PasswordDialog.vala:70
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
@@ -231,7 +229,7 @@ msgstr "Bekräfta lösenord"
 
 #: src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr ""
+msgstr "Glömt lösenord…"
 
 #: src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -246,9 +244,8 @@ msgid "Don't have an account? Sign Up"
 msgstr "Har du inget konto? Registrera dig"
 
 #: src/Authentification/PasswordDialog.vala:306
-#, fuzzy
 msgid "Other Account"
-msgstr "Online-konton"
+msgstr "Annat konto"
 
 #: src/Authentification/WebDialog.vala:38
 #: src/Authentification/WebDialog.vala:133
