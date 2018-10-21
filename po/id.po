@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2018-10-21 12:13+0000\n"
+"PO-Revision-Date: 2018-10-23 08:14+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/id/>\n"
@@ -236,7 +236,7 @@ msgstr "Segarkan Captcha"
 
 #: src/Authentification/PasswordDialog.vala:102
 msgid "Enter above text here"
-msgstr "Masukkan teks di atas sini"
+msgstr "Masukkan teks di atas"
 
 #: src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
@@ -253,7 +253,7 @@ msgstr "Memuat…"
 
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Harap masukkan kredensial Anda…"
+msgstr "Silakan masukkan kredensial Anda…"
 
 #: src/Views/AccountView.vala:107
 #, c-format
@@ -263,7 +263,7 @@ msgstr ""
 
 #: src/Views/AccountView.vala:108
 msgid "No Apps"
-msgstr "Tidak Ada Aplikasi"
+msgstr "Tidak ada Aplikasi"
 
 #: src/Views/SourceSelector.vala:53
 msgid "Add…"
