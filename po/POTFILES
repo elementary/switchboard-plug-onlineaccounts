@@ -11,5 +11,6 @@ src/Authentification/RequestQueue.vala
 src/Authentification/Server.vala
 src/Authentification/WebDialog.vala
 src/Views/AccountView.vala
-src/Views/ACListBox.vala
 src/Views/SourceSelector.vala
+src/Widgets/ACListBox.vala
+src/Widgets/AppRow.vala
