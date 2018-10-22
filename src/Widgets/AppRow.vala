@@ -20,33 +20,44 @@
 */
 
 public class AppRow : Gtk.ListBoxRow {
-    public Ag.Application app;
-    private Ag.Service service;
-    private Ag.Account account;
-    private Signon.Identity identity;
+    public Ag.Account account { get; construct; }
+    public Ag.Application app { get; construct; }
+    public Ag.Service service { get; construct; }
+    public Signon.Identity identity { get; construct; }
 
-    private Gtk.Image app_image;
-    private Gtk.Label app_name;
     private Gtk.CheckButton app_switch;
+
     public AppRow (Ag.Account account, Ag.Application app, Ag.Service service, Signon.Identity identity) {
-        this.account = account;
-        this.app = app;
-        this.service = service;
-        this.identity = identity;
-        var app_info = app.get_desktop_app_info ();
-        app_image.gicon = app_info.get_icon ();
-        app_name.label = app_info.get_display_name ();
+        Object (
+            account: account,
+            app: app,
+            identity: identity,
+            service: service
+        );
     }
 
     construct {
+        var app_info = app.get_desktop_app_info ();
+
+        var app_image = new Gtk.Image ();
+        app_image.icon_size = Gtk.IconSize.DND;
+        app_image.gicon = app_info.get_icon ();
+
+        var app_name = new Gtk.Label (app_info.get_display_name ());
+
+        app_switch = new Gtk.CheckButton ();
+
+        var grid = new Gtk.Grid ();
+        grid.column_spacing = 6;
+        grid.add (app_switch);
+        grid.add (app_image);
+        grid.add (app_name);
+
         activatable = false;
         selectable = false;
         margin = 6;
+        add (grid);
 
-        app_image = new Gtk.Image ();
-        app_image.icon_size = Gtk.IconSize.DND;
-        app_name = new Gtk.Label (null);
-        app_switch = new Gtk.CheckButton ();
         app_switch.activate.connect (() => {
             if (app_switch.active) {
                 allow_app.begin ();
@@ -54,14 +65,6 @@ public class AppRow : Gtk.ListBoxRow {
                 deny_app.begin ();
             }
         });
-
-        var grid = new Gtk.Grid ();
-        grid.orientation = Gtk.Orientation.HORIZONTAL;
-        grid.column_spacing = 6;
-        grid.add (app_switch);
-        grid.add (app_image);
-        grid.add (app_name);
-        add (grid);
     }
 
     private string get_app_path () {
