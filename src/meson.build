@@ -12,8 +12,9 @@ plug_files = files(
     'Authentification/Server.vala',
     'Authentification/WebDialog.vala',
     'Views/AccountView.vala',
-    'Views/ACListBox.vala',
     'Views/SourceSelector.vala',
+    'Widgets/ACListBox.vala',
+    'Widgets/AppRow.vala',
 )
 
 switchboard_dep = dependency('switchboard-2.0')
