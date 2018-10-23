@@ -28,14 +28,13 @@ namespace OnlineAccounts {
         Gtk.Stack stack;
         Gtk.Grid grid;
         Gtk.Grid main_grid;
-        Gtk.Label notification_label;
         AccountView account_view;
         SourceSelector source_selector;
         Gtk.Paned paned;
         OnlineAccounts.Server oa_server;
         Gtk.InfoBar infobar;
-        Gtk.Revealer app_notification;
         Gee.HashMap<int, Ag.Provider> providers_map;
+        private Granite.Widgets.Toast toast;
         Granite.Widgets.Welcome welcome;
 
         public Plug () {
@@ -53,36 +52,8 @@ namespace OnlineAccounts {
 
         public override Gtk.Widget get_widget () {
             if (stack == null) {
-
-                var close_button = new Gtk.Button.from_icon_name ("close-symbolic", Gtk.IconSize.MENU);
-                close_button.get_style_context ().add_class ("close-button");
-                close_button.clicked.connect (() => {
-                    AccountsManager.get_default ().remove_cached_account ();
-                    app_notification.reveal_child = false;
-                });
-
-                notification_label = new Gtk.Label ("");
-                var restore_button = new Gtk.Button.with_label (_("Restore"));
-                restore_button.clicked.connect (() => {
-                    AccountsManager.get_default ().restore_cached_account ();
-                    app_notification.reveal_child = false;
-                });
-
-                var notification_box = new Gtk.Grid ();
-                notification_box.column_spacing = 12;
-                notification_box.add (close_button);
-                notification_box.add (notification_label);
-                notification_box.add (restore_button);
-
-                var notification_frame = new Gtk.Frame (null);
-                notification_frame.get_style_context ().add_class ("app-notification");
-                notification_frame.add (notification_box);
-
-                app_notification = new Gtk.Revealer ();
-                app_notification.margin = 3;
-                app_notification.halign = Gtk.Align.CENTER;
-                app_notification.valign = Gtk.Align.START;
-                app_notification.add (notification_frame);
+                toast = new Granite.Widgets.Toast ("");
+                toast.set_default_action (_("Restore"));
 
                 var info_label = new Gtk.Label (_("Add a new account…"));
                 info_label.show ();
@@ -129,10 +100,18 @@ namespace OnlineAccounts {
 
                 var overlay = new Gtk.Overlay ();
                 overlay.add_overlay (overlay_grid);
-                overlay.add_overlay (app_notification);
+                overlay.add_overlay (toast);
 
                 main_grid.add (overlay);
                 main_grid.show_all ();
+
+                toast.closed.connect (() => {
+                    AccountsManager.get_default ().remove_cached_account ();
+                });
+
+                toast.default_action.connect (() => {
+                    AccountsManager.get_default ().restore_cached_account ();
+                });
 
                 source_selector.account_selected.connect ((account) => {
                     switch_to_main ();
@@ -195,7 +174,6 @@ namespace OnlineAccounts {
         public override void hidden () {
             hide_request ();
             AccountsManager.get_default ().remove_cached_account ();
-            app_notification.reveal_child = false;
             infobar.hide ();
         }
 
@@ -232,7 +210,6 @@ namespace OnlineAccounts {
         }
 
         public void switch_to_widget (string name) {
-            app_notification.reveal_child = false;
             infobar.hide ();
             stack.set_visible_child_name (name);
         }
@@ -251,14 +228,13 @@ namespace OnlineAccounts {
         }
 
         private void account_removed (string? account_name) {
-            notification_label.label = _("Account '%s' Removed.").printf (account_name ?? _("New Account"));
-            app_notification.reveal_child = true;
+            toast.title = _("Account '%s' Removed.").printf (account_name ?? _("New Account"));
+            toast.send_notification ();
             if (AccountsManager.get_default ().accounts_available.size <= 0)
                 switch_to_welcome ();
         }
 
         private void add_return () {
-            app_notification.reveal_child = false;
             infobar.show ();
         }
     }
