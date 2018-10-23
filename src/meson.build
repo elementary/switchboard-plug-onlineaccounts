@@ -1,7 +1,7 @@
 plug_files = files(
     'AccountsManager.vala',
     'Account.vala',
-    'OnlineAccounts.vala',
+    'Plug.vala',
     'Authentification/DialogService.vala',
     'Authentification/Dialog.vala',
     'Authentification/Key.vala',

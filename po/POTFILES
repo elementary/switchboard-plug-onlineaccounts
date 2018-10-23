@@ -1,6 +1,6 @@
 src/AccountsManager.vala
 src/Account.vala
-src/OnlineAccounts.vala
+src/Plug.vala
 src/Authentification/DialogService.vala
 src/Authentification/Dialog.vala
 src/Authentification/Key.vala
