@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-12 18:31+0200\n"
-"PO-Revision-Date: 2018-10-20 13:38+0000\n"
+"PO-Revision-Date: 2018-10-23 08:14+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sv/>\n"
@@ -154,7 +154,7 @@ msgstr "Återskapa"
 
 #: src/OnlineAccounts.vala:87
 msgid "Add a new account…"
-msgstr "Lägg till ett nytt konto..."
+msgstr "Lägg till ett nytt konto…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
@@ -168,7 +168,8 @@ msgstr "Anslut dina online-konton"
 
 #: src/OnlineAccounts.vala:169
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Logga in för att ansluta till appar som Mail, Kontakter och Kalender"
+msgstr ""
+"Logga in för att ansluta till program som E-post, Kontakter och Kalender."
 
 #: src/OnlineAccounts.vala:254
 #, c-format
@@ -250,11 +251,11 @@ msgstr "Annat konto"
 #: src/Authentification/WebDialog.vala:38
 #: src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "Läser in..."
+msgstr "Läser in…"
 
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Skriv in dina inloggningsuppgifter..."
+msgstr "Skriv in dina inloggningsuppgifter…"
 
 #: src/Views/AccountView.vala:107
 #, c-format
