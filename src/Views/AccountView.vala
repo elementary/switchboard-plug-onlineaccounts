@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
+ * Copyright (c) 2013-2018 elementary, Inc. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -21,20 +21,22 @@
  */
 
 public class OnlineAccounts.AccountView : Gtk.Grid {
-    OnlineAccounts.Account account;
-    Signon.Identity identity;
+    public OnlineAccounts.Account account { get; construct; }
 
     public AccountView (OnlineAccounts.Account account) {
+        Object (account: account);
+    }
+
+    construct {
         column_spacing = 6;
         row_spacing = 3;
         margin = 24;
         orientation = Gtk.Orientation.VERTICAL;
-        this.account = account;
 
         var ag_account = account.ag_account;
         var account_service = new Ag.AccountService (ag_account, null);
         var auth_data = account_service.get_auth_data ();
-        identity = new Signon.Identity.from_db (auth_data.get_credentials_id ());
+        var identity = new Signon.Identity.from_db (auth_data.get_credentials_id ());
         if (identity == null) {
             critical ("null identity %u", auth_data.get_credentials_id ());
             return;
