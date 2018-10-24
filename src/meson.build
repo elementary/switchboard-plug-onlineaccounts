@@ -18,7 +18,7 @@ plug_files = files(
 )
 
 switchboard_dep = dependency('switchboard-2.0')
-granite_dep = dependency('granite')
+granite_dep = dependency('granite', version: '>=0.5')
 gtk_dep = dependency('gtk+-3.0')
 webkit_dep = dependency('webkit2gtk-4.0')
 
