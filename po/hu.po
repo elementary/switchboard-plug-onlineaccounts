@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-12 18:31+0200\n"
+"POT-Creation-Date: 2018-10-24 08:31-0700\n"
 "PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -141,45 +141,46 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Az összes Outlook és OneDrive szolgáltatás elérése a számítógépen"
 
-#: src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:46 src/Plug.vala:45
 msgid "Online Accounts"
 msgstr "Online fiókok"
 
-#: src/OnlineAccounts.vala:47
+#: src/OnlineAccounts.vala:47 src/Plug.vala:46
 msgid "Manage online accounts and connected applications"
 msgstr "Kezelje online fiókjait és a kapcsolódó alkalmazásait"
 
-#: src/OnlineAccounts.vala:65
+#: src/OnlineAccounts.vala:65 src/Plug.vala:56
 msgid "Restore"
 msgstr "Visszaállítás"
 
-#: src/OnlineAccounts.vala:87
+#: src/OnlineAccounts.vala:87 src/Plug.vala:58
 msgid "Add a new account…"
 msgstr "Új fiók hozzáadása…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
-#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: src/OnlineAccounts.vala:169
+#: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Connect Your Online Accounts"
 msgstr "Kapcsolódás az online fiókokhoz"
 
-#: src/OnlineAccounts.vala:169
+#: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Jelentkezzen be az e-mail, címjegyzék és naptár alkalmazások használatához."
 
-#: src/OnlineAccounts.vala:254
+#: src/OnlineAccounts.vala:254 src/Plug.vala:231
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "A(z) '%s' fiók eltávolítva."
 
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:128
+#: src/Views/SourceSelector.vala:128 src/Plug.vala:231
+#: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
 #, fuzzy
 msgid "New Account"
 msgstr "Másik fiók"
@@ -259,12 +260,12 @@ msgstr "Betöltés…"
 msgid "Please enter your credentials…"
 msgstr "Adja meg hitelesítő adatait...."
 
-#: src/Views/AccountView.vala:107
+#: src/Views/AccountView.vala:107 src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
 msgstr "Nincs a(z) %s fiókhoz kapcsolódó alkalmazás telepítve"
 
-#: src/Views/AccountView.vala:108
+#: src/Views/AccountView.vala:108 src/Views/AccountView.vala:110
 msgid "No Apps"
 msgstr "Nincsenek alkalmazások"
 

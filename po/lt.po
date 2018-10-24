@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-12 18:31+0200\n"
+"POT-Creation-Date: 2018-10-24 08:31-0700\n"
 "PO-Revision-Date: 2018-10-12 20:00+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
@@ -137,45 +137,46 @@ msgid "Access all Outlook and OneDrive services on your computer"
 msgstr ""
 "Gaukite prieigą prie visų Outlook ir OneDrive paslaugų savo kompiuteryje"
 
-#: src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:46 src/Plug.vala:45
 msgid "Online Accounts"
 msgstr "Internetinės paskyros"
 
-#: src/OnlineAccounts.vala:47
+#: src/OnlineAccounts.vala:47 src/Plug.vala:46
 msgid "Manage online accounts and connected applications"
 msgstr "Tvarkyti internetines paskyras ir prijungtas programas"
 
-#: src/OnlineAccounts.vala:65
+#: src/OnlineAccounts.vala:65 src/Plug.vala:56
 msgid "Restore"
 msgstr "Atkurti"
 
-#: src/OnlineAccounts.vala:87
+#: src/OnlineAccounts.vala:87 src/Plug.vala:58
 msgid "Add a new account…"
 msgstr "Pridėti naują paskyrą…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
-#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: src/OnlineAccounts.vala:169
+#: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Connect Your Online Accounts"
 msgstr "Prijunkite savo internetines paskyras"
 
-#: src/OnlineAccounts.vala:169
+#: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Prisijunkite prie tokių programų kaip Paštas, Kontaktai ir Kalendorius."
 
-#: src/OnlineAccounts.vala:254
+#: src/OnlineAccounts.vala:254 src/Plug.vala:231
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Paskyra \"%s\" pašalinta."
 
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:128
+#: src/Views/SourceSelector.vala:128 src/Plug.vala:231
+#: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
 msgid "New Account"
 msgstr "Nauja paskyra"
 
@@ -254,12 +255,12 @@ msgstr "Įkeliama…"
 msgid "Please enter your credentials…"
 msgstr "Prašome įrašyti savo prisijungimo duomenis…"
 
-#: src/Views/AccountView.vala:107
+#: src/Views/AccountView.vala:107 src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
 msgstr "Šiuo metu nėra programų, kurios būtų susietos su jūsų %s paskyra"
 
-#: src/Views/AccountView.vala:108
+#: src/Views/AccountView.vala:108 src/Views/AccountView.vala:110
 msgid "No Apps"
 msgstr "Nėra programų"
 

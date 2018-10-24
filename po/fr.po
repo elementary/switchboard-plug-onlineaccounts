@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-12 18:31+0200\n"
+"POT-Creation-Date: 2018-10-24 08:31-0700\n"
 "PO-Revision-Date: 2018-03-12 00:10+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
@@ -141,46 +141,47 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Accéder à tous les services Outlook et OneDrive sur votre ordinateur"
 
-#: src/OnlineAccounts.vala:46
+#: src/OnlineAccounts.vala:46 src/Plug.vala:45
 msgid "Online Accounts"
 msgstr "Comptes en ligne"
 
-#: src/OnlineAccounts.vala:47
+#: src/OnlineAccounts.vala:47 src/Plug.vala:46
 msgid "Manage online accounts and connected applications"
 msgstr "Gérer les comptes en-ligne et les applications connectées"
 
-#: src/OnlineAccounts.vala:65
+#: src/OnlineAccounts.vala:65 src/Plug.vala:56
 msgid "Restore"
 msgstr "Restaurer"
 
-#: src/OnlineAccounts.vala:87
+#: src/OnlineAccounts.vala:87 src/Plug.vala:58
 msgid "Add a new account…"
 msgstr "Ajouter un nouveau compte…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
-#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/OnlineAccounts.vala:169
+#: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Connect Your Online Accounts"
 msgstr "Connectez vos comptes en ligne"
 
-#: src/OnlineAccounts.vala:169
+#: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Inscrivez-vous pour vous connecter à des applications telles que Mail, "
 "Contacts et Calendrier."
 
-#: src/OnlineAccounts.vala:254
+#: src/OnlineAccounts.vala:254 src/Plug.vala:231
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Compte \"%s\" supprimé."
 
 #: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:128
+#: src/Views/SourceSelector.vala:128 src/Plug.vala:231
+#: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
 #, fuzzy
 msgid "New Account"
 msgstr "Autre compte"
@@ -260,12 +261,12 @@ msgstr "Chargement…"
 msgid "Please enter your credentials…"
 msgstr "Veuillez saisir vos identifiants…"
 
-#: src/Views/AccountView.vala:107
+#: src/Views/AccountView.vala:107 src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
 msgstr "Il n'y a actuellement aucune application liée à votre compte %s"
 
-#: src/Views/AccountView.vala:108
+#: src/Views/AccountView.vala:108 src/Views/AccountView.vala:110
 msgid "No Apps"
 msgstr "Aucune application"
 
