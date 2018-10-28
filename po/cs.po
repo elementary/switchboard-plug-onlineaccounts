@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-24 08:31-0700\n"
-"PO-Revision-Date: 2018-05-25 00:08+0000\n"
-"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
+"PO-Revision-Date: 2018-10-28 16:09+0000\n"
+"Last-Translator: Daniel Zvir <zvir.daniel@seznam.cz>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/cs/>\n"
 "Language: cs\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Příspěvky"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -69,15 +69,15 @@ msgstr "Synchronizovat váš email"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Fotky"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
-msgstr "Synchronizovat fotografie"
+msgstr "Synchronizovat fotky"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Disk"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -88,9 +88,8 @@ msgid "Scrobble"
 msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Poslouchejte svou hudbu"
+msgstr "Scrobblujte svou hudbu"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
 msgid "Mail Account"
@@ -102,7 +101,7 @@ msgstr "Stáhnout zprávy z IMAP serveru"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -110,7 +109,7 @@ msgstr "Přistupujte k jakémukoliv obsahu z Facebooku z vašeho počítače"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
@@ -118,7 +117,7 @@ msgstr "Přistupovat k mailu pomocí FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -126,16 +125,15 @@ msgstr "Přistupujte ke všem službám Google z vašeho počítače"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
-msgstr "Poslouchejte svou hudbu"
+msgstr "Scrobblujte svou hudbu"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -181,9 +179,8 @@ msgstr "Účet '%s' byl odebrán."
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128 src/Plug.vala:231
 #: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
-#, fuzzy
 msgid "New Account"
-msgstr "Jiný účet"
+msgstr "Nový účet"
 
 #: src/Authentification/MailDialog.vala:71
 #: src/Authentification/MailDialog.vala:115
@@ -221,7 +218,7 @@ msgstr "Přihlásit se"
 
 #: src/Authentification/PasswordDialog.vala:70
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:83
 msgid "New Password"
