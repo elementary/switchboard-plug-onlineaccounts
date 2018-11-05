@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-24 08:31-0700\n"
 "PO-Revision-Date: 2018-11-05 01:09+0000\n"
-"Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/bs/>\n"
 "Language: bs\n"
@@ -251,7 +251,7 @@ msgstr "Online korisnički računi"
 #: src/Authentification/WebDialog.vala:38
 #: src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "Učitavam..."
+msgstr "Učitavam…"
 
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
