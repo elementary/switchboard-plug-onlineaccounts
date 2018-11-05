@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-24 08:31-0700\n"
-"PO-Revision-Date: 2018-11-05 01:08+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"PO-Revision-Date: 2018-11-05 01:09+0000\n"
+"Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/bs/>\n"
 "Language: bs\n"
@@ -150,7 +150,7 @@ msgstr "Vrati"
 
 #: src/OnlineAccounts.vala:87 src/Plug.vala:58
 msgid "Add a new account…"
-msgstr "Dodaj novi korisnički račun…"
+msgstr "Dodaj novi račun…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
