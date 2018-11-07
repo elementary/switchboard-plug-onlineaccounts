@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-24 08:31-0700\n"
-"PO-Revision-Date: 2018-10-12 12:23+0000\n"
+"PO-Revision-Date: 2018-11-07 13:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -168,9 +168,7 @@ msgstr "オンラインアカウントを接続しましょう"
 
 #: src/OnlineAccounts.vala:169 src/Plug.vala:148
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"メール、連絡先、カレンダーのようなアプリを接続するにはサインインしてくださ"
-"い。"
+msgstr "メール・連絡先・カレンダーといったアプリを接続するにはサインインしてください。"
 
 #: src/OnlineAccounts.vala:254 src/Plug.vala:231
 #, c-format
@@ -207,7 +205,7 @@ msgstr "なし"
 
 #: src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr "IMAP クレジットを使用"
+msgstr "IMAP 証明書を使用"
 
 #: src/Authentification/MailDialog.vala:140
 msgid "No authentication required"
@@ -228,7 +226,7 @@ msgstr "新しいパスワード"
 
 #: src/Authentification/PasswordDialog.vala:88
 msgid "Confirm Password"
-msgstr "パスワードの確認"
+msgstr "パスワードを確認"
 
 #: src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
@@ -244,7 +242,7 @@ msgstr "上のテキストをここに入力"
 
 #: src/Authentification/PasswordDialog.vala:113
 msgid "Don't have an account? Sign Up"
-msgstr "アカウントをお持ちではありませんか？ サインアップ"
+msgstr "アカウントをお持ちではありませんか？サインアップしましょう"
 
 #: src/Authentification/PasswordDialog.vala:306
 msgid "Other Account"
@@ -257,12 +255,12 @@ msgstr "読み込んでいます…"
 
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "認証情報を入力してください…"
+msgstr "証明書を入力してください…"
 
 #: src/Views/AccountView.vala:107 src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "あなたの %s アカウントにリンクするアプリがインストールされていません"
+msgstr "お使いの %s アカウントに関連付けられたアプリがインストールされていません"
 
 #: src/Views/AccountView.vala:108 src/Views/AccountView.vala:110
 msgid "No Apps"
