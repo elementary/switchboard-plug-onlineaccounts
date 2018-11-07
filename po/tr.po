@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-24 08:31-0700\n"
-"PO-Revision-Date: 2018-11-06 21:29+0000\n"
+"PO-Revision-Date: 2018-11-07 16:52+0000\n"
 "Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -85,7 +85,7 @@ msgstr "Dosyalarınızı senkronize edin"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr "Scrobble"
+msgstr "Herkese-Açık Yap"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
@@ -153,7 +153,7 @@ msgstr "Geri Yükle"
 
 #: src/OnlineAccounts.vala:87 src/Plug.vala:58
 msgid "Add a new account…"
-msgstr "Yeni hesap ekle..."
+msgstr "Yeni hesap ekle…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
@@ -229,7 +229,7 @@ msgstr "Şifreyi Onayla"
 
 #: src/Authentification/PasswordDialog.vala:96
 msgid "Forgot password…"
-msgstr "Şifremi unuttum..."
+msgstr "Şifremi unuttum…"
 
 #: src/Authentification/PasswordDialog.vala:101
 msgid "Refresh Captcha"
@@ -250,11 +250,11 @@ msgstr "Diğer Hesaplar"
 #: src/Authentification/WebDialog.vala:38
 #: src/Authentification/WebDialog.vala:133
 msgid "Loading…"
-msgstr "Yükleniyor..."
+msgstr "Yükleniyor…"
 
 #: src/Authentification/WebDialog.vala:126
 msgid "Please enter your credentials…"
-msgstr "Lütfen bilgilerinizi giriniz..."
+msgstr "Lütfen bilgilerinizi giriniz…"
 
 #: src/Views/AccountView.vala:107 src/Views/AccountView.vala:109
 #, c-format
