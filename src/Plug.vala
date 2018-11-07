@@ -1,6 +1,5 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
-/*-
- * Copyright (c) 2013 Pantheon Developers (http://launchpad.net/online-accounts-plug)
+/*
+ * Copyright 2013-2018 elementary, Inc. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,25 +16,23 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301 USA.
  *
- * Authored by: Corentin Noël <tintou@mailoo.org>
+ * Authored by: Corentin Noël <corentin@elementary.io>
  */
-namespace OnlineAccounts {
 
+namespace OnlineAccounts {
     public static Plug plug;
+
     public class Plug : Switchboard.Plug {
         public signal void hide_request ();
 
-        Gtk.Stack stack;
-        Gtk.Grid grid;
-        Gtk.Grid main_grid;
-        AccountView account_view;
-        SourceSelector source_selector;
-        Gtk.Paned paned;
-        OnlineAccounts.Server oa_server;
-        Gtk.InfoBar infobar;
-        Gee.HashMap<int, Ag.Provider> providers_map;
-        private Granite.Widgets.Toast toast;
-        Granite.Widgets.Welcome welcome;
+        private Gtk.Stack stack;
+        private Gtk.Grid grid;
+        private Gtk.Grid main_grid;
+        private AccountView account_view;
+        private SourceSelector source_selector;
+        private OnlineAccounts.Server oa_server;
+        private Gtk.InfoBar infobar;
+        private Gee.HashMap<int, Ag.Provider> providers_map;
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -52,7 +49,7 @@ namespace OnlineAccounts {
 
         public override Gtk.Widget get_widget () {
             if (stack == null) {
-                toast = new Granite.Widgets.Toast ("");
+                var toast = new Granite.Widgets.Toast ("");
                 toast.set_default_action (_("Restore"));
 
                 var info_label = new Gtk.Label (_("Add a new account…"));
@@ -61,34 +58,44 @@ namespace OnlineAccounts {
                 infobar = new Gtk.InfoBar ();
                 infobar.add_button (_("Cancel"), 0);
                 infobar.no_show_all = true;
-                infobar.response.connect ((id) => {
-                    switch_to_main ();
-                    infobar.hide ();
-                });
 
                 var container = infobar.get_content_area () as Gtk.Container;
                 container.add (info_label);
 
-                stack = new Gtk.Stack ();
-                stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-                main_grid = new Gtk.Grid ();
-                main_grid.orientation = Gtk.Orientation.VERTICAL;
-                paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-
                 grid = new Gtk.Grid ();
                 grid.expand = true;
+
                 source_selector = new SourceSelector ();
 
+                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
                 paned.pack1 (source_selector, false, false);
                 paned.pack2 (grid, true, false);
                 paned.set_position (200);
 
-                create_welcome ();
+                var welcome = new Granite.Widgets.Welcome (
+                    _("Connect Your Online Accounts"),
+                    _("Sign in to connect with apps like Mail, Contacts, and Calendar.")
+                );
+                welcome.expand = true;
+
+                var manager = new Ag.Manager ();
+                foreach (var provider in manager.list_providers ()) {
+                    if (provider == null)
+                        continue;
+                    if (provider.get_plugin_name () == null)
+                        continue;
+                    var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
+                    var id = welcome.append (provider.get_icon_name (), provider.get_display_name (), description ?? "");
+                    providers_map.set (id, provider);
+                }
 
                 var scrolled_welcome = new Gtk.ScrolledWindow (null, null);
                 scrolled_welcome.expand = true;
                 scrolled_welcome.hscrollbar_policy = Gtk.PolicyType.NEVER;
                 scrolled_welcome.add (welcome);
+
+                stack = new Gtk.Stack ();
+                stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
                 stack.add_named (scrolled_welcome, "welcome");
                 stack.add_named (paned, "main");
                 stack.show_all ();
@@ -102,8 +109,15 @@ namespace OnlineAccounts {
                 overlay.add_overlay (overlay_grid);
                 overlay.add_overlay (toast);
 
+                main_grid = new Gtk.Grid ();
+                main_grid.orientation = Gtk.Orientation.VERTICAL;
                 main_grid.add (overlay);
                 main_grid.show_all ();
+
+                infobar.response.connect ((id) => {
+                    switch_to_main ();
+                    infobar.hide ();
+                });
 
                 toast.closed.connect (() => {
                     AccountsManager.get_default ().remove_cached_account ();
@@ -119,8 +133,8 @@ namespace OnlineAccounts {
                 });
 
                 source_selector.new_account_request.connect (() => {
-                    add_return ();
-                    switch_to_welcome ();
+                    infobar.show ();
+                    stack.set_visible_child_name ("welcome");
                 });
 
                 oa_server = new OnlineAccounts.Server ();
@@ -133,42 +147,33 @@ namespace OnlineAccounts {
                 }
 
                 accounts_manager.account_removed.connect ((account) => {
-                    account_removed (account.ag_account.get_display_name ());
+                    var account_name = account.ag_account.get_display_name () ?? _("New Account");
+
+                    toast.title = _("Account '%s' Removed.").printf (account_name);
+                    toast.send_notification ();
+
+                    if (AccountsManager.get_default ().accounts_available.size <= 0) {
+                        stack.set_visible_child_name ("welcome");
+                    }
                 });
 
                 accounts_manager.account_added.connect ((account) => {
                     switch_to_main ();
+                });
+
+                welcome.activated.connect ((id) => {
+                    var prov = providers_map.get (id);
+                    var ag_manager = new Ag.Manager ();
+                    var ag_account = ag_manager.create_account (prov.get_name ());
+                    var selected_account = new Account (ag_account);
+                    selected_account.authenticate.begin ();
                 });
             }
 
             return main_grid;
         }
 
-        private void create_welcome () {
-            welcome = new Granite.Widgets.Welcome (_("Connect Your Online Accounts"), _("Sign in to connect with apps like Mail, Contacts, and Calendar."));
-            welcome.expand = true;
-            var manager = new Ag.Manager ();
-            foreach (var provider in manager.list_providers ()) {
-                if (provider == null)
-                    continue;
-                if (provider.get_plugin_name () == null)
-                    continue;
-                var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
-                var id = welcome.append (provider.get_icon_name (), provider.get_display_name (), description ?? "");
-                providers_map.set (id, provider);
-            }
-
-            welcome.activated.connect ((id) => {
-                var prov = providers_map.get (id);
-                var ag_manager = new Ag.Manager ();
-                var ag_account = ag_manager.create_account (prov.get_name ());
-                var account = new Account (ag_account);
-                account.authenticate.begin ();
-            });
-        }
-
         public override void shown () {
-            
         }
 
         public override void hidden () {
@@ -178,7 +183,6 @@ namespace OnlineAccounts {
         }
 
         public override void search_callback (string location) {
-            
         }
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
@@ -192,7 +196,7 @@ namespace OnlineAccounts {
             }
 
             if (AccountsManager.get_default ().accounts_available.size <= 0) {
-                switch_to_welcome ();
+                stack.set_visible_child_name ("welcome");
                 return;
             }
 
@@ -216,42 +220,12 @@ namespace OnlineAccounts {
 
         public void switch_to_main () {
             if (AccountsManager.get_default ().accounts_available.size <= 0) {
-                switch_to_welcome ();
+                stack.set_visible_child_name ("welcome");
                 return;
             }
 
             stack.set_visible_child_name ("main");
         }
-
-        public void switch_to_welcome () {
-            stack.set_visible_child_name ("welcome");
-        }
-
-        private void account_removed (string? account_name) {
-            toast.title = _("Account '%s' Removed.").printf (account_name ?? _("New Account"));
-            toast.send_notification ();
-            if (AccountsManager.get_default ().accounts_available.size <= 0)
-                switch_to_welcome ();
-        }
-
-        private void add_return () {
-            infobar.show ();
-        }
-    }
-
-    public static string string_from_string_array (string[] strv, string separator = " ") {
-        string output = "";
-        bool first = true;
-        foreach (var str in strv) {
-            if (first) {
-                output = str;
-                first = false;
-            } else {
-                output = output + separator + str;
-            }
-        }
-
-        return output;
     }
 }
 
