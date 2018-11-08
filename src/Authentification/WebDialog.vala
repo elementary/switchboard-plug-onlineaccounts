@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
+ * Copyright 2013-2018 elementary, Inc. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -21,44 +21,46 @@
  */
 
 public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
-    WebKit.WebView webview;
-    string oauth_open_url;
-    string oauth_final_url;
-    string oauth_response;
-    Gtk.Label info_label;
-    Gtk.Spinner spinner;
+    private WebKit.WebView webview;
+    private string oauth_open_url;
+    private string oauth_final_url;
+    private string oauth_response;
+    private Gtk.Label info_label;
+    private Gtk.Spinner spinner;
 
     public WebDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
-        var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
-        var container = infobar.get_content_area () as Gtk.Container;
-        var container_grid = new Gtk.Grid ();
-        container_grid.column_spacing = 12;
         info_label = new Gtk.Label (_("Loading…"));
-        container_grid.valign = Gtk.Align.CENTER;
+
         spinner = new Gtk.Spinner ();
         spinner.start ();
-        container_grid.attach (spinner, 0, 0, 1, 1);
-        container_grid.attach (info_label, 1, 0, 1, 1);
-        container.add (container_grid);
+
+        var container_grid = new Gtk.Grid ();
+        container_grid.column_spacing = 6;
+        container_grid.valign = Gtk.Align.CENTER;
+        container_grid.add (info_label);
+        container_grid.add (spinner);
+
+        var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
+        infobar.get_content_area ().add (container_grid);
+
+        WebKit.WebContext.get_default ().set_preferred_languages (GLib.Intl.get_language_names ());
+
+        webview = new WebKit.WebView ();
+        webview.expand = true;
+
+        attach (webview, 0, 0);
+        attach (infobar, 0, 1);
+        show_all ();
+
+        set_parameters (params);
+
         infobar.response.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();
         });
-
-        WebKit.WebContext.get_default ().set_preferred_languages (GLib.Intl.get_language_names ());
-        webview = new WebKit.WebView ();
-        webview.expand = true;
-        var event_box = new Gtk.EventBox ();
-        event_box.add (webview);
-        event_box.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        event_box.expand = true;
-        attach (infobar, 0, 0, 1, 1);
-        attach (event_box, 0, 1, 1, 1);
-        show_all ();
-        set_parameters (params);
     }
 
     public override bool set_parameters (HashTable<string, Variant> params) {
