@@ -19,17 +19,15 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.AddAccountView : Gtk.Grid {
+public class OnlineAccounts.AddAccountView : Gtk.Dialog {
     construct {
-        halign = Gtk.Align.CENTER;
-        margin = 12;
-        orientation = Gtk.Orientation.VERTICAL;
+        height_request = 600;
 
         var primary_label = new Gtk.Label (_("Connect Your Online Accounts"));
         primary_label.wrap = true;
         primary_label.max_width_chars = 60;
         primary_label.xalign = 0;
-        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_PRIMARY_LABEL);
 
         var secondary_label = new Gtk.Label (_("Sign in to connect with apps like Mail, Contacts, and Calendar."));
         secondary_label.wrap = true;
@@ -57,15 +55,30 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
         frame.margin_top = 24;
         frame.add (scrolled_window);
 
-        add (primary_label);
-        add (secondary_label);
-        add (frame);
+        var grid = new Gtk.Grid ();
+        grid.halign = Gtk.Align.CENTER;
+        grid.margin = 12;
+        grid.margin_top = 0;
+        grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.add (primary_label);
+        grid.add (secondary_label);
+        grid.add (frame);
+        grid.show_all ();
+
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+        get_action_area ().margin = 6;
+        get_content_area ().add (grid);
+
+        response.connect (() => {
+            destroy ();
+        });
 
         listbox.row_activated.connect ((row) => {
             var provider = ((AccountRow) row).provider;
             var ag_account = manager.create_account (provider.get_name ());
             var selected_account = new Account (ag_account);
             selected_account.authenticate.begin ();
+            destroy ();
         });
     }
 

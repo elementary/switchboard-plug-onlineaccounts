@@ -10,7 +10,7 @@ src/Authentification/RequestInfo.vala
 src/Authentification/RequestQueue.vala
 src/Authentification/Server.vala
 src/Authentification/WebDialog.vala
-src/Views/AddAccountView.vala
+src/NewAccountDialog.vala
 src/Views/AccountView.vala
 src/Views/SourceSelector.vala
 src/Widgets/ACListBox.vala

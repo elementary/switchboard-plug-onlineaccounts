@@ -72,6 +72,10 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         list_box.row_activated.connect ((row) => {
             account_selected (((AccountRow) row).account);
         });
+
+        list_box.row_selected.connect ((row) => {
+            remove_button.sensitive = row != null;
+        });
     }
 
     private void add_account_callback (OnlineAccounts.Account account) {
