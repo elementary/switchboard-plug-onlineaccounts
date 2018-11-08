@@ -32,7 +32,6 @@ namespace OnlineAccounts {
         private SourceSelector source_selector;
         private OnlineAccounts.Server oa_server;
         private Gtk.InfoBar infobar;
-        private Gee.HashMap<int, Ag.Provider> providers_map;
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -43,7 +42,6 @@ namespace OnlineAccounts {
                     description: _("Manage online accounts and connected applications"),
                     icon: "preferences-desktop-online-accounts",
                     supported_settings: settings);
-            providers_map = new Gee.HashMap<int, Ag.Provider> (null, null);
             plug = this;
         }
 
@@ -52,15 +50,9 @@ namespace OnlineAccounts {
                 var toast = new Granite.Widgets.Toast ("");
                 toast.set_default_action (_("Restore"));
 
-                var info_label = new Gtk.Label (_("Add a new account…"));
-                info_label.show ();
-
                 infobar = new Gtk.InfoBar ();
                 infobar.add_button (_("Cancel"), 0);
                 infobar.no_show_all = true;
-
-                var container = infobar.get_content_area () as Gtk.Container;
-                container.add (info_label);
 
                 grid = new Gtk.Grid ();
                 grid.expand = true;
@@ -72,38 +64,18 @@ namespace OnlineAccounts {
                 paned.pack2 (grid, true, false);
                 paned.set_position (200);
 
-                var welcome = new Granite.Widgets.Welcome (
-                    _("Connect Your Online Accounts"),
-                    _("Sign in to connect with apps like Mail, Contacts, and Calendar.")
-                );
-                welcome.expand = true;
-
-                var manager = new Ag.Manager ();
-                foreach (var provider in manager.list_providers ()) {
-                    if (provider == null)
-                        continue;
-                    if (provider.get_plugin_name () == null)
-                        continue;
-                    var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
-                    var id = welcome.append (provider.get_icon_name (), provider.get_display_name (), description ?? "");
-                    providers_map.set (id, provider);
-                }
-
-                var scrolled_welcome = new Gtk.ScrolledWindow (null, null);
-                scrolled_welcome.expand = true;
-                scrolled_welcome.hscrollbar_policy = Gtk.PolicyType.NEVER;
-                scrolled_welcome.add (welcome);
+                var welcome = new AddAccountView ();
 
                 stack = new Gtk.Stack ();
                 stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-                stack.add_named (scrolled_welcome, "welcome");
+                stack.add_named (welcome, "welcome");
                 stack.add_named (paned, "main");
                 stack.show_all ();
 
                 var overlay_grid = new Gtk.Grid ();
                 overlay_grid.orientation = Gtk.Orientation.VERTICAL;
-                overlay_grid.add (infobar);
                 overlay_grid.add (stack);
+                overlay_grid.add (infobar);
 
                 var overlay = new Gtk.Overlay ();
                 overlay.add_overlay (overlay_grid);
@@ -159,14 +131,6 @@ namespace OnlineAccounts {
 
                 accounts_manager.account_added.connect ((account) => {
                     switch_to_main ();
-                });
-
-                welcome.activated.connect ((id) => {
-                    var prov = providers_map.get (id);
-                    var ag_manager = new Ag.Manager ();
-                    var ag_account = ag_manager.create_account (prov.get_name ());
-                    var selected_account = new Account (ag_account);
-                    selected_account.authenticate.begin ();
                 });
             }
 
