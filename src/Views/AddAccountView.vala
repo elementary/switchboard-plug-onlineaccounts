@@ -21,6 +21,10 @@
 
 public class OnlineAccounts.AddAccountView : Gtk.Grid {
     construct {
+        halign = Gtk.Align.CENTER;
+        margin = 12;
+        orientation = Gtk.Orientation.VERTICAL;
+
         var primary_label = new Gtk.Label (_("Connect Your Online Accounts"));
         primary_label.wrap = true;
         primary_label.max_width_chars = 60;
@@ -37,10 +41,11 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
         listbox.vexpand = true;
 
         var manager = new Ag.Manager ();
-        foreach (var provider in manager.list_providers ()) {
+        foreach (unowned Ag.Provider provider in manager.list_providers ()) {
             if (provider == null || provider.get_plugin_name () == null) {
                 continue;
             }
+
             listbox.add (new AccountRow (provider));
         }
 
@@ -52,9 +57,6 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
         frame.margin_top = 24;
         frame.add (scrolled_window);
 
-        halign = Gtk.Align.CENTER;
-        margin = 12;
-        orientation = Gtk.Orientation.VERTICAL;
         add (primary_label);
         add (secondary_label);
         add (frame);
@@ -68,7 +70,7 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
     }
 
     private class AccountRow : Gtk.ListBoxRow {
-        public Ag.Provider provider {get; construct; }
+        public Ag.Provider provider { get; construct; }
 
         public AccountRow (Ag.Provider provider) {
             Object (provider: provider);
