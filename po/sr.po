@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-24 08:31-0700\n"
+"POT-Creation-Date: 2018-11-08 13:06-0800\n"
 "PO-Revision-Date: 2017-01-07 16:45+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
@@ -139,15 +139,15 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Приступите свим Аутлук и ОнеДрајв услугама на вашем рачунару"
 
-#: src/OnlineAccounts.vala:46 src/Plug.vala:45
+#: src/OnlineAccounts.vala:46 src/Plug.vala:45 src/Plug.vala:41
 msgid "Online Accounts"
 msgstr "Налози на мрежи"
 
-#: src/OnlineAccounts.vala:47 src/Plug.vala:46
+#: src/OnlineAccounts.vala:47 src/Plug.vala:46 src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
 msgstr "Управљајте налозима на мрежи и повезаним програмима"
 
-#: src/OnlineAccounts.vala:65 src/Plug.vala:56
+#: src/OnlineAccounts.vala:65 src/Plug.vala:56 src/Plug.vala:51
 msgid "Restore"
 msgstr "Поврати"
 
@@ -157,20 +157,22 @@ msgstr "Додај нови налог…"
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
-#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62
+#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62 src/Plug.vala:54
 msgid "Cancel"
 msgstr "Откажи"
 
 #: src/OnlineAccounts.vala:169 src/Plug.vala:148
+#: src/Views/AddAccountView.vala:28
 msgid "Connect Your Online Accounts"
 msgstr "Повежите ваше налоге на мрежи"
 
 #: src/OnlineAccounts.vala:169 src/Plug.vala:148
+#: src/Views/AddAccountView.vala:34
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Упишите се да се повежете са програмима као што су Пошта, Контакти и Каленар."
 
-#: src/OnlineAccounts.vala:254 src/Plug.vala:231
+#: src/OnlineAccounts.vala:254 src/Plug.vala:231 src/Plug.vala:124
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Налог „%s“ је уклоњен."
@@ -179,6 +181,7 @@ msgstr "Налог „%s“ је уклоњен."
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128 src/Plug.vala:231
 #: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
+#: src/Plug.vala:122
 #, fuzzy
 msgid "New Account"
 msgstr "Други налог"

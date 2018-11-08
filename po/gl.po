@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-24 08:31-0700\n"
+"POT-Creation-Date: 2018-11-08 13:06-0800\n"
 "PO-Revision-Date: 2016-06-03 03:11+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -138,15 +138,15 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Aceda a todos os servizos do Outlook e OneDrive na súa computadora"
 
-#: src/OnlineAccounts.vala:46 src/Plug.vala:45
+#: src/OnlineAccounts.vala:46 src/Plug.vala:45 src/Plug.vala:41
 msgid "Online Accounts"
 msgstr "Contas en liña"
 
-#: src/OnlineAccounts.vala:47 src/Plug.vala:46
+#: src/OnlineAccounts.vala:47 src/Plug.vala:46 src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
 msgstr ""
 
-#: src/OnlineAccounts.vala:65 src/Plug.vala:56
+#: src/OnlineAccounts.vala:65 src/Plug.vala:56 src/Plug.vala:51
 msgid "Restore"
 msgstr "Restabelecer"
 
@@ -156,20 +156,22 @@ msgstr "Engadir unha conta nova..."
 
 #: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
 #: src/Authentification/PasswordDialog.vala:107
-#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62
+#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62 src/Plug.vala:54
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/OnlineAccounts.vala:169 src/Plug.vala:148
+#: src/Views/AddAccountView.vala:28
 msgid "Connect Your Online Accounts"
 msgstr "Conecte coas súas contas en liña"
 
 #: src/OnlineAccounts.vala:169 src/Plug.vala:148
+#: src/Views/AddAccountView.vala:34
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Acceda para conectarse con aplicativos de correo, contactos e calendario."
 
-#: src/OnlineAccounts.vala:254 src/Plug.vala:231
+#: src/OnlineAccounts.vala:254 src/Plug.vala:231 src/Plug.vala:124
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "A conta «%s» foi retirada."
@@ -178,6 +180,7 @@ msgstr "A conta «%s» foi retirada."
 #: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:128 src/Plug.vala:231
 #: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
+#: src/Plug.vala:122
 #, fuzzy
 msgid "New Account"
 msgstr "Contas en liña"
