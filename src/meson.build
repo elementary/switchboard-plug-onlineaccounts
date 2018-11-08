@@ -12,6 +12,7 @@ plug_files = files(
     'Authentification/Server.vala',
     'Authentification/WebDialog.vala',
     'Views/AccountView.vala',
+    'Views/AddAccountView.vala',
     'Views/SourceSelector.vala',
     'Widgets/ACListBox.vala',
     'Widgets/AppRow.vala',
