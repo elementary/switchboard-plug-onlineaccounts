@@ -57,7 +57,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         webview = new WebKit.WebView ();
         webview.expand = true;
 
-        attach (header_box  , 0, 0);
+        attach (header_box, 0, 0);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
         attach (webview, 0, 2);
         show_all ();

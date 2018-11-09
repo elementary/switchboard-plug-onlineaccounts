@@ -104,6 +104,7 @@ namespace OnlineAccounts {
                     }
 
                     new_account_dialog.run ();
+                    new_account_dialog = null;
                 });
 
                 oa_server = new OnlineAccounts.Server ();
