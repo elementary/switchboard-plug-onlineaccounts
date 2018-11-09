@@ -28,7 +28,6 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
     Gtk.Entry new_password_entry;
     Gtk.Entry confirm_password_entry;
     Gtk.Entry captcha_entry;
-    Gtk.Button cancel_button;
     Gtk.Button save_button;
     Gtk.LinkButton forgot_button;
     Gtk.LinkButton signup_button;
@@ -55,12 +54,17 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
     public PasswordDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
-        halign = Gtk.Align.CENTER;
-        valign = Gtk.Align.CENTER;
-        column_spacing = 12;
-        row_spacing = 6;
-        orientation = Gtk.Orientation.VERTICAL;
-        get_style_context ().add_class ("login");
+        var info_label = new Gtk.Label (_("Please enter your credentials…"));
+
+        var back_button = new Gtk.Button.with_label (_("Back"));
+        back_button.halign = Gtk.Align.START;
+        back_button.margin = 6;
+        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+
+        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        header_box.hexpand = true;
+        header_box.add (back_button);
+        header_box.set_center_widget (info_label);
 
         provider_label = new Gtk.Label ("");
         provider_label.get_style_context ().add_class ("h1");
@@ -104,8 +108,6 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         message_label = new Gtk.Label ("");
         message_label.no_show_all = true;
 
-        cancel_button = new Gtk.Button.with_label (_("Cancel"));
-        cancel_button.hexpand = true;
         save_button = new Gtk.Button.with_label (_("Log In"));
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         save_button.hexpand = true;
@@ -114,13 +116,25 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
 
         set_parameters (params);
 
-        add (provider_label);
+        var grid = new Gtk.Grid ();
+        grid.column_spacing = 12;
+        grid.halign = Gtk.Align.CENTER;
+        grid.valign = Gtk.Align.CENTER;
+        grid.margin = 12;
+        grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.row_spacing = 6;
+        grid.get_style_context ().add_class ("login");
+        grid.add (provider_label);
+
+        attach (header_box, 0, 0);
+        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
+        attach (grid, 0, 2);
 
         if (query_url) {
-            add (url_entry);
+            grid.add (url_entry);
         }
 
-        add (entry_grid);
+        grid.add (entry_grid);
 
         if (query_username) {
             entry_grid.add (username_entry);
@@ -130,20 +144,14 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
             entry_grid.add (password_entry);
         }
 
-        var save_box = new Gtk.Grid ();
-        save_box.margin_top = 12;
-        save_box.column_spacing = 6;
-        save_box.add (cancel_button);
-        save_box.add (save_button);
-
-        add (save_box);
+        grid.add (save_button);
 
         if (forgot_password_url != null) {
-            add (forgot_button);
+            grid.add (forgot_button);
         }
 
         if (signup_url != null) {
-            add (signup_button);
+            grid.add (signup_button);
         }
 
         if (query_confirm) {
@@ -152,11 +160,11 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         }
 
         if (query_captcha) {
-            add (captcha_image);
-            add (captcha_entry);
+            grid.add (captcha_image);
+            grid.add (captcha_entry);
         }
 
-        add (message_label);
+        grid.add (message_label);
 
         password_entry.activate.connect (() => {
             if (save_button.sensitive) {
@@ -164,7 +172,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
             }
         });
         save_button.clicked.connect (() => finished ());
-        cancel_button.clicked.connect (() => {
+        back_button.clicked.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();

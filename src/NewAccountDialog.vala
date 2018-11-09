@@ -19,17 +19,18 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.AddAccountView : Gtk.Grid {
+public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
+    private Gtk.Stack stack;
+
     construct {
-        halign = Gtk.Align.CENTER;
-        margin = 12;
-        orientation = Gtk.Orientation.VERTICAL;
+        default_height = 600;
+        default_width = 450;
 
         var primary_label = new Gtk.Label (_("Connect Your Online Accounts"));
         primary_label.wrap = true;
         primary_label.max_width_chars = 60;
         primary_label.xalign = 0;
-        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_PRIMARY_LABEL);
 
         var secondary_label = new Gtk.Label (_("Sign in to connect with apps like Mail, Contacts, and Calendar."));
         secondary_label.wrap = true;
@@ -38,7 +39,7 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
 
         var listbox = new Gtk.ListBox ();
         listbox.activate_on_single_click = true;
-        listbox.vexpand = true;
+        listbox.expand = true;
 
         var manager = new Ag.Manager ();
         foreach (unowned Ag.Provider provider in manager.list_providers ()) {
@@ -53,13 +54,31 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
         scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
         scrolled_window.add (listbox);
 
+        stack = new Gtk.Stack ();
+        stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+        stack.add (scrolled_window);
+
         var frame = new Gtk.Frame (null);
         frame.margin_top = 24;
-        frame.add (scrolled_window);
+        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add (stack);
 
-        add (primary_label);
-        add (secondary_label);
-        add (frame);
+        var grid = new Gtk.Grid ();
+        grid.margin = 12;
+        grid.margin_top = 0;
+        grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.add (primary_label);
+        grid.add (secondary_label);
+        grid.add (frame);
+        grid.show_all ();
+
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+        get_action_area ().margin = 6;
+        get_content_area ().add (grid);
+
+        response.connect (() => {
+            destroy ();
+        });
 
         listbox.row_activated.connect ((row) => {
             var provider = ((AccountRow) row).provider;
@@ -67,6 +86,11 @@ public class OnlineAccounts.AddAccountView : Gtk.Grid {
             var selected_account = new Account (ag_account);
             selected_account.authenticate.begin ();
         });
+    }
+
+    public void add_widget (Gtk.Widget widget, string name) {
+        stack.add_named (widget, name);
+        stack.visible_child_name = name;
     }
 
     private class AccountRow : Gtk.ListBoxRow {

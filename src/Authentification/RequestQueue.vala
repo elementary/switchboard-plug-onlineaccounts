@@ -67,7 +67,6 @@ public class OnlineAccounts.RequestQueue : Object {
         dialogs.add (dialog);
         if (is_idle == true) {
             is_idle = false;
-            plug.switch_to_widget (dialog.request_id);
         }
 
         dialog.finished.connect (() => {

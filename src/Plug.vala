@@ -28,10 +28,10 @@ namespace OnlineAccounts {
         private Gtk.Stack stack;
         private Gtk.Grid grid;
         private Gtk.Grid main_grid;
+        private NewAccountDialog new_account_dialog;
         private AccountView account_view;
         private SourceSelector source_selector;
         private OnlineAccounts.Server oa_server;
-        private Gtk.InfoBar infobar;
 
         public Plug () {
             var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -50,46 +50,38 @@ namespace OnlineAccounts {
                 var toast = new Granite.Widgets.Toast ("");
                 toast.set_default_action (_("Restore"));
 
-                infobar = new Gtk.InfoBar ();
-                infobar.add_button (_("Cancel"), 0);
-                infobar.no_show_all = true;
-
                 grid = new Gtk.Grid ();
                 grid.expand = true;
 
                 source_selector = new SourceSelector ();
 
-                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-                paned.pack1 (source_selector, false, false);
-                paned.pack2 (grid, true, false);
-                paned.set_position (200);
-
-                var welcome = new AddAccountView ();
+                var welcome = new Granite.Widgets.AlertView (
+                    _("Connect Your Online Accounts"),
+                    _("Connect online accounts by clicking the icon in the toolbar below."),
+                    "preferences-desktop-online-accounts"
+                );
+                welcome.visible = true;
+                welcome.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
                 stack = new Gtk.Stack ();
                 stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
                 stack.add_named (welcome, "welcome");
-                stack.add_named (paned, "main");
+                stack.add_named (grid, "main");
                 stack.show_all ();
 
-                var overlay_grid = new Gtk.Grid ();
-                overlay_grid.orientation = Gtk.Orientation.VERTICAL;
-                overlay_grid.add (stack);
-                overlay_grid.add (infobar);
+                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+                paned.pack1 (source_selector, false, false);
+                paned.pack2 (stack, true, false);
+                paned.set_position (200);
 
                 var overlay = new Gtk.Overlay ();
-                overlay.add_overlay (overlay_grid);
+                overlay.add_overlay (paned);
                 overlay.add_overlay (toast);
 
                 main_grid = new Gtk.Grid ();
                 main_grid.orientation = Gtk.Orientation.VERTICAL;
                 main_grid.add (overlay);
                 main_grid.show_all ();
-
-                infobar.response.connect ((id) => {
-                    switch_to_main ();
-                    infobar.hide ();
-                });
 
                 toast.closed.connect (() => {
                     AccountsManager.get_default ().remove_cached_account ();
@@ -105,8 +97,14 @@ namespace OnlineAccounts {
                 });
 
                 source_selector.new_account_request.connect (() => {
-                    infobar.show ();
-                    stack.set_visible_child_name ("welcome");
+                    if (new_account_dialog == null) {
+                        new_account_dialog = new NewAccountDialog ();
+                        new_account_dialog.deletable = false;
+                        new_account_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
+                    }
+
+                    new_account_dialog.run ();
+                    new_account_dialog = null;
                 });
 
                 oa_server = new OnlineAccounts.Server ();
@@ -130,6 +128,7 @@ namespace OnlineAccounts {
                 });
 
                 accounts_manager.account_added.connect ((account) => {
+                    new_account_dialog.destroy ();
                     switch_to_main ();
                 });
             }
@@ -143,7 +142,6 @@ namespace OnlineAccounts {
         public override void hidden () {
             hide_request ();
             AccountsManager.get_default ().remove_cached_account ();
-            infobar.hide ();
         }
 
         public override void search_callback (string location) {
@@ -174,11 +172,10 @@ namespace OnlineAccounts {
         }
 
         public void add_widget_to_stack (Gtk.Widget widget, string name) {
-            stack.add_named (widget, name);
+            new_account_dialog.add_widget (widget, name);
         }
 
         public void switch_to_widget (string name) {
-            infobar.hide ();
             stack.set_visible_child_name (name);
         }
 

@@ -21,7 +21,6 @@
  */
 
 public class OnlineAccounts.MailDialog : OnlineAccounts.Dialog {
-    Gtk.Button cancel_button;
     Gtk.Button save_button;
 
     Gtk.Entry imap_username_entry;
@@ -45,6 +44,18 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.Dialog {
 
     public MailDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
+
+        var info_label = new Gtk.Label (_("Please enter your credentials…"));
+
+        var back_button = new Gtk.Button.with_label (_("Back"));
+        back_button.halign = Gtk.Align.START;
+        back_button.margin = 6;
+        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+
+        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        header_box.hexpand = true;
+        header_box.add (back_button);
+        header_box.set_center_widget (info_label);
 
         var main_grid = new Gtk.Grid ();
         main_grid.margin = 12;
@@ -153,19 +164,11 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.Dialog {
         smtp_encryption_grid.add (smtp_encryption_label);
         smtp_encryption_grid.add (smtp_encryption_combobox);
 
-        cancel_button = new Gtk.Button.with_label (_("Cancel"));
-        cancel_button.hexpand = true;
-
         save_button = new Gtk.Button.with_label (_("Log In"));
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         save_button.hexpand = true;
+        save_button.margin_top = 18;
         save_button.sensitive = false;
-
-        var save_box = new Gtk.Grid ();
-        save_box.margin_top = 12;
-        save_box.column_spacing = 6;
-        save_box.add (cancel_button);
-        save_box.add (save_button);
 
         var entry_grid = new Gtk.Grid ();
         entry_grid.expand = true;
@@ -185,11 +188,14 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.Dialog {
 
         main_grid.add (provider_label);
         main_grid.add (entry_grid);
-        main_grid.add (save_box);
+        main_grid.add (save_button);
 
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.add (main_grid);
-        add (scrolled);
+
+        attach (header_box, 0, 0);
+        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
+        attach (scrolled, 0, 2);
 
         set_parameters (params);
 
@@ -290,7 +296,7 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.Dialog {
         });
 
         save_button.clicked.connect (() => finished ());
-        cancel_button.clicked.connect (() => {
+        back_button.clicked.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();

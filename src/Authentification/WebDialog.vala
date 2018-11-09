@@ -36,27 +36,35 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         spinner = new Gtk.Spinner ();
         spinner.start ();
 
+        var back_button = new Gtk.Button.with_label (_("Back"));
+        back_button.halign = Gtk.Align.START;
+        back_button.margin = 6;
+        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+
         var container_grid = new Gtk.Grid ();
         container_grid.column_spacing = 6;
         container_grid.valign = Gtk.Align.CENTER;
         container_grid.add (info_label);
         container_grid.add (spinner);
 
-        var infobar = new Gtk.InfoBar.with_buttons (_("Cancel"), 0);
-        infobar.get_content_area ().add (container_grid);
+        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        header_box.hexpand = true;
+        header_box.add (back_button);
+        header_box.set_center_widget (container_grid);
 
         WebKit.WebContext.get_default ().set_preferred_languages (GLib.Intl.get_language_names ());
 
         webview = new WebKit.WebView ();
         webview.expand = true;
 
-        attach (webview, 0, 0);
-        attach (infobar, 0, 1);
+        attach (header_box, 0, 0);
+        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
+        attach (webview, 0, 2);
         show_all ();
 
         set_parameters (params);
 
-        infobar.response.connect (() => {
+        back_button.clicked.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
             this.destroy ();
