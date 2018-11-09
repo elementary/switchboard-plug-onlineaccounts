@@ -34,7 +34,7 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
 
     construct {
         account.manager.list_applications_by_service (service).foreach ((app) => {
-            var row = new AppRow (account, app, service, identity);
+            var row = new OnlineAccounts.AppRow (account, app, service, identity);
             add (row);
             row.show_all ();
         });
@@ -47,7 +47,7 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
             var info = yield identity.query_info (null);
             var acl = info.get_access_control_list ();
             get_children ().foreach ((child) => {
-                var approw = child as AppRow;
+                var approw = child as OnlineAccounts.AppRow;
                 approw.check_acl (acl);
             });
         } catch (Error e) {
@@ -57,14 +57,14 @@ public class OnlineAccounts.ACListBox : Gtk.ListBox {
 
     public void allow_service () {
         get_children ().foreach ((child) => {
-            var approw = child as AppRow;
+            var approw = child as OnlineAccounts.AppRow;
             approw.allow_app.begin ();
         });
     }
 
     public void deny_service () {
         get_children ().foreach ((child) => {
-            var approw = child as AppRow;
+            var approw = child as OnlineAccounts.AppRow;
             approw.deny_app.begin ();
         });
     }

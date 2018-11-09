@@ -19,7 +19,7 @@
 * Authored by: Corentin Noël <corentin@elementary.io>
 */
 
-public class AppRow : Gtk.ListBoxRow {
+public class OnlineAccounts.AppRow : Gtk.ListBoxRow {
     public Ag.Account account { get; construct; }
     public Ag.Application app { get; construct; }
     public Ag.Service service { get; construct; }
