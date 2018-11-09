@@ -22,34 +22,33 @@
 
 public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
     public signal void refresh_captcha_needed ();
-    Gtk.Entry url_entry;
-    Gtk.Entry username_entry;
-    Gtk.Entry password_entry;
-    Gtk.Entry new_password_entry;
-    Gtk.Entry confirm_password_entry;
-    Gtk.Entry captcha_entry;
-    Gtk.Button save_button;
-    Gtk.LinkButton forgot_button;
-    Gtk.LinkButton signup_button;
-    Gtk.Image captcha_image;
-    Gtk.Label message_label;
-    Gtk.Label provider_label;
+    private Gtk.Entry username_entry;
+    private Gtk.Entry password_entry;
+    private Gtk.Entry new_password_entry;
+    private Gtk.Entry confirm_password_entry;
+    private Gtk.Entry captcha_entry;
+    private Gtk.Button save_button;
+    private Gtk.LinkButton forgot_button;
+    private Gtk.LinkButton signup_button;
+    private Gtk.Image captcha_image;
+    private Gtk.Label message_label;
+    private Gtk.Label provider_label;
 
-    bool query_url = false;
-    bool query_username = false;
-    bool query_password = false;
-    bool query_confirm = false;
-    bool query_captcha = false;
+    private bool query_url = false;
+    private bool query_username = false;
+    private bool query_password = false;
+    private bool query_confirm = false;
+    private bool query_captcha = false;
 
-    bool is_username_valid = false;
-    bool is_password_valid = false;
-    bool is_new_password_valid = false;
-    bool is_captcha_valid = false;
+    private bool is_username_valid = false;
+    private bool is_password_valid = false;
+    private bool is_new_password_valid = false;
+    private bool is_captcha_valid = false;
 
-    string display_name;
-    string old_password;
-    string forgot_password_url;
-    string signup_url;
+    private string display_name;
+    private string old_password;
+    private string forgot_password_url;
+    private string signup_url;
 
     public PasswordDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
@@ -70,7 +69,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         provider_label.get_style_context ().add_class ("h1");
         provider_label.margin_bottom = 24;
 
-        url_entry = new Gtk.Entry ();
+        var url_entry = new Gtk.Entry ();
         url_entry.placeholder_text = _("URL");
         url_entry.input_purpose = Gtk.InputPurpose.URL;
 
@@ -120,6 +119,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         grid.column_spacing = 12;
         grid.halign = Gtk.Align.CENTER;
         grid.valign = Gtk.Align.CENTER;
+        grid.vexpand = true;
         grid.margin = 12;
         grid.orientation = Gtk.Orientation.VERTICAL;
         grid.row_spacing = 6;
