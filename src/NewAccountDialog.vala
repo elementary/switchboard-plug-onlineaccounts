@@ -19,9 +19,11 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.AddAccountView : Gtk.Dialog {
+public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
+    private Gtk.Stack stack;
+
     construct {
-        height_request = 600;
+        height_request = 650;
 
         var primary_label = new Gtk.Label (_("Connect Your Online Accounts"));
         primary_label.wrap = true;
@@ -51,9 +53,14 @@ public class OnlineAccounts.AddAccountView : Gtk.Dialog {
         scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
         scrolled_window.add (listbox);
 
+        stack = new Gtk.Stack ();
+        stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+        stack.add (scrolled_window);
+
         var frame = new Gtk.Frame (null);
         frame.margin_top = 24;
-        frame.add (scrolled_window);
+        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add (stack);
 
         var grid = new Gtk.Grid ();
         grid.halign = Gtk.Align.CENTER;
@@ -78,8 +85,12 @@ public class OnlineAccounts.AddAccountView : Gtk.Dialog {
             var ag_account = manager.create_account (provider.get_name ());
             var selected_account = new Account (ag_account);
             selected_account.authenticate.begin ();
-            destroy ();
         });
+    }
+
+    public void add_widget (Gtk.Widget widget, string name) {
+        stack.add_named (widget, name);
+        stack.visible_child_name = name;
     }
 
     private class AccountRow : Gtk.ListBoxRow {

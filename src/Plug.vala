@@ -28,6 +28,7 @@ namespace OnlineAccounts {
         private Gtk.Stack stack;
         private Gtk.Grid grid;
         private Gtk.Grid main_grid;
+        private NewAccountDialog new_account_dialog;
         private AccountView account_view;
         private SourceSelector source_selector;
         private OnlineAccounts.Server oa_server;
@@ -96,9 +97,11 @@ namespace OnlineAccounts {
                 });
 
                 source_selector.new_account_request.connect (() => {
-                    var new_account_dialog = new AddAccountView ();
-                    new_account_dialog.deletable = false;
-                    new_account_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
+                    if (new_account_dialog == null) {
+                        new_account_dialog = new NewAccountDialog ();
+                        new_account_dialog.deletable = false;
+                        new_account_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
+                    }
 
                     new_account_dialog.run ();
                 });
@@ -124,6 +127,7 @@ namespace OnlineAccounts {
                 });
 
                 accounts_manager.account_added.connect ((account) => {
+                    new_account_dialog.destroy ();
                     switch_to_main ();
                 });
             }
@@ -167,8 +171,7 @@ namespace OnlineAccounts {
         }
 
         public void add_widget_to_stack (Gtk.Widget widget, string name) {
-            stack.add_named (widget, name);
-            source_selector.sensitive = false;
+            new_account_dialog.add_widget (widget, name);
         }
 
         public void switch_to_widget (string name) {
@@ -182,8 +185,6 @@ namespace OnlineAccounts {
             }
 
             stack.set_visible_child_name ("main");
-
-            source_selector.sensitive = true;
         }
     }
 }
