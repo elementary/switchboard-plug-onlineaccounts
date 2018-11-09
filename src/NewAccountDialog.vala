@@ -23,7 +23,8 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
     private Gtk.Stack stack;
 
     construct {
-        height_request = 650;
+        default_height = 600;
+        default_width = 450;
 
         var primary_label = new Gtk.Label (_("Connect Your Online Accounts"));
         primary_label.wrap = true;
@@ -38,7 +39,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
 
         var listbox = new Gtk.ListBox ();
         listbox.activate_on_single_click = true;
-        listbox.vexpand = true;
+        listbox.expand = true;
 
         var manager = new Ag.Manager ();
         foreach (unowned Ag.Provider provider in manager.list_providers ()) {
@@ -63,7 +64,6 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         frame.add (stack);
 
         var grid = new Gtk.Grid ();
-        grid.halign = Gtk.Align.CENTER;
         grid.margin = 12;
         grid.margin_top = 0;
         grid.orientation = Gtk.Orientation.VERTICAL;
