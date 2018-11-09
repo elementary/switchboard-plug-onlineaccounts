@@ -20,6 +20,7 @@
  */
 
 public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
+    private Gtk.SearchEntry search_entry;
     private Gtk.Stack stack;
 
     construct {
@@ -37,9 +38,14 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         secondary_label.max_width_chars = 60;
         secondary_label.xalign = 0;
 
+        search_entry = new Gtk.SearchEntry ();
+        search_entry.margin = 6;
+        search_entry.placeholder_text = _("Search Providers")
+
         var listbox = new Gtk.ListBox ();
         listbox.activate_on_single_click = true;
         listbox.expand = true;
+        listbox.set_filter_func (filter_function);
 
         var manager = new Ag.Manager ();
         foreach (unowned Ag.Provider provider in manager.list_providers ()) {
@@ -54,9 +60,13 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
         scrolled_window.add (listbox);
 
+        var list_grid = new Gtk.Grid ();
+        list_grid.attach (search_entry, 0, 0);
+        list_grid.attach (scrolled_window, 0, 1);
+
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-        stack.add (scrolled_window);
+        stack.add (list_grid);
 
         var frame = new Gtk.Frame (null);
         frame.margin_top = 24;
@@ -80,12 +90,26 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
             destroy ();
         });
 
+        search_entry.search_changed.connect (() => {
+            listbox.invalidate_filter ();
+        });
+
         listbox.row_activated.connect ((row) => {
             var provider = ((AccountRow) row).provider;
             var ag_account = manager.create_account (provider.get_name ());
             var selected_account = new Account (ag_account);
             selected_account.authenticate.begin ();
         });
+    }
+
+    [CCode (instance_pos = -1)]
+    private bool filter_function (Gtk.ListBoxRow row) {
+        var search_term = search_entry.text.down ();
+
+        if (search_term in ((AccountRow) row).provider.get_display_name ().down ()) {
+            return true;
+        }
+        return false;
     }
 
     public void add_widget (Gtk.Widget widget, string name) {
