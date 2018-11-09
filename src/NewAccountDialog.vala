@@ -109,6 +109,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         if (search_term in ((AccountRow) row).provider.get_display_name ().down ()) {
             return true;
         }
+
         return false;
     }
 
