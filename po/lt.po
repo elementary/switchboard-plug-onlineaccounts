@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-10-12 20:00+0000\n"
+"PO-Revision-Date: 2018-11-09 23:01+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/lt/>\n"
@@ -156,6 +156,8 @@ msgstr "Prijunkite savo internetines paskyras"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Prijunkite internetines paskyras spusteldami žemiau, įrankių juostoje "
+"esančią piktogramą."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
@@ -178,7 +180,7 @@ msgstr "Prašome įrašyti savo prisijungimo duomenis…"
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "Atgal"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
