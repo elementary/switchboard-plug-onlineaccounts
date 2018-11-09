@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-08 13:06-0800\n"
+"POT-Creation-Date: 2018-11-09 09:30-0800\n"
 "PO-Revision-Date: 2018-03-22 00:05+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -56,9 +56,9 @@ msgstr "Sinhroniziraj koledarje"
 #: providers/FastMail/fastmail-mail.service:4
 #: providers/Google/google-gmail.service:4
 #: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
-#: src/Authentification/MailDialog.vala:67
-#: src/Authentification/MailDialog.vala:111
-#: src/Authentification/PasswordDialog.vala:74
+#: src/Authentification/MailDialog.vala:78
+#: src/Authentification/MailDialog.vala:122
+#: src/Authentification/PasswordDialog.vala:78
 msgid "Email"
 msgstr "Elektronska pošta"
 
@@ -93,7 +93,7 @@ msgstr "Scrobble"
 msgid "Scrobble all your music"
 msgstr "Scrobblajte predvajanje vaše glasbe"
 
-#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:58
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
 msgstr "Poštni račun"
 
@@ -142,134 +142,136 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Dostopajte do vseh Outlook in OneDrive storitev na vašem računalniku"
 
-#: src/OnlineAccounts.vala:46 src/Plug.vala:45 src/Plug.vala:41
+#: src/Plug.vala:41
 msgid "Online Accounts"
 msgstr "Spletni računi"
 
-#: src/OnlineAccounts.vala:47 src/Plug.vala:46 src/Plug.vala:42
+#: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
 msgstr "Nastavitve spletnih računov in povezanih programov"
 
-#: src/OnlineAccounts.vala:65 src/Plug.vala:56 src/Plug.vala:51
+#: src/Plug.vala:51
 msgid "Restore"
 msgstr "Obnovi"
 
-#: src/OnlineAccounts.vala:87 src/Plug.vala:58
-msgid "Add a new account…"
-msgstr "Dodaj nov račun…"
-
-#: src/OnlineAccounts.vala:91 src/Authentification/MailDialog.vala:156
-#: src/Authentification/PasswordDialog.vala:107
-#: src/Authentification/WebDialog.vala:34 src/Plug.vala:62 src/Plug.vala:54
-msgid "Cancel"
-msgstr "Prekliči"
-
-#: src/OnlineAccounts.vala:169 src/Plug.vala:148
-#: src/Views/AddAccountView.vala:28
+#: src/Plug.vala:59 src/NewAccountDialog.vala:29
 msgid "Connect Your Online Accounts"
 msgstr "Povežite se z vašimi spletnimi računi"
 
-#: src/OnlineAccounts.vala:169 src/Plug.vala:148
-#: src/Views/AddAccountView.vala:34
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+#: src/Plug.vala:60
+msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Prijavite se za povezavo z aplikacijami kot so Pošta, Stiki in Koledar."
 
-#: src/OnlineAccounts.vala:254 src/Plug.vala:231 src/Plug.vala:124
-#, c-format
-msgid "Account '%s' Removed."
-msgstr "Račun '%s' odstranjen."
-
-#: src/OnlineAccounts.vala:254 src/Views/AccountView.vala:48
-#: src/Views/AccountView.vala:120 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:128 src/Plug.vala:231
-#: src/Views/AccountView.vala:50 src/Views/AccountView.vala:122
-#: src/Plug.vala:122
+#: src/Plug.vala:120 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
+#: src/Views/SourceSelector.vala:132
 #, fuzzy
 msgid "New Account"
 msgstr "Drug račun"
 
-#: src/Authentification/MailDialog.vala:71
-#: src/Authentification/MailDialog.vala:115
-#: src/Authentification/PasswordDialog.vala:78
-msgid "Password"
-msgstr "Geslo"
+#: src/Plug.vala:122
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "Račun '%s' odstranjen."
 
-#: src/Authentification/MailDialog.vala:82
-#: src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "Strežnik"
-
-#: src/Authentification/MailDialog.vala:92
-#: src/Authentification/MailDialog.vala:142
-msgid "Encryption:"
-msgstr "Šifriranje:"
-
-#: src/Authentification/MailDialog.vala:96
-#: src/Authentification/MailDialog.vala:146
-msgid "None"
-msgstr "Brez"
-
-#: src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "Uporabi IMAP poverilnice"
-
-#: src/Authentification/MailDialog.vala:140
-msgid "No authentication required"
-msgstr "Avtentikacija ni potrebna"
-
-#: src/Authentification/MailDialog.vala:159
-#: src/Authentification/PasswordDialog.vala:109
-msgid "Log In"
-msgstr "Prijava"
-
-#: src/Authentification/PasswordDialog.vala:70
-msgid "URL"
-msgstr ""
-
-#: src/Authentification/PasswordDialog.vala:83
-msgid "New Password"
-msgstr "Novo geslo"
-
-#: src/Authentification/PasswordDialog.vala:88
-msgid "Confirm Password"
-msgstr "Potrdite novo geslo"
-
-#: src/Authentification/PasswordDialog.vala:96
-msgid "Forgot password…"
-msgstr "Pozabljeno geslo…"
-
-#: src/Authentification/PasswordDialog.vala:101
-msgid "Refresh Captcha"
-msgstr "Osveži sliko"
-
-#: src/Authentification/PasswordDialog.vala:102
-msgid "Enter above text here"
-msgstr "Sem vnesite tekst s slike"
-
-#: src/Authentification/PasswordDialog.vala:113
-msgid "Don't have an account? Sign Up"
-msgstr "Nimate računa? Ustvarite ga"
-
-#: src/Authentification/PasswordDialog.vala:306
-msgid "Other Account"
-msgstr "Drug račun"
-
-#: src/Authentification/WebDialog.vala:38
-#: src/Authentification/WebDialog.vala:133
-msgid "Loading…"
-msgstr "Nalaganje…"
-
-#: src/Authentification/WebDialog.vala:126
+#: src/Authentification/MailDialog.vala:48
+#: src/Authentification/PasswordDialog.vala:57
+#: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
 msgstr "Prosimo vpišite vaše uporabniško ime in geslo…"
 
-#: src/Views/AccountView.vala:107 src/Views/AccountView.vala:109
+#: src/Authentification/MailDialog.vala:50
+#: src/Authentification/PasswordDialog.vala:59
+#: src/Authentification/WebDialog.vala:39
+msgid "Back"
+msgstr ""
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+#: src/Authentification/PasswordDialog.vala:82
+msgid "Password"
+msgstr "Geslo"
+
+#: src/Authentification/MailDialog.vala:93
+#: src/Authentification/MailDialog.vala:137
+msgid "Server"
+msgstr "Strežnik"
+
+#: src/Authentification/MailDialog.vala:103
+#: src/Authentification/MailDialog.vala:153
+msgid "Encryption:"
+msgstr "Šifriranje:"
+
+#: src/Authentification/MailDialog.vala:107
+#: src/Authentification/MailDialog.vala:157
+msgid "None"
+msgstr "Brez"
+
+#: src/Authentification/MailDialog.vala:147
+msgid "Use IMAP Credentials"
+msgstr "Uporabi IMAP poverilnice"
+
+#: src/Authentification/MailDialog.vala:151
+msgid "No authentication required"
+msgstr "Avtentikacija ni potrebna"
+
+#: src/Authentification/MailDialog.vala:167
+#: src/Authentification/PasswordDialog.vala:111
+msgid "Log In"
+msgstr "Prijava"
+
+#: src/Authentification/PasswordDialog.vala:74
+msgid "URL"
+msgstr ""
+
+#: src/Authentification/PasswordDialog.vala:87
+msgid "New Password"
+msgstr "Novo geslo"
+
+#: src/Authentification/PasswordDialog.vala:92
+msgid "Confirm Password"
+msgstr "Potrdite novo geslo"
+
+#: src/Authentification/PasswordDialog.vala:100
+msgid "Forgot password…"
+msgstr "Pozabljeno geslo…"
+
+#: src/Authentification/PasswordDialog.vala:105
+msgid "Refresh Captcha"
+msgstr "Osveži sliko"
+
+#: src/Authentification/PasswordDialog.vala:106
+msgid "Enter above text here"
+msgstr "Sem vnesite tekst s slike"
+
+#: src/Authentification/PasswordDialog.vala:115
+msgid "Don't have an account? Sign Up"
+msgstr "Nimate računa? Ustvarite ga"
+
+#: src/Authentification/PasswordDialog.vala:314
+msgid "Other Account"
+msgstr "Drug račun"
+
+#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:143
+msgid "Loading…"
+msgstr "Nalaganje…"
+
+#: src/NewAccountDialog.vala:35
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Prijavite se za povezavo z aplikacijami kot so Pošta, Stiki in Koledar."
+
+#: src/NewAccountDialog.vala:75
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
 msgstr "Trenuno nimate nameščenih aplikacij, ki bi uporabljale %s"
 
-#: src/Views/AccountView.vala:108 src/Views/AccountView.vala:110
+#: src/Views/AccountView.vala:110
 msgid "No Apps"
 msgstr "Ni programov"
 
@@ -280,6 +282,9 @@ msgstr "Dodaj…"
 #: src/Views/SourceSelector.vala:58
 msgid "Remove"
 msgstr "Odstrani"
+
+#~ msgid "Add a new account…"
+#~ msgstr "Dodaj nov račun…"
 
 #~ msgid "Url"
 #~ msgstr "Url"
