@@ -40,7 +40,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
 
         search_entry = new Gtk.SearchEntry ();
         search_entry.margin = 6;
-        search_entry.placeholder_text = _("Search Providers")
+        search_entry.placeholder_text = _("Search Providers");
 
         var listbox = new Gtk.ListBox ();
         listbox.activate_on_single_click = true;
