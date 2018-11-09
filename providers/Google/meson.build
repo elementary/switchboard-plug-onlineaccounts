@@ -40,12 +40,15 @@ install_data(
 )
 
 # Install the icons
-install_data(
-    '32/online-account-google.svg',
-    install_dir: join_paths(hicolor_dir, '32x32', 'apps'),
-)
+icon_sizes = ['32', '48']
 
-install_data(
-    '48/online-account-google.svg',
-    install_dir: join_paths(hicolor_dir, '48x48', 'apps'),
-)
+foreach i : icon_sizes
+    install_data(
+        join_paths(i,'online-account-google.svg'),
+        install_dir: join_paths(hicolor_dir, i + 'x' + i, 'apps'),
+    )
+    install_data(
+        join_paths(i,'online-account-google.svg'),
+        install_dir: join_paths(hicolor_dir, i + 'x' + i + '@2', 'apps'),
+    )
+endforeach
