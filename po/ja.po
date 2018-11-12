@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-11-07 13:07+0000\n"
+"PO-Revision-Date: 2018-11-10 02:58+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -158,7 +158,7 @@ msgstr "オンラインアカウントを接続しましょう"
 
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "以下のツールバー内のアイコンをクリックして、オンラインアカウントを接続してください。"
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
@@ -181,7 +181,7 @@ msgstr "証明書を入力してください…"
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
