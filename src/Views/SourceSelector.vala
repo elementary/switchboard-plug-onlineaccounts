@@ -115,7 +115,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         }
     }
 
-    public class AccountRow : OnlineAccounts.ServiceRow {
+    private class AccountRow : OnlineAccounts.ServiceRow {
         public OnlineAccounts.Account account { get; construct; }
 
         public AccountRow (OnlineAccounts.Account account, Ag.Provider provider) {
