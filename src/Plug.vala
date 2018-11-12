@@ -64,7 +64,6 @@ namespace OnlineAccounts {
                 welcome.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
                 stack = new Gtk.Stack ();
-                stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
                 stack.add_named (welcome, "welcome");
                 stack.add_named (grid, "main");
                 stack.show_all ();
@@ -92,7 +91,6 @@ namespace OnlineAccounts {
                 });
 
                 source_selector.account_selected.connect ((account) => {
-                    switch_to_main ();
                     account_selected (account);
                 });
 
@@ -113,7 +111,6 @@ namespace OnlineAccounts {
                 var account = source_selector.get_selected_account ();
                 if (account != null) {
                     account_selected (account);
-                    stack.set_visible_child_full ("main", Gtk.StackTransitionType.NONE);
                 }
 
                 accounts_manager.account_removed.connect ((account) => {
@@ -129,7 +126,6 @@ namespace OnlineAccounts {
 
                 accounts_manager.account_added.connect ((account) => {
                     new_account_dialog.destroy ();
-                    switch_to_main ();
                 });
             }
 
@@ -158,7 +154,6 @@ namespace OnlineAccounts {
             }
 
             if (AccountsManager.get_default ().accounts_available.size <= 0) {
-                stack.set_visible_child_name ("welcome");
                 return;
             }
 
@@ -169,6 +164,8 @@ namespace OnlineAccounts {
             account_view = new AccountView (account);
             grid.attach (account_view, 0, 0, 1, 1);
             account_view.show_all ();
+
+            switch_to_main ();
         }
 
         public void add_widget_to_stack (Gtk.Widget widget, string name) {

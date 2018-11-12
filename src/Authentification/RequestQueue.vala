@@ -43,7 +43,7 @@ public class OnlineAccounts.RequestQueue : Object {
         return process_next (request_info);
     }
 
-    public async void show_next_process () {
+    private async void show_next_process () {
         if (is_idle == true && widgets_to_show.is_empty == false) {
             var name = widgets_to_show.peek_head ();
             is_idle = false;
