@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-10-13 01:02+0000\n"
+"PO-Revision-Date: 2018-11-14 02:52+0000\n"
 "Last-Translator: Marco De Paolini <marco.depaolini@gmail.com>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/it/>\n"
@@ -158,6 +158,8 @@ msgstr "Connetti i tuoi account online"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Collega account online facendo clic sull'icona nella barra degli strumenti "
+"qui sotto."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
@@ -180,7 +182,7 @@ msgstr "Inserisci le tue credenziali…"
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "Indietro"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
