@@ -17,12 +17,12 @@
  * Boston, MA 02110-1301 USA.
  */
 
-public class OnlineAccounts.ServiceRow : Gtk.ListBoxRow {
+public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
     public Ag.Provider provider { get; construct; }
     public string description { get; construct; default = ""; }
     public string title_text { get; construct set; default = ""; }
 
-    public ServiceRow (Ag.Provider provider) {
+    public ProviderRow (Ag.Provider provider) {
         Object (provider: provider);
     }
 
@@ -35,7 +35,7 @@ public class OnlineAccounts.ServiceRow : Gtk.ListBoxRow {
         title_label.ellipsize = Pango.EllipsizeMode.END;
         title_label.halign = Gtk.Align.START;
 
-        var description_label = new Gtk.Label ("<span font_size='small'>%s</span>".printf (description));
+        var description_label = new Gtk.Label ("<span font_size='small'>%s</span>".printf (Markup.escape_text (description)));
         description_label.ellipsize = Pango.EllipsizeMode.END;
         description_label.halign = Gtk.Align.START;
         description_label.use_markup = true;

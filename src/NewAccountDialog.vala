@@ -118,7 +118,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         stack.visible_child_name = name;
     }
 
-    private class AccountRow : OnlineAccounts.ServiceRow {
+    private class AccountRow : OnlineAccounts.ProviderRow {
         public AccountRow (Ag.Provider provider) {
             Object (
                 description: GLib.dgettext (provider.get_i18n_domain (), provider.get_description ()),

@@ -16,7 +16,7 @@ plug_files = files(
     'Views/SourceSelector.vala',
     'Widgets/ACListBox.vala',
     'Widgets/AppRow.vala',
-    'Widgets/ServiceRow.vala'
+    'Widgets/ProviderRow.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')
