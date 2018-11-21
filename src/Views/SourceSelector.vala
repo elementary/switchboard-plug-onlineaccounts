@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013-2016 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
+ * Copyright (c) 2013-2018 elementary, Inc. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -40,7 +40,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         list_box = new Gtk.ListBox ();
-        list_box.selection_mode = Gtk.SelectionMode.BROWSE;
+        list_box.selection_mode = Gtk.SelectionMode.SINGLE;
         list_box.activate_on_single_click = true;
 
         var scroll = new Gtk.ScrolledWindow (null, null);
@@ -69,11 +69,8 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         add (scroll);
         add (toolbar);
 
-        list_box.row_activated.connect ((row) => {
-            account_selected (((AccountRow) row).account);
-        });
-
         list_box.row_selected.connect ((row) => {
+            account_selected (((AccountRow) row).account);
             remove_button.sensitive = row != null;
         });
     }
@@ -89,7 +86,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         list_box.add (row);
         if (list_box.get_children ().length () == 1) {
             list_box.select_row (row);
-            list_box.row_activated (row);
         }
     }
 
@@ -112,7 +108,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         selection = list_box.get_row_at_index (0);
         if (selection != null) {
             list_box.select_row (selection);
-            list_box.row_activated (selection);
         }
     }
 
