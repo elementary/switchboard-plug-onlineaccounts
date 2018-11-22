@@ -118,37 +118,13 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         stack.visible_child_name = name;
     }
 
-    private class AccountRow : Gtk.ListBoxRow {
-        public Ag.Provider provider { get; construct; }
-
+    private class AccountRow : OnlineAccounts.ProviderRow {
         public AccountRow (Ag.Provider provider) {
-            Object (provider: provider);
-        }
-
-        construct {
-            var image = new Gtk.Image.from_icon_name (provider.get_icon_name (), Gtk.IconSize.DND);
-            image.pixel_size = 32;
-            image.use_fallback = true;
-
-            var title_label = new Gtk.Label (provider.get_display_name ());
-            title_label.ellipsize = Pango.EllipsizeMode.END;
-            title_label.halign = Gtk.Align.START;
-
-            var description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ());
-
-            var description_label = new Gtk.Label ("<span font_size='small'>%s</span>".printf (description));
-            description_label.ellipsize = Pango.EllipsizeMode.END;
-            description_label.halign = Gtk.Align.START;
-            description_label.use_markup = true;
-
-            var grid = new Gtk.Grid ();
-            grid.margin = 6;
-            grid.column_spacing = 6;
-            grid.attach (image, 0, 0, 1, 2);
-            grid.attach (title_label, 1, 0);
-            grid.attach (description_label, 1, 1);
-
-            add (grid);
+            Object (
+                description: GLib.dgettext (provider.get_i18n_domain (), provider.get_description ()),
+                provider: provider,
+                title_text: provider.get_display_name ()
+            );
         }
     }
 }

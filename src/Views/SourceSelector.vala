@@ -1,6 +1,5 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2013-2018 elementary, Inc. (https://elementary.io)
+ * Copyright 2013-2018 elementary, Inc. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -111,44 +110,24 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         }
     }
 
-    public class AccountRow : Gtk.ListBoxRow {
-        public OnlineAccounts.Account account;
-        private Gtk.Image image;
-        private Gtk.Label username;
-        private Gtk.Label service;
-        public AccountRow (OnlineAccounts.Account account, Ag.Provider provider) {
-            this.account = account;
-            image.icon_name = provider.get_icon_name ();
-            var ag_account = account.ag_account;
-            username.label = ag_account.display_name ?? _("New Account");
-            service.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (provider.get_display_name ()));
+    private class AccountRow : OnlineAccounts.ProviderRow {
+        public OnlineAccounts.Account account { get; construct; }
 
-            ag_account.display_name_changed.connect (() => {
-                username.label = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
-            });
+        public AccountRow (OnlineAccounts.Account account, Ag.Provider provider) {
+            Object (
+                account: account,
+                description: GLib.Markup.escape_text (provider.get_display_name ()),
+                provider: provider,
+                title_text: account.ag_account.display_name ?? _("New Account")
+            );
         }
 
         construct {
-            var grid = new Gtk.Grid ();
-            grid.margin = 6;
-            grid.column_spacing = 6;
-            image = new Gtk.Image ();
-            image.icon_size = Gtk.IconSize.DND;
-            image.pixel_size = 32;
-            image.use_fallback = true;
-            username = new Gtk.Label (null);
-            username.ellipsize = Pango.EllipsizeMode.END;
-            username.halign = Gtk.Align.START;
-            username.hexpand = true;
-            service = new Gtk.Label (null);
-            service.ellipsize = Pango.EllipsizeMode.END;
-            service.halign = Gtk.Align.START;
-            service.hexpand = true;
-            service.use_markup = true;
-            grid.attach (image, 0, 0, 1, 2);
-            grid.attach (username, 1, 0, 1, 1);
-            grid.attach (service, 1, 1, 1, 1);
-            add (grid);
+            var ag_account = account.ag_account;
+
+            ag_account.display_name_changed.connect (() => {
+                title_text = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
+            });
         }
     }
 }
