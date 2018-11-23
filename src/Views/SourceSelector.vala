@@ -69,7 +69,10 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         add (toolbar);
 
         list_box.row_selected.connect ((row) => {
-            account_selected (((AccountRow) row).account);
+            if (row != null) {
+                account_selected (((AccountRow) row).account);
+            }
+
             remove_button.sensitive = row != null;
         });
     }
