@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-11-22 06:47+0000\n"
+"PO-Revision-Date: 2018-11-26 07:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -206,7 +206,7 @@ msgstr "なし"
 
 #: src/Authentification/MailDialog.vala:147
 msgid "Use IMAP Credentials"
-msgstr "IMAP 証明書を使用"
+msgstr "IMAP 証明書を使う"
 
 #: src/Authentification/MailDialog.vala:151
 msgid "No authentication required"
