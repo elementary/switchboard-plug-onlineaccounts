@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-11-26 07:10+0000\n"
+"PO-Revision-Date: 2018-12-02 06:44+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -197,7 +197,7 @@ msgstr "サーバー"
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
 msgid "Encryption:"
-msgstr "暗号化："
+msgstr "暗号化:"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
