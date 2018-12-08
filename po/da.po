@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-10-13 14:56+0000\n"
+"PO-Revision-Date: 2018-12-08 21:45+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/da/>\n"
@@ -157,7 +157,7 @@ msgstr "Forbind til dine online konti"
 
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "Forbind onlinekonti ved at klikke på ikonet i toolbaren nedenfor."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
@@ -180,7 +180,7 @@ msgstr "Indtast venligst dine brugeroplysninger…"
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "Tilbage"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
