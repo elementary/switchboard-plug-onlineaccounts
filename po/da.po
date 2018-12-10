@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-12-08 21:45+0000\n"
+"PO-Revision-Date: 2018-12-10 22:17+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/da/>\n"
@@ -255,8 +255,7 @@ msgstr "Indlæser…"
 
 #: src/NewAccountDialog.vala:35
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Log ind for at forbinde med programmer som Mail, Kontakter og Kalender."
+msgstr "Log ind for at forbinde med apps som Mail, Kontakter og Kalender."
 
 #: src/NewAccountDialog.vala:75
 msgid "Cancel"
@@ -269,7 +268,7 @@ msgstr "Der er ingen applikationer installeret der gør brug af din %s-konto"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
-msgstr "Ingen applikationer"
+msgstr "Ingen Apps"
 
 #: src/Views/SourceSelector.vala:53
 msgid "Add…"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2018-11-14 02:52+0000\n"
-"Last-Translator: Marco De Paolini <marco.depaolini@gmail.com>\n"
+"PO-Revision-Date: 2018-12-10 22:17+0000\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/it/>\n"
 "Language: it\n"
@@ -26,7 +26,7 @@ msgstr "Pubblicazioni"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
-msgstr "Guarda il tuo newsfeed"
+msgstr "Guarda la tua sezione notizie"
 
 #: providers/Facebook/facebook-contacts.service:4
 #: providers/Google/google-contacts.service:4
@@ -158,8 +158,8 @@ msgstr "Connetti i tuoi account online"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Collega account online facendo clic sull'icona nella barra degli strumenti "
-"qui sotto."
+"Collega gli account online facendo click sull'icona nella barra degli "
+"strumenti sottostante."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
@@ -280,7 +280,7 @@ msgstr "Aggiungi…"
 
 #: src/Views/SourceSelector.vala:58
 msgid "Remove"
-msgstr "Eliminare"
+msgstr "Elimina"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Aggiungi nuovo account…"
