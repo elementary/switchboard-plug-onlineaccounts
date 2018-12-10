@@ -3,47 +3,49 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-09 09:30-0800\n"
-"PO-Revision-Date: 2014-09-20 14:44+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-12-10 21:46+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/mr/>\n"
+"Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "पोस्ट्स"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "आपल्या न्यूजफीड पहा"
 
 #: providers/Facebook/facebook-contacts.service:4
 #: providers/Google/google-contacts.service:4
 #: providers/Microsoft/microsoft-contacts.service:4
 msgid "Contacts"
-msgstr ""
+msgstr "संपर्क"
 
 #: providers/Facebook/facebook-contacts.service:5
 #: providers/Google/google-contacts.service:5
 #: providers/Microsoft/microsoft-contacts.service:5
 msgid "Sync your contacts"
-msgstr ""
+msgstr "आपल्या संपर्क समक्रमित करा"
 
 #: providers/Facebook/facebook-calendar.service:4
 #: providers/Google/google-calendar.service:4
 #: providers/Microsoft/microsoft-calendar.service:4
 msgid "Calendars"
-msgstr ""
+msgstr "कॅलेंडर"
 
 #: providers/Facebook/facebook-calendar.service:5
 #: providers/Google/google-calendar.service:5
 #: providers/Microsoft/microsoft-calendar.service:5
 msgid "Sync your calendars"
-msgstr ""
+msgstr "आपले कॅलेंडर समक्रमित करा"
 
 #: providers/FastMail/fastmail-mail.service:4
 #: providers/Google/google-gmail.service:4
@@ -52,33 +54,33 @@ msgstr ""
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:78
 msgid "Email"
-msgstr ""
+msgstr "ईमेल"
 
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
 msgid "Sync your email"
-msgstr ""
+msgstr "आपले ईमेल समक्रमित करा"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "फोटो"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
-msgstr ""
+msgstr "आपले फोटो समक्रमित करा"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "ड्राइव्ह"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
-msgstr ""
+msgstr "आपल्या फाइल्स समक्रमित करा"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr ""
+msgstr "गोंधळ"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
@@ -86,39 +88,39 @@ msgstr ""
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
-msgstr ""
+msgstr "मेल खाते"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "IMAP सर्व्हरकडून ईमेल प्राप्त करा"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "फेसबुक"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "आपल्या संगणकावर सर्व फेसबुक सामग्री मिळवा"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "फास्टमेल"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "फास्टमेलसह मेलमध्ये प्रवेश करा"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "गुगल"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "आपल्या संगणकावर सर्व गुगल सेवा मिळवा"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
@@ -126,147 +128,147 @@ msgstr ""
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "मायक्रोसॉफ्ट"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "आपल्या संगणकावर सर्व आउटलुक आणि वन ड्राईव्ह सेवा मिळवा"
 
 #: src/Plug.vala:41
 msgid "Online Accounts"
-msgstr ""
+msgstr "ऑनलाइन खाती"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "ऑनलाइन खाती आणि कनेक्ट केलेले अप्लिकेशन्स व्यवस्थापित करा"
 
 #: src/Plug.vala:51
 msgid "Restore"
-msgstr ""
+msgstr "पुनर्संचयित करा"
 
 #: src/Plug.vala:59 src/NewAccountDialog.vala:29
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "आपले ऑनलाइन खाते कनेक्ट करा"
 
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "खालील टूलबारमधील चिन्हावर क्लिक करून ऑनलाइन खाती कनेक्ट करा."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
 #: src/Views/SourceSelector.vala:132
 msgid "New Account"
-msgstr ""
+msgstr "नवीन खाते"
 
 #: src/Plug.vala:122
 #, c-format
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "खाते '%s'काढले."
 
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:57
 #: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा ..."
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "मागे"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:82
 msgid "Password"
-msgstr ""
+msgstr "पासवर्ड"
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
 msgid "Server"
-msgstr ""
+msgstr "सर्व्हर"
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
 msgid "Encryption:"
-msgstr ""
+msgstr "कूटबद्धीकरणः"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
 msgid "None"
-msgstr ""
+msgstr "काहीही नाही"
 
 #: src/Authentification/MailDialog.vala:147
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "IMAP क्रेडेन्शियल्स वापरा"
 
 #: src/Authentification/MailDialog.vala:151
 msgid "No authentication required"
-msgstr ""
+msgstr "प्रमाणीकरण आवश्यक नाही"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:111
 msgid "Log In"
-msgstr ""
+msgstr "लॉग इन"
 
 #: src/Authentification/PasswordDialog.vala:74
 msgid "URL"
-msgstr ""
+msgstr "यूआरएल"
 
 #: src/Authentification/PasswordDialog.vala:87
 msgid "New Password"
-msgstr ""
+msgstr "नवीन पासवर्ड"
 
 #: src/Authentification/PasswordDialog.vala:92
 msgid "Confirm Password"
-msgstr ""
+msgstr "पासवर्डची पुष्टी करा"
 
 #: src/Authentification/PasswordDialog.vala:100
 msgid "Forgot password…"
-msgstr ""
+msgstr "पासवर्ड विसरला ..."
 
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "कॅप्चा रीफ्रेश करा"
 
 #: src/Authentification/PasswordDialog.vala:106
 msgid "Enter above text here"
-msgstr ""
+msgstr "येथे  वरील मजकूर प्रविष्ट करा"
 
 #: src/Authentification/PasswordDialog.vala:115
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "खाते नाही? साइन अप करा"
 
 #: src/Authentification/PasswordDialog.vala:314
 msgid "Other Account"
-msgstr ""
+msgstr "इतर खाते"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
 msgid "Loading…"
-msgstr ""
+msgstr "लोड करीत आहे ..."
 
 #: src/NewAccountDialog.vala:35
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
+msgstr "मेल, संपर्क आणि कॅलेंडर सारख्या अॅप्ससह कनेक्ट करण्यासाठी साइन इन करा."
 
 #: src/NewAccountDialog.vala:75
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करा"
 
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
+msgstr "आपल्या %s खात्यावरील दुवा सध्या स्थापित केलेले कोणतेही अॅप्स नाहीत"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
-msgstr ""
+msgstr "एकही अॅप नाही"
 
 #: src/Views/SourceSelector.vala:53
 msgid "Add…"
-msgstr ""
+msgstr "जोडा ..."
 
 #: src/Views/SourceSelector.vala:58
 msgid "Remove"
-msgstr ""
+msgstr "काढा"
