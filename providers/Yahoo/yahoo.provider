@@ -27,5 +27,8 @@
         </group>
       </group>
     </group>
+    <group name="evolution-data-server">
+      <setting name="backend">yahoo</setting>
+    </group>
   </template>
 </provider>

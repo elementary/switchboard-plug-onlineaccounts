@@ -32,5 +32,8 @@
     <group name="integration">
       <setting name="executable">@LIBEXECDIR@/@INTEGRATION_EXEC@</setting>
     </group>
+    <group name="evolution-data-server">
+      <setting name="backend">outlook</setting>
+    </group>
   </template>
 </provider>

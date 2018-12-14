@@ -33,5 +33,8 @@
     <group name="integration">
       <setting name="executable">@LIBEXECDIR@/@INTEGRATION_EXEC@</setting>
     </group>
+    <group name="evolution-data-server">
+      <setting name="backend">google</setting>
+    </group>
   </template>
 </provider>
