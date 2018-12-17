@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
-"PO-Revision-Date: 2018-11-12 17:00+0000\n"
+"PO-Revision-Date: 2018-12-17 13:03+0000\n"
 "Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/pt/>\n"
@@ -294,11 +294,11 @@ msgstr "Remover"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Motores de Busca"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Política de Privacidade"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Adicionar nova conta…"
