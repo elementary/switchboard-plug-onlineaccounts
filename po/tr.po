@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 09:30-0800\n"
+"POT-Creation-Date: 2018-12-17 03:53-0600\n"
 "PO-Revision-Date: 2018-11-07 16:52+0000\n"
 "Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
@@ -58,6 +58,7 @@ msgstr "Takvimlerinizi senkronize edin"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:78
+#: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "E-posta"
 
@@ -151,7 +152,7 @@ msgstr "Online hesapları ve bağlı uygulamaları yönetin"
 msgid "Restore"
 msgstr "Geri Yükle"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29
+#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Çevrimiçi Hesaplarınıza Bağlanın"
 
@@ -161,11 +162,12 @@ msgstr ""
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
+#: src/Views/SourceSelector.vala:124
 msgid "New Account"
 msgstr "Yeni Hesap"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:122 src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "'%s' hesabı kaldırıldı."
@@ -173,18 +175,21 @@ msgstr "'%s' hesabı kaldırıldı."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:57
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/PasswordDialog.vala:56
 msgid "Please enter your credentials…"
 msgstr "Lütfen bilgilerinizi giriniz…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/PasswordDialog.vala:58
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:82
+#: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "Şifre"
 
@@ -213,34 +218,42 @@ msgstr "Kimlik denetimi gerekmiyor"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Oturum aç"
 
 #: src/Authentification/PasswordDialog.vala:74
+#: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:87
+#: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "Yeni Şifre"
 
 #: src/Authentification/PasswordDialog.vala:92
+#: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "Şifreyi Onayla"
 
 #: src/Authentification/PasswordDialog.vala:100
+#: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Şifremi unuttum…"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Güvenlik Resmini yenile"
 
 #: src/Authentification/PasswordDialog.vala:106
+#: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Yukarıdaki metni buraya yazın"
 
 #: src/Authentification/PasswordDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "Hesabınız yok mu? Üye Olun"
 
@@ -253,11 +266,11 @@ msgstr "Diğer Hesaplar"
 msgid "Loading…"
 msgstr "Yükleniyor…"
 
-#: src/NewAccountDialog.vala:35
+#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "Posta, Kişiler ve Takvim gibi uygulamalara bağlanmak için giriş yapın."
 
-#: src/NewAccountDialog.vala:75
+#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
 msgid "Cancel"
 msgstr "İptal"
 
@@ -270,13 +283,21 @@ msgstr "Şu anda %s hesabına bağlanmak için yüklü uygulama bulunmamaktadır
 msgid "No Apps"
 msgstr "Uygulama Yok"
 
-#: src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
 msgid "Add…"
 msgstr "Ekle..."
 
-#: src/Views/SourceSelector.vala:58
+#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
 msgid "Remove"
 msgstr "Kaldır"
+
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr ""
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr ""
 
 #~ msgid "Add a new account…"
 #~ msgstr "Yeni hesap ekle…"

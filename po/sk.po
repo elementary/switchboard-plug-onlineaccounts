@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 09:30-0800\n"
+"POT-Creation-Date: 2018-12-17 03:53-0600\n"
 "PO-Revision-Date: 2016-07-05 18:34+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -56,6 +56,7 @@ msgstr "Synchronizovať vaše kalendáre"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:78
+#: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr ""
 
@@ -150,7 +151,7 @@ msgstr ""
 msgid "Restore"
 msgstr "Obnoviť"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29
+#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Pripojiť k vašim online kontám"
 
@@ -160,12 +161,13 @@ msgstr ""
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
+#: src/Views/SourceSelector.vala:124
 #, fuzzy
 msgid "New Account"
 msgstr "Online účty"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:122 src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Účet '%s' odstránený."
@@ -173,18 +175,21 @@ msgstr "Účet '%s' odstránený."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:57
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/PasswordDialog.vala:56
 msgid "Please enter your credentials…"
 msgstr "Prosím, zadajte svoje prihlasovacie údaje..."
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/PasswordDialog.vala:58
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:82
+#: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr ""
 
@@ -213,34 +218,42 @@ msgstr ""
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Prihlásiť sa"
 
 #: src/Authentification/PasswordDialog.vala:74
+#: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:87
+#: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:92
+#: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:100
+#: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Zabudnuté heslo..."
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Obnoviť captcha"
 
 #: src/Authentification/PasswordDialog.vala:106
+#: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Zadajte nad textom tu"
 
 #: src/Authentification/PasswordDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr ""
 
@@ -254,12 +267,12 @@ msgstr "Online účty"
 msgid "Loading…"
 msgstr "Načítava sa…"
 
-#: src/NewAccountDialog.vala:35
+#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Prihláste sa do spojenia s aplikáciami, ako je pošta, kontakty a kalendár."
 
-#: src/NewAccountDialog.vala:75
+#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -272,13 +285,21 @@ msgstr "Nemáte nainštalované žiadne aplikácie prepojené s vašim %s účto
 msgid "No Apps"
 msgstr "Žiadne aplikácie"
 
-#: src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
 msgid "Add…"
 msgstr "Pridať…"
 
-#: src/Views/SourceSelector.vala:58
+#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
 msgid "Remove"
 msgstr "Odstrániť"
+
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr ""
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr ""
 
 #~ msgid "Add a new account…"
 #~ msgstr "Pridať nový účet"

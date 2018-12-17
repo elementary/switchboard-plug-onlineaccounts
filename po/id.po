@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 09:30-0800\n"
+"POT-Creation-Date: 2018-12-17 03:53-0600\n"
 "PO-Revision-Date: 2018-10-23 08:14+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -57,6 +57,7 @@ msgstr "Sinkronkan kalender Anda"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:78
+#: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "Surel"
 
@@ -150,7 +151,7 @@ msgstr "Kelola akun daring dan aplikasi yang terhubung"
 msgid "Restore"
 msgstr "Pulihkan"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29
+#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Hubungkan Akun Daring Anda"
 
@@ -160,11 +161,12 @@ msgstr ""
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
+#: src/Views/SourceSelector.vala:124
 msgid "New Account"
 msgstr "Akun Baru"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:122 src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Akun '%s' Dihapus."
@@ -172,18 +174,21 @@ msgstr "Akun '%s' Dihapus."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:57
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/PasswordDialog.vala:56
 msgid "Please enter your credentials…"
 msgstr "Silakan masukkan kredensial Anda…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/PasswordDialog.vala:58
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:82
+#: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "Kata Sandi"
 
@@ -212,34 +217,42 @@ msgstr "Otentikasi tidak diperlukan"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Masuk"
 
 #: src/Authentification/PasswordDialog.vala:74
+#: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:87
+#: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "Kata Sandi Baru"
 
 #: src/Authentification/PasswordDialog.vala:92
+#: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "Konfirmasi Kata Sandi"
 
 #: src/Authentification/PasswordDialog.vala:100
+#: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Lupa kata sandi…"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Segarkan Captcha"
 
 #: src/Authentification/PasswordDialog.vala:106
+#: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Masukkan teks di atas"
 
 #: src/Authentification/PasswordDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "Tidak punya akun? Daftar"
 
@@ -252,12 +265,12 @@ msgstr "Akun Lainnya"
 msgid "Loading…"
 msgstr "Memuat…"
 
-#: src/NewAccountDialog.vala:35
+#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Masuk untuk terhubung dengan aplikasi seperti Surel, Kontak, dan Kalender."
 
-#: src/NewAccountDialog.vala:75
+#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
 msgid "Cancel"
 msgstr "Batal"
 
@@ -271,13 +284,21 @@ msgstr ""
 msgid "No Apps"
 msgstr "Tidak ada Aplikasi"
 
-#: src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
 msgid "Add…"
 msgstr "Tambah…"
 
-#: src/Views/SourceSelector.vala:58
+#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
 msgid "Remove"
 msgstr "Hapus"
+
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr ""
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr ""
 
 #~ msgid "Add a new account…"
 #~ msgstr "Tambah sebuah akun baru…"

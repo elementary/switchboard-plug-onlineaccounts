@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 09:30-0800\n"
+"POT-Creation-Date: 2018-12-17 03:53-0600\n"
 "PO-Revision-Date: 2018-11-12 17:00+0000\n"
 "Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
@@ -58,6 +58,7 @@ msgstr "Sincronize os seus calendários"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:78
+#: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "E-mail"
 
@@ -151,7 +152,7 @@ msgstr "Gerir contas online e aplicações associadas"
 msgid "Restore"
 msgstr "Repôr"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29
+#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Estabelecer ligação às suas contas online"
 
@@ -161,11 +162,12 @@ msgstr "Ligar contas online clicando no ícone da barra de ferramentas abaixo."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
+#: src/Views/SourceSelector.vala:124
 msgid "New Account"
 msgstr "Nova Conta"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:122 src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Conta %s removida."
@@ -173,18 +175,21 @@ msgstr "Conta %s removida."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:57
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/PasswordDialog.vala:56
 msgid "Please enter your credentials…"
 msgstr "Por favor introduza as suas credenciais…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/PasswordDialog.vala:58
 msgid "Back"
 msgstr "Voltar"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:82
+#: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "Palavra-passe"
 
@@ -213,34 +218,42 @@ msgstr "Não é necessária autenticação"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Iniciar Sessão"
 
 #: src/Authentification/PasswordDialog.vala:74
+#: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:87
+#: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "Nova Palavra-passe"
 
 #: src/Authentification/PasswordDialog.vala:92
+#: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "Confirmar Palavra-passe"
 
 #: src/Authentification/PasswordDialog.vala:100
+#: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Esqueci-me da palavra-passe…"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Recarregar Captcha"
 
 #: src/Authentification/PasswordDialog.vala:106
+#: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Escreva aqui o texto"
 
 #: src/Authentification/PasswordDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "Não tem uma conta? Inscreva-se"
 
@@ -253,12 +266,12 @@ msgstr "Outra Conta"
 msgid "Loading…"
 msgstr "A carregar…"
 
-#: src/NewAccountDialog.vala:35
+#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Iniciar sessão para estabelecer ligação ao correio, contactos e calendários."
 
-#: src/NewAccountDialog.vala:75
+#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -271,13 +284,21 @@ msgstr "De momento não há nenhuma aplicação instalada que use a sua conta %s
 msgid "No Apps"
 msgstr "Sem Aplicações"
 
-#: src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
 msgid "Add…"
 msgstr "Adicionar…"
 
-#: src/Views/SourceSelector.vala:58
+#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
 msgid "Remove"
 msgstr "Remover"
+
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr ""
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr ""
 
 #~ msgid "Add a new account…"
 #~ msgstr "Adicionar nova conta…"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-09 09:30-0800\n"
+"POT-Creation-Date: 2018-12-17 03:53-0600\n"
 "PO-Revision-Date: 2018-12-10 22:17+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
@@ -53,6 +53,7 @@ msgstr "आपले कॅलेंडर समक्रमित करा"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:78
+#: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "ईमेल"
 
@@ -146,7 +147,7 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 msgid "Restore"
 msgstr "पुनर्संचयित करा"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29
+#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "आपले ऑनलाइन खाते कनेक्ट करा"
 
@@ -156,11 +157,12 @@ msgstr "खालील टूलबारमधील चिन्हावर 
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
+#: src/Views/SourceSelector.vala:124
 msgid "New Account"
 msgstr "नवीन खाते"
 
-#: src/Plug.vala:122
+#: src/Plug.vala:122 src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "खाते '%s'काढले."
@@ -168,18 +170,21 @@ msgstr "खाते '%s'काढले."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:57
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/PasswordDialog.vala:56
 msgid "Please enter your credentials…"
 msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:59
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/PasswordDialog.vala:58
 msgid "Back"
 msgstr "मागे"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:82
+#: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "पासवर्ड"
 
@@ -208,34 +213,42 @@ msgstr "प्रमाणीकरण आवश्यक नाही"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:111
+#: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "लॉग इन"
 
 #: src/Authentification/PasswordDialog.vala:74
+#: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr "यूआरएल"
 
 #: src/Authentification/PasswordDialog.vala:87
+#: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "नवीन पासवर्ड"
 
 #: src/Authentification/PasswordDialog.vala:92
+#: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "पासवर्डची पुष्टी करा"
 
 #: src/Authentification/PasswordDialog.vala:100
+#: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "पासवर्ड विसरला …"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "कॅप्चा रीफ्रेश करा"
 
 #: src/Authentification/PasswordDialog.vala:106
+#: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "येथे  वरील मजकूर प्रविष्ट करा"
 
 #: src/Authentification/PasswordDialog.vala:115
+#: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "खाते नाही? साइन अप करा"
 
@@ -248,11 +261,11 @@ msgstr "इतर खाते"
 msgid "Loading…"
 msgstr "लोड करीत आहे …"
 
-#: src/NewAccountDialog.vala:35
+#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "मेल, संपर्क आणि कॅलेंडर सारख्या अॅप्ससह कनेक्ट करण्यासाठी साइन इन करा."
 
-#: src/NewAccountDialog.vala:75
+#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
 msgid "Cancel"
 msgstr "रद्द करा"
 
@@ -265,10 +278,18 @@ msgstr "आपल्या %s खात्यावरील दुवा सध
 msgid "No Apps"
 msgstr "एकही अॅप नाही"
 
-#: src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
 msgid "Add…"
 msgstr "जोडा ..."
 
-#: src/Views/SourceSelector.vala:58
+#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
 msgid "Remove"
 msgstr "काढा"
+
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr ""
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr ""
