@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
-"PO-Revision-Date: 2018-11-09 22:50+0000\n"
+"PO-Revision-Date: 2018-12-19 11:00+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -288,11 +288,11 @@ msgstr "הסרה"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "מנועי חיפוש"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "מדיניות פרטיות"
 
 #~ msgid "Add a new account…"
 #~ msgstr "הוספת חשבון חדש…"
