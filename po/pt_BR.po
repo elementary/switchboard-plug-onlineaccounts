@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
-"PO-Revision-Date: 2018-11-13 19:01+0000\n"
+"PO-Revision-Date: 2018-12-21 02:00+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/pt_BR/>\n"
@@ -295,11 +295,11 @@ msgstr "Remover"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Provedores de Busca"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Política de Privacidade"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Adicionar nova conta…"
