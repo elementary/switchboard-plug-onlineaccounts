@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
 "PO-Revision-Date: 2018-12-24 00:07+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/hi/>\n"
 "Language: hi\n"
@@ -164,9 +164,8 @@ msgstr ""
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:117
 #: src/Views/SourceSelector.vala:124
-#, fuzzy
 msgid "New Account"
-msgstr "ऑनलाइन खाता"
+msgstr "नया खाता"
 
 #: src/Plug.vala:122 src/Plug.vala:119
 #, c-format
