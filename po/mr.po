@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
-"PO-Revision-Date: 2018-12-10 22:17+0000\n"
+"PO-Revision-Date: 2018-12-23 18:10+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/mr/>\n"
@@ -85,7 +85,7 @@ msgstr "गोंधळ"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr ""
+msgstr "आपले सर्व संगीत स्क्रोबल करा"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -125,7 +125,7 @@ msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
-msgstr ""
+msgstr "आपले संगीत स्क्रोबल करा"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
@@ -288,8 +288,8 @@ msgstr "काढा"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "शोध प्रदाते"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "गोपनीयता धोरण"
