@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
-"PO-Revision-Date: 2018-10-13 12:33+0000\n"
+"PO-Revision-Date: 2019-01-02 21:45+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/de/>\n"
@@ -159,6 +159,8 @@ msgstr "Mit Ihren Internetkonten verbinden"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Verbinden Sie Online-Konten, indem Sie auf das Symbol in der unteren "
+"Werkzeugleiste klicken."
 
 #: src/Plug.vala:120 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
@@ -184,7 +186,7 @@ msgstr "Bitte geben Sie Ihre Anmeldedaten ein …"
 #: src/Authentification/WebDialog.vala:39
 #: src/Authentification/PasswordDialog.vala:58
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
@@ -296,11 +298,11 @@ msgstr "Entfernen"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Anbieter suchen"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Datenschutzerklärung"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Neues Konto hinzufügen …"
