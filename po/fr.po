@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
 "PO-Revision-Date: 2019-01-11 09:26+0000\n"
-"Last-Translator: Franck STAUFFER <franck.stauffer@e.email>\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
 "Language: fr\n"
@@ -292,7 +292,7 @@ msgstr "Supprimer"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr "Chercher des fournisseurs"
+msgstr "Rechercher des fournisseurs"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
