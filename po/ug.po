@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-17 03:53-0600\n"
+"POT-Creation-Date: 2019-01-10 18:13-0800\n"
 "PO-Revision-Date: 2016-12-18 08:45+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -55,7 +55,6 @@ msgstr "كالىندارىڭىزنى ماس قەدەمگە كەلتۈرۈڭ"
 #: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:78
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "ئېلخەت"
@@ -153,7 +152,7 @@ msgstr "توردىكى ھىساۋاتلارنى ۋە ئۇلانغان ئەپلە
 msgid "Restore"
 msgstr "ئەسلىگە قايتۇرۇش"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "توردىكى ھىساۋاتىڭىزغا ئۇلاڭ"
 
@@ -161,36 +160,32 @@ msgstr "توردىكى ھىساۋاتىڭىزغا ئۇلاڭ"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
-#: src/Plug.vala:120 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
-#: src/Views/SourceSelector.vala:124
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132
 #, fuzzy
 msgid "New Account"
 msgstr "باشقا ھىساۋات"
 
-#: src/Plug.vala:122 src/Plug.vala:119
+#: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "ھىساۋات  '%s'  ئۆچۈرۈلگەن."
 
 #: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:57
-#: src/Authentification/WebDialog.vala:136
 #: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
 msgstr "گۇۋاھنامىڭىزنى كىرگۈزۈڭ...."
 
 #: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:59
-#: src/Authentification/WebDialog.vala:39
 #: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:82
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "پارول"
@@ -219,42 +214,34 @@ msgid "No authentication required"
 msgstr "سالاھىيەتنى دەلىللىمىسىمۇ بولىدۇ"
 
 #: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:111
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "كىرىش"
 
-#: src/Authentification/PasswordDialog.vala:74
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr ""
 
-#: src/Authentification/PasswordDialog.vala:87
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "يىڭى پارول"
 
-#: src/Authentification/PasswordDialog.vala:92
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "تەكرار پارول"
 
-#: src/Authentification/PasswordDialog.vala:100
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "پارولنى ئۇنتۇش...."
 
-#: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "تەستىق كودىنى يىڭىلاش"
 
-#: src/Authentification/PasswordDialog.vala:106
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "يۇقىرىدىكى تېكستنى بۇ يەرگە كىرگۈزۈڭ"
 
-#: src/Authentification/PasswordDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "ھىساۋاتىڭىز يوقمۇ؟ تىزىملىتىڭ"
@@ -268,33 +255,11 @@ msgstr "باشقا ھىساۋات"
 msgid "Loading…"
 msgstr "يۈكلەۋاتىدۇ...."
 
-#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
+#: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "كىرگەندىن كىيىن ئېلخەت، ئالاقىلاشقۇچىلار، كالىندار قاتارلىق ئەپلىرىڭىزگە "
 "ئۇلاڭ"
-
-#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
-msgid "Cancel"
-msgstr "ئەمەلدىن قالدۇرۇش"
-
-#: src/Views/AccountView.vala:109
-#, c-format
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-"ھازىرچە سىزنىڭ %s ھىساۋاتىڭىز بىلەن باغلانغان ھىچقانداق ئەپ ئورنىتىلمىغان"
-
-#: src/Views/AccountView.vala:110
-msgid "No Apps"
-msgstr "ئەپ يوق"
-
-#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
-msgid "Add…"
-msgstr "قىتىش...."
-
-#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
-msgid "Remove"
-msgstr "ئۆچۈرۈش"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
@@ -303,6 +268,31 @@ msgstr ""
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
 msgstr ""
+
+#: src/NewAccountDialog.vala:88
+msgid "Cancel"
+msgstr "ئەمەلدىن قالدۇرۇش"
+
+#: src/Views/AccountView.vala:109
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:110
+msgid "No Apps"
+msgstr "ئەپ يوق"
+
+#: src/Views/SourceSelector.vala:52
+msgid "Add…"
+msgstr "قىتىش...."
+
+#: src/Views/SourceSelector.vala:57
+msgid "Remove"
+msgstr "ئۆچۈرۈش"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr ""
+#~ "ھازىرچە سىزنىڭ %s ھىساۋاتىڭىز بىلەن باغلانغان ھىچقانداق ئەپ ئورنىتىلمىغان"
 
 #~ msgid "Add a new account…"
 #~ msgstr "يىڭى ھىساۋات قىتىش...."

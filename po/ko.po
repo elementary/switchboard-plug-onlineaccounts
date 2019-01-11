@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-17 03:53-0600\n"
+"POT-Creation-Date: 2019-01-10 18:13-0800\n"
 "PO-Revision-Date: 2018-12-22 10:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -57,7 +57,6 @@ msgstr "일정표 동기화하기"
 #: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:78
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "이메일"
@@ -152,7 +151,7 @@ msgstr "온라인 계정과 계정에 연결된 애플리케이션들을 관리�
 msgid "Restore"
 msgstr "복원"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "온라인 계정 연결"
 
@@ -160,35 +159,31 @@ msgstr "온라인 계정 연결"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 연결하세요."
 
-#: src/Plug.vala:120 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
-#: src/Views/SourceSelector.vala:124
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132
 msgid "New Account"
 msgstr "새 계정"
 
-#: src/Plug.vala:122 src/Plug.vala:119
+#: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "계정 '%s'가 제거되었습니다."
 
 #: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:57
-#: src/Authentification/WebDialog.vala:136
 #: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
 msgstr "로그인 정보를 입력하세요…"
 
 #: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:59
-#: src/Authentification/WebDialog.vala:39
 #: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
 msgid "Back"
 msgstr "뒤로"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:82
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "비밀번호"
@@ -217,42 +212,34 @@ msgid "No authentication required"
 msgstr "인증 없이 실행"
 
 #: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:111
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "로그인"
 
-#: src/Authentification/PasswordDialog.vala:74
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr "URL"
 
-#: src/Authentification/PasswordDialog.vala:87
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "새 비밀번호"
 
-#: src/Authentification/PasswordDialog.vala:92
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "비밀번호 확인"
 
-#: src/Authentification/PasswordDialog.vala:100
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "비밀번호를 잊으셨나요…"
 
-#: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "캡차 (Captcha) 새로고침"
 
-#: src/Authentification/PasswordDialog.vala:106
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "텍스트 위에 입력하기"
 
-#: src/Authentification/PasswordDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "계정이 없으신가요? 먼저 계정을 만드세요"
@@ -266,31 +253,9 @@ msgstr "다른 계정"
 msgid "Loading…"
 msgstr "불러오는 중…"
 
-#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
+#: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "메일, 주소록, 일정표 등의 프로그램에 접속하기 위해 로그인하기."
-
-#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
-msgid "Cancel"
-msgstr "취소"
-
-#: src/Views/AccountView.vala:109
-#, c-format
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-"현재 사용자의 %s 계정에 연결하기 위한 프로그램이 설치되어 있지 않습니다"
-
-#: src/Views/AccountView.vala:110
-msgid "No Apps"
-msgstr "어플 없음"
-
-#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
-msgid "Add…"
-msgstr "추가…"
-
-#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
-msgid "Remove"
-msgstr "제거"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
@@ -299,6 +264,31 @@ msgstr "서비스 검색"
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
 msgstr "프라이버시 정책"
+
+#: src/NewAccountDialog.vala:88
+msgid "Cancel"
+msgstr "취소"
+
+#: src/Views/AccountView.vala:109
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:110
+msgid "No Apps"
+msgstr "어플 없음"
+
+#: src/Views/SourceSelector.vala:52
+msgid "Add…"
+msgstr "추가…"
+
+#: src/Views/SourceSelector.vala:57
+msgid "Remove"
+msgstr "제거"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr ""
+#~ "현재 사용자의 %s 계정에 연결하기 위한 프로그램이 설치되어 있지 않습니다"
 
 #~ msgid "Add a new account…"
 #~ msgstr "새로 계정 만들기…"

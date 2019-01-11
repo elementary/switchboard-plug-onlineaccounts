@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-17 03:53-0600\n"
+"POT-Creation-Date: 2019-01-10 18:13-0800\n"
 "PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -57,7 +57,6 @@ msgstr "Naptárak szinkronizálása"
 #: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:78
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "E-mail"
@@ -154,7 +153,7 @@ msgstr "Kezelje online fiókjait és a kapcsolódó alkalmazásait"
 msgid "Restore"
 msgstr "Visszaállítás"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Kapcsolódás az online fiókokhoz"
 
@@ -162,36 +161,32 @@ msgstr "Kapcsolódás az online fiókokhoz"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
-#: src/Plug.vala:120 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
-#: src/Views/SourceSelector.vala:124
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132
 #, fuzzy
 msgid "New Account"
 msgstr "Másik fiók"
 
-#: src/Plug.vala:122 src/Plug.vala:119
+#: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "A(z) '%s' fiók eltávolítva."
 
 #: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:57
-#: src/Authentification/WebDialog.vala:136
 #: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
 msgstr "Adja meg hitelesítő adatait...."
 
 #: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:59
-#: src/Authentification/WebDialog.vala:39
 #: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:82
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "Jelszó"
@@ -220,42 +215,34 @@ msgid "No authentication required"
 msgstr "Nincs szükség hitelesítésre"
 
 #: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:111
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Bejelentkezés"
 
-#: src/Authentification/PasswordDialog.vala:74
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr ""
 
-#: src/Authentification/PasswordDialog.vala:87
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "Új jelszó"
 
-#: src/Authentification/PasswordDialog.vala:92
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "Jelszó megerősítése"
 
-#: src/Authentification/PasswordDialog.vala:100
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Elfelejtett jelszó…"
 
-#: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Captcha frissítése"
 
-#: src/Authentification/PasswordDialog.vala:106
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Írja be a fenti szöveget ide"
 
-#: src/Authentification/PasswordDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "Nincs még fiókja? Regisztráljon"
@@ -269,31 +256,10 @@ msgstr "Másik fiók"
 msgid "Loading…"
 msgstr "Betöltés…"
 
-#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
+#: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Jelentkezzen be az e-mail, címjegyzék és naptár alkalmazások használatához."
-
-#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
-msgid "Cancel"
-msgstr "Mégsem"
-
-#: src/Views/AccountView.vala:109
-#, c-format
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Nincs a(z) %s fiókhoz kapcsolódó alkalmazás telepítve"
-
-#: src/Views/AccountView.vala:110
-msgid "No Apps"
-msgstr "Nincsenek alkalmazások"
-
-#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
-msgid "Add…"
-msgstr "Hozzáadás…"
-
-#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
-msgid "Remove"
-msgstr "Eltávolítás"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
@@ -302,6 +268,30 @@ msgstr ""
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
 msgstr ""
+
+#: src/NewAccountDialog.vala:88
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: src/Views/AccountView.vala:109
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:110
+msgid "No Apps"
+msgstr "Nincsenek alkalmazások"
+
+#: src/Views/SourceSelector.vala:52
+msgid "Add…"
+msgstr "Hozzáadás…"
+
+#: src/Views/SourceSelector.vala:57
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr "Nincs a(z) %s fiókhoz kapcsolódó alkalmazás telepítve"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Új fiók hozzáadása…"

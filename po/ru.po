@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-17 03:53-0600\n"
+"POT-Creation-Date: 2019-01-10 18:13-0800\n"
 "PO-Revision-Date: 2017-04-12 11:04+0000\n"
 "Last-Translator: Maxim Taranov <png2378@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -58,7 +58,6 @@ msgstr "Синхронизировать календари"
 #: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:78
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "Почта"
@@ -155,7 +154,7 @@ msgstr "Управление учётными записями Интернет�
 msgid "Restore"
 msgstr "Восстановить"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Подключите учётные записи Интернета"
 
@@ -163,36 +162,32 @@ msgstr "Подключите учётные записи Интернета"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
-#: src/Plug.vala:120 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
-#: src/Views/SourceSelector.vala:124
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132
 #, fuzzy
 msgid "New Account"
 msgstr "Другой аккаунт"
 
-#: src/Plug.vala:122 src/Plug.vala:119
+#: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Профиль «%s» удалён."
 
 #: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:57
-#: src/Authentification/WebDialog.vala:136
 #: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
 msgstr "Введите данные для входа…"
 
 #: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:59
-#: src/Authentification/WebDialog.vala:39
 #: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:82
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "Пароль"
@@ -221,42 +216,34 @@ msgid "No authentication required"
 msgstr "Авторизация не требуется"
 
 #: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:111
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Войти"
 
-#: src/Authentification/PasswordDialog.vala:74
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr ""
 
-#: src/Authentification/PasswordDialog.vala:87
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "Новый пароль"
 
-#: src/Authentification/PasswordDialog.vala:92
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "Подтвердите пароль"
 
-#: src/Authentification/PasswordDialog.vala:100
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Забыли пароль…"
 
-#: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Обновить изображение"
 
-#: src/Authentification/PasswordDialog.vala:106
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Введите вышеуказанный текст здесь"
 
-#: src/Authentification/PasswordDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "Нет аккаунта? Зарегистрируйтесь"
@@ -270,32 +257,11 @@ msgstr "Другой аккаунт"
 msgid "Loading…"
 msgstr "Загрузка…"
 
-#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
+#: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Войдите, чтобы синхронизировать приложения, такие как Почта, Контакты и "
 "Календарь."
-
-#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
-msgid "Cancel"
-msgstr "Отменить"
-
-#: src/Views/AccountView.vala:109
-#, c-format
-msgid "There are no apps currently installed that link to your %s account"
-msgstr "Нет установленных приложений для синхронизации с учётной записью %s"
-
-#: src/Views/AccountView.vala:110
-msgid "No Apps"
-msgstr "Нет приложений"
-
-#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
-msgid "Add…"
-msgstr "Добавить…"
-
-#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
-msgid "Remove"
-msgstr "Удалить"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
@@ -304,6 +270,30 @@ msgstr ""
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
 msgstr ""
+
+#: src/NewAccountDialog.vala:88
+msgid "Cancel"
+msgstr "Отменить"
+
+#: src/Views/AccountView.vala:109
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:110
+msgid "No Apps"
+msgstr "Нет приложений"
+
+#: src/Views/SourceSelector.vala:52
+msgid "Add…"
+msgstr "Добавить…"
+
+#: src/Views/SourceSelector.vala:57
+msgid "Remove"
+msgstr "Удалить"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr "Нет установленных приложений для синхронизации с учётной записью %s"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Добавить новый аккаунт…"

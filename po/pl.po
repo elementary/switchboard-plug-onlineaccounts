@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-17 03:53-0600\n"
+"POT-Creation-Date: 2019-01-10 18:13-0800\n"
 "PO-Revision-Date: 2019-01-01 00:44+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -58,7 +58,6 @@ msgstr "Synchronizuj swoje kalendarze"
 #: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:78
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
 msgstr "Poczta"
@@ -153,7 +152,7 @@ msgstr "Zarządzaj kontami sieciowymi oraz podłączonymi programami"
 msgid "Restore"
 msgstr "Przywróć"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:29 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
 msgstr "Połącz swoje konta sieciowe"
 
@@ -161,35 +160,31 @@ msgstr "Połącz swoje konta sieciowe"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "Połącz konta sieciowe, klikając ikonę na poniższym pasku narzędzi."
 
-#: src/Plug.vala:120 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:128
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:117
-#: src/Views/SourceSelector.vala:124
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132
 msgid "New Account"
 msgstr "Nowe konto"
 
-#: src/Plug.vala:122 src/Plug.vala:119
+#: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Konto '%s' zostało usunięte."
 
 #: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:57
-#: src/Authentification/WebDialog.vala:136
 #: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
 msgid "Please enter your credentials…"
 msgstr "Proszę wpisać swoje dane dostępowe…"
 
 #: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:59
-#: src/Authentification/WebDialog.vala:39
 #: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
 msgid "Back"
 msgstr "Wstecz"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:82
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
 msgstr "Hasło"
@@ -218,42 +213,34 @@ msgid "No authentication required"
 msgstr "Uwierzytelnianie nie jest wymagane"
 
 #: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:111
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
 msgstr "Zaloguj się"
 
-#: src/Authentification/PasswordDialog.vala:74
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
 msgstr "URL"
 
-#: src/Authentification/PasswordDialog.vala:87
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
 msgstr "Nowe hasło"
 
-#: src/Authentification/PasswordDialog.vala:92
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
-#: src/Authentification/PasswordDialog.vala:100
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
 msgstr "Zapomnij hasło…"
 
-#: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
 msgstr "Odśwież Captcha"
 
-#: src/Authentification/PasswordDialog.vala:106
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
 msgstr "Przepisz powyższy tekst"
 
-#: src/Authentification/PasswordDialog.vala:115
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
 msgstr "Nie masz konta? Zapisz się"
@@ -267,33 +254,11 @@ msgstr "Inne konto"
 msgid "Loading…"
 msgstr "Wczytywanie…"
 
-#: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
+#: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Zaloguj się, aby połączyć się z programami takimi jak Poczta, Kontakty i "
 "Kalendarz."
-
-#: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
-msgid "Cancel"
-msgstr "Anuluj"
-
-#: src/Views/AccountView.vala:109
-#, c-format
-msgid "There are no apps currently installed that link to your %s account"
-msgstr ""
-"Obecnie nie ma zainstalowanych programów, które łączą się z Twoim kontem %s"
-
-#: src/Views/AccountView.vala:110
-msgid "No Apps"
-msgstr "Brak programów"
-
-#: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
-msgid "Add…"
-msgstr "Dodaj…"
-
-#: src/Views/SourceSelector.vala:58 src/Views/SourceSelector.vala:57
-msgid "Remove"
-msgstr "Usuń"
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
@@ -302,6 +267,32 @@ msgstr "Dostawcy wyszukiwania"
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
 msgstr "Polityka prywatności"
+
+#: src/NewAccountDialog.vala:88
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: src/Views/AccountView.vala:109
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:110
+msgid "No Apps"
+msgstr "Brak programów"
+
+#: src/Views/SourceSelector.vala:52
+msgid "Add…"
+msgstr "Dodaj…"
+
+#: src/Views/SourceSelector.vala:57
+msgid "Remove"
+msgstr "Usuń"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr ""
+#~ "Obecnie nie ma zainstalowanych programów, które łączą się z Twoim kontem "
+#~ "%s"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Dodaj nowe konto…"
