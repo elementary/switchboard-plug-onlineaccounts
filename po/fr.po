@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2018-11-16 08:24+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
+"PO-Revision-Date: 2019-01-11 09:26+0000\n"
+"Last-Translator: Franck STAUFFER <franck.stauffer@e.email>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
 "Language: fr\n"
@@ -290,8 +290,13 @@ msgstr "Ajouter…"
 msgid "Remove"
 msgstr "Supprimer"
 
-#~ msgid "There are no apps currently installed that link to your %s account"
-#~ msgstr "Il n'y a actuellement aucune application liée à votre compte %s"
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr "Chercher des fournisseurs"
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr ""
 
 #~ msgid "Add a new account…"
 #~ msgstr "Ajouter un nouveau compte…"
