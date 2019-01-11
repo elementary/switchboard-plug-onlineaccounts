@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-12-17 03:53-0600\n"
-"PO-Revision-Date: 2019-01-04 00:08+0000\n"
+"PO-Revision-Date: 2019-01-11 00:06+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/nb/>\n"
@@ -273,9 +273,10 @@ msgid "Loading…"
 msgstr "Laster…"
 
 #: src/NewAccountDialog.vala:35 src/NewAccountDialog.vala:36
+#, fuzzy
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Logg inn for å koble til applikasjoner som e-post, kontakter og kalender."
+"Logg inn for å koble til med programmer som e-post, kontakter og kalender."
 
 #: src/NewAccountDialog.vala:75 src/NewAccountDialog.vala:88
 msgid "Cancel"
@@ -284,11 +285,11 @@ msgstr "Avbryt"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "There are no apps currently installed that link to your %s account"
-msgstr "Det er ingen applikasjoner installert som kobler til din %s konto"
+msgstr "Ingen installerte programmer lenker til din %s-konto"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
-msgstr "Ingen applikasjoner"
+msgstr "Ingen programmer"
 
 #: src/Views/SourceSelector.vala:53 src/Views/SourceSelector.vala:52
 msgid "Add…"
