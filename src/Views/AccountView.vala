@@ -106,7 +106,7 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
 
         if (i == 1) {
             var provider_name = ag_account.manager.get_provider (ag_account.get_provider_name ()).get_display_name ();
-            var no_service_label = _("There are no apps currently installed that link to your %s account").printf (provider_name);
+            var no_service_label = _("No installed apps make use of your %s account").printf (provider_name);
             var alert = new Granite.Widgets.AlertView (_("No Apps"), no_service_label, "applications-internet-symbolic");
             this.add (alert);
         } else {
