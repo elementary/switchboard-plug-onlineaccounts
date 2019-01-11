@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-01-11 09:27+0000\n"
+"PO-Revision-Date: 2019-01-11 12:51+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
@@ -276,7 +276,7 @@ msgstr "Annuler"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Aucune application installée n'utilise votre compte %s"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
