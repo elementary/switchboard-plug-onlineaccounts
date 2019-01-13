@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-01-11 12:51+0000\n"
+"PO-Revision-Date: 2019-01-14 00:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
@@ -89,7 +89,7 @@ msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr "Scrobbler votre musique"
+msgstr "Scrobblez votre musique"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -113,7 +113,7 @@ msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
-msgstr "Accéder aux courriels avec FastMail"
+msgstr "Accéder aux E-Mails avec FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
@@ -129,7 +129,7 @@ msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
-msgstr "Scrobbler votre musique"
+msgstr "Scrobblez votre musique"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
@@ -170,7 +170,7 @@ msgstr "Nouveau compte"
 #: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
-msgstr "Compte \"%s\" supprimé."
+msgstr "Compte « %s » supprimé."
 
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
@@ -228,7 +228,7 @@ msgstr "Nouveau mot de passe"
 
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
-msgstr "Confirmez le mot-de-passe"
+msgstr "Confirmez le mot de passe"
 
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
