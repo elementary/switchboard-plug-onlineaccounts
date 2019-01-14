@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2018-12-17 13:03+0000\n"
-"Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
+"PO-Revision-Date: 2019-01-14 16:33+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/pt/>\n"
 "Language: pt\n"
@@ -273,7 +273,7 @@ msgstr "Cancelar"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Nenhuma aplicação instalada faz uso da sua conta %s"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
