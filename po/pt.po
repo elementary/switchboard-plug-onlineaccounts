@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-01-14 16:33+0000\n"
+"PO-Revision-Date: 2019-01-15 00:06+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/pt/>\n"
@@ -59,7 +59,7 @@ msgstr "Sincronize os seus calendários"
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
@@ -256,7 +256,8 @@ msgstr "A carregar…"
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Iniciar sessão para estabelecer ligação ao correio, contactos e calendários."
+"Iniciar sessão para estabelecer ligação ao Correio eletrónico, Contactos e "
+"Calendário."
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
