@@ -261,14 +261,6 @@ msgstr ""
 "Inscrivez-vous pour vous connecter à des applications telles que Mail, "
 "Contacts et Calendrier."
 
-#: src/NewAccountDialog.vala:43
-msgid "Search Providers"
-msgstr ""
-
-#: src/NewAccountDialog.vala:85
-msgid "Privacy Policy"
-msgstr ""
-
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
 msgstr "Annuler"
