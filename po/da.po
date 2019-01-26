@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2018-12-10 22:17+0000\n"
+"PO-Revision-Date: 2019-01-27 00:01+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/da/>\n"
@@ -263,7 +263,7 @@ msgstr ""
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Fortrolighedspolitik"
 
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
@@ -272,7 +272,7 @@ msgstr "Annuller"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Ingen installerede apps gør brug af din %s konto"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
