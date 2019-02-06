@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-02-06 18:51+0000\n"
+"PO-Revision-Date: 2019-02-07 00:06+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/cs/>\n"
@@ -273,7 +273,7 @@ msgstr "Zrušit"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr "Žádné nainstalované aplikace nepoužívájí váš %s účet."
+msgstr "Žádné nainstalované aplikace nepoužívájí váš %s účet"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
