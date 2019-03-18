@@ -43,7 +43,7 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     public string request_id;
     public OnlineAccounts.SignonUIError error_code;
 
-    public Dialog (HashTable<string, Variant> parameter) {
+    protected Dialog (HashTable<string, Variant> parameter) {
         error_code = OnlineAccounts.SignonUIError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {
