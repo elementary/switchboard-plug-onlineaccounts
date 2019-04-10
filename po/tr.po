@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-04-08 19:53+0000\n"
+"PO-Revision-Date: 2019-04-11 21:53+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -26,7 +26,7 @@ msgstr "Gönderiler"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
-msgstr "Haber Kaynağınızı izleyin"
+msgstr "Haber kaynağınızı izleyin"
 
 #: providers/Facebook/facebook-contacts.service:4
 #: providers/Google/google-contacts.service:4
@@ -38,7 +38,7 @@ msgstr "Kişiler"
 #: providers/Google/google-contacts.service:5
 #: providers/Microsoft/microsoft-contacts.service:5
 msgid "Sync your contacts"
-msgstr "Kişilerinizi senkronize edin"
+msgstr "Kişilerinizi eşitleyin"
 
 #: providers/Facebook/facebook-calendar.service:4
 #: providers/Google/google-calendar.service:4
@@ -50,7 +50,7 @@ msgstr "Takvimler"
 #: providers/Google/google-calendar.service:5
 #: providers/Microsoft/microsoft-calendar.service:5
 msgid "Sync your calendars"
-msgstr "Takvimlerinizi senkronize edin"
+msgstr "Takvimlerinizi eşitleyin"
 
 #: providers/FastMail/fastmail-mail.service:4
 #: providers/Google/google-gmail.service:4
@@ -65,7 +65,7 @@ msgstr "E-posta"
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
 msgid "Sync your email"
-msgstr "E-Postanızı senkronize edin"
+msgstr "E-postanızı eşitleyin"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
@@ -73,7 +73,7 @@ msgstr "Fotoğraflar"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
-msgstr "Fotograflarınızı senkronize edin"
+msgstr "Fotoğraflarınızı eşitleyin"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
@@ -81,23 +81,23 @@ msgstr "Drive"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
-msgstr "Dosyalarınızı senkronize edin"
+msgstr "Dosyalarınızı eşitleyin"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr "Herkese-Açık Yap"
+msgstr "Skroplayıcı"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr "Müziğini herkese açık yap"
+msgstr "Müziğinizi skroplayın"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
-msgstr "Mail Hesabı"
+msgstr "E-posta Hesabı"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr "E-postayı IMAP Sunucusu aracılığı ile al"
+msgstr "E-postayı IMAP Sunucusu aracılığı ile alın"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
@@ -113,7 +113,7 @@ msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
-msgstr "Postaya FastMail ile erişin"
+msgstr "E-postalara FastMail ile erişin"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
@@ -129,7 +129,7 @@ msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
-msgstr "Müziğini herkese açık yap"
+msgstr "Müziğinizi skroplayın"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
@@ -145,7 +145,7 @@ msgstr "Çevrimiçi Hesaplar"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr "Online hesapları ve bağlı uygulamaları yönetin"
+msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #: src/Plug.vala:51
 msgid "Restore"
@@ -158,6 +158,7 @@ msgstr "Çevrimiçi Hesaplarınıza Bağlanın"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Aşağıda araç çubuğundaki simgeye tıklayarak çevrimiçi hesaplara bağlanın."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
@@ -168,7 +169,7 @@ msgstr "Yeni Hesap"
 #: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
-msgstr "'%s' hesabı kaldırıldı."
+msgstr "'%s' Hesabı Kaldırıldı."
 
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
@@ -180,13 +181,13 @@ msgstr "Lütfen bilgilerinizi giriniz…"
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
-msgstr "Şifre"
+msgstr "Parola"
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
@@ -214,7 +215,7 @@ msgstr "Kimlik denetimi gerekmiyor"
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
-msgstr "Oturum aç"
+msgstr "Oturum Aç"
 
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
@@ -222,19 +223,19 @@ msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
-msgstr "Yeni Şifre"
+msgstr "Yeni Parola"
 
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
-msgstr "Şifreyi Onayla"
+msgstr "Parolayı Onayla"
 
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
-msgstr "Şifremi unuttum…"
+msgstr "Parolamı unuttum…"
 
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
-msgstr "Güvenlik Resmini yenile"
+msgstr "Güvenlik Resmini Yenile"
 
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
@@ -255,15 +256,15 @@ msgstr "Yükleniyor…"
 
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Posta, Kişiler ve Takvim gibi uygulamalara bağlanmak için giriş yapın."
+msgstr "Posta, Kişiler ve Takvim gibi uygulamalara bağlanmak için oturum açın."
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Arama Sağlayıcıları"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Gizlilik İlkesi"
 
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
@@ -272,7 +273,7 @@ msgstr "İptal"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Yüklü hiçbir uygulama %s hesabınızı kullanmaz"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
@@ -280,7 +281,7 @@ msgstr "Uygulama Yok"
 
 #: src/Views/SourceSelector.vala:52
 msgid "Add…"
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #: src/Views/SourceSelector.vala:57
 msgid "Remove"
