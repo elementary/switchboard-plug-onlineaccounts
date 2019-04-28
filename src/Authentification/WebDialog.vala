@@ -78,6 +78,7 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
 
         webview.load_changed.connect (on_webview_load);
         webview.load_failed.connect (on_load_uri_failed);
+        webview.create.connect ((action) => { return on_new_window_requested (action); });
 
         if (validate_params (params) == false) {
             return false;
@@ -85,6 +86,17 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
 
         webview.load_uri (oauth_open_url);
         return true;
+    }
+
+    public Gtk.Widget? on_new_window_requested (WebKit.NavigationAction action) {
+        var uri = action.get_request ().get_uri ();
+        try {
+            AppInfo.launch_default_for_uri (uri, null);
+        } catch (Error e) {
+            warning ("Error launching browser for external link: %s", e.message);
+        }
+
+        return null;
     }
 
     private bool is_valid_url (string uri) {
