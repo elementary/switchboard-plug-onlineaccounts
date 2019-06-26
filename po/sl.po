@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-10 18:13-0800\n"
+"POT-Creation-Date: 2019-06-26 23:11+0200\n"
 "PO-Revision-Date: 2018-03-22 00:05+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -177,6 +177,7 @@ msgstr "Račun '%s' odstranjen."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
 msgstr "Prosimo vpišite vaše uporabniško ime in geslo…"
 
@@ -254,6 +255,7 @@ msgstr "Drug račun"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
 msgstr "Nalaganje…"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-10 18:13-0800\n"
+"POT-Creation-Date: 2019-06-26 23:11+0200\n"
 "PO-Revision-Date: 2019-01-14 00:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
@@ -175,6 +175,7 @@ msgstr "Compte « %s » supprimé."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
 msgstr "Veuillez saisir vos identifiants…"
 
@@ -252,6 +253,7 @@ msgstr "Autre compte"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
 msgstr "Chargement…"
 
@@ -260,6 +262,14 @@ msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Inscrivez-vous pour vous connecter à des applications telles que Mail, "
 "Contacts et Calendrier."
+
+#: src/NewAccountDialog.vala:43
+msgid "Search Providers"
+msgstr "Rechercher des fournisseurs"
+
+#: src/NewAccountDialog.vala:85
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
 
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
@@ -281,14 +291,6 @@ msgstr "Ajouter…"
 #: src/Views/SourceSelector.vala:57
 msgid "Remove"
 msgstr "Supprimer"
-
-#: src/NewAccountDialog.vala:43
-msgid "Search Providers"
-msgstr "Rechercher des fournisseurs"
-
-#: src/NewAccountDialog.vala:85
-msgid "Privacy Policy"
-msgstr "Politique de confidentialité"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Ajouter un nouveau compte…"

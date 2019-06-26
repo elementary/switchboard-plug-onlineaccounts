@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-10 18:13-0800\n"
+"POT-Creation-Date: 2019-06-26 23:11+0200\n"
 "PO-Revision-Date: 2014-01-19 05:49+0000\n"
 "Last-Translator: Minh Danh <r00t3rvn@gmail.com>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
@@ -171,6 +171,7 @@ msgstr ""
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
 msgstr ""
 
@@ -248,6 +249,7 @@ msgstr ""
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
 msgstr ""
 

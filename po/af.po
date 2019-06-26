@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-10 18:13-0800\n"
+"POT-Creation-Date: 2019-06-26 23:11+0200\n"
 "PO-Revision-Date: 2014-07-13 16:12+0000\n"
 "Last-Translator: Jacques Strydom <jacquesafro@gmail.com>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -173,6 +173,7 @@ msgstr "Rekening '%s' Verwyder."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
 msgstr "Tik asseblief jou aansluit besonderhede in..."
 
@@ -251,6 +252,7 @@ msgstr "Aanlyn Rekeninge"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
 msgstr "Laai tans…"
 
