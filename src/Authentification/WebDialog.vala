@@ -67,7 +67,6 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
         back_button.clicked.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
-            this.destroy ();
         });
     }
 
