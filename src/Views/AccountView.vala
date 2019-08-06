@@ -20,19 +20,17 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.AccountView : Gtk.Grid {
+public class OnlineAccounts.AccountView : Granite.SimpleSettingsPage {
     public OnlineAccounts.Account account { get; construct; }
 
     public AccountView (OnlineAccounts.Account account) {
-        Object (account: account);
+        Object (
+            account: account,
+            description: ""
+        );
     }
 
     construct {
-        column_spacing = 6;
-        row_spacing = 3;
-        margin = 24;
-        orientation = Gtk.Orientation.VERTICAL;
-
         var ag_account = account.ag_account;
         var account_service = new Ag.AccountService (ag_account, null);
         var auth_data = account_service.get_auth_data ();
@@ -44,16 +42,9 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
 
         var provider = ag_account.manager.get_provider (ag_account.get_provider_name ());
 
-        var provider_image = new Gtk.Image.from_icon_name (provider.get_icon_name (), Gtk.IconSize.DIALOG);
-        provider_image.use_fallback = true;
-
-        var user_label = new Gtk.Label (Markup.escape_text (ag_account.get_display_name () ?? _("New Account")));
-        user_label.get_style_context ().add_class ("h2");
-        user_label.hexpand = true;
-        user_label.xalign = 0;
-
-        var provider_label = new Gtk.Label (provider.get_display_name ());
-        provider_label.xalign = 0;
+        icon_name = provider.get_icon_name ();
+        title = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
+        description = provider.get_display_name ();
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
@@ -111,15 +102,11 @@ public class OnlineAccounts.AccountView : Gtk.Grid {
             this.add (alert);
         } else {
             scrolled_window.add (apps_grid);
-
-            attach (provider_image, 0, 0, 1, 2);
-            attach (user_label, 1, 0, 1, 1);
-            attach (provider_label, 1, 1, 1, 1);
-            attach (scrolled_window, 0, 2, 2, 1);
+            content_area.add (scrolled_window);
         }
 
         ag_account.display_name_changed.connect (() => {
-            user_label.label = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
+            title = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
         });
     }
 
