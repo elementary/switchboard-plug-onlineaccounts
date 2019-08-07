@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-10 18:13-0800\n"
+"POT-Creation-Date: 2019-06-26 23:11+0200\n"
 "PO-Revision-Date: 2018-03-08 17:57+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -176,6 +176,7 @@ msgstr "Account '%s' Removed."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
 msgstr "Please enter your credentials…"
 
@@ -253,6 +254,7 @@ msgstr "Other Account"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
 msgstr "Loading…"
 

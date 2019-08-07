@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-01-11 13:12+0000\n"
+"PO-Revision-Date: 2019-08-07 04:22+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
@@ -145,7 +145,7 @@ msgstr "Comptes en línia"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr "Gestioneu comptes en línia i aplicacions connectades"
+msgstr "Gestioneu comptes en línia i aplicacions connectades."
 
 #: src/Plug.vala:51
 msgid "Restore"
@@ -175,6 +175,7 @@ msgstr "S’ha suprimit el compte «%s»."
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
 msgstr "Introduïu les vostres dades d’accès…"
 
@@ -252,8 +253,9 @@ msgstr "Un altre compte"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
-msgstr "S'està carregant…"
+msgstr "Es carrega…"
 
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."

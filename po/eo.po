@@ -8,49 +8,49 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2018-10-23 08:14+0000\n"
-"Last-Translator: Jesse ALTER <jesse@jessealter.com>\n"
-"Language-Team: Esperanto <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2019-07-15 23:12+0000\n"
+"Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
+"Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Poŝtaĵoj"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
-msgstr ""
+msgstr "Rigardi vian novaĵliston"
 
 #: providers/Facebook/facebook-contacts.service:4
 #: providers/Google/google-contacts.service:4
 #: providers/Microsoft/microsoft-contacts.service:4
 msgid "Contacts"
-msgstr ""
+msgstr "Kontaktoj"
 
 #: providers/Facebook/facebook-contacts.service:5
 #: providers/Google/google-contacts.service:5
 #: providers/Microsoft/microsoft-contacts.service:5
 msgid "Sync your contacts"
-msgstr ""
+msgstr "Sinkronigi viajn kontaktojn"
 
 #: providers/Facebook/facebook-calendar.service:4
 #: providers/Google/google-calendar.service:4
 #: providers/Microsoft/microsoft-calendar.service:4
 msgid "Calendars"
-msgstr ""
+msgstr "Kalendaroj"
 
 #: providers/Facebook/facebook-calendar.service:5
 #: providers/Google/google-calendar.service:5
 #: providers/Microsoft/microsoft-calendar.service:5
 msgid "Sync your calendars"
-msgstr ""
+msgstr "Sinkronigi viajn kalendarojn"
 
 #: providers/FastMail/fastmail-mail.service:4
 #: providers/Google/google-gmail.service:4
@@ -59,228 +59,231 @@ msgstr ""
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
-msgstr ""
+msgstr "Retmesaĝo"
 
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
 msgid "Sync your email"
-msgstr ""
+msgstr "Sinkronigi viajn retmesaĝojn"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Fotoj"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
-msgstr ""
+msgstr "Sinkronigi viajn fotojn"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Memorujo"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
-msgstr ""
+msgstr "Sinkronigi viajn dosierojn"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble-servo por registri muziklistojn"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr ""
+msgstr "Scrobble-umi vian muzikon"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
-msgstr ""
+msgstr "Retmesaĝa konto"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Ŝargi retmesaĝojn el IMAP-servilo"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
-msgstr ""
+msgstr "Atingi la tutan enhavon de Facebook ĉe ĉi komputilo"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Atingi mesaĝojn de FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
-msgstr ""
+msgstr "Atingi la servojn de Google ĉe ĉi komputilo"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
-msgstr ""
+msgstr "Scrobble-umu vian muzikon"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr ""
+msgstr "Atingi la servojn de Outlook kaj OneDrive ĉe ĉi komputilo"
 
 #: src/Plug.vala:41
 msgid "Online Accounts"
-msgstr ""
+msgstr "Retaj kontoj"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Mastrumu retajn kontojn kaj konektitajn aplikaĵojn"
 
 #: src/Plug.vala:51
 msgid "Restore"
-msgstr ""
+msgstr "Restaŭri"
 
 #: src/Plug.vala:59 src/NewAccountDialog.vala:30
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "Konektu viajn retajn kontojn"
 
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "Konektu retajn kontojn klakante la piktogramon en la malsupra ilobreto."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:132
 msgid "New Account"
-msgstr ""
+msgstr "Nova konto"
 
 #: src/Plug.vala:119
 #, c-format
 msgid "Account '%s' Removed."
-msgstr ""
+msgstr "Konto „%s“ forigita."
 
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
 msgid "Please enter your credentials…"
-msgstr ""
+msgstr "Bonvolu enigi vian salutnomon…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "Reen"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
-msgstr ""
+msgstr "Pasvorto"
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
 msgid "Server"
-msgstr ""
+msgstr "Servilo"
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
 msgid "Encryption:"
-msgstr ""
+msgstr "Ĉifrado:"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
 msgid "None"
-msgstr ""
+msgstr "Nenio"
 
 #: src/Authentification/MailDialog.vala:147
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Uzi IMAP-salutnomon"
 
 #: src/Authentification/MailDialog.vala:151
 msgid "No authentication required"
-msgstr ""
+msgstr "Aŭtentigo ne necesas"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
-msgstr ""
+msgstr "Ensaluti"
 
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
-msgstr ""
+msgstr "URL-adreso"
 
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
-msgstr ""
+msgstr "Nova pasvorto"
 
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
-msgstr "Konfirmu pasvorton"
+msgstr "Konfirmi pasvorton"
 
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
-msgstr ""
+msgstr "Forgesita pasvorto…"
 
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
-msgstr ""
+msgstr "Rehavi Captcha-bildon"
 
 #: src/Authentification/PasswordDialog.vala:105
 msgid "Enter above text here"
-msgstr ""
+msgstr "Enigi la supran tekston"
 
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Ĉu sen konto? Enskribiĝu"
 
 #: src/Authentification/PasswordDialog.vala:314
 msgid "Other Account"
-msgstr ""
+msgstr "Alia konto"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
 msgid "Loading…"
-msgstr ""
+msgstr "Ŝarganta…"
 
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
+"ENsalutu por konekti al aplikaĵoj kiel Retmesaĝo, Kontaktoj, kaj Kalendaro."
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Serĉi provizantojn"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privateca politiko"
 
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
-msgstr ""
+msgstr "Rezigni"
 
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Neniu instalita aplikaĵo uzas la konton %s"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
-msgstr ""
+msgstr "Neniu aplikaĵo"
 
 #: src/Views/SourceSelector.vala:52
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: src/Views/SourceSelector.vala:57
 msgid "Remove"

@@ -37,7 +37,7 @@ namespace OnlineAccounts {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("accounts/online", null);
             Object (category: Category.NETWORK,
-                    code_name: "network-pantheon-online-accounts",
+                    code_name: "io.elementary.switchboard.onlineaccounts",
                     display_name: _("Online Accounts"),
                     description: _("Manage online accounts and connected applications"),
                     icon: "preferences-desktop-online-accounts",
