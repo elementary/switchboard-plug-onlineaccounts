@@ -3,7 +3,7 @@ plug_files = files(
     'Account.vala',
     'Plug.vala',
     'Authentification/DialogService.vala',
-    'Authentification/Dialog.vala',
+    'Authentification/AbstractAuthView.vala',
     'Authentification/Key.vala',
     'Authentification/MailDialog.vala',
     'Authentification/PasswordDialog.vala',

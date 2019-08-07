@@ -35,7 +35,7 @@ public enum OnlineAccounts.SignonUIError {
     FORGOT_PASSWORD
 }
 
-public abstract class OnlineAccounts.Dialog : Gtk.Grid {
+public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
     public signal void finished ();
 
 
@@ -43,7 +43,7 @@ public abstract class OnlineAccounts.Dialog : Gtk.Grid {
     public string request_id;
     public OnlineAccounts.SignonUIError error_code;
 
-    protected Dialog (HashTable<string, Variant> parameter) {
+    protected AbstractAuthView (HashTable<string, Variant> parameter) {
         error_code = OnlineAccounts.SignonUIError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {

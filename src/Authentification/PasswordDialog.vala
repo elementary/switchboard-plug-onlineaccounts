@@ -20,7 +20,7 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
+public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
     public signal void refresh_captcha_needed ();
     private Gtk.Entry username_entry;
     private Gtk.Entry password_entry;
