@@ -8,13 +8,8 @@
 
   <template>
     <group name="auth">
-      <setting name="method">mail</setting>
-      <setting name="mechanism">mail</setting>
-      <group name="mail">
-        <group name="mail">
-          <setting name="AskEmailSettings" type="boolean">true</setting>
-        </group>
-      </group>
+      <setting name="method">icloud</setting>
+      <setting name="mechanism">icloud</setting>
     </group>
   </template>
 </provider>
