@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider id="com.icloud">
+  <name>iCloud</name>
+  <description>Mail, Contacts, Calendars, and Tasks</description>
+  <icon>com.icloud</icon>
+  <translations>online-accounts-plug</translations>
+  <plugin>icloud</plugin>
+
+  <template>
+    <group name="auth">
+      <setting name="method">mail</setting>
+      <setting name="mechanism">mail</setting>
+      <group name="mail">
+        <group name="mail">
+          <setting name="AskEmailSettings" type="boolean">true</setting>
+        </group>
+      </group>
+    </group>
+  </template>
+</provider>

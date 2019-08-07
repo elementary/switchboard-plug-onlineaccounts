@@ -4,6 +4,7 @@ plug_files = files(
     'Plug.vala',
     'Authentification/DialogService.vala',
     'Authentification/Dialog.vala',
+    'Authentification/iCloudDialog.vala',
     'Authentification/Key.vala',
     'Authentification/MailDialog.vala',
     'Authentification/PasswordDialog.vala',
