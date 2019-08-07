@@ -2,7 +2,7 @@
 <provider id="com.icloud">
   <name>iCloud</name>
   <description>Mail, Contacts, Calendars, and Tasks</description>
-  <icon>com.icloud</icon>
+  <icon>io.elementary.online-accounts.icloud</icon>
   <translations>online-accounts-plug</translations>
   <plugin>icloud</plugin>
 
