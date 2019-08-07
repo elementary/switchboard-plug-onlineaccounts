@@ -39,3 +39,5 @@ custom_target(
     ],
     output: 'providers-pot'
 )
+
+subdir('extra')
