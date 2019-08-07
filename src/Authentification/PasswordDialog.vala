@@ -53,18 +53,6 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
     public PasswordDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
-        var info_label = new Gtk.Label (_("Please enter your credentials…"));
-
-        var back_button = new Gtk.Button.with_label (_("Back"));
-        back_button.halign = Gtk.Align.START;
-        back_button.margin = 6;
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
-
-        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        header_box.hexpand = true;
-        header_box.add (back_button);
-        header_box.set_center_widget (info_label);
-
         provider_label = new Gtk.Label ("");
         provider_label.get_style_context ().add_class ("h1");
         provider_label.margin_bottom = 24;
@@ -126,9 +114,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
         grid.get_style_context ().add_class ("login");
         grid.add (provider_label);
 
-        attach (header_box, 0, 0);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
-        attach (grid, 0, 2);
+        content_area.add (grid);
 
         if (query_url) {
             grid.add (url_entry);
@@ -172,10 +158,6 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
             }
         });
         save_button.clicked.connect (() => finished ());
-        back_button.clicked.connect (() => {
-            error_code = OnlineAccounts.SignonUIError.CANCELED;
-            finished ();
-        });
 
         show_all ();
     }
