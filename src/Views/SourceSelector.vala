@@ -23,8 +23,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     public signal void account_selected (OnlineAccounts.Account account);
     public signal void new_account_request ();
 
-    private Gtk.ToolButton remove_button;
-    private Gtk.ToolButton add_button;
     private Gtk.ListBox list_box;
 
     public SourceSelector () {
@@ -48,25 +46,25 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         scroll.expand = true;
         scroll.add (list_box);
 
-        add_button = new Gtk.ToolButton (null, null);
+        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         add_button.tooltip_text = _("Add…");
-        add_button.icon_name = "list-add-symbolic";
-        add_button.clicked.connect (() => {new_account_request ();});
 
-        remove_button = new Gtk.ToolButton (null, null);
+        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         remove_button.tooltip_text = _("Remove");
-        remove_button.icon_name = "list-remove-symbolic";
-        remove_button.clicked.connect (remove_source);
 
-        var toolbar = new Gtk.Toolbar();
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-        toolbar.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
-        toolbar.show_arrow = false;
-        toolbar.add (add_button);
-        toolbar.add (remove_button);
+        var action_bar = new Gtk.ActionBar ();
+        action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+        action_bar.add (add_button);
+        action_bar.add (remove_button);
 
         add (scroll);
-        add (toolbar);
+        add (action_bar);
+
+        add_button.clicked.connect (() => {
+            new_account_request ();
+        });
+
+        remove_button.clicked.connect (remove_source);
 
         list_box.row_selected.connect ((row) => {
             if (row != null) {
