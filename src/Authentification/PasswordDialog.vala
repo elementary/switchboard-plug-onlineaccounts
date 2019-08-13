@@ -175,7 +175,6 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.Dialog {
         back_button.clicked.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
-            this.destroy ();
         });
 
         show_all ();
