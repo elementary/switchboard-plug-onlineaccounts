@@ -25,7 +25,7 @@ gtk_dep = dependency('gtk+-3.0')
 webkit_dep = dependency('webkit2gtk-4.0')
 
 config_data = configuration_data()
-config_data.set_quoted ('PREFIX', get_option('prefix'))
+config_data.set_quoted ('PREFIX', prefix)
 config_h = configure_file(
     output: 'config.h',
     configuration: config_data

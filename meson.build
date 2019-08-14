@@ -22,7 +22,11 @@ libsignon_glib = dependency('libsignon-glib')
 json_glib_dep = dependency('json-glib-1.0')
 rest_dep = dependency('rest-0.7')
 
-hicolor_dir = join_paths(get_option('datadir'), 'icons', 'hicolor')
+prefix = get_option('prefix')
+datadir = join_paths(prefix, get_option('datadir'))
+libdir = join_paths(prefix, get_option('libdir'))
+libexecdir = join_paths(prefix, get_option('libexecdir'))
+hicolor_dir = join_paths(datadir, 'icons', 'hicolor')
 
 subdir('src')
 subdir('data')
