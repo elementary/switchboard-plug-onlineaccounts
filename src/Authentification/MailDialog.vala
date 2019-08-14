@@ -45,18 +45,6 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
     public MailDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
-        var info_label = new Gtk.Label (_("Please enter your credentials…"));
-
-        var back_button = new Gtk.Button.with_label (_("Back"));
-        back_button.halign = Gtk.Align.START;
-        back_button.margin = 6;
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
-
-        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        header_box.hexpand = true;
-        header_box.add (back_button);
-        header_box.set_center_widget (info_label);
-
         var main_grid = new Gtk.Grid ();
         main_grid.margin = 12;
         main_grid.halign = Gtk.Align.CENTER;
@@ -193,9 +181,7 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         var scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.add (main_grid);
 
-        attach (header_box, 0, 0);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
-        attach (scrolled, 0, 2);
+        content_area.add (scrolled);
 
         set_parameters (params);
 
@@ -296,10 +282,6 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         });
 
         save_button.clicked.connect (() => finished ());
-        back_button.clicked.connect (() => {
-            error_code = OnlineAccounts.SignonUIError.CANCELED;
-            finished ();
-        });
 
         show_all ();
     }

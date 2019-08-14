@@ -1,6 +1,5 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
-/*-
- * Copyright (c) 2013-2015 Pantheon Developers (https://launchpad.net/switchboard-plug-onlineaccounts)
+/*
+ * Copyright (c) 2013-2019 elementary, Inc. (https://elementary.io)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -38,10 +37,13 @@ public enum OnlineAccounts.SignonUIError {
 public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
     public signal void finished ();
 
-
     public HashTable<string, Variant> parameters;
     public string request_id;
     public OnlineAccounts.SignonUIError error_code;
+
+    protected Gtk.Grid content_area;
+    protected Gtk.Label title_label;
+    protected Gtk.Spinner spinner;
 
     protected AbstractAuthView (HashTable<string, Variant> parameter) {
         error_code = OnlineAccounts.SignonUIError.NONE;
@@ -49,6 +51,37 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
         plug.hide_request.connect (() => {
             error_code = OnlineAccounts.SignonUIError.CANCELED;
             finished ();
+        });
+    }
+
+    construct {
+        title_label = new Gtk.Label (_("Please enter your credentials…"));
+
+        var back_button = new Gtk.Button.with_label (_("Back"));
+        back_button.halign = Gtk.Align.START;
+        back_button.margin = 6;
+        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+
+        spinner = new Gtk.Spinner ();
+        spinner.halign = Gtk.Align.END;
+        spinner.margin = 6;
+
+        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        header_box.hexpand = true;
+        header_box.add (back_button);
+        header_box.set_center_widget (title_label);
+        header_box.pack_end (spinner);
+
+        content_area = new Gtk.Grid ();
+
+        attach (header_box, 0, 0);
+        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
+        attach (content_area, 0, 2);
+
+        back_button.clicked.connect (() => {
+            error_code = OnlineAccounts.SignonUIError.CANCELED;
+            finished ();
+            this.destroy ();
         });
     }
 
