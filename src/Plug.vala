@@ -168,7 +168,7 @@ namespace OnlineAccounts {
             switch_to_main ();
         }
 
-        public void add_widget_to_stack (OnlineAccounts.Dialog widget, string name) {
+        public void add_widget_to_stack (OnlineAccounts.AbstractAuthView widget, string name) {
             new_account_dialog.add_widget (widget, name);
         }
 

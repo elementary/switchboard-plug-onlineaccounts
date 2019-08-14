@@ -20,7 +20,7 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.WebDialog : OnlineAccounts.Dialog {
+public class OnlineAccounts.WebDialog : OnlineAccounts.AbstractAuthView {
     private WebKit.WebView webview;
     private string oauth_open_url;
     private string oauth_final_url;

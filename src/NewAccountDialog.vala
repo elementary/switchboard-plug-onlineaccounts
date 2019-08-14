@@ -121,7 +121,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         return false;
     }
 
-    public void add_widget (OnlineAccounts.Dialog widget, string name) {
+    public void add_widget (OnlineAccounts.AbstractAuthView widget, string name) {
         stack.add_named (widget, name);
         stack.visible_child_name = name;
 
