@@ -103,8 +103,6 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
         return true;
     }
 
-    public abstract bool refresh_captcha (string uri);
-
     private bool validate_params (HashTable<string, Variant> params) {
         GLib.Variant value = params.lookup (OnlineAccounts.Key.REQUEST_ID);
         if ((value == null) || value.is_of_type (GLib.VariantType.STRING) == false) {

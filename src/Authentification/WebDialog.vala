@@ -148,9 +148,4 @@ public class OnlineAccounts.WebDialog : OnlineAccounts.AbstractAuthView {
 
         return table;
     }
-
-    public override bool refresh_captcha (string uri) {
-        return true;
-    }
-
 }

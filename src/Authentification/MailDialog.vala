@@ -286,10 +286,6 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         show_all ();
     }
 
-    public override bool refresh_captcha (string uri) {
-        return true;
-    }
-
     public override bool set_parameters (HashTable<string, Variant> params) {
         if (base.set_parameters (params) == false) {
             return false;

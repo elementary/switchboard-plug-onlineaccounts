@@ -310,7 +310,7 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
         return true;
     }
 
-    public override bool refresh_captcha (string uri) {
+    public bool refresh_captcha (string uri) {
         if (uri == null) {
             warning ("invalid captcha value : %s", uri);
             error_code = OnlineAccounts.SignonUIError.BAD_CAPTCHA_URL;
