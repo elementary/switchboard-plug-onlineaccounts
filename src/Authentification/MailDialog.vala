@@ -21,46 +21,46 @@
  */
 
 public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
-    Gtk.Button save_button;
+    private Gtk.Button save_button;
 
-    Gtk.Entry imap_username_entry;
-    Gtk.Entry imap_password_entry;
-    Gtk.Entry imap_server_entry;
-    Gtk.SpinButton imap_port_spin;
-    Gtk.ComboBoxText imap_encryption_combobox;
+    private Gtk.Entry imap_username_entry;
+    private Gtk.Entry imap_password_entry;
+    private Gtk.Entry imap_server_entry;
+    private Gtk.SpinButton imap_port_spin;
+    private Gtk.ComboBoxText imap_encryption_combobox;
 
-    Gtk.Entry smtp_username_entry;
-    Gtk.Entry smtp_password_entry;
-    Gtk.CheckButton no_credentials;
-    Gtk.Entry smtp_server_entry;
-    Gtk.SpinButton smtp_port_spin;
-    Gtk.ComboBoxText smtp_encryption_combobox;
-    Gtk.CheckButton use_imap_credentials;
+    private Gtk.Entry smtp_username_entry;
+    private Gtk.Entry smtp_password_entry;
+    private Gtk.CheckButton no_credentials;
+    private Gtk.Entry smtp_server_entry;
+    private Gtk.SpinButton smtp_port_spin;
+    private Gtk.ComboBoxText smtp_encryption_combobox;
+    private Gtk.CheckButton use_imap_credentials;
 
-    bool imap_modified_by_user = false;
-    bool imap_port_modified_by_user = false;
-    bool smtp_modified_by_user = false;
-    bool smtp_port_modified_by_user = false;
+    private bool imap_modified_by_user = false;
+    private bool imap_port_modified_by_user = false;
+    private bool smtp_modified_by_user = false;
+    private bool smtp_port_modified_by_user = false;
 
     public MailDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
-        var main_grid = new Gtk.Grid ();
-        main_grid.margin = 12;
-        main_grid.halign = Gtk.Align.CENTER;
-        main_grid.valign = Gtk.Align.CENTER;
-        main_grid.column_spacing = 12;
-        main_grid.row_spacing = 6;
-        main_grid.orientation = Gtk.Orientation.VERTICAL;
-        main_grid.get_style_context ().add_class ("login");
+        var info_label = new Gtk.Label (_("Please enter your credentials…"));
 
-        var provider_label = new Gtk.Label (_("Mail Account"));
-        provider_label.get_style_context ().add_class ("h1");
-        provider_label.margin_bottom = 24;
+        var back_button = new Gtk.Button.with_label (_("Back"));
+        back_button.halign = Gtk.Align.START;
+        back_button.margin = 6;
+        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
-        var imap_label = new Gtk.Label ("IMAP");
-        imap_label.get_style_context ().add_class ("h4");
-        imap_label.halign = Gtk.Align.START;
+        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        header_box.hexpand = true;
+        header_box.add (back_button);
+        header_box.set_center_widget (info_label);
+
+        var provider_label = new Gtk.Label (_("IMAP Account"));
+        provider_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
+
+        var imap_label = new Granite.HeaderLabel ("IMAP");
 
         imap_username_entry = new Gtk.Entry ();
         imap_username_entry.placeholder_text = _("Email");
@@ -102,9 +102,7 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         imap_encryption_grid.add (imap_encryption_label);
         imap_encryption_grid.add (imap_encryption_combobox);
 
-        var smtp_label = new Gtk.Label ("SMTP");
-        smtp_label.get_style_context ().add_class ("h4");
-        smtp_label.halign = Gtk.Align.START;
+        var smtp_label = new Granite.HeaderLabel ("SMTP");
 
         smtp_username_entry = new Gtk.Entry ();
         smtp_username_entry.placeholder_text = _("Email");
@@ -121,6 +119,9 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         smtp_credentials.add (smtp_username_entry);
         smtp_credentials.add (smtp_password_entry);
 
+        var smtp_revealer = new Gtk.Revealer ();
+        smtp_revealer.add (smtp_credentials);
+
         smtp_server_entry = new Gtk.Entry ();
         smtp_server_entry.placeholder_text = _("Server");
 
@@ -133,7 +134,6 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         smtp_settings_grid.add (smtp_port_spin);
 
         use_imap_credentials = new Gtk.CheckButton.with_label (_("Use IMAP Credentials"));
-        use_imap_credentials.bind_property ("active", smtp_credentials, "sensitive", GLib.BindingFlags.INVERT_BOOLEAN);
         use_imap_credentials.active = true;
 
         no_credentials = new Gtk.CheckButton.with_label (_("No authentication required"));
@@ -155,7 +155,6 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         save_button = new Gtk.Button.with_label (_("Log In"));
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         save_button.hexpand = true;
-        save_button.margin_top = 18;
         save_button.sensitive = false;
 
         var entry_grid = new Gtk.Grid ();
@@ -169,11 +168,19 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
 
         entry_grid.add (smtp_label);
         entry_grid.add (no_credentials);
-        entry_grid.add (smtp_credentials);
         entry_grid.add (use_imap_credentials);
+        entry_grid.add (smtp_revealer);
+
         entry_grid.add (smtp_settings_grid);
         entry_grid.add (smtp_encryption_grid);
 
+        var main_grid = new Gtk.Grid ();
+        main_grid.margin = 12;
+        main_grid.halign = Gtk.Align.CENTER;
+        main_grid.valign = Gtk.Align.CENTER;
+        main_grid.row_spacing = 24;
+        main_grid.orientation = Gtk.Orientation.VERTICAL;
+        main_grid.get_style_context ().add_class ("login");
         main_grid.add (provider_label);
         main_grid.add (entry_grid);
         main_grid.add (save_button);
@@ -186,11 +193,12 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
         set_parameters (params);
 
         no_credentials.notify["active"].connect (() => {
-            smtp_credentials.sensitive = !no_credentials.active && !use_imap_credentials.active;
+            smtp_revealer.reveal_child = !no_credentials.active && !use_imap_credentials.active;
             use_imap_credentials.sensitive = ! no_credentials.active;
             reset_ok ();
         });
 
+        use_imap_credentials.bind_property ("active", smtp_revealer, "reveal-child", GLib.BindingFlags.INVERT_BOOLEAN);
         use_imap_credentials.notify["active"].connect (() => reset_ok ());
 
         // Be smart and propagate the domain to the server name.
