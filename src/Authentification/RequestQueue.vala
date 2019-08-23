@@ -29,16 +29,16 @@ public class OnlineAccounts.RequestQueue : Object {
     }
 
     Gee.LinkedList<string> widgets_to_show;
-    Gee.LinkedList<Dialog> dialogs;
+    Gee.LinkedList<AbstractAuthView> dialogs;
 
     private bool is_idle = true;
 
     private RequestQueue () {
         widgets_to_show = new Gee.LinkedList<string> ();
-        dialogs = new Gee.LinkedList<Dialog> ();
+        dialogs = new Gee.LinkedList<AbstractAuthView> ();
     }
 
-    public Dialog push_dialog (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
+    public AbstractAuthView push_dialog (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
         var request_info = new RequestInfo (parameter, main_loop);
         return process_next (request_info);
     }
@@ -51,8 +51,8 @@ public class OnlineAccounts.RequestQueue : Object {
         }
     }
 
-    public Dialog process_next (OnlineAccounts.RequestInfo info) {
-        Dialog dialog;
+    public AbstractAuthView process_next (OnlineAccounts.RequestInfo info) {
+        AbstractAuthView dialog;
         if (info.parameters.contains (OnlineAccounts.Key.OPEN_URL)) {
             dialog = new WebDialog (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);
@@ -80,7 +80,7 @@ public class OnlineAccounts.RequestQueue : Object {
         return dialog;
     }
 
-    public Dialog? get_dialog_from_request_id (string request_id) {
+    public AbstractAuthView? get_dialog_from_request_id (string request_id) {
         foreach (var dialog in dialogs) {
             if (GLib.strcmp (dialog.request_id, request_id) == 0)
                 return dialog;

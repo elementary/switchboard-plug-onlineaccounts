@@ -66,7 +66,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
 
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-        stack.add (list_grid);
+        stack.add_named (list_grid, "list-grid");
 
         var frame = new Gtk.Frame (null);
         frame.margin_top = 24;
@@ -121,9 +121,17 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         return false;
     }
 
-    public void add_widget (Gtk.Widget widget, string name) {
+    public void add_widget (OnlineAccounts.AbstractAuthView widget, string name) {
         stack.add_named (widget, name);
         stack.visible_child_name = name;
+
+        widget.finished.connect (() => {
+            stack.visible_child_name = "list-grid"; 
+            GLib.Timeout.add (stack.transition_duration, () => {
+                widget.destroy ();
+                return GLib.Source.REMOVE;
+            });
+        });
     }
 
     private class AccountRow : OnlineAccounts.ProviderRow {
