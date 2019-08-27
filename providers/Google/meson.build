@@ -14,12 +14,12 @@ executable(
         rest_dep,
     ],
     install: true,
-    install_dir: get_option('libexecdir'),
+    install_dir: libexecdir,
 )
 
 # Install the provider
 provider_data = configuration_data()
-provider_data.set ('LIBEXECDIR', join_paths(get_option('prefix'), get_option('libexecdir')))
+provider_data.set ('LIBEXECDIR', libexecdir)
 provider_data.set ('INTEGRATION_EXEC', provider_exe)
 configure_file(
     input: provider_name+'.provider.in',

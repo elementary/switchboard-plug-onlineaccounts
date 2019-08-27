@@ -25,7 +25,7 @@ gtk_dep = dependency('gtk+-3.0')
 webkit_dep = dependency('webkit2gtk-4.0')
 
 config_data = configuration_data()
-config_data.set_quoted ('PREFIX', get_option('prefix'))
+config_data.set_quoted ('PREFIX', prefix)
 config_h = configure_file(
     output: 'config.h',
     configuration: config_data
@@ -33,6 +33,8 @@ config_h = configure_file(
 
 config_vapi = meson.get_compiler('vala').find_library('config', dirs: meson.current_source_dir())
 config_dep = declare_dependency(dependencies: [config_vapi])
+
+switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
 shared_module(
     meson.project_name(),
@@ -51,5 +53,5 @@ shared_module(
         config_dep
     ],
     install: true,
-    install_dir : join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'network')
+    install_dir : join_paths(switchboard_plugsdir, 'network')
 )

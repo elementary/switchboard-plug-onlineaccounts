@@ -1,5 +1,5 @@
-providers_dir = libaccounts_dep.get_pkgconfig_variable('providerfilesdir')
-services_dir = libaccounts_dep.get_pkgconfig_variable('servicefilesdir')
+providers_dir = libaccounts_dep.get_pkgconfig_variable('providerfilesdir', define_variable: ['prefix', prefix])
+services_dir = libaccounts_dep.get_pkgconfig_variable('servicefilesdir', define_variable: ['prefix', prefix])
 
 subdir('Facebook')
 subdir('FastMail')
