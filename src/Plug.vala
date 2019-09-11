@@ -97,7 +97,6 @@ namespace OnlineAccounts {
                 source_selector.new_account_request.connect (() => {
                     if (new_account_dialog == null) {
                         new_account_dialog = new NewAccountDialog ();
-                        new_account_dialog.deletable = false;
                         new_account_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
                     }
 
@@ -125,7 +124,9 @@ namespace OnlineAccounts {
                 });
 
                 accounts_manager.account_added.connect ((account) => {
-                    new_account_dialog.destroy ();
+                    if (new_account_dialog != null) {
+                        new_account_dialog.destroy ();
+                    }
                 });
             }
 
