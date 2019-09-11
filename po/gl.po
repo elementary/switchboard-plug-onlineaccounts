@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 23:11+0200\n"
 "PO-Revision-Date: 2019-09-12 14:23+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"Last-Translator: Daniel <riesp@protonmail.com>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/gl/>\n"
 "Language: gl\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Publicacións"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -59,18 +59,17 @@ msgstr "Sincroniza os seus calendarios"
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:77
 msgid "Email"
-msgstr ""
+msgstr "Correo"
 
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
-#, fuzzy
 msgid "Sync your email"
-msgstr "Sincroniza os seus ficheiros"
+msgstr "Sincronice o seu correo electrónico"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Fotos"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -78,7 +77,7 @@ msgstr "Sincroniza as súas fotos"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Drive"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -86,7 +85,7 @@ msgstr "Sincroniza os seus ficheiros"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr ""
+msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
@@ -94,15 +93,15 @@ msgstr ""
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
-msgstr ""
+msgstr "Conta de correo"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Obter correo electrónico desde un servidor IMAP"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -110,15 +109,15 @@ msgstr "Aceda a todos os contidos do Facebook na súa computadora"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "FastMail"
-msgstr ""
+msgstr "FastMail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with FastMail"
-msgstr ""
+msgstr "Acceda ao correo con FastMail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -126,7 +125,7 @@ msgstr "Aceda a todos os servizos do Google na súa computadora"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
@@ -134,7 +133,7 @@ msgstr ""
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -146,7 +145,7 @@ msgstr "Contas en liña"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Xestione as contas en liña e as aplicacións conectadas"
 
 #: src/Plug.vala:51
 msgid "Restore"
@@ -159,13 +158,14 @@ msgstr "Conecte coas súas contas en liña"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Conecte contas en liña facendo clic na icona na barra de ferramentas que "
+"aparece abaixo."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:132
-#, fuzzy
 msgid "New Account"
-msgstr "Contas en liña"
+msgstr "Conta nova"
 
 #: src/Plug.vala:119
 #, c-format
@@ -183,57 +183,57 @@ msgstr "Escriba as súas credenciais…"
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:81
 msgid "Password"
-msgstr ""
+msgstr "Contrasinal"
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
 msgid "Server"
-msgstr ""
+msgstr "Servidor"
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
 msgid "Encryption:"
-msgstr ""
+msgstr "Cifrado:"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
 msgid "None"
-msgstr ""
+msgstr "Ningún"
 
 #: src/Authentification/MailDialog.vala:147
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Usar credenciais IMAP"
 
 #: src/Authentification/MailDialog.vala:151
 msgid "No authentication required"
-msgstr ""
+msgstr "Non se require autenticación"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
 msgid "Log In"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: src/Authentification/PasswordDialog.vala:73
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:86
 msgid "New Password"
-msgstr ""
+msgstr "Contrasinal novo"
 
 #: src/Authentification/PasswordDialog.vala:91
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirmar contrasinal"
 
 #: src/Authentification/PasswordDialog.vala:99
 msgid "Forgot password…"
-msgstr ""
+msgstr "Contrasinal esquecido…"
 
 #: src/Authentification/PasswordDialog.vala:104
 msgid "Refresh Captcha"
@@ -245,12 +245,11 @@ msgstr "Escriba aquí o texto anterior"
 
 #: src/Authentification/PasswordDialog.vala:114
 msgid "Don't have an account? Sign Up"
-msgstr ""
+msgstr "Non ten unha conta? Rexístrese"
 
 #: src/Authentification/PasswordDialog.vala:314
-#, fuzzy
 msgid "Other Account"
-msgstr "Contas en liña"
+msgstr "Outra conta"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
@@ -265,11 +264,11 @@ msgstr ""
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Provedores de busca"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Política de privacidade"
 
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
@@ -278,11 +277,11 @@ msgstr "Cancelar"
 #: src/Views/AccountView.vala:109
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Non hai aplicacións instaladas que fagan uso da súa conta %s"
 
 #: src/Views/AccountView.vala:110
 msgid "No Apps"
-msgstr ""
+msgstr "Sen aplicacións"
 
 #: src/Views/SourceSelector.vala:52
 msgid "Add…"
