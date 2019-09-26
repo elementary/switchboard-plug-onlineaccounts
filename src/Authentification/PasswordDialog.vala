@@ -224,8 +224,8 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
             new_password_entry.changed.connect (() => {
                 string new_password = new_password_entry.text;
                 string confirm = confirm_password_entry.text;
-                is_new_password_valid = (new_password.char_count () > 0) && 
-                                        (confirm.char_count () > 0) && 
+                is_new_password_valid = (new_password.char_count () > 0) &&
+                                        (confirm.char_count () > 0) &&
                                         (GLib.strcmp (new_password, confirm) == 0);
                 reset_ok ();
             });
@@ -233,8 +233,8 @@ public class OnlineAccounts.PasswordDialog : OnlineAccounts.AbstractAuthView {
             confirm_password_entry.changed.connect (() => {
                 string new_password = new_password_entry.text;
                 string confirm = confirm_password_entry.text;
-                is_new_password_valid = (new_password.char_count () > 0) && 
-                                        (confirm.char_count () > 0) && 
+                is_new_password_valid = (new_password.char_count () > 0) &&
+                                        (confirm.char_count () > 0) &&
                                         (GLib.strcmp (new_password, confirm) == 0);
                 reset_ok ();
             });

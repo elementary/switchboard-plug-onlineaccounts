@@ -24,7 +24,7 @@ public class IntegrationApplication : Application {
 
     private static uint account_id = 0;
     private static string? method = null;
-    private const GLib.OptionEntry[] options = {
+    private const GLib.OptionEntry[] OPTIONS = {
         { "account-id", 'a', 0, OptionArg.INT, ref account_id, "Specify the account id", "ID" },
         { "method", 0, 0, OptionArg.STRING, ref method, "The action to do", "NAME" },
         { null }
@@ -36,7 +36,7 @@ public class IntegrationApplication : Application {
             var opt_context = new OptionContext ("- Facebook Integration");
             opt_context.set_help_enabled (true);
             opt_context.set_ignore_unknown_options (true);
-            opt_context.add_main_entries (options, null);
+            opt_context.add_main_entries (OPTIONS, null);
 
             opt_context.parse_strv (ref args);
         } catch (OptionError e) {
@@ -88,7 +88,7 @@ public class IntegrationApplication : Application {
 
         var ag_manager = new Ag.Manager ();
         try {
-            Ag.Account account  = ag_manager.load_account (account_id);
+            Ag.Account account = ag_manager.load_account (account_id);
             var account_service = new Ag.AccountService (account, null);
             Ag.AuthData auth_data = account_service.get_auth_data ();
             weak GLib.Variant session_data = auth_data.get_login_parameters (null);

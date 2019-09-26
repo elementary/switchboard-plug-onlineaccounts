@@ -37,9 +37,7 @@ public class OnlineAccounts.AccountsManager : Object {
         return accounts_manager;
     }
 
-    private AccountsManager () {
-        
-    }
+    private AccountsManager () {}
 
     construct {
         accounts_available = new Gee.ArrayList<OnlineAccounts.Account> ();
@@ -90,7 +88,7 @@ public class OnlineAccounts.AccountsManager : Object {
 
         to_delete = null;
     }
-    
+
     public void remove_account (OnlineAccounts.Account account) {
         accounts_available.remove (account);
         remove_cached_account ();

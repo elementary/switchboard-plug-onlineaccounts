@@ -24,8 +24,7 @@ public class FlickrPlugin : Ap.OAuthPlugin {
         Object (account: account);
     }
 
-    construct
-    {
+    construct {
         var oauth_params = new HashTable<string, GLib.Value?> (str_hash, null);
         oauth_params.insert ("RequestEndpoint",
                              "https://secure.flickr.com/services/oauth/request_token");
@@ -43,11 +42,10 @@ public class FlickrPlugin : Ap.OAuthPlugin {
         oauth_params.insert ("AllowedSchemes", schemes);
         set_oauth_parameters (oauth_params);
 
-        set_mechanism(Ap.OAuthMechanism.HMAC_SHA1);
+        set_mechanism (Ap.OAuthMechanism.HMAC_SHA1);
     }
 }
 
-public GLib.Type ap_module_get_object_type ()
-{
+public GLib.Type ap_module_get_object_type () {
     return typeof (FlickrPlugin);
 }
