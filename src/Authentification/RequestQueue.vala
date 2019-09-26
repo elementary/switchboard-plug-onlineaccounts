@@ -54,7 +54,7 @@ public class OnlineAccounts.RequestQueue : Object {
     public AbstractAuthView process_next (OnlineAccounts.RequestInfo info) {
         AbstractAuthView dialog;
         if (info.parameters.contains (OnlineAccounts.Key.OPEN_URL)) {
-            dialog = new WebDialog (info.parameters);
+            dialog = new OAuthView (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);
         } else if (info.parameters.contains (OnlineAccounts.Key.ASK_EMAIL_SETTINGS)) {
             dialog = new MailDialog (info.parameters);

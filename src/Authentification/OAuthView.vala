@@ -20,13 +20,13 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.WebDialog : OnlineAccounts.AbstractAuthView {
+public class OnlineAccounts.OAuthView : OnlineAccounts.AbstractAuthView {
     private WebKit.WebView webview;
     private string oauth_open_url;
     private string oauth_final_url;
     private string oauth_response;
 
-    public WebDialog (GLib.HashTable<string, GLib.Variant> params) {
+    public OAuthView (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
         title_label.label = _("Loading…");
