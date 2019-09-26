@@ -33,8 +33,8 @@ public class OnlineAccounts.DialogService : Object {
         var dialog = RequestQueue.get_default ().push_dialog (parameter, main_loop);
         main_loop.run ();
         HashTable<string, Variant> reply;
-        if (dialog is WebDialog) {
-            WebDialog webdialog = dialog as WebDialog;
+        if (dialog is OAuthView) {
+            OAuthView webdialog = dialog as OAuthView;
             reply = webdialog.get_reply ();
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
@@ -61,8 +61,8 @@ public class OnlineAccounts.DialogService : Object {
         if (dialog == null)
             return;
 
-        if (dialog is WebDialog) {
-            WebDialog webdialog = dialog as WebDialog;
+        if (dialog is OAuthView) {
+            OAuthView webdialog = dialog as OAuthView;
             webdialog.set_parameters (parameter);
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
