@@ -18,7 +18,7 @@
  *
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
- 
+
 public enum OnlineAccounts.SignonUIError {
     NONE,
     GENERAL,
@@ -106,7 +106,7 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
     private bool validate_params (HashTable<string, Variant> params) {
         GLib.Variant value = params.lookup (OnlineAccounts.Key.REQUEST_ID);
         if ((value == null) || value.is_of_type (GLib.VariantType.STRING) == false) {
-            debug ("Wrong request id : %s", value != null ? value.get_type_string () : "null request id"); 
+            debug ("Wrong request id : %s", value != null ? value.get_type_string () : "null request id");
             return false;
         }
 

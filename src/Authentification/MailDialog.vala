@@ -207,11 +207,11 @@ public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
                 var domain = imap_username_entry.text.split ("@", 2)[1].strip ().replace ("@", "");
                 if (domain.length > 0) {
                     if (!imap_modified_by_user) {
-                        imap_server_entry.text = "imap."+ domain;
+                        imap_server_entry.text = "imap." + domain;
                     }
 
                     if (!smtp_modified_by_user) {
-                        smtp_server_entry.text = "smtp."+ domain;
+                        smtp_server_entry.text = "smtp." + domain;
                     }
                 }
             }

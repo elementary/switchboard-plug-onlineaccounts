@@ -126,7 +126,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         stack.visible_child_name = name;
 
         widget.finished.connect (() => {
-            stack.visible_child_name = "list-grid"; 
+            stack.visible_child_name = "list-grid";
             GLib.Timeout.add (stack.transition_duration, () => {
                 widget.destroy ();
                 return GLib.Source.REMOVE;
