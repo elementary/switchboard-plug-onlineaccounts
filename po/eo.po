@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 18:13-0800\n"
-"PO-Revision-Date: 2019-07-15 23:12+0000\n"
+"PO-Revision-Date: 2019-10-05 12:23+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/eo/>\n"
@@ -145,7 +145,7 @@ msgstr "Retaj kontoj"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr "Mastrumu retajn kontojn kaj konektitajn aplikaĵojn"
+msgstr "Mastrumi retajn kontojn kaj konektitajn aplikaĵojn"
 
 #: src/Plug.vala:51
 msgid "Restore"
