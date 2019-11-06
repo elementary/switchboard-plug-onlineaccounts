@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 23:11+0200\n"
+"POT-Creation-Date: 2019-11-06 17:57+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -58,6 +58,9 @@ msgstr "일정표 동기화하기"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:77
+#: src/Authentification/MailDialog.vala:66
+#: src/Authentification/MailDialog.vala:108
+#: src/Authentification/PasswordDialog.vala:65
 msgid "Email"
 msgstr "이메일"
 
@@ -161,11 +164,13 @@ msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 �
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
+#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
+#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
 msgid "New Account"
 msgstr "새 계정"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:119 src/Plug.vala:118
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "계정 '%s'가 제거되었습니다."
@@ -174,84 +179,110 @@ msgstr "계정 '%s'가 제거되었습니다."
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
 #: src/Authentification/WebDialog.vala:148
+#: src/Authentification/AbstractAuthView.vala:58
+#: src/Authentification/OAuthView.vala:121
 msgid "Please enter your credentials…"
 msgstr "로그인 정보를 입력하세요…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/AbstractAuthView.vala:60
 msgid "Back"
 msgstr "뒤로"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:81
+#: src/Authentification/MailDialog.vala:70
+#: src/Authentification/MailDialog.vala:112
+#: src/Authentification/PasswordDialog.vala:69
 msgid "Password"
 msgstr "비밀번호"
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
+#: src/Authentification/MailDialog.vala:81
+#: src/Authentification/MailDialog.vala:126
 msgid "Server"
 msgstr "서버"
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
+#: src/Authentification/MailDialog.vala:91
+#: src/Authentification/MailDialog.vala:141
 msgid "Encryption:"
 msgstr "암호화:"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
+#: src/Authentification/MailDialog.vala:95
+#: src/Authentification/MailDialog.vala:145
 msgid "None"
 msgstr "안 함"
 
 #: src/Authentification/MailDialog.vala:147
+#: src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
 msgstr "IMAP 인증 사용"
 
 #: src/Authentification/MailDialog.vala:151
+#: src/Authentification/MailDialog.vala:139
 msgid "No authentication required"
 msgstr "인증 없이 실행"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
+#: src/Authentification/MailDialog.vala:155
+#: src/Authentification/PasswordDialog.vala:98
 msgid "Log In"
 msgstr "로그인"
 
 #: src/Authentification/PasswordDialog.vala:73
+#: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
 msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:86
+#: src/Authentification/PasswordDialog.vala:74
 msgid "New Password"
 msgstr "새 비밀번호"
 
 #: src/Authentification/PasswordDialog.vala:91
+#: src/Authentification/PasswordDialog.vala:79
 msgid "Confirm Password"
 msgstr "비밀번호 확인"
 
 #: src/Authentification/PasswordDialog.vala:99
+#: src/Authentification/PasswordDialog.vala:87
 msgid "Forgot password…"
 msgstr "비밀번호를 잊으셨나요…"
 
 #: src/Authentification/PasswordDialog.vala:104
+#: src/Authentification/PasswordDialog.vala:92
 msgid "Refresh Captcha"
 msgstr "캡차 (Captcha) 새로고침"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:93
 msgid "Enter above text here"
 msgstr "텍스트 위에 입력하기"
 
 #: src/Authentification/PasswordDialog.vala:114
+#: src/Authentification/PasswordDialog.vala:102
 msgid "Don't have an account? Sign Up"
 msgstr "계정이 없으신가요? 먼저 계정을 만드세요"
 
 #: src/Authentification/PasswordDialog.vala:314
+#: src/Authentification/PasswordDialog.vala:295
 msgid "Other Account"
 msgstr "다른 계정"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
 #: src/Authentification/WebDialog.vala:155
+#: src/Authentification/OAuthView.vala:32
+#: src/Authentification/OAuthView.vala:127
 msgid "Loading…"
 msgstr "불러오는 중…"
 
@@ -271,22 +302,27 @@ msgstr "프라이버시 정책"
 msgid "Cancel"
 msgstr "취소"
 
-#: src/Views/AccountView.vala:109
+#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
 msgstr "설치된 앱이 %s 계정을 사용하지 않습니다"
 
-#: src/Views/AccountView.vala:110
+#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
 msgstr "어플 없음"
 
-#: src/Views/SourceSelector.vala:52
+#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
 msgid "Add…"
 msgstr "추가…"
 
-#: src/Views/SourceSelector.vala:57
+#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
 msgid "Remove"
 msgstr "제거"
+
+#: src/Authentification/MailDialog.vala:60
+#, fuzzy
+msgid "IMAP Account"
+msgstr "메일 계정"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""

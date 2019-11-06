@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 23:11+0200\n"
+"POT-Creation-Date: 2019-11-06 17:57+0000\n"
 "PO-Revision-Date: 2019-10-16 20:23+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Afrikaans <https://l10n.elementary.io/projects/switchboard/"
@@ -58,6 +58,9 @@ msgstr "Sinchroniseer jou kalenders"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:77
+#: src/Authentification/MailDialog.vala:66
+#: src/Authentification/MailDialog.vala:108
+#: src/Authentification/PasswordDialog.vala:65
 msgid "Email"
 msgstr ""
 
@@ -162,12 +165,14 @@ msgstr ""
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
+#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
+#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
 #, fuzzy
 msgid "New Account"
 msgstr "Aanlyn Rekeninge"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:119 src/Plug.vala:118
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Rekening '%s' Verwyder."
@@ -176,78 +181,102 @@ msgstr "Rekening '%s' Verwyder."
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
 #: src/Authentification/WebDialog.vala:148
+#: src/Authentification/AbstractAuthView.vala:58
+#: src/Authentification/OAuthView.vala:121
 msgid "Please enter your credentials…"
 msgstr "Tik asseblief jou aansluit besonderhede in..."
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/AbstractAuthView.vala:60
 msgid "Back"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:81
+#: src/Authentification/MailDialog.vala:70
+#: src/Authentification/MailDialog.vala:112
+#: src/Authentification/PasswordDialog.vala:69
 msgid "Password"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
+#: src/Authentification/MailDialog.vala:81
+#: src/Authentification/MailDialog.vala:126
 msgid "Server"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
+#: src/Authentification/MailDialog.vala:91
+#: src/Authentification/MailDialog.vala:141
 msgid "Encryption:"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
+#: src/Authentification/MailDialog.vala:95
+#: src/Authentification/MailDialog.vala:145
 msgid "None"
 msgstr "Geen"
 
 #: src/Authentification/MailDialog.vala:147
+#: src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:151
+#: src/Authentification/MailDialog.vala:139
 msgid "No authentication required"
 msgstr ""
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
+#: src/Authentification/MailDialog.vala:155
+#: src/Authentification/PasswordDialog.vala:98
 msgid "Log In"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:73
+#: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:86
+#: src/Authentification/PasswordDialog.vala:74
 msgid "New Password"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:91
+#: src/Authentification/PasswordDialog.vala:79
 msgid "Confirm Password"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:99
+#: src/Authentification/PasswordDialog.vala:87
 msgid "Forgot password…"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:104
+#: src/Authentification/PasswordDialog.vala:92
 msgid "Refresh Captcha"
 msgstr "Verfris  Captcha"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:93
 msgid "Enter above text here"
 msgstr "Tik bogenoemde teks hier"
 
 #: src/Authentification/PasswordDialog.vala:114
+#: src/Authentification/PasswordDialog.vala:102
 msgid "Don't have an account? Sign Up"
 msgstr ""
 
 #: src/Authentification/PasswordDialog.vala:314
+#: src/Authentification/PasswordDialog.vala:295
 #, fuzzy
 msgid "Other Account"
 msgstr "Aanlyn Rekeninge"
@@ -255,6 +284,8 @@ msgstr "Aanlyn Rekeninge"
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
 #: src/Authentification/WebDialog.vala:155
+#: src/Authentification/OAuthView.vala:32
+#: src/Authentification/OAuthView.vala:127
 msgid "Loading…"
 msgstr "Laai tans…"
 
@@ -274,22 +305,27 @@ msgstr ""
 msgid "Cancel"
 msgstr "Kanselleer"
 
-#: src/Views/AccountView.vala:109
+#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
 msgstr ""
 
-#: src/Views/AccountView.vala:110
+#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
 msgstr ""
 
-#: src/Views/SourceSelector.vala:52
+#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
 msgid "Add…"
 msgstr "Byvoeg"
 
-#: src/Views/SourceSelector.vala:57
+#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
 msgid "Remove"
 msgstr "Verwyder"
+
+#: src/Authentification/MailDialog.vala:60
+#, fuzzy
+msgid "IMAP Account"
+msgstr "Aanlyn Rekeninge"
 
 #~ msgid "Add a new account…"
 #~ msgstr "Voeg 'n nuwe rekening by..."

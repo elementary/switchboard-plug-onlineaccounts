@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 23:11+0200\n"
+"POT-Creation-Date: 2019-11-06 17:57+0000\n"
 "PO-Revision-Date: 2019-01-12 00:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
@@ -58,6 +58,9 @@ msgstr "Synkroniser dine kalendere"
 #: src/Authentification/MailDialog.vala:78
 #: src/Authentification/MailDialog.vala:122
 #: src/Authentification/PasswordDialog.vala:77
+#: src/Authentification/MailDialog.vala:66
+#: src/Authentification/MailDialog.vala:108
+#: src/Authentification/PasswordDialog.vala:65
 msgid "Email"
 msgstr "E-post"
 
@@ -166,12 +169,14 @@ msgstr ""
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:132
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
+#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
+#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
 #, fuzzy
 msgid "New Account"
 msgstr "Annen konto"
 
-#: src/Plug.vala:119
+#: src/Plug.vala:119 src/Plug.vala:118
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Kontoen '%s' fjernet."
@@ -180,84 +185,110 @@ msgstr "Kontoen '%s' fjernet."
 #: src/Authentification/PasswordDialog.vala:56
 #: src/Authentification/WebDialog.vala:136
 #: src/Authentification/WebDialog.vala:148
+#: src/Authentification/AbstractAuthView.vala:58
+#: src/Authentification/OAuthView.vala:121
 msgid "Please enter your credentials…"
 msgstr "Oppgi brukerdetaljer…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
+#: src/Authentification/AbstractAuthView.vala:60
 msgid "Back"
 msgstr "Tilbake"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
 #: src/Authentification/PasswordDialog.vala:81
+#: src/Authentification/MailDialog.vala:70
+#: src/Authentification/MailDialog.vala:112
+#: src/Authentification/PasswordDialog.vala:69
 msgid "Password"
 msgstr "Passord"
 
 #: src/Authentification/MailDialog.vala:93
 #: src/Authentification/MailDialog.vala:137
+#: src/Authentification/MailDialog.vala:81
+#: src/Authentification/MailDialog.vala:126
 msgid "Server"
 msgstr "Tjener"
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
+#: src/Authentification/MailDialog.vala:91
+#: src/Authentification/MailDialog.vala:141
 msgid "Encryption:"
 msgstr "Kryptering:"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
+#: src/Authentification/MailDialog.vala:95
+#: src/Authentification/MailDialog.vala:145
 msgid "None"
 msgstr "Ingen"
 
 #: src/Authentification/MailDialog.vala:147
+#: src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
 msgstr "Bruk IMAP-identitetsdetaljer"
 
 #: src/Authentification/MailDialog.vala:151
+#: src/Authentification/MailDialog.vala:139
 msgid "No authentication required"
 msgstr "Ingen identitetsbekreftelse kreves"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
+#: src/Authentification/MailDialog.vala:155
+#: src/Authentification/PasswordDialog.vala:98
 msgid "Log In"
 msgstr "Logg inn"
 
 #: src/Authentification/PasswordDialog.vala:73
+#: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
 msgstr "Nettadresse"
 
 #: src/Authentification/PasswordDialog.vala:86
+#: src/Authentification/PasswordDialog.vala:74
 msgid "New Password"
 msgstr "Nytt passord"
 
 #: src/Authentification/PasswordDialog.vala:91
+#: src/Authentification/PasswordDialog.vala:79
 msgid "Confirm Password"
 msgstr "Bekreft passord"
 
 #: src/Authentification/PasswordDialog.vala:99
+#: src/Authentification/PasswordDialog.vala:87
 msgid "Forgot password…"
 msgstr "Glemte passordet…"
 
 #: src/Authentification/PasswordDialog.vala:104
+#: src/Authentification/PasswordDialog.vala:92
 msgid "Refresh Captcha"
 msgstr "Nytt sikkerhetsbilde"
 
 #: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:93
 msgid "Enter above text here"
 msgstr "Skriv inn teksten over"
 
 #: src/Authentification/PasswordDialog.vala:114
+#: src/Authentification/PasswordDialog.vala:102
 msgid "Don't have an account? Sign Up"
 msgstr "Har du ingen konto? Registrer deg"
 
 #: src/Authentification/PasswordDialog.vala:314
+#: src/Authentification/PasswordDialog.vala:295
 msgid "Other Account"
 msgstr "Annen konto"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
 #: src/Authentification/WebDialog.vala:155
+#: src/Authentification/OAuthView.vala:32
+#: src/Authentification/OAuthView.vala:127
 msgid "Loading…"
 msgstr "Laster…"
 
@@ -278,22 +309,27 @@ msgstr "Personvernspraksis"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/Views/AccountView.vala:109
+#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
 msgstr "Ingen installerte programmer gjør bruk av din %s-konto"
 
-#: src/Views/AccountView.vala:110
+#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
 msgstr "Ingen programmer"
 
-#: src/Views/SourceSelector.vala:52
+#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
 msgid "Add…"
 msgstr "Legg til…"
 
-#: src/Views/SourceSelector.vala:57
+#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
 msgid "Remove"
 msgstr "Fjern"
+
+#: src/Authentification/MailDialog.vala:60
+#, fuzzy
+msgid "IMAP Account"
+msgstr "E-postkonto"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Ingen installerte programmer lenker til din %s-konto"
