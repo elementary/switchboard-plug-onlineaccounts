@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-06 17:57+0000\n"
-"PO-Revision-Date: 2019-10-05 12:23+0000\n"
+"PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/eo/>\n"
@@ -322,6 +322,5 @@ msgid "Remove"
 msgstr "Forigi"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Retmesaĝa konto"
+msgstr "IMAP-konto"
