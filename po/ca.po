@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-06 17:57+0000\n"
-"PO-Revision-Date: 2019-10-05 12:23+0000\n"
+"PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ca/>\n"
@@ -324,9 +324,8 @@ msgid "Remove"
 msgstr "Suprimeix"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Compte de correu"
+msgstr "Compte d'IMAP"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
