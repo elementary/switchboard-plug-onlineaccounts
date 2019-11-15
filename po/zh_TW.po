@@ -110,12 +110,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "在您的電腦上存取所有的 Facebook 內容"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "用 FastMail 存取郵件"
+msgid "Access mail with Fastmail"
+msgstr "用 Fastmail 存取郵件"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

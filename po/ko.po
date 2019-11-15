@@ -111,12 +111,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "사용자 컴퓨터의 모든 페이스북 내용에 접속하기"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
-msgstr "FastMail"
+msgid "Fastmail"
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "FastMail로 접속 하기"
+msgid "Access mail with Fastmail"
+msgstr "Fastmail로 접속 하기"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

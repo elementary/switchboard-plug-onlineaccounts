@@ -110,12 +110,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "Facebook'i vestlused, postitused ja teised teenused"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "E-posti kasutamine läbi FastMail'i"
+msgid "Access mail with Fastmail"
+msgstr "E-posti kasutamine läbi Fastmail'i"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

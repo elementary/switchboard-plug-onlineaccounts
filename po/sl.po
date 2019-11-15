@@ -113,12 +113,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "Dostopajte do vseh Facebook storitev na vašem računalniku"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "Prebirajte pošto s FastMail"
+msgid "Access mail with Fastmail"
+msgstr "Prebirajte pošto s Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

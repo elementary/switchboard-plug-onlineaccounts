@@ -113,12 +113,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "Синхронизация всего содержимого Facebook с вашим компьютером"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "Доступ к почте с FastMail"
+msgid "Access mail with Fastmail"
+msgstr "Доступ к почте с Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

@@ -110,11 +110,11 @@ msgid "Access all Facebook contents on your computer"
 msgstr "Приступите сваком садржају Фејсбука на вашем рачунару"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
+msgid "Access mail with Fastmail"
 msgstr "Приступите пошти са Брзом поштом"
 
 #: providers/Google/google.provider.in:3
