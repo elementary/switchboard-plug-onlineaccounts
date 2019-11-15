@@ -110,12 +110,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "كومپىيۇتىرىڭىز بىلەن بارلىق Facebook مۇلازىمەتلىرىنى زىيارەت قىلىڭ"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "FastMail بىلەن ئېلخەتلىرىڭىزنى زىيارەت قىلىڭ"
+msgid "Access mail with Fastmail"
+msgstr "Fastmail بىلەن ئېلخەتلىرىڭىزنى زىيارەت قىلىڭ"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

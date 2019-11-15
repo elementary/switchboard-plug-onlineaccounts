@@ -111,12 +111,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "コンピューター上ですべての Facebook のコンテンツにアクセスします"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
-msgstr "FastMail"
+msgid "Fastmail"
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "FastMail でメールにアクセスします"
+msgid "Access mail with Fastmail"
+msgstr "Fastmail でメールにアクセスします"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

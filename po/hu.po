@@ -112,12 +112,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "Az összes Facebook tartalom elérése a számítógépen"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr ""
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "A levelek elérése a FastMail segítségével"
+msgid "Access mail with Fastmail"
+msgstr "A levelek elérése a Fastmail segítségével"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

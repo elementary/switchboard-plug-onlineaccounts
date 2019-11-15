@@ -106,11 +106,11 @@ msgid "Access all Facebook contents on your computer"
 msgstr "आपल्या संगणकावर सर्व फेसबुक सामग्री मिळवा"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
+msgid "Fastmail"
 msgstr "फास्टमेल"
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
+msgid "Access mail with Fastmail"
 msgstr "फास्टमेलसह मेलमध्ये प्रवेश करा"
 
 #: providers/Google/google.provider.in:3

@@ -111,12 +111,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "Anvend Facebook indhold på din computer"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
-msgstr "FastMail"
+msgid "Fastmail"
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "Tilgå mail med FastMail"
+msgid "Access mail with Fastmail"
+msgstr "Tilgå mail med Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"

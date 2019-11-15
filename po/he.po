@@ -106,12 +106,12 @@ msgid "Access all Facebook contents on your computer"
 msgstr "גישה לכל התכנים של פייסבוק במחשב שלך"
 
 #: providers/FastMail/fastmail.provider:3
-msgid "FastMail"
-msgstr "FastMail"
+msgid "Fastmail"
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
-msgid "Access mail with FastMail"
-msgstr "גישה לדוא״ל עם FastMail"
+msgid "Access mail with Fastmail"
+msgstr "גישה לדוא״ל עם Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
