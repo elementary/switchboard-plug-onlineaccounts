@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-10 13:03-0700\n"
+"POT-Creation-Date: 2019-12-16 18:24-0800\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -27,3 +27,19 @@ msgstr "Konta sieciowe"
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr "Zarządzaj kontami sieciowymi i połączonymi programami"
+
+#: data/onlineaccounts.appdata.xml.in:11
+msgid "Major redesign"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:12
+msgid "Make external links open in the web browser"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:13
+msgid "Fix blurry icons on HiDPI"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Updated translations"
+msgstr ""
