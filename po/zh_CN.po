@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-06 17:57+0000\n"
-"PO-Revision-Date: 2019-09-20 04:23+0000\n"
+"PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
@@ -112,7 +112,7 @@ msgstr "在电脑中启用 Facebook 内容"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "Fastmail"
-msgstr "Fastmail"
+msgstr "Fastmail 服务"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with Fastmail"
@@ -320,9 +320,8 @@ msgid "Remove"
 msgstr "删除"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "邮件账户"
+msgstr "IMAP 账户"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "当前没有安装任何与您 %s 账户相连接的应用"
