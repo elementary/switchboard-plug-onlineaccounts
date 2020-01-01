@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-06 17:57+0000\n"
-"PO-Revision-Date: 2017-06-13 10:37+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"PO-Revision-Date: 2020-01-01 23:08+0000\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/nl/>\n"
 "Language: nl\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Berichten"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -72,7 +72,7 @@ msgstr "Synchroniseer uw e-mail"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Foto’s"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -80,7 +80,7 @@ msgstr "Synchroniseer uw foto's"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Schijf"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -91,9 +91,8 @@ msgid "Scrobble"
 msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Scrobble je muziek"
+msgstr "Scrobble al je muziek"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -105,7 +104,7 @@ msgstr "Haal e-mail van IMAP server"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -113,7 +112,7 @@ msgstr "Krijg toegang tot al uw Facebook inhoud op uw  computer"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "Fastmail"
-msgstr ""
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with Fastmail"
@@ -121,7 +120,7 @@ msgstr "Verkrijg toegang tot e-mail met Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -129,16 +128,15 @@ msgstr "Krijg toegang tot alle Google diensten op uw computer"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
-msgstr "Scrobble je muziek"
+msgstr "Scrobble uw muziek"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -150,7 +148,8 @@ msgstr "Online accounts"
 
 #: src/Plug.vala:42
 msgid "Manage online accounts and connected applications"
-msgstr "Beheer online accounts en geconnecteerde toepassingen"
+msgstr ""
+"Beheer online accounts en toepassingen die verbonden zijn met het internet"
 
 #: src/Plug.vala:51
 msgid "Restore"
@@ -163,15 +162,16 @@ msgstr "Verbind je online accounts"
 #: src/Plug.vala:60
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Verbind met online accounts door op het icoon beneden op de taakbalk te "
+"klikken."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
-#, fuzzy
 msgid "New Account"
-msgstr "Ander account"
+msgstr "Nieuw account"
 
 #: src/Plug.vala:119 src/Plug.vala:118
 #, c-format
@@ -192,7 +192,7 @@ msgstr "Gelieve uw gegevens in te voeren…"
 #: src/Authentification/WebDialog.vala:39
 #: src/Authentification/AbstractAuthView.vala:60
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
@@ -244,7 +244,7 @@ msgstr "Aanmelden"
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/Authentification/PasswordDialog.vala:86
 #: src/Authentification/PasswordDialog.vala:74
@@ -295,11 +295,11 @@ msgstr "Log in om te verbinden met apps zoals mail, contacten en agenda."
 
 #: src/NewAccountDialog.vala:43
 msgid "Search Providers"
-msgstr ""
+msgstr "Zoek providers"
 
 #: src/NewAccountDialog.vala:85
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Privacybeleid"
 
 #: src/NewAccountDialog.vala:88
 msgid "Cancel"
@@ -308,7 +308,7 @@ msgstr "Annuleren"
 #: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Geen enkele geïnstalleerde toepassing maakt gebruik van uw %s account"
 
 #: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
@@ -323,9 +323,8 @@ msgid "Remove"
 msgstr "Verwijderen"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "E-mailaccount"
+msgstr "IMAP Account"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
