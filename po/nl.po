@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-06 17:57+0000\n"
-"PO-Revision-Date: 2020-01-01 23:08+0000\n"
+"PO-Revision-Date: 2020-01-04 11:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/nl/>\n"
@@ -320,7 +320,7 @@ msgstr "Voeg toe…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
 msgid "Remove"
-msgstr "Verwijderen"
+msgstr "Verwijder"
 
 #: src/Authentification/MailDialog.vala:60
 msgid "IMAP Account"
