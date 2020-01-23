@@ -104,8 +104,7 @@ public class OnlineAccounts.OAuthView : OnlineAccounts.AbstractAuthView {
         return true;
     }
 
-    private bool on_load_uri_failed (WebKit.LoadEvent load_event, string failing_uri, void* _error) {
-        var error = (GLib.Error)_error;
+    private bool on_load_uri_failed (WebKit.LoadEvent load_event, string failing_uri, GLib.Error error) {
         warning ("Loading uri '%s' failed, error : %s", failing_uri, error.message);
         if (GLib.strcmp (failing_uri, oauth_open_url) == 0) {
             error_code = OnlineAccounts.SignonUIError.NOT_AVAILABLE;
