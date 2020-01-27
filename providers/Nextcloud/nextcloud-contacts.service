@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="nextcloud-contacts">
+  <type>contacts</type>
+  <name>Contacts</name>
+  <description>Sync your contacts</description>
+  <icon>office-address-book</icon>
+  <provider>nextcloud</provider>
+  <translations>online-accounts-plug</translations>
+
+  <template>
+    <group name="evolution">
+      <setting name="BackendName">webdav</setting>
+    </group>
+  </template>
+</service>
