@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-16 18:24-0800\n"
-"PO-Revision-Date: 2019-10-07 15:23+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"PO-Revision-Date: 2020-01-29 18:08+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts"
@@ -29,16 +29,17 @@ msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
 
 #: data/onlineaccounts.appdata.xml.in:11
 msgid "Major redesign"
-msgstr ""
+msgstr "Rediseño significativo"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Make external links open in the web browser"
-msgstr ""
+msgstr "Los enlaces externos se abren en el navegador web"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
+"Se corrigieron los iconos borrosos en pantallas con alta densidad de píxeles"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Updated translations"
-msgstr ""
+msgstr "Traducciones actualizadas"
