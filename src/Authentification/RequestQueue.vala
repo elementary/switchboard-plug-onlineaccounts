@@ -59,6 +59,9 @@ public class OnlineAccounts.RequestQueue : Object {
         } else if (info.parameters.contains (OnlineAccounts.Key.ASK_EMAIL_SETTINGS)) {
             dialog = new MailDialog (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);
+        } else if (info.parameters.contains (OnlineAccounts.Key.ASK_NEXTCLOUD_SETTINGS)) {
+            dialog = new NextcloudDialog (info.parameters);
+            plug.add_widget_to_stack (dialog, dialog.request_id);
         } else {
             dialog = new PasswordDialog (info.parameters);
             plug.add_widget_to_stack (dialog, dialog.request_id);

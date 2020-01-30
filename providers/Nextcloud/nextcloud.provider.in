@@ -12,6 +12,7 @@
       <setting name="mechanism">oauth2</setting>
       <group name="oauth">
         <group name="oauth2">
+          <setting name="AskNextcloudSettings" type="boolean">true</setting>
           <setting name="ResponseType">code</setting>
           <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
           <setting name="UiPolicy">0</setting>
