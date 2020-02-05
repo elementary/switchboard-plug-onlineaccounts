@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-16 18:24-0800\n"
-"PO-Revision-Date: 2019-10-16 20:24+0000\n"
+"PO-Revision-Date: 2020-02-06 20:08+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/mr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts"
@@ -29,16 +29,16 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 
 #: data/onlineaccounts.appdata.xml.in:11
 msgid "Major redesign"
-msgstr ""
+msgstr "पुन्हा डिझाईन करण्याचे मोठे काम"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Make external links open in the web browser"
-msgstr ""
+msgstr "बाह्य दुवे वेब ब्राउझरमध्ये उघडण्यास सक्ती करा"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Fix blurry icons on HiDPI"
-msgstr ""
+msgstr "हायडीपीआय वर अस्पष्ट चिन्हांशी संबंधित समस्यांचे निराकरण करा"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Updated translations"
-msgstr ""
+msgstr "अद्ययावत भाषांतर"
