@@ -152,13 +152,6 @@ namespace OnlineAccounts {
             switch_to_main ();
         }
 
-        public void add_widget_to_stack (OnlineAccounts.AbstractAuthView widget, string name) {
-            var new_account_dialog = new NewAccountDialog (widget);
-            new_account_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
-            new_account_dialog.run ();
-            new_account_dialog.destroy ();
-        }
-
         public void switch_to_widget (string name) {
             stack.set_visible_child_name (name);
         }

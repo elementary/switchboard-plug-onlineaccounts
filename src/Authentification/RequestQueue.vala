@@ -29,16 +29,16 @@ public class OnlineAccounts.RequestQueue : Object {
     }
 
     Gee.LinkedList<string> widgets_to_show;
-    Gee.LinkedList<AbstractAuthView> dialogs;
+    Gee.LinkedList<AbstractAuthDialog> dialogs;
 
     private bool is_idle = true;
 
     private RequestQueue () {
         widgets_to_show = new Gee.LinkedList<string> ();
-        dialogs = new Gee.LinkedList<AbstractAuthView> ();
+        dialogs = new Gee.LinkedList<AbstractAuthDialog> ();
     }
 
-    public AbstractAuthView push_dialog (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
+    public AbstractAuthDialog push_dialog (HashTable<string, Variant> parameter, GLib.MainLoop main_loop) {
         var request_info = new RequestInfo (parameter, main_loop);
         return process_next (request_info);
     }
@@ -51,18 +51,17 @@ public class OnlineAccounts.RequestQueue : Object {
         }
     }
 
-    public AbstractAuthView process_next (OnlineAccounts.RequestInfo info) {
-        AbstractAuthView dialog;
+    public AbstractAuthDialog process_next (OnlineAccounts.RequestInfo info) {
+        AbstractAuthDialog dialog;
         if (info.parameters.contains (OnlineAccounts.Key.OPEN_URL)) {
             dialog = new OAuthView (info.parameters);
-            plug.add_widget_to_stack (dialog, dialog.request_id);
         } else if (info.parameters.contains (OnlineAccounts.Key.ASK_EMAIL_SETTINGS)) {
             dialog = new MailDialog (info.parameters);
-            plug.add_widget_to_stack (dialog, dialog.request_id);
         } else {
             dialog = new PasswordDialog (info.parameters);
-            plug.add_widget_to_stack (dialog, dialog.request_id);
         }
+
+        dialog.run ();
 
         dialogs.add (dialog);
         if (is_idle == true) {
@@ -80,7 +79,7 @@ public class OnlineAccounts.RequestQueue : Object {
         return dialog;
     }
 
-    public AbstractAuthView? get_dialog_from_request_id (string request_id) {
+    public AbstractAuthDialog? get_dialog_from_request_id (string request_id) {
         foreach (var dialog in dialogs) {
             if (GLib.strcmp (dialog.request_id, request_id) == 0)
                 return dialog;

@@ -34,7 +34,7 @@ public enum OnlineAccounts.SignonUIError {
     FORGOT_PASSWORD
 }
 
-public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
+public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
     public signal void finished ();
 
     public HashTable<string, Variant> parameters;
@@ -45,7 +45,7 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
     protected Gtk.Label title_label;
     protected Gtk.Spinner spinner;
 
-    protected AbstractAuthView (HashTable<string, Variant> parameter) {
+    protected AbstractAuthDialog (HashTable<string, Variant> parameter) {
         error_code = OnlineAccounts.SignonUIError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {
@@ -69,9 +69,44 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
 
         content_area = new Gtk.Grid ();
 
-        attach (header_box, 0, 0);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
-        attach (content_area, 0, 2);
+        var grid = new Gtk.Grid ();
+        grid.attach (header_box, 0, 0);
+        grid.attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
+        grid.attach (content_area, 0, 2);
+
+        var frame = new Gtk.Frame (null);
+        frame.expand = true;
+        frame.margin = 12;
+        frame.margin_top = 0;
+        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add (grid);
+        frame.show_all ();
+
+        var privacy_policy_link = new Gtk.LinkButton.with_label ("https://elementary.io/privacy", _("Privacy Policy"));
+        privacy_policy_link.show ();
+
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+
+        var action_area = (Gtk.ButtonBox) get_action_area ();
+        action_area.margin = 6;
+        action_area.add (privacy_policy_link);
+        action_area.set_child_secondary (privacy_policy_link, true);
+
+        get_content_area ().add (frame);
+
+        deletable = false;
+        default_height = 600;
+        default_width = 450;
+
+        response.connect (() => {
+            error_code = OnlineAccounts.SignonUIError.CANCELED;
+            finished ();
+        });
+
+        var accounts_manager = AccountsManager.get_default ();
+        accounts_manager.account_added.connect ((account) => {
+            finished ();
+        });
     }
 
     public virtual HashTable<string, Variant> get_reply () {

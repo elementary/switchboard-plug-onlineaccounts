@@ -11,7 +11,6 @@ plug_files = files(
     'Authentification/RequestInfo.vala',
     'Authentification/RequestQueue.vala',
     'Authentification/Server.vala',
-    'NewAccountDialog.vala',
     'Views/AccountView.vala',
     'Views/SourceSelector.vala',
     'Widgets/ACListBox.vala',

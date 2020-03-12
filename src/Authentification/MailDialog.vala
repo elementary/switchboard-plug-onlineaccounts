@@ -20,7 +20,7 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthView {
+public class OnlineAccounts.MailDialog : OnlineAccounts.AbstractAuthDialog {
     private Gtk.Button save_button;
 
     private Gtk.Entry imap_username_entry;
