@@ -79,15 +79,15 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
         default_height = 600;
         default_width = 450;
 
-        response.connect (() => {
-            error_code = OnlineAccounts.SignonUIError.CANCELED;
-            finished ();
-        });
-
         var accounts_manager = AccountsManager.get_default ();
         accounts_manager.account_added.connect ((account) => {
             finished ();
         });
+    }
+
+    public override void response (int response_type) {
+        error_code = OnlineAccounts.SignonUIError.CANCELED;
+        finished ();
     }
 
     public virtual HashTable<string, Variant> get_reply () {
