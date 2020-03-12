@@ -20,67 +20,23 @@
  */
 
 public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
-    private Gtk.SearchEntry search_entry;
-    private Gtk.Stack stack;
+    public OnlineAccounts.AbstractAuthView widget { get; construct; }
+
+    public NewAccountDialog (OnlineAccounts.AbstractAuthView widget) {
+        Object (widget: widget);
+    }
 
     construct {
         default_height = 600;
         default_width = 450;
 
-        var primary_label = new Gtk.Label (_("Connect Your Online Accounts"));
-        primary_label.wrap = true;
-        primary_label.max_width_chars = 60;
-        primary_label.xalign = 0;
-        primary_label.get_style_context ().add_class (Granite.STYLE_CLASS_PRIMARY_LABEL);
-
-        var secondary_label = new Gtk.Label (_("Sign in to connect with apps like Mail, Contacts, and Calendar."));
-        secondary_label.wrap = true;
-        secondary_label.max_width_chars = 60;
-        secondary_label.xalign = 0;
-
-        search_entry = new Gtk.SearchEntry ();
-        search_entry.margin = 6;
-        search_entry.placeholder_text = _("Search Providers");
-
-        var listbox = new Gtk.ListBox ();
-        listbox.activate_on_single_click = true;
-        listbox.expand = true;
-        listbox.set_filter_func (filter_function);
-
-        var manager = new Ag.Manager ();
-        foreach (unowned Ag.Provider provider in manager.list_providers ()) {
-            if (provider == null || provider.get_plugin_name () == null) {
-                continue;
-            }
-
-            listbox.add (new AccountRow (provider));
-        }
-
-        var scrolled_window = new Gtk.ScrolledWindow (null, null);
-        scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
-        scrolled_window.add (listbox);
-
-        var list_grid = new Gtk.Grid ();
-        list_grid.attach (search_entry, 0, 0);
-        list_grid.attach (scrolled_window, 0, 1);
-
-        stack = new Gtk.Stack ();
-        stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-        stack.add_named (list_grid, "list-grid");
-
         var frame = new Gtk.Frame (null);
-        frame.margin_top = 24;
+        frame.expand = true;
+        frame.margin = 12;
+        frame.margin_top = 0;
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        frame.add (stack);
-
-        var grid = new Gtk.Grid ();
-        grid.margin = 12;
-        grid.margin_top = 0;
-        grid.orientation = Gtk.Orientation.VERTICAL;
-        grid.add (primary_label);
-        grid.add (secondary_label);
-        grid.add (frame);
-        grid.show_all ();
+        frame.add (widget);
+        frame.show_all ();
 
         var privacy_policy_link = new Gtk.LinkButton.with_label ("https://elementary.io/privacy", _("Privacy Policy"));
         privacy_policy_link.show ();
@@ -92,45 +48,17 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         action_area.add (privacy_policy_link);
         action_area.set_child_secondary (privacy_policy_link, true);
 
-        get_content_area ().add (grid);
+        get_content_area ().add (frame);
+
+        deletable = false;
 
         response.connect (() => {
             destroy ();
         });
 
-        search_entry.search_changed.connect (() => {
-            listbox.invalidate_filter ();
-        });
-
-        listbox.row_activated.connect ((row) => {
-            var provider = ((AccountRow) row).provider;
-            var ag_account = manager.create_account (provider.get_name ());
-            var selected_account = new Account (ag_account);
-            selected_account.authenticate.begin ();
-        });
-    }
-
-    [CCode (instance_pos = -1)]
-    private bool filter_function (Gtk.ListBoxRow row) {
-        var search_term = search_entry.text.down ();
-
-        if (search_term in ((AccountRow) row).provider.get_display_name ().down ()) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public void add_widget (OnlineAccounts.AbstractAuthView widget, string name) {
-        stack.add_named (widget, name);
-        stack.visible_child_name = name;
-
-        widget.finished.connect (() => {
-            stack.visible_child_name = "list-grid";
-            GLib.Timeout.add (stack.transition_duration, () => {
-                widget.destroy ();
-                return GLib.Source.REMOVE;
-            });
+        var accounts_manager = AccountsManager.get_default ();
+        accounts_manager.account_added.connect ((account) => {
+            destroy ();
         });
     }
 

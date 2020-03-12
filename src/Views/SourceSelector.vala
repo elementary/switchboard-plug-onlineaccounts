@@ -21,9 +21,9 @@
 
 public class OnlineAccounts.SourceSelector : Gtk.Grid {
     public signal void account_selected (OnlineAccounts.Account account);
-    public signal void new_account_request ();
 
     private Gtk.ListBox list_box;
+    private Gtk.SearchEntry add_account_search;
 
     public SourceSelector () {
         var accounts_manager = AccountsManager.get_default ();
@@ -41,13 +41,38 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         list_box.activate_on_single_click = true;
 
         var scroll = new Gtk.ScrolledWindow (null, null);
-        scroll.set_size_request (150, 150);
         scroll.hscrollbar_policy = Gtk.PolicyType.NEVER;
         scroll.expand = true;
         scroll.add (list_box);
 
-        var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        add_button.tooltip_text = _("Add…");
+        add_account_search = new Gtk.SearchEntry ();
+        add_account_search.margin = 6;
+        add_account_search.placeholder_text = _("Search Providers");
+
+        var add_account_list = new Gtk.ListBox ();
+        add_account_list.width_request = 300;
+        add_account_list.set_filter_func (add_list_filter_function);
+
+        var add_account_scrolled = new Gtk.ScrolledWindow (null, null);
+        add_account_scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
+        add_account_scrolled.min_content_height = 200;
+        add_account_scrolled.add (add_account_list);
+
+        var add_account_grid = new Gtk.Grid ();
+        add_account_grid.attach (add_account_search, 0, 0);
+        add_account_grid.attach (add_account_scrolled, 0, 1);
+        add_account_grid.show_all ();
+
+        var add_account_popover = new Gtk.Popover (null);
+        add_account_popover.add (add_account_grid);
+
+        var add_button = new Gtk.MenuButton ();
+        add_button.always_show_image = true;
+        add_button.image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        add_button.label = _("Add Account…");
+        add_button.margin = 3;
+        add_button.popover = add_account_popover;
+        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         remove_button.tooltip_text = _("Remove");
@@ -60,9 +85,15 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         add (scroll);
         add (action_bar);
 
-        add_button.clicked.connect (() => {
-            new_account_request ();
-        });
+        var manager = new Ag.Manager ();
+        foreach (unowned Ag.Provider provider in manager.list_providers ()) {
+            if (provider == null || provider.get_plugin_name () == null) {
+                continue;
+            }
+
+            add_account_list.add (new ProviderRow (provider));
+        }
+        add_account_list.show_all ();
 
         remove_button.clicked.connect (remove_source);
 
@@ -73,6 +104,30 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
 
             remove_button.sensitive = row != null;
         });
+
+        add_account_search.search_changed.connect (() => {
+            add_account_list.invalidate_filter ();
+        });
+
+        add_account_list.row_activated.connect ((row) => {
+            add_account_popover.popdown ();
+
+            var provider = ((ProviderRow) row).provider;
+            var ag_account = manager.create_account (provider.get_name ());
+            var selected_account = new Account (ag_account);
+            selected_account.authenticate.begin ();
+        });
+    }
+
+    [CCode (instance_pos = -1)]
+    private bool add_list_filter_function (Gtk.ListBoxRow row) {
+        var search_term = add_account_search.text.down ();
+
+        if (search_term in ((ProviderRow) row).provider.get_display_name ().down ()) {
+            return true;
+        }
+
+        return false;
     }
 
     private void add_account_callback (OnlineAccounts.Account account) {

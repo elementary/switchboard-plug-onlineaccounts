@@ -56,11 +56,7 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
 
     construct {
         title_label = new Gtk.Label (_("Please enter your credentials…"));
-
-        var back_button = new Gtk.Button.with_label (_("Back"));
-        back_button.halign = Gtk.Align.START;
-        back_button.margin = 6;
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+        title_label.margin = 6;
 
         spinner = new Gtk.Spinner ();
         spinner.halign = Gtk.Align.END;
@@ -68,8 +64,7 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
 
         var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         header_box.hexpand = true;
-        header_box.add (back_button);
-        header_box.set_center_widget (title_label);
+        header_box.add (title_label);
         header_box.pack_end (spinner);
 
         content_area = new Gtk.Grid ();
@@ -77,12 +72,6 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
         attach (header_box, 0, 0);
         attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
         attach (content_area, 0, 2);
-
-        back_button.clicked.connect (() => {
-            error_code = OnlineAccounts.SignonUIError.CANCELED;
-            finished ();
-            this.destroy ();
-        });
     }
 
     public virtual HashTable<string, Variant> get_reply () {
