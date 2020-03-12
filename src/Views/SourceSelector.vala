@@ -55,6 +55,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
 
         var add_account_scrolled = new Gtk.ScrolledWindow (null, null);
         add_account_scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
+        add_account_scrolled.margin_bottom = 3;
         add_account_scrolled.min_content_height = 200;
         add_account_scrolled.add (add_account_list);
 
