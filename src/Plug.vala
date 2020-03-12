@@ -28,7 +28,6 @@ namespace OnlineAccounts {
         private Gtk.Stack stack;
         private Gtk.Grid grid;
         private Gtk.Grid main_grid;
-        private NewAccountDialog new_account_dialog;
         private AccountView account_view;
         private SourceSelector source_selector;
         private OnlineAccounts.Server oa_server;
@@ -94,16 +93,6 @@ namespace OnlineAccounts {
                     account_selected (account);
                 });
 
-                source_selector.new_account_request.connect (() => {
-                    if (new_account_dialog == null) {
-                        new_account_dialog = new NewAccountDialog ();
-                        new_account_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
-                    }
-
-                    new_account_dialog.run ();
-                    new_account_dialog = null;
-                });
-
                 oa_server = new OnlineAccounts.Server ();
                 var accounts_manager = AccountsManager.get_default ();
 
@@ -120,12 +109,6 @@ namespace OnlineAccounts {
 
                     if (AccountsManager.get_default ().accounts_available.size <= 0) {
                         stack.set_visible_child_name ("welcome");
-                    }
-                });
-
-                accounts_manager.account_added.connect ((account) => {
-                    if (new_account_dialog != null) {
-                        new_account_dialog.destroy ();
                     }
                 });
             }
@@ -167,10 +150,6 @@ namespace OnlineAccounts {
             account_view.show_all ();
 
             switch_to_main ();
-        }
-
-        public void add_widget_to_stack (OnlineAccounts.AbstractAuthView widget, string name) {
-            new_account_dialog.add_widget (widget, name);
         }
 
         public void switch_to_widget (string name) {
