@@ -53,7 +53,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
                 continue;
             }
 
-            listbox.add (new AccountRow (provider));
+            listbox.add (new ProviderRow (provider));
         }
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
@@ -103,7 +103,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
         });
 
         listbox.row_activated.connect ((row) => {
-            var provider = ((AccountRow) row).provider;
+            var provider = ((OnlineAccounts.ProviderRow) row).provider;
             var ag_account = manager.create_account (provider.get_name ());
             var selected_account = new Account (ag_account);
             selected_account.authenticate.begin ();
@@ -114,7 +114,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
     private bool filter_function (Gtk.ListBoxRow row) {
         var search_term = search_entry.text.down ();
 
-        if (search_term in ((AccountRow) row).provider.get_display_name ().down ()) {
+        if (search_term in ((OnlineAccounts.ProviderRow) row).provider.get_display_name ().down ()) {
             return true;
         }
 
@@ -132,15 +132,5 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
                 return GLib.Source.REMOVE;
             });
         });
-    }
-
-    private class AccountRow : OnlineAccounts.ProviderRow {
-        public AccountRow (Ag.Provider provider) {
-            Object (
-                description: GLib.dgettext (provider.get_i18n_domain (), provider.get_description ()),
-                provider: provider,
-                title_text: provider.get_display_name ()
-            );
-        }
     }
 }

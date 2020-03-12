@@ -125,7 +125,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
 
         construct {
             var ag_account = account.ag_account;
-
             ag_account.display_name_changed.connect (() => {
                 title_text = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
             });
