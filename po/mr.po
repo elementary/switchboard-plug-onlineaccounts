@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -137,23 +137,23 @@ msgstr "मायक्रोसॉफ्ट"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "आपल्या संगणकावर सर्व आउटलुक आणि वन ड्राईव्ह सेवा मिळवा"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "ऑनलाइन खाती"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "ऑनलाइन खाती आणि कनेक्ट केलेले अप्लिकेशन्स व्यवस्थापित करा"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "पुनर्संचयित करा"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "आपले ऑनलाइन खाते कनेक्ट करा"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "खालील टूलबारमधील चिन्हावर क्लिक करून ऑनलाइन खाती कनेक्ट करा."
 
@@ -162,10 +162,12 @@ msgstr "खालील टूलबारमधील चिन्हावर 
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "नवीन खाते"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "खाते '%s'काढले."
@@ -278,6 +280,8 @@ msgstr "इतर खाते"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "लोड करीत आहे …"
 
@@ -285,15 +289,15 @@ msgstr "लोड करीत आहे …"
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "मेल, संपर्क आणि कॅलेंडर सारख्या अॅप्ससह कनेक्ट करण्यासाठी साइन इन करा."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "शोध प्रदाते"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "गोपनीयता धोरण"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "रद्द करा"
 
@@ -311,11 +315,24 @@ msgid "Add…"
 msgstr "जोडा…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "काढा"
 
 #: src/Authentification/MailDialog.vala:60
 msgid "IMAP Account"
+msgstr "IMAP खाते"
+
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+#| msgid "IMAP Account"
+msgid "Add Account"
+msgstr "IMAP खाते"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "IMAP Account"
+msgid "Add Account…"
 msgstr "IMAP खाते"
 
 #~ msgid "There are no apps currently installed that link to your %s account"

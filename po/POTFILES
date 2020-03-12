@@ -1,8 +1,7 @@
 src/Account.vala
 src/AccountsManager.vala
-src/NewAccountDialog.vala
 src/Plug.vala
-src/Authentification/AbstractAuthView.vala
+src/Authentification/AbstractAuthDialog.vala
 src/Authentification/DialogService.vala
 src/Authentification/Key.vala
 src/Authentification/MailDialog.vala

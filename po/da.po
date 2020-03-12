@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-02-03 12:06+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
@@ -142,23 +142,23 @@ msgstr "Microsoft"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Anvend Outlook- og OneDrive-tjenester på din computer"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "Online Konti"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "Håndter online konti og forbundet applikationer"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "Gendan"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "Forbind til dine online konti"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "Forbind onlinekonti ved at klikke på ikonet i toolbaren nedenfor."
 
@@ -167,10 +167,12 @@ msgstr "Forbind onlinekonti ved at klikke på ikonet i toolbaren nedenfor."
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "Ny Konto"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Kontoen '%s' blev fjernet."
@@ -283,6 +285,8 @@ msgstr "Anden konto"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "Indlæser…"
 
@@ -290,15 +294,15 @@ msgstr "Indlæser…"
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "Log ind for at forbinde med apps som Mail, Kontakter og Kalender."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "Søge Udbydere"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "Fortrolighedspolitik"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "Annuller"
 
@@ -316,6 +320,7 @@ msgid "Add…"
 msgstr "Tilføj…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "Fjern"
 
@@ -324,11 +329,19 @@ msgstr "Fjern"
 msgid "IMAP Account"
 msgstr "Mailkonto"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "Mailkonto"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Tilføj en ny konto…"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Der er ingen applikationer installeret der gør brug af din %s-konto"
-
-#~ msgid "Add a new account…"
-#~ msgstr "Tilføj en ny konto…"
 
 #~ msgid "Url"
 #~ msgstr "Url"

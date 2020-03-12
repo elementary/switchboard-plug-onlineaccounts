@@ -20,24 +20,29 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class OnlineAccounts.OAuthView : OnlineAccounts.AbstractAuthView {
+public class OnlineAccounts.OAuthView : OnlineAccounts.AbstractAuthDialog {
     private WebKit.WebView webview;
     private string oauth_open_url;
     private string oauth_final_url;
     private string oauth_response;
+    private Granite.Widgets.OverlayBar overlaybar;
 
     public OAuthView (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
-
-        title_label.label = _("Loading…");
-        spinner.start ();
 
         WebKit.WebContext.get_default ().set_preferred_languages (GLib.Intl.get_language_names ());
 
         webview = new WebKit.WebView ();
         webview.expand = true;
 
-        content_area.add (webview);
+        var overlay = new Gtk.Overlay ();
+        overlay.add (webview);
+
+        overlaybar = new Granite.Widgets.OverlayBar (overlay);
+        overlaybar.label = _("Loading…");
+        overlaybar.active = true;
+
+        content_area.add (overlay);
 
         show_all ();
 
@@ -117,14 +122,16 @@ public class OnlineAccounts.OAuthView : OnlineAccounts.AbstractAuthView {
         var redirect_uri = webview.get_uri ();
         if (redirect_uri == null || !redirect_uri.has_prefix (oauth_final_url)) {
             if (load_event == WebKit.LoadEvent.FINISHED) {
-                title_label.label = _("Please enter your credentials…");
-                spinner.stop ();
+                overlaybar.label = null;
+                overlaybar.active = false;
+                overlaybar.visible = false;
                 return;
             }
 
             if (load_event == WebKit.LoadEvent.STARTED) {
-                title_label.label = _("Loading…");
-                spinner.start ();
+                overlaybar.label = _("Loading…");
+                overlaybar.active = true;
+                overlaybar.visible = true;
                 return;
             }
 

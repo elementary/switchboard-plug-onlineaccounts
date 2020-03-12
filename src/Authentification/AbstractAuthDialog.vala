@@ -34,7 +34,7 @@ public enum OnlineAccounts.SignonUIError {
     FORGOT_PASSWORD
 }
 
-public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
+public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
     public signal void finished ();
 
     public HashTable<string, Variant> parameters;
@@ -42,10 +42,8 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
     public OnlineAccounts.SignonUIError error_code;
 
     protected Gtk.Grid content_area;
-    protected Gtk.Label title_label;
-    protected Gtk.Spinner spinner;
 
-    protected AbstractAuthView (HashTable<string, Variant> parameter) {
+    protected AbstractAuthDialog (HashTable<string, Variant> parameter) {
         error_code = OnlineAccounts.SignonUIError.NONE;
         this.parameters = parameter;
         plug.hide_request.connect (() => {
@@ -55,34 +53,42 @@ public abstract class OnlineAccounts.AbstractAuthView : Gtk.Grid {
     }
 
     construct {
-        title_label = new Gtk.Label (_("Please enter your credentials…"));
-
-        var back_button = new Gtk.Button.with_label (_("Back"));
-        back_button.halign = Gtk.Align.START;
-        back_button.margin = 6;
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
-
-        spinner = new Gtk.Spinner ();
-        spinner.halign = Gtk.Align.END;
-        spinner.margin = 6;
-
-        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        header_box.hexpand = true;
-        header_box.add (back_button);
-        header_box.set_center_widget (title_label);
-        header_box.pack_end (spinner);
-
         content_area = new Gtk.Grid ();
 
-        attach (header_box, 0, 0);
-        attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
-        attach (content_area, 0, 2);
+        var frame = new Gtk.Frame (null);
+        frame.expand = true;
+        frame.margin = 12;
+        frame.margin_top = 0;
+        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add (content_area);
+        frame.show_all ();
 
-        back_button.clicked.connect (() => {
-            error_code = OnlineAccounts.SignonUIError.CANCELED;
+        var privacy_policy_link = new Gtk.LinkButton.with_label ("https://elementary.io/privacy", _("Privacy Policy"));
+        privacy_policy_link.show ();
+
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
+
+        var action_area = (Gtk.ButtonBox) get_action_area ();
+        action_area.margin = 6;
+        action_area.add (privacy_policy_link);
+        action_area.set_child_secondary (privacy_policy_link, true);
+
+        get_content_area ().add (frame);
+
+        deletable = false;
+        default_height = 600;
+        default_width = 450;
+        title = _("Add Account");
+
+        var accounts_manager = AccountsManager.get_default ();
+        accounts_manager.account_added.connect ((account) => {
             finished ();
-            this.destroy ();
         });
+    }
+
+    public override void response (int response_type) {
+        error_code = OnlineAccounts.SignonUIError.CANCELED;
+        finished ();
     }
 
     public virtual HashTable<string, Variant> get_reply () {

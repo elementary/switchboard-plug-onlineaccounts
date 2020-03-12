@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-10-16 20:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -143,23 +143,23 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Sprístupniť všetky Outlook a OneDrive služby na vašom počítači"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "Online účty"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr ""
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "Obnoviť"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "Pripojiť k vašim online kontám"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
@@ -168,11 +168,13 @@ msgstr ""
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 #, fuzzy
 msgid "New Account"
 msgstr "Online účty"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Účet '%s' odstránený."
@@ -286,6 +288,8 @@ msgstr "Online účty"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "Načítava sa…"
 
@@ -294,15 +298,15 @@ msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Prihláste sa do spojenia s aplikáciami, ako je pošta, kontakty a kalendár."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr ""
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr ""
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -320,6 +324,7 @@ msgid "Add…"
 msgstr "Pridať…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "Odstrániť"
 
@@ -328,11 +333,19 @@ msgstr "Odstrániť"
 msgid "IMAP Account"
 msgstr "Online účty"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "Online účty"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Pridať nový účet"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Nemáte nainštalované žiadne aplikácie prepojené s vašim %s účtom"
-
-#~ msgid "Add a new account…"
-#~ msgstr "Pridať nový účet"
 
 #~ msgid "Chat with your friends"
 #~ msgstr "Dopisuj si s priateľmi"

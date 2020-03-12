@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -142,23 +142,23 @@ msgstr "마이크로소프트"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "사용자 컴퓨터의 모든 아웃룩과 원드라이브 서비스에 접속하기"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "온라인 계정"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "온라인 계정과 계정에 연결된 애플리케이션들을 관리합니다"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "복원"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "온라인 계정 연결"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 연결하세요."
 
@@ -167,10 +167,12 @@ msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 �
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "새 계정"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "계정 '%s'가 제거되었습니다."
@@ -283,6 +285,8 @@ msgstr "다른 계정"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "불러오는 중…"
 
@@ -290,15 +294,15 @@ msgstr "불러오는 중…"
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "메일, 주소록, 일정표 등의 프로그램에 접속하기 위해 로그인하기."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "서비스 검색"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "프라이버시 정책"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "취소"
 
@@ -316,6 +320,7 @@ msgid "Add…"
 msgstr "추가…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "제거"
 
@@ -324,12 +329,20 @@ msgstr "제거"
 msgid "IMAP Account"
 msgstr "메일 계정"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "메일 계정"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "새로 계정 만들기…"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
 #~ "현재 사용자의 %s 계정에 연결하기 위한 프로그램이 설치되어 있지 않습니다"
-
-#~ msgid "Add a new account…"
-#~ msgstr "새로 계정 만들기…"
 
 #~ msgid "Url"
 #~ msgstr "URL"

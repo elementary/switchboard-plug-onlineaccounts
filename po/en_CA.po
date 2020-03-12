@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2018-03-08 17:57+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -144,23 +144,23 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Access all Outlook and OneDrive services on your computer"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "Online Accounts"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "Manage online accounts and connected applications"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "Restore"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "Connect Your Online Accounts"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
@@ -169,11 +169,13 @@ msgstr ""
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 #, fuzzy
 msgid "New Account"
 msgstr "Other Account"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Account '%s' Removed."
@@ -286,6 +288,8 @@ msgstr "Other Account"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "Loading…"
 
@@ -293,15 +297,15 @@ msgstr "Loading…"
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "Sign in to connect with apps like Mail, Contacts, and Calendar."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr ""
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr ""
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -319,6 +323,7 @@ msgid "Add…"
 msgstr "Add…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "Remove"
 
@@ -327,11 +332,19 @@ msgstr "Remove"
 msgid "IMAP Account"
 msgstr "Mail Account"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "Mail Account"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Add a new account…"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "There are no apps currently installed that link to your %s account"
-
-#~ msgid "Add a new account…"
-#~ msgstr "Add a new account…"
 
 #~ msgid "Url"
 #~ msgstr "Url"

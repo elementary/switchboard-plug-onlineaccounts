@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2020-03-01 15:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -137,23 +137,23 @@ msgstr "מיקרוסופט"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "גישה לכל שירותי Outlook ו־OneDrive במחשב שלך"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "חשבונות מקוונים"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "ניהול חשבונות מקוונים ויישומים מקושרים"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "שחזור"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "התחברות לחשבונות המקוונים שלך"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "ניתן לחבר חשבונות מקוונים על ידי לחיצה על הסמל בסרגל הכלים שלמעלה."
 
@@ -162,10 +162,12 @@ msgstr "ניתן לחבר חשבונות מקוונים על ידי לחיצה �
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "חשבון חדש"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "החשבון ‚%s‘ הוסר."
@@ -278,6 +280,8 @@ msgstr "חשבון אחר"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "בטעינה…"
 
@@ -285,15 +289,15 @@ msgstr "בטעינה…"
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "יש להיכנס כדי להתחבר עם יישומים כגון דואר, אנשי קשר ויומן."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "מנועי חיפוש"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "מדיניות פרטיות"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -311,6 +315,7 @@ msgid "Add…"
 msgstr "הוספה…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "הסרה"
 
@@ -318,11 +323,20 @@ msgstr "הסרה"
 msgid "IMAP Account"
 msgstr "חשבון IMAP"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+#| msgid "IMAP Account"
+msgid "Add Account"
+msgstr "חשבון IMAP"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "הוספת חשבון חדש…"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "כרגע אין יישומים מותקנים שמקושרים לחשבון שלך בשירות %s"
-
-#~ msgid "Add a new account…"
-#~ msgstr "הוספת חשבון חדש…"
 
 #~ msgid "Url"
 #~ msgstr "כתובת"

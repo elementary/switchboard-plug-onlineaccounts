@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -142,23 +142,23 @@ msgstr "Microsoft"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "在电脑中启用 Outlook 和 OneDrive 服务"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "网络账户"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "管理网络账户和已连接的应用"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "恢复"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "连接您的网络账户"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "点击以下按钮链接您的网络账户。"
 
@@ -167,10 +167,12 @@ msgstr "点击以下按钮链接您的网络账户。"
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "新帐户"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "帐户“%s”已删除。"
@@ -283,6 +285,8 @@ msgstr "其他帐户"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "载入中…"
 
@@ -290,15 +294,15 @@ msgstr "载入中…"
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr "登录以连接您的邮件、联系人和日历等应用。"
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "搜索引擎"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "取消"
 
@@ -316,6 +320,7 @@ msgid "Add…"
 msgstr "添加…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "删除"
 
@@ -323,11 +328,20 @@ msgstr "删除"
 msgid "IMAP Account"
 msgstr "IMAP 账户"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+#| msgid "IMAP Account"
+msgid "Add Account"
+msgstr "IMAP 账户"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "添加新账户…"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "当前没有安装任何与您 %s 账户相连接的应用"
-
-#~ msgid "Add a new account…"
-#~ msgstr "添加新账户…"
 
 #~ msgid "Url"
 #~ msgstr "链接地址"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-09-30 14:23+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
@@ -142,23 +142,23 @@ msgstr "Microsoft"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Aceda a todos os servizos do Outlook e OneDrive na súa computadora"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "Contas en liña"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "Xestione as contas en liña e as aplicacións conectadas"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "Restabelecer"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "Conecte coas súas contas en liña"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Conecte contas en liña facendo clic na icona na barra de ferramentas que "
@@ -169,10 +169,12 @@ msgstr ""
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "Conta nova"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "A conta «%s» foi retirada."
@@ -285,6 +287,8 @@ msgstr "Outra conta"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "Cargando…"
 
@@ -293,15 +297,15 @@ msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Acceda para conectarse con aplicativos de correo, contactos e calendario."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "Provedores de busca"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "Política de privacidade"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -319,6 +323,7 @@ msgid "Add…"
 msgstr "Engadir…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "Retirar"
 
@@ -327,8 +332,16 @@ msgstr "Retirar"
 msgid "IMAP Account"
 msgstr "Conta de correo"
 
-#~ msgid "Add a new account…"
-#~ msgstr "Engadir unha conta nova..."
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "Conta de correo"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Engadir unha conta nova..."
 
 #~ msgid "Chat with your friends"
 #~ msgstr "Converse cos seus amigos"
