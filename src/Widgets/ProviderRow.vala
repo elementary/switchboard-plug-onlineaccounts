@@ -19,11 +19,19 @@
 
 public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
     public Ag.Provider provider { get; construct; }
-    public string description { get; construct; default = ""; }
-    public string title_text { get; construct set; default = ""; }
+    public string description { get; construct; }
+    public string title_text { get; construct set; }
 
-    public ProviderRow (Ag.Provider provider) {
-        Object (provider: provider);
+    public ProviderRow (
+        Ag.Provider provider,
+        string? title_text = GLib.Markup.escape_text (provider.get_display_name ()),
+        string? description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ())
+    ) {
+        Object (
+            provider: provider,
+            title_text: title_text,
+            description: description
+        );
     }
 
     construct {
