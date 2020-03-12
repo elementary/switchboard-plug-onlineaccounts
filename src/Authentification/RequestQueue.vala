@@ -61,7 +61,7 @@ public class OnlineAccounts.RequestQueue : Object {
             dialog = new PasswordDialog (info.parameters);
         }
 
-        dialog.run ();
+        dialog.show_all ();
 
         dialogs.add (dialog);
         if (is_idle == true) {
