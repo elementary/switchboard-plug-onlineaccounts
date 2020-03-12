@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2016-09-29 12:26+0000\n"
 "Last-Translator: Адмирал АнимЕ <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -140,23 +140,23 @@ msgstr ""
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Достъпи всички Outlook и OneDrive услуги на своя компютър"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "Мрежови абонаменти"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "Управлявайте своите мрежови абонаменти и свързани приложения"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "Възстановяване"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "Свържете вашите мрежови абонаменти"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
@@ -165,11 +165,13 @@ msgstr ""
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 #, fuzzy
 msgid "New Account"
 msgstr "Друга сметка"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Абонаментът '%s' е премахнат."
@@ -282,6 +284,8 @@ msgstr "Друга сметка"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "Зареждане..."
 
@@ -290,15 +294,15 @@ msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
 "Впишете се, за да де свържете с приложения като Поща, Контакти, и Календар."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr ""
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr ""
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "Отказ"
 
@@ -316,6 +320,7 @@ msgid "Add…"
 msgstr "Добавяне…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "Премахване"
 
@@ -324,13 +329,21 @@ msgstr "Премахване"
 msgid "IMAP Account"
 msgstr "Друга сметка"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "Друга сметка"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Добавяне на нова сметка..."
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
 #~ "В момента няма инсталирани приложения, които да се свързват с вашия %s "
 #~ "акаунт"
-
-#~ msgid "Add a new account…"
-#~ msgstr "Добавяне на нова сметка..."
 
 #~ msgid "Url"
 #~ msgstr "Адрес"

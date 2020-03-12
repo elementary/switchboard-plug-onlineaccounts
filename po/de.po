@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 17:57+0000\n"
+"POT-Creation-Date: 2020-03-12 23:26+0000\n"
 "PO-Revision-Date: 2019-01-02 21:45+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
@@ -142,23 +142,23 @@ msgstr "Microsoft"
 msgid "Access all Outlook and OneDrive services on your computer"
 msgstr "Auf alle Outlook- und OneDrive-Dienste von Ihrem Rechner aus zugreifen"
 
-#: src/Plug.vala:41
+#: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
 msgstr "Internetkonten"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
 msgstr "Onlinekonten und verbundene Anwendungen verwalten"
 
-#: src/Plug.vala:51
+#: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
 msgstr "Wiederherstellen"
 
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
 msgstr "Mit Ihren Internetkonten verbinden"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Verbinden Sie Online-Konten, indem Sie auf das Symbol in der unteren "
@@ -169,10 +169,12 @@ msgstr ""
 #: src/Views/SourceSelector.vala:132 src/Plug.vala:116
 #: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
 msgid "New Account"
 msgstr "Neues Konto"
 
-#: src/Plug.vala:119 src/Plug.vala:118
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
 msgstr "Konto »%s« entfernt."
@@ -285,6 +287,8 @@ msgstr "Anderes Konto"
 #: src/Authentification/WebDialog.vala:155
 #: src/Authentification/OAuthView.vala:32
 #: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
 msgid "Loading…"
 msgstr "Laden …"
 
@@ -294,15 +298,15 @@ msgstr ""
 "Anmelden, um Anwendungen wie E-Mail, Kontakte und Kalender zu "
 "synchronisieren."
 
-#: src/NewAccountDialog.vala:43
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
 msgstr "Anbieter suchen"
 
-#: src/NewAccountDialog.vala:85
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
 msgstr "Datenschutzerklärung"
 
-#: src/NewAccountDialog.vala:88
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -320,6 +324,7 @@ msgid "Add…"
 msgstr "Hinzufügen…"
 
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -328,13 +333,21 @@ msgstr "Entfernen"
 msgid "IMAP Account"
 msgstr "E-Mail-Konto"
 
+#: src/Authentification/AbstractAuthDialog.vala:81
+#, fuzzy
+msgid "Add Account"
+msgstr "E-Mail-Konto"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Neues Konto hinzufügen …"
+
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
 #~ "Aktuell sind keine Anwendungen installiert, die zu Ihrem %s-Konto "
 #~ "verbinden"
-
-#~ msgid "Add a new account…"
-#~ msgstr "Neues Konto hinzufügen …"
 
 #~ msgid "Url"
 #~ msgstr "Adresse"
