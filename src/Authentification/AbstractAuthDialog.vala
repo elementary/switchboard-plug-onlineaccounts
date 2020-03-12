@@ -78,6 +78,7 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
         deletable = false;
         default_height = 600;
         default_width = 450;
+        title = _("Add Account");
 
         var accounts_manager = AccountsManager.get_default ();
         accounts_manager.account_added.connect ((account) => {
