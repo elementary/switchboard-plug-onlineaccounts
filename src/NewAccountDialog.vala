@@ -24,6 +24,7 @@ public class OnlineAccounts.NewAccountDialog : Gtk.Dialog {
     private Gtk.Stack stack;
 
     construct {
+        deletable = false;
         default_height = 600;
         default_width = 450;
 
