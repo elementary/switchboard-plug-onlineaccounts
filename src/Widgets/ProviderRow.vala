@@ -19,11 +19,21 @@
 
 public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
     public Ag.Provider provider { get; construct; }
-    public string description { get; construct; default = ""; }
-    public string title_text { get; construct set; default = ""; }
+    public string description { get; construct; }
+    public string title_text { get; construct; }
 
-    public ProviderRow (Ag.Provider provider) {
-        Object (provider: provider);
+    protected Gtk.Label title_label;
+
+    public ProviderRow (
+        Ag.Provider provider,
+        string? title_text = GLib.Markup.escape_text (provider.get_display_name ()),
+        string? description = GLib.dgettext (provider.get_i18n_domain (), provider.get_description ())
+    ) {
+        Object (
+            provider: provider,
+            title_text: title_text,
+            description: description
+        );
     }
 
     construct {
@@ -31,7 +41,7 @@ public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
         image.pixel_size = 32;
         image.use_fallback = true;
 
-        var title_label = new Gtk.Label (title_text);
+        title_label = new Gtk.Label (title_text);
         title_label.ellipsize = Pango.EllipsizeMode.END;
         title_label.halign = Gtk.Align.START;
 
