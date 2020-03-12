@@ -20,9 +20,7 @@
 public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
     public Ag.Provider provider { get; construct; }
     public string description { get; construct; }
-    public string title_text { get; construct; }
-
-    protected Gtk.Label title_label;
+    public string title_text { get; construct set; }
 
     public ProviderRow (
         Ag.Provider provider,
@@ -41,7 +39,7 @@ public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
         image.pixel_size = 32;
         image.use_fallback = true;
 
-        title_label = new Gtk.Label (title_text);
+        var title_label = new Gtk.Label (title_text);
         title_label.ellipsize = Pango.EllipsizeMode.END;
         title_label.halign = Gtk.Align.START;
 
