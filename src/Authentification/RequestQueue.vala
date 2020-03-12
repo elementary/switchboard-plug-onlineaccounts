@@ -72,7 +72,6 @@ public class OnlineAccounts.RequestQueue : Object {
             is_idle = true;
             dialogs.remove (dialog);
             info.main_loop.quit ();
-            plug.switch_to_main ();
             show_next_process.begin ();
         });
 
