@@ -42,8 +42,6 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
     public OnlineAccounts.SignonUIError error_code;
 
     protected Gtk.Grid content_area;
-    protected Gtk.Label title_label;
-    protected Gtk.Spinner spinner;
 
     protected AbstractAuthDialog (HashTable<string, Variant> parameter) {
         error_code = OnlineAccounts.SignonUIError.NONE;
@@ -55,31 +53,14 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
     }
 
     construct {
-        title_label = new Gtk.Label (_("Please enter your credentials…"));
-        title_label.margin = 6;
-
-        spinner = new Gtk.Spinner ();
-        spinner.halign = Gtk.Align.END;
-        spinner.margin = 6;
-
-        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        header_box.hexpand = true;
-        header_box.add (title_label);
-        header_box.pack_end (spinner);
-
         content_area = new Gtk.Grid ();
-
-        var grid = new Gtk.Grid ();
-        grid.attach (header_box, 0, 0);
-        grid.attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
-        grid.attach (content_area, 0, 2);
 
         var frame = new Gtk.Frame (null);
         frame.expand = true;
         frame.margin = 12;
         frame.margin_top = 0;
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        frame.add (grid);
+        frame.add (content_area);
         frame.show_all ();
 
         var privacy_policy_link = new Gtk.LinkButton.with_label ("https://elementary.io/privacy", _("Privacy Policy"));
