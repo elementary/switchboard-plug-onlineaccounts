@@ -21,6 +21,8 @@
           <setting name="RedirectUri">http://elementary.io</setting>
           <setting name="ResponseType">code</setting>
           <setting name="AuthQuery">access_type=offline&amp;approval_prompt=force</setting>
+          <setting name="ClientId">test</setting>
+          <setting name="ClientSecret">test</setting>
           <setting type="as" name="AllowedSchemes">['https']</setting>
           <setting type="as" name="AllowedRealms">['elementary.io']</setting>
           <setting type="as" name="Realms">['flatpak-auth.elementary.io']</setting>
