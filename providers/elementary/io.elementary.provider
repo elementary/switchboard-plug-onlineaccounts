@@ -13,8 +13,8 @@
       <group name="oauth">
         <group name="oauth2">
           <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
-          <setting name="AuthHost">flatpak-auth.elementary.io</setting>
-          <setting name="TokenHost">flatpak-auth.elementary.io</setting>
+          <setting name="AuthHost">accounts.elementary.io</setting>
+          <setting name="TokenHost">accounts.elementary.io</setting>
           <setting name="AuthPath">/o/oauth2/auth</setting>
           <setting name="TokenPath">/o/oauth2/token</setting>
           <setting type="int" name="UiPolicy">0</setting>
@@ -25,7 +25,7 @@
           <setting name="ClientSecret">test</setting>
           <setting type="as" name="AllowedSchemes">['https']</setting>
           <setting type="as" name="AllowedRealms">['elementary.io']</setting>
-          <setting type="as" name="Realms">['flatpak-auth.elementary.io']</setting>
+          <setting type="as" name="Realms">['accounts.elementary.io']</setting>
         </group>
       </group>
     </group>
