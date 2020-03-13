@@ -63,16 +63,9 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
         frame.add (content_area);
         frame.show_all ();
 
-        var privacy_policy_link = new Gtk.LinkButton.with_label ("https://elementary.io/privacy", _("Privacy Policy"));
-        privacy_policy_link.show ();
-
         add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
-        var action_area = (Gtk.ButtonBox) get_action_area ();
-        action_area.margin = 6;
-        action_area.add (privacy_policy_link);
-        action_area.set_child_secondary (privacy_policy_link, true);
-
+        get_action_area ().margin = 6;
         get_content_area ().add (frame);
 
         deletable = false;
