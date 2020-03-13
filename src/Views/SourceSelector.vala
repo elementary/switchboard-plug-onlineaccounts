@@ -50,13 +50,13 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         add_account_search.placeholder_text = _("Search Providers");
 
         var add_account_list = new Gtk.ListBox ();
-        add_account_list.width_request = 300;
+        add_account_list.width_request = 400;
         add_account_list.set_filter_func (add_list_filter_function);
 
         var add_account_scrolled = new Gtk.ScrolledWindow (null, null);
         add_account_scrolled.hscrollbar_policy = Gtk.PolicyType.NEVER;
         add_account_scrolled.margin_bottom = 3;
-        add_account_scrolled.min_content_height = 200;
+        add_account_scrolled.min_content_height = 300;
         add_account_scrolled.add (add_account_list);
 
         var add_account_grid = new Gtk.Grid ();
