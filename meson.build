@@ -13,6 +13,12 @@ add_project_arguments(
     language:'c'
 )
 
+css_gresource = gnome.compile_resources(
+    'css-resource',
+    join_paths('data', 'onlineaccounts.gresource.xml'),
+    source_dir: 'data'
+)
+
 glib_dep = dependency('glib-2.0')
 gio_dep = dependency('gio-2.0')
 gobject_dep = dependency('gobject-2.0')

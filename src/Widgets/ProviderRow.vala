@@ -18,9 +18,17 @@
  */
 
 public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
+    public signal void delete_request ();
+
+    public Gtk.Revealer close_revealer { get; private set; }
     public Ag.Provider provider { get; construct; }
     public string description { get; construct; }
     public string title_text { get; construct set; }
+
+    protected Gtk.Button delete_button;
+    protected Gtk.Revealer revealer;
+
+    private static Gtk.CssProvider css_provider;
 
     public ProviderRow (
         Ag.Provider provider,
@@ -34,7 +42,29 @@ public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
         );
     }
 
+    static construct {
+        css_provider = new Gtk.CssProvider ();
+        css_provider.load_from_resource ("io/elementary/switchboard/onlineaccounts/AccountRow.css");
+    }
+
     construct {
+        var delete_image = new Gtk.Image.from_icon_name ("window-close-symbolic", Gtk.IconSize.BUTTON);
+        delete_image.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        delete_button = new Gtk.Button ();
+        delete_button.image = delete_image;
+        delete_button.margin_start = 6;
+        delete_button.tooltip_text = (_("Delete"));
+        delete_button.valign = Gtk.Align.CENTER;
+
+        unowned Gtk.StyleContext delete_button_context = delete_button.get_style_context ();
+        delete_button_context.add_class ("delete");
+        delete_button_context.add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        close_revealer = new Gtk.Revealer ();
+        close_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT;
+        close_revealer.add (delete_button);
+
         var image = new Gtk.Image.from_icon_name (provider.get_icon_name (), Gtk.IconSize.DND);
         image.pixel_size = 32;
         image.use_fallback = true;
@@ -49,13 +79,20 @@ public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
         description_label.use_markup = true;
 
         var grid = new Gtk.Grid ();
-        grid.margin = 6;
         grid.column_spacing = 6;
-        grid.attach (image, 0, 0, 1, 2);
-        grid.attach (title_label, 1, 0);
-        grid.attach (description_label, 1, 1);
+        grid.margin = 6;
+        grid.margin_start = 0;
+        grid.attach (close_revealer, 0, 0, 1, 2);
+        grid.attach (image, 1, 0, 1, 2);
+        grid.attach (title_label, 2, 0);
+        grid.attach (description_label, 2, 1);
 
-        add (grid);
+        var revealer = new Gtk.Revealer ();
+        revealer.reveal_child = true;
+        revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
+        revealer.add (grid);
+
+        add (revealer);
 
         title_label.bind_property ("label", this, "title-text");
     }

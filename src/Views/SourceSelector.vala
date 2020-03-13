@@ -38,7 +38,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         orientation = Gtk.Orientation.VERTICAL;
         list_box = new Gtk.ListBox ();
         list_box.selection_mode = Gtk.SelectionMode.SINGLE;
-        list_box.activate_on_single_click = true;
+        list_box.activate_on_single_click = false;
 
         var scroll = new Gtk.ScrolledWindow (null, null);
         scroll.hscrollbar_policy = Gtk.PolicyType.NEVER;
@@ -75,13 +75,9 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         add_button.popover = add_account_popover;
         add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-        var remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        remove_button.tooltip_text = _("Remove");
-
         var action_bar = new Gtk.ActionBar ();
         action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
         action_bar.add (add_button);
-        action_bar.add (remove_button);
 
         add (scroll);
         add (action_bar);
@@ -96,14 +92,21 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         }
         add_account_list.show_all ();
 
-        remove_button.clicked.connect (remove_source);
-
         list_box.row_selected.connect ((row) => {
             if (row != null) {
                 account_selected (((AccountRow) row).account);
+            } else {
+                var selection = list_box.get_row_at_index (0);
+                if (selection != null) {
+                    list_box.select_row (selection);
+                }
             }
+        });
 
-            remove_button.sensitive = row != null;
+        list_box.selected_rows_changed.connect (() => {
+            foreach (unowned Gtk.Widget row in list_box.get_children ()) {
+                ((ProviderRow) row).close_revealer.reveal_child = ((Gtk.ListBoxRow) row).is_selected ();
+            }
         });
 
         add_account_search.search_changed.connect (() => {
@@ -153,20 +156,6 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         return ((AccountRow) selection).account;
     }
 
-    private void remove_source () {
-        weak Gtk.ListBoxRow selection = list_box.get_selected_row ();
-        if (selection == null)
-            return;
-
-        var account = ((AccountRow) selection).account;
-        AccountsManager.get_default ().remove_account (account);
-        selection.destroy ();
-        selection = list_box.get_row_at_index (0);
-        if (selection != null) {
-            list_box.select_row (selection);
-        }
-    }
-
     private class AccountRow : OnlineAccounts.ProviderRow {
         public OnlineAccounts.Account account { get; construct; }
 
@@ -183,6 +172,17 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
             var ag_account = account.ag_account;
             ag_account.display_name_changed.connect (() => {
                 title_text = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
+            });
+
+            delete_button.clicked.connect (() => {
+                revealer.transition_duration = 195;
+                revealer.reveal_child = false;
+
+                GLib.Timeout.add (revealer.transition_duration, () => {
+                    AccountsManager.get_default ().remove_account (account);
+                    destroy ();
+                    return false;
+                });
             });
         }
     }
