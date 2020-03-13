@@ -1,5 +1,10 @@
 provider_rdnn = 'io.elementary.online-accounts.elementary'
 
+install_data(
+     'io.elementary.provider',
+     install_dir: providers_dir
+ )
+
 icon_sizes = ['32', '48']
 
 foreach i : icon_sizes
