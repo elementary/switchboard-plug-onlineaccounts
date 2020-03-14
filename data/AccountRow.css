@@ -35,6 +35,6 @@ list row button.delete {
     -gtk-icon-shadow: 0 1px 2px alpha (@STRAWBERRY_700, 0.6);
 }
 
-list row:selected button.delete image {
+list row:selected:focus button.delete image {
     animation: reveal-spin 250ms ease-out 1;
 }

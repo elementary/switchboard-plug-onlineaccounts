@@ -35,9 +35,8 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
     }
 
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
         list_box = new Gtk.ListBox ();
-        list_box.selection_mode = Gtk.SelectionMode.SINGLE;
+        list_box.selection_mode = Gtk.SelectionMode.MULTIPLE;
         list_box.activate_on_single_click = false;
 
         var scroll = new Gtk.ScrolledWindow (null, null);
@@ -79,6 +78,7 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
         action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
         action_bar.add (add_button);
 
+        orientation = Gtk.Orientation.VERTICAL;
         add (scroll);
         add (action_bar);
 
@@ -174,15 +174,16 @@ public class OnlineAccounts.SourceSelector : Gtk.Grid {
                 title_text = Markup.escape_text (ag_account.get_display_name () ?? _("New Account"));
             });
 
-            delete_button.clicked.connect (() => {
+            delete_button.button_release_event.connect (() => {
                 revealer.transition_duration = 195;
                 revealer.reveal_child = false;
 
                 GLib.Timeout.add (revealer.transition_duration, () => {
                     AccountsManager.get_default ().remove_account (account);
                     destroy ();
-                    return false;
                 });
+
+                return Gdk.EVENT_STOP;
             });
         }
     }

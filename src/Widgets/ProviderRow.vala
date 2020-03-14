@@ -87,7 +87,7 @@ public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
         grid.attach (title_label, 2, 0);
         grid.attach (description_label, 2, 1);
 
-        var revealer = new Gtk.Revealer ();
+        revealer = new Gtk.Revealer ();
         revealer.reveal_child = true;
         revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_UP;
         revealer.add (grid);
@@ -95,5 +95,9 @@ public class OnlineAccounts.ProviderRow : Gtk.ListBoxRow {
         add (revealer);
 
         title_label.bind_property ("label", this, "title-text");
+
+        focus_out_event.connect (() => {
+            close_revealer.reveal_child = false;
+        });
     }
 }
