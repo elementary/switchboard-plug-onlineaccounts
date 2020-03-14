@@ -13,10 +13,10 @@
       <group name="oauth">
         <group name="oauth2">
           <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
-          <setting name="AuthHost">accounts.elementary.io</setting>
-          <setting name="TokenHost">accounts.elementary.io</setting>
-          <setting name="AuthPath">/o/oauth2/auth</setting>
-          <setting name="TokenPath">/o/oauth2/token</setting>
+          <setting name="AuthHost">elementary.github.io</setting>
+          <setting name="TokenHost">elementary.github.io</setting>
+          <setting name="AuthPath">/accounts-prototype/oauth</setting>
+          <setting name="TokenPath">/accounts-prototype/oauth</setting>
           <setting type="int" name="UiPolicy">0</setting>
           <setting name="RedirectUri">http://elementary.io</setting>
           <setting name="ResponseType">code</setting>
@@ -24,8 +24,8 @@
           <setting name="ClientId">test</setting>
           <setting name="ClientSecret">test</setting>
           <setting type="as" name="AllowedSchemes">['https']</setting>
-          <setting type="as" name="AllowedRealms">['elementary.io']</setting>
-          <setting type="as" name="Realms">['accounts.elementary.io']</setting>
+          <setting type="as" name="AllowedRealms">['github.io']</setting>
+          <setting type="as" name="Realms">['elementary.github.io']</setting>
         </group>
       </group>
     </group>
