@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2020-01-04 11:07+0000\n"
+"PO-Revision-Date: 2020-03-16 12:09+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/nl/>\n"
@@ -332,16 +332,12 @@ msgid "IMAP Account"
 msgstr "IMAP Account"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
-#| msgid "IMAP Account"
 msgid "Add Account"
-msgstr "IMAP Account"
+msgstr "Account toevoegen"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Voeg een nieuw account toe…"
+msgstr "Account toevoegen…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
