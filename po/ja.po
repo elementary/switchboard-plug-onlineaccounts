@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2020-01-25 15:08+0000\n"
+"PO-Revision-Date: 2020-03-16 12:09+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -334,16 +334,12 @@ msgid "IMAP Account"
 msgstr "IMAP アカウント"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
-#| msgid "IMAP Account"
 msgid "Add Account"
-msgstr "IMAP アカウント"
+msgstr "アカウントを追加"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "新しいアカウントを追加…"
+msgstr "アカウントを追加…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
