@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2019-11-16 17:24+0000\n"
-"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"PO-Revision-Date: 2020-03-24 18:09+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-21 06:47+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
@@ -26,7 +26,7 @@ msgstr "Publicaciones"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
-msgstr "Echa un vistazo a tu servicio de noticias"
+msgstr "Manténgase al tanto de su suministro de noticias"
 
 #: providers/Facebook/facebook-contacts.service:4
 #: providers/Google/google-contacts.service:4
@@ -38,7 +38,7 @@ msgstr "Contactos"
 #: providers/Google/google-contacts.service:5
 #: providers/Microsoft/microsoft-contacts.service:5
 msgid "Sync your contacts"
-msgstr "Sincronizar tus contactos"
+msgstr "Sincronice sus contactos"
 
 #: providers/Facebook/facebook-calendar.service:4
 #: providers/Google/google-calendar.service:4
@@ -50,7 +50,7 @@ msgstr "Calendarios"
 #: providers/Google/google-calendar.service:5
 #: providers/Microsoft/microsoft-calendar.service:5
 msgid "Sync your calendars"
-msgstr "Sincronizar tus calendarios"
+msgstr "Sincronice sus calendarios"
 
 #: providers/FastMail/fastmail-mail.service:4
 #: providers/Google/google-gmail.service:4
@@ -68,7 +68,7 @@ msgstr "Correo electrónico"
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
 msgid "Sync your email"
-msgstr "Sincroniza tu correo electrónico"
+msgstr "Sincronice su correo electrónico"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
@@ -76,7 +76,7 @@ msgstr "Fotos"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
-msgstr "Sincroniza tus fotos"
+msgstr "Sincronice sus fotos"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
@@ -84,7 +84,7 @@ msgstr "Drive"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
-msgstr "Sincroniza tus archivos"
+msgstr "Sincronice sus archivos"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
@@ -92,7 +92,7 @@ msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr "Agregue su música"
+msgstr "Haga un seguimiento de su música"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -116,7 +116,7 @@ msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with Fastmail"
-msgstr "Accede al correo electrónico de Fastmail"
+msgstr "Acceda al correo electrónico de Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
@@ -132,7 +132,7 @@ msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
 msgid "Scrobble your music"
-msgstr "Agregue su música"
+msgstr "Haga un seguimiento de su música"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
@@ -140,7 +140,7 @@ msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Acceda a todos los servicios de Outlook y Onedrive desde el equipo"
+msgstr "Acceda a todos los servicios de Outlook y OneDrive desde el equipo"
 
 #: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
@@ -156,13 +156,13 @@ msgstr "Restaurar"
 
 #: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
-msgstr "Conecta tus cuentas en linea"
+msgstr "Conecte sus cuentas en línea"
 
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Conecte cuentas en línea haciendo clic en el icono en la barra de "
-"herramientas de abajo."
+"Conecte cuentas en línea pulsando en el icono en la barra de herramientas "
+"siguiente."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
@@ -240,7 +240,7 @@ msgstr "No se requiere autenticación"
 #: src/Authentification/MailDialog.vala:155
 #: src/Authentification/PasswordDialog.vala:98
 msgid "Log In"
-msgstr "Iniciar sesión"
+msgstr "Acceder"
 
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
@@ -265,7 +265,7 @@ msgstr "Contraseña olvidada…"
 #: src/Authentification/PasswordDialog.vala:104
 #: src/Authentification/PasswordDialog.vala:92
 msgid "Refresh Captcha"
-msgstr "Actualizar el código de verificación"
+msgstr "Actualizar prueba antirrobots"
 
 #: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:93
@@ -275,7 +275,7 @@ msgstr "Escriba el texto anterior aquí"
 #: src/Authentification/PasswordDialog.vala:114
 #: src/Authentification/PasswordDialog.vala:102
 msgid "Don't have an account? Sign Up"
-msgstr "¿No tienes una cuenta? Regístrate"
+msgstr "¿No tiene cuenta? Regístrese"
 
 #: src/Authentification/PasswordDialog.vala:314
 #: src/Authentification/PasswordDialog.vala:295
@@ -295,8 +295,7 @@ msgstr "Cargando…"
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Inicia sesión para conectarte a aplicaciones como Correo, Contactos y "
-"Calendario."
+"Acceda para conectarse a aplicaciones como Correo, Contactos y Calendario."
 
 #: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
@@ -304,7 +303,7 @@ msgstr "Proveedores de búsqueda"
 
 #: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
-msgstr "Política de privacidad"
+msgstr "Normativa de privacidad"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 msgid "Cancel"
@@ -333,16 +332,12 @@ msgid "IMAP Account"
 msgstr "Cuenta IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
-#| msgid "IMAP Account"
 msgid "Add Account"
-msgstr "Cuenta IMAP"
+msgstr "Añadir cuenta"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Añadir una cuenta nueva…"
+msgstr "Añadir cuenta…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""

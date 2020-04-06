@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2020-03-01 15:09+0000\n"
+"PO-Revision-Date: 2020-03-27 19:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -324,16 +324,12 @@ msgid "IMAP Account"
 msgstr "חשבון IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
-#| msgid "IMAP Account"
 msgid "Add Account"
-msgstr "חשבון IMAP"
+msgstr "הוספת חשבון"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "הוספת חשבון חדש…"
+msgstr "הוספת חשבון…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "כרגע אין יישומים מותקנים שמקושרים לחשבון שלך בשירות %s"
