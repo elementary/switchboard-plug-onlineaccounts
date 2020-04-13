@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-16 18:24-0800\n"
-"PO-Revision-Date: 2020-02-22 14:09+0000\n"
+"PO-Revision-Date: 2020-04-14 14:10+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fi/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts"
-msgstr ""
+msgstr "Verkkotilit"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
 #: data/onlineaccounts.appdata.xml.in:11
 msgid "Major redesign"
