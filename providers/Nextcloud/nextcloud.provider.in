@@ -3,7 +3,7 @@
   <name>Nextcloud</name>
   <description>Access all Nextcloud services on your computer</description>
   <icon>online-account-nextcloud</icon>
-  <translations>pantheon-online-accounts</translations>
+  <translations>online-accounts-plug</translations>
   <plugin>generic-oauth</plugin>
 
   <template>
@@ -12,15 +12,14 @@
       <setting name="mechanism">oauth2</setting>
       <group name="oauth">
         <group name="oauth2">
-          <setting name="AskNextcloudSettings" type="boolean">true</setting>
-          <setting name="ResponseType">code</setting>
           <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
-          <setting name="UiPolicy">0</setting>
           <setting name="AuthHost">nextcloud.dev.marco.betschart.name</setting>
-          <setting name="AuthPath">/index.php/apps/oauth2/authorize</setting>
           <setting name="TokenHost">nextcloud.dev.marco.betschart.name</setting>
+          <setting name="AuthPath">/index.php/apps/oauth2/authorize</setting>
           <setting name="TokenPath">/index.php/apps/oauth2/api/v1/token</setting>
+          <setting type="int" name="UiPolicy">0</setting>
           <setting name="RedirectUri">http://elementaryos.org</setting>
+          <setting name="ResponseType">code</setting>
           <setting name="ClientId">xdXOt13JKxym1B1QcEncf2XDkLAexMBFwiT9j6EfhhHFJhs2KM9jbjTmf8JBXE69</setting>
           <setting name="ClientSecret">UBntmLjC2yYCeHwsyj73Uwo9TAaecAetRwMw0xYcvNL9yRdLSUi0hUAHfvCHFeFh</setting>
           <setting type="as" name="AllowedSchemes">['https']</setting>
