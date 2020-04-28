@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,25 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
+msgid "Online Accounts Settings"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:11
+#: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:12
+#: data/onlineaccounts.appdata.xml.in:14
 msgid "Make external links open in the web browser"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:13
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
 msgstr ""
