@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 18:24-0800\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2020-01-25 15:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -20,25 +20,27 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
+#, fuzzy
+#| msgid "Online Accounts"
+msgid "Online Accounts Settings"
 msgstr "オンラインアカウント"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr "オンラインアカウントと接続されたアプリケーションを管理します"
 
-#: data/onlineaccounts.appdata.xml.in:11
+#: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
 msgstr "大規模なデザイン変更"
 
-#: data/onlineaccounts.appdata.xml.in:12
+#: data/onlineaccounts.appdata.xml.in:14
 msgid "Make external links open in the web browser"
 msgstr "外部リンクを Web ブラウザーで開くように修正"
 
-#: data/onlineaccounts.appdata.xml.in:13
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr "HiDPI 環境でのアイコンの解像度が悪い問題を修正"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
 msgstr "翻訳の更新"

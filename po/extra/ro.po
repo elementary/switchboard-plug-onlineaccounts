@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 18:24-0800\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2019-05-10 13:03-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,25 +19,25 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
+msgid "Online Accounts Settings"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:11
+#: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:12
+#: data/onlineaccounts.appdata.xml.in:14
 msgid "Make external links open in the web browser"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:13
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
 msgstr ""

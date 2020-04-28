@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 18:24-0800\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2020-02-06 20:08+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -20,25 +20,27 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
+#, fuzzy
+#| msgid "Online Accounts"
+msgid "Online Accounts Settings"
 msgstr "ऑनलाइन खाती"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr "ऑनलाइन खाती आणि कनेक्ट केलेले अप्लिकेशन्स व्यवस्थापित करा"
 
-#: data/onlineaccounts.appdata.xml.in:11
+#: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
 msgstr "पुन्हा डिझाईन करण्याचे मोठे काम"
 
-#: data/onlineaccounts.appdata.xml.in:12
+#: data/onlineaccounts.appdata.xml.in:14
 msgid "Make external links open in the web browser"
 msgstr "बाह्य दुवे वेब ब्राउझरमध्ये उघडण्यास सक्ती करा"
 
-#: data/onlineaccounts.appdata.xml.in:13
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr "हायडीपीआय वर अस्पष्ट चिन्हांशी संबंधित समस्यांचे निराकरण करा"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
