@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2017-04-17 14:23+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -304,6 +304,7 @@ msgid "Privacy Policy"
 msgstr ""
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Odustani"
 
@@ -331,6 +332,7 @@ msgid "IMAP Account"
 msgstr "Račun e-pošte"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
 #, fuzzy
 msgid "Add Account"
 msgstr "Račun e-pošte"

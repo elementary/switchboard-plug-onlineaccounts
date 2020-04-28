@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2016-09-03 20:10+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -306,6 +306,7 @@ msgid "Privacy Policy"
 msgstr ""
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Loobu"
 
@@ -333,6 +334,7 @@ msgid "IMAP Account"
 msgstr "E-posti konto"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
 #, fuzzy
 msgid "Add Account"
 msgstr "E-posti konto"

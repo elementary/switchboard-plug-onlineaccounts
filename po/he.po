@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2020-03-27 19:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -298,6 +298,7 @@ msgid "Privacy Policy"
 msgstr "מדיניות פרטיות"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -324,6 +325,7 @@ msgid "IMAP Account"
 msgstr "חשבון IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
 msgstr "הוספת חשבון"
 
