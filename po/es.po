@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2020-03-24 18:09+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/es/>\n"
@@ -88,7 +88,7 @@ msgstr "Sincronice sus archivos"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr "Scrobble"
+msgstr "Registro musical"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
