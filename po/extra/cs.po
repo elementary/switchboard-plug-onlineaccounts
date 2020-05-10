@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2020-05-08 14:10+0000\n"
+"PO-Revision-Date: 2020-05-11 16:10+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/cs/>\n"
@@ -21,23 +21,24 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
-msgstr ""
+msgstr "Nastavení online účtů"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Spravovat online účty a propojené aplikace"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
-msgstr ""
+msgstr "Velké předělání"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make external links open in the web browser"
-msgstr ""
+msgstr "Otevírání externích odkazů ve webovém prohlížeči"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
+"Oprava rozmazaných ikon na displejích s velmi vysokým rozlišením (HiDPI)"
 
 #: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
