@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2020-05-27 12:11+0000\n"
+"PO-Revision-Date: 2020-05-28 13:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/da/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
-msgstr ""
+msgstr "Online Konti Indstillinger"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
@@ -29,16 +29,16 @@ msgstr "Håndter online konti og forbundede applikationer"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
-msgstr ""
+msgstr "Nyt design"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make external links open in the web browser"
-msgstr ""
+msgstr "Gør så  eksterne links åbnes i webbrowseren"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
-msgstr ""
+msgstr "Ret uskarpe ikoner på HiDPI"
 
 #: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
-msgstr ""
+msgstr "Opdaterede oversættelser"
