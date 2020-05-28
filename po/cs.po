@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2020-05-11 16:10+0000\n"
+"PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/cs/>\n"
@@ -26,7 +26,7 @@ msgstr "Příspěvky"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
-msgstr "Sledovat newsfeed"
+msgstr "Sledovat kanál novinek"
 
 #: providers/Facebook/facebook-contacts.service:4
 #: providers/Google/google-contacts.service:4
@@ -62,7 +62,7 @@ msgstr "Synchronizovat kalendáře"
 #: src/Authentification/MailDialog.vala:108
 #: src/Authentification/PasswordDialog.vala:65
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
@@ -96,7 +96,7 @@ msgstr "Scrobblujte svou hudbu"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
-msgstr "Mailový účet"
+msgstr "E-mailový účet"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
@@ -175,7 +175,7 @@ msgstr "Nový účet"
 #: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
-msgstr "Účet '%s' byl odebrán."
+msgstr "Účet „%s“ byl odebrán."
 
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
@@ -231,7 +231,7 @@ msgstr "Použít přihlašovací údaje IMAP"
 #: src/Authentification/MailDialog.vala:151
 #: src/Authentification/MailDialog.vala:139
 msgid "No authentication required"
-msgstr "Žádné ověření není vyžadováno"
+msgstr "Není vyžadováno žádné ověřování"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
@@ -243,7 +243,7 @@ msgstr "Přihlásit se"
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
-msgstr "URL"
+msgstr "URL adresa"
 
 #: src/Authentification/PasswordDialog.vala:86
 #: src/Authentification/PasswordDialog.vala:74
@@ -263,12 +263,12 @@ msgstr "Zapomenuté heslo…"
 #: src/Authentification/PasswordDialog.vala:104
 #: src/Authentification/PasswordDialog.vala:92
 msgid "Refresh Captcha"
-msgstr "Obnovit Captcha"
+msgstr "Znovu načíst Captcha"
 
 #: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:93
 msgid "Enter above text here"
-msgstr "Zadejte zde text výše"
+msgstr "Sem zadejte výše uvedený text"
 
 #: src/Authentification/PasswordDialog.vala:114
 #: src/Authentification/PasswordDialog.vala:102
@@ -293,7 +293,7 @@ msgstr "Načítání…"
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Přihlašte se pro připojení s aplikacemi jako Mail, Kontakty a Kalendář."
+"Přihlašte se pro připojení s aplikacemi jako E-mail, Kontakty a Kalendář."
 
 #: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
