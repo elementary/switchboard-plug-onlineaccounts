@@ -73,9 +73,9 @@ public class OnlineAccounts.Server : GLib.Object {
         socket_file_path = base_path + "ui-XXXXXX";
         socket_file_id = GLib.FileUtils.mkstemp (socket_file_path);
         debug ("Socket File path : %s", socket_file_path);
-        var errno = GLib.DirUtils.create_with_parents (base_path, 0700);
-        if (errno == -1) {
-            warning ("Could not create '%s', error: %s", base_path, GLib.strerror (errno));
+        var err_no = GLib.DirUtils.create_with_parents (base_path, 0700);
+        if (err_no == -1) {
+            warning ("Could not create '%s', error: %s", base_path, GLib.strerror (err_no));
         }
 
         GLib.FileUtils.unlink (socket_file_path);
