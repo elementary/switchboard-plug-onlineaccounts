@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2019-12-20 16:09+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-23 07:11+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/zh_Hans/>\n"
@@ -303,6 +303,7 @@ msgid "Privacy Policy"
 msgstr "隐私政策"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "取消"
 
@@ -329,16 +330,13 @@ msgid "IMAP Account"
 msgstr "IMAP 账户"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
-#| msgid "IMAP Account"
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
-msgstr "IMAP 账户"
+msgstr "添加账户"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "添加新账户…"
+msgstr "添加账户…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "当前没有安装任何与您 %s 账户相连接的应用"

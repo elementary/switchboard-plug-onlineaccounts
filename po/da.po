@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2019-02-03 12:06+0000\n"
-"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-27 12:11+0000\n"
+"Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-03-22 06:56+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
@@ -148,7 +148,7 @@ msgstr "Online Konti"
 
 #: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
-msgstr "Håndter online konti og forbundet applikationer"
+msgstr "Håndter online konti og forbundede applikationer"
 
 #: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
@@ -303,6 +303,7 @@ msgid "Privacy Policy"
 msgstr "Fortrolighedspolitik"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Annuller"
 
@@ -325,20 +326,17 @@ msgid "Remove"
 msgstr "Fjern"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Mailkonto"
+msgstr "IMAP Konto"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
-msgstr "Mailkonto"
+msgstr "Tilføj Konto"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Tilføj en ny konto…"
+msgstr "Tilføj Konto…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Der er ingen applikationer installeret der gør brug af din %s-konto"

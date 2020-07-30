@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2020-04-12 06:10+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-12 17:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pt/>\n"
@@ -92,7 +92,7 @@ msgstr "Scrobble"
 
 #: providers/LastFM/lastfm-scrobble.service:5
 msgid "Scrobble all your music"
-msgstr "Fazer Scrobble de toda a sua música"
+msgstr "Scrobble toda a sua música"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -100,7 +100,7 @@ msgstr "Conta de Email"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr "Consultar Email do Servidor IMAP"
+msgstr "Consultar email do Servidor IMAP"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
@@ -152,7 +152,7 @@ msgstr "Gerir contas online e aplicações associadas"
 
 #: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
-msgstr "Repôr"
+msgstr "Repor"
 
 #: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
@@ -184,7 +184,7 @@ msgstr "Conta %s removida."
 #: src/Authentification/AbstractAuthView.vala:58
 #: src/Authentification/OAuthView.vala:121
 msgid "Please enter your credentials…"
-msgstr "Por favor introduza as suas credenciais…"
+msgstr "Introduza as suas credenciais…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:58
@@ -238,7 +238,7 @@ msgstr "Não é necessária autenticação"
 #: src/Authentification/MailDialog.vala:155
 #: src/Authentification/PasswordDialog.vala:98
 msgid "Log In"
-msgstr "Iniciar Sessão"
+msgstr "Iniciar sessão"
 
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
@@ -248,7 +248,7 @@ msgstr "URL"
 #: src/Authentification/PasswordDialog.vala:86
 #: src/Authentification/PasswordDialog.vala:74
 msgid "New Password"
-msgstr "Nova Palavra-passe"
+msgstr "Nova palavra-passe"
 
 #: src/Authentification/PasswordDialog.vala:91
 #: src/Authentification/PasswordDialog.vala:79
@@ -305,6 +305,7 @@ msgid "Privacy Policy"
 msgstr "Política de Privacidade"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -331,6 +332,7 @@ msgid "IMAP Account"
 msgstr "Conta IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
 msgstr "Adicionar Conta"
 

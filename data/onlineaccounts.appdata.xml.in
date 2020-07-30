@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.switchboard.onlineaccounts</id>
   <extends>io.elementary.switchboard</extends>
-  <name>Online Accounts</name>
+  <name>Online Accounts Settings</name>
   <summary>Manage online accounts and connected applications</summary>
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>

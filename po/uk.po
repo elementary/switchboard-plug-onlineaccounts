@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
 "PO-Revision-Date: 2020-01-16 02:07+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -308,6 +308,7 @@ msgid "Privacy Policy"
 msgstr ""
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -335,6 +336,7 @@ msgid "IMAP Account"
 msgstr "Інший обліковий запис"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
 #, fuzzy
 msgid "Add Account"
 msgstr "Інший обліковий запис"
