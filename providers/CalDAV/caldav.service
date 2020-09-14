@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="caldav">
+  <type>caldav</type>
+  <name>CalDAV Account</name>
+  <description>Fetch events from CalDAV Server</description>
+  <icon>text-calendar</icon>
+  <provider>caldav</provider>
+  <translations>online-accounts-plug</translations>
+</service>

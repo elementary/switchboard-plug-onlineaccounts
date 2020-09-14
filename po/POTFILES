@@ -2,6 +2,7 @@ src/Account.vala
 src/AccountsManager.vala
 src/Plug.vala
 src/Authentification/AbstractAuthDialog.vala
+src/Authentification/CalDavDialog.vala
 src/Authentification/DialogService.vala
 src/Authentification/Key.vala
 src/Authentification/MailDialog.vala

@@ -39,6 +39,9 @@ public class OnlineAccounts.DialogService : Object {
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
             reply = maildialog.get_reply ();
+        } else if (dialog is CalDavDialog) {
+            var caldavdialog = dialog as CalDavDialog;
+            reply = caldavdialog.get_reply ();
         } else {
             var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.refresh_captcha_needed.connect (() => {refresh (dialog.request_id);});
@@ -67,6 +70,9 @@ public class OnlineAccounts.DialogService : Object {
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
             maildialog.set_parameters (parameter);
+        } else if (dialog is CalDavDialog) {
+            var caldavdialog = dialog as CalDavDialog;
+            caldavdialog.set_parameters (parameter);
         } else {
             var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.set_parameters (parameter);

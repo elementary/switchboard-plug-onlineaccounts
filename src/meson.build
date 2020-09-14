@@ -4,6 +4,7 @@ plug_files = files(
     'Plug.vala',
     'Authentification/DialogService.vala',
     'Authentification/AbstractAuthDialog.vala',
+    'Authentification/CalDavDialog.vala',
     'Authentification/Key.vala',
     'Authentification/MailDialog.vala',
     'Authentification/OAuthView.vala',

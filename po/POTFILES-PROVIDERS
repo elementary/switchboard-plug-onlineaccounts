@@ -1,3 +1,4 @@
+providers/CalDAV/caldav.provider
 providers/Facebook/facebook.provider.in
 providers/FastMail/fastmail.provider
 providers/Google/google.provider.in

@@ -1,3 +1,4 @@
+providers/CalDAV/caldav.service
 providers/Facebook/facebook-microblog.service
 providers/Facebook/facebook-contacts.service
 providers/Facebook/facebook-calendar.service

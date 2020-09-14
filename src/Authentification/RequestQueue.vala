@@ -57,6 +57,8 @@ public class OnlineAccounts.RequestQueue : Object {
             dialog = new OAuthView (info.parameters);
         } else if (info.parameters.contains (OnlineAccounts.Key.ASK_EMAIL_SETTINGS)) {
             dialog = new MailDialog (info.parameters);
+        } else if (info.parameters.contains (OnlineAccounts.Key.ASK_CALENDAR_SETTINGS)) {
+            dialog = new CalDavDialog (info.parameters);
         } else {
             dialog = new PasswordDialog (info.parameters);
         }
