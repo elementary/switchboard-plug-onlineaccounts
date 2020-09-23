@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2020-09-20 14:33+0000\n"
+"PO-Revision-Date: 2020-09-24 16:44+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -107,11 +107,11 @@ msgstr ""
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
-msgstr "Підключіть Facebook-акаунт до вашого комп’ютера"
+msgstr "Під'єднайте обліковий запис Facebook до вашого комп’ютера"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "Fastmail"
@@ -123,11 +123,11 @@ msgstr ""
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
-msgstr "Підключіть всі сервіси Google до вашого комп’ютера"
+msgstr "Під'єднайте всі служби Google до вашого комп’ютера"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
@@ -140,19 +140,19 @@ msgstr "Налаштувати музичні вподобання"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Підключіть всі сервіси Outlook та OneDrive до вашого комп’ютера"
+msgstr "Під'єднайте всі служби Outlook та OneDrive до вашого комп’ютера"
 
 #: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
-msgstr "Мережеві облікові записи"
+msgstr "Мережні облікові записи"
 
 #: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
-msgstr "Управління онлайн-акаунтами і пов'язаними додатками"
+msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
 
 #: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
@@ -160,7 +160,7 @@ msgstr "Відновити"
 
 #: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
-msgstr "Під’єднайте ваші онлайн акаунти"
+msgstr "Під’єднайте ваші мережні облікові записи"
 
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
