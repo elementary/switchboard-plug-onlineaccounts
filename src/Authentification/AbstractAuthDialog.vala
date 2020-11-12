@@ -57,8 +57,8 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
 
         var frame = new Gtk.Frame (null) {
             expand = true,
-            margin_left = 12,
-            margin_right = 12
+            margin_start = 12,
+            margin_end = 12
         };
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         frame.add (content_area);
