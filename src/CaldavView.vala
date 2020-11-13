@@ -19,18 +19,24 @@
 */
 
 public class CaldavView : Gtk.Grid {
+    ListStore calendars_store;
+    ValidatedEntry url_entry;
+    ValidatedEntry username_entry;
+    ValidatedEntry password_entry;
+
     construct {
         var url_label = new Granite.HeaderLabel ("Server URL");
-        var url_entry = new ValidatedEntry ();
+        url_entry = new ValidatedEntry ();
 
         var url_message_revealer = new ValidationMessage (".");
         url_message_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
         var username_label = new Granite.HeaderLabel ("User Name");
-        var username_entry = new ValidatedEntry ();
+        username_entry = new ValidatedEntry ();
 
         var password_label = new Granite.HeaderLabel ("Password");
-        var password_entry = new ValidatedEntry ();
+        password_entry = new ValidatedEntry ();
+        password_entry.visibility = false;
 
         var find_calendars_button = new Gtk.Button.with_label ("Find Calendars") {
             halign = Gtk.Align.END
@@ -56,13 +62,11 @@ public class CaldavView : Gtk.Grid {
         };
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
+        calendars_store = new ListStore (typeof(FoundCalendar));
         var calendars_list = new Gtk.ListBox () {
             margin_top = 6
         };
-        calendars_list.add (new CalendarRow ("Home", "purple"));
-        calendars_list.add (new CalendarRow ("Work", "green"));
-        calendars_list.add (new CalendarRow ("Family", "yellow"));
-        calendars_list.add (new CalendarRow ("Hobby", "pink"));
+        calendars_list.bind_model (calendars_store, create_item);
 
         var finish_button = new Gtk.Button.with_label ("Add Calendars") {
             halign = Gtk.Align.END,
@@ -90,12 +94,82 @@ public class CaldavView : Gtk.Grid {
         // refresh rate
 
         find_calendars_button.clicked.connect (() => {
+            find_calendars ();
             deck.visible_child = calendars_page;
         });
 
         back_button.clicked.connect (() => {
             deck.navigate (Hdy.NavigationDirection.BACK);
         });
+    }
+
+    private class FoundCalendar : GLib.Object {
+        public string name;
+        public string href;
+        public string? color;
+        public FoundCalendar (string name, string href, string? color) {
+            this.name = name;
+            this.href = href;
+            this.color = color;
+        }
+    }
+
+    [ CCode ( instance_pos = 1.9 ) ]
+    public Gtk.Widget create_item (GLib.Object item)  {
+        unowned FoundCalendar cal = (FoundCalendar)item;
+        var row = new CalendarRow (cal.name, "blue");
+        row.show_all ();
+        return row;
+    }
+
+    private void find_calendars () {
+        try {
+            var source = new E.Source (null, null);
+            source.parent = "caldav-stub";
+            unowned var cal = (E.SourceCalendar)source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
+            //cal.color = color;
+            cal.backend_name = "caldav";
+            unowned var webdav = (E.SourceWebdav)source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+            webdav.soup_uri = new Soup.URI (url_entry.text);
+            //webdav.email_address = ((Gtk.Entry)widget.widget).text;
+            webdav.calendar_auto_schedule = true;
+            unowned var auth = (E.SourceAuthentication)source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+            auth.user = username_entry.text;
+
+            unowned var offline = (E.SourceOffline)source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
+            offline.set_stay_synchronized (true);
+
+            var credentials = new E.NamedParameters ();
+            credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
+            credentials.set (E.SOURCE_CREDENTIAL_PASSWORD, password_entry.text);
+            E.webdav_discover_sources.begin (source, null, E.WebDAVDiscoverSupports.CALENDAR_AUTO_SCHEDULE, credentials, null, (obj, res) => {
+                string certificate_pem;
+                GLib.TlsCertificateFlags certificate_errors;
+                GLib.SList<E.WebDAVDiscoveredSource?> discovered_sources;
+                GLib.SList<string> calendar_user_addresses;
+                try {
+                    E.webdav_discover_sources_finish (source, res, out certificate_pem, out certificate_errors, out discovered_sources, out calendar_user_addresses);
+                    FoundCalendar[] calendars = {};
+                    foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
+                        calendars += new FoundCalendar (disc_source.display_name, disc_source.href, disc_source.color);
+                    }
+                    E.webdav_discover_do_free_discovered_sources ((owned) discovered_sources);
+                    Idle.add (() => {
+                        calendars_store.splice (0, 0, (Object[]) calendars);
+                        return Source.REMOVE;
+                    });
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            });
+        } catch (GLib.Error error) {
+            critical (error.message);
+        }
+
+        /*var registry = new SourceRegistry.sync (null);
+        var list = new List<E.Source> ();
+        list.append (source);
+        registry.create_sources_sync (list);*/
     }
 
     private class CalendarRow : Gtk.ListBoxRow {
