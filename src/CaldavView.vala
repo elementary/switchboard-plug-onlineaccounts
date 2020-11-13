@@ -21,9 +21,11 @@
 public class CaldavView : Gtk.Grid {
     private Gtk.Button find_calendars_button;
     private ListStore calendars_store;
+    private Gtk.ListBox calendars_list;
     private ValidatedEntry url_entry;
     private ValidatedEntry username_entry;
     private Gtk.Entry password_entry;
+    private GLib.Cancellable? cancellable;
 
     construct {
         var url_label = new Granite.HeaderLabel ("Server URL");
@@ -67,19 +69,11 @@ public class CaldavView : Gtk.Grid {
         };
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
-        var placeholder = new Granite.Widgets.AlertView (
-            "No Calendars Found",
-            "This may have been caused by an incorrect URL, user name, or password",
-            "dialog-error"
-        );
-        placeholder.show_all ();
-
         calendars_store = new ListStore (typeof(FoundCalendar));
-        var calendars_list = new Gtk.ListBox () {
+        calendars_list = new Gtk.ListBox () {
             expand = true,
             margin_top = 6
         };
-        calendars_list.set_placeholder (placeholder);
         calendars_list.bind_model (calendars_store, create_item);
 
         var finish_button = new Gtk.Button.with_label ("Add Calendars") {
@@ -170,6 +164,20 @@ public class CaldavView : Gtk.Grid {
     }
 
     private void find_calendars () {
+        if (cancellable != null) {
+            cancellable.cancel ();
+        }
+
+        cancellable = new GLib.Cancellable ();
+        var placeholder = new Granite.Widgets.AlertView (
+            "Fetching Calendars",
+            "Retrieving the list of available calendars…",
+            "view-refresh"
+        );
+        placeholder.show_all ();
+        calendars_list.set_placeholder (placeholder);
+        calendars_store.remove_all ();
+
         try {
             var source = new E.Source (null, null);
             source.parent = "caldav-stub";
@@ -189,11 +197,12 @@ public class CaldavView : Gtk.Grid {
             var credentials = new E.NamedParameters ();
             credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
             credentials.set (E.SOURCE_CREDENTIAL_PASSWORD, password_entry.text);
-            E.webdav_discover_sources.begin (source, null, E.WebDAVDiscoverSupports.CALENDAR_AUTO_SCHEDULE, credentials, null, (obj, res) => {
+            E.webdav_discover_sources.begin (source, null, E.WebDAVDiscoverSupports.CALENDAR_AUTO_SCHEDULE, credentials, cancellable, (obj, res) => {
                 string certificate_pem;
                 GLib.TlsCertificateFlags certificate_errors;
                 GLib.SList<E.WebDAVDiscoveredSource?> discovered_sources;
                 GLib.SList<string> calendar_user_addresses;
+                cancellable = null;
                 try {
                     E.webdav_discover_sources_finish (source, res, out certificate_pem, out certificate_errors, out discovered_sources, out calendar_user_addresses);
                     FoundCalendar[] calendars = {};
@@ -205,8 +214,18 @@ public class CaldavView : Gtk.Grid {
                         calendars_store.splice (0, 0, (Object[]) calendars);
                         return Source.REMOVE;
                     });
+                } catch (GLib.IOError.CANCELLED e) {
                 } catch (Error e) {
-                    critical (e.message);
+                    var error_placeholder = new Granite.Widgets.AlertView (
+                        "Error Fetching Calendars",
+                        e.message,
+                        "dialog-error"
+                    );
+                    Idle.add (() => {
+                        error_placeholder.show_all ();
+                        calendars_list.set_placeholder (error_placeholder);
+                        return Source.REMOVE;
+                    });
                 }
             });
         } catch (GLib.Error error) {
