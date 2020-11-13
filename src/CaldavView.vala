@@ -19,6 +19,7 @@
 */
 
 public class CaldavView : Gtk.Grid {
+    private Gtk.Button find_calendars_button;
     private ListStore calendars_store;
     private ValidatedEntry url_entry;
     private ValidatedEntry username_entry;
@@ -38,8 +39,11 @@ public class CaldavView : Gtk.Grid {
         password_entry = new ValidatedEntry ();
         password_entry.visibility = false;
 
-        var find_calendars_button = new Gtk.Button.with_label ("Find Calendars") {
-            halign = Gtk.Align.END
+        find_calendars_button = new Gtk.Button.with_label ("Find Calendars") {
+            halign = Gtk.Align.END,
+            valign = Gtk.Align.END,
+            vexpand = true,
+            sensitive = false
         };
 
         var login_page = new Gtk.Grid () {
@@ -103,14 +107,26 @@ public class CaldavView : Gtk.Grid {
         });
 
         url_entry.changed.connect (() => {
-            if (url_entry.text != "") {
+            if (url_entry.text != null && url_entry.text != "") {
                 var is_valid_url = is_valid_url (url_entry.text);
                 url_entry.is_valid = is_valid_url;
                 url_message_revealer.reveal_child = !is_valid_url;
             } else {
+                url_entry.is_valid = false;
                 url_message_revealer.reveal_child = false;
             }
+
+            validate_form ();
         });
+
+        username_entry.changed.connect (() => {
+            username_entry.is_valid = username_entry.text != null && username_entry.text != "";
+        });
+
+    }
+
+    private void validate_form () {
+        find_calendars_button.sensitive = url_entry.is_valid && username_entry.is_valid;
     }
 
     private bool is_valid_url (string uri) {
@@ -359,12 +375,10 @@ public class CaldavView : Gtk.Grid {
             changed.connect (() => {
                 if (is_valid) {
                     secondary_icon_name = "process-completed-symbolic";
+                } else if (text != null && text != "") {
+                    secondary_icon_name = "process-error-symbolic";
                 } else {
-                    if (text != "") {
-                        secondary_icon_name = "process-error-symbolic";
-                    } else {
-                        secondary_icon_name = "";
-                    }
+                    secondary_icon_name = "";
                 }
             });
         }
