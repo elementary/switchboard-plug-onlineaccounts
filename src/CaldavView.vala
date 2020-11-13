@@ -40,6 +40,7 @@ public class CaldavView : Gtk.Grid {
         password_entry.visibility = false;
 
         find_calendars_button = new Gtk.Button.with_label ("Find Calendars") {
+            can_default = true,
             halign = Gtk.Align.END,
             valign = Gtk.Align.END,
             vexpand = true,
@@ -59,17 +60,21 @@ public class CaldavView : Gtk.Grid {
         login_page.add (password_entry);
         login_page.add (find_calendars_button);
 
-
         var back_button = new Gtk.Button.with_label ("Back") {
             halign = Gtk.Align.START,
             margin = 6
         };
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
+        var placeholder = new Gtk.Label ("No Calendars Found");
+        placeholder.show ();
+
         calendars_store = new ListStore (typeof(FoundCalendar));
         var calendars_list = new Gtk.ListBox () {
+            expand = true,
             margin_top = 6
         };
+        calendars_list.set_placeholder (placeholder);
         calendars_list.bind_model (calendars_store, create_item);
 
         var finish_button = new Gtk.Button.with_label ("Add Calendars") {
@@ -91,6 +96,7 @@ public class CaldavView : Gtk.Grid {
         deck.add (calendars_page);
 
         add (deck);
+
         // mark as default
         // use offline
         // email
@@ -121,8 +127,9 @@ public class CaldavView : Gtk.Grid {
 
         username_entry.changed.connect (() => {
             username_entry.is_valid = username_entry.text != null && username_entry.text != "";
-        });
 
+            validate_form ();
+        });
     }
 
     private void validate_form () {
