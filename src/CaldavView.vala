@@ -19,16 +19,16 @@
 */
 
 public class CaldavView : Gtk.Grid {
-    ListStore calendars_store;
-    ValidatedEntry url_entry;
-    ValidatedEntry username_entry;
-    ValidatedEntry password_entry;
+    private ListStore calendars_store;
+    private ValidatedEntry url_entry;
+    private ValidatedEntry username_entry;
+    private ValidatedEntry password_entry;
 
     construct {
         var url_label = new Granite.HeaderLabel ("Server URL");
         url_entry = new ValidatedEntry ();
 
-        var url_message_revealer = new ValidationMessage (".");
+        var url_message_revealer = new ValidationMessage ("Invalid URL");
         url_message_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
         var username_label = new Granite.HeaderLabel ("User Name");
@@ -101,6 +101,25 @@ public class CaldavView : Gtk.Grid {
         back_button.clicked.connect (() => {
             deck.navigate (Hdy.NavigationDirection.BACK);
         });
+
+        url_entry.changed.connect (() => {
+            if (url_entry.text != "") {
+                var is_valid_url = is_valid_url (url_entry.text);
+                url_entry.is_valid = is_valid_url;
+                url_message_revealer.reveal_child = !is_valid_url;
+            } else {
+                url_message_revealer.reveal_child = false;
+            }
+        });
+    }
+
+    private bool is_valid_url (string uri) {
+        var scheme = Uri.parse_scheme (uri);
+        if (scheme == null) {
+            return false;
+        }
+
+        return scheme.has_prefix ("http");
     }
 
     private class FoundCalendar : GLib.Object {
@@ -336,6 +355,18 @@ public class CaldavView : Gtk.Grid {
         construct {
             hexpand = true;
             activates_default = true;
+
+            changed.connect (() => {
+                if (is_valid) {
+                    secondary_icon_name = "process-completed-symbolic";
+                } else {
+                    if (text != "") {
+                        secondary_icon_name = "process-error-symbolic";
+                    } else {
+                        secondary_icon_name = "";
+                    }
+                }
+            });
         }
     }
 }
