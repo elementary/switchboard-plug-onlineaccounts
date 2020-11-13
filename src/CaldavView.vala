@@ -23,7 +23,7 @@ public class CaldavView : Gtk.Grid {
     private ListStore calendars_store;
     private ValidatedEntry url_entry;
     private ValidatedEntry username_entry;
-    private ValidatedEntry password_entry;
+    private Gtk.Entry password_entry;
 
     construct {
         var url_label = new Granite.HeaderLabel ("Server URL");
@@ -36,8 +36,9 @@ public class CaldavView : Gtk.Grid {
         username_entry = new ValidatedEntry ();
 
         var password_label = new Granite.HeaderLabel ("Password");
-        password_entry = new ValidatedEntry ();
-        password_entry.visibility = false;
+        password_entry = new Gtk.Entry () {
+            visibility = false
+        };
 
         find_calendars_button = new Gtk.Button.with_label ("Find Calendars") {
             can_default = true,
@@ -66,8 +67,12 @@ public class CaldavView : Gtk.Grid {
         };
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
-        var placeholder = new Gtk.Label ("No Calendars Found");
-        placeholder.show ();
+        var placeholder = new Granite.Widgets.AlertView (
+            "No Calendars Found",
+            "This may have been caused by an incorrect URL, user name, or password",
+            "dialog-error"
+        );
+        placeholder.show_all ();
 
         calendars_store = new ListStore (typeof(FoundCalendar));
         var calendars_list = new Gtk.ListBox () {
