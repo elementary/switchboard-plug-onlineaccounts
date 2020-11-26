@@ -39,6 +39,9 @@ public class OnlineAccounts.DialogService : Object {
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
             reply = maildialog.get_reply ();
+        } else if (dialog is NextcloudDialog) {
+            var nextclouddialog = dialog as NextcloudDialog;
+            reply = nextclouddialog.get_reply ();
         } else {
             var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.refresh_captcha_needed.connect (() => {refresh (dialog.request_id);});

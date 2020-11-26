@@ -41,6 +41,7 @@ namespace OnlineAccounts.Key {
     const string CAPTCHA_URL = "CaptchaUrl";                // string:url
     const string SIGNUP_URL = "SignUpURL";                  // string:url
     const string ASK_EMAIL_SETTINGS = "AskEmailSettings";   // bool
+    const string ASK_NEXTCLOUD_SETTINGS = "AskNextcloudSettings";   // bool
 
     const string QUERY_ERROR_CODE = "QueryErrorCode";   // int32
     const string URL_RESPONSE = "UrlResponse";          // string:url
