@@ -132,6 +132,10 @@ public class CaldavView : Gtk.Grid {
         });
     }
 
+    private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
+        
+    }
+
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
         var cal_row1 = (CalendarRow) row1;
         var cal_row2 = (CalendarRow) row2;
@@ -177,12 +181,21 @@ public class CaldavView : Gtk.Grid {
         }
 
         cancellable = new GLib.Cancellable ();
-        var placeholder = new Granite.Widgets.AlertView (
-            "Fetching Calendars",
-            "Retrieving the list of available calendars…",
-            "view-refresh"
-        );
+
+        var placeholder_label = new Gtk.Label ("Retrieving the list of available calendars…");
+
+        var spinner = new Gtk.Spinner ();
+        spinner.start ();
+
+        var placeholder = new Gtk.Grid () {
+            column_spacing = 6,
+            halign = Gtk.Align.CENTER,
+            valign = Gtk.Align.CENTER
+        };
+        placeholder.add (placeholder_label);
+        placeholder.add (spinner);
         placeholder.show_all ();
+
         calendars_list.set_placeholder (placeholder);
         calendars_store.remove_all ();
 
