@@ -39,9 +39,9 @@ public class OnlineAccounts.DialogService : Object {
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
             reply = maildialog.get_reply ();
-        } else if (dialog is NextcloudDialog) {
-            var nextclouddialog = dialog as NextcloudDialog;
-            reply = nextclouddialog.get_reply ();
+        } else if (dialog is OAuthSettingsDialog) {
+            var aouthsettingsdialog = dialog as OAuthSettingsDialog;
+            reply = aouthsettingsdialog.get_reply ();
         } else {
             var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.refresh_captcha_needed.connect (() => {refresh (dialog.request_id);});
@@ -70,6 +70,9 @@ public class OnlineAccounts.DialogService : Object {
         } else if (dialog is MailDialog) {
             var maildialog = dialog as MailDialog;
             maildialog.set_parameters (parameter);
+        } else if (dialog is OAuthSettingsDialog) {
+            var oauthsettingsdialog = dialog as OAuthSettingsDialog;
+            oauthsettingsdialog.set_parameters (parameter);
         } else {
             var graphicaldialog = dialog as PasswordDialog;
             graphicaldialog.set_parameters (parameter);

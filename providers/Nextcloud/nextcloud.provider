@@ -4,7 +4,7 @@
   <description>Access all Nextcloud services on your computer</description>
   <icon>nextcloud</icon>
   <translations>online-accounts-plug</translations>
-  <plugin>nextcloud</plugin>
+  <plugin>generic-oauth</plugin>
 
   <template>
     <group name="auth">
@@ -12,11 +12,9 @@
       <setting name="mechanism">oauth2</setting>
       <group name="oauth">
         <group name="oauth2">
-          <setting name="AskNextcloudSettings" type="boolean">true</setting>
-          <!--
           <setting type="boolean" name="ForceClientAuthViaRequestBody">true</setting>
-          <setting name="AuthHost">nextcloud.dev.marco.betschart.name</setting>
-          <setting name="TokenHost">nextcloud.dev.marco.betschart.name</setting>
+          <setting name="AuthHost">$hostname</setting>
+          <setting name="TokenHost">$hostname</setting>
           <setting name="AuthPath">/index.php/apps/oauth2/authorize</setting>
           <setting name="TokenPath">/index.php/apps/oauth2/api/v1/token</setting>
           <setting type="int" name="UiPolicy">0</setting>
@@ -25,9 +23,8 @@
           <setting name="ClientId">xdXOt13JKxym1B1QcEncf2XDkLAexMBFwiT9j6EfhhHFJhs2KM9jbjTmf8JBXE69</setting>
           <setting name="ClientSecret">UBntmLjC2yYCeHwsyj73Uwo9TAaecAetRwMw0xYcvNL9yRdLSUi0hUAHfvCHFeFh</setting>
           <setting type="as" name="AllowedSchemes">['https']</setting>
-          <setting type="as" name="AllowedRealms">['nextcloud.dev.marco.betschart.name']</setting>
-          <setting type="as" name="Realms">['nextcloud.dev.marco.betschart.name']</setting>
-          -->
+          <setting type="as" name="AllowedRealms">['$hostname']</setting>
+          <setting type="as" name="Realms">['$hostname']</setting>
         </group>
       </group>
     </group>

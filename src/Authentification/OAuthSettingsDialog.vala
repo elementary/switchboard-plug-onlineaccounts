@@ -18,9 +18,9 @@
  *
  */
 
-public class OnlineAccounts.NextcloudDialog : OnlineAccounts.AbstractAuthDialog {
+public class OnlineAccounts.OAuthSettingsDialog : OnlineAccounts.AbstractAuthDialog {
 
-    public NextcloudDialog (GLib.HashTable<string, GLib.Variant> params) {
+    public OAuthSettingsDialog (GLib.HashTable<string, GLib.Variant> params) {
         base (params);
 
         // TODO: initialize dialog

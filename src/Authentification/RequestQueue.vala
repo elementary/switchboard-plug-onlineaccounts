@@ -53,13 +53,18 @@ public class OnlineAccounts.RequestQueue : Object {
 
     public AbstractAuthDialog process_next (OnlineAccounts.RequestInfo info) {
         AbstractAuthDialog dialog;
-        debug (@"info.parameters: $(info.parameters.contains (OnlineAccounts.Key.ASK_NEXTCLOUD_SETTINGS))");
-        if (info.parameters.contains (OnlineAccounts.Key.OPEN_URL)) {
+
+        info.parameters.@foreach ((key, val) => {
+            debug (@">>>>>>>>>>>>>>>>>> info.parameters.$key = '$(val.get_string ())'");
+        });
+
+        var is_oauth_request = info.parameters.contains (OnlineAccounts.Key.OPEN_URL);
+        if (is_oauth_request && info.parameters.get (OnlineAccounts.Key.OPEN_URL).get_string ().contains("$hostname")) {
+            dialog = new OAuthSettingsDialog (info.parameters);
+        } else if (is_oauth_request) {
             dialog = new OAuthView (info.parameters);
         } else if (info.parameters.contains (OnlineAccounts.Key.ASK_EMAIL_SETTINGS)) {
             dialog = new MailDialog (info.parameters);
-        } else if (info.parameters.contains (OnlineAccounts.Key.ASK_NEXTCLOUD_SETTINGS)) {
-            dialog = new NextcloudDialog (info.parameters);
         } else {
             dialog = new PasswordDialog (info.parameters);
         }

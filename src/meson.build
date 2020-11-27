@@ -6,7 +6,7 @@ plug_files = files(
     'Authentification/AbstractAuthDialog.vala',
     'Authentification/Key.vala',
     'Authentification/MailDialog.vala',
-    'Authentification/NextcloudDialog.vala',
+    'Authentification/OAuthSettingsDialog.vala',
     'Authentification/OAuthView.vala',
     'Authentification/PasswordDialog.vala',
     'Authentification/RequestInfo.vala',
