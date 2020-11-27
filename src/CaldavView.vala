@@ -158,7 +158,7 @@ public class CaldavView : Gtk.Grid {
     [ CCode ( instance_pos = 1.9 ) ]
     public Gtk.Widget create_item (GLib.Object item)  {
         unowned FoundCalendar cal = (FoundCalendar)item;
-        var row = new CalendarRow (cal.name, "blue");
+        var row = new CalendarRow (cal.name, cal.color);
         row.show_all ();
         return row;
     }
@@ -261,7 +261,6 @@ public class CaldavView : Gtk.Grid {
                 text = label
             };
             name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
-            name_entry.get_style_context ().add_class (color);
 
             var color_button_blue = new Gtk.RadioButton (null);
 
@@ -359,37 +358,36 @@ public class CaldavView : Gtk.Grid {
 
             add (grid);
 
-            switch (color) {
-                case "yellow":
+            color = color.slice (0, 7);
+            switch (color.down ()) {
+                case "#e6a92a":
                     color_button_yellow.active = true;
-                    style_calendar_color (checkbox, "#e6a92a");
                     break;
-                case "green":
+                case "#81c837":
                     color_button_green.active = true;
-                    style_calendar_color (checkbox, "#81c837");
                     break;
-                case "purple":
+                case "#a56de2":
                     color_button_purple.active = true;
-                    style_calendar_color (checkbox, "#a56de2");
                     break;
-                case "pink":
+                case "#de3e80":
                     color_button_pink.active = true;
-                    style_calendar_color (checkbox, "#de3e80");
                     break;
             }
+            style_calendar_color (checkbox, color);
+            style_calendar_color (name_entry, color);
 
             checkbox.bind_property ("active", name_entry, "sensitive");
             checkbox.bind_property ("active", more_menubutton, "sensitive");
         }
 
-        private void style_calendar_color (Gtk.CheckButton checkbutton, string color) {
+        private void style_calendar_color (Gtk.Widget widget, string color) {
             var css_color = "@define-color accent_color %s;".printf (color);
 
             var style_provider = new Gtk.CssProvider ();
 
             try {
                 style_provider.load_from_data (css_color, css_color.length);
-                checkbutton.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+                widget.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             } catch (Error e) {
                 warning ("Could not create CSS Provider: %s\nStylesheet:\n%s", e.message, css_color);
             }
@@ -403,7 +401,7 @@ public class CaldavView : Gtk.Grid {
             hexpand = true;
             activates_default = true;
 
-            changed.connect (() => {
+            changed.connect_after (() => {
                 if (is_valid) {
                     secondary_icon_name = "process-completed-symbolic";
                 } else if (text != null && text != "") {
