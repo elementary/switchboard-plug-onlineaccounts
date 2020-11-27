@@ -75,6 +75,7 @@ public class CaldavView : Gtk.Grid {
             margin_top = 6
         };
         calendars_list.bind_model (calendars_store, create_item);
+        calendars_list.set_sort_func (sort_func);
 
         var finish_button = new Gtk.Button.with_label ("Add Calendars") {
             halign = Gtk.Align.END,
@@ -129,6 +130,13 @@ public class CaldavView : Gtk.Grid {
 
             validate_form ();
         });
+    }
+
+    private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
+        var cal_row1 = (CalendarRow) row1;
+        var cal_row2 = (CalendarRow) row2;
+
+        return cal_row1.label.collate (cal_row2.label);
     }
 
     private void validate_form () {
