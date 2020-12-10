@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2020-05-23 07:11+0000\n"
+"PO-Revision-Date: 2020-12-11 12:16+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/zh_Hans/>\n"
@@ -160,7 +160,7 @@ msgstr "连接您的网络账户"
 
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr "点击以下按钮链接您的网络账户。"
+msgstr "点击下方工具栏中的添加账户按钮连接网络账户。"
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
