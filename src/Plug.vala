@@ -49,8 +49,9 @@ namespace OnlineAccounts {
                 var toast = new Granite.Widgets.Toast ("");
                 toast.set_default_action (_("Restore"));
 
-                grid = new Gtk.Grid ();
-                grid.expand = true;
+                grid = new Gtk.Grid () {
+                    expand = true
+                };
 
                 source_selector = new SourceSelector ();
 
@@ -59,25 +60,23 @@ namespace OnlineAccounts {
                     _("Connect online accounts by clicking the icon in the toolbar below."),
                     "preferences-desktop-online-accounts"
                 );
-                welcome.visible = true;
                 welcome.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
                 stack = new Gtk.Stack ();
                 stack.add_named (welcome, "welcome");
                 stack.add_named (grid, "main");
-                stack.show_all ();
 
-                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+                var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+                    position = 200
+                };
                 paned.pack1 (source_selector, false, false);
                 paned.pack2 (stack, true, false);
-                paned.set_position (200);
 
                 var overlay = new Gtk.Overlay ();
-                overlay.add_overlay (paned);
+                overlay.add (paned);
                 overlay.add_overlay (toast);
 
                 main_grid = new Gtk.Grid ();
-                main_grid.orientation = Gtk.Orientation.VERTICAL;
                 main_grid.add (overlay);
                 main_grid.show_all ();
 
