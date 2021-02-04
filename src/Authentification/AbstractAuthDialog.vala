@@ -34,7 +34,7 @@ public enum OnlineAccounts.SignonUIError {
     FORGOT_PASSWORD
 }
 
-public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
+public abstract class OnlineAccounts.AbstractAuthDialog : Granite.Dialog {
     public signal void finished ();
 
     public HashTable<string, Variant> parameters;
