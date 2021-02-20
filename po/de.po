@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2021-02-15 21:09+0000\n"
+"PO-Revision-Date: 2021-02-20 08:36+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/de/>\n"
@@ -79,7 +79,6 @@ msgid "Sync your photos"
 msgstr "Fotos synchronisieren"
 
 #: providers/Google/google-drive.service:4
-#, fuzzy
 msgid "Drive"
 msgstr "Drive"
 
