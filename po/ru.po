@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2021-03-10 09:51+0000\n"
+"PO-Revision-Date: 2021-03-18 02:32+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Сообщения"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -73,7 +73,7 @@ msgstr "Синхронизировать почту"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Фотографии"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -92,9 +92,8 @@ msgid "Scrobble"
 msgstr "Скробблинг"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Скробблинг музыки"
+msgstr "Скробблинг всей вашей музыки"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -106,7 +105,7 @@ msgstr "Получение почты от IMAP-сервера"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
@@ -114,7 +113,7 @@ msgstr "Синхронизация всего содержимого Facebook с
 
 #: providers/FastMail/fastmail.provider:3
 msgid "Fastmail"
-msgstr ""
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with Fastmail"
@@ -122,7 +121,7 @@ msgstr "Доступ к почте с Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -130,16 +129,15 @@ msgstr "Синхронизация всех сервисов Google с ваши�
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
-msgstr "Скробблинг музыки"
+msgstr "Скробблинг вашей музыки"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -164,6 +162,7 @@ msgstr "Подключите учётные записи Интернета"
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Подключить онлайн аккаунты, нажав на значок на панели инструментов ниже."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
@@ -172,14 +171,13 @@ msgstr ""
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
 #: src/Plug.vala:105 src/Views/SourceSelector.vala:178
 #: src/Views/SourceSelector.vala:185
-#, fuzzy
 msgid "New Account"
-msgstr "Другой аккаунт"
+msgstr "Новая учётная запись"
 
 #: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
 msgid "Account '%s' Removed."
-msgstr "Профиль «%s» удалён."
+msgstr "Учётная запись «%s» удалена."
 
 #: src/Authentification/MailDialog.vala:48
 #: src/Authentification/PasswordDialog.vala:56
@@ -247,7 +245,7 @@ msgstr "Войти"
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
-msgstr ""
+msgstr "URL-адрес"
 
 #: src/Authentification/PasswordDialog.vala:86
 #: src/Authentification/PasswordDialog.vala:74
@@ -282,7 +280,7 @@ msgstr "Нет аккаунта? Зарегистрируйтесь"
 #: src/Authentification/PasswordDialog.vala:314
 #: src/Authentification/PasswordDialog.vala:295
 msgid "Other Account"
-msgstr "Другой аккаунт"
+msgstr "Другая учётная запись"
 
 #: src/Authentification/WebDialog.vala:34
 #: src/Authentification/WebDialog.vala:143
@@ -306,7 +304,7 @@ msgstr ""
 
 #: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Политика конфиденциальности"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
 #: src/Authentification/AbstractAuthDialog.vala:66
@@ -316,7 +314,7 @@ msgstr "Отменить"
 #: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Никакие установленные приложения не используют вашу учетную запись %s"
 
 #: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
@@ -338,15 +336,12 @@ msgstr "Учётная запись почты"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
 #: src/Authentification/AbstractAuthDialog.vala:74
-#, fuzzy
 msgid "Add Account"
-msgstr "Учётная запись почты"
+msgstr "Добавить учётную запись"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Добавить новый аккаунт…"
+msgstr "Добавить учётную запись…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Нет установленных приложений для синхронизации с учётной записью %s"
