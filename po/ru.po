@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2021-03-18 02:32+0000\n"
+"PO-Revision-Date: 2021-04-07 15:37+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
@@ -81,7 +81,7 @@ msgstr "Синхронизировать фотографии"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Диск"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -145,11 +145,11 @@ msgstr "Синхронизация сервисов Outlook и OneDrive с ва�
 
 #: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
-msgstr "Учётные записи Интернета"
+msgstr "Сетевые учетные записи"
 
 #: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
-msgstr "Управление учётными записями Интернета и связанными приложениями"
+msgstr "Управление сетевыми учётными записями и связанными приложениями"
 
 #: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
@@ -300,7 +300,7 @@ msgstr ""
 
 #: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
-msgstr ""
+msgstr "Поставщики поиска"
 
 #: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
@@ -330,9 +330,8 @@ msgid "Remove"
 msgstr "Удалить"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Учётная запись почты"
+msgstr "Учётная запись IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
 #: src/Authentification/AbstractAuthDialog.vala:74
