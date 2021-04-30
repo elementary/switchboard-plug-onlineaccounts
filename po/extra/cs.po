@@ -7,36 +7,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 18:24-0800\n"
-"PO-Revision-Date: 2019-05-10 13:03-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-28 22:11+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
+"online-accounts-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
-msgstr ""
+msgid "Online Accounts Settings"
+msgstr "Nastavení online účtů"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:11
-msgid "Major redesign"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:12
-msgid "Make external links open in the web browser"
-msgstr ""
+msgstr "Spravovat online účty a propojené aplikace"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Fix blurry icons on HiDPI"
-msgstr ""
+msgid "Major redesign"
+msgstr "Velké předělání"
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Updated translations"
+msgid "Make external links open in the web browser"
+msgstr "Otevírání externích odkazů ve webovém prohlížeči"
+
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix blurry icons on HiDPI"
 msgstr ""
+"Oprava rozmazaných ikon na displejích s velmi vysokým rozlišením (HiDPI)"
+
+#: data/onlineaccounts.appdata.xml.in:16
+msgid "Updated translations"
+msgstr "Aktualizovány překlady"

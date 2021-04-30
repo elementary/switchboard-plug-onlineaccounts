@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2019-12-04 21:25+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-04-14 14:10+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
@@ -307,6 +307,7 @@ msgid "Privacy Policy"
 msgstr "Yksityisyyskäytäntö"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Peru"
 
@@ -333,16 +334,13 @@ msgid "IMAP Account"
 msgstr "IMAP-tili"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
-#| msgid "IMAP Account"
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
-msgstr "IMAP-tili"
+msgstr "Lisää tili"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Lisää uusi tili…"
+msgstr "Lisää tili…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Ei asennettuja sovelluksia, jotka olisivat yhteydessä %s-tiliisi"

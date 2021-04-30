@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 18:24-0800\n"
-"PO-Revision-Date: 2020-01-01 23:08+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-11 16:10+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/nl/>\n"
@@ -20,26 +20,26 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
-msgstr "Online accounts"
+msgid "Online Accounts Settings"
+msgstr "Online Accounts Instellingen"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr ""
 "Beheer online accounts en toepassingen die verbonden zijn met het internet"
 
-#: data/onlineaccounts.appdata.xml.in:11
-msgid "Major redesign"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:12
-msgid "Make external links open in the web browser"
-msgstr ""
-
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Fix blurry icons on HiDPI"
-msgstr ""
+msgid "Major redesign"
+msgstr "Grotendeels opnieuw vormgegeven"
 
 #: data/onlineaccounts.appdata.xml.in:14
+msgid "Make external links open in the web browser"
+msgstr "Externe links openen in de webbrowser"
+
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix blurry icons on HiDPI"
+msgstr "Vage iconen opgelost bij HiDPI"
+
+#: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
-msgstr ""
+msgstr "Bijgewerkte vertalingen"

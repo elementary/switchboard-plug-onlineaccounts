@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2019-07-03 05:46+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-03-03 05:52+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
@@ -68,7 +68,7 @@ msgstr "Posta elettronica"
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
 msgid "Sync your email"
-msgstr "Sincronizza la tua email"
+msgstr "Sincronizza la tua posta elettronica"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
@@ -161,7 +161,7 @@ msgstr "Connetti i tuoi account online"
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Collega gli account online facendo click sull'icona nella barra degli "
+"Collega gli account online facendo clic sull'icona nella barra degli "
 "strumenti sottostante."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
@@ -305,6 +305,7 @@ msgid "Privacy Policy"
 msgstr "Politica sulla riservatezza"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Annulla"
 
@@ -324,23 +325,20 @@ msgstr "Aggiungi…"
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
 #: src/Views/SourceSelector.vala:79
 msgid "Remove"
-msgstr "Elimina"
+msgstr "Rimuovi"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Account email"
+msgstr "Account IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
-msgstr "Account email"
+msgstr "Aggiungi account"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Aggiungi nuovo account…"
+msgstr "Aggiungi un nuovo account…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""

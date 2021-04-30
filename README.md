@@ -1,5 +1,5 @@
 # Switchboard Online Accounts Plug
-[![l10n](https://l10n.elementary.io/widgets/switchboard/switchboard-plug-onlineaccounts/svg-badge.svg)](https://l10n.elementary.io/projects/switchboard/switchboard-plug-onlineaccounts)
+[![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-onlineaccounts/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
 

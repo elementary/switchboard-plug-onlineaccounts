@@ -7,20 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2017-01-07 16:45+0000\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-12-19 11:16+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <(nothing)>\n"
+"Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-08 05:44+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Објаве"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -70,7 +73,7 @@ msgstr "Ускладите вашу е-пошту"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Фотографије"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
@@ -78,7 +81,7 @@ msgstr "Ускладите ваше фотографије"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Уређај"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
@@ -89,9 +92,8 @@ msgid "Scrobble"
 msgstr "Скроблуј"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Скроблујте вашу музику"
+msgstr "Скроблујте сву вашу музику"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
@@ -103,15 +105,15 @@ msgstr "Довуци пошту са ИМАП сервера"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Фејсбук"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
-msgstr "Приступите сваком садржају Фејсбука на вашем рачунару"
+msgstr "Приступите целокупном садржају Фејсбука на вашем рачунару"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "Fastmail"
-msgstr ""
+msgstr "Брза пошта"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with Fastmail"
@@ -119,7 +121,7 @@ msgstr "Приступите пошти са Брзом поштом"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Гугл"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
@@ -127,16 +129,15 @@ msgstr "Приступите свим Гугл услугама на вашем 
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Ласт.фм"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
 msgstr "Скроблујте вашу музику"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Мајкрософт"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
@@ -160,7 +161,7 @@ msgstr "Повежите ваше налоге на мрежи"
 
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "Повежите налоге на мрежи кликом на иконицу на траци алата испод."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
@@ -169,9 +170,8 @@ msgstr ""
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
 #: src/Plug.vala:105 src/Views/SourceSelector.vala:178
 #: src/Views/SourceSelector.vala:185
-#, fuzzy
 msgid "New Account"
-msgstr "Други налог"
+msgstr "Нови налог"
 
 #: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
@@ -192,7 +192,7 @@ msgstr "Унесите појединости вашег налога…"
 #: src/Authentification/WebDialog.vala:39
 #: src/Authentification/AbstractAuthView.vala:60
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
@@ -244,7 +244,7 @@ msgstr "Пријави ме"
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
-msgstr ""
+msgstr "Адреса"
 
 #: src/Authentification/PasswordDialog.vala:86
 #: src/Authentification/PasswordDialog.vala:74
@@ -294,24 +294,26 @@ msgstr "Учитавам…"
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Упишите се да се повежете са програмима као што су Пошта, Контакти и Каленар."
+"Упишите се да се повежете са програмима као што су Пошта, Контакти и "
+"Календар."
 
 #: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
-msgstr ""
+msgstr "Потражи достављаче"
 
 #: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Политика приватности"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Откажи"
 
 #: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Ниједан инсталирани програм не користи ваш „%s“ налог"
 
 #: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
@@ -327,20 +329,17 @@ msgid "Remove"
 msgstr "Уклони"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Налог поште"
+msgstr "ИМАП налог"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
-msgstr "Налог поште"
+msgstr "Додај налог"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Додај нови налог…"
+msgstr "Додај налог…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""

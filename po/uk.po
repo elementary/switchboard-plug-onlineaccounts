@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 23:26+0000\n"
-"PO-Revision-Date: 2020-01-16 02:07+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-10-01 22:14+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: providers/Facebook/facebook-microblog.service:4
 msgid "Posts"
-msgstr ""
+msgstr "Дописи"
 
 #: providers/Facebook/facebook-microblog.service:5
 msgid "Watch your newsfeed"
@@ -39,7 +39,7 @@ msgstr "Контакти"
 #: providers/Google/google-contacts.service:5
 #: providers/Microsoft/microsoft-contacts.service:5
 msgid "Sync your contacts"
-msgstr "Синхронізуйте ваші контакти"
+msgstr "Синхронізувати ваші контакти"
 
 #: providers/Facebook/facebook-calendar.service:4
 #: providers/Google/google-calendar.service:4
@@ -51,7 +51,7 @@ msgstr "Календарі"
 #: providers/Google/google-calendar.service:5
 #: providers/Microsoft/microsoft-calendar.service:5
 msgid "Sync your calendars"
-msgstr "Синхронізуйте ваші календарі"
+msgstr "Синхронізувати ваші календарі"
 
 #: providers/FastMail/fastmail-mail.service:4
 #: providers/Google/google-gmail.service:4
@@ -63,96 +63,93 @@ msgstr "Синхронізуйте ваші календарі"
 #: src/Authentification/MailDialog.vala:108
 #: src/Authentification/PasswordDialog.vala:65
 msgid "Email"
-msgstr "Пошта"
+msgstr "Електронна пошта"
 
 #: providers/FastMail/fastmail-mail.service:5
 #: providers/Google/google-gmail.service:5
 #: providers/Microsoft/microsoft-mails.service:5
-#, fuzzy
 msgid "Sync your email"
-msgstr "Синхронізуйте ваші файли"
+msgstr "Синхронізувати вашу електронну пошту"
 
 #: providers/Google/google-photos.service:4
 msgid "Photos"
-msgstr ""
+msgstr "Світлини"
 
 #: providers/Google/google-photos.service:5
 msgid "Sync your photos"
-msgstr "Синхронізуйте ваші фото"
+msgstr "Синхронізувати ваші світлини"
 
 #: providers/Google/google-drive.service:4
 msgid "Drive"
-msgstr ""
+msgstr "Диск"
 
 #: providers/Google/google-drive.service:6
 msgid "Sync your files"
-msgstr "Синхронізуйте ваші файли"
+msgstr "Синхронізувати ваші файли"
 
 #: providers/LastFM/lastfm-scrobble.service:4
 msgid "Scrobble"
-msgstr ""
+msgstr "Скроблінг"
 
 #: providers/LastFM/lastfm-scrobble.service:5
-#, fuzzy
 msgid "Scrobble all your music"
-msgstr "Налаштувати музичні вподобання"
+msgstr "Скроблінг всієї вашої музики"
 
 #: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
 msgid "Mail Account"
-msgstr ""
+msgstr "Обліковий запис електронної пошти"
 
 #: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
 msgid "Fetch Email from IMAP Server"
-msgstr ""
+msgstr "Отримати електронну пошту з сервера IMAP"
 
 #: providers/Facebook/facebook.provider.in:3
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: providers/Facebook/facebook.provider.in:4
 msgid "Access all Facebook contents on your computer"
-msgstr "Підключіть Facebook-акаунт до вашого комп’ютера"
+msgstr "Під'єднайте обліковий запис Facebook до вашого комп’ютера"
 
 #: providers/FastMail/fastmail.provider:3
 msgid "Fastmail"
-msgstr ""
+msgstr "Fastmail"
 
 #: providers/FastMail/fastmail.provider:4
 msgid "Access mail with Fastmail"
-msgstr ""
+msgstr "Доступ до пошти за допомогою Fastmail"
 
 #: providers/Google/google.provider.in:3
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #: providers/Google/google.provider.in:4
 msgid "Access all Google services on your computer"
-msgstr "Підключіть всі сервіси Google до вашого комп’ютера"
+msgstr "Під'єднайте всі служби Google до вашого комп’ютера"
 
 #: providers/LastFM/lastfm.provider:3
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: providers/LastFM/lastfm.provider:4
-#, fuzzy
 msgid "Scrobble your music"
-msgstr "Налаштувати музичні вподобання"
+msgstr "Скроблінг вашої музики"
 
 #: providers/Microsoft/microsoft.provider.in:3
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: providers/Microsoft/microsoft.provider.in:4
 msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Підключіть всі сервіси Outlook та OneDrive до вашого комп’ютера"
+msgstr "Під'єднайте всі служби Outlook та OneDrive до вашого комп’ютера"
 
 #: src/Plug.vala:41 src/Plug.vala:40
 msgid "Online Accounts"
-msgstr "Мережеві облікові записи"
+msgstr "Мережні облікові записи"
 
 #: src/Plug.vala:42 src/Plug.vala:41
 msgid "Manage online accounts and connected applications"
-msgstr "Управління онлайн-акаунтами і пов'язаними додатками"
+msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
 
 #: src/Plug.vala:51 src/Plug.vala:50
 msgid "Restore"
@@ -160,11 +157,13 @@ msgstr "Відновити"
 
 #: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
 msgid "Connect Your Online Accounts"
-msgstr "Під’єднайте ваші онлайн акаунти"
+msgstr "Під’єднайте ваші мережні облікові записи"
 
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Під'єднати мережні облікові записи, натиснувши піктограму на панелі "
+"інструментів внизу."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
 #: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
@@ -173,9 +172,8 @@ msgstr ""
 #: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
 #: src/Plug.vala:105 src/Views/SourceSelector.vala:178
 #: src/Views/SourceSelector.vala:185
-#, fuzzy
 msgid "New Account"
-msgstr "Інший обліковий запис"
+msgstr "Новий обліковий запис"
 
 #: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
 #, c-format
@@ -189,14 +187,14 @@ msgstr "Обліковий запис '%s' вилучено."
 #: src/Authentification/AbstractAuthView.vala:58
 #: src/Authentification/OAuthView.vala:121
 msgid "Please enter your credentials…"
-msgstr "Будь ласка, введіть свої облікові дані ..."
+msgstr "Введіть свої облікові дані…"
 
 #: src/Authentification/MailDialog.vala:50
 #: src/Authentification/PasswordDialog.vala:58
 #: src/Authentification/WebDialog.vala:39
 #: src/Authentification/AbstractAuthView.vala:60
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/Authentification/MailDialog.vala:82
 #: src/Authentification/MailDialog.vala:126
@@ -212,14 +210,14 @@ msgstr "Пароль"
 #: src/Authentification/MailDialog.vala:81
 #: src/Authentification/MailDialog.vala:126
 msgid "Server"
-msgstr ""
+msgstr "Сервер"
 
 #: src/Authentification/MailDialog.vala:103
 #: src/Authentification/MailDialog.vala:153
 #: src/Authentification/MailDialog.vala:91
 #: src/Authentification/MailDialog.vala:141
 msgid "Encryption:"
-msgstr ""
+msgstr "Шифрування:"
 
 #: src/Authentification/MailDialog.vala:107
 #: src/Authentification/MailDialog.vala:157
@@ -231,12 +229,12 @@ msgstr "Немає"
 #: src/Authentification/MailDialog.vala:147
 #: src/Authentification/MailDialog.vala:136
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Використовувати облікові дані IMAP"
 
 #: src/Authentification/MailDialog.vala:151
 #: src/Authentification/MailDialog.vala:139
 msgid "No authentication required"
-msgstr ""
+msgstr "Автентифікація не потрібна"
 
 #: src/Authentification/MailDialog.vala:167
 #: src/Authentification/PasswordDialog.vala:110
@@ -248,7 +246,7 @@ msgstr "Вхід"
 #: src/Authentification/PasswordDialog.vala:73
 #: src/Authentification/PasswordDialog.vala:61
 msgid "URL"
-msgstr ""
+msgstr "URL-адреса"
 
 #: src/Authentification/PasswordDialog.vala:86
 #: src/Authentification/PasswordDialog.vala:74
@@ -263,22 +261,22 @@ msgstr "Підтвердити пароль"
 #: src/Authentification/PasswordDialog.vala:99
 #: src/Authentification/PasswordDialog.vala:87
 msgid "Forgot password…"
-msgstr "Забули пароль..."
+msgstr "Забули пароль…"
 
 #: src/Authentification/PasswordDialog.vala:104
 #: src/Authentification/PasswordDialog.vala:92
 msgid "Refresh Captcha"
-msgstr "Оновити капчу"
+msgstr "Оновити Captcha"
 
 #: src/Authentification/PasswordDialog.vala:105
 #: src/Authentification/PasswordDialog.vala:93
 msgid "Enter above text here"
-msgstr "Введіть наступний текст тут"
+msgstr "Введіть такий текст сюди"
 
 #: src/Authentification/PasswordDialog.vala:114
 #: src/Authentification/PasswordDialog.vala:102
 msgid "Don't have an account? Sign Up"
-msgstr "Нема облікового запису? Зареєструватися"
+msgstr "Немає облікового запису? Зареєструватися"
 
 #: src/Authentification/PasswordDialog.vala:314
 #: src/Authentification/PasswordDialog.vala:295
@@ -297,28 +295,30 @@ msgstr "Завантаження…"
 
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "Увійдіть, щоб підключити такі додатки як Пошта, Контакти, та Календар."
+msgstr ""
+"Увійдіть, щоб під'єднати такі застосунки як Пошта, Контакти, та Календар."
 
 #: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
 msgid "Search Providers"
-msgstr ""
+msgstr "Постачальники пошуку"
 
 #: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Політика приватности"
 
 #: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
 msgid "Cancel"
 msgstr "Скасувати"
 
 #: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
 #, c-format
 msgid "No installed apps make use of your %s account"
-msgstr ""
+msgstr "Жоден встановлений застосунок не використовує ваш обліковий запис %s"
 
 #: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
 msgid "No Apps"
-msgstr "Немає додатків"
+msgstr "Немає застосунків"
 
 #: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
 msgid "Add…"
@@ -327,23 +327,20 @@ msgstr "Додати…"
 #: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
 #: src/Views/SourceSelector.vala:79
 msgid "Remove"
-msgstr "Видалити"
+msgstr "Вилучити"
 
 #: src/Authentification/MailDialog.vala:60
-#, fuzzy
 msgid "IMAP Account"
-msgstr "Інший обліковий запис"
+msgstr "Обліковий запис IMAP"
 
 #: src/Authentification/AbstractAuthDialog.vala:81
-#, fuzzy
+#: src/Authentification/AbstractAuthDialog.vala:74
 msgid "Add Account"
-msgstr "Інший обліковий запис"
+msgstr "Додати обліковий запис"
 
 #: src/Views/SourceSelector.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Додати новий акаунт..."
+msgstr "Додати обліковий запис…"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr "Немає встановлених додатків які вказують на Ваш %s обліковий запис"

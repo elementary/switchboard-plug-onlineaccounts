@@ -7,37 +7,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 18:24-0800\n"
-"PO-Revision-Date: 2019-05-10 13:03-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2021-04-24 13:12+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
+"online-accounts-extra/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-msgid "Online Accounts"
+msgid "Online Accounts Settings"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Управление сетевыми учётными записями и связанными приложениями"
 
-#: data/onlineaccounts.appdata.xml.in:11
+#: data/onlineaccounts.appdata.xml.in:13
 msgid "Major redesign"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:12
-msgid "Make external links open in the web browser"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:13
-msgid "Fix blurry icons on HiDPI"
-msgstr ""
-
 #: data/onlineaccounts.appdata.xml.in:14
+msgid "Make external links open in the web browser"
+msgstr "Внешние ссылки теперь открываются в веб браузере"
+
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix blurry icons on HiDPI"
+msgstr "Исправлены размытые значки на HiDPI"
+
+#: data/onlineaccounts.appdata.xml.in:16
 msgid "Updated translations"
-msgstr ""
+msgstr "Обновлены переводы"

@@ -34,7 +34,7 @@ public enum OnlineAccounts.SignonUIError {
     FORGOT_PASSWORD
 }
 
-public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
+public abstract class OnlineAccounts.AbstractAuthDialog : Granite.Dialog {
     public signal void finished ();
 
     public HashTable<string, Variant> parameters;
@@ -55,17 +55,17 @@ public abstract class OnlineAccounts.AbstractAuthDialog : Gtk.Dialog {
     construct {
         content_area = new Gtk.Grid ();
 
-        var frame = new Gtk.Frame (null);
-        frame.expand = true;
-        frame.margin = 12;
-        frame.margin_top = 0;
+        var frame = new Gtk.Frame (null) {
+            expand = true,
+            margin_start = 12,
+            margin_end = 12
+        };
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         frame.add (content_area);
         frame.show_all ();
 
         add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
-        get_action_area ().margin = 6;
         get_content_area ().add (frame);
 
         deletable = false;
