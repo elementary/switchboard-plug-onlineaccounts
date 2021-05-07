@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2021-05-01 19:43+0000\n"
+"PO-Revision-Date: 2021-05-08 00:11+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -162,7 +162,7 @@ msgstr "Під’єднайте ваші мережні облікові зап�
 #: src/Plug.vala:60 src/Plug.vala:59
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Під'єднати мережні облікові записи, натиснувши піктограму на панелі "
+"Під'єднайте мережні облікові записи, натиснувши піктограму на панелі "
 "інструментів внизу."
 
 #: src/Plug.vala:117 src/Views/AccountView.vala:50
