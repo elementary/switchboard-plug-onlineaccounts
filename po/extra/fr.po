@@ -1,0 +1,44 @@
+# French translations for extra package.
+# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
+"online-accounts-extra/fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+#: data/onlineaccounts.appdata.xml.in:5
+msgid "Online Accounts Settings"
+msgstr "Paramètres des comptes en ligne"
+
+#: data/onlineaccounts.appdata.xml.in:6
+msgid "Manage online accounts and connected applications"
+msgstr "Gérez les comptes en ligne et les applications connectées"
+
+#: data/onlineaccounts.appdata.xml.in:13
+msgid "Major redesign"
+msgstr "Reconception majeure"
+
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Make external links open in the web browser"
+msgstr "Les liens externes sont désormais ouverts dans le navigateur Web"
+
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix blurry icons on HiDPI"
+msgstr "Correction des icônes floues sur les affichages HiDPI"
+
+#: data/onlineaccounts.appdata.xml.in:16
+msgid "Updated translations"
+msgstr "Mise à jour des traductions"

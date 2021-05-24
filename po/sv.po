@@ -1,0 +1,362 @@
+# Swedish translation for beat-box
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the beat-box package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: beat-box\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2019-09-05 19:22+0000\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.7.1\n"
+"X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
+"X-Poedit-Language: Swedish\n"
+
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr "Inlägg"
+
+#: providers/Facebook/facebook-microblog.service:5
+msgid "Watch your newsfeed"
+msgstr "Titta på ditt nyhetsflöde"
+
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "Kontakter"
+
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "Synkronisera dina kontakter"
+
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "Kalendrar"
+
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "Synkronisera dina kalendrar"
+
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:78
+#: src/Authentification/MailDialog.vala:122
+#: src/Authentification/PasswordDialog.vala:77
+#: src/Authentification/MailDialog.vala:66
+#: src/Authentification/MailDialog.vala:108
+#: src/Authentification/PasswordDialog.vala:65
+msgid "Email"
+msgstr "E-post"
+
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "Synkronisera din e-post"
+
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr "Foton"
+
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "Synkronisera dina foton"
+
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr "Enhet"
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "Synkronisera dina filer"
+
+#: providers/LastFM/lastfm-scrobble.service:4
+msgid "Scrobble"
+msgstr "Scrobble"
+
+#: providers/LastFM/lastfm-scrobble.service:5
+msgid "Scrobble all your music"
+msgstr "Scrobbla all din musik"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
+msgid "Mail Account"
+msgstr "E-postkonto"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
+msgid "Fetch Email from IMAP Server"
+msgstr "Hämta e-post från IMAP-server"
+
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr "Facebook"
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "Kom åt allt Facebook-innehåll på din dator"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "Fastmail"
+msgstr "Fastmail"
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with Fastmail"
+msgstr "Få tillgång till e-post med Fastmail"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr "Google"
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "Kom åt alla Google-tjänster på din dator"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: providers/LastFM/lastfm.provider:4
+msgid "Scrobble your music"
+msgstr "Scrobbla din musik"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr "Microsoft"
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "Kom åt alla Outlook- och OneDrive-tjänster på din dator"
+
+#: src/Plug.vala:41 src/Plug.vala:40
+msgid "Online Accounts"
+msgstr "Online-konton"
+
+#: src/Plug.vala:42 src/Plug.vala:41
+msgid "Manage online accounts and connected applications"
+msgstr "Hantera online-konton och anslutna program"
+
+#: src/Plug.vala:51 src/Plug.vala:50
+msgid "Restore"
+msgstr "Återskapa"
+
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
+msgid "Connect Your Online Accounts"
+msgstr "Anslut dina online-konton"
+
+#: src/Plug.vala:60 src/Plug.vala:59
+msgid "Connect online accounts by clicking the icon in the toolbar below."
+msgstr ""
+
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
+#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
+#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
+msgid "New Account"
+msgstr "Nytt konto"
+
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "Kontot '%s' togs bort."
+
+#: src/Authentification/MailDialog.vala:48
+#: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
+#: src/Authentification/AbstractAuthView.vala:58
+#: src/Authentification/OAuthView.vala:121
+msgid "Please enter your credentials…"
+msgstr "Skriv in dina inloggningsuppgifter…"
+
+#: src/Authentification/MailDialog.vala:50
+#: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
+#: src/Authentification/AbstractAuthView.vala:60
+msgid "Back"
+msgstr "Tillbaka"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+#: src/Authentification/PasswordDialog.vala:81
+#: src/Authentification/MailDialog.vala:70
+#: src/Authentification/MailDialog.vala:112
+#: src/Authentification/PasswordDialog.vala:69
+msgid "Password"
+msgstr "Lösenord"
+
+#: src/Authentification/MailDialog.vala:93
+#: src/Authentification/MailDialog.vala:137
+#: src/Authentification/MailDialog.vala:81
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "Server"
+
+#: src/Authentification/MailDialog.vala:103
+#: src/Authentification/MailDialog.vala:153
+#: src/Authentification/MailDialog.vala:91
+#: src/Authentification/MailDialog.vala:141
+msgid "Encryption:"
+msgstr "Kryptering:"
+
+#: src/Authentification/MailDialog.vala:107
+#: src/Authentification/MailDialog.vala:157
+#: src/Authentification/MailDialog.vala:95
+#: src/Authentification/MailDialog.vala:145
+msgid "None"
+msgstr "Ingen"
+
+#: src/Authentification/MailDialog.vala:147
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "Använd IMAP-inloggningsuppgifter"
+
+#: src/Authentification/MailDialog.vala:151
+#: src/Authentification/MailDialog.vala:139
+msgid "No authentication required"
+msgstr "Ingen autentisering krävs"
+
+#: src/Authentification/MailDialog.vala:167
+#: src/Authentification/PasswordDialog.vala:110
+#: src/Authentification/MailDialog.vala:155
+#: src/Authentification/PasswordDialog.vala:98
+msgid "Log In"
+msgstr "Logga in"
+
+#: src/Authentification/PasswordDialog.vala:73
+#: src/Authentification/PasswordDialog.vala:61
+msgid "URL"
+msgstr "URL"
+
+#: src/Authentification/PasswordDialog.vala:86
+#: src/Authentification/PasswordDialog.vala:74
+msgid "New Password"
+msgstr "Nytt lösenord"
+
+#: src/Authentification/PasswordDialog.vala:91
+#: src/Authentification/PasswordDialog.vala:79
+msgid "Confirm Password"
+msgstr "Bekräfta lösenord"
+
+#: src/Authentification/PasswordDialog.vala:99
+#: src/Authentification/PasswordDialog.vala:87
+msgid "Forgot password…"
+msgstr "Glömt lösenord…"
+
+#: src/Authentification/PasswordDialog.vala:104
+#: src/Authentification/PasswordDialog.vala:92
+msgid "Refresh Captcha"
+msgstr "Ladda om Captcha"
+
+#: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:93
+msgid "Enter above text here"
+msgstr "Skriv in ovanstående text här"
+
+#: src/Authentification/PasswordDialog.vala:114
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Don't have an account? Sign Up"
+msgstr "Har du inget konto? Registrera dig"
+
+#: src/Authentification/PasswordDialog.vala:314
+#: src/Authentification/PasswordDialog.vala:295
+msgid "Other Account"
+msgstr "Annat konto"
+
+#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
+#: src/Authentification/OAuthView.vala:32
+#: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
+msgid "Loading…"
+msgstr "Läser in…"
+
+#: src/NewAccountDialog.vala:36
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Logga in för att ansluta till program som E-post, Kontakter och Kalender."
+
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
+msgid "Search Providers"
+msgstr ""
+
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
+msgid "Privacy Policy"
+msgstr ""
+
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr ""
+
+#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
+msgid "No Apps"
+msgstr "Inga program"
+
+#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
+msgid "Add…"
+msgstr "Lägg till…"
+
+#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
+msgid "Remove"
+msgstr "Ta bort"
+
+#: src/Authentification/MailDialog.vala:60
+#, fuzzy
+msgid "IMAP Account"
+msgstr "E-postkonto"
+
+#: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
+#, fuzzy
+msgid "Add Account"
+msgstr "E-postkonto"
+
+#: src/Views/SourceSelector.vala:73
+#, fuzzy
+#| msgid "Add a new account…"
+msgid "Add Account…"
+msgstr "Lägg till ett nytt konto…"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr ""
+#~ "Det finns för tillfället inget program installerat som är anslutet till "
+#~ "ditt %s-konto"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "Chatta med dina vänner"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "Kom åt alla Yahoo-tjänster på din dator"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "Inkluderar Kontakter, Mail, och Kalendrar"

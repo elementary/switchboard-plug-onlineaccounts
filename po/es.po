@@ -1,0 +1,359 @@
+# Spanish translation for beat-box
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the beat-box package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: beat-box\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-05-01 03:10+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+"X-Launchpad-Export-Date: 2017-01-21 06:47+0000\n"
+
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr "Publicaciones"
+
+#: providers/Facebook/facebook-microblog.service:5
+msgid "Watch your newsfeed"
+msgstr "Manténgase al tanto de su suministro de noticias"
+
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "Contactos"
+
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "Sincronice sus contactos"
+
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "Calendarios"
+
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "Sincronice sus calendarios"
+
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:78
+#: src/Authentification/MailDialog.vala:122
+#: src/Authentification/PasswordDialog.vala:77
+#: src/Authentification/MailDialog.vala:66
+#: src/Authentification/MailDialog.vala:108
+#: src/Authentification/PasswordDialog.vala:65
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "Sincronice su correo electrónico"
+
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr "Fotos"
+
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "Sincronice sus fotos"
+
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr "Drive"
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "Sincronice sus archivos"
+
+#: providers/LastFM/lastfm-scrobble.service:4
+msgid "Scrobble"
+msgstr "Registro musical"
+
+#: providers/LastFM/lastfm-scrobble.service:5
+msgid "Scrobble all your music"
+msgstr "Haga un seguimiento de su música"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
+msgid "Mail Account"
+msgstr "Cuenta de correo"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
+msgid "Fetch Email from IMAP Server"
+msgstr "Obtener correo electrónico desde el servidor IMAP"
+
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr "Facebook"
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "Acceda a todos los servicios de Facebook desde el equipo"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "Fastmail"
+msgstr "Fastmail"
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with Fastmail"
+msgstr "Acceda al correo electrónico de Fastmail"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr "Google"
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "Acceda a todos los servicios de Google desde el equipo"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: providers/LastFM/lastfm.provider:4
+msgid "Scrobble your music"
+msgstr "Haga un seguimiento de su música"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr "Microsoft"
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "Acceda a todos los servicios de Outlook y OneDrive desde el equipo"
+
+#: src/Plug.vala:41 src/Plug.vala:40
+msgid "Online Accounts"
+msgstr "Cuentas en línea"
+
+#: src/Plug.vala:42 src/Plug.vala:41
+msgid "Manage online accounts and connected applications"
+msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
+
+#: src/Plug.vala:51 src/Plug.vala:50
+msgid "Restore"
+msgstr "Restaurar"
+
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
+msgid "Connect Your Online Accounts"
+msgstr "Conecte sus cuentas en línea"
+
+#: src/Plug.vala:60 src/Plug.vala:59
+msgid "Connect online accounts by clicking the icon in the toolbar below."
+msgstr ""
+"Conecte cuentas en línea pulsando en el icono en la barra de herramientas "
+"siguiente."
+
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
+#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
+#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
+msgid "New Account"
+msgstr "Cuenta nueva"
+
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "Se eliminó la cuenta «%s»."
+
+#: src/Authentification/MailDialog.vala:48
+#: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
+#: src/Authentification/AbstractAuthView.vala:58
+#: src/Authentification/OAuthView.vala:121
+msgid "Please enter your credentials…"
+msgstr "Proporcione sus datos de acceso…"
+
+#: src/Authentification/MailDialog.vala:50
+#: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
+#: src/Authentification/AbstractAuthView.vala:60
+msgid "Back"
+msgstr "Atrás"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+#: src/Authentification/PasswordDialog.vala:81
+#: src/Authentification/MailDialog.vala:70
+#: src/Authentification/MailDialog.vala:112
+#: src/Authentification/PasswordDialog.vala:69
+msgid "Password"
+msgstr "Contraseña"
+
+#: src/Authentification/MailDialog.vala:93
+#: src/Authentification/MailDialog.vala:137
+#: src/Authentification/MailDialog.vala:81
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "Servidor"
+
+#: src/Authentification/MailDialog.vala:103
+#: src/Authentification/MailDialog.vala:153
+#: src/Authentification/MailDialog.vala:91
+#: src/Authentification/MailDialog.vala:141
+msgid "Encryption:"
+msgstr "Cifrado:"
+
+#: src/Authentification/MailDialog.vala:107
+#: src/Authentification/MailDialog.vala:157
+#: src/Authentification/MailDialog.vala:95
+#: src/Authentification/MailDialog.vala:145
+msgid "None"
+msgstr "Ninguno"
+
+#: src/Authentification/MailDialog.vala:147
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "Usar credenciales IMAP"
+
+#: src/Authentification/MailDialog.vala:151
+#: src/Authentification/MailDialog.vala:139
+msgid "No authentication required"
+msgstr "No se requiere autenticación"
+
+#: src/Authentification/MailDialog.vala:167
+#: src/Authentification/PasswordDialog.vala:110
+#: src/Authentification/MailDialog.vala:155
+#: src/Authentification/PasswordDialog.vala:98
+msgid "Log In"
+msgstr "Acceder"
+
+#: src/Authentification/PasswordDialog.vala:73
+#: src/Authentification/PasswordDialog.vala:61
+msgid "URL"
+msgstr "URL"
+
+#: src/Authentification/PasswordDialog.vala:86
+#: src/Authentification/PasswordDialog.vala:74
+msgid "New Password"
+msgstr "Contraseña nueva"
+
+#: src/Authentification/PasswordDialog.vala:91
+#: src/Authentification/PasswordDialog.vala:79
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+#: src/Authentification/PasswordDialog.vala:99
+#: src/Authentification/PasswordDialog.vala:87
+msgid "Forgot password…"
+msgstr "Contraseña olvidada…"
+
+#: src/Authentification/PasswordDialog.vala:104
+#: src/Authentification/PasswordDialog.vala:92
+msgid "Refresh Captcha"
+msgstr "Actualizar prueba antirrobots"
+
+#: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:93
+msgid "Enter above text here"
+msgstr "Escriba el texto anterior aquí"
+
+#: src/Authentification/PasswordDialog.vala:114
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Don't have an account? Sign Up"
+msgstr "¿No tiene cuenta? Regístrese"
+
+#: src/Authentification/PasswordDialog.vala:314
+#: src/Authentification/PasswordDialog.vala:295
+msgid "Other Account"
+msgstr "Otra cuenta"
+
+#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
+#: src/Authentification/OAuthView.vala:32
+#: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
+msgid "Loading…"
+msgstr "Cargando…"
+
+#: src/NewAccountDialog.vala:36
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr ""
+"Acceda para conectarse a aplicaciones como Correo, Contactos y Calendario."
+
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
+msgid "Search Providers"
+msgstr "Proveedores de búsqueda"
+
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
+msgid "Privacy Policy"
+msgstr "Normativa de privacidad"
+
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr "No hay aplicaciones instaladas que hagan uso de su cuenta %s"
+
+#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
+msgid "No Apps"
+msgstr "Sin aplicaciones"
+
+#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
+msgid "Add…"
+msgstr "Añadir…"
+
+#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
+msgid "Remove"
+msgstr "Quitar"
+
+#: src/Authentification/MailDialog.vala:60
+msgid "IMAP Account"
+msgstr "Cuenta IMAP"
+
+#: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
+msgid "Add Account"
+msgstr "Añadir cuenta"
+
+#: src/Views/SourceSelector.vala:73
+msgid "Add Account…"
+msgstr "Añadir cuenta…"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr ""
+#~ "No hay aplicaciones instaladas actualmente que se vinculen con tu cuenta "
+#~ "de %s"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "Charle con sus amigos"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "Acceda a todos los servicios de Yahoo! desde el equipo"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "Incluye Contactos, Correos y Calendario"

@@ -1,0 +1,16 @@
+src/Account.vala
+src/AccountsManager.vala
+src/Plug.vala
+src/Authentification/AbstractAuthDialog.vala
+src/Authentification/DialogService.vala
+src/Authentification/Key.vala
+src/Authentification/MailDialog.vala
+src/Authentification/OAuthView.vala
+src/Authentification/PasswordDialog.vala
+src/Authentification/RequestInfo.vala
+src/Authentification/RequestQueue.vala
+src/Authentification/Server.vala
+src/Views/AccountView.vala
+src/Views/SourceSelector.vala
+src/Widgets/ACListBox.vala
+src/Widgets/AppRow.vala

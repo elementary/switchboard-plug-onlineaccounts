@@ -1,0 +1,354 @@
+# Chinese (Simplified) translation for pantheon-online-accounts
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the pantheon-online-accounts package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pantheon-online-accounts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: 2020-12-11 12:16+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
+"switchboard/switchboard-plug-onlineaccounts/zh_Hans/>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+"X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
+
+#: providers/Facebook/facebook-microblog.service:4
+msgid "Posts"
+msgstr "帖子"
+
+#: providers/Facebook/facebook-microblog.service:5
+msgid "Watch your newsfeed"
+msgstr "查看您的新闻订阅"
+
+#: providers/Facebook/facebook-contacts.service:4
+#: providers/Google/google-contacts.service:4
+#: providers/Microsoft/microsoft-contacts.service:4
+msgid "Contacts"
+msgstr "联系人"
+
+#: providers/Facebook/facebook-contacts.service:5
+#: providers/Google/google-contacts.service:5
+#: providers/Microsoft/microsoft-contacts.service:5
+msgid "Sync your contacts"
+msgstr "同步您的联系人"
+
+#: providers/Facebook/facebook-calendar.service:4
+#: providers/Google/google-calendar.service:4
+#: providers/Microsoft/microsoft-calendar.service:4
+msgid "Calendars"
+msgstr "日历"
+
+#: providers/Facebook/facebook-calendar.service:5
+#: providers/Google/google-calendar.service:5
+#: providers/Microsoft/microsoft-calendar.service:5
+msgid "Sync your calendars"
+msgstr "同步您的日历"
+
+#: providers/FastMail/fastmail-mail.service:4
+#: providers/Google/google-gmail.service:4
+#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
+#: src/Authentification/MailDialog.vala:78
+#: src/Authentification/MailDialog.vala:122
+#: src/Authentification/PasswordDialog.vala:77
+#: src/Authentification/MailDialog.vala:66
+#: src/Authentification/MailDialog.vala:108
+#: src/Authentification/PasswordDialog.vala:65
+msgid "Email"
+msgstr "电子邮件"
+
+#: providers/FastMail/fastmail-mail.service:5
+#: providers/Google/google-gmail.service:5
+#: providers/Microsoft/microsoft-mails.service:5
+msgid "Sync your email"
+msgstr "同步您的邮件"
+
+#: providers/Google/google-photos.service:4
+msgid "Photos"
+msgstr "照片"
+
+#: providers/Google/google-photos.service:5
+msgid "Sync your photos"
+msgstr "同步您的照片"
+
+#: providers/Google/google-drive.service:4
+msgid "Drive"
+msgstr "网盘"
+
+#: providers/Google/google-drive.service:6
+msgid "Sync your files"
+msgstr "同步您的文件"
+
+#: providers/LastFM/lastfm-scrobble.service:4
+msgid "Scrobble"
+msgstr "同步"
+
+#: providers/LastFM/lastfm-scrobble.service:5
+msgid "Scrobble all your music"
+msgstr "同步您的音乐"
+
+#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
+msgid "Mail Account"
+msgstr "邮件账户"
+
+#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
+msgid "Fetch Email from IMAP Server"
+msgstr "从 IMAP 服务器接收邮件"
+
+#: providers/Facebook/facebook.provider.in:3
+msgid "Facebook"
+msgstr "Facebook"
+
+#: providers/Facebook/facebook.provider.in:4
+msgid "Access all Facebook contents on your computer"
+msgstr "在电脑中启用 Facebook 内容"
+
+#: providers/FastMail/fastmail.provider:3
+msgid "Fastmail"
+msgstr "Fastmail 服务"
+
+#: providers/FastMail/fastmail.provider:4
+msgid "Access mail with Fastmail"
+msgstr "使用 Fastmail 接入您的邮件服务"
+
+#: providers/Google/google.provider.in:3
+msgid "Google"
+msgstr "Google"
+
+#: providers/Google/google.provider.in:4
+msgid "Access all Google services on your computer"
+msgstr "在电脑中启用 Google 服务"
+
+#: providers/LastFM/lastfm.provider:3
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: providers/LastFM/lastfm.provider:4
+msgid "Scrobble your music"
+msgstr "同步您的音乐"
+
+#: providers/Microsoft/microsoft.provider.in:3
+msgid "Microsoft"
+msgstr "Microsoft"
+
+#: providers/Microsoft/microsoft.provider.in:4
+msgid "Access all Outlook and OneDrive services on your computer"
+msgstr "在电脑中启用 Outlook 和 OneDrive 服务"
+
+#: src/Plug.vala:41 src/Plug.vala:40
+msgid "Online Accounts"
+msgstr "网络账户"
+
+#: src/Plug.vala:42 src/Plug.vala:41
+msgid "Manage online accounts and connected applications"
+msgstr "管理网络账户和已连接的应用"
+
+#: src/Plug.vala:51 src/Plug.vala:50
+msgid "Restore"
+msgstr "恢复"
+
+#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
+msgid "Connect Your Online Accounts"
+msgstr "连接您的网络账户"
+
+#: src/Plug.vala:60 src/Plug.vala:59
+msgid "Connect online accounts by clicking the icon in the toolbar below."
+msgstr "点击下方工具栏中的添加账户按钮连接网络账户。"
+
+#: src/Plug.vala:117 src/Views/AccountView.vala:50
+#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
+#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
+#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
+#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
+#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
+#: src/Views/SourceSelector.vala:185
+msgid "New Account"
+msgstr "新帐户"
+
+#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
+#, c-format
+msgid "Account '%s' Removed."
+msgstr "帐户“%s”已删除。"
+
+#: src/Authentification/MailDialog.vala:48
+#: src/Authentification/PasswordDialog.vala:56
+#: src/Authentification/WebDialog.vala:136
+#: src/Authentification/WebDialog.vala:148
+#: src/Authentification/AbstractAuthView.vala:58
+#: src/Authentification/OAuthView.vala:121
+msgid "Please enter your credentials…"
+msgstr "请输入您的认证信息…"
+
+#: src/Authentification/MailDialog.vala:50
+#: src/Authentification/PasswordDialog.vala:58
+#: src/Authentification/WebDialog.vala:39
+#: src/Authentification/AbstractAuthView.vala:60
+msgid "Back"
+msgstr "向后"
+
+#: src/Authentification/MailDialog.vala:82
+#: src/Authentification/MailDialog.vala:126
+#: src/Authentification/PasswordDialog.vala:81
+#: src/Authentification/MailDialog.vala:70
+#: src/Authentification/MailDialog.vala:112
+#: src/Authentification/PasswordDialog.vala:69
+msgid "Password"
+msgstr "密码"
+
+#: src/Authentification/MailDialog.vala:93
+#: src/Authentification/MailDialog.vala:137
+#: src/Authentification/MailDialog.vala:81
+#: src/Authentification/MailDialog.vala:126
+msgid "Server"
+msgstr "服务器"
+
+#: src/Authentification/MailDialog.vala:103
+#: src/Authentification/MailDialog.vala:153
+#: src/Authentification/MailDialog.vala:91
+#: src/Authentification/MailDialog.vala:141
+msgid "Encryption:"
+msgstr "加密："
+
+#: src/Authentification/MailDialog.vala:107
+#: src/Authentification/MailDialog.vala:157
+#: src/Authentification/MailDialog.vala:95
+#: src/Authentification/MailDialog.vala:145
+msgid "None"
+msgstr "无"
+
+#: src/Authentification/MailDialog.vala:147
+#: src/Authentification/MailDialog.vala:136
+msgid "Use IMAP Credentials"
+msgstr "使用 IMAP 证书"
+
+#: src/Authentification/MailDialog.vala:151
+#: src/Authentification/MailDialog.vala:139
+msgid "No authentication required"
+msgstr "无须身份验证"
+
+#: src/Authentification/MailDialog.vala:167
+#: src/Authentification/PasswordDialog.vala:110
+#: src/Authentification/MailDialog.vala:155
+#: src/Authentification/PasswordDialog.vala:98
+msgid "Log In"
+msgstr "登录"
+
+#: src/Authentification/PasswordDialog.vala:73
+#: src/Authentification/PasswordDialog.vala:61
+msgid "URL"
+msgstr "网址"
+
+#: src/Authentification/PasswordDialog.vala:86
+#: src/Authentification/PasswordDialog.vala:74
+msgid "New Password"
+msgstr "新的密码"
+
+#: src/Authentification/PasswordDialog.vala:91
+#: src/Authentification/PasswordDialog.vala:79
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: src/Authentification/PasswordDialog.vala:99
+#: src/Authentification/PasswordDialog.vala:87
+msgid "Forgot password…"
+msgstr "忘记密码…"
+
+#: src/Authentification/PasswordDialog.vala:104
+#: src/Authentification/PasswordDialog.vala:92
+msgid "Refresh Captcha"
+msgstr "刷新验证码"
+
+#: src/Authentification/PasswordDialog.vala:105
+#: src/Authentification/PasswordDialog.vala:93
+msgid "Enter above text here"
+msgstr "请输入上面的文本"
+
+#: src/Authentification/PasswordDialog.vala:114
+#: src/Authentification/PasswordDialog.vala:102
+msgid "Don't have an account? Sign Up"
+msgstr "没有账号？点此注册"
+
+#: src/Authentification/PasswordDialog.vala:314
+#: src/Authentification/PasswordDialog.vala:295
+msgid "Other Account"
+msgstr "其他帐户"
+
+#: src/Authentification/WebDialog.vala:34
+#: src/Authentification/WebDialog.vala:143
+#: src/Authentification/WebDialog.vala:155
+#: src/Authentification/OAuthView.vala:32
+#: src/Authentification/OAuthView.vala:127
+#: src/Authentification/OAuthView.vala:42
+#: src/Authentification/OAuthView.vala:132
+msgid "Loading…"
+msgstr "载入中…"
+
+#: src/NewAccountDialog.vala:36
+msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+msgstr "登录以连接您的邮件、联系人和日历等应用。"
+
+#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
+msgid "Search Providers"
+msgstr "搜索引擎"
+
+#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
+msgid "Privacy Policy"
+msgstr "隐私政策"
+
+#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
+#: src/Authentification/AbstractAuthDialog.vala:66
+msgid "Cancel"
+msgstr "取消"
+
+#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
+#, c-format
+msgid "No installed apps make use of your %s account"
+msgstr "没有正在使用您 %s 账户的应用程序"
+
+#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
+msgid "No Apps"
+msgstr "暂无应用"
+
+#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
+msgid "Add…"
+msgstr "添加…"
+
+#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
+#: src/Views/SourceSelector.vala:79
+msgid "Remove"
+msgstr "删除"
+
+#: src/Authentification/MailDialog.vala:60
+msgid "IMAP Account"
+msgstr "IMAP 账户"
+
+#: src/Authentification/AbstractAuthDialog.vala:81
+#: src/Authentification/AbstractAuthDialog.vala:74
+msgid "Add Account"
+msgstr "添加账户"
+
+#: src/Views/SourceSelector.vala:73
+msgid "Add Account…"
+msgstr "添加账户…"
+
+#~ msgid "There are no apps currently installed that link to your %s account"
+#~ msgstr "当前没有安装任何与您 %s 账户相连接的应用"
+
+#~ msgid "Url"
+#~ msgstr "链接地址"
+
+#~ msgid "Chat with your friends"
+#~ msgstr "与您的好友聊天"
+
+#~ msgid "Access all Yahoo! services on your computer"
+#~ msgstr "在电脑中启用 Yahoo! 服务"
+
+#~ msgid "Includes Contacts, Mails, and Calendar"
+#~ msgstr "使用 FastMail 管理联系人、邮件和日历"

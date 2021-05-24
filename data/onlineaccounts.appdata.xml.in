@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>io.elementary.switchboard.onlineaccounts</id>
+  <extends>io.elementary.switchboard</extends>
+  <name>Online Accounts Settings</name>
+  <summary>Manage online accounts and connected applications</summary>
+  <icon type="stock">preferences-desktop-online-accounts</icon>
+  <translation type="gettext">online-accounts-plug</translation>
+  <releases>
+    <release version="2.1.0" date="2019-11-04" urgency="medium">
+      <description>
+        <ul>
+          <li>Major redesign</li>
+          <li>Make external links open in the web browser</li>
+          <li>Fix blurry icons on HiDPI</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-onlineaccounts/master/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://elementary.io</url>
+  <url type="bugtracker">https://github.com/elementary/switchboard-plug-onlineaccounts/issues</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+</component>

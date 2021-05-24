@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: as\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/onlineaccounts.appdata.xml.in:5
+msgid "Online Accounts Settings"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:6
+msgid "Manage online accounts and connected applications"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:13
+msgid "Major redesign"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Make external links open in the web browser"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix blurry icons on HiDPI"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:16
+msgid "Updated translations"
+msgstr ""

@@ -18,11 +18,7 @@
 *
 */
 
-public class MainWindow : Gtk.ApplicationWindow {
-    public MainWindow (Gtk.Application application) {
-        Object (application: application);
-    }
-
+public class OnlineAccounts.MainView : Gtk.Grid {
     construct {
         var caldav_view = new CaldavView ();
 
@@ -47,8 +43,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         grid.attach (stack_switcher, 0, 0);
         grid.attach (frame, 0, 1);
 
-        default_height = 600;
-        default_width = 450;
         add (grid);
+        show_all ();
     }
 }
