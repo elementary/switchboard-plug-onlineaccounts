@@ -2,7 +2,7 @@ plug_files = files(
     'Dialogs/CaldavDialog.vala',
     'MainView.vala',
     'Plug.vala',
-    'ValidationMessage.vala'
+    'Widgets/ValidationMessage.vala'
 )
 
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
