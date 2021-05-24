@@ -28,30 +28,39 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private GLib.Cancellable? cancellable;
 
     construct {
-        var url_label = new Granite.HeaderLabel ("Server URL");
+        var url_label = new Granite.HeaderLabel (_("Server URL"));
         url_entry = new Granite.ValidatedEntry () {
             hexpand = true
         };
 
-        var url_message_revealer = new ValidationMessage ("Invalid URL");
+        var url_message_revealer = new ValidationMessage (_("Invalid URL"));
         url_message_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
-        var username_label = new Granite.HeaderLabel ("User Name");
+        var username_label = new Granite.HeaderLabel (_("User Name"));
         username_entry = new Granite.ValidatedEntry ();
 
-        var password_label = new Granite.HeaderLabel ("Password");
+        var password_label = new Granite.HeaderLabel (_("Password"));
         password_entry = new Gtk.Entry () {
             visibility = false
         };
 
-        find_calendars_button = new Gtk.Button.with_label ("Find Calendars") {
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+
+        find_calendars_button = new Gtk.Button.with_label (_("Find Calendars")) {
             can_default = true,
-            halign = Gtk.Align.END,
-            valign = Gtk.Align.END,
-            vexpand = true,
-            margin_top = 24,
             sensitive = false
         };
+        find_calendars_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
+            layout_style = Gtk.ButtonBoxStyle.END,
+            margin_top = 24,
+            spacing = 6,
+            valign = Gtk.Align.END,
+            vexpand = true
+        };
+        action_area.add (cancel_button);
+        action_area.add (find_calendars_button);
 
         var login_page = new Gtk.Grid () {
             orientation = Gtk.Orientation.VERTICAL,
@@ -64,32 +73,37 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         login_page.add (username_entry);
         login_page.add (password_label);
         login_page.add (password_entry);
-        login_page.add (find_calendars_button);
-
-        var back_button = new Gtk.Button.with_label ("Back") {
-            halign = Gtk.Align.START,
-            margin = 6
-        };
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+        login_page.add (action_area);
 
         calendars_store = new ListStore (typeof(FoundCalendar));
+
         calendars_list = new Gtk.ListBox () {
-            expand = true,
-            margin_top = 6
+            expand = true
         };
         calendars_list.bind_model (calendars_store, create_item);
         calendars_list.set_sort_func (sort_func);
 
-        var finish_button = new Gtk.Button.with_label ("Add Calendars") {
-            halign = Gtk.Align.END,
+        var calendar_list_frame = new Gtk.Frame (null);
+        calendar_list_frame.add (calendars_list);
+
+        var back_button = new Gtk.Button.with_label (_("Back"));
+
+        var finish_button = new Gtk.Button.with_label (_("Add Calendars"));
+        finish_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var calendar_page_action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
+            layout_style = Gtk.ButtonBoxStyle.END,
+            margin_top = 24,
+            spacing = 6
+        };
+        calendar_page_action_area.add (back_button);
+        calendar_page_action_area.add (finish_button);
+
+        var calendars_page = new Gtk.Grid () {
             margin = 12
         };
-
-        var calendars_page = new Gtk.Grid ();
-        calendars_page.attach (back_button, 0, 0);
-        calendars_page.attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1);
-        calendars_page.attach (calendars_list, 0, 2);
-        calendars_page.attach (finish_button, 0, 3);
+        calendars_page.attach (calendar_list_frame, 0, 0);
+        calendars_page.attach (calendar_page_action_area, 0, 1);
 
         var deck = new Hdy.Deck () {
             can_swipe_back = true,
@@ -112,6 +126,10 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         // email
         // server handles invitations
         // refresh rate
+
+        cancel_button.clicked.connect (() => {
+            destroy ();
+        });
 
         find_calendars_button.clicked.connect (() => {
             find_calendars ();
