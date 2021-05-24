@@ -29,6 +29,12 @@ gtk_dep = dependency('gtk+-3.0')
 handy_dep = dependency('libhandy-1', version: '>=1.0.0')
 switchboard_dep = dependency('switchboard-2.0')
 
+gresource = gnome.compile_resources(
+    'gresource',
+    'data' / 'gresource.xml',
+    source_dir: 'data'
+)
+
 subdir('data')
 subdir('src')
 subdir('po')

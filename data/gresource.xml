@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/elementary/switchboard/onlineaccounts">
+    <file alias="onlineaccounts-imap.svg" compressed="true" preprocess="xml-stripblanks">icons/imap.svg</file>
+  </gresource>
+</gresources>
