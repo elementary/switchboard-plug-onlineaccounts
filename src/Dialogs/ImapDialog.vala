@@ -35,7 +35,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
-        var imap_username_label = new  Gtk.Label  ("Email:") {
+        var imap_username_label = new Gtk.Label ("Email:") {
             halign = Gtk.Align.END
         };
 
@@ -104,7 +104,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
-        var smtp_username_label = new  Gtk.Label  ("Email:") {
+        var smtp_username_label = new Gtk.Label ("Email:") {
             xalign = 1
         };
 
