@@ -75,7 +75,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         login_page.add (password_entry);
         login_page.add (action_area);
 
-        calendars_store = new ListStore (typeof(FoundCalendar));
+        calendars_store = new ListStore (typeof (FoundCalendar));
 
         calendars_list = new Gtk.ListBox () {
             expand = true
@@ -186,7 +186,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     [ CCode ( instance_pos = 1.9 ) ]
-    public Gtk.Widget create_item (GLib.Object item)  {
+    public Gtk.Widget create_item (GLib.Object item) {
         unowned FoundCalendar cal = (FoundCalendar)item;
         var row = new CalendarRow (cal.name, cal.color);
         row.show_all ();
