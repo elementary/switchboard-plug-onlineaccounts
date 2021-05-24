@@ -122,11 +122,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_encryption_grid.add (smtp_encryption_label);
         smtp_encryption_grid.add (smtp_encryption_combobox);
 
-        var save_button = new Gtk.Button.with_label (_("Log In")) {
-            sensitive = false
-        };
-        save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
         var entry_grid = new Gtk.Grid () {
             expand = true,
             orientation = Gtk.Orientation.VERTICAL,
@@ -148,13 +143,31 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         entry_grid.add (smtp_settings_grid);
         entry_grid.add (smtp_encryption_grid);
 
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+
+        var save_button = new Gtk.Button.with_label (_("Log In")) {
+            can_default = true,
+            has_default = true,
+            sensitive = false
+        };
+        save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
+            layout_style = Gtk.ButtonBoxStyle.END,
+            spacing = 6,
+            valign = Gtk.Align.END,
+            vexpand = true
+        };
+        action_area.add (cancel_button);
+        action_area.add (save_button);
+
         var main_grid = new Gtk.Grid () {
             margin = 12,
             orientation = Gtk.Orientation.VERTICAL,
             row_spacing = 24
         };
         main_grid.add (entry_grid);
-        main_grid.add (save_button);
+        main_grid.add (action_area);
 
         var window_handle = new Hdy.WindowHandle ();
         window_handle.add (main_grid);
@@ -164,6 +177,10 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
         modal = true;
         add (window_handle);
+
+        cancel_button.clicked.connect (() => {
+            destroy ();
+        });
 
         no_credentials.notify["active"].connect (() => {
             smtp_revealer.reveal_child = !no_credentials.active && !use_imap_credentials.active;
