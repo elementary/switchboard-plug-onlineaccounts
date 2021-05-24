@@ -22,20 +22,22 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private Gtk.Button find_calendars_button;
     private ListStore calendars_store;
     private Gtk.ListBox calendars_list;
-    private ValidatedEntry url_entry;
-    private ValidatedEntry username_entry;
+    private Granite.ValidatedEntry url_entry;
+    private Granite.ValidatedEntry username_entry;
     private Gtk.Entry password_entry;
     private GLib.Cancellable? cancellable;
 
     construct {
         var url_label = new Granite.HeaderLabel ("Server URL");
-        url_entry = new ValidatedEntry ();
+        url_entry = new Granite.ValidatedEntry () {
+            hexpand = true
+        };
 
         var url_message_revealer = new ValidationMessage ("Invalid URL");
         url_message_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
         var username_label = new Granite.HeaderLabel ("User Name");
-        username_entry = new ValidatedEntry ();
+        username_entry = new Granite.ValidatedEntry ();
 
         var password_label = new Granite.HeaderLabel ("Password");
         password_entry = new Gtk.Entry () {
@@ -420,25 +422,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             } catch (Error e) {
                 warning ("Could not create CSS Provider: %s\nStylesheet:\n%s", e.message, css_color);
             }
-        }
-    }
-
-    private class ValidatedEntry : Gtk.Entry {
-        public bool is_valid { get; set; default = false; }
-
-        construct {
-            hexpand = true;
-            activates_default = true;
-
-            changed.connect_after (() => {
-                if (is_valid) {
-                    secondary_icon_name = "process-completed-symbolic";
-                } else if (text != null && text != "") {
-                    secondary_icon_name = "process-error-symbolic";
-                } else {
-                    secondary_icon_name = "";
-                }
-            });
         }
     }
 }
