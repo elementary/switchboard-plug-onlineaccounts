@@ -160,10 +160,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         });
     }
 
-    private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-
-    }
-
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
         var cal_row1 = (CalendarRow) row1;
         var cal_row2 = (CalendarRow) row2;
@@ -293,7 +289,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         public CalendarRow (string label, string color) {
             Object (
-                color: color,
+                color: color.slice (0, 7),
                 label: label
             );
         }
@@ -311,91 +307,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             };
             name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
 
-            var color_button_blue = new Gtk.RadioButton (null);
-
-            unowned Gtk.StyleContext color_button_blue_context = color_button_blue.get_style_context ();
-            color_button_blue_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_blue_context.add_class ("blue");
-
-            var color_button_mint = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_mint_context = color_button_mint.get_style_context ();
-            color_button_mint_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_mint_context.add_class ("mint");
-
-            var color_button_green = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_green_context = color_button_green.get_style_context ();
-            color_button_green_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_green_context.add_class ("green");
-
-            var color_button_yellow = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_yellow_context = color_button_yellow.get_style_context ();
-            color_button_yellow_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_yellow_context.add_class ("yellow");
-
-            var color_button_orange = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_orange_context = color_button_orange.get_style_context ();
-            color_button_orange_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_orange_context.add_class ("orange");
-
-            var color_button_red = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_red_context = color_button_red.get_style_context ();
-            color_button_red_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_red_context.add_class ("red");
-
-            var color_button_pink = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            var color_button_pink_context = color_button_pink.get_style_context ();
-            color_button_pink_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_pink_context.add_class ("pink");
-
-            var color_button_purple = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_purple_context = color_button_purple.get_style_context ();
-            color_button_purple_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_purple_context.add_class ("purple");
-
-            var color_button_brown = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_brown_context = color_button_brown.get_style_context ();
-            color_button_brown_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_brown_context.add_class ("brown");
-
-            var color_button_slate = new Gtk.RadioButton.from_widget (color_button_blue);
-
-            unowned Gtk.StyleContext color_button_slate_context = color_button_slate.get_style_context ();
-            color_button_slate_context.add_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-            color_button_slate_context.add_class ("slate");
-
-            var color_grid = new Gtk.Grid () {
-                column_spacing = 3,
-                margin = 12
-            };
-            color_grid.add (color_button_blue);
-            color_grid.add (color_button_mint);
-            color_grid.add (color_button_green);
-            color_grid.add (color_button_yellow);
-            color_grid.add (color_button_orange);
-            color_grid.add (color_button_red);
-            color_grid.add (color_button_pink);
-            color_grid.add (color_button_purple);
-            color_grid.add (color_button_brown);
-            color_grid.add (color_button_slate);
-            color_grid.show_all ();
-
-            var popover = new Gtk.Popover (null);
-            popover.add (color_grid);
-
-            var more_menubutton = new Gtk.MenuButton () {
-                image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.BUTTON),
-                popover = popover,
-                tooltip_text = _("Options")
-            };
-
             var grid = new Gtk.Grid () {
                 column_spacing = 6,
                 margin = 6,
@@ -403,30 +314,13 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             };
             grid.add (checkbox);
             grid.add (name_entry);
-            grid.add (more_menubutton);
 
             add (grid);
 
-            color = color.slice (0, 7);
-            switch (color.down ()) {
-                case "#e6a92a":
-                    color_button_yellow.active = true;
-                    break;
-                case "#81c837":
-                    color_button_green.active = true;
-                    break;
-                case "#a56de2":
-                    color_button_purple.active = true;
-                    break;
-                case "#de3e80":
-                    color_button_pink.active = true;
-                    break;
-            }
             style_calendar_color (checkbox, color);
             style_calendar_color (name_entry, color);
 
             checkbox.bind_property ("active", name_entry, "sensitive");
-            checkbox.bind_property ("active", more_menubutton, "sensitive");
         }
 
         private void style_calendar_color (Gtk.Widget widget, string color) {
