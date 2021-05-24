@@ -210,7 +210,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         cancellable = new GLib.Cancellable ();
 
-        var placeholder_label = new Gtk.Label ("Retrieving the list of available calendars…");
+        var placeholder_label = new Gtk.Label (_("Retrieving the list of available calendars…"));
 
         var spinner = new Gtk.Spinner ();
         spinner.start ();
@@ -266,7 +266,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 } catch (GLib.IOError.CANCELLED e) {
                 } catch (Error e) {
                     var error_placeholder = new Granite.Widgets.AlertView (
-                        "Error Fetching Calendars",
+                        _("Error Fetching Calendars"),
                         e.message,
                         "dialog-error"
                     );
@@ -306,7 +306,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
             var name_entry = new Gtk.Entry () {
                 hexpand = true,
-                placeholder_text = "Calendar Name",
+                placeholder_text = _("Calendar Name"),
                 text = label
             };
             name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
@@ -393,7 +393,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             var more_menubutton = new Gtk.MenuButton () {
                 image = new Gtk.Image.from_icon_name ("view-more-symbolic", Gtk.IconSize.BUTTON),
                 popover = popover,
-                tooltip_text = "Options"
+                tooltip_text = _("Options")
             };
 
             var grid = new Gtk.Grid () {
