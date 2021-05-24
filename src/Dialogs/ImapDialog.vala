@@ -19,36 +19,58 @@
 */
 
 public class OnlineAccounts.ImapDialog : Hdy.Window {
-    construct {
-        var imap_username_label = new Granite.HeaderLabel ("Email Address");
+    private Granite.ValidatedEntry imap_server_entry;
+    private Granite.ValidatedEntry imap_username_entry;
+    private Granite.ValidatedEntry smtp_server_entry;
+    private Granite.ValidatedEntry smtp_username_entry;
+    private Gtk.Button save_button;
 
-        var imap_username_entry = new Granite.ValidatedEntry () {
+    construct {
+        Regex? email_regex = null;
+        try {
+            email_regex = new Regex ("""^[^\s]+@[^\s]+\.[^\s]+$""");
+        } catch (Error e) {
+            critical (e.message);
+        }
+
+        var imap_header = new Granite.HeaderLabel ("IMAP");
+
+        var imap_username_label = new  Gtk.Label  ("Email:") {
+            halign = Gtk.Align.END
+        };
+
+        imap_username_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
             hexpand = true
         };
 
-        var imap_password_label = new Granite.HeaderLabel ("Password");
+        var imap_password_label = new Gtk.Label ("Password:") {
+            halign = Gtk.Align.END,
+            margin_bottom = 18
+        };
 
         var imap_password_entry = new Gtk.Entry () {
             input_purpose = Gtk.InputPurpose.PASSWORD,
+            margin_bottom = 18,
             visibility = false
         };
 
-        var imap_server_label = new Granite.HeaderLabel ("Server URL");
-
-        var imap_server_entry = new Gtk.Entry () {
-            hexpand = true
+        var imap_url_label = new Gtk.Label (_("Server URL:")) {
+            halign = Gtk.Align.END
         };
+
+        imap_server_entry = new Granite.ValidatedEntry ();
 
         var imap_port_spin = new Gtk.SpinButton.with_range (1, uint16.MAX, 10) {
             value = 993
         };
 
-        var imap_settings_grid = new Gtk.Grid ();
-        imap_settings_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
-        imap_settings_grid.add (imap_server_entry);
-        imap_settings_grid.add (imap_port_spin);
+        var imap_port_label = new Gtk.Label (_("Port:")) {
+            halign = Gtk.Align.END
+        };
 
-        var imap_encryption_label = new Gtk.Label (_("Encryption:"));
+        var imap_encryption_label = new Gtk.Label (_("Encryption:")) {
+            halign = Gtk.Align.END
+        };
 
         var imap_encryption_combobox = new Gtk.ComboBoxText () {
             hexpand = true
@@ -58,47 +80,21 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         imap_encryption_combobox.append ("STARTTLS", "STARTTLS");
         imap_encryption_combobox.active = 1;
 
-        var imap_encryption_grid = new Gtk.Grid () {
-            column_spacing = 6
+        var imap_server_grid = new Gtk.Grid () {
+            column_spacing = 6,
+            row_spacing = 6
         };
-        imap_encryption_grid.add (imap_encryption_label);
-        imap_encryption_grid.add (imap_encryption_combobox);
-
-        var smtp_label = new Granite.HeaderLabel ("SMTP");
-
-        var smtp_username_entry = new Gtk.Entry () {
-            hexpand = true,
-            placeholder_text = _("Email")
-        };
-
-        var smtp_password_entry = new Gtk.Entry () {
-            input_purpose = Gtk.InputPurpose.PASSWORD,
-            placeholder_text = _("Password"),
-            visibility = false
-        };
-
-        var smtp_credentials = new Gtk.Grid () {
-            orientation = Gtk.Orientation.VERTICAL
-        };
-        smtp_credentials.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
-        smtp_credentials.add (smtp_username_entry);
-        smtp_credentials.add (smtp_password_entry);
-
-        var smtp_revealer = new Gtk.Revealer ();
-        smtp_revealer.add (smtp_credentials);
-
-        var smtp_server_entry = new Gtk.Entry () {
-            placeholder_text = _("Server")
-        };
-
-        var smtp_port_spin = new Gtk.SpinButton.with_range (1, uint16.MAX, 10) {
-            value = 587
-        };
-
-        var smtp_settings_grid = new Gtk.Grid ();
-        smtp_settings_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
-        smtp_settings_grid.add (smtp_server_entry);
-        smtp_settings_grid.add (smtp_port_spin);
+        imap_server_grid.attach (imap_header, 0, 0, 2);
+        imap_server_grid.attach (imap_username_label, 0, 1);
+        imap_server_grid.attach (imap_username_entry, 1, 1);
+        imap_server_grid.attach (imap_password_label, 0, 2);
+        imap_server_grid.attach (imap_password_entry, 1, 2);
+        imap_server_grid.attach (imap_url_label, 0, 3);
+        imap_server_grid.attach (imap_server_entry, 1, 3);
+        imap_server_grid.attach (imap_encryption_label, 0, 4);
+        imap_server_grid.attach (imap_encryption_combobox, 1, 4);
+        imap_server_grid.attach (imap_port_label, 0, 5);
+        imap_server_grid.attach (imap_port_spin, 1, 5);
 
         var use_imap_credentials = new Gtk.CheckButton.with_label (_("Use IMAP Credentials")) {
             active = true
@@ -106,7 +102,55 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var no_credentials = new Gtk.CheckButton.with_label (_("No authentication required"));
 
-        var smtp_encryption_label = new Gtk.Label (_("Encryption:"));
+        var smtp_header = new Granite.HeaderLabel ("SMTP");
+
+        var smtp_username_label = new  Gtk.Label  ("Email:") {
+            xalign = 1
+        };
+
+        smtp_username_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
+            hexpand = true
+        };
+
+        var smtp_password_label = new Gtk.Label ("Password:") {
+            xalign = 1
+        };
+
+        var smtp_password_entry = new Gtk.Entry () {
+            input_purpose = Gtk.InputPurpose.PASSWORD,
+            visibility = false
+        };
+
+        var smtp_credentials = new Gtk.Grid () {
+            column_spacing = 6,
+            row_spacing = 6,
+            margin_bottom = 18
+        };
+        smtp_credentials.attach (smtp_username_label, 0, 0);
+        smtp_credentials.attach (smtp_username_entry, 1, 0);
+        smtp_credentials.attach (smtp_password_label, 0, 1);
+        smtp_credentials.attach (smtp_password_entry, 1, 1);
+
+        var smtp_revealer = new Gtk.Revealer ();
+        smtp_revealer.add (smtp_credentials);
+
+        var smtp_url_label = new Gtk.Label (_("Server URL:")) {
+            xalign = 1
+        };
+
+        smtp_server_entry = new Granite.ValidatedEntry ();
+
+        var smtp_port_label = new Gtk.Label (_("Port:")) {
+            xalign = 1
+        };
+
+        var smtp_port_spin = new Gtk.SpinButton.with_range (1, uint16.MAX, 10) {
+            value = 587
+        };
+
+        var smtp_encryption_label = new Gtk.Label (_("Encryption:")) {
+            xalign = 1
+        };
 
         var smtp_encryption_combobox = new Gtk.ComboBoxText () {
             hexpand = true
@@ -116,36 +160,31 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_encryption_combobox.append ("STARTTLS", "STARTTLS");
         smtp_encryption_combobox.active = 2;
 
-        var smtp_encryption_grid = new Gtk.Grid () {
-            column_spacing = 6
-        };
-        smtp_encryption_grid.add (smtp_encryption_label);
-        smtp_encryption_grid.add (smtp_encryption_combobox);
-
-        var entry_grid = new Gtk.Grid () {
-            expand = true,
-            orientation = Gtk.Orientation.VERTICAL,
+        var smtp_server_grid = new Gtk.Grid () {
+            column_spacing = 6,
             row_spacing = 6
         };
-        entry_grid.add (imap_username_label);
-        entry_grid.add (imap_username_entry);
-        entry_grid.add (imap_password_label);
-        entry_grid.add (imap_password_entry);
-        entry_grid.add (imap_server_label);
-        entry_grid.add (imap_settings_grid);
-        entry_grid.add (imap_encryption_grid);
+        smtp_server_grid.attach (smtp_header, 0, 0, 2);
+        smtp_server_grid.attach (no_credentials, 1, 1);
+        smtp_server_grid.attach (use_imap_credentials, 1, 2);
+        smtp_server_grid.attach (smtp_revealer, 0, 3, 2);
+        smtp_server_grid.attach (smtp_url_label, 0, 4);
+        smtp_server_grid.attach (smtp_server_entry, 1, 4);
+        smtp_server_grid.attach (smtp_encryption_label, 0, 5);
+        smtp_server_grid.attach (smtp_encryption_combobox, 1, 5);
+        smtp_server_grid.attach (smtp_port_label, 0, 6);
+        smtp_server_grid.attach (smtp_port_spin, 1, 6);
 
-        entry_grid.add (smtp_label);
-        entry_grid.add (no_credentials);
-        entry_grid.add (use_imap_credentials);
-        entry_grid.add (smtp_revealer);
-
-        entry_grid.add (smtp_settings_grid);
-        entry_grid.add (smtp_encryption_grid);
+        var smtp_sizegroup = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        smtp_sizegroup.add_widget (smtp_username_label);
+        smtp_sizegroup.add_widget (smtp_password_label);
+        smtp_sizegroup.add_widget (smtp_url_label);
+        smtp_sizegroup.add_widget (smtp_encryption_label);
+        smtp_sizegroup.add_widget (smtp_port_label);
 
         var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
-        var save_button = new Gtk.Button.with_label (_("Log In")) {
+        save_button = new Gtk.Button.with_label (_("Log In")) {
             can_default = true,
             has_default = true,
             sensitive = false
@@ -161,12 +200,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         action_area.add (cancel_button);
         action_area.add (save_button);
 
+
         var main_grid = new Gtk.Grid () {
             margin = 12,
             orientation = Gtk.Orientation.VERTICAL,
             row_spacing = 24
         };
-        main_grid.add (entry_grid);
+        main_grid.add (imap_server_grid);
+        main_grid.add (smtp_server_grid);
         main_grid.add (action_area);
 
         var window_handle = new Hdy.WindowHandle ();
@@ -189,20 +230,23 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         use_imap_credentials.bind_property ("active", smtp_revealer, "reveal-child", GLib.BindingFlags.INVERT_BOOLEAN);
 
-        // Be smart and propagate the domain to the server name.
         imap_username_entry.changed.connect (() => {
-            if ("@" in imap_username_entry.text) {
-                imap_username_entry.is_valid = true;
-
+            if (imap_username_entry.is_valid) {
                 var domain = imap_username_entry.text.split ("@", 2)[1].strip ().replace ("@", "");
                 if (domain.length > 0) {
                     imap_server_entry.text = "imap." + domain;
-
                     smtp_server_entry.text = "smtp." + domain;
                 }
-            } else {
-                imap_username_entry.is_valid = false;
+
+                smtp_username_entry.text = imap_username_entry.text;
             }
+
+            set_button_sensitivity ();
+        });
+
+        imap_server_entry.changed.connect (() => {
+            imap_server_entry.is_valid = imap_server_entry.text.length > 3;
+            set_button_sensitivity ();
         });
 
         imap_encryption_combobox.changed.connect (() => {
@@ -219,6 +263,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             }
         });
 
+        smtp_server_entry.changed.connect (() => {
+            smtp_server_entry.is_valid = smtp_server_entry.text.length > 3;
+            set_button_sensitivity ();
+        });
+
         smtp_encryption_combobox.changed.connect (() => {
             switch (smtp_encryption_combobox.active) {
                 case 1:
@@ -232,5 +281,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                     break;
             }
         });
+    }
+
+    private void set_button_sensitivity () {
+        save_button.sensitive = imap_username_entry.is_valid && imap_server_entry.is_valid && smtp_server_entry.is_valid;
     }
 }
