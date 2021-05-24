@@ -18,7 +18,7 @@
 *
 */
 
-public class CaldavView : Gtk.Grid {
+public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private Gtk.Button find_calendars_button;
     private ListStore calendars_store;
     private Gtk.ListBox calendars_list;
@@ -47,6 +47,7 @@ public class CaldavView : Gtk.Grid {
             halign = Gtk.Align.END,
             valign = Gtk.Align.END,
             vexpand = true,
+            margin_top = 24,
             sensitive = false
         };
 
@@ -95,7 +96,14 @@ public class CaldavView : Gtk.Grid {
         deck.add (login_page);
         deck.add (calendars_page);
 
-        add (deck);
+        var window_handle = new Hdy.WindowHandle ();
+        window_handle.add (deck);
+
+        default_height = 400;
+        default_width = 300;
+        window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+        modal = true;
+        add (window_handle);
 
         // mark as default
         // use offline
@@ -133,7 +141,7 @@ public class CaldavView : Gtk.Grid {
     }
 
     private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-        
+
     }
 
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {

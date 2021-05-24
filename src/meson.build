@@ -1,5 +1,5 @@
 plug_files = files(
-    'CaldavView.vala',
+    'Dialogs/CaldavDialog.vala',
     'MainView.vala',
     'Plug.vala',
     'ValidationMessage.vala'

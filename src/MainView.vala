@@ -20,30 +20,108 @@
 
 public class OnlineAccounts.MainView : Gtk.Grid {
     construct {
-        var caldav_view = new CaldavView ();
+        var welcome = new Granite.Widgets.AlertView (
+            _("Connect Your Online Accounts"),
+            _("Connect online accounts by clicking the icon in the toolbar below."),
+            "preferences-desktop-online-accounts"
+        );
+        welcome.show_all ();
 
-        var stack = new Gtk.Stack ();
-        stack.add_titled (caldav_view, "CalDAV", "CalDAV");
+        var listbox = new Gtk.ListBox ();
+        listbox.set_placeholder (welcome);
 
-        var stack_switcher = new Gtk.StackSwitcher () {
-            halign = Gtk.Align.CENTER,
-            stack = stack
-        };
-
-        var frame = new Gtk.Frame (null) {
+        var scroll = new Gtk.ScrolledWindow (null, null) {
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
             expand = true
         };
-        frame.add (stack);
-        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        scroll.add (listbox);
 
-        var grid = new Gtk.Grid () {
-            margin = 12,
-            row_spacing = 24
+        var caldav_menuitem = new AccountMenuItem (
+            "x-office-calendar",
+            _("CalDAV"),
+            _("Calendars and Tasks")
+        );
+
+        var add_acount_grid = new Gtk.Grid () {
+            margin_top = 3,
+            margin_bottom = 3
         };
-        grid.attach (stack_switcher, 0, 0);
-        grid.attach (frame, 0, 1);
+        add_acount_grid.add (caldav_menuitem);
+        add_acount_grid.show_all ();
 
-        add (grid);
+        var add_account_popover = new Gtk.Popover (null);
+        add_account_popover.add (add_acount_grid);
+
+        var add_button = new Gtk.MenuButton () {
+            always_show_image = true,
+            image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR),
+            label = _("Add Account…"),
+            popover = add_account_popover
+        };
+        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+
+        var action_bar = new Gtk.ActionBar ();
+        action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        action_bar.add (add_button);
+
+        var grid = new Gtk.Grid ();
+        grid.attach (scroll, 0, 0);
+        grid.attach (action_bar, 0, 1);
+
+        var frame = new Gtk.Frame (null) {
+            margin = 12
+        };
+        frame.add (grid);
+
+        add (frame);
         show_all ();
+
+        caldav_menuitem.clicked.connect (() => {
+            var caldav_dialog = new CaldavDialog () {
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+            caldav_dialog.show_all ();
+        });
+    }
+
+    private class AccountMenuItem : Gtk.Button {
+        public string icon_name { get; construct; }
+        public string primary_label { get; construct; }
+        public string secondary_label { get; construct; }
+
+        public AccountMenuItem (string icon_name, string primary_label, string secondary_label) {
+            Object (
+                icon_name: icon_name,
+                primary_label: primary_label,
+                secondary_label: secondary_label
+            );
+        }
+
+        class construct {
+            set_css_name (Gtk.STYLE_CLASS_MENUITEM);
+        }
+
+        construct {
+            var label = new Gtk.Label (primary_label) {
+                halign = Gtk.Align.START
+            };
+            label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+
+            var description = new Gtk.Label (secondary_label) {
+                halign = Gtk.Align.START
+            };
+            description.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+            var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+
+            var grid = new Gtk.Grid () {
+                column_spacing = 6
+            };
+            grid.attach (image, 0, 0, 1, 2);
+            grid.attach (label, 1, 0);
+            grid.attach (description, 1, 1);
+
+            add (grid);
+        }
     }
 }
