@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 elementary, Inc. (https://elementary.io)
+* Copyright 2020-2021 elementary, Inc. (https://elementary.io)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -121,12 +121,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         modal = true;
         add (window_handle);
 
-        // mark as default
-        // use offline
-        // email
-        // server handles invitations
-        // refresh rate
-
         cancel_button.clicked.connect (() => {
             destroy ();
         });
@@ -226,13 +220,14 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         try {
             var source = new E.Source (null, null);
             source.parent = "caldav-stub";
+
             unowned var cal = (E.SourceCalendar)source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
-            //cal.color = color;
             cal.backend_name = "caldav";
+
             unowned var webdav = (E.SourceWebdav)source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
             webdav.soup_uri = new Soup.URI (url_entry.text);
-            //webdav.email_address = ((Gtk.Entry)widget.widget).text;
             webdav.calendar_auto_schedule = true;
+
             unowned var auth = (E.SourceAuthentication)source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
             auth.user = username_entry.text;
 
@@ -242,6 +237,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             var credentials = new E.NamedParameters ();
             credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
             credentials.set (E.SOURCE_CREDENTIAL_PASSWORD, password_entry.text);
+
             E.webdav_discover_sources.begin (source, null, E.WebDAVDiscoverSupports.CALENDAR_AUTO_SCHEDULE, credentials, cancellable, (obj, res) => {
                 string certificate_pem;
                 GLib.TlsCertificateFlags certificate_errors;
@@ -276,11 +272,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         } catch (GLib.Error error) {
             critical (error.message);
         }
-
-        /*var registry = new SourceRegistry.sync (null);
-        var list = new List<E.Source> ();
-        list.append (source);
-        registry.create_sources_sync (list);*/
     }
 
     private class CalendarRow : Gtk.ListBoxRow {
