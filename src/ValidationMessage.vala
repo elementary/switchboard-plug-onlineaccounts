@@ -19,36 +19,25 @@
 
 private class ValidationMessage : Gtk.Revealer {
     public Gtk.Label label_widget;
-
-    private string _label;
-    public string label {
-        get {
-            return _label;
-        }
-        construct set {
-            _label = value;
-
-            if (label_widget != null) {
-                label_widget.label = "<span font_size=\"small\">%s</span>".printf (value);
-            }
-        }
-    }
+    public string label { get; construct set; }
 
     public ValidationMessage (string label) {
         Object (label: label);
     }
 
     construct {
-        label_widget = new Gtk.Label ("<span font_size=\"small\">%s</span>".printf (_label)) {
+        label_widget = new Gtk.Label (label) {
             halign = Gtk.Align.END,
             justify = Gtk.Justification.RIGHT,
             max_width_chars = 55,
-            use_markup = true,
             wrap = true,
             xalign = 1
         };
+        label_widget.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         transition_type = Gtk.RevealerTransitionType.CROSSFADE;
         add (label_widget);
+
+        bind_property ("label", label_widget, "label");
     }
 }
