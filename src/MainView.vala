@@ -90,6 +90,13 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             };
             caldav_dialog.show_all ();
         });
+
+        icloud_menuitem.clicked.connect (() => {
+            var icloud_dialog = new iCloudDialog () {
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+            icloud_dialog.show_all ();
+        });
     }
 
     private class AccountMenuItem : Gtk.Button {

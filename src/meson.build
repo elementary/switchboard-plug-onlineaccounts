@@ -1,5 +1,6 @@
 plug_files = files(
     'Dialogs/CaldavDialog.vala',
+    'Dialogs/iCloudDialog.vala',
     'MainView.vala',
     'Plug.vala',
     'Widgets/ValidationMessage.vala'
