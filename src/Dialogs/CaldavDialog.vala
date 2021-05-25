@@ -142,7 +142,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         var display_name_page_back_button = new Gtk.Button.with_label (_("Back"));
 
-        var display_name_page_action_area = new Gtk.ButtonBox  (Gtk.Orientation.HORIZONTAL) {
+        var display_name_page_action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
             layout_style = Gtk.ButtonBoxStyle.END,
             margin_top = 24,
             spacing = 6
