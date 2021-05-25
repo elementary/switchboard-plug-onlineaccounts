@@ -92,7 +92,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         });
 
         icloud_menuitem.clicked.connect (() => {
-            var icloud_dialog = new iCloudDialog () {
+            var icloud_dialog = new ICloudDialog () {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             icloud_dialog.show_all ();

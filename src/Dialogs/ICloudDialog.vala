@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.iCloudDialog : Hdy.Window {
+public class OnlineAccounts.ICloudDialog : Hdy.Window {
     private Granite.ValidatedEntry password_entry;
     private Granite.ValidatedEntry username_entry;
     private Gtk.Button login_button;
