@@ -40,7 +40,8 @@ public class OnlineAccounts.ICloudDialog : Hdy.Window {
         }
 
         password_entry = new Granite.ValidatedEntry.from_regex (app_password_regex) {
-            input_purpose = Gtk.InputPurpose.PASSWORD
+            input_purpose = Gtk.InputPurpose.PASSWORD,
+            max_length = 19
         };
 
         var app_password_help = new Gtk.LinkButton.with_label (
