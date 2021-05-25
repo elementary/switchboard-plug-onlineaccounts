@@ -104,14 +104,20 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         };
         label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
+        var description = new Gtk.Label (e_source.parent) {
+            halign = Gtk.Align.START
+        };
+        description.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
         var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
 
         var grid = new Gtk.Grid () {
             column_spacing = 6,
-            margin = 3
+            margin = 6
         };
-        grid.attach (image, 0, 0);
+        grid.attach (image, 0, 0, 1, 2);
         grid.attach (label, 1, 0);
+        grid.attach (description, 1, 1);
         grid.show_all ();
 
         return grid;

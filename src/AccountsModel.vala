@@ -31,24 +31,36 @@ public class OnlineAccounts.AccountsModel : Object {
         try {
             var registry = yield new E.SourceRegistry (null);
 
-            registry.source_added.connect ((account) => {
-                accounts_liststore.append (account);
-            });
+            registry.source_added.connect (add_esource);
 
-            registry.source_removed.connect ((account) => {
+            registry.source_removed.connect ((e_source) => {
                 uint position;
-                if (accounts_liststore.find (account, out position)) {
+                if (accounts_liststore.find (e_source, out position)) {
                     accounts_liststore.remove (position);
                 } else {
-                    critical ("Can't remove: %s", account.dup_display_name ());
+                    critical ("Can't remove: %s", e_source.dup_display_name ());
                 }
             });
 
-            registry.list_sources (null).foreach ((account) => {
-                accounts_liststore.append (account);
+            registry.list_sources (null).foreach ((e_source) => {
+                add_esource (e_source);
             });
         } catch (Error e) {
             critical (e.message);
+        }
+    }
+
+    private void add_esource (E.Source e_source) {
+        if (e_source.parent == null || e_source.parent == "local-stub" || e_source.parent == "contacts-stub") {
+            return;
+        }
+
+        if (
+            e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST) ||
+            e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR) ||
+            e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)
+        ) {
+            accounts_liststore.append (e_source);
         }
     }
 }
