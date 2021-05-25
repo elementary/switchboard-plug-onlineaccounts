@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/elementary/switchboard/onlineaccounts">
+    <file alias="onlineaccounts-mail.svg" compressed="true" preprocess="xml-stripblanks">icons/mail.svg</file>
+    <file alias="onlineaccounts-tasks.svg" compressed="true" preprocess="xml-stripblanks">icons/tasks.svg</file>
+  </gresource>
+</gresources>

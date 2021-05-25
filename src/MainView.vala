@@ -92,11 +92,11 @@ public class OnlineAccounts.MainView : Gtk.Grid {
 
         var icon_name = "online-account";
         if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
-            icon_name = "io.elementary.tasks";
+            icon_name = "onlineaccounts-tasks";
         } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
             icon_name = "x-office-calendar";
         } else if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-            icon_name = "io.elementary.mail";
+            icon_name = "onlineaccounts-mail";
         }
 
         var label = new Gtk.Label (e_source.display_name) {
