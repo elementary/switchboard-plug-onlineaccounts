@@ -42,11 +42,19 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             _("Calendars and Tasks")
         );
 
+        var icloud_menuitem = new AccountMenuItem (
+            "onlineaccounts-icloud",
+            _("iCloud"),
+            _("Calendars and Mail")
+        );
+
         var add_acount_grid = new Gtk.Grid () {
             margin_top = 3,
-            margin_bottom = 3
+            margin_bottom = 3,
+            orientation = Gtk.Orientation.VERTICAL
         };
         add_acount_grid.add (caldav_menuitem);
+        add_acount_grid.add (icloud_menuitem);
         add_acount_grid.show_all ();
 
         var add_account_popover = new Gtk.Popover (null);
