@@ -32,6 +32,7 @@ public class OnlineAccounts.ICloudDialog : Hdy.Window {
 
         var password_label = new Granite.HeaderLabel (_("App-Specific Password"));
 
+        // Apple app-passwords are in the format xxxx-xxxx-xxxx-xxxx
         Regex? app_password_regex = null;
         try {
             app_password_regex = new Regex ("^[a-zA-Z]{4}-{1}[a-zA-Z]{4}-{1}[a-zA-Z]{4}-{1}[a-zA-Z]{4}$");
