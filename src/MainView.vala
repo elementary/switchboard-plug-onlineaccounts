@@ -20,6 +20,8 @@
 
 public class OnlineAccounts.MainView : Gtk.Grid {
     construct {
+        var accountsmodel = new AccountsModel ();
+
         var welcome = new Granite.Widgets.AlertView (
             _("Connect Your Online Accounts"),
             _("Connect online accounts by clicking the icon in the toolbar below."),
@@ -28,6 +30,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         welcome.show_all ();
 
         var listbox = new Gtk.ListBox ();
+        listbox.bind_model (accountsmodel.accounts_liststore, create_account_row);
         listbox.set_placeholder (welcome);
 
         var scroll = new Gtk.ScrolledWindow (null, null) {
@@ -82,6 +85,36 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             };
             caldav_dialog.show_all ();
         });
+    }
+
+    private Gtk.Widget create_account_row (GLib.Object object) {
+        var e_source = (E.Source) object;
+
+        var icon_name = "online-account";
+        if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
+            icon_name = "io.elementary.tasks";
+        } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
+            icon_name = "x-office-calendar";
+        } else if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+            icon_name = "io.elementary.mail";
+        }
+
+        var label = new Gtk.Label (e_source.display_name) {
+            halign = Gtk.Align.START
+        };
+        label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+
+        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+
+        var grid = new Gtk.Grid () {
+            column_spacing = 6,
+            margin = 3
+        };
+        grid.attach (image, 0, 0);
+        grid.attach (label, 1, 0);
+        grid.show_all ();
+
+        return grid;
     }
 
     private class AccountMenuItem : Gtk.Button {

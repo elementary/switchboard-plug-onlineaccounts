@@ -1,4 +1,5 @@
 plug_files = files(
+    'AccountsModel.vala',
     'Dialogs/CaldavDialog.vala',
     'MainView.vala',
     'Plug.vala',
