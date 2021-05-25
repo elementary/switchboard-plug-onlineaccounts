@@ -37,8 +37,6 @@ public class OnlineAccounts.AccountsModel : Object {
                 uint position;
                 if (accounts_liststore.find (e_source, out position)) {
                     accounts_liststore.remove (position);
-                } else {
-                    critical ("Can't remove: %s", e_source.dup_display_name ());
                 }
             });
 
@@ -56,9 +54,9 @@ public class OnlineAccounts.AccountsModel : Object {
         }
 
         if (
-            e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST) ||
             e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR) ||
-            e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)
+            e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT) ||
+            e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)
         ) {
             accounts_liststore.append (e_source);
         }
