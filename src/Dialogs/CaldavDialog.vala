@@ -100,7 +100,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         calendars_list = new Gtk.ListBox () {
             expand = true
         };
-        calendars_list.set_sort_func (sort_func);
         calendars_list.set_header_func (header_func);
         calendars_list.bind_model (calendars_store, create_item);
 
@@ -289,29 +288,18 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         deck.navigate (Hdy.NavigationDirection.BACK);
     }
 
-    private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
-        var source_row1 = (SourceRow) row1;
-        var source_row2 = (SourceRow) row2;
-
-        if (source_row1.source.has_extension (E.SOURCE_EXTENSION_CALENDAR) && source_row2.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
-            return -1;
-        } else if (source_row1.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST) && source_row2.source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
-            return 1;
-        } else {
-            return source_row1.source.display_name.collate (source_row2.source.display_name);
-        }
-    }
-
     private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
         var source_row = (SourceRow) row;
         var is_calendar = source_row.source.has_extension (E.SOURCE_EXTENSION_CALENDAR);
         var is_tasklist = source_row.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST);
 
-        if (before ==  null) {
+        Granite.HeaderLabel? header_label = null;
+
+        if (before == null) {
             if (is_calendar) {
-                row.set_header (new Granite.HeaderLabel (_("Calendars")));
+                header_label = new Granite.HeaderLabel (_("Calendars"));
             } else if (is_tasklist) {
-                row.set_header (new Granite.HeaderLabel (_("Task Lists")));
+                header_label = new Granite.HeaderLabel (_("Task Lists"));
             }
 
         } else {
@@ -320,10 +308,14 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             var before_is_tasklist = before_source_row.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST);
 
             if (before_is_calendar && is_tasklist) {
-                row.set_header (new Granite.HeaderLabel (_("Task Lists")));
+                header_label = new Granite.HeaderLabel (_("Task Lists"));
             } else if (before_is_tasklist && is_calendar) {
-                row.set_header (new Granite.HeaderLabel (_("Calendars")));
+                header_label = new Granite.HeaderLabel (_("Calendars"));
             }
+        }
+
+        if (header_label != null) {
+            row.set_header (header_label);
         }
     }
 
@@ -394,12 +386,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
             credentials.set (E.SOURCE_CREDENTIAL_PASSWORD, password_entry.text);
 
-            var calendars = yield find_sources_supporting (E.WebDAVDiscoverSupports.EVENTS, source, credentials, cancellable);
-            var tasklists = yield find_sources_supporting (E.WebDAVDiscoverSupports.TASKS, source, credentials, cancellable);
+            var found_calendars = yield find_sources_supporting (E.WebDAVDiscoverSupports.EVENTS, source, credentials, cancellable);
+            var found_tasklists = yield find_sources_supporting (E.WebDAVDiscoverSupports.TASKS, source, credentials, cancellable);
 
             Idle.add (() => {
-                calendars_store.splice (0, 0, (Object[]) calendars);
-                calendars_store.splice (calendars.length, 0, (Object[]) tasklists);
+                calendars_store.splice (0, 0, (Object[]) found_calendars);
+                calendars_store.splice (found_calendars.length, 0, (Object[]) found_tasklists);
                 save_configuration_button.sensitive = true;
                 return Source.REMOVE;
             });
@@ -445,12 +437,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
                     switch (only_supports) {
                         case E.WebDAVDiscoverSupports.EVENTS:
-                            unowned var calendar = (E.SourceCalendar) source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
+                            unowned var calendar = (E.SourceCalendar) e_source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
                             calendar.backend_name = "caldav";
                             calendar.color = disc_source.color;
                             break;
                         case E.WebDAVDiscoverSupports.TASKS:
-                            unowned var tasklist = (E.SourceTaskList) source.get_extension (E.SOURCE_EXTENSION_TASK_LIST);
+                            unowned var tasklist = (E.SourceTaskList) e_source.get_extension (E.SOURCE_EXTENSION_TASK_LIST);
                             tasklist.backend_name = "caldav";
                             tasklist.color = disc_source.color;
                             break;
