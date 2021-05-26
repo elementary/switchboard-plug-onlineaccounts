@@ -42,6 +42,9 @@ public class OnlineAccounts.AccountsModel : Object {
             var mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
             mail_account_extension_watcher.appeared.connect (add_esource);
             mail_account_extension_watcher.disappeared.connect (remove_esource);
+            mail_account_extension_watcher.filter.connect ((e_source) => {
+                return e_source.parent != null;
+            });
             mail_account_extension_watcher.reclaim ();
 
         } catch (Error e) {
