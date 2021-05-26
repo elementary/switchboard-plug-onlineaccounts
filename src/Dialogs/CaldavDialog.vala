@@ -95,7 +95,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         display_name_hint_label.set_line_wrap (true);
         display_name_hint_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        calendars_store = new ListStore (typeof (FoundCalendar));
+        calendars_store = new ListStore (typeof (E.Source));
 
         calendars_list = new Gtk.ListBox () {
             expand = true
@@ -292,7 +292,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         var cal_row1 = (CalendarRow) row1;
         var cal_row2 = (CalendarRow) row2;
 
-        return cal_row1.label.collate (cal_row2.label);
+        return cal_row1.source.display_name.collate (cal_row2.source.display_name);
     }
 
     private void validate_form () {
@@ -308,22 +308,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         return scheme.has_prefix ("http");
     }
 
-    private class FoundCalendar : GLib.Object {
-        public string name;
-        public string href;
-        public string? color;
-        public FoundCalendar (string name, string href, string? color) {
-            this.name = name;
-            this.href = href;
-            this.color = color;
-        }
-    }
-
     [ CCode ( instance_pos = 1.9 ) ]
     public Gtk.Widget create_item (GLib.Object item) {
-        unowned FoundCalendar cal = (FoundCalendar)item;
-        var row = new CalendarRow (cal.name, cal.color);
+        var row = new CalendarRow ((E.Source) item);
         row.show_all ();
+
         return row;
     }
 
@@ -381,9 +370,17 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 cancellable = null;
                 try {
                     E.webdav_discover_sources_finish (source, res, out certificate_pem, out certificate_errors, out discovered_sources, out calendar_user_addresses);
-                    FoundCalendar[] calendars = {};
+                    E.Source[] calendars = {};
                     foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
-                        calendars += new FoundCalendar (disc_source.display_name, disc_source.href, disc_source.color);
+                        var e_source = new E.Source (null, null) {
+                            display_name = disc_source.display_name
+                        };
+
+                        unowned var webdav_source = (E.SourceWebdav) e_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+                        webdav_source.soup_uri = new Soup.URI (disc_source.href);
+                        webdav_source.color = disc_source.color;
+
+                        calendars += e_source;
                     }
                     E.webdav_discover_do_free_discovered_sources ((owned) discovered_sources);
                     Idle.add (() => {
@@ -444,15 +441,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         sources.append (collection_source);
 
         /* next we add all child sources */
-        FoundCalendar? found_calendar = null;
+        E.Source? source = null;
         var position = 0;
-        while ((found_calendar = (FoundCalendar) calendars_store.get_item (position)) != null) {
+        while ((source = (E.Source) calendars_store.get_item (position)) != null) {
             position++;
 
-            var source = new E.Source (null, null) {
-                display_name = found_calendar.name,
-                parent = collection_source.dup_uid ()
-            };
+            source.parent = collection_source.dup_uid ();
 
             if (!source.has_extension (E.SOURCE_EXTENSION_AUTHENTICATION)) {
                 /**
@@ -464,7 +458,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             }
 
             unowned var webdav = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
-            webdav.soup_uri = new Soup.URI (found_calendar.href);
             webdav.calendar_auto_schedule = true;
 
             unowned var offline = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
@@ -474,7 +467,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             // Depending on the supported item types. We probably need to extend FoundCalendar to
             // carry this piece of information...
             unowned var calendar = (E.SourceCalendar) source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
-            calendar.color = found_calendar.color;
             calendar.backend_name = "caldav";
 
             sources.append (source);
@@ -486,18 +478,14 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     private class CalendarRow : Gtk.ListBoxRow {
-        public string color { get; construct; }
-        public string label { get; construct; }
+        public E.Source source { get; construct; }
 
-        public CalendarRow (string label, string color) {
-            Object (
-                color: color.slice (0, 7),
-                label: label
-            );
+        public CalendarRow (E.Source source) {
+            Object (source: source);
         }
 
         construct {
-            var name_entry = new Gtk.Label (label);
+            var name_entry = new Gtk.Label (source.display_name);
             name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
 
             var grid = new Gtk.Grid () {
@@ -508,11 +496,13 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
             add (grid);
 
-            style_calendar_color (name_entry, color);
+            unowned var webdav_source = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+
+            style_calendar_color (name_entry, webdav_source.color);
         }
 
         private void style_calendar_color (Gtk.Widget widget, string color) {
-            var css_color = "@define-color accent_color %s;".printf (color);
+            var css_color = "@define-color accent_color %s;".printf (color.slice (0, 7));
 
             var style_provider = new Gtk.CssProvider ();
 
