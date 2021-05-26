@@ -3,6 +3,7 @@ plug_files = files(
     'Dialogs/ImapDialog.vala',
     'MainView.vala',
     'Plug.vala',
+    'Widgets/AccountMenuItem.vala',
     'Widgets/ValidationMessage.vala'
 )
 
