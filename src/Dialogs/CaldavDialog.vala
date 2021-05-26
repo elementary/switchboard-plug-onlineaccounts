@@ -277,7 +277,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         var cal_row1 = (CalendarRow) row1;
         var cal_row2 = (CalendarRow) row2;
 
-        return cal_row1.label.collate (cal_row2.label);
+        return cal_row1.source.display_name.collate (cal_row2.source.display_name);
     }
 
     private void validate_form () {
@@ -295,10 +295,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
     [ CCode ( instance_pos = 1.9 ) ]
     public Gtk.Widget create_item (GLib.Object item) {
-        unowned var e_source = (E.Source) item;
-        unowned var webdav_source = (E.SourceWebdav) e_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
-
-        var row = new CalendarRow (e_source.display_name, webdav_source.color);
+        var row = new CalendarRow ((E.Source) item);
         row.show_all ();
 
         return row;
@@ -466,18 +463,14 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     private class CalendarRow : Gtk.ListBoxRow {
-        public string color { get; construct; }
-        public string label { get; construct; }
+        public E.Source source { get; construct; }
 
-        public CalendarRow (string label, string color) {
-            Object (
-                color: color.slice (0, 7),
-                label: label
-            );
+        public CalendarRow (E.Source source) {
+            Object (source: source);
         }
 
         construct {
-            var name_entry = new Gtk.Label (label);
+            var name_entry = new Gtk.Label (source.display_name);
             name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
 
             var grid = new Gtk.Grid () {
@@ -488,11 +481,13 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
             add (grid);
 
-            style_calendar_color (name_entry, color);
+            unowned var webdav_source = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+
+            style_calendar_color (name_entry, webdav_source.color);
         }
 
         private void style_calendar_color (Gtk.Widget widget, string color) {
-            var css_color = "@define-color accent_color %s;".printf (color);
+            var css_color = "@define-color accent_color %s;".printf (color.slice (0, 7));
 
             var style_provider = new Gtk.CssProvider ();
 
