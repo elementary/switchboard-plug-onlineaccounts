@@ -22,7 +22,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry url_entry;
     private Granite.ValidatedEntry username_entry;
-    private Gtk.Button find_calendars_button;
+    private Gtk.Button login_button;
     private Gtk.Button save_configuration_button;
     private Gtk.Button save_configuration_close_button;
     private Gtk.Entry display_name_entry;
@@ -46,16 +46,18 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         var password_label = new Granite.HeaderLabel (_("Password"));
         password_entry = new Gtk.Entry () {
+            activates_default = true,
+            input_purpose = Gtk.InputPurpose.PASSWORD,
             visibility = false
         };
 
         var login_cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
-        find_calendars_button = new Gtk.Button.with_label (_("Log In")) {
+        login_button = new Gtk.Button.with_label (_("Log In")) {
             can_default = true,
             sensitive = false
         };
-        find_calendars_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        login_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
             layout_style = Gtk.ButtonBoxStyle.END,
@@ -65,7 +67,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             vexpand = true
         };
         action_area.add (login_cancel_button);
-        action_area.add (find_calendars_button);
+        action_area.add (login_button);
 
         var login_page = new Gtk.Grid () {
             orientation = Gtk.Orientation.VERTICAL,
@@ -113,7 +115,9 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         var calendar_page_back_button = new Gtk.Button.with_label (_("Back"));
 
-        save_configuration_button = new Gtk.Button.with_label (_("Save"));
+        save_configuration_button = new Gtk.Button.with_label (_("Save")) {
+            can_default = true
+        };
         save_configuration_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         var calendar_page_action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
@@ -196,15 +200,19 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         default_width = 300;
         window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
         modal = true;
+        type_hint = Gdk.WindowTypeHint.DIALOG;
         add (window_handle);
+
+        login_button.has_default = true;
 
         login_cancel_button.clicked.connect (() => {
             destroy ();
         });
 
-        find_calendars_button.clicked.connect (() => {
+        login_button.clicked.connect (() => {
             find_calendars ();
             deck.visible_child = calendars_page;
+            save_configuration_button.has_default = true;
         });
 
         save_configuration_button.clicked.connect (() => {
@@ -242,8 +250,15 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             destroy ();
         });
 
-        calendar_page_back_button.clicked.connect (back_button_clicked);
-        save_configuration_back_button.clicked.connect (back_button_clicked);
+        calendar_page_back_button.clicked.connect (() => {
+            back_button_clicked ();
+            login_button.has_default = true;
+        });
+
+        save_configuration_back_button.clicked.connect (() => {
+            back_button_clicked ();
+            save_configuration_button.has_default = true;
+        });
 
         url_entry.changed.connect (() => {
             if (url_entry.text != null && url_entry.text != "") {
@@ -281,7 +296,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     private void validate_form () {
-        find_calendars_button.sensitive = url_entry.is_valid && username_entry.is_valid;
+        login_button.sensitive = url_entry.is_valid && username_entry.is_valid;
     }
 
     private bool is_valid_url (string uri) {
