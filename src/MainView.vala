@@ -90,7 +90,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
     private Gtk.Widget create_account_row (GLib.Object object) {
         var e_source = (E.Source) object;
 
-        var icon_name = "online-account";
+        var icon_name = "onlineaccounts";
         if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
             icon_name = "onlineaccounts-tasks";
         } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
@@ -100,11 +100,17 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         }
 
         var label = new Gtk.Label (e_source.display_name) {
-            halign = Gtk.Align.START
+            halign = Gtk.Align.START,
+            hexpand = true
         };
         label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
         var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+
+        var remove_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU) {
+            tooltip_text = _("Remove this account")
+        };
+        remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         var grid = new Gtk.Grid () {
             column_spacing = 6,
@@ -112,7 +118,29 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         };
         grid.attach (image, 0, 0);
         grid.attach (label, 1, 0);
+        grid.attach (remove_button, 2, 0);
         grid.show_all ();
+
+        remove_button.clicked.connect (() => {
+            var message_dialog = new Granite.MessageDialog (
+                _("Remove “%s” from this device").printf (e_source.display_name),
+                _("This account will be removed and will no longer appear in apps on this device."),
+                new ThemedIcon (icon_name),
+                Gtk.ButtonsType.CANCEL
+            ) {
+                badge_icon = new ThemedIcon ("edit-delete"),
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+
+            var accept_button = (Gtk.Button) message_dialog.add_button (_("Remove Account"), Gtk.ResponseType.ACCEPT);
+            accept_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+            if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
+                e_source.remove (null);
+            }
+
+            message_dialog.destroy ();
+        });
 
         return grid;
     }
