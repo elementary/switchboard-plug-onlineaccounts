@@ -1,5 +1,6 @@
 plug_files = files(
     'Dialogs/CaldavDialog.vala',
+    'Dialogs/ICloudDialog.vala',
     'MainView.vala',
     'Plug.vala',
     'Widgets/AccountMenuItem.vala',
@@ -10,6 +11,7 @@ switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define
 
 shared_module(
     meson.project_name(),
+    gresource,
     plug_files,
     dependencies: [
         glib_dep,
