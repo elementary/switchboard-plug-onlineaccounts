@@ -19,6 +19,8 @@
 */
 
 public class OnlineAccounts.ImapDialog : Hdy.Window {
+    private GLib.Cancellable? cancellable;
+
     private Granite.ValidatedEntry imap_server_entry;
     private Granite.ValidatedEntry imap_username_entry;
     private Granite.ValidatedEntry smtp_server_entry;
@@ -281,9 +283,45 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                     break;
             }
         });
+
+
+        save_button.clicked.connect (() => {
+            save_configuration.begin ((obj, res) => {
+                try {
+                    save_configuration.end (res);
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            });
+        });
     }
 
     private void set_button_sensitivity () {
         save_button.sensitive = imap_username_entry.is_valid && imap_server_entry.is_valid && smtp_server_entry.is_valid;
+    }
+
+    private async void save_configuration () throws Error {
+        if (cancellable != null) {
+            cancellable.cancel ();
+        }
+        cancellable = new GLib.Cancellable ();
+
+        var registry = yield new E.SourceRegistry (cancellable);
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
+
+        var source = new E.Source (null, null) {
+            parent = "",
+            display_name = imap_username_entry.text
+        };
+
+        unowned var auth_extension = (E.SourceAuthentication) source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+        auth_extension.user = imap_username_entry.text;
+
+        var sources = new GLib.List<E.Source> ();
+        sources.append (source);
+
+        yield registry.create_sources (sources, cancellable);
     }
 }
