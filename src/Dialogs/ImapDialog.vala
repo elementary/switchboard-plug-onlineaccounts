@@ -319,6 +319,28 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         unowned var auth_extension = (E.SourceAuthentication) source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
         auth_extension.user = imap_username_entry.text;
 
+        unowned var mail_account_extension = (E.SourceMailAccount) source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+        mail_account_extension.backend_name = "imap";
+        // mail_account_extension.identity_uid = ;
+
+        unowned var mail_identity_extension = (E.SourceMailIdentity) source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
+        mail_identity_extension.name = Environment.get_real_name ();
+
+        unowned var mail_submission_extension = (E.SourceMailSubmission) source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
+        // mail_submission_extension.set_transport_uid ();
+
+        unowned var mail_transport_extension = (E.SourceMailTransport) source.get_extension (E.SOURCE_EXTENSION_MAIL_TRANSPORT);
+        mail_transport_extension.backend_name = "smtp";
+
+        if (!source.has_extension (E.SOURCE_EXTENSION_AUTHENTICATION)) {
+            /**
+             * Make sure the source has the Authentication extension,
+             * thus the credentials can be reused. It's fine when the extension
+             * doesn't have set values.
+            */
+            source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+        }
+
         var sources = new GLib.List<E.Source> ();
         sources.append (source);
 
