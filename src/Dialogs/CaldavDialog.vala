@@ -23,6 +23,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private Gtk.Button find_calendars_button;
     private Gtk.Button add_calendars_button;
     private Gtk.Button save_configuration_close_button;
+    private Gtk.Stack save_configuration_page_stack;
     private ListStore calendars_store;
     private Gtk.ListBox calendars_list;
     private Gtk.Grid display_name_grid;
@@ -156,21 +157,25 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         display_name_page.attach (display_name_grid, 0, 0);
         display_name_page.attach (display_name_page_action_area, 0, 1);
 
-        var save_configuration_label = new Gtk.Label (_("Saving the configuration…"));
+        var save_configuration_busy_label = new Gtk.Label (_("Saving the configuration…"));
 
-        var save_configuration_spinner = new Gtk.Spinner ();
-        save_configuration_spinner.start ();
+        var save_configuration_busy_spinner = new Gtk.Spinner ();
+        save_configuration_busy_spinner.start ();
 
-        var save_configuration_grid = new Gtk.Grid () {
-            expand = true,
-            column_spacing = 6,
-            halign = Gtk.Align.CENTER,
-            valign = Gtk.Align.CENTER
+        var save_configuration_busy_grid = new Gtk.Grid () {
+            column_spacing = 6
         };
-        save_configuration_grid.add (save_configuration_label);
-        save_configuration_grid.add (save_configuration_spinner);
+        save_configuration_busy_grid.add (save_configuration_busy_label);
+        save_configuration_busy_grid.add (save_configuration_busy_spinner);
 
-        var save_configuration_page_back_button = new Gtk.Button.with_label (_("Back"));
+        var save_configuration_success_view = new Granite.Widgets.AlertView (
+            _("Success"),
+            _("The CalDAV account has been sucessfuly added."),
+            "process-completed"
+        );
+        save_configuration_success_view.show_all ();
+
+        var save_configuration_back_button = new Gtk.Button.with_label (_("Back"));
         save_configuration_close_button = new Gtk.Button.with_label (_("Close"));
         save_configuration_close_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -179,14 +184,23 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             margin_top = 24,
             spacing = 6
         };
-        save_configuration_page_action_area.add (save_configuration_page_back_button);
+        save_configuration_page_action_area.add (save_configuration_back_button);
         save_configuration_page_action_area.add (save_configuration_close_button);
 
         var save_configuration_page = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
             margin = 12
         };
 
-        save_configuration_page.add (save_configuration_grid);
+        save_configuration_page_stack = new Gtk.Stack () {
+            expand = true,
+            homogeneous = false,
+            halign = Gtk.Align.CENTER,
+            valign = Gtk.Align.CENTER
+        };
+        save_configuration_page_stack.add_named (save_configuration_busy_grid, "busy");
+        save_configuration_page_stack.add_named (save_configuration_success_view, "success");
+
+        save_configuration_page.add (save_configuration_page_stack);
         save_configuration_page.add (save_configuration_page_action_area);
 
         deck = new Hdy.Deck () {
@@ -222,8 +236,34 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         });
 
         save_configuration_button.clicked.connect (() => {
-            save_configuration ();
             deck.visible_child = save_configuration_page;
+            save_configuration_close_button.sensitive = false;
+            save_configuration_page_stack.set_visible_child_name ("busy");
+
+            save_configuration.begin ((obj, res) => {
+                save_configuration_close_button.sensitive = true;
+
+                try {
+                    save_configuration.end (res);
+                    save_configuration_back_button.sensitive = false;
+                    save_configuration_page_stack.set_visible_child_name ("success");
+
+                } catch (Error e) {
+                    var error_view = save_configuration_page_stack.get_child_by_name ("error");
+                    if (error_view != null) {
+                        save_configuration_page_stack.remove (error_view);
+                    }
+                    error_view = new Granite.Widgets.AlertView (
+                        _("Error Saving Configuration"),
+                        e.message,
+                        "dialog-error"
+                    );
+                    error_view.show_all ();
+
+                    save_configuration_page_stack.add_named (error_view, "error");
+                    save_configuration_page_stack.set_visible_child_name ("error");
+                }
+            });
         });
 
         save_configuration_close_button.clicked.connect (() => {
@@ -232,7 +272,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         calendar_page_back_button.clicked.connect (back_button_clicked);
         display_name_page_back_button.clicked.connect (back_button_clicked);
-        save_configuration_page_back_button.clicked.connect (back_button_clicked);
+        save_configuration_back_button.clicked.connect (back_button_clicked);
 
         url_entry.changed.connect (() => {
             if (url_entry.text != null && url_entry.text != "") {
@@ -330,8 +370,8 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             var source = new E.Source (null, null);
             source.parent = "caldav-stub";
 
-            unowned var cal = (E.SourceCalendar)source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
-            cal.backend_name = "caldav";
+            unowned var col = (E.SourceCollection)source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
+            col.backend_name = "caldav";
 
             unowned var webdav = (E.SourceWebdav)source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
             webdav.soup_uri = new Soup.URI (url_entry.text);
@@ -384,13 +424,78 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         }
     }
 
-    private void save_configuration () {
+    private async void save_configuration () throws Error {
         if (cancellable != null) {
             cancellable.cancel ();
         }
-
         cancellable = new GLib.Cancellable ();
-        save_configuration_close_button.sensitive = false;
+
+        var registry = yield new E.SourceRegistry (cancellable);
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
+        GLib.List<E.Source> sources = new GLib.List<E.Source> ();
+
+        /* store the collection source first, so we can use it as parent for the other ones */
+        var collection_source = new E.Source (null, null);
+        collection_source.parent = "";
+        collection_source.display_name = display_name_entry.text;
+
+        unowned var collection_extension = (E.SourceCollection) collection_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
+        collection_extension.backend_name = "webdav";
+        collection_extension.identity = username_entry.text;
+
+        unowned var authentication_extension = (E.SourceAuthentication) collection_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+        authentication_extension.user = username_entry.text;
+
+        unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+        webdav_extension.soup_uri = new Soup.URI (url_entry.text);
+        webdav_extension.calendar_auto_schedule = true;
+
+        unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
+        offline_extension.set_stay_synchronized (true);
+
+        sources.append (collection_source);
+
+        /* next we add all child sources */
+        FoundCalendar? found_calendar = null;
+        var position = 0;
+        while ((found_calendar = (FoundCalendar) calendars_store.get_item (position)) != null) {
+            position++;
+
+            var source = new E.Source (null, null);
+            source.parent = collection_source.dup_uid ();
+            source.display_name = found_calendar.name;
+
+            if (!source.has_extension (E.SOURCE_EXTENSION_AUTHENTICATION)) {
+                /**
+                 * Make sure the source has the Authentication extension,
+                 * thus the credentials can be reused. It's fine when the extension
+                 * doesn't have set values.
+                */
+                unowned var authentication = (E.SourceAuthentication) source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+            }
+
+            unowned var webdav = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+            webdav.soup_uri = new Soup.URI (found_calendar.href);
+            webdav.calendar_auto_schedule = true;
+
+            unowned var offline = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
+            offline.set_stay_synchronized (true);
+
+            // TODO: Set color in E.SOURCE_EXTENSION_TASK_LIST and/or E.SOURCE_EXTENSION_CALENDAR.
+            // Depending on the supported item types. We probably need to extend FoundCalendar to
+            // carry this piece of information...
+            unowned var calendar = (E.SourceCalendar) source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
+            calendar.color = found_calendar.color;
+            calendar.backend_name = "caldav";
+
+            sources.append (source);
+        }
+
+        /* First store passwords, thus the evolution-source-registry has them ready if needed. */
+        yield collection_source.store_password (password_entry.text, true, cancellable);
+        yield registry.create_sources (sources, cancellable);
     }
 
     private class CalendarRow : Gtk.ListBoxRow {
