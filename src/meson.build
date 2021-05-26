@@ -1,4 +1,5 @@
 plug_files = files(
+    'AccountsModel.vala',
     'Dialogs/CaldavDialog.vala',
     'Dialogs/ImapDialog.vala',
     'MainView.vala',
