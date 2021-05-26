@@ -100,8 +100,9 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         calendars_list = new Gtk.ListBox () {
             expand = true
         };
-        calendars_list.bind_model (calendars_store, create_item);
         calendars_list.set_sort_func (sort_func);
+        calendars_list.set_header_func (header_func);
+        calendars_list.bind_model (calendars_store, create_item);
 
         var calendars_scroll_window = new Gtk.ScrolledWindow (null, null) {
             hscrollbar_policy = Gtk.PolicyType.NEVER
@@ -210,7 +211,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         });
 
         login_button.clicked.connect (() => {
-            find_calendars ();
+            find_sources.begin ();
             deck.visible_child = calendars_page;
             save_configuration_button.has_default = true;
         });
@@ -289,10 +290,41 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
-        var cal_row1 = (CalendarRow) row1;
-        var cal_row2 = (CalendarRow) row2;
+        var source_row1 = (SourceRow) row1;
+        var source_row2 = (SourceRow) row2;
 
-        return cal_row1.source.display_name.collate (cal_row2.source.display_name);
+        if (source_row1.source.has_extension (E.SOURCE_EXTENSION_CALENDAR) && source_row2.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
+            return -1;
+        } else if (source_row1.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST) && source_row2.source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
+            return 1;
+        } else {
+            return source_row1.source.display_name.collate (source_row2.source.display_name);
+        }
+    }
+
+    private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
+        var source_row = (SourceRow) row;
+        var is_calendar = source_row.source.has_extension (E.SOURCE_EXTENSION_CALENDAR);
+        var is_tasklist = source_row.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST);
+
+        if (before ==  null) {
+            if (is_calendar) {
+                row.set_header (new Granite.HeaderLabel (_("Calendars")));
+            } else if (is_tasklist) {
+                row.set_header (new Granite.HeaderLabel (_("Task Lists")));
+            }
+
+        } else {
+            var before_source_row = (SourceRow) before;
+            var before_is_calendar = before_source_row.source.has_extension (E.SOURCE_EXTENSION_CALENDAR);
+            var before_is_tasklist = before_source_row.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST);
+
+            if (before_is_calendar && is_tasklist) {
+                row.set_header (new Granite.HeaderLabel (_("Task Lists")));
+            } else if (before_is_tasklist && is_calendar) {
+                row.set_header (new Granite.HeaderLabel (_("Calendars")));
+            }
+        }
     }
 
     private void validate_form () {
@@ -310,13 +342,13 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
     [ CCode ( instance_pos = 1.9 ) ]
     public Gtk.Widget create_item (GLib.Object item) {
-        var row = new CalendarRow ((E.Source) item);
+        var row = new SourceRow ((E.Source) item);
         row.show_all ();
 
         return row;
     }
 
-    private void find_calendars () {
+    private async void find_sources () {
         if (cancellable != null) {
             cancellable.cancel ();
         }
@@ -362,49 +394,86 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
             credentials.set (E.SOURCE_CREDENTIAL_PASSWORD, password_entry.text);
 
-            E.webdav_discover_sources.begin (source, null, E.WebDAVDiscoverSupports.CALENDAR_AUTO_SCHEDULE, credentials, cancellable, (obj, res) => {
-                string certificate_pem;
-                GLib.TlsCertificateFlags certificate_errors;
-                GLib.SList<E.WebDAVDiscoveredSource?> discovered_sources;
-                GLib.SList<string> calendar_user_addresses;
-                cancellable = null;
-                try {
-                    E.webdav_discover_sources_finish (source, res, out certificate_pem, out certificate_errors, out discovered_sources, out calendar_user_addresses);
-                    E.Source[] calendars = {};
-                    foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
-                        var e_source = new E.Source (null, null) {
-                            display_name = disc_source.display_name
-                        };
+            var calendars = yield find_sources_supporting (E.WebDAVDiscoverSupports.EVENTS, source, credentials, cancellable);
+            var tasklists = yield find_sources_supporting (E.WebDAVDiscoverSupports.TASKS, source, credentials, cancellable);
 
-                        unowned var webdav_source = (E.SourceWebdav) e_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
-                        webdav_source.soup_uri = new Soup.URI (disc_source.href);
-                        webdav_source.color = disc_source.color;
-
-                        calendars += e_source;
-                    }
-                    E.webdav_discover_do_free_discovered_sources ((owned) discovered_sources);
-                    Idle.add (() => {
-                        calendars_store.splice (0, 0, (Object[]) calendars);
-                        save_configuration_button.sensitive = true;
-                        return Source.REMOVE;
-                    });
-                } catch (GLib.IOError.CANCELLED e) {
-                } catch (Error e) {
-                    var error_placeholder = new Granite.Widgets.AlertView (
-                        _("Error Fetching Calendars"),
-                        e.message,
-                        "dialog-error"
-                    );
-                    Idle.add (() => {
-                        error_placeholder.show_all ();
-                        calendars_list.set_placeholder (error_placeholder);
-                        return Source.REMOVE;
-                    });
-                }
+            Idle.add (() => {
+                calendars_store.splice (0, 0, (Object[]) calendars);
+                calendars_store.splice (calendars.length, 0, (Object[]) tasklists);
+                save_configuration_button.sensitive = true;
+                return Source.REMOVE;
             });
-        } catch (GLib.Error error) {
-            critical (error.message);
+
+        } catch (GLib.Error e) {
+            var error_placeholder = new Granite.Widgets.AlertView (
+                _("Error Fetching Calendars"),
+                e.message,
+                "dialog-error"
+            );
+            Idle.add (() => {
+                error_placeholder.show_all ();
+                calendars_list.set_placeholder (error_placeholder);
+                return Source.REMOVE;
+            });
         }
+    }
+
+    private async E.Source[] find_sources_supporting (E.WebDAVDiscoverSupports only_supports, E.Source source, E.NamedParameters credentials, GLib.Cancellable? cancellable) throws Error {
+        E.Source[] e_sources = {};
+        GLib.Error? discover_error = null;
+
+        E.webdav_discover_sources.begin (source, null, only_supports, credentials, cancellable, (obj, res) => {
+            string certificate_pem;
+            GLib.TlsCertificateFlags certificate_errors;
+            GLib.SList<E.WebDAVDiscoveredSource?> discovered_sources;
+            GLib.SList<string> calendar_user_addresses;
+            try {
+                E.webdav_discover_sources_finish (source, res, out certificate_pem, out certificate_errors, out discovered_sources, out calendar_user_addresses);
+
+                foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
+                    if (disc_source == null) {
+                        continue;
+                    }
+
+                    var e_source = new E.Source (null, null) {
+                        display_name = disc_source.display_name
+                    };
+
+                    unowned var webdav = (E.SourceWebdav) e_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+                    webdav.soup_uri = new Soup.URI (disc_source.href);
+                    webdav.color = disc_source.color;
+
+                    switch (only_supports) {
+                        case E.WebDAVDiscoverSupports.EVENTS:
+                            unowned var calendar = (E.SourceCalendar) source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
+                            calendar.backend_name = "caldav";
+                            calendar.color = disc_source.color;
+                            break;
+                        case E.WebDAVDiscoverSupports.TASKS:
+                            unowned var tasklist = (E.SourceTaskList) source.get_extension (E.SOURCE_EXTENSION_TASK_LIST);
+                            tasklist.backend_name = "caldav";
+                            tasklist.color = disc_source.color;
+                            break;
+                    }
+
+                    e_sources += e_source;
+                }
+                E.webdav_discover_do_free_discovered_sources ((owned) discovered_sources);
+
+            } catch (GLib.IOError.CANCELLED e) {
+            } catch (Error e) {
+                discover_error = e;
+            }
+
+            find_sources_supporting.callback ();
+        });
+
+        yield;
+
+        if (discover_error != null) {
+            throw discover_error;
+        }
+        return e_sources;
     }
 
     private async void save_configuration () throws Error {
@@ -454,7 +523,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                  * thus the credentials can be reused. It's fine when the extension
                  * doesn't have set values.
                 */
-                unowned var authentication = (E.SourceAuthentication) source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+                source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
             }
 
             unowned var webdav = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
@@ -462,12 +531,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
             unowned var offline = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
             offline.set_stay_synchronized (true);
-
-            // TODO: Set color in E.SOURCE_EXTENSION_TASK_LIST and/or E.SOURCE_EXTENSION_CALENDAR.
-            // Depending on the supported item types. We probably need to extend FoundCalendar to
-            // carry this piece of information...
-            unowned var calendar = (E.SourceCalendar) source.get_extension (E.SOURCE_EXTENSION_CALENDAR);
-            calendar.backend_name = "caldav";
 
             sources.append (source);
         }
@@ -477,10 +540,10 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         yield registry.create_sources (sources, cancellable);
     }
 
-    private class CalendarRow : Gtk.ListBoxRow {
+    private class SourceRow : Gtk.ListBoxRow {
         public E.Source source { get; construct; }
 
-        public CalendarRow (E.Source source) {
+        public SourceRow (E.Source source) {
             Object (source: source);
         }
 
