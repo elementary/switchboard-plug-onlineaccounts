@@ -31,34 +31,32 @@ public class OnlineAccounts.AccountsModel : Object {
         try {
             var registry = yield new E.SourceRegistry (null);
 
-            registry.source_added.connect (add_esource);
-
-            registry.source_removed.connect ((e_source) => {
-                uint position;
-                if (accounts_liststore.find (e_source, out position)) {
-                    accounts_liststore.remove (position);
-                }
+            var collection_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_COLLECTION);
+            collection_extension_watcher.appeared.connect (add_esource);
+            collection_extension_watcher.disappeared.connect (remove_esource);
+            collection_extension_watcher.filter.connect ((e_source) => {
+                return e_source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
             });
+            collection_extension_watcher.reclaim ();
 
-            registry.list_sources (null).foreach ((e_source) => {
-                add_esource (e_source);
-            });
+            var mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+            mail_account_extension_watcher.appeared.connect (add_esource);
+            mail_account_extension_watcher.disappeared.connect (remove_esource);
+            mail_account_extension_watcher.reclaim ();
+
         } catch (Error e) {
             critical (e.message);
         }
     }
 
     private void add_esource (E.Source e_source) {
-        if (e_source.parent == null || e_source.parent == "local-stub" || e_source.parent == "contacts-stub") {
-            return;
-        }
+        accounts_liststore.append (e_source);
+    }
 
-        if (
-            e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR) ||
-            e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT) ||
-            e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)
-        ) {
-            accounts_liststore.append (e_source);
+    private void remove_esource (E.Source e_source) {
+        uint position;
+        if (accounts_liststore.find (e_source, out position)) {
+            accounts_liststore.remove (position);
         }
     }
 }
