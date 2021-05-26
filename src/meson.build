@@ -3,6 +3,7 @@ plug_files = files(
     'Dialogs/ICloudDialog.vala',
     'MainView.vala',
     'Plug.vala',
+    'Widgets/AccountMenuItem.vala',
     'Widgets/ValidationMessage.vala'
 )
 
