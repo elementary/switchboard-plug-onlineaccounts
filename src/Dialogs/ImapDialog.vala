@@ -317,7 +317,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         if (cancellable.is_cancelled ()) {
             return;
         }
-        
+
         var mail_account_source = new E.Source (null, null) {
             parent = "",
             display_name = imap_username_entry.text
