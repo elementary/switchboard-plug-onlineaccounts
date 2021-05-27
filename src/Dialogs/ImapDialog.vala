@@ -375,5 +375,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         yield mail_send_source.store_password (smtp_password_entry.text, true, cancellable);
 
         yield registry.create_sources (sources, cancellable);
+
+        destroy ();
     }
 }
