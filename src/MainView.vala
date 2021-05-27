@@ -19,7 +19,6 @@
 */
 
 public class OnlineAccounts.MainView : Gtk.Grid {
-
     private static AccountsModel accountsmodel;
 
     static construct {
@@ -135,7 +134,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             var message_dialog = new Granite.MessageDialog (
                 _("Remove “%s” from this device").printf (e_source.display_name),
                 _("This account will be removed and will no longer appear in apps on this device."),
-                new ThemedIcon (icon_name),
+                new ThemedIcon.with_default_fallbacks (icon_name),
                 Gtk.ButtonsType.CANCEL
             ) {
                 badge_icon = new ThemedIcon ("edit-delete"),
@@ -146,7 +145,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             accept_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
             if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-                e_source.remove (null);
+                e_source.remove.begin (null);
             }
 
             message_dialog.destroy ();
