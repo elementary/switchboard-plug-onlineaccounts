@@ -532,6 +532,8 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             unowned var offline = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
             offline.set_stay_synchronized (true);
 
+            yield source.store_password (password_entry.text, true, cancellable);
+
             sources.append (source);
         }
 
