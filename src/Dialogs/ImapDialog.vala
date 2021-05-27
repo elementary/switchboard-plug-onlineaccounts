@@ -22,10 +22,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry imap_server_entry;
     private Gtk.SpinButton imap_port_spin;
+    private Gtk.ComboBoxText imap_encryption_combobox;
     private Granite.ValidatedEntry imap_username_entry;
     private Gtk.Entry imap_password_entry;
     private Granite.ValidatedEntry smtp_server_entry;
     private Gtk.SpinButton smtp_port_spin;
+    private Gtk.ComboBoxText smtp_encryption_combobox;
     private Granite.ValidatedEntry smtp_username_entry;
     private Gtk.Entry smtp_password_entry;
     private Gtk.Button save_button;
@@ -77,12 +79,13 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             halign = Gtk.Align.END
         };
 
-        var imap_encryption_combobox = new Gtk.ComboBoxText () {
+        imap_encryption_combobox = new Gtk.ComboBoxText () {
             hexpand = true
         };
-        imap_encryption_combobox.append ("None", _("None"));
-        imap_encryption_combobox.append ("SSL/TLS", "SSL/TLS");
-        imap_encryption_combobox.append ("STARTTLS", "STARTTLS");
+        /* The IDs need to correspond to Camel.NetworkSecurityMethod enum: */
+        imap_encryption_combobox.append ("none", _("None"));
+        imap_encryption_combobox.append ("ssl-on-alternate-port", "SSL/TLS");
+        imap_encryption_combobox.append ("starttls-on-standard-port", "STARTTLS");
         imap_encryption_combobox.active = 1;
 
         var imap_server_grid = new Gtk.Grid () {
@@ -157,12 +160,13 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             xalign = 1
         };
 
-        var smtp_encryption_combobox = new Gtk.ComboBoxText () {
+        smtp_encryption_combobox = new Gtk.ComboBoxText () {
             hexpand = true
         };
-        smtp_encryption_combobox.append ("None", _("None"));
-        smtp_encryption_combobox.append ("SSL/TLS", "SSL/TLS");
-        smtp_encryption_combobox.append ("STARTTLS", "STARTTLS");
+        /* The IDs need to correspond to Camel.NetworkSecurityMethod enum: */
+        smtp_encryption_combobox.append ("none", _("None"));
+        smtp_encryption_combobox.append ("ssl-on-alternate-port", "SSL/TLS");
+        smtp_encryption_combobox.append ("starttls-on-standard-port", "STARTTLS");
         smtp_encryption_combobox.active = 2;
 
         var smtp_server_grid = new Gtk.Grid () {
@@ -313,36 +317,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         if (cancellable.is_cancelled ()) {
             return;
         }
-
-        /**
-         * To store mail account related information, we need a total of three sources:
-         *
-         * 1. mail_account_source
-         *       .parent = "";
-         *       .display_name = "Account Display Name"
-         *       (E.SourceMailIdentity).address = "email@domain.tld"
-         *       (E.SourceMailIdentity).name = Environment.get_real_name ()
-         *       (E.SourceMailSubmission).transport_uid = mail_send_source.uid
-         *
-         * 2. mail_receive_source
-         *       .parent = mail_account_source.uid
-         *       (E.SourceMailAccount).identity_uid = mail_account_source.uid
-         *       (E.SourceMailAccount).backend_name = "imap"
-         *       (E.SourceAuthentication).user = "username"
-         *
-         * 3. mail_send_source
-         *       .parent = mail_account_source.uid
-         *       (E.SourceMailTransport).backend_name = "smtp"
-         *       (E.SourceAuthentication).user = "username"
-        */
         
         var mail_account_source = new E.Source (null, null) {
             parent = "",
-            display_name = imap_username_entry.text
-        };
-
-        var mail_receive_source = new E.Source (null, null) {
-            parent = mail_account_source.uid,
             display_name = imap_username_entry.text
         };
 
@@ -360,35 +337,41 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         unowned var mail_submission_extension = (E.SourceMailSubmission) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
         mail_submission_extension.transport_uid = mail_send_source.uid;
 
-        /* configure mail_receive_source */
-
-        unowned var mail_account_extension = (E.SourceMailAccount) mail_receive_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+        unowned var mail_account_extension = (E.SourceMailAccount) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+        mail_account_extension.identity_uid = mail_account_source.uid;
         mail_account_extension.backend_name = "imap";
 
-        unowned var mail_receive_auth_extension = (E.SourceAuthentication) mail_receive_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
-        mail_receive_auth_extension.host = imap_server_entry.text;
-        mail_receive_auth_extension.port = (uint) imap_port_spin.value;
-        mail_receive_auth_extension.user = imap_username_entry.text;
+        unowned var mail_account_security_extension = (E.SourceSecurity) mail_account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
+        mail_account_security_extension.set_method (imap_encryption_combobox.active_id);
+
+        unowned var mail_account_auth_extension = (E.SourceAuthentication) mail_account_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+        mail_account_auth_extension.host = imap_server_entry.text;
+        mail_account_auth_extension.port = (uint) imap_port_spin.value;
+        mail_account_auth_extension.user = imap_username_entry.text;
+        mail_account_auth_extension.method = "PLAIN";
 
         /* configure mail_send_source */
 
         unowned var mail_transport_extension = (E.SourceMailTransport) mail_send_source.get_extension (E.SOURCE_EXTENSION_MAIL_TRANSPORT);
         mail_transport_extension.backend_name = "smtp";
 
+        unowned var mail_send_security_extension = (E.SourceSecurity) mail_send_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
+        mail_send_security_extension.set_method (smtp_encryption_combobox.active_id);
+
         unowned var mail_send_auth_extension = (E.SourceAuthentication) mail_send_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
         mail_send_auth_extension.host = smtp_server_entry.text;
         mail_send_auth_extension.port = (uint) smtp_port_spin.value;
         mail_send_auth_extension.user = smtp_username_entry.text;
+        mail_send_auth_extension.method = "PLAIN";
 
         /* let's save all three sources */
 
         var sources = new GLib.List<E.Source> ();
         sources.append (mail_account_source);
-        sources.append (mail_receive_source);
         sources.append (mail_send_source);
 
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
-        yield mail_receive_source.store_password (imap_password_entry.text, true, cancellable);
+        yield mail_account_source.store_password (imap_password_entry.text, true, cancellable);
         yield mail_send_source.store_password (smtp_password_entry.text, true, cancellable);
 
         yield registry.create_sources (sources, cancellable);
