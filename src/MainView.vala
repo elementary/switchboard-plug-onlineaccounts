@@ -49,11 +49,19 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             _("Calendars and Tasks")
         );
 
+        var imap_menuitem = new AccountMenuItem (
+            "onlineaccounts-mail",
+            _("IMAP"),
+            _("Mail")
+        );
+
         var add_acount_grid = new Gtk.Grid () {
             margin_top = 3,
-            margin_bottom = 3
+            margin_bottom = 3,
+            orientation = Gtk.Orientation.VERTICAL
         };
         add_acount_grid.add (caldav_menuitem);
+        add_acount_grid.add (imap_menuitem);
         add_acount_grid.show_all ();
 
         var add_account_popover = new Gtk.Popover (null);
@@ -88,6 +96,13 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             caldav_dialog.show_all ();
+        });
+
+        imap_menuitem.clicked.connect (() => {
+            var imap_dialog = new ImapDialog () {
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+            imap_dialog.show_all ();
         });
     }
 
