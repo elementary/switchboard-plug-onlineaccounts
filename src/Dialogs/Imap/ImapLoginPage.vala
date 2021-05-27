@@ -127,6 +127,7 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
         password_entry.changed.connect (() => {
             password_entry.is_valid = password_entry.text.length > 0;
             password = password_entry.text;
+            set_button_sensitivity ();
         });
 
         cancel_button.clicked.connect (() => {
