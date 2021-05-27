@@ -23,24 +23,17 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Granite.ValidatedEntry imap_server_entry;
     private Granite.ValidatedEntry imap_username_entry;
     private Granite.ValidatedEntry smtp_server_entry;
-    private Granite.ValidatedEntry smtp_username_entry;
     private Gtk.Button save_button;
     private Gtk.CheckButton use_imap_credentials;
     private Gtk.ComboBoxText imap_encryption_combobox;
     private Gtk.ComboBoxText smtp_encryption_combobox;
     private Gtk.Entry smtp_password_entry;
+    private Gtk.Entry smtp_username_entry;
     private Gtk.SpinButton imap_port_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
 
     construct {
-        Regex? email_regex = null;
-        try {
-            email_regex = new Regex ("""^[^\s]+@[^\s]+\.[^\s]+$""");
-        } catch (Error e) {
-            critical (e.message);
-        }
-
         login_page = new ImapLoginPage ();
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
@@ -49,7 +42,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             halign = Gtk.Align.END
         };
 
-        imap_username_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
+        imap_username_entry = new Granite.ValidatedEntry () {
             hexpand = true
         };
 
@@ -107,11 +100,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
-        var smtp_username_label = new Gtk.Label ("Email:") {
+        var smtp_username_label = new Gtk.Label ("Username:") {
             xalign = 1
         };
 
-        smtp_username_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
+        smtp_username_entry = new Gtk.Entry () {
             hexpand = true
         };
 
@@ -259,6 +252,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 smtp_username_entry.text = login_page.email;
             }
 
+            set_button_sensitivity ();
+        });
+
+        imap_username_entry.changed.connect (() => {
+            imap_username_entry.is_valid = imap_username_entry.text.length > 0;
             set_button_sensitivity ();
         });
 
