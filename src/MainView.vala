@@ -90,13 +90,16 @@ public class OnlineAccounts.MainView : Gtk.Grid {
     private Gtk.Widget create_account_row (GLib.Object object) {
         var e_source = (E.Source) object;
 
-        var icon_name = "online-account";
+        var icon_name = "onlineaccounts";
         if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
             icon_name = "onlineaccounts-tasks";
         } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
             icon_name = "x-office-calendar";
         } else if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
             icon_name = "onlineaccounts-mail";
+        } else if (e_source.has_extension (E.SOURCE_EXTENSION_COLLECTION)) {
+            unowned var collection_source = (E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
+            icon_name = "onlineaccounts-%s".printf (collection_source.backend_name);
         }
 
         var label = new Gtk.Label (e_source.display_name) {
@@ -104,7 +107,9 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         };
         label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND) {
+            use_fallback = true
+        };
 
         var grid = new Gtk.Grid () {
             column_spacing = 6,
