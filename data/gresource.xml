@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/elementary/switchboard/onlineaccounts">
-    <file alias="onlineaccounts-mail.svg" compressed="true" preprocess="xml-stripblanks">icons/mail.svg</file>
-    <file alias="onlineaccounts-tasks.svg" compressed="true" preprocess="xml-stripblanks">icons/tasks.svg</file>
+    <file alias="32x32/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/32/onlineaccounts.svg</file>
+    <file alias="32x32@2/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/32/onlineaccounts.svg</file>
+    <file alias="48x48/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/48/onlineaccounts.svg</file>
+    <file alias="48x48@2/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/48/onlineaccounts.svg</file>
+
+    <file alias="32x32/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/32/google.svg</file>
+    <file alias="32x32@2/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/32/google.svg</file>
+    <file alias="48x48/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/48/google.svg</file>
+    <file alias="48x48@2/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/48/google.svg</file>
+
+    <file alias="32x32/categories/onlineaccounts-mail.svg" compressed="true" preprocess="xml-stripblanks">icons/32/mail.svg</file>
+    <file alias="32x32@2/categories/onlineaccounts-mail.svg" compressed="true" preprocess="xml-stripblanks">icons/32/mail.svg</file>
+    <file alias="48x48/categories/onlineaccounts-mail.svg" compressed="true" preprocess="xml-stripblanks">icons/48/mail.svg</file>
+    <file alias="48x48@2/categories/onlineaccounts-mail.svg" compressed="true" preprocess="xml-stripblanks">icons/48/mail.svg</file>
+
+    <file alias="32x32/categories/onlineaccounts-tasks.svg" compressed="true" preprocess="xml-stripblanks">icons/32/tasks.svg</file>
+    <file alias="32x32@2/categories/onlineaccounts-tasks.svg" compressed="true" preprocess="xml-stripblanks">icons/32/tasks.svg</file>
+    <file alias="48x48/categories/onlineaccounts-tasks.svg" compressed="true" preprocess="xml-stripblanks">icons/48/tasks.svg</file>
+    <file alias="48x48@2/categories/onlineaccounts-tasks.svg" compressed="true" preprocess="xml-stripblanks">icons/48/tasks.svg</file>
   </gresource>
 </gresources>
