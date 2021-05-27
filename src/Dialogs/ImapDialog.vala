@@ -364,7 +364,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         mail_send_auth_extension.user = smtp_username_entry.text;
         mail_send_auth_extension.method = "PLAIN";
 
-        /* let's save all three sources */
+        /* let's save everything */
 
         var sources = new GLib.List<E.Source> ();
         sources.append (mail_account_source);
