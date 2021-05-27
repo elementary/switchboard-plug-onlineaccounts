@@ -1,5 +1,0 @@
-usr/lib/*/switchboard/network/*
-usr/share/dbus-1/services/com.google.code.AccountsSSO.gSingleSignOnUI.service
-usr/share/icons/hicolor/scalable/apps/online-account.svg
-usr/share/locale/*
-usr/share/metainfo/io.elementary.switchboard.onlineaccounts.appdata.xml
