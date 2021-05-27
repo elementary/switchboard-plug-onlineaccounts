@@ -21,6 +21,9 @@
 public class OnlineAccounts.AccountsModel : Object {
     public ListStore accounts_liststore { get; private set; }
 
+    private E.SourceRegistryWatcher collection_extension_watcher;
+    private E.SourceRegistryWatcher mail_account_extension_watcher;
+
     construct {
         accounts_liststore = new ListStore (typeof (E.Source));
 
@@ -31,7 +34,7 @@ public class OnlineAccounts.AccountsModel : Object {
         try {
             var registry = yield new E.SourceRegistry (null);
 
-            var collection_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_COLLECTION);
+            collection_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_COLLECTION);
             collection_extension_watcher.appeared.connect (add_esource);
             collection_extension_watcher.disappeared.connect (remove_esource);
             collection_extension_watcher.filter.connect ((e_source) => {
@@ -39,7 +42,7 @@ public class OnlineAccounts.AccountsModel : Object {
             });
             collection_extension_watcher.reclaim ();
 
-            var mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+            mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
             mail_account_extension_watcher.appeared.connect (add_esource);
             mail_account_extension_watcher.disappeared.connect (remove_esource);
             mail_account_extension_watcher.filter.connect ((e_source) => {

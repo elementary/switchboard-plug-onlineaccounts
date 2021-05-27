@@ -19,9 +19,14 @@
 */
 
 public class OnlineAccounts.MainView : Gtk.Grid {
-    construct {
-        var accountsmodel = new AccountsModel ();
 
+    private static AccountsModel accountsmodel;
+
+    static construct {
+        accountsmodel = new AccountsModel ();
+    }
+
+    construct {
         var welcome = new Granite.Widgets.AlertView (
             _("Connect Your Online Accounts"),
             _("Connect online accounts by clicking the icon in the toolbar below."),
