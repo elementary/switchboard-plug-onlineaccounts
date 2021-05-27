@@ -101,6 +101,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             expand = true
         };
         calendars_list.set_header_func (header_func);
+        calendars_list.set_sort_func (sort_func);
         calendars_list.bind_model (calendars_store, create_item);
 
         var calendars_scroll_window = new Gtk.ScrolledWindow (null, null) {
@@ -288,6 +289,16 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         deck.navigate (Hdy.NavigationDirection.BACK);
     }
 
+    private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
+        var source1 = ((SourceRow) row1).source;
+        var source2 = ((SourceRow) row2).source;
+
+        if (source1.has_extension (E.SOURCE_EXTENSION_CALENDAR) && !source2.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
+            return -1;
+        }
+        return source1.display_name.collate (source2.display_name);
+    }
+
     private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
         var source_row = (SourceRow) row;
         var is_calendar = source_row.source.has_extension (E.SOURCE_EXTENSION_CALENDAR);
@@ -305,18 +316,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         } else {
             var before_source_row = (SourceRow) before;
             var before_is_calendar = before_source_row.source.has_extension (E.SOURCE_EXTENSION_CALENDAR);
-            var before_is_tasklist = before_source_row.source.has_extension (E.SOURCE_EXTENSION_TASK_LIST);
 
             if (before_is_calendar && is_tasklist) {
                 header_label = new Granite.HeaderLabel (_("Task Lists"));
-            } else if (before_is_tasklist && is_calendar) {
-                header_label = new Granite.HeaderLabel (_("Calendars"));
             }
         }
-
-        if (header_label != null) {
-            row.set_header (header_label);
-        }
+        row.set_header (header_label);
     }
 
     private void validate_form () {
