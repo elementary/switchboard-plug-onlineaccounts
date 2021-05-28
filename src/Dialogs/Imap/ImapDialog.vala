@@ -32,9 +32,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Gtk.SpinButton imap_port_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
+    private ImapDonePage done_page;
 
     construct {
         login_page = new ImapLoginPage ();
+        done_page = new ImapDonePage ();
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
@@ -213,6 +215,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
         deck.add (login_page);
         deck.add (main_grid);
+        deck.add (done_page);
 
         var window_handle = new Hdy.WindowHandle ();
         window_handle.add (deck);
@@ -227,6 +230,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         login_page.next.connect (() => {
             deck.visible_child = main_grid;
+        });
+
+        done_page.close.connect (destroy);
+
+        done_page.back.connect (() => {
+            deck.navigate (Hdy.NavigationDirection.BACK);
         });
 
         back_button.clicked.connect (() => {
@@ -298,14 +307,16 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             }
         });
 
-
         save_button.clicked.connect (() => {
             save_configuration.begin ((obj, res) => {
                 try {
                     save_configuration.end (res);
+                    done_page.set_error (null);
+
                 } catch (Error e) {
-                    critical (e.message);
+                    done_page.set_error (e);
                 }
+                deck.visible_child = done_page;
             });
         });
     }
@@ -387,7 +398,5 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         }
 
         yield registry.create_sources (sources, cancellable);
-
-        destroy ();
     }
 }
