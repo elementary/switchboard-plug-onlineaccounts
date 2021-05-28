@@ -21,44 +21,36 @@
 public class OnlineAccounts.ImapDialog : Hdy.Window {
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry imap_server_entry;
-    private Gtk.SpinButton imap_port_spin;
-    private Gtk.ComboBoxText imap_encryption_combobox;
     private Granite.ValidatedEntry imap_username_entry;
-    private Gtk.Entry imap_password_entry;
     private Granite.ValidatedEntry smtp_server_entry;
-    private Gtk.SpinButton smtp_port_spin;
-    private Gtk.ComboBoxText smtp_encryption_combobox;
-    private Granite.ValidatedEntry smtp_username_entry;
-    private Gtk.Entry smtp_password_entry;
     private Gtk.Button save_button;
+    private Gtk.CheckButton use_imap_credentials;
+    private Gtk.ComboBoxText imap_encryption_combobox;
+    private Gtk.ComboBoxText smtp_encryption_combobox;
+    private Gtk.Entry smtp_password_entry;
+    private Gtk.Entry smtp_username_entry;
+    private Gtk.SpinButton imap_port_spin;
+    private Gtk.SpinButton smtp_port_spin;
+    private ImapLoginPage login_page;
+    private ImapDonePage done_page;
 
     construct {
-        Regex? email_regex = null;
-        try {
-            email_regex = new Regex ("""^[^\s]+@[^\s]+\.[^\s]+$""");
-        } catch (Error e) {
-            critical (e.message);
-        }
+        login_page = new ImapLoginPage ();
+        done_page = new ImapDonePage ();
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
-        var imap_username_label = new Gtk.Label ("Email:") {
+        var imap_username_label = new Gtk.Label ("Username:") {
             halign = Gtk.Align.END
         };
 
-        imap_username_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
+        imap_username_entry = new Granite.ValidatedEntry () {
             hexpand = true
         };
 
         var imap_password_label = new Gtk.Label ("Password:") {
             halign = Gtk.Align.END,
             margin_bottom = 18
-        };
-
-        imap_password_entry = new Gtk.Entry () {
-            input_purpose = Gtk.InputPurpose.PASSWORD,
-            margin_bottom = 18,
-            visibility = false
         };
 
         var imap_url_label = new Gtk.Label (_("Server URL:")) {
@@ -95,8 +87,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         imap_server_grid.attach (imap_header, 0, 0, 2);
         imap_server_grid.attach (imap_username_label, 0, 1);
         imap_server_grid.attach (imap_username_entry, 1, 1);
-        imap_server_grid.attach (imap_password_label, 0, 2);
-        imap_server_grid.attach (imap_password_entry, 1, 2);
         imap_server_grid.attach (imap_url_label, 0, 3);
         imap_server_grid.attach (imap_server_entry, 1, 3);
         imap_server_grid.attach (imap_encryption_label, 0, 4);
@@ -104,7 +94,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         imap_server_grid.attach (imap_port_label, 0, 5);
         imap_server_grid.attach (imap_port_spin, 1, 5);
 
-        var use_imap_credentials = new Gtk.CheckButton.with_label (_("Use IMAP Credentials")) {
+        use_imap_credentials = new Gtk.CheckButton.with_label (_("Use IMAP Credentials")) {
             active = true
         };
 
@@ -112,11 +102,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
-        var smtp_username_label = new Gtk.Label ("Email:") {
+        var smtp_username_label = new Gtk.Label ("Username:") {
             xalign = 1
         };
 
-        smtp_username_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
+        smtp_username_entry = new Gtk.Entry () {
             hexpand = true
         };
 
@@ -191,7 +181,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_sizegroup.add_widget (smtp_encryption_label);
         smtp_sizegroup.add_widget (smtp_port_label);
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        var back_button = new Gtk.Button.with_label (_("Back"));
 
         save_button = new Gtk.Button.with_label (_("Log In")) {
             can_default = true,
@@ -206,7 +196,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             valign = Gtk.Align.END,
             vexpand = true
         };
-        action_area.add (cancel_button);
+        action_area.add (back_button);
         action_area.add (save_button);
 
 
@@ -219,8 +209,16 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         main_grid.add (smtp_server_grid);
         main_grid.add (action_area);
 
+        var deck = new Hdy.Deck () {
+            can_swipe_back = true,
+            expand = true
+        };
+        deck.add (login_page);
+        deck.add (main_grid);
+        deck.add (done_page);
+
         var window_handle = new Hdy.WindowHandle ();
-        window_handle.add (main_grid);
+        window_handle.add (deck);
 
         default_height = 400;
         default_width = 300;
@@ -228,8 +226,20 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         modal = true;
         add (window_handle);
 
-        cancel_button.clicked.connect (() => {
-            destroy ();
+        login_page.cancel.connect (destroy);
+
+        login_page.next.connect (() => {
+            deck.visible_child = main_grid;
+        });
+
+        done_page.close.connect (destroy);
+
+        done_page.back.connect (() => {
+            deck.navigate (Hdy.NavigationDirection.BACK);
+        });
+
+        back_button.clicked.connect (() => {
+            deck.navigate (Hdy.NavigationDirection.BACK);
         });
 
         no_credentials.notify["active"].connect (() => {
@@ -239,17 +249,23 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         use_imap_credentials.bind_property ("active", smtp_revealer, "reveal-child", GLib.BindingFlags.INVERT_BOOLEAN);
 
-        imap_username_entry.changed.connect (() => {
-            if (imap_username_entry.is_valid) {
-                var domain = imap_username_entry.text.split ("@", 2)[1].strip ().replace ("@", "");
+        login_page.notify["email"].connect (() => {
+            if ("@" in login_page.email) {
+                var domain = login_page.email.split ("@", 2)[1].strip ().replace ("@", "");
                 if (domain.length > 0) {
                     imap_server_entry.text = "imap." + domain;
                     smtp_server_entry.text = "smtp." + domain;
                 }
 
-                smtp_username_entry.text = imap_username_entry.text;
+                imap_username_entry.text = login_page.email;
+                smtp_username_entry.text = login_page.email;
             }
 
+            set_button_sensitivity ();
+        });
+
+        imap_username_entry.changed.connect (() => {
+            imap_username_entry.is_valid = imap_username_entry.text.length > 0;
             set_button_sensitivity ();
         });
 
@@ -291,14 +307,16 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             }
         });
 
-
         save_button.clicked.connect (() => {
             save_configuration.begin ((obj, res) => {
                 try {
                     save_configuration.end (res);
+                    done_page.set_error (null);
+
                 } catch (Error e) {
-                    critical (e.message);
+                    done_page.set_error (e);
                 }
+                deck.visible_child = done_page;
             });
         });
     }
@@ -320,19 +338,19 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var mail_account_source = new E.Source (null, null) {
             parent = "",
-            display_name = imap_username_entry.text
+            display_name = login_page.display_name
         };
 
         var mail_send_source = new E.Source (null, null) {
             parent = mail_account_source.uid,
-            display_name = imap_username_entry.text
+            display_name = login_page.display_name
         };
 
         /* configure mail_account_source */
 
         unowned var mail_identity_extension = (E.SourceMailIdentity) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
-        mail_identity_extension.address = imap_username_entry.text;
-        mail_identity_extension.name = Environment.get_real_name ();
+        mail_identity_extension.address = login_page.email;
+        mail_identity_extension.name = login_page.real_name;
 
         unowned var mail_submission_extension = (E.SourceMailSubmission) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
         mail_submission_extension.transport_uid = mail_send_source.uid;
@@ -371,11 +389,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         sources.append (mail_send_source);
 
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
-        yield mail_account_source.store_password (imap_password_entry.text, true, cancellable);
-        yield mail_send_source.store_password (smtp_password_entry.text, true, cancellable);
+        yield mail_account_source.store_password (login_page.password, true, cancellable);
+
+        if (use_imap_credentials.active) {
+            yield mail_send_source.store_password (login_page.password, true, cancellable);
+        } else {
+            yield mail_send_source.store_password (smtp_password_entry.text, true, cancellable);
+        }
 
         yield registry.create_sources (sources, cancellable);
-
-        destroy ();
     }
 }
