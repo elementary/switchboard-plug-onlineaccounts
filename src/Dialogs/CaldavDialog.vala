@@ -526,8 +526,13 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             unowned var webdav = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
             webdav.calendar_auto_schedule = true;
 
+            unowned var auth_extension = (E.SourceAuthentication) source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+            auth_extension.user = username_entry.text;
+
             unowned var offline = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
             offline.set_stay_synchronized (true);
+
+            yield source.store_password (password_entry.text, true, cancellable);
 
             sources.append (source);
         }
