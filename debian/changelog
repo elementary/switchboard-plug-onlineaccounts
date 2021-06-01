@@ -1,3 +1,9 @@
+switchboard-plug-onlineaccounts (3.0.0) focal; urgency=medium
+
+  * New upstream release.
+
+ -- Corentin Noël <corentin@elementary.io>  Mon, 31 May 2021 17:20:24 +0200
+
 switchboard-plug-onlineaccounts (2.0.1) bionic; urgency=medium
 
   * New upstream release.
