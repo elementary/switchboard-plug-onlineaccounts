@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2021-06-02 11:16+0000\n"
+"PO-Revision-Date: 2021-06-02 11:17+0000\n"
 "Last-Translator: Corentin Noël <tintou@noel.tf>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -44,7 +44,7 @@ msgstr "Synkronoi yhteystiedot"
 #: providers/Google/google-calendar.service:4
 #: providers/Microsoft/microsoft-calendar.service:4
 msgid "Calendars"
-msgstr "Kalenteritt"
+msgstr "Kalenterit"
 
 #: providers/Facebook/facebook-calendar.service:5
 #: providers/Google/google-calendar.service:5
