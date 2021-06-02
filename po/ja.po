@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2021-02-18 08:37+0000\n"
+"PO-Revision-Date: 2021-06-02 10:29+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -21,18 +21,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "サーバー"
+msgstr "サーバーの URL"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "不適切な URL です"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "ユーザー名"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Password"
@@ -48,13 +46,13 @@ msgstr "ログイン"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
 msgid "Account Display Name"
-msgstr ""
+msgstr "アカウントの表示名"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
-msgstr ""
+msgstr "上記の名前は、このアカウントを識別するために使われます。例えば “仕事用” や “プライベート” などと入力してください。"
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -63,27 +61,27 @@ msgstr "戻る"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "設定を保存しています…"
 
 #: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
 msgid "Success"
-msgstr ""
+msgstr "成功しました"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+msgstr "CalDAV アカウントは正常に追加されました。"
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
-msgstr ""
+msgstr "設定を保存する際にエラーが発生しました"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -91,25 +89,23 @@ msgstr "カレンダー"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "タスクリスト"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "利用可能なカレンダーとタスクを検索しています…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Error Fetching Calendars"
-msgstr ""
+msgstr "カレンダーを取得する際にエラーが発生しました"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "サーバー"
+msgstr "サーバーの URL:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
 msgid "Port:"
-msgstr ""
+msgstr "ポート:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
 msgid "Encryption:"
@@ -130,11 +126,11 @@ msgstr "認証は不要"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
-msgstr ""
+msgstr "メールアカウントは正常に追加されました。"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:79
 msgid "Next"
-msgstr ""
+msgstr "次へ"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -148,21 +144,19 @@ msgstr ""
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "カレンダー"
+msgstr "カレンダーとタスク"
 
 #: src/MainView.vala:54 src/Plug.vala:60
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:61
 msgid "Mail"
-msgstr ""
+msgstr "メール"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -170,24 +164,22 @@ msgstr "アカウントを追加…"
 
 #: src/MainView.vala:135
 msgid "Remove this account"
-msgstr ""
+msgstr "このアカウントを削除"
 
 #: src/MainView.vala:150
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "“%s” をこのデバイスから削除します"
 
 #: src/MainView.vala:151
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
-msgstr ""
+msgstr "このアカウントは削除され、このデバイス上のアプリで表示されなくなります。"
 
 #: src/MainView.vala:159
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "新しいアカウント"
+msgstr "アカウントを削除"
 
 #: src/Plug.vala:27
 msgid "Online Accounts"
