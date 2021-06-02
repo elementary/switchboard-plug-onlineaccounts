@@ -52,7 +52,9 @@ msgstr "アカウントの表示名"
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
-msgstr "上記の名前は、このアカウントを識別するために使われます。例えば “仕事用” や “プライベート” などと入力してください。"
+msgstr ""
+"上記の名前は、このアカウントを識別するために使われます。例えば “仕事用” や "
+"“プライベート” などと入力してください。"
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -175,7 +177,8 @@ msgstr "“%s” をこのデバイスから削除します"
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
-msgstr "このアカウントは削除され、このデバイス上のアプリで表示されなくなります。"
+msgstr ""
+"このアカウントは削除され、このデバイス上のアプリで表示されなくなります。"
 
 #: src/MainView.vala:159
 msgid "Remove Account"
