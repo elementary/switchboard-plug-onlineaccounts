@@ -295,7 +295,7 @@ msgstr "Ladataan…"
 #: src/NewAccountDialog.vala:36
 msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
 msgstr ""
-"Kirjaudu sisään muodostaaksesi yhteyden sähköpostiin,\r\n"
+"Kirjaudu sisään muodostaaksesi yhteyden sähköpostiin, "
 "yhteystietoihin, kalenteriin ja muihin sovelluksiin."
 
 #: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
