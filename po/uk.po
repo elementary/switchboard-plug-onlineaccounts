@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2021-05-08 00:11+0000\n"
+"PO-Revision-Date: 2021-06-02 19:56+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -22,18 +22,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Сервер"
+msgstr "URL-адреса сервера"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Недійсна URL-адреса"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Ім'я користувача"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Password"
@@ -49,7 +47,7 @@ msgstr "Вхід"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
 msgid "Account Display Name"
-msgstr ""
+msgstr "Показуване ім'я облікового запису"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
 msgid ""
