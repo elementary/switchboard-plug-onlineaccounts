@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:18+0000\n"
+"POT-Creation-Date: 2021-06-02 00:22+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -20,327 +20,322 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: providers/Facebook/facebook-microblog.service:4
-msgid "Posts"
-msgstr "포스트"
+#: src/Dialogs/CaldavDialog.vala:36
+#, fuzzy
+#| msgid "Server"
+msgid "Server URL"
+msgstr "서버"
 
-#: providers/Facebook/facebook-microblog.service:5
-msgid "Watch your newsfeed"
-msgstr "뉴스 구독 살피기"
+#: src/Dialogs/CaldavDialog.vala:41
+msgid "Invalid URL"
+msgstr ""
 
-#: providers/Facebook/facebook-contacts.service:4
-#: providers/Google/google-contacts.service:4
-#: providers/Microsoft/microsoft-contacts.service:4
-msgid "Contacts"
-msgstr "연락처"
+#: src/Dialogs/CaldavDialog.vala:44
+msgid "User Name"
+msgstr ""
 
-#: providers/Facebook/facebook-contacts.service:5
-#: providers/Google/google-contacts.service:5
-#: providers/Microsoft/microsoft-contacts.service:5
-msgid "Sync your contacts"
-msgstr "연락처 동기화하기"
-
-#: providers/Facebook/facebook-calendar.service:4
-#: providers/Google/google-calendar.service:4
-#: providers/Microsoft/microsoft-calendar.service:4
-msgid "Calendars"
-msgstr "일정표"
-
-#: providers/Facebook/facebook-calendar.service:5
-#: providers/Google/google-calendar.service:5
-#: providers/Microsoft/microsoft-calendar.service:5
-msgid "Sync your calendars"
-msgstr "일정표 동기화하기"
-
-#: providers/FastMail/fastmail-mail.service:4
-#: providers/Google/google-gmail.service:4
-#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
-#: src/Authentification/MailDialog.vala:78
-#: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:77
-#: src/Authentification/MailDialog.vala:66
-#: src/Authentification/MailDialog.vala:108
-#: src/Authentification/PasswordDialog.vala:65
-msgid "Email"
-msgstr "이메일"
-
-#: providers/FastMail/fastmail-mail.service:5
-#: providers/Google/google-gmail.service:5
-#: providers/Microsoft/microsoft-mails.service:5
-msgid "Sync your email"
-msgstr "이메일과 동기화합니다"
-
-#: providers/Google/google-photos.service:4
-msgid "Photos"
-msgstr "사진"
-
-#: providers/Google/google-photos.service:5
-msgid "Sync your photos"
-msgstr "사진 동기화하기"
-
-#: providers/Google/google-drive.service:4
-msgid "Drive"
-msgstr "드라이브"
-
-#: providers/Google/google-drive.service:6
-msgid "Sync your files"
-msgstr "파일 동기화하기"
-
-#: providers/LastFM/lastfm-scrobble.service:4
-msgid "Scrobble"
-msgstr "스크러블"
-
-#: providers/LastFM/lastfm-scrobble.service:5
-msgid "Scrobble all your music"
-msgstr "음악 사용자 경험 저장"
-
-#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
-msgid "Mail Account"
-msgstr "메일 계정"
-
-#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
-msgid "Fetch Email from IMAP Server"
-msgstr "IMAP 서버에서 이메일 가져오기"
-
-#: providers/Facebook/facebook.provider.in:3
-msgid "Facebook"
-msgstr "페이스북"
-
-#: providers/Facebook/facebook.provider.in:4
-msgid "Access all Facebook contents on your computer"
-msgstr "사용자 컴퓨터의 모든 페이스북 내용에 접속하기"
-
-#: providers/FastMail/fastmail.provider:3
-msgid "Fastmail"
-msgstr "Fastmail"
-
-#: providers/FastMail/fastmail.provider:4
-msgid "Access mail with Fastmail"
-msgstr "Fastmail로 접속 하기"
-
-#: providers/Google/google.provider.in:3
-msgid "Google"
-msgstr "구글"
-
-#: providers/Google/google.provider.in:4
-msgid "Access all Google services on your computer"
-msgstr "사용자 컴퓨터의 모든 구글 서비스에 접속하기"
-
-#: providers/LastFM/lastfm.provider:3
-msgid "Last.fm"
-msgstr "Last.fm"
-
-#: providers/LastFM/lastfm.provider:4
-msgid "Scrobble your music"
-msgstr "음악 사용자 경험 저장"
-
-#: providers/Microsoft/microsoft.provider.in:3
-msgid "Microsoft"
-msgstr "마이크로소프트"
-
-#: providers/Microsoft/microsoft.provider.in:4
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "사용자 컴퓨터의 모든 아웃룩과 원드라이브 서비스에 접속하기"
-
-#: src/Plug.vala:41 src/Plug.vala:40
-msgid "Online Accounts"
-msgstr "온라인 계정"
-
-#: src/Plug.vala:42 src/Plug.vala:41
-msgid "Manage online accounts and connected applications"
-msgstr "온라인 계정과 계정에 연결된 애플리케이션들을 관리합니다"
-
-#: src/Plug.vala:51 src/Plug.vala:50
-msgid "Restore"
-msgstr "복원"
-
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
-msgid "Connect Your Online Accounts"
-msgstr "온라인 계정 연결"
-
-#: src/Plug.vala:60 src/Plug.vala:59
-msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 연결하세요."
-
-#: src/Plug.vala:117 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
-#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
-#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
-#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
-#: src/Views/SourceSelector.vala:185
-msgid "New Account"
-msgstr "새 계정"
-
-#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
-#, c-format
-msgid "Account '%s' Removed."
-msgstr "계정 '%s'가 제거되었습니다."
-
-#: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:56
-#: src/Authentification/WebDialog.vala:136
-#: src/Authentification/WebDialog.vala:148
-#: src/Authentification/AbstractAuthView.vala:58
-#: src/Authentification/OAuthView.vala:121
-msgid "Please enter your credentials…"
-msgstr "로그인 정보를 입력하세요…"
-
-#: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:58
-#: src/Authentification/WebDialog.vala:39
-#: src/Authentification/AbstractAuthView.vala:60
-msgid "Back"
-msgstr "뒤로"
-
-#: src/Authentification/MailDialog.vala:82
-#: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:81
-#: src/Authentification/MailDialog.vala:70
-#: src/Authentification/MailDialog.vala:112
-#: src/Authentification/PasswordDialog.vala:69
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Password"
 msgstr "비밀번호"
 
-#: src/Authentification/MailDialog.vala:93
-#: src/Authentification/MailDialog.vala:137
-#: src/Authentification/MailDialog.vala:81
-#: src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "서버"
-
-#: src/Authentification/MailDialog.vala:103
-#: src/Authentification/MailDialog.vala:153
-#: src/Authentification/MailDialog.vala:91
-#: src/Authentification/MailDialog.vala:141
-msgid "Encryption:"
-msgstr "암호화:"
-
-#: src/Authentification/MailDialog.vala:107
-#: src/Authentification/MailDialog.vala:157
-#: src/Authentification/MailDialog.vala:95
-#: src/Authentification/MailDialog.vala:145
-msgid "None"
-msgstr "안 함"
-
-#: src/Authentification/MailDialog.vala:147
-#: src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "IMAP 인증 사용"
-
-#: src/Authentification/MailDialog.vala:151
-#: src/Authentification/MailDialog.vala:139
-msgid "No authentication required"
-msgstr "인증 없이 실행"
-
-#: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:110
-#: src/Authentification/MailDialog.vala:155
-#: src/Authentification/PasswordDialog.vala:98
-msgid "Log In"
-msgstr "로그인"
-
-#: src/Authentification/PasswordDialog.vala:73
-#: src/Authentification/PasswordDialog.vala:61
-msgid "URL"
-msgstr "URL"
-
-#: src/Authentification/PasswordDialog.vala:86
-#: src/Authentification/PasswordDialog.vala:74
-msgid "New Password"
-msgstr "새 비밀번호"
-
-#: src/Authentification/PasswordDialog.vala:91
-#: src/Authentification/PasswordDialog.vala:79
-msgid "Confirm Password"
-msgstr "비밀번호 확인"
-
-#: src/Authentification/PasswordDialog.vala:99
-#: src/Authentification/PasswordDialog.vala:87
-msgid "Forgot password…"
-msgstr "비밀번호를 잊으셨나요…"
-
-#: src/Authentification/PasswordDialog.vala:104
-#: src/Authentification/PasswordDialog.vala:92
-msgid "Refresh Captcha"
-msgstr "캡차 (Captcha) 새로고침"
-
-#: src/Authentification/PasswordDialog.vala:105
-#: src/Authentification/PasswordDialog.vala:93
-msgid "Enter above text here"
-msgstr "텍스트 위에 입력하기"
-
-#: src/Authentification/PasswordDialog.vala:114
-#: src/Authentification/PasswordDialog.vala:102
-msgid "Don't have an account? Sign Up"
-msgstr "계정이 없으신가요? 먼저 계정을 만드세요"
-
-#: src/Authentification/PasswordDialog.vala:314
-#: src/Authentification/PasswordDialog.vala:295
-msgid "Other Account"
-msgstr "다른 계정"
-
-#: src/Authentification/WebDialog.vala:34
-#: src/Authentification/WebDialog.vala:143
-#: src/Authentification/WebDialog.vala:155
-#: src/Authentification/OAuthView.vala:32
-#: src/Authentification/OAuthView.vala:127
-#: src/Authentification/OAuthView.vala:42
-#: src/Authentification/OAuthView.vala:132
-msgid "Loading…"
-msgstr "불러오는 중…"
-
-#: src/NewAccountDialog.vala:36
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr "메일, 주소록, 일정표 등의 프로그램에 접속하기 위해 로그인하기."
-
-#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
-msgid "Search Providers"
-msgstr "서비스 검색"
-
-#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
-msgid "Privacy Policy"
-msgstr "프라이버시 정책"
-
-#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
-#: src/Authentification/AbstractAuthDialog.vala:66
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
 msgid "Cancel"
 msgstr "취소"
 
-#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
-#, c-format
-msgid "No installed apps make use of your %s account"
-msgstr "설치된 앱이 %s 계정을 사용하지 않습니다"
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+msgid "Log In"
+msgstr "로그인"
 
-#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
-msgid "No Apps"
-msgstr "어플 없음"
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+msgid "Account Display Name"
+msgstr ""
 
-#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
-msgid "Add…"
-msgstr "추가…"
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+msgid ""
+"The above name will be used to identify this account. Use for example “Work” "
+"or “Personal”."
+msgstr ""
 
-#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
-#: src/Views/SourceSelector.vala:79
-msgid "Remove"
-msgstr "제거"
+#: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
+#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+msgid "Back"
+msgstr "뒤로"
 
-#: src/Authentification/MailDialog.vala:60
+#: src/Dialogs/CaldavDialog.vala:119
+msgid "Save"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:143
+msgid "Saving the configuration…"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+msgid "Success"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:156
+msgid "The CalDAV account has been sucessfuly added."
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+msgid "Close"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+msgid "Error Saving Configuration"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+msgid "Calendars"
+msgstr "일정표"
+
+#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+msgid "Task Lists"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:356
+msgid "Finding available calendars and tasks…"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:406
+msgid "Error Fetching Calendars"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 #, fuzzy
-msgid "IMAP Account"
-msgstr "메일 계정"
+#| msgid "Server"
+msgid "Server URL:"
+msgstr "서버"
 
-#: src/Authentification/AbstractAuthDialog.vala:81
-#: src/Authentification/AbstractAuthDialog.vala:74
+#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+msgid "Port:"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+msgid "Encryption:"
+msgstr "암호화:"
+
+#. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
+#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+msgid "None"
+msgstr "안 함"
+
+#: src/Dialogs/Imap/ImapDialog.vala:97
+msgid "Use IMAP Credentials"
+msgstr "IMAP 인증 사용"
+
+#: src/Dialogs/Imap/ImapDialog.vala:101
+msgid "No authentication required"
+msgstr "인증 없이 실행"
+
+#: src/Dialogs/Imap/ImapDonePage.vala:30
+msgid "The mail account has been sucessfuly added."
+msgstr ""
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:79
+msgid "Next"
+msgstr ""
+
+#: src/MainView.vala:30
+msgid "Connect Your Online Accounts"
+msgstr "온라인 계정 연결"
+
+#: src/MainView.vala:31
+msgid "Connect online accounts by clicking the icon in the toolbar below."
+msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 연결하세요."
+
+#: src/MainView.vala:48 src/Plug.vala:58
+msgid "CalDAV"
+msgstr ""
+
+#: src/MainView.vala:49
 #, fuzzy
-msgid "Add Account"
-msgstr "메일 계정"
+#| msgid "Calendars"
+msgid "Calendars and Tasks"
+msgstr "일정표"
 
-#: src/Views/SourceSelector.vala:73
+#: src/MainView.vala:54 src/Plug.vala:60
+msgid "IMAP"
+msgstr ""
+
+#: src/MainView.vala:55 src/Plug.vala:61
+msgid "Mail"
+msgstr ""
+
+#: src/MainView.vala:73
 #, fuzzy
 #| msgid "Add a new account…"
 msgid "Add Account…"
 msgstr "새로 계정 만들기…"
+
+#: src/MainView.vala:135
+msgid "Remove this account"
+msgstr ""
+
+#: src/MainView.vala:150
+#, c-format
+msgid "Remove “%s” from this device"
+msgstr ""
+
+#: src/MainView.vala:151
+msgid ""
+"This account will be removed and will no longer appear in apps on this "
+"device."
+msgstr ""
+
+#: src/MainView.vala:159
+#, fuzzy
+#| msgid "New Account"
+msgid "Remove Account"
+msgstr "새 계정"
+
+#: src/Plug.vala:27
+msgid "Online Accounts"
+msgstr "온라인 계정"
+
+#: src/Plug.vala:28
+msgid "Manage online accounts and connected applications"
+msgstr "온라인 계정과 계정에 연결된 애플리케이션들을 관리합니다"
+
+#~ msgid "Posts"
+#~ msgstr "포스트"
+
+#~ msgid "Watch your newsfeed"
+#~ msgstr "뉴스 구독 살피기"
+
+#~ msgid "Contacts"
+#~ msgstr "연락처"
+
+#~ msgid "Sync your contacts"
+#~ msgstr "연락처 동기화하기"
+
+#~ msgid "Sync your calendars"
+#~ msgstr "일정표 동기화하기"
+
+#~ msgid "Email"
+#~ msgstr "이메일"
+
+#~ msgid "Sync your email"
+#~ msgstr "이메일과 동기화합니다"
+
+#~ msgid "Photos"
+#~ msgstr "사진"
+
+#~ msgid "Sync your photos"
+#~ msgstr "사진 동기화하기"
+
+#~ msgid "Drive"
+#~ msgstr "드라이브"
+
+#~ msgid "Sync your files"
+#~ msgstr "파일 동기화하기"
+
+#~ msgid "Scrobble"
+#~ msgstr "스크러블"
+
+#~ msgid "Scrobble all your music"
+#~ msgstr "음악 사용자 경험 저장"
+
+#~ msgid "Mail Account"
+#~ msgstr "메일 계정"
+
+#~ msgid "Fetch Email from IMAP Server"
+#~ msgstr "IMAP 서버에서 이메일 가져오기"
+
+#~ msgid "Facebook"
+#~ msgstr "페이스북"
+
+#~ msgid "Access all Facebook contents on your computer"
+#~ msgstr "사용자 컴퓨터의 모든 페이스북 내용에 접속하기"
+
+#~ msgid "Fastmail"
+#~ msgstr "Fastmail"
+
+#~ msgid "Access mail with Fastmail"
+#~ msgstr "Fastmail로 접속 하기"
+
+#~ msgid "Google"
+#~ msgstr "구글"
+
+#~ msgid "Access all Google services on your computer"
+#~ msgstr "사용자 컴퓨터의 모든 구글 서비스에 접속하기"
+
+#~ msgid "Last.fm"
+#~ msgstr "Last.fm"
+
+#~ msgid "Scrobble your music"
+#~ msgstr "음악 사용자 경험 저장"
+
+#~ msgid "Microsoft"
+#~ msgstr "마이크로소프트"
+
+#~ msgid "Access all Outlook and OneDrive services on your computer"
+#~ msgstr "사용자 컴퓨터의 모든 아웃룩과 원드라이브 서비스에 접속하기"
+
+#~ msgid "Restore"
+#~ msgstr "복원"
+
+#~ msgid "Account '%s' Removed."
+#~ msgstr "계정 '%s'가 제거되었습니다."
+
+#~ msgid "Please enter your credentials…"
+#~ msgstr "로그인 정보를 입력하세요…"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "New Password"
+#~ msgstr "새 비밀번호"
+
+#~ msgid "Confirm Password"
+#~ msgstr "비밀번호 확인"
+
+#~ msgid "Forgot password…"
+#~ msgstr "비밀번호를 잊으셨나요…"
+
+#~ msgid "Refresh Captcha"
+#~ msgstr "캡차 (Captcha) 새로고침"
+
+#~ msgid "Enter above text here"
+#~ msgstr "텍스트 위에 입력하기"
+
+#~ msgid "Don't have an account? Sign Up"
+#~ msgstr "계정이 없으신가요? 먼저 계정을 만드세요"
+
+#~ msgid "Other Account"
+#~ msgstr "다른 계정"
+
+#~ msgid "Loading…"
+#~ msgstr "불러오는 중…"
+
+#~ msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+#~ msgstr "메일, 주소록, 일정표 등의 프로그램에 접속하기 위해 로그인하기."
+
+#~ msgid "Search Providers"
+#~ msgstr "서비스 검색"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "프라이버시 정책"
+
+#~ msgid "No installed apps make use of your %s account"
+#~ msgstr "설치된 앱이 %s 계정을 사용하지 않습니다"
+
+#~ msgid "No Apps"
+#~ msgstr "어플 없음"
+
+#~ msgid "Add…"
+#~ msgstr "추가…"
+
+#~ msgid "Remove"
+#~ msgstr "제거"
+
+#, fuzzy
+#~ msgid "IMAP Account"
+#~ msgstr "메일 계정"
+
+#, fuzzy
+#~ msgid "Add Account"
+#~ msgstr "메일 계정"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
