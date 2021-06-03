@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-28 22:18+0000\n"
-"PO-Revision-Date: 2021-01-19 14:13+0000\n"
+"POT-Creation-Date: 2021-06-02 00:22+0000\n"
+"PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pt/>\n"
@@ -20,325 +20,316 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: providers/Facebook/facebook-microblog.service:4
-msgid "Posts"
-msgstr "Publicações"
+#: src/Dialogs/CaldavDialog.vala:36
+msgid "Server URL"
+msgstr "URL do servidor"
 
-#: providers/Facebook/facebook-microblog.service:5
-msgid "Watch your newsfeed"
-msgstr "Veja o seu feed de notícias"
+#: src/Dialogs/CaldavDialog.vala:41
+msgid "Invalid URL"
+msgstr "URL Inválido"
 
-#: providers/Facebook/facebook-contacts.service:4
-#: providers/Google/google-contacts.service:4
-#: providers/Microsoft/microsoft-contacts.service:4
-msgid "Contacts"
-msgstr "Contactos"
+#: src/Dialogs/CaldavDialog.vala:44
+msgid "User Name"
+msgstr "Nome de utilizador"
 
-#: providers/Facebook/facebook-contacts.service:5
-#: providers/Google/google-contacts.service:5
-#: providers/Microsoft/microsoft-contacts.service:5
-msgid "Sync your contacts"
-msgstr "Sincronize os seus contactos"
-
-#: providers/Facebook/facebook-calendar.service:4
-#: providers/Google/google-calendar.service:4
-#: providers/Microsoft/microsoft-calendar.service:4
-msgid "Calendars"
-msgstr "Calendários"
-
-#: providers/Facebook/facebook-calendar.service:5
-#: providers/Google/google-calendar.service:5
-#: providers/Microsoft/microsoft-calendar.service:5
-msgid "Sync your calendars"
-msgstr "Sincronize os seus calendários"
-
-#: providers/FastMail/fastmail-mail.service:4
-#: providers/Google/google-gmail.service:4
-#: providers/Microsoft/microsoft-mails.service:4 providers/Mail/mail.provider:3
-#: src/Authentification/MailDialog.vala:78
-#: src/Authentification/MailDialog.vala:122
-#: src/Authentification/PasswordDialog.vala:77
-#: src/Authentification/MailDialog.vala:66
-#: src/Authentification/MailDialog.vala:108
-#: src/Authentification/PasswordDialog.vala:65
-msgid "Email"
-msgstr "Email"
-
-#: providers/FastMail/fastmail-mail.service:5
-#: providers/Google/google-gmail.service:5
-#: providers/Microsoft/microsoft-mails.service:5
-msgid "Sync your email"
-msgstr "Sincronize o seu email"
-
-#: providers/Google/google-photos.service:4
-msgid "Photos"
-msgstr "Fotos"
-
-#: providers/Google/google-photos.service:5
-msgid "Sync your photos"
-msgstr "Sincronize as suas fotos"
-
-#: providers/Google/google-drive.service:4
-msgid "Drive"
-msgstr "Drive"
-
-#: providers/Google/google-drive.service:6
-msgid "Sync your files"
-msgstr "Sincronize os seus ficheiros"
-
-#: providers/LastFM/lastfm-scrobble.service:4
-msgid "Scrobble"
-msgstr "Scrobble"
-
-#: providers/LastFM/lastfm-scrobble.service:5
-msgid "Scrobble all your music"
-msgstr "Scrobble toda a sua música"
-
-#: providers/Mail/mail.service:4 src/Authentification/MailDialog.vala:69
-msgid "Mail Account"
-msgstr "Conta de Email"
-
-#: providers/Mail/mail.service:5 providers/Mail/mail.provider:4
-msgid "Fetch Email from IMAP Server"
-msgstr "Consultar email do Servidor IMAP"
-
-#: providers/Facebook/facebook.provider.in:3
-msgid "Facebook"
-msgstr "Facebook"
-
-#: providers/Facebook/facebook.provider.in:4
-msgid "Access all Facebook contents on your computer"
-msgstr "Aceda a todos os conteúdos do Facebook no seu computador"
-
-#: providers/FastMail/fastmail.provider:3
-msgid "Fastmail"
-msgstr "Fastmail"
-
-#: providers/FastMail/fastmail.provider:4
-msgid "Access mail with Fastmail"
-msgstr "Aceda ao email com o Fastmail"
-
-#: providers/Google/google.provider.in:3
-msgid "Google"
-msgstr "Google"
-
-#: providers/Google/google.provider.in:4
-msgid "Access all Google services on your computer"
-msgstr "Aceda a todos os serviços do Google no seu computador"
-
-#: providers/LastFM/lastfm.provider:3
-msgid "Last.fm"
-msgstr "Last.fm"
-
-#: providers/LastFM/lastfm.provider:4
-msgid "Scrobble your music"
-msgstr "Scrobble da sua música"
-
-#: providers/Microsoft/microsoft.provider.in:3
-msgid "Microsoft"
-msgstr "Microsoft"
-
-#: providers/Microsoft/microsoft.provider.in:4
-msgid "Access all Outlook and OneDrive services on your computer"
-msgstr "Aceda a todos os serviços do Outlook e OneDrive no seu computador"
-
-#: src/Plug.vala:41 src/Plug.vala:40
-msgid "Online Accounts"
-msgstr "Contas Online"
-
-#: src/Plug.vala:42 src/Plug.vala:41
-msgid "Manage online accounts and connected applications"
-msgstr "Gerir contas online e aplicações associadas"
-
-#: src/Plug.vala:51 src/Plug.vala:50
-msgid "Restore"
-msgstr "Repor"
-
-#: src/Plug.vala:59 src/NewAccountDialog.vala:30 src/Plug.vala:58
-msgid "Connect Your Online Accounts"
-msgstr "Estabelecer ligação às suas contas online"
-
-#: src/Plug.vala:60 src/Plug.vala:59
-msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr "Ligar contas online clicando no ícone da barra de ferramentas abaixo."
-
-#: src/Plug.vala:117 src/Views/AccountView.vala:50
-#: src/Views/AccountView.vala:122 src/Views/SourceSelector.vala:124
-#: src/Views/SourceSelector.vala:132 src/Plug.vala:116
-#: src/Views/AccountView.vala:46 src/Views/AccountView.vala:109
-#: src/Views/SourceSelector.vala:122 src/Views/SourceSelector.vala:130
-#: src/Plug.vala:105 src/Views/SourceSelector.vala:178
-#: src/Views/SourceSelector.vala:185
-msgid "New Account"
-msgstr "Nova Conta"
-
-#: src/Plug.vala:119 src/Plug.vala:118 src/Plug.vala:107
-#, c-format
-msgid "Account '%s' Removed."
-msgstr "Conta %s removida."
-
-#: src/Authentification/MailDialog.vala:48
-#: src/Authentification/PasswordDialog.vala:56
-#: src/Authentification/WebDialog.vala:136
-#: src/Authentification/WebDialog.vala:148
-#: src/Authentification/AbstractAuthView.vala:58
-#: src/Authentification/OAuthView.vala:121
-msgid "Please enter your credentials…"
-msgstr "Introduza as suas credenciais…"
-
-#: src/Authentification/MailDialog.vala:50
-#: src/Authentification/PasswordDialog.vala:58
-#: src/Authentification/WebDialog.vala:39
-#: src/Authentification/AbstractAuthView.vala:60
-msgid "Back"
-msgstr "Voltar"
-
-#: src/Authentification/MailDialog.vala:82
-#: src/Authentification/MailDialog.vala:126
-#: src/Authentification/PasswordDialog.vala:81
-#: src/Authentification/MailDialog.vala:70
-#: src/Authentification/MailDialog.vala:112
-#: src/Authentification/PasswordDialog.vala:69
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Password"
 msgstr "Palavra-passe"
 
-#: src/Authentification/MailDialog.vala:93
-#: src/Authentification/MailDialog.vala:137
-#: src/Authentification/MailDialog.vala:81
-#: src/Authentification/MailDialog.vala:126
-msgid "Server"
-msgstr "Servidor"
-
-#: src/Authentification/MailDialog.vala:103
-#: src/Authentification/MailDialog.vala:153
-#: src/Authentification/MailDialog.vala:91
-#: src/Authentification/MailDialog.vala:141
-msgid "Encryption:"
-msgstr "Encriptação:"
-
-#: src/Authentification/MailDialog.vala:107
-#: src/Authentification/MailDialog.vala:157
-#: src/Authentification/MailDialog.vala:95
-#: src/Authentification/MailDialog.vala:145
-msgid "None"
-msgstr "Nenhuma"
-
-#: src/Authentification/MailDialog.vala:147
-#: src/Authentification/MailDialog.vala:136
-msgid "Use IMAP Credentials"
-msgstr "Usar credenciais IMAP"
-
-#: src/Authentification/MailDialog.vala:151
-#: src/Authentification/MailDialog.vala:139
-msgid "No authentication required"
-msgstr "Não é necessária autenticação"
-
-#: src/Authentification/MailDialog.vala:167
-#: src/Authentification/PasswordDialog.vala:110
-#: src/Authentification/MailDialog.vala:155
-#: src/Authentification/PasswordDialog.vala:98
-msgid "Log In"
-msgstr "Iniciar sessão"
-
-#: src/Authentification/PasswordDialog.vala:73
-#: src/Authentification/PasswordDialog.vala:61
-msgid "URL"
-msgstr "URL"
-
-#: src/Authentification/PasswordDialog.vala:86
-#: src/Authentification/PasswordDialog.vala:74
-msgid "New Password"
-msgstr "Nova palavra-passe"
-
-#: src/Authentification/PasswordDialog.vala:91
-#: src/Authentification/PasswordDialog.vala:79
-msgid "Confirm Password"
-msgstr "Confirmar palavra-passe"
-
-#: src/Authentification/PasswordDialog.vala:99
-#: src/Authentification/PasswordDialog.vala:87
-msgid "Forgot password…"
-msgstr "Esqueci-me da palavra-passe…"
-
-#: src/Authentification/PasswordDialog.vala:104
-#: src/Authentification/PasswordDialog.vala:92
-msgid "Refresh Captcha"
-msgstr "Recarregar Captcha"
-
-#: src/Authentification/PasswordDialog.vala:105
-#: src/Authentification/PasswordDialog.vala:93
-msgid "Enter above text here"
-msgstr "Escreva aqui o texto"
-
-#: src/Authentification/PasswordDialog.vala:114
-#: src/Authentification/PasswordDialog.vala:102
-msgid "Don't have an account? Sign Up"
-msgstr "Não tem uma conta? Inscreva-se"
-
-#: src/Authentification/PasswordDialog.vala:314
-#: src/Authentification/PasswordDialog.vala:295
-msgid "Other Account"
-msgstr "Outra Conta"
-
-#: src/Authentification/WebDialog.vala:34
-#: src/Authentification/WebDialog.vala:143
-#: src/Authentification/WebDialog.vala:155
-#: src/Authentification/OAuthView.vala:32
-#: src/Authentification/OAuthView.vala:127
-#: src/Authentification/OAuthView.vala:42
-#: src/Authentification/OAuthView.vala:132
-msgid "Loading…"
-msgstr "A carregar…"
-
-#: src/NewAccountDialog.vala:36
-msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
-msgstr ""
-"Iniciar sessão para estabelecer ligação ao Correio eletrónico, Contactos e "
-"Calendário."
-
-#: src/NewAccountDialog.vala:43 src/Views/SourceSelector.vala:50
-msgid "Search Providers"
-msgstr "Motores de Busca"
-
-#: src/NewAccountDialog.vala:85 src/Authentification/AbstractAuthDialog.vala:66
-msgid "Privacy Policy"
-msgstr "Política de Privacidade"
-
-#: src/NewAccountDialog.vala:88 src/Authentification/AbstractAuthDialog.vala:69
-#: src/Authentification/AbstractAuthDialog.vala:66
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Views/AccountView.vala:109 src/Views/AccountView.vala:100
-#, c-format
-msgid "No installed apps make use of your %s account"
-msgstr "Nenhuma aplicação instalada faz uso da sua conta %s"
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+msgid "Log In"
+msgstr "Iniciar sessão"
 
-#: src/Views/AccountView.vala:110 src/Views/AccountView.vala:101
-msgid "No Apps"
-msgstr "Sem Aplicações"
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+msgid "Account Display Name"
+msgstr "Nome de exibição de conta"
 
-#: src/Views/SourceSelector.vala:52 src/Views/SourceSelector.vala:50
-msgid "Add…"
-msgstr "Adicionar…"
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+msgid ""
+"The above name will be used to identify this account. Use for example “Work” "
+"or “Personal”."
+msgstr ""
+"O nome acima será utilizado para identificar esta conta. Utilizar, por "
+"exemplo, \"Trabalho\" ou \"Pessoal\"."
 
-#: src/Views/SourceSelector.vala:57 src/Views/SourceSelector.vala:53
-#: src/Views/SourceSelector.vala:79
-msgid "Remove"
-msgstr "Remover"
+#: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
+#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+msgid "Back"
+msgstr "Voltar"
 
-#: src/Authentification/MailDialog.vala:60
-msgid "IMAP Account"
-msgstr "Conta IMAP"
+#: src/Dialogs/CaldavDialog.vala:119
+msgid "Save"
+msgstr "Guardar"
 
-#: src/Authentification/AbstractAuthDialog.vala:81
-#: src/Authentification/AbstractAuthDialog.vala:74
-msgid "Add Account"
-msgstr "Adicionar Conta"
+#: src/Dialogs/CaldavDialog.vala:143
+msgid "Saving the configuration…"
+msgstr "Guardar a configuração…"
 
-#: src/Views/SourceSelector.vala:73
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+msgid "Success"
+msgstr "Sucesso"
+
+#: src/Dialogs/CaldavDialog.vala:156
+msgid "The CalDAV account has been sucessfuly added."
+msgstr "A conta CalDAV foi adicionada com sucesso."
+
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+msgid "Close"
+msgstr "Fechar"
+
+#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+msgid "Error Saving Configuration"
+msgstr "Erro ao guardar configuração"
+
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+msgid "Calendars"
+msgstr "Calendários"
+
+#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+msgid "Task Lists"
+msgstr "Lista de Tarefas"
+
+#: src/Dialogs/CaldavDialog.vala:356
+msgid "Finding available calendars and tasks…"
+msgstr "Localizar calendários e tarefas disponíveis…"
+
+#: src/Dialogs/CaldavDialog.vala:406
+msgid "Error Fetching Calendars"
+msgstr "Erro ao procurar calendários"
+
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+msgid "Server URL:"
+msgstr "URL do servidor:"
+
+#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+msgid "Port:"
+msgstr "Porta:"
+
+#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+msgid "Encryption:"
+msgstr "Encriptação:"
+
+#. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
+#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+msgid "None"
+msgstr "Nenhuma"
+
+#: src/Dialogs/Imap/ImapDialog.vala:97
+msgid "Use IMAP Credentials"
+msgstr "Usar credenciais IMAP"
+
+#: src/Dialogs/Imap/ImapDialog.vala:101
+msgid "No authentication required"
+msgstr "Não é necessária autenticação"
+
+#: src/Dialogs/Imap/ImapDonePage.vala:30
+msgid "The mail account has been sucessfuly added."
+msgstr "A conta de correio foi adicionada com sucesso."
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:79
+msgid "Next"
+msgstr "Seguinte"
+
+#: src/MainView.vala:30
+msgid "Connect Your Online Accounts"
+msgstr "Estabelecer ligação às suas contas online"
+
+#: src/MainView.vala:31
+msgid "Connect online accounts by clicking the icon in the toolbar below."
+msgstr "Ligar contas online clicando no ícone da barra de ferramentas abaixo."
+
+#: src/MainView.vala:48 src/Plug.vala:58
+msgid "CalDAV"
+msgstr "CalDAV"
+
+#: src/MainView.vala:49
+msgid "Calendars and Tasks"
+msgstr "Calendários e Tarefas"
+
+#: src/MainView.vala:54 src/Plug.vala:60
+msgid "IMAP"
+msgstr "IMAP"
+
+#: src/MainView.vala:55 src/Plug.vala:61
+msgid "Mail"
+msgstr "Correio"
+
+#: src/MainView.vala:73
 msgid "Add Account…"
 msgstr "Adicionar conta…"
+
+#: src/MainView.vala:135
+msgid "Remove this account"
+msgstr "Remover esta conta"
+
+#: src/MainView.vala:150
+#, c-format
+msgid "Remove “%s” from this device"
+msgstr "Remover \"%s\" deste dispositivo"
+
+#: src/MainView.vala:151
+msgid ""
+"This account will be removed and will no longer appear in apps on this "
+"device."
+msgstr ""
+"Esta conta será removida e deixará de aparecer nas aplicações deste "
+"dispositivo."
+
+#: src/MainView.vala:159
+msgid "Remove Account"
+msgstr "Remover Conta"
+
+#: src/Plug.vala:27
+msgid "Online Accounts"
+msgstr "Contas Online"
+
+#: src/Plug.vala:28
+msgid "Manage online accounts and connected applications"
+msgstr "Gerir contas online e aplicações associadas"
+
+#~ msgid "Posts"
+#~ msgstr "Publicações"
+
+#~ msgid "Watch your newsfeed"
+#~ msgstr "Veja o seu feed de notícias"
+
+#~ msgid "Contacts"
+#~ msgstr "Contactos"
+
+#~ msgid "Sync your contacts"
+#~ msgstr "Sincronize os seus contactos"
+
+#~ msgid "Sync your calendars"
+#~ msgstr "Sincronize os seus calendários"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Sync your email"
+#~ msgstr "Sincronize o seu email"
+
+#~ msgid "Photos"
+#~ msgstr "Fotos"
+
+#~ msgid "Sync your photos"
+#~ msgstr "Sincronize as suas fotos"
+
+#~ msgid "Drive"
+#~ msgstr "Drive"
+
+#~ msgid "Sync your files"
+#~ msgstr "Sincronize os seus ficheiros"
+
+#~ msgid "Scrobble"
+#~ msgstr "Scrobble"
+
+#~ msgid "Scrobble all your music"
+#~ msgstr "Scrobble toda a sua música"
+
+#~ msgid "Mail Account"
+#~ msgstr "Conta de Email"
+
+#~ msgid "Fetch Email from IMAP Server"
+#~ msgstr "Consultar email do Servidor IMAP"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Access all Facebook contents on your computer"
+#~ msgstr "Aceda a todos os conteúdos do Facebook no seu computador"
+
+#~ msgid "Fastmail"
+#~ msgstr "Fastmail"
+
+#~ msgid "Access mail with Fastmail"
+#~ msgstr "Aceda ao email com o Fastmail"
+
+#~ msgid "Google"
+#~ msgstr "Google"
+
+#~ msgid "Access all Google services on your computer"
+#~ msgstr "Aceda a todos os serviços do Google no seu computador"
+
+#~ msgid "Last.fm"
+#~ msgstr "Last.fm"
+
+#~ msgid "Scrobble your music"
+#~ msgstr "Scrobble da sua música"
+
+#~ msgid "Microsoft"
+#~ msgstr "Microsoft"
+
+#~ msgid "Access all Outlook and OneDrive services on your computer"
+#~ msgstr "Aceda a todos os serviços do Outlook e OneDrive no seu computador"
+
+#~ msgid "Restore"
+#~ msgstr "Repor"
+
+#~ msgid "Account '%s' Removed."
+#~ msgstr "Conta %s removida."
+
+#~ msgid "Please enter your credentials…"
+#~ msgstr "Introduza as suas credenciais…"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "New Password"
+#~ msgstr "Nova palavra-passe"
+
+#~ msgid "Confirm Password"
+#~ msgstr "Confirmar palavra-passe"
+
+#~ msgid "Forgot password…"
+#~ msgstr "Esqueci-me da palavra-passe…"
+
+#~ msgid "Refresh Captcha"
+#~ msgstr "Recarregar Captcha"
+
+#~ msgid "Enter above text here"
+#~ msgstr "Escreva aqui o texto"
+
+#~ msgid "Don't have an account? Sign Up"
+#~ msgstr "Não tem uma conta? Inscreva-se"
+
+#~ msgid "Other Account"
+#~ msgstr "Outra Conta"
+
+#~ msgid "Loading…"
+#~ msgstr "A carregar…"
+
+#~ msgid "Sign in to connect with apps like Mail, Contacts, and Calendar."
+#~ msgstr ""
+#~ "Iniciar sessão para estabelecer ligação ao Correio eletrónico, Contactos "
+#~ "e Calendário."
+
+#~ msgid "Search Providers"
+#~ msgstr "Motores de Busca"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Política de Privacidade"
+
+#~ msgid "No installed apps make use of your %s account"
+#~ msgstr "Nenhuma aplicação instalada faz uso da sua conta %s"
+
+#~ msgid "No Apps"
+#~ msgstr "Sem Aplicações"
+
+#~ msgid "Add…"
+#~ msgstr "Adicionar…"
+
+#~ msgid "Remove"
+#~ msgstr "Remover"
+
+#~ msgid "IMAP Account"
+#~ msgstr "Conta IMAP"
+
+#~ msgid "Add Account"
+#~ msgstr "Adicionar Conta"
 
 #~ msgid "There are no apps currently installed that link to your %s account"
 #~ msgstr ""
