@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2021-06-02 11:17+0000\n"
-"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
+"PO-Revision-Date: 2021-06-03 17:15+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
 "Language: fi\n"
@@ -21,18 +21,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Palvelin"
+msgstr "Palvelimen osoite"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Virheellinen osoite"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Käyttäjätunnus"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Password"
@@ -48,13 +46,15 @@ msgstr "Kirjaudu sisään"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
 msgid "Account Display Name"
-msgstr ""
+msgstr "Tilin näyttönimi"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
 msgstr ""
+"Yllä olevaa käytetään tilin yksilöintiin. Käytä esimerkiksi \"Työ\" tai "
+"\"Henkilökohtainen\"."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -63,23 +63,23 @@ msgstr "Takaisin"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Tallennetaan asetuksia…"
 
 #: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
 msgid "Success"
-msgstr ""
+msgstr "Onnistui"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+msgstr "CalDAV-tili on lisätty onnistuneesti."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
