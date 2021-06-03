@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2020-03-27 19:09+0000\n"
+"PO-Revision-Date: 2021-06-03 07:46+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -12,22 +12,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "שרת"
+msgstr "כתובת השרת"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "כתובת שגויה"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "שם משתמש"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Password"
@@ -43,13 +41,13 @@ msgstr "כניסה"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
 msgid "Account Display Name"
-msgstr ""
+msgstr "שם תצוגת חשבון"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
-msgstr ""
+msgstr "השם שלעיל ישמש לזיהוי החשבון. ניתן להשתמש ב„עבודה” או „אישי” למשל."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -58,23 +56,23 @@ msgstr "חזרה"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "שמירה"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "ההגדרות נשמרות…"
 
 #: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
 msgid "Success"
-msgstr ""
+msgstr "הצלחה"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+msgstr "חשבון ה־CalDAV נוסף בהצלחה."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "סגירה"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
