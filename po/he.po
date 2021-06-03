@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2021-06-03 07:46+0000\n"
+"PO-Revision-Date: 2021-06-03 15:50+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -76,7 +76,7 @@ msgstr "סגירה"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
-msgstr ""
+msgstr "שגיאה בשמירת ההגדרות"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -84,25 +84,23 @@ msgstr "יומנים"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "רשימות משימות"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "איתור לוחות שנה ומשימות זמינים…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Error Fetching Calendars"
-msgstr ""
+msgstr "משיכת לוחות השנה נכשלה"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "שרת"
+msgstr "כתובת השרת:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
 msgid "Port:"
-msgstr ""
+msgstr "פתחה:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
 msgid "Encryption:"
@@ -123,11 +121,11 @@ msgstr "לא נדרש אימות"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
-msgstr ""
+msgstr "חשבון הדוא״ל נוסף בהצלחה."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:79
 msgid "Next"
-msgstr ""
+msgstr "הבא"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -139,21 +137,19 @@ msgstr "ניתן לחבר חשבונות מקוונים על ידי לחיצה �
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "יומנים"
+msgstr "לוחות שנה ומשימות"
 
 #: src/MainView.vala:54 src/Plug.vala:60
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:61
 msgid "Mail"
-msgstr ""
+msgstr "דוא״ל"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -161,24 +157,22 @@ msgstr "הוספת חשבון…"
 
 #: src/MainView.vala:135
 msgid "Remove this account"
-msgstr ""
+msgstr "להסיר את החשבון הזה"
 
 #: src/MainView.vala:150
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "להסיר את „%s” מהמכשיר"
 
 #: src/MainView.vala:151
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
-msgstr ""
+msgstr "החשבון הזה יוסר ולא יופיע עוד תחת היישומים שבמכשיר הזה."
 
 #: src/MainView.vala:159
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "חשבון חדש"
+msgstr "הסרת חשבון"
 
 #: src/Plug.vala:27
 msgid "Online Accounts"
