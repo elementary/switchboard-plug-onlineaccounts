@@ -47,6 +47,7 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
             is_valid = true,
             text = Environment.get_real_name ()
         };
+        real_name = real_name_entry.text;
 
         var email_label = new Granite.HeaderLabel ("Email");
 
