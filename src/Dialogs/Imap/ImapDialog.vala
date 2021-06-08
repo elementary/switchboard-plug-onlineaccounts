@@ -40,7 +40,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
-        var imap_username_label = new Gtk.Label ("Username:") {
+        var imap_username_label = new Gtk.Label (_("Username:")) {
             halign = Gtk.Align.END
         };
 
@@ -48,7 +48,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             hexpand = true
         };
 
-        var imap_password_label = new Gtk.Label ("Password:") {
+        var imap_password_label = new Gtk.Label (_("Password:")) {
             halign = Gtk.Align.END,
             margin_bottom = 18
         };
@@ -102,7 +102,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
-        var smtp_username_label = new Gtk.Label ("Username:") {
+        var smtp_username_label = new Gtk.Label (_("Username:")) {
             xalign = 1
         };
 
@@ -110,7 +110,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             hexpand = true
         };
 
-        var smtp_password_label = new Gtk.Label ("Password:") {
+        var smtp_password_label = new Gtk.Label (_("Password:")) {
             xalign = 1
         };
 
