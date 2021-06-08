@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 00:22+0000\n"
+"POT-Creation-Date: 2021-06-08 23:41+0000\n"
 "PO-Revision-Date: 2021-06-02 20:19+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,11 +33,11 @@ msgstr "Недійсна URL-адреса"
 msgid "User Name"
 msgstr "Ім'я користувача"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Пароль"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -45,11 +45,11 @@ msgstr "Скасувати"
 msgid "Log In"
 msgstr "Вхід"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Показуване ім'я облікового запису"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
@@ -102,6 +102,18 @@ msgstr "Пошук доступних календарів та завдань�
 msgid "Error Fetching Calendars"
 msgstr "Помилка отримання календарів"
 
+#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#, fuzzy
+#| msgid "User Name"
+msgid "Username:"
+msgstr "Ім'я користувача"
+
+#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "Пароль"
+
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
 msgstr "URL-адреса сервера:"
@@ -131,7 +143,17 @@ msgstr "Автентифікація не потрібна"
 msgid "The mail account has been sucessfuly added."
 msgstr "Обліковий запис пошти успішно додано."
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:79
+#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#, fuzzy
+#| msgid "User Name"
+msgid "Real Name"
+msgstr "Ім'я користувача"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
+msgid "Email"
+msgstr "Електронна пошта"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Далі"
 
@@ -208,9 +230,6 @@ msgstr "Керування мережними обліковими записа�
 
 #~ msgid "Sync your calendars"
 #~ msgstr "Синхронізувати ваші календарі"
-
-#~ msgid "Email"
-#~ msgstr "Електронна пошта"
 
 #~ msgid "Sync your email"
 #~ msgstr "Синхронізувати вашу електронну пошту"

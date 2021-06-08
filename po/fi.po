@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 00:22+0000\n"
+"POT-Creation-Date: 2021-06-08 23:41+0000\n"
 "PO-Revision-Date: 2021-06-03 23:20+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -32,11 +32,11 @@ msgstr "Virheellinen osoite"
 msgid "User Name"
 msgstr "Käyttäjätunnus"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Salasana"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Peru"
 
@@ -44,11 +44,11 @@ msgstr "Peru"
 msgid "Log In"
 msgstr "Kirjaudu sisään"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Tilin näyttönimi"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
@@ -101,6 +101,18 @@ msgstr "Etsitään saatavilla olevia kalentereita ja tehtäviä…"
 msgid "Error Fetching Calendars"
 msgstr "Virhe kalentereja noutaessa"
 
+#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#, fuzzy
+#| msgid "User Name"
+msgid "Username:"
+msgstr "Käyttäjätunnus"
+
+#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "Salasana"
+
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
 msgstr "Palvelimen osoite:"
@@ -130,7 +142,17 @@ msgstr "Tunnistautumista ei vaadita"
 msgid "The mail account has been sucessfuly added."
 msgstr "Sähköpostitili on lisätty onnistuneesti."
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:79
+#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#, fuzzy
+#| msgid "User Name"
+msgid "Real Name"
+msgstr "Käyttäjätunnus"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
+msgid "Email"
+msgstr "Sähköposti"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Seuraava"
 
@@ -207,9 +229,6 @@ msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
 #~ msgid "Sync your calendars"
 #~ msgstr "Synkronoi kalenterit"
-
-#~ msgid "Email"
-#~ msgstr "Sähköposti"
 
 #~ msgid "Sync your email"
 #~ msgstr "Synkronoi sähköpostisi"

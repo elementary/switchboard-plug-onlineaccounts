@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 00:22+0000\n"
+"POT-Creation-Date: 2021-06-08 23:41+0000\n"
 "PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -32,11 +32,11 @@ msgstr "Geçersiz URL"
 msgid "User Name"
 msgstr "Kullanıcı Adı"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Parola"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "İptal"
 
@@ -44,11 +44,11 @@ msgstr "İptal"
 msgid "Log In"
 msgstr "Oturum Aç"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Hesap Görünen Adı"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
@@ -101,6 +101,18 @@ msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 msgid "Error Fetching Calendars"
 msgstr "Takvimler Alınırken Hata Oluştu"
 
+#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#, fuzzy
+#| msgid "User Name"
+msgid "Username:"
+msgstr "Kullanıcı Adı"
+
+#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "Parola"
+
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
 msgstr "Sunucu URL'si:"
@@ -130,7 +142,17 @@ msgstr "Kimlik denetimi gerekmiyor"
 msgid "The mail account has been sucessfuly added."
 msgstr "Posta hesabı başarıyla eklendi."
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:79
+#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#, fuzzy
+#| msgid "User Name"
+msgid "Real Name"
+msgstr "Kullanıcı Adı"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
+msgid "Email"
+msgstr "E-posta"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "İleri"
 
@@ -176,7 +198,8 @@ msgstr "“%s” hesabını bu cihazdan kaldır"
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
-msgstr "Bu hesap kaldırılacak ve artık bu cihazdaki uygulamalarda görünmeyecek."
+msgstr ""
+"Bu hesap kaldırılacak ve artık bu cihazdaki uygulamalarda görünmeyecek."
 
 #: src/MainView.vala:159
 msgid "Remove Account"
@@ -204,9 +227,6 @@ msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #~ msgid "Sync your calendars"
 #~ msgstr "Takvimlerinizi eşitleyin"
-
-#~ msgid "Email"
-#~ msgstr "E-posta"
 
 #~ msgid "Sync your email"
 #~ msgstr "E-postanızı eşitleyin"

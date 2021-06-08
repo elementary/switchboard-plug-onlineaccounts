@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 00:22+0000\n"
+"POT-Creation-Date: 2021-06-08 23:41+0000\n"
 "PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -32,11 +32,11 @@ msgstr "URL invalida"
 msgid "User Name"
 msgstr "Nombre de usuario"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Contraseña"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -44,11 +44,11 @@ msgstr "Cancelar"
 msgid "Log In"
 msgstr "Acceder"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Nombre para mostrar de la cuenta"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
@@ -102,6 +102,18 @@ msgstr "Buscando calendarios y tareas disponibles …"
 msgid "Error Fetching Calendars"
 msgstr "Error al obtener los calendarios"
 
+#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#, fuzzy
+#| msgid "User Name"
+msgid "Username:"
+msgstr "Nombre de usuario"
+
+#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "Contraseña"
+
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
 msgstr "URL del servidor:"
@@ -131,7 +143,17 @@ msgstr "No se requiere autenticación"
 msgid "The mail account has been sucessfuly added."
 msgstr "La cuenta de correo se ha agregado correctamente."
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:79
+#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#, fuzzy
+#| msgid "User Name"
+msgid "Real Name"
+msgstr "Nombre de usuario"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Siguiente"
 
@@ -208,9 +230,6 @@ msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
 
 #~ msgid "Sync your calendars"
 #~ msgstr "Sincronice sus calendarios"
-
-#~ msgid "Email"
-#~ msgstr "Correo electrónico"
 
 #~ msgid "Sync your email"
 #~ msgstr "Sincronice su correo electrónico"
