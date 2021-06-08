@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-02 20:19+0000\n"
+"PO-Revision-Date: 2021-06-09 06:26+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -103,16 +103,12 @@ msgid "Error Fetching Calendars"
 msgstr "Помилка отримання календарів"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
-#, fuzzy
-#| msgid "User Name"
 msgid "Username:"
-msgstr "Ім'я користувача"
+msgstr "Ім'я користувача:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Пароль"
+msgstr "Пароль:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
@@ -144,10 +140,8 @@ msgid "The mail account has been sucessfuly added."
 msgstr "Обліковий запис пошти успішно додано."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
-#, fuzzy
-#| msgid "User Name"
 msgid "Real Name"
-msgstr "Ім'я користувача"
+msgstr "Справжнє ім'я"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
