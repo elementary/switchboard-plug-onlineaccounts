@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-02 18:43+0000\n"
+"PO-Revision-Date: 2021-06-09 13:59+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -102,16 +102,12 @@ msgid "Error Fetching Calendars"
 msgstr "Takvimler Alınırken Hata Oluştu"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
-#, fuzzy
-#| msgid "User Name"
 msgid "Username:"
-msgstr "Kullanıcı Adı"
+msgstr "Kullanıcı adı:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Parola"
+msgstr "Parola:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
@@ -143,10 +139,8 @@ msgid "The mail account has been sucessfuly added."
 msgstr "Posta hesabı başarıyla eklendi."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
-#, fuzzy
-#| msgid "User Name"
 msgid "Real Name"
-msgstr "Kullanıcı Adı"
+msgstr "Gerçek Ad"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
