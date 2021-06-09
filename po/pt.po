@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-02 18:43+0000\n"
+"PO-Revision-Date: 2021-06-09 10:42+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pt/>\n"
@@ -102,16 +102,12 @@ msgid "Error Fetching Calendars"
 msgstr "Erro ao procurar calendários"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
-#, fuzzy
-#| msgid "User Name"
 msgid "Username:"
-msgstr "Nome de utilizador"
+msgstr "Nome de utilizador:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Palavra-passe"
+msgstr "Palavra-passe:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
@@ -143,10 +139,8 @@ msgid "The mail account has been sucessfuly added."
 msgstr "A conta de correio foi adicionada com sucesso."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
-#, fuzzy
-#| msgid "User Name"
 msgid "Real Name"
-msgstr "Nome de utilizador"
+msgstr "Nome verdadeiro"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
