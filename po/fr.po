@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-02 10:29+0000\n"
+"PO-Revision-Date: 2021-06-09 07:50+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
@@ -102,16 +102,12 @@ msgid "Error Fetching Calendars"
 msgstr "Erreur lors de la récupération des calendriers"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
-#, fuzzy
-#| msgid "User Name"
 msgid "Username:"
-msgstr "Nom d'utilisateur"
+msgstr "Nom d'utilisateur :"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Mot de passe"
+msgstr "Mot de passe :"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
@@ -143,10 +139,8 @@ msgid "The mail account has been sucessfuly added."
 msgstr "Le compte de messagerie a bien été ajouté."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
-#, fuzzy
-#| msgid "User Name"
 msgid "Real Name"
-msgstr "Nom d'utilisateur"
+msgstr "Nom complet"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
