@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-02 10:29+0000\n"
+"PO-Revision-Date: 2021-06-10 11:43+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -102,16 +102,12 @@ msgid "Error Fetching Calendars"
 msgstr "カレンダーを取得する際にエラーが発生しました"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
-#, fuzzy
-#| msgid "User Name"
 msgid "Username:"
-msgstr "ユーザー名"
+msgstr "ユーザー名:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "パスワード"
+msgstr "パスワード:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
@@ -143,10 +139,8 @@ msgid "The mail account has been sucessfuly added."
 msgstr "メールアカウントは正常に追加されました。"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
-#, fuzzy
-#| msgid "User Name"
 msgid "Real Name"
-msgstr "ユーザー名"
+msgstr "本名"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
