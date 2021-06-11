@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
 "PO-Revision-Date: 2021-06-11 21:23+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"Last-Translator: Nikita Buzanov <github@buzanovn.ru>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
 "Language: ru\n"
@@ -31,7 +31,7 @@ msgstr "Недействительный URL-адрес"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
@@ -64,7 +64,7 @@ msgstr "Назад"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
@@ -80,11 +80,11 @@ msgstr "Учетная запись CalDAV была успешно добавл�
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
-msgstr ""
+msgstr "Ошибка сохранения конфигурации"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -149,7 +149,7 @@ msgstr "Почта"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "Далее"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
