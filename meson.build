@@ -29,6 +29,10 @@ gtk_dep = dependency('gtk+-3.0')
 handy_dep = dependency('libhandy-1', version: '>=1.0.0')
 switchboard_dep = dependency('switchboard-2.0')
 
+if edataserverui_dep.version().version_compare('>=3.39.2')
+    add_project_arguments('--define=HAS_EDS_3_40', language: 'vala')
+endif
+
 gresource = gnome.compile_resources(
     'gresource',
     'data' / 'gresource.xml',
