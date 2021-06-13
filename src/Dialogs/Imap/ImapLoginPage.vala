@@ -41,20 +41,21 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
             critical (e.message);
         }
 
-        var real_name_label = new Granite.HeaderLabel ("Real Name");
+        var real_name_label = new Granite.HeaderLabel (_("Real Name"));
 
         real_name_entry = new Granite.ValidatedEntry () {
             is_valid = true,
             text = Environment.get_real_name ()
         };
+        real_name = real_name_entry.text;
 
-        var email_label = new Granite.HeaderLabel ("Email");
+        var email_label = new Granite.HeaderLabel (_("Email"));
 
         email_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
             hexpand = true
         };
 
-        var password_label = new Granite.HeaderLabel ("Password");
+        var password_label = new Granite.HeaderLabel (_("Password"));
 
         password_entry = new Granite.ValidatedEntry () {
             input_purpose = Gtk.InputPurpose.PASSWORD,

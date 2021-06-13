@@ -7,38 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2019-01-12 00:09+0000\n"
+"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"PO-Revision-Date: 2021-06-03 09:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
+"Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/nb/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Tjener"
+msgstr "Tjenernettadresse"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Ugyldig nettadresse"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Brukernavn"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Passord"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -46,11 +44,11 @@ msgstr "Avbryt"
 msgid "Log In"
 msgstr "Logg inn"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "Kontovisningsnavn"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
@@ -63,15 +61,15 @@ msgstr "Tilbake"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Lagrer oppsettet …"
 
 #: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
 msgid "Success"
-msgstr ""
+msgstr "Vellykket"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
@@ -79,7 +77,7 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "Lukk"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
@@ -91,7 +89,7 @@ msgstr "Kalendere"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "Gjøremålslister"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
@@ -101,15 +99,25 @@ msgstr ""
 msgid "Error Fetching Calendars"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
 #, fuzzy
-#| msgid "Server"
+#| msgid "User Name"
+msgid "Username:"
+msgstr "Brukernavn"
+
+#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#, fuzzy
+#| msgid "Password"
+msgid "Password:"
+msgstr "Passord"
+
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
-msgstr "Tjener"
+msgstr "Tjenernettadresse:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
 msgid "Encryption:"
@@ -132,9 +140,19 @@ msgstr "Ingen identitetsbekreftelse kreves"
 msgid "The mail account has been sucessfuly added."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:79
+#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#, fuzzy
+#| msgid "User Name"
+msgid "Real Name"
+msgstr "Brukernavn"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
+msgid "Email"
+msgstr "E-post"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "Neste"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -148,36 +166,33 @@ msgstr ""
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "Kalendere"
+msgstr "Kalendere og gjøremål"
 
 #: src/MainView.vala:54 src/Plug.vala:60
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:61
+#, fuzzy
 msgid "Mail"
-msgstr ""
+msgstr "E-post"
 
 #: src/MainView.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Legg til ny konto…"
+msgstr "Legg til konto …"
 
 #: src/MainView.vala:135
 msgid "Remove this account"
-msgstr ""
+msgstr "Fjern denne kontoen"
 
 #: src/MainView.vala:150
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "Fjern «%s» fra denne enheten"
 
 #: src/MainView.vala:151
 msgid ""
@@ -186,9 +201,8 @@ msgid ""
 msgstr ""
 
 #: src/MainView.vala:159
-#, fuzzy
 msgid "Remove Account"
-msgstr "Annen konto"
+msgstr "Fjern konto"
 
 #: src/Plug.vala:27
 msgid "Online Accounts"
@@ -212,9 +226,6 @@ msgstr "Behandle nettkontoer og tilkoblede programmer"
 
 #~ msgid "Sync your calendars"
 #~ msgstr "Synkroniser dine kalendere"
-
-#~ msgid "Email"
-#~ msgstr "E-post"
 
 #~ msgid "Sync your email"
 #~ msgstr "Synkroniser din e-post"

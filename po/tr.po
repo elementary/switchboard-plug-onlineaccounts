@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 00:22+0000\n"
-"PO-Revision-Date: 2020-03-27 19:09+0000\n"
-"Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
+"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"PO-Revision-Date: 2021-06-09 13:59+0000\n"
+"Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
 "Language: tr\n"
@@ -17,28 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Sunucu"
+msgstr "Sunucu URL'si"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Geçersiz URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Kullanıcı Adı"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Parola"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:77
+#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "İptal"
 
@@ -46,15 +44,17 @@ msgstr "İptal"
 msgid "Log In"
 msgstr "Oturum Aç"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:64
+#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "Hesap Görünen Adı"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:70
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
 msgstr ""
+"Yukarıdaki ad bu hesabı tanımlamak için kullanılacaktır. Örneğin “İş” veya "
+"“Kişisel” gibi."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -63,27 +63,27 @@ msgstr "Geri"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Yapılandırma kaydediliyor…"
 
 #: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
 msgid "Success"
-msgstr ""
+msgstr "Başarılı"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+msgstr "CalDAV hesabı başarıyla eklendi."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "Kapat"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
-msgstr ""
+msgstr "Yapılandırma Kaydedilirken Hata Oluştu"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -91,25 +91,31 @@ msgstr "Takvimler"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "Görev Listeleri"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Error Fetching Calendars"
-msgstr ""
+msgstr "Takvimler Alınırken Hata Oluştu"
+
+#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+msgid "Username:"
+msgstr "Kullanıcı adı:"
+
+#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+msgid "Password:"
+msgstr "Parola:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "Sunucu"
+msgstr "Sunucu URL'si:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
 msgid "Port:"
-msgstr ""
+msgstr "Bağlantı Noktası:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
 msgid "Encryption:"
@@ -130,11 +136,19 @@ msgstr "Kimlik denetimi gerekmiyor"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
-msgstr ""
+msgstr "Posta hesabı başarıyla eklendi."
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:79
+#: src/Dialogs/Imap/ImapLoginPage.vala:44
+msgid "Real Name"
+msgstr "Gerçek Ad"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
+msgid "Email"
+msgstr "E-posta"
+
+#: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "İleri"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -147,21 +161,19 @@ msgstr ""
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "Takvimler"
+msgstr "Takvimler ve Görevler"
 
 #: src/MainView.vala:54 src/Plug.vala:60
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:61
 msgid "Mail"
-msgstr ""
+msgstr "Posta"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -169,24 +181,23 @@ msgstr "Hesap Ekle…"
 
 #: src/MainView.vala:135
 msgid "Remove this account"
-msgstr ""
+msgstr "Bu hesabı kaldır"
 
 #: src/MainView.vala:150
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "“%s” hesabını bu cihazdan kaldır"
 
 #: src/MainView.vala:151
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
+"Bu hesap kaldırılacak ve artık bu cihazdaki uygulamalarda görünmeyecek."
 
 #: src/MainView.vala:159
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "Yeni Hesap"
+msgstr "Hesabı Kaldır"
 
 #: src/Plug.vala:27
 msgid "Online Accounts"
@@ -210,9 +221,6 @@ msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #~ msgid "Sync your calendars"
 #~ msgstr "Takvimlerinizi eşitleyin"
-
-#~ msgid "Email"
-#~ msgstr "E-posta"
 
 #~ msgid "Sync your email"
 #~ msgstr "E-postanızı eşitleyin"

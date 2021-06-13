@@ -40,7 +40,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
-        var imap_username_label = new Gtk.Label ("Username:") {
+        var imap_username_label = new Gtk.Label (_("Username:")) {
             halign = Gtk.Align.END
         };
 
@@ -48,7 +48,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             hexpand = true
         };
 
-        var imap_password_label = new Gtk.Label ("Password:") {
+        var imap_password_label = new Gtk.Label (_("Password:")) {
             halign = Gtk.Align.END,
             margin_bottom = 18
         };
@@ -102,7 +102,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
-        var smtp_username_label = new Gtk.Label ("Username:") {
+        var smtp_username_label = new Gtk.Label (_("Username:")) {
             xalign = 1
         };
 
@@ -110,7 +110,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             hexpand = true
         };
 
-        var smtp_password_label = new Gtk.Label ("Password:") {
+        var smtp_password_label = new Gtk.Label (_("Password:")) {
             xalign = 1
         };
 
@@ -336,65 +336,73 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             return;
         }
 
-        var mail_account_source = new E.Source (null, null) {
+        var account_source = new E.Source (null, null) {
             parent = "",
             display_name = login_page.display_name
         };
 
-        var mail_send_source = new E.Source (null, null) {
-            parent = mail_account_source.uid,
+        var identity_source = new E.Source (null, null) {
+            parent = account_source.uid,
             display_name = login_page.display_name
         };
 
-        /* configure mail_account_source */
+        var transport_source = new E.Source (null, null) {
+            parent = account_source.uid,
+            display_name = login_page.display_name
+        };
 
-        unowned var mail_identity_extension = (E.SourceMailIdentity) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
-        mail_identity_extension.address = login_page.email;
-        mail_identity_extension.name = login_page.real_name;
+        /* configure account_source */
 
-        unowned var mail_submission_extension = (E.SourceMailSubmission) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
-        mail_submission_extension.transport_uid = mail_send_source.uid;
+        unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+        account_extension.identity_uid = identity_source.uid;
+        account_extension.backend_name = "imap";
 
-        unowned var mail_account_extension = (E.SourceMailAccount) mail_account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
-        mail_account_extension.identity_uid = mail_account_source.uid;
-        mail_account_extension.backend_name = "imap";
+        unowned var account_security_extension = (E.SourceSecurity) account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
+        account_security_extension.set_method (imap_encryption_combobox.active_id);
 
-        unowned var mail_account_security_extension = (E.SourceSecurity) mail_account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
-        mail_account_security_extension.set_method (imap_encryption_combobox.active_id);
+        unowned var account_auth_extension = (E.SourceAuthentication) account_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+        account_auth_extension.host = imap_server_entry.text;
+        account_auth_extension.port = (uint) imap_port_spin.value;
+        account_auth_extension.user = imap_username_entry.text;
+        account_auth_extension.method = "PLAIN";
 
-        unowned var mail_account_auth_extension = (E.SourceAuthentication) mail_account_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
-        mail_account_auth_extension.host = imap_server_entry.text;
-        mail_account_auth_extension.port = (uint) imap_port_spin.value;
-        mail_account_auth_extension.user = imap_username_entry.text;
-        mail_account_auth_extension.method = "PLAIN";
+        /* configure identity_source */
 
-        /* configure mail_send_source */
+        unowned var submission_extension = (E.SourceMailSubmission) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
+        submission_extension.transport_uid = transport_source.uid;
 
-        unowned var mail_transport_extension = (E.SourceMailTransport) mail_send_source.get_extension (E.SOURCE_EXTENSION_MAIL_TRANSPORT);
-        mail_transport_extension.backend_name = "smtp";
+        unowned var identity_extension = (E.SourceMailIdentity) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
+        identity_extension.address = login_page.email;
+        identity_extension.name = login_page.real_name;
 
-        unowned var mail_send_security_extension = (E.SourceSecurity) mail_send_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
-        mail_send_security_extension.set_method (smtp_encryption_combobox.active_id);
+        /* configure transport_source */
 
-        unowned var mail_send_auth_extension = (E.SourceAuthentication) mail_send_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
-        mail_send_auth_extension.host = smtp_server_entry.text;
-        mail_send_auth_extension.port = (uint) smtp_port_spin.value;
-        mail_send_auth_extension.user = smtp_username_entry.text;
-        mail_send_auth_extension.method = "PLAIN";
+        unowned var transport_extension = (E.SourceMailTransport) transport_source.get_extension (E.SOURCE_EXTENSION_MAIL_TRANSPORT);
+        transport_extension.backend_name = "smtp";
+
+        unowned var transport_security_extension = (E.SourceSecurity) transport_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
+        transport_security_extension.set_method (smtp_encryption_combobox.active_id);
+
+        unowned var transport_auth_extension = (E.SourceAuthentication) transport_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+        transport_auth_extension.host = smtp_server_entry.text;
+        transport_auth_extension.port = (uint) smtp_port_spin.value;
+        transport_auth_extension.user = smtp_username_entry.text;
+        transport_auth_extension.method = "PLAIN";
 
         /* let's save everything */
 
         var sources = new GLib.List<E.Source> ();
-        sources.append (mail_account_source);
-        sources.append (mail_send_source);
+        sources.append (account_source);
+        sources.append (identity_source);
+        sources.append (transport_source);
 
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
-        yield mail_account_source.store_password (login_page.password, true, cancellable);
+        yield account_source.store_password (login_page.password, true, cancellable);
 
         if (use_imap_credentials.active) {
-            yield mail_send_source.store_password (login_page.password, true, cancellable);
+            yield transport_source.store_password (login_page.password, true, cancellable);
         } else {
-            yield mail_send_source.store_password (smtp_password_entry.text, true, cancellable);
+            yield transport_source.store_password (smtp_password_entry.text, true, cancellable);
         }
 
         yield registry.create_sources (sources, cancellable);

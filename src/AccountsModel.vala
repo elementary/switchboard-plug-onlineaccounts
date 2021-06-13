@@ -37,25 +37,36 @@ public class OnlineAccounts.AccountsModel : Object {
             collection_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_COLLECTION);
             collection_extension_watcher.appeared.connect (add_esource);
             collection_extension_watcher.disappeared.connect (remove_esource);
-            collection_extension_watcher.filter.connect ((e_source) => {
-                return e_source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
-            });
             collection_extension_watcher.reclaim ();
 
             mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
             mail_account_extension_watcher.appeared.connect (add_esource);
             mail_account_extension_watcher.disappeared.connect (remove_esource);
-            mail_account_extension_watcher.filter.connect ((e_source) => {
-                return e_source.parent != null;
-            });
             mail_account_extension_watcher.reclaim ();
-
         } catch (Error e) {
             critical (e.message);
         }
     }
 
     private void add_esource (E.Source e_source) {
+        uint position;
+        if (accounts_liststore.find (e_source, out position)) {
+            return;
+        }
+
+        // Ignore children of collection accounts
+        if (e_source.parent != null) {
+            return;
+        }
+
+        // Ignore "Search" and "On This Computer"
+        if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+            unowned var mail_source = (E.SourceMailAccount) e_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+            if (mail_source.backend_name == "vfolder" || mail_source.backend_name == "maildir") {
+                return;
+            }
+        }
+
         accounts_liststore.append (e_source);
     }
 
