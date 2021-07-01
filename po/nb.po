@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-03 09:13+0000\n"
+"PO-Revision-Date: 2021-07-01 18:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/nb/>\n"
@@ -210,7 +210,7 @@ msgstr "Nettkontoer"
 
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
-msgstr "Behandle nettkontoer og tilkoblede programmer"
+msgstr "Håndter nettkontoer og tilknyttede programmer"
 
 #~ msgid "Posts"
 #~ msgstr "Innlegg"
