@@ -68,7 +68,7 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
             hexpand = true
         };
 
-        var display_name_hint_label = new Gtk.Label (_("The above name will be used to identify this account. Use for example “Work” or “Personal”.")) {
+        var display_name_hint_label = new Gtk.Label (_("Identify this account as for example “Work”, or “Personal” above.")) {
             hexpand = true,
             wrap = true,
             xalign = 0
