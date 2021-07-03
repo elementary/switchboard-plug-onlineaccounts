@@ -403,7 +403,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         } catch (GLib.Error e) {
             var error_placeholder = new Granite.Widgets.AlertView (
-                _("Error Fetching Calendars"),
+                _("Could not fetch calendars"),
                 e.message,
                 "dialog-error"
             );
