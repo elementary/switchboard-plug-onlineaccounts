@@ -152,8 +152,8 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         save_configuration_busy_grid.add (save_configuration_busy_spinner);
 
         var save_configuration_success_view = new Granite.Widgets.AlertView (
-            _("Success"),
-            _("The CalDAV account has been sucessfuly added."),
+            _("All done"),
+            _("CalDAV account added."),
             "process-completed"
         );
         save_configuration_success_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
