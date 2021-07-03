@@ -235,7 +235,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                         save_configuration_page_stack.remove (error_view);
                     }
                     error_view = new Granite.Widgets.AlertView (
-                        _("Error Saving Configuration"),
+                        _("Could not save configuration"),
                         e.message,
                         "dialog-error"
                     );
