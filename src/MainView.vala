@@ -148,7 +148,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         remove_button.clicked.connect (() => {
             var message_dialog = new Granite.MessageDialog (
                 _("Remove “%s” from this device").printf (e_source.display_name),
-                _("This account will be removed, and no longer appear in apps on this device."),
+                _("This account will be removed and no longer appear in “Apps” on this device."),
                 new ThemedIcon.with_default_fallbacks (icon_name),
                 Gtk.ButtonsType.CANCEL
             ) {
