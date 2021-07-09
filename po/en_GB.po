@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2020-03-19 19:09+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
+"PO-Revision-Date: 2021-07-05 13:54+0000\n"
+"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,22 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Server"
+msgstr "Server URL"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Invalid URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "User Name"
 
 #: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
@@ -48,13 +46,15 @@ msgstr "Log In"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "Account Display Name"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
 msgstr ""
+"The above name will be used to identify this account. Use for example “Work” "
+"or “Personal”."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -63,27 +63,27 @@ msgstr "Back"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Saving the configuration…"
 
 #: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
 msgid "Success"
-msgstr ""
+msgstr "Success"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+msgstr "The CalDAV account has been sucessfuly added."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
-msgstr ""
+msgstr "Close"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
-msgstr ""
+msgstr "Error Saving Configuration"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -91,35 +91,31 @@ msgstr "Calendars"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "Task Lists"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Finding available calendars and tasks…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Error Fetching Calendars"
-msgstr ""
+msgstr "Error Fetching Calendars"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
 msgid "Username:"
-msgstr ""
+msgstr "Username:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Password"
+msgstr "Password:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "Server"
+msgstr "Server URL:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
 msgid "Encryption:"
@@ -140,11 +136,11 @@ msgstr "No authentication required"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
-msgstr ""
+msgstr "The mail account has been sucessfuly added."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "Real Name"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -152,7 +148,7 @@ msgstr "Email"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "Next"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -164,21 +160,19 @@ msgstr "Connect online accounts by clicking the icon in the toolbar below."
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "Calendars"
+msgstr "Calendars and Tasks"
 
 #: src/MainView.vala:54 src/Plug.vala:60
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:61
 msgid "Mail"
-msgstr ""
+msgstr "Mail"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -186,24 +180,24 @@ msgstr "Add Account…"
 
 #: src/MainView.vala:135
 msgid "Remove this account"
-msgstr ""
+msgstr "Remove this account"
 
 #: src/MainView.vala:150
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "Remove “%s” from this device"
 
 #: src/MainView.vala:151
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
+"This account will be removed and will no longer appear in apps on this "
+"device."
 
 #: src/MainView.vala:159
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "New Account"
+msgstr "Remove Account"
 
 #: src/Plug.vala:27
 msgid "Online Accounts"
