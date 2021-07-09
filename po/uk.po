@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-11 21:23+0000\n"
+"PO-Revision-Date: 2021-07-08 17:34+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -159,7 +159,7 @@ msgstr "Під’єднайте ваші мережні облікові зап�
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Під'єднайте мережні облікові записи, натиснувши піктограму на панелі "
-"інструментів внизу."
+"інструментів унизу."
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-07-01 18:13+0000\n"
+"PO-Revision-Date: 2021-07-03 07:44+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/nb/>\n"
@@ -53,6 +53,8 @@ msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
 msgstr ""
+"Navnet ovenfor brukes til å identifisere kontoen. Bruk for eksempel «Arbeid»"
+", eller «Personlig»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
@@ -73,7 +75,7 @@ msgstr "Vellykket"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+msgstr "CalDAV-konto lagt til."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
 msgid "Close"
@@ -81,7 +83,7 @@ msgstr "Lukk"
 
 #: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
 msgid "Error Saving Configuration"
-msgstr ""
+msgstr "Kunne ikke lagre oppsett"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -93,23 +95,19 @@ msgstr "Gjøremålslister"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Finner tilgjengelige kalendere og gjøremål …"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Error Fetching Calendars"
-msgstr ""
+msgstr "Klarte ikke å hente kalendere"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
-#, fuzzy
-#| msgid "User Name"
 msgid "Username:"
-msgstr "Brukernavn"
+msgstr "Brukernavn:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Passord"
+msgstr "Passord:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
 msgid "Server URL:"
@@ -138,13 +136,11 @@ msgstr "Ingen identitetsbekreftelse kreves"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
-msgstr ""
+msgstr "E-postkonto lagt til."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
-#, fuzzy
-#| msgid "User Name"
 msgid "Real Name"
-msgstr "Brukernavn"
+msgstr "Ekte navn"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -198,7 +194,7 @@ msgstr "Fjern «%s» fra denne enheten"
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
-msgstr ""
+msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
 
 #: src/MainView.vala:159
 msgid "Remove Account"
