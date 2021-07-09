@@ -32,11 +32,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Gtk.SpinButton imap_port_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
-    private ImapDonePage done_page;
+    private ImapSavePage save_page;
 
     construct {
         login_page = new ImapLoginPage ();
-        done_page = new ImapDonePage ();
+        save_page = new ImapSavePage ();
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
@@ -215,7 +215,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
         deck.add (login_page);
         deck.add (main_grid);
-        deck.add (done_page);
+        deck.add (save_page);
 
         var window_handle = new Hdy.WindowHandle ();
         window_handle.add (deck);
@@ -232,9 +232,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             deck.visible_child = main_grid;
         });
 
-        done_page.close.connect (destroy);
+        save_page.close.connect (destroy);
 
-        done_page.back.connect (() => {
+        save_page.back.connect (() => {
             deck.navigate (Hdy.NavigationDirection.BACK);
         });
 
@@ -308,15 +308,17 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         });
 
         save_button.clicked.connect (() => {
+            save_page.show_busy ();
+            deck.visible_child = save_page;
+
             save_configuration.begin ((obj, res) => {
                 try {
                     save_configuration.end (res);
-                    done_page.set_error (null);
+                    save_page.show_success ();
 
                 } catch (Error e) {
-                    done_page.set_error (e);
+                    save_page.show_error (e);
                 }
-                deck.visible_child = done_page;
             });
         });
     }
@@ -388,6 +390,32 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.port = (uint) smtp_port_spin.value;
         transport_auth_extension.user = smtp_username_entry.text;
         transport_auth_extension.method = "PLAIN";
+
+        /* check connectivity */
+
+        var session = ImapSession.get_default ();
+        Camel.Service? imap_service = null;
+        Camel.Service? transport_service = null;
+
+        try {
+            imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
+            session.authenticate_sync (account_source, imap_service, account_auth_extension.method, cancellable);
+
+            transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
+            session.authenticate_sync (transport_source, transport_service, transport_security_extension.method, cancellable);
+
+        } catch (Error e) {
+            throw e;
+
+        } finally {
+            if (imap_service != null) {
+                session.remove_service (imap_service);
+            }
+
+            if (transport_service != null) {
+                session.remove_service (transport_service);
+            }
+        }
 
         /* let's save everything */
 
