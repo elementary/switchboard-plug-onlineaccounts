@@ -357,7 +357,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
         account_extension.identity_uid = identity_source.uid;
-        account_extension.backend_name = "imap";
+        account_extension.backend_name = "imapx";
 
         unowned var account_security_extension = (E.SourceSecurity) account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
         account_security_extension.set_method (imap_encryption_combobox.active_id);
@@ -391,20 +391,49 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.user = smtp_username_entry.text;
         transport_auth_extension.method = "PLAIN";
 
-        /* check connectivity */
-
+        /* verify connection */
         var session = ImapSession.get_default ();
         Camel.Service? imap_service = null;
         Camel.Service? transport_service = null;
 
         try {
             imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
-            session.authenticate_sync (account_source, imap_service, account_auth_extension.method, cancellable);
+            account_source.camel_configure_service (imap_service);
+            imap_service.set_password (login_page.password);
+
+            ((Camel.OfflineStore) imap_service).set_online_sync (true, cancellable);
+            imap_service.connect_sync (cancellable);
+            if (Camel.AuthenticationResult.ACCEPTED != imap_service.authenticate_sync (account_auth_extension.method, cancellable)) {
+                throw new GLib.Error (
+                    Camel.Service.error_quark (),
+                    Camel.ServiceError.CANT_AUTHENTICATE,
+                    "IMAP authentication failed"
+                );
+            }
+            imap_service.disconnect_sync (true, cancellable);
 
             transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
-            session.authenticate_sync (transport_source, transport_service, transport_security_extension.method, cancellable);
+            transport_source.camel_configure_service (transport_service);
+
+            if (use_imap_credentials.active) {
+                transport_service.set_password (login_page.password);
+            } else {
+                transport_service.set_password (smtp_password_entry.text);
+            }
+
+            ((Camel.OfflineStore) transport_service).set_online_sync (true, cancellable);
+            transport_service.connect_sync (cancellable);
+            if (Camel.AuthenticationResult.ACCEPTED != transport_service.authenticate_sync (transport_auth_extension.method, cancellable)) {
+                throw new GLib.Error (
+                    Camel.Service.error_quark (),
+                    Camel.ServiceError.CANT_AUTHENTICATE,
+                    "SMTP authentication failed"
+                );
+            }
+            transport_service.disconnect_sync (true, cancellable);
 
         } catch (Error e) {
+            warning ("Failed to verify connection: %s", e.message);
             throw e;
 
         } finally {
