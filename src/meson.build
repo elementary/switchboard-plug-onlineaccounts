@@ -3,7 +3,7 @@ plug_files = files(
     'Dialogs/CaldavDialog.vala',
     'Dialogs/Imap/ImapDialog.vala',
     'Dialogs/Imap/ImapSavePage.vala',
-    'Dialogs/Imap/ImapSession.vala',
+    'Dialogs/Imap/MailSession.vala',
     'Dialogs/Imap/ImapLoginPage.vala',
     'MainView.vala',
     'Plug.vala',

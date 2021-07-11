@@ -308,8 +308,8 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         });
 
         save_button.clicked.connect (() => {
-            save_page.show_busy ();
             deck.visible_child = save_page;
+            save_page.show_busy ();
 
             save_configuration.begin ((obj, res) => {
                 try {
@@ -392,25 +392,35 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.method = "PLAIN";
 
         /* verify connection */
-        var session = ImapSession.get_default ();
+
+        var session = MailSession.get_default ();
+
         Camel.Service? imap_service = null;
         Camel.Service? transport_service = null;
-
+    
         try {
             imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
             account_source.camel_configure_service (imap_service);
             imap_service.set_password (login_page.password);
 
-            ((Camel.OfflineStore) imap_service).set_online_sync (true, cancellable);
-            imap_service.connect_sync (cancellable);
-            if (Camel.AuthenticationResult.ACCEPTED != imap_service.authenticate_sync (account_auth_extension.method, cancellable)) {
+            yield imap_service.connect (GLib.Priority.DEFAULT, cancellable);
+
+            if (imap_service is Camel.OfflineStore) {
+                try {
+                    yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, cancellable);
+                } catch (Error e) {
+                    warning ("Unable to change imap store online status: %s", e.message);
+                }
+            }
+
+            if (Camel.AuthenticationResult.ACCEPTED != yield imap_service.authenticate (account_auth_extension.method, GLib.Priority.DEFAULT, cancellable)) {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
                     "IMAP authentication failed"
                 );
             }
-            imap_service.disconnect_sync (true, cancellable);
+            yield imap_service.disconnect (true, GLib.Priority.DEFAULT, cancellable);
 
             transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
             transport_source.camel_configure_service (transport_service);
@@ -421,16 +431,15 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 transport_service.set_password (smtp_password_entry.text);
             }
 
-            ((Camel.OfflineStore) transport_service).set_online_sync (true, cancellable);
-            transport_service.connect_sync (cancellable);
-            if (Camel.AuthenticationResult.ACCEPTED != transport_service.authenticate_sync (transport_auth_extension.method, cancellable)) {
+            yield transport_service.connect (GLib.Priority.DEFAULT, cancellable);
+            if (Camel.AuthenticationResult.ACCEPTED != yield transport_service.authenticate (transport_auth_extension.method, GLib.Priority.DEFAULT, cancellable)) {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
                     "SMTP authentication failed"
                 );
             }
-            transport_service.disconnect_sync (true, cancellable);
+            yield transport_service.disconnect (true, GLib.Priority.DEFAULT, cancellable);
 
         } catch (Error e) {
             warning ("Failed to verify connection: %s", e.message);
