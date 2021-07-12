@@ -24,18 +24,18 @@ public class OnlineAccounts.SimpleSasl : Camel.Sasl {
     }
 }
 
-public class OnlineAccounts.MailSession : Camel.Session {
+public class OnlineAccounts.CamelSession : Camel.Session {
 
-    private static MailSession? session = null;
+    private static CamelSession? session = null;
     
-    public static unowned MailSession get_default () {
+    public static unowned CamelSession get_default () {
         if (session == null) {
-            session = new MailSession ();
+            session = new CamelSession ();
         }
         return session;
     }
 
-    public MailSession () {
+    public CamelSession () {
         Object (
             user_data_dir: Path.build_filename (E.get_user_data_dir (), "mail"),
             user_cache_dir: Path.build_filename (E.get_user_cache_dir (), "mail")

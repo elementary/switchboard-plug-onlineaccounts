@@ -393,7 +393,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         /* verify connection */
 
-        var session = MailSession.get_default ();
+        var session = CamelSession.get_default ();
 
         Camel.Service? imap_service = null;
         Camel.Service? transport_service = null;
