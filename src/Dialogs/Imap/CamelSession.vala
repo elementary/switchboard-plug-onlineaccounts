@@ -21,7 +21,7 @@
 public class OnlineAccounts.CamelSession : Camel.Session {
 
     private static CamelSession? session = null;
-    
+
     public static unowned CamelSession get_default () {
         if (session == null) {
             session = new CamelSession ();

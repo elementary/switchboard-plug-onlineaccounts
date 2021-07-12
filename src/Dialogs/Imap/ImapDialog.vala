@@ -395,7 +395,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         /* verify connection */
         unowned var session = CamelSession.get_default ();
-        
+
         Camel.Service? imap_service = null;
         try {
             imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
@@ -405,7 +405,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             if (imap_service is Camel.NetworkService) {
                 yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
             }
-            
+
             set_cancel_timeout (cancellable);
 
             try {
