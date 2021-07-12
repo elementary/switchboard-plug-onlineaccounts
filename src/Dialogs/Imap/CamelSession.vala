@@ -18,12 +18,6 @@
 *
 */
 
-public class OnlineAccounts.SimpleSasl : Camel.Sasl {
-    public SimpleSasl (string service_name, string mechanism, Camel.Service service) {
-        Object (service_name: service_name, mechanism: mechanism, service: service);
-    }
-}
-
 public class OnlineAccounts.CamelSession : Camel.Session {
 
     private static CamelSession? session = null;
@@ -47,59 +41,5 @@ public class OnlineAccounts.CamelSession : Camel.Session {
         set_network_monitor (E.NetworkMonitor.get_default ());
         set_online (true);
         user_alert.connect ((service, type, message) => { warning (message); });
-    }
-
-    public override bool authenticate_sync (Camel.Service service, string? mechanism, GLib.Cancellable? cancellable = null) throws GLib.Error {
-        /* This function is heavily inspired by mail_ui_session_authenticate_sync in Evolution
-         * https://git.gnome.org/browse/evolution/tree/mail/e-mail-ui-session.c */
-
-        /* Do not chain up.  Camel's default method is only an example for
-         * subclasses to follow.  Instead we mimic most of its logic here. */
-
-        Camel.ServiceAuthType authtype;
-        bool try_empty_password = false;
-        var result = Camel.AuthenticationResult.REJECTED;
-
-        if (mechanism == "none") {
-            mechanism = null;
-        }
-
-        if (mechanism != null) {
-            /* APOP is one case where a non-SASL mechanism name is passed, so
-             * don't bail if the CamelServiceAuthType struct comes back NULL. */
-            authtype = Camel.Sasl.authtype (mechanism);
-
-            /* If the SASL mechanism does not involve a user
-             * password, then it gets one shot to authenticate. */
-            if (authtype != null && !authtype.need_password) {
-                result = service.authenticate_sync (mechanism); //@TODO make async?
-
-                if (result == Camel.AuthenticationResult.REJECTED) {
-                    throw new GLib.Error (
-                        Camel.Service.error_quark (),
-                        Camel.ServiceError.CANT_AUTHENTICATE,
-                        "%s authentication failed",
-                        mechanism
-                    );
-                }
-
-                return (result == Camel.AuthenticationResult.ACCEPTED);
-            }
-
-            /* Some SASL mechanisms can attempt to authenticate without a
-             * user password being provided (e.g. single-sign-on credentials),
-             * but can fall back to a user password.  Handle that case next. */
-            var sasl = new SimpleSasl (((Camel.Provider)service.provider).protocol, mechanism, service);
-            if (sasl != null) {
-                try_empty_password = sasl.try_empty_password_sync ();
-            }
-        }
-
-        result = Camel.AuthenticationResult.REJECTED;
-
-        if (try_empty_password) {
-            result = service.authenticate_sync (mechanism); //@TODO catch error
-        }
-        return (result == Camel.AuthenticationResult.ACCEPTED);
     }
 }

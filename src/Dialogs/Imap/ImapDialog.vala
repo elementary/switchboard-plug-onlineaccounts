@@ -25,6 +25,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Granite.ValidatedEntry smtp_server_entry;
     private Gtk.Button save_button;
     private Gtk.CheckButton use_imap_credentials;
+    private Gtk.CheckButton smtp_no_credentials;
     private Gtk.ComboBoxText imap_encryption_combobox;
     private Gtk.ComboBoxText smtp_encryption_combobox;
     private Gtk.Entry smtp_password_entry;
@@ -33,6 +34,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
     private ImapSavePage save_page;
+    private uint cancel_timeout_id = 0;
 
     construct {
         login_page = new ImapLoginPage ();
@@ -98,7 +100,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             active = true
         };
 
-        var no_credentials = new Gtk.CheckButton.with_label (_("No authentication required"));
+        smtp_no_credentials = new Gtk.CheckButton.with_label (_("No authentication required"));
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
@@ -164,7 +166,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             row_spacing = 6
         };
         smtp_server_grid.attach (smtp_header, 0, 0, 2);
-        smtp_server_grid.attach (no_credentials, 1, 1);
+        smtp_server_grid.attach (smtp_no_credentials, 1, 1);
         smtp_server_grid.attach (use_imap_credentials, 1, 2);
         smtp_server_grid.attach (smtp_revealer, 0, 3, 2);
         smtp_server_grid.attach (smtp_url_label, 0, 4);
@@ -242,9 +244,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             deck.navigate (Hdy.NavigationDirection.BACK);
         });
 
-        no_credentials.notify["active"].connect (() => {
-            smtp_revealer.reveal_child = !no_credentials.active && !use_imap_credentials.active;
-            use_imap_credentials.sensitive = ! no_credentials.active;
+        smtp_no_credentials.notify["active"].connect (() => {
+            smtp_revealer.reveal_child = !smtp_no_credentials.active && !use_imap_credentials.active;
+            use_imap_credentials.sensitive = ! smtp_no_credentials.active;
         });
 
         use_imap_credentials.bind_property ("active", smtp_revealer, "reveal-child", GLib.BindingFlags.INVERT_BOOLEAN);
@@ -308,8 +310,13 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         });
 
         save_button.clicked.connect (() => {
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
+            cancellable = new GLib.Cancellable ();
+
             deck.visible_child = save_page;
-            save_page.show_busy ();
+            save_page.show_busy (cancellable);
 
             save_configuration.begin ((obj, res) => {
                 try {
@@ -328,11 +335,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     }
 
     private async void save_configuration () throws Error {
-        if (cancellable != null) {
-            cancellable.cancel ();
-        }
-        cancellable = new GLib.Cancellable ();
-
         var registry = yield new E.SourceRegistry (cancellable);
         if (cancellable.is_cancelled ()) {
             return;
@@ -389,70 +391,101 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.host = smtp_server_entry.text;
         transport_auth_extension.port = (uint) smtp_port_spin.value;
         transport_auth_extension.user = smtp_username_entry.text;
-        transport_auth_extension.method = "PLAIN";
+        transport_auth_extension.method = "LOGIN";
 
         /* verify connection */
-
-        var session = CamelSession.get_default ();
-
+        unowned var session = CamelSession.get_default ();
+        
         Camel.Service? imap_service = null;
-        Camel.Service? transport_service = null;
-    
         try {
             imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
-            account_source.camel_configure_service (imap_service);
             imap_service.set_password (login_page.password);
+            account_source.camel_configure_service (imap_service);
 
-            yield imap_service.connect (GLib.Priority.DEFAULT, cancellable);
-
-            if (imap_service is Camel.OfflineStore) {
-                try {
-                    yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, cancellable);
-                } catch (Error e) {
-                    warning ("Unable to change imap store online status: %s", e.message);
-                }
+            if (imap_service is Camel.NetworkService) {
+                yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
             }
+            
+            set_cancel_timeout (cancellable);
 
-            if (Camel.AuthenticationResult.ACCEPTED != yield imap_service.authenticate (account_auth_extension.method, GLib.Priority.DEFAULT, cancellable)) {
+            try {
+                if (imap_service is Camel.OfflineStore) {
+                    yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, cancellable);
+                } else {
+                    yield imap_service.connect (GLib.Priority.DEFAULT, cancellable);
+                }
+
+            } catch (GLib.IOError e) {
+                if (!(e is GLib.IOError.CANCELLED)) {
+                    throw e;
+                }
+
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    "IMAP authentication failed"
+                    "Unable to login. Please verify your credentials."
                 );
             }
-            yield imap_service.disconnect (true, GLib.Priority.DEFAULT, cancellable);
 
+            unset_cancel_timeout ();
+
+        } catch (Error e) {
+            throw new GLib.Error (
+                Camel.Service.error_quark (),
+                Camel.ServiceError.CANT_AUTHENTICATE,
+                "IMAP verification failed: %s".printf (e.message)
+            );
+        }
+
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
+
+        Camel.Service? transport_service = null;
+        try {
             transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
             transport_source.camel_configure_service (transport_service);
 
-            if (use_imap_credentials.active) {
-                transport_service.set_password (login_page.password);
-            } else {
-                transport_service.set_password (smtp_password_entry.text);
+            if (!smtp_no_credentials.active) {
+                if (use_imap_credentials.active) {
+                    transport_service.set_password (login_page.password);
+                } else {
+                    transport_service.set_password (smtp_password_entry.text);
+                }
             }
 
-            yield transport_service.connect (GLib.Priority.DEFAULT, cancellable);
-            if (Camel.AuthenticationResult.ACCEPTED != yield transport_service.authenticate (transport_auth_extension.method, GLib.Priority.DEFAULT, cancellable)) {
+            if (transport_service is Camel.NetworkService) {
+                yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
+            }
+
+            set_cancel_timeout (cancellable);
+
+            try {
+                yield transport_service.connect (GLib.Priority.DEFAULT, cancellable);
+            } catch (GLib.IOError e) {
+                if (!(e is GLib.IOError.CANCELLED)) {
+                    throw e;
+                }
+
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    "SMTP authentication failed"
+                    "Unable to login. Please verify your credentials."
                 );
             }
-            yield transport_service.disconnect (true, GLib.Priority.DEFAULT, cancellable);
+
+            unset_cancel_timeout ();
 
         } catch (Error e) {
-            warning ("Failed to verify connection: %s", e.message);
-            throw e;
+            throw new GLib.Error (
+                Camel.Service.error_quark (),
+                Camel.ServiceError.CANT_AUTHENTICATE,
+                "SMTP verification failed: %s".printf (e.message)
+            );
+        }
 
-        } finally {
-            if (imap_service != null) {
-                session.remove_service (imap_service);
-            }
-
-            if (transport_service != null) {
-                session.remove_service (transport_service);
-            }
+        if (cancellable.is_cancelled ()) {
+            return;
         }
 
         /* let's save everything */
@@ -472,5 +505,20 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         }
 
         yield registry.create_sources (sources, cancellable);
+    }
+
+
+    private void set_cancel_timeout (GLib.Cancellable cancellable) {
+        cancel_timeout_id = GLib.Timeout.add (4000, () => {
+            cancel_timeout_id = 0;
+            cancellable.cancel ();
+            return GLib.Source.REMOVE;
+        });
+    }
+
+    private void unset_cancel_timeout () {
+        if (cancel_timeout_id != 0) {
+            GLib.Source.remove (cancel_timeout_id);
+        }
     }
 }

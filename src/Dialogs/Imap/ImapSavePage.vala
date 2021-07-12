@@ -26,6 +26,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
     private Gtk.Button back_button;
     private Gtk.Button close_button;
     private Granite.Widgets.AlertView error_alert_view;
+    private GLib.Cancellable? cancellable = null;
 
     construct {
         var busy_label = new Gtk.Label (_("Configuring the mail account…"));
@@ -65,12 +66,9 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
         stack.add_named (error_alert_view, "error");
         stack.add_named (success_alert_view, "success");
 
-        back_button = new Gtk.Button.with_label (_("Back")) {
-            sensitive = false
-        };
+        back_button = new Gtk.Button.with_label (_("Back"));
 
         close_button = new Gtk.Button.with_label (_("Close")) {
-            sensitive = false,
             can_default = true
         };
         close_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
@@ -92,27 +90,31 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
         add (action_area);
 
         back_button.clicked.connect (() => {
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
             back ();
         });
 
         close_button.clicked.connect (() => {
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
             close ();
         });
     }
 
-    public void show_busy () {
+    public void show_busy (GLib.Cancellable cancellable) {
+        this.cancellable = cancellable;
         stack.set_visible_child_name ("busy");
-        back_button.sensitive = close_button.sensitive = false;
     }
 
     public void show_success () {
         stack.set_visible_child_name ("success");
-        back_button.sensitive = close_button.sensitive = true;
     }
 
     public void show_error (Error error) {
         error_alert_view.description = error.message;
         stack.set_visible_child_name ("error");
-        back_button.sensitive = close_button.sensitive = true;
     }
 }
