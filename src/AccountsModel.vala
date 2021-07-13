@@ -59,10 +59,10 @@ public class OnlineAccounts.AccountsModel : Object {
             return;
         }
 
-        // Ignore "Search" and "On This Computer"
+        // Ignore "Search", "On This Computer" and "local_mbox"
         if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
             unowned var mail_source = (E.SourceMailAccount) e_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
-            if (mail_source.backend_name == "vfolder" || mail_source.backend_name == "maildir") {
+            if (mail_source.backend_name == "vfolder" || mail_source.backend_name == "maildir"  || mail_source.backend_name == "mbox" ) {
                 return;
             }
         }
