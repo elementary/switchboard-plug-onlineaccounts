@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-15 21:22+0000\n"
 "PO-Revision-Date: 2020-10-30 09:15+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,17 +28,18 @@ msgid "Manage online accounts and connected applications"
 msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Major redesign"
+#, fuzzy
+#| msgid "Major redesign"
+msgid "Complete redesign"
 msgstr "Büyük yeniden tasarım"
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make external links open in the web browser"
-msgstr "Harici bağlantıların web tarayıcısında açılması sağlandı"
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr "HiDPI'de bulanık olan simgeler düzeltildi"
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "Çeviriler güncellendi"
+
+#~ msgid "Make external links open in the web browser"
+#~ msgstr "Harici bağlantıların web tarayıcısında açılması sağlandı"
