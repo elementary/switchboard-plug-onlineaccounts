@@ -1,3 +1,9 @@
+switchboard-plug-onlineaccounts (6.0.0) focal; urgency=medium
+
+  * New upstream release.
+
+ -- Daniel Foré <daniel@elementary.io>  Thu, 15 Jul 2021 14:32:53 -0700
+
 switchboard-plug-onlineaccounts (3.0.0) focal; urgency=medium
 
   * New upstream release.
