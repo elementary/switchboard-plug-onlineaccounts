@@ -7,11 +7,10 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="2.1.0" date="2019-11-04" urgency="medium">
+    <release version="6.0.0" date="2021-07-15" urgency="medium">
       <description>
         <ul>
-          <li>Major redesign</li>
-          <li>Make external links open in the web browser</li>
+          <li>Complete redesign</li>
           <li>Fix blurry icons on HiDPI</li>
           <li>Updated translations</li>
         </ul>
