@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 21:22+0000\n"
-"PO-Revision-Date: 2020-05-01 03:10+0000\n"
+"PO-Revision-Date: 2021-07-19 19:06+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
@@ -28,10 +28,8 @@ msgid "Manage online accounts and connected applications"
 msgstr "Gestioneu els comptes en línia i les aplicacions connectades."
 
 #: data/onlineaccounts.appdata.xml.in:13
-#, fuzzy
-#| msgid "Major redesign"
 msgid "Complete redesign"
-msgstr "Redisseny gros"
+msgstr "Redisseny complet"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Fix blurry icons on HiDPI"
