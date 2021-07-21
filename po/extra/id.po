@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-15 21:22+0000\n"
 "PO-Revision-Date: 2020-11-18 15:15+0000\n"
 "Last-Translator: deovaliandro <mdv16h@student.unhas.ac.id>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -28,17 +28,13 @@ msgid "Manage online accounts and connected applications"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Major redesign"
+msgid "Complete redesign"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make external links open in the web browser"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "Terjemahan yang diperbarui"

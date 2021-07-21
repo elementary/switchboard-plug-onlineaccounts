@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-21 00:19+0000\n"
+"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"PO-Revision-Date: 2021-07-18 00:36+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/de/>\n"
@@ -103,7 +103,7 @@ msgstr "Fehler beim Laden der Kalender"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
 msgid "Username:"
-msgstr "Benutzername"
+msgstr "Benutzername:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
 msgid "Password:"
@@ -152,13 +152,13 @@ msgstr "Weiter"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
-msgstr "Mit Ihren Internetkonten verbinden"
+msgstr "Mit Internetkonten verbinden"
 
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Verbinden Sie Online-Konten, indem Sie auf das Symbol in der Werkzeugleiste "
-"unten klicken."
+"Mit einem Klick auf das Symbol in der Werkzeugleiste unten mit Online-Konten "
+"verbinden."
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-07-05 13:54+0000\n"
+"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"PO-Revision-Date: 2021-07-15 23:09+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -29,17 +29,16 @@ msgid "Manage online accounts and connected applications"
 msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Major redesign"
-msgstr "Значно змінено вигляд"
+msgid "Complete redesign"
+msgstr "Завершено зміну зовнішнього вигляду"
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make external links open in the web browser"
-msgstr "Зовнішні посилання тепер відкриваються в переглядачі мережі"
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix blurry icons on HiDPI"
 msgstr "Виправлено розмиті піктограми на HiDPI"
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "Оновлено переклади"
+
+#~ msgid "Make external links open in the web browser"
+#~ msgstr "Зовнішні посилання тепер відкриваються в переглядачі мережі"
