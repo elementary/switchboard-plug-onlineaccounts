@@ -356,7 +356,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
 
         /* configure account_source */
-
+        
         unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
         account_extension.identity_uid = identity_source.uid;
         account_extension.backend_name = "imapx";
@@ -398,11 +398,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         Camel.Service? imap_service = null;
         try {
+            debug ("Add imap service for mail account extension");
             imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
+
             imap_service.set_password (login_page.password);
             account_source.camel_configure_service (imap_service);
 
             if (imap_service is Camel.NetworkService) {
+                debug ("Test if we can reach the imap service");
                 yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
             }
 
@@ -410,8 +413,10 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
             try {
                 if (imap_service is Camel.OfflineStore) {
+                    debug ("Set the imap service online");
                     yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, cancellable);
                 } else {
+                    debug ("Connect to the imap service");
                     yield imap_service.connect (GLib.Priority.DEFAULT, cancellable);
                 }
 
@@ -423,7 +428,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    "Unable to login. Please verify your credentials."
+                    "Can't login. Please verify your credentials."
                 );
             }
 
@@ -443,6 +448,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         Camel.Service? transport_service = null;
         try {
+            debug ("Add transport service");
             transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
             transport_source.camel_configure_service (transport_service);
 
@@ -455,12 +461,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             }
 
             if (transport_service is Camel.NetworkService) {
+                debug ("Test if we can reach the transport service");
                 yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
             }
 
             set_cancel_timeout (cancellable);
 
             try {
+                debug ("Connect to the transport service");
                 yield transport_service.connect (GLib.Priority.DEFAULT, cancellable);
             } catch (GLib.IOError e) {
                 if (!(e is GLib.IOError.CANCELLED)) {
@@ -470,7 +478,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    "Unable to login. Please verify your credentials."
+                    "Can't login. Please verify your credentials."
                 );
             }
 
