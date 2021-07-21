@@ -356,7 +356,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
 
         /* configure account_source */
-        
+
         unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
         account_extension.identity_uid = identity_source.uid;
         account_extension.backend_name = "imapx";
