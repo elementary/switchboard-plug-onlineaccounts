@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
-"PO-Revision-Date: 2021-06-11 21:23+0000\n"
-"Last-Translator: Nikita Buzanov <github@buzanovn.ru>\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
+"PO-Revision-Date: 2021-07-22 17:45+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
 "Language: ru\n"
@@ -96,11 +96,11 @@ msgstr "Списки задач"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Поиск доступных календарей и задач…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Error Fetching Calendars"
-msgstr ""
+msgstr "Ошибка при поиске календарей"
 
 #: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
 msgid "Username:"
@@ -135,6 +135,24 @@ msgstr "Использовать учётные данные IMAP"
 msgid "No authentication required"
 msgstr "Авторизация не требуется"
 
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:358
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:359
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:360
+msgid "Templates"
+msgstr ""
+
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
 msgstr "Учетная запись почты была успешно добавлена."
@@ -153,12 +171,12 @@ msgstr "Далее"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
-msgstr "Подключите учётные записи Интернета"
+msgstr "Подключите ваши онлайн аккаунты"
 
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Подключить онлайн аккаунты, нажав на значок на панели инструментов ниже."
+"Подключите онлайн аккаунты, нажав на значок на панели инструментов ниже."
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
@@ -180,32 +198,34 @@ msgstr "Почта"
 msgid "Add Account…"
 msgstr "Добавить учётную запись…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Удалить эту учетную запись"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Удалить «%s» с этого устройства"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
+"Эта учетная запись будет удалена и больше не будет отображаться в "
+"приложениях на этом устройстве."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Удалить учётную запись"
 
 #: src/Plug.vala:27
 msgid "Online Accounts"
-msgstr "Сетевые учетные записи"
+msgstr "Онлайн аккаунты"
 
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
-msgstr "Управление сетевыми учётными записями и связанными приложениями"
+msgstr "Управление онлайн аккаунтами и подключенными приложениями"
 
 #~ msgid "Posts"
 #~ msgstr "Сообщения"

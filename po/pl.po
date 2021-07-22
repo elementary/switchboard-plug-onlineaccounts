@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -139,6 +139,24 @@ msgstr "Używaj danych uwierzytelniających IMAP"
 msgid "No authentication required"
 msgstr "Uwierzytelnianie nie jest wymagane"
 
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:358
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:359
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:360
+msgid "Templates"
+msgstr ""
+
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
 msgstr ""
@@ -187,22 +205,22 @@ msgstr ""
 msgid "Add Account…"
 msgstr "Dodaj nowe konto…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 #, fuzzy
 #| msgid "New Account"
 msgid "Remove Account"

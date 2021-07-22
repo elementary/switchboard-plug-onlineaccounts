@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: 2021-06-09 16:50+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -134,6 +134,24 @@ msgstr "Usa credencials d'IMAP"
 msgid "No authentication required"
 msgstr "No cal autenticació"
 
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:358
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:359
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:360
+msgid "Templates"
+msgstr ""
+
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
 msgstr "El compte de correu s'ha afegit correctament."
@@ -180,16 +198,16 @@ msgstr "Correu"
 msgid "Add Account…"
 msgstr "Afegeix un compte…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Suprimeix aquest compte"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Suprimeix %s d'aquest dispositiu"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -197,7 +215,7 @@ msgstr ""
 "Aquest compte se suprimirà i ja no apareixerà a les aplicacions d'aquest "
 "dispositiu."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Suprimeix el compte"
 

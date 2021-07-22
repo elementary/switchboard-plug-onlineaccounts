@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/online-"
@@ -28,19 +28,27 @@ msgid "Manage online accounts and connected applications"
 msgstr "Spravovat online účty a propojené aplikace"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+msgid "Updated translations"
+msgstr "Aktualizovány překlady"
+
+#: data/onlineaccounts.appdata.xml.in:22
 #, fuzzy
 #| msgid "Major redesign"
 msgid "Complete redesign"
 msgstr "Velké předělání"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
 "Oprava rozmazaných ikon na displejích s velmi vysokým rozlišením (HiDPI)"
-
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "Aktualizovány překlady"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "Otevírání externích odkazů ve webovém prohlížeči"

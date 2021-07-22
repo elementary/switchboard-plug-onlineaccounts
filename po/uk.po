@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
-"PO-Revision-Date: 2021-07-08 17:34+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
+"PO-Revision-Date: 2021-07-22 22:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -135,6 +135,24 @@ msgstr "Використовувати облікові дані IMAP"
 msgid "No authentication required"
 msgstr "Автентифікація не потрібна"
 
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
+msgid "Archive"
+msgstr "Архівовані"
+
+#: src/Dialogs/Imap/ImapDialog.vala:358
+msgid "Sent"
+msgstr "Надіслані"
+
+#: src/Dialogs/Imap/ImapDialog.vala:359
+msgid "Drafts"
+msgstr "Чернетки"
+
+#: src/Dialogs/Imap/ImapDialog.vala:360
+msgid "Templates"
+msgstr "Шаблони"
+
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
 msgstr "Обліковий запис пошти успішно додано."
@@ -181,16 +199,16 @@ msgstr "Пошта"
 msgid "Add Account…"
 msgstr "Додати обліковий запис…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Вилучити цей обліковий запис"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Вилучити «%s» з цього пристрою"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -198,7 +216,7 @@ msgstr ""
 "Цей обліковий запис буде вилучено і надалі він не з'являтиметься у "
 "застосунках на цьому пристрої."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Вилучити обліковий запис"
 

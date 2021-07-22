@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -139,6 +139,24 @@ msgstr "Usar credenciales IMAP"
 msgid "No authentication required"
 msgstr "No se requiere autenticación"
 
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:358
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:359
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:360
+msgid "Templates"
+msgstr ""
+
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
 msgstr "La cuenta de correo se ha agregado correctamente."
@@ -187,16 +205,16 @@ msgstr "Correo"
 msgid "Add Account…"
 msgstr "Añadir cuenta…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Eliminar esta cuenta"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Eliminar “%s” de este dispositivo"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -204,7 +222,7 @@ msgstr ""
 "Esta cuenta se eliminará y ya no aparecerá en las aplicaciones de este "
 "dispositivo."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Eliminar cuenta"
 

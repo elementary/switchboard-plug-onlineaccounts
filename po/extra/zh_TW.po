@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: 2020-03-01 15:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -30,13 +30,21 @@ msgid "Manage online accounts and connected applications"
 msgstr "管理線上帳號與連接的應用程式"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Complete redesign"
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Fix blurry icons on HiDPI"
+msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:15
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
 msgid "Updated translations"
 msgstr "翻譯更新"
+
+#: data/onlineaccounts.appdata.xml.in:22
+msgid "Complete redesign"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:23
+msgid "Fix blurry icons on HiDPI"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: 2020-05-12 17:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,18 +28,26 @@ msgid "Manage online accounts and connected applications"
 msgstr "Gerir contas online e aplicações associadas"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+msgid "Updated translations"
+msgstr "Traduções atualizadas"
+
+#: data/onlineaccounts.appdata.xml.in:22
 #, fuzzy
 #| msgid "Major redesign"
 msgid "Complete redesign"
 msgstr "Grande reformulação"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Fix blurry icons on HiDPI"
 msgstr "Corrige ícones desfocados em HiDPI"
-
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "Traduções atualizadas"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "Faz com que as ligações externas abram no navegador da Internet"
