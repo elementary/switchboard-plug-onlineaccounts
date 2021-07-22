@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: online-accounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 21:28+0000\n"
+"POT-Creation-Date: 2021-07-22 22:10+0000\n"
 "PO-Revision-Date: 2019-10-16 20:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Moldovan <https://l10n.elementary.io/projects/switchboard/"
@@ -131,19 +131,21 @@ msgstr ""
 msgid "No authentication required"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:363
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "Archive"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:378
+#: src/Dialogs/Imap/ImapDialog.vala:358
 msgid "Sent"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:385
+#: src/Dialogs/Imap/ImapDialog.vala:359
 msgid "Drafts"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:386
+#: src/Dialogs/Imap/ImapDialog.vala:360
 msgid "Templates"
 msgstr ""
 

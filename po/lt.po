@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 21:28+0000\n"
+"POT-Creation-Date: 2021-07-22 22:10+0000\n"
 "PO-Revision-Date: 2019-01-11 20:54+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
@@ -135,19 +135,21 @@ msgstr "Naudoti IMAP prisijungimo duomenis"
 msgid "No authentication required"
 msgstr "Nereikia tapatybės nustatymo"
 
-#: src/Dialogs/Imap/ImapDialog.vala:363
+#. Configuring the well known folder URI code borrows heavily from Evolution:
+#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "Archive"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:378
+#: src/Dialogs/Imap/ImapDialog.vala:358
 msgid "Sent"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:385
+#: src/Dialogs/Imap/ImapDialog.vala:359
 msgid "Drafts"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:386
+#: src/Dialogs/Imap/ImapDialog.vala:360
 msgid "Templates"
 msgstr ""
 
