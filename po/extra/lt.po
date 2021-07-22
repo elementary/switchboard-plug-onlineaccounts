@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 21:18+0000\n"
 "PO-Revision-Date: 2019-10-05 12:23+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -32,13 +32,17 @@ msgid "Manage online accounts and connected applications"
 msgstr "Tvarkyti internetines paskyras ir prijungtas programas"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
+msgid "Updated translations"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Complete redesign"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Fix blurry icons on HiDPI"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Updated translations"
 msgstr ""

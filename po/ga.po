@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: online-accounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 21:18+0000\n"
 "PO-Revision-Date: 2018-09-13 18:54+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -173,22 +173,22 @@ msgstr ""
 msgid "Add Account…"
 msgstr ""
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 21:18+0000\n"
 "PO-Revision-Date: 2021-07-22 17:45+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,16 +29,20 @@ msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн аккаунтами и подключенными приложениями"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "Обновлены переводы"
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Complete redesign"
 msgstr "Полное изменение дизайна"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Fix blurry icons on HiDPI"
 msgstr "Исправлены размытые значки на HiDPI"
-
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "Обновлены переводы"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "Внешние ссылки теперь открываются в веб браузере"

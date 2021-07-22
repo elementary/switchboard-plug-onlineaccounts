@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 21:18+0000\n"
 "PO-Revision-Date: 2021-06-09 10:42+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -178,16 +178,16 @@ msgstr "Correio"
 msgid "Add Account…"
 msgstr "Adicionar conta…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Remover esta conta"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Remover \"%s\" deste dispositivo"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -195,7 +195,7 @@ msgstr ""
 "Esta conta será removida e deixará de aparecer nas aplicações deste "
 "dispositivo."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Remover Conta"
 

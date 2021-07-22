@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 21:18+0000\n"
 "PO-Revision-Date: 2021-06-10 11:43+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -180,23 +180,23 @@ msgstr "メール"
 msgid "Add Account…"
 msgstr "アカウントを追加…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "このアカウントを削除"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "“%s” をこのデバイスから削除します"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
 "このアカウントは削除され、このデバイス上のアプリで表示されなくなります。"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "アカウントを削除"
 

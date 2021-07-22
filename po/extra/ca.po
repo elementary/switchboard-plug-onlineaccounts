@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 21:22+0000\n"
+"POT-Creation-Date: 2021-07-22 21:18+0000\n"
 "PO-Revision-Date: 2021-07-19 19:06+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -28,16 +28,20 @@ msgid "Manage online accounts and connected applications"
 msgstr "Gestioneu els comptes en línia i les aplicacions connectades."
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "Traduccions actualitzades"
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Complete redesign"
 msgstr "Redisseny complet"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Fix blurry icons on HiDPI"
 msgstr "Correcció de les icones borroses en HiDPI"
-
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Updated translations"
-msgstr "Traduccions actualitzades"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "Fer que els enllaços externs s'obrin al navegador"
