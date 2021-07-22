@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 21:28+0000\n"
-"PO-Revision-Date: 2021-07-08 17:34+0000\n"
+"PO-Revision-Date: 2021-07-22 22:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -137,19 +137,19 @@ msgstr "Автентифікація не потрібна"
 
 #: src/Dialogs/Imap/ImapDialog.vala:363
 msgid "Archive"
-msgstr ""
+msgstr "Архівовані"
 
 #: src/Dialogs/Imap/ImapDialog.vala:378
 msgid "Sent"
-msgstr ""
+msgstr "Надіслані"
 
 #: src/Dialogs/Imap/ImapDialog.vala:385
 msgid "Drafts"
-msgstr ""
+msgstr "Чернетки"
 
 #: src/Dialogs/Imap/ImapDialog.vala:386
 msgid "Templates"
-msgstr ""
+msgstr "Шаблони"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
