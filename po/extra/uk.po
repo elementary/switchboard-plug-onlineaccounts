@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 22:12+0000\n"
-"PO-Revision-Date: 2021-07-22 22:10+0000\n"
+"PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -30,7 +30,7 @@ msgstr "Керування мережними обліковими записа�
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr ""
+msgstr "Налаштування тек Архівовані, Чернетки, Надіслані та Шаблони для IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Close \"Add Account\" popover when an item is selected"
