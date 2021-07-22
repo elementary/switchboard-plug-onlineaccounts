@@ -353,14 +353,30 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         // Configuring the well known folder URI code borrows heavily from Evolution:
         // https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
-        var encoded_account_uid = Camel.URL.encode (account_source.uid, ":;@/");
+        var account_uri = account_source.uid;
+        var archive_folder_name = N_("Archive");
+        var sent_folder_name = N_("Sent");
+        var drafts_folder_name = N_("Drafts");
+        var templates_folder_name = N_("Templates");
+        
+        if (
+            E.util_utf8_strstrcase (imap_server_entry.text, "gmail.com") != null ||
+            E.util_utf8_strstrcase (imap_server_entry.text, "googlemail.com") != null
+        ) {
+            account_uri = "[Gmail]";
+
+            archive_folder_name = "All Mail";
+            sent_folder_name = "Sent Mail";
+        }
+
+        var encoded_account_uri = Camel.URL.encode (account_uri, ":;@/");
 
         /* configure account_source */
 
         unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
         account_extension.identity_uid = identity_source.uid;
         account_extension.backend_name = "imap";
-        account_extension.archive_folder = "folder://%s/%s".printf (encoded_account_uid, Camel.URL.encode (N_("Archive"), ":;@?#"));
+        account_extension.archive_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (archive_folder_name, ":;@?#"));
 
         unowned var account_security_extension = (E.SourceSecurity) account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
         account_security_extension.set_method (imap_encryption_combobox.active_id);
@@ -375,15 +391,15 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         unowned var submission_extension = (E.SourceMailSubmission) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
         submission_extension.transport_uid = transport_source.uid;
-        submission_extension.sent_folder = "folder://%s/%s".printf (encoded_account_uid, Camel.URL.encode (N_("Sent"), ":;@?#"));
+        submission_extension.sent_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (sent_folder_name, ":;@?#"));
 
         unowned var identity_extension = (E.SourceMailIdentity) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
         identity_extension.address = login_page.email;
         identity_extension.name = login_page.real_name;
 
         unowned var composition_extension = (E.SourceMailComposition) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_COMPOSITION);
-        composition_extension.drafts_folder = "folder://%s/%s".printf (encoded_account_uid, Camel.URL.encode (N_("Drafts"), ":;@?#"));
-        composition_extension.templates_folder = "folder://%s/%s".printf (encoded_account_uid, Camel.URL.encode (N_("Templates"), ":;@?#"));
+        composition_extension.drafts_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (drafts_folder_name, ":;@?#"));
+        composition_extension.templates_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (templates_folder_name, ":;@?#"));
 
         /* configure transport_source */
 
