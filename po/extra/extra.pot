@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 22:10+0000\n"
+"POT-Creation-Date: 2021-07-22 22:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,17 +26,21 @@ msgid "Manage online accounts and connected applications"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
 msgid "Updated translations"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Complete redesign"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
