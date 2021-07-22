@@ -363,10 +363,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             E.util_utf8_strstrcase (imap_server_entry.text, "gmail.com") != null ||
             E.util_utf8_strstrcase (imap_server_entry.text, "googlemail.com") != null
         ) {
-            account_uri = "[Gmail]";
-
-            archive_folder_name = "All Mail";
-            sent_folder_name = "Sent Mail";
+            archive_folder_name = "[Gmail]/All Mail";
+            drafts_folder_name = "[Gmail]/Drafts";
+            sent_folder_name = "[Gmail]/Sent Mail";
         }
 
         var encoded_account_uri = Camel.URL.encode (account_uri, ":;@/");
