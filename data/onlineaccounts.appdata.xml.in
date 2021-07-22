@@ -7,6 +7,14 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
+    <release version="6.0.1" date="2021-07-21" urgency="medium">
+      <description>
+        <ul>
+          <li>Close "Add Account" popover when an item is selected</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.0.0" date="2021-07-15" urgency="medium">
       <description>
         <ul>
