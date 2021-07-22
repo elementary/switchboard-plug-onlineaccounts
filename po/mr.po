@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 21:18+0000\n"
+"POT-Creation-Date: 2021-07-22 21:28+0000\n"
 "PO-Revision-Date: 2020-03-17 18:09+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -132,6 +132,22 @@ msgstr "IMAP क्रेडेन्शियल्स वापरा"
 #: src/Dialogs/Imap/ImapDialog.vala:101
 msgid "No authentication required"
 msgstr "प्रमाणीकरण आवश्यक नाही"
+
+#: src/Dialogs/Imap/ImapDialog.vala:363
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:378
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:385
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:386
+msgid "Templates"
+msgstr ""
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."

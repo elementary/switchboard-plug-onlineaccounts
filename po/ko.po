@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 21:18+0000\n"
+"POT-Creation-Date: 2021-07-22 21:28+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -137,6 +137,22 @@ msgstr "IMAP 인증 사용"
 #: src/Dialogs/Imap/ImapDialog.vala:101
 msgid "No authentication required"
 msgstr "인증 없이 실행"
+
+#: src/Dialogs/Imap/ImapDialog.vala:363
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:378
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:385
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:386
+msgid "Templates"
+msgstr ""
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."

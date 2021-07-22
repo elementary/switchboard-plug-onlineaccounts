@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 21:18+0000\n"
+"POT-Creation-Date: 2021-07-22 21:28+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -138,6 +138,22 @@ msgstr "Używaj danych uwierzytelniających IMAP"
 #: src/Dialogs/Imap/ImapDialog.vala:101
 msgid "No authentication required"
 msgstr "Uwierzytelnianie nie jest wymagane"
+
+#: src/Dialogs/Imap/ImapDialog.vala:363
+msgid "Archive"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:378
+msgid "Sent"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:385
+msgid "Drafts"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:386
+msgid "Templates"
+msgstr ""
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
