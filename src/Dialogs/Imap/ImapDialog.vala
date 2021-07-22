@@ -358,7 +358,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         var sent_folder_name = N_("Sent");
         var drafts_folder_name = N_("Drafts");
         var templates_folder_name = N_("Templates");
-        
+
         if (
             E.util_utf8_strstrcase (imap_server_entry.text, "gmail.com") != null ||
             E.util_utf8_strstrcase (imap_server_entry.text, "googlemail.com") != null
