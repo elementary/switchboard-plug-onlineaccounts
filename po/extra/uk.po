@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 21:28+0000\n"
-"PO-Revision-Date: 2021-07-15 23:09+0000\n"
+"PO-Revision-Date: 2021-07-22 22:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -30,7 +30,7 @@ msgstr "Керування мережними обліковими записа�
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Close \"Add Account\" popover when an item is selected"
-msgstr ""
+msgstr "Закриття вікна «Додати обліковий запис», коли вибрано елемент"
 
 #: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
 msgid "Updated translations"
