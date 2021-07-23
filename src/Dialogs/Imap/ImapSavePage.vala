@@ -41,8 +41,8 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
         busy_grid.add (busy_spinner);
 
         error_alert_view = new Granite.Widgets.AlertView (
-            _("Error"),
-            _("Unable to add mail account."),
+            _("Unable to add mail account"),
+            "",
             "process-error"
         );
         error_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -111,6 +111,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
 
     public void show_success () {
         stack.set_visible_child_name ("success");
+        back_button.sensitive = false;
     }
 
     public void show_error (Error error) {

@@ -431,7 +431,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    "Can't login. Please verify your credentials."
+                    _("Can't login. Please verify your credentials.")
                 );
             }
 
@@ -441,7 +441,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             throw new GLib.Error (
                 Camel.Service.error_quark (),
                 Camel.ServiceError.CANT_AUTHENTICATE,
-                "IMAP verification failed: %s".printf (e.message)
+                _("IMAP verification failed: %s").printf (e.message)
             );
         }
 
