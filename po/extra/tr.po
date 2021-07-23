@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 22:12+0000\n"
-"PO-Revision-Date: 2021-07-16 13:51+0000\n"
+"PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/tr/>\n"
@@ -29,11 +29,11 @@ msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr ""
+msgstr " "
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Close \"Add Account\" popover when an item is selected"
-msgstr ""
+msgstr " "
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
 msgid "Updated translations"

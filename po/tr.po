@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 22:12+0000\n"
-"PO-Revision-Date: 2021-06-09 13:59+0000\n"
+"PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -138,19 +138,19 @@ msgstr "Kimlik denetimi gerekmiyor"
 #. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
 #: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "Archive"
-msgstr ""
+msgstr "Arşiv"
 
 #: src/Dialogs/Imap/ImapDialog.vala:358
 msgid "Sent"
-msgstr ""
+msgstr "Gönderilen"
 
 #: src/Dialogs/Imap/ImapDialog.vala:359
 msgid "Drafts"
-msgstr ""
+msgstr "Taslaklar"
 
 #: src/Dialogs/Imap/ImapDialog.vala:360
 msgid "Templates"
-msgstr ""
+msgstr "Şablonlar"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
