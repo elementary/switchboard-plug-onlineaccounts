@@ -2,7 +2,7 @@ src/AccountsModel.vala
 src/Dialogs/CaldavDialog.vala
 src/Dialogs/Imap/ImapDialog.vala
 src/Dialogs/Imap/ImapLoginPage.vala
-src/Dialogs/Imap/ImapSavepage.vala
+src/Dialogs/Imap/ImapSavePage.vala
 src/MainView.vala
 src/Plug.vala
 src/Widgets/AccountMenuItem.vala
