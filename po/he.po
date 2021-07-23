@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 22:12+0000\n"
-"PO-Revision-Date: 2021-06-09 06:26+0000\n"
+"PO-Revision-Date: 2021-07-23 06:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -131,19 +131,19 @@ msgstr "לא נדרש אימות"
 #. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
 #: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "Archive"
-msgstr ""
+msgstr "ארכיון"
 
 #: src/Dialogs/Imap/ImapDialog.vala:358
 msgid "Sent"
-msgstr ""
+msgstr "נשלח"
 
 #: src/Dialogs/Imap/ImapDialog.vala:359
 msgid "Drafts"
-msgstr ""
+msgstr "טיוטות"
 
 #: src/Dialogs/Imap/ImapDialog.vala:360
 msgid "Templates"
-msgstr ""
+msgstr "תבניות"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
