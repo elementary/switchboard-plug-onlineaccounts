@@ -520,7 +520,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 }
 
             } catch (Error e) {
-                warning ("Initial setup failed: %s\nIt's still possible to use this mail account, but well known folders are most likely not working as expected.", e.message);
+                warning ("Initial setup failed. Although it is possible to use this mail account, but well known folders are most likely not working as expected: %s", e.message);
             }
         }
 
