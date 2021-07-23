@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 22:12+0000\n"
+"POT-Creation-Date: 2021-07-23 23:47+0000\n"
 "PO-Revision-Date: 2019-09-05 19:22+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -41,7 +41,7 @@ msgstr "Kata Sandi"
 msgid "Cancel"
 msgstr "Batal"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Masuk"
 
@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Kembali"
 
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr ""
 
@@ -76,11 +76,11 @@ msgstr ""
 msgid "The CalDAV account has been sucessfuly added."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr ""
 
@@ -100,63 +100,52 @@ msgstr ""
 msgid "Error Fetching Calendars"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 #, fuzzy
 #| msgid "Password"
 msgid "Password:"
 msgstr "Kata Sandi"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 #, fuzzy
 #| msgid "Server"
 msgid "Server URL:"
 msgstr "Server"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Enkripsi:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Nihil"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "Gunakan Kredensial IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Otentikasi tidak diperlukan"
 
-#. Configuring the well known folder URI code borrows heavily from Evolution:
-#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
-#: src/Dialogs/Imap/ImapDialog.vala:357
-msgid "Archive"
-msgstr ""
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Please enter your credentials…"
+msgid "Can't login. Please verify your credentials."
+msgstr "Silakan masukkan kredensial Anda…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:358
-msgid "Sent"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:359
-msgid "Drafts"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:360
-msgid "Templates"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
@@ -169,6 +158,18 @@ msgstr "Surel"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+msgid "Configuring the mail account…"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+msgid "Unable to add mail account"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+msgid "The mail account has been sucessfuly added."
 msgstr ""
 
 #: src/MainView.vala:30
@@ -309,9 +310,6 @@ msgstr "Kelola akun daring dan aplikasi yang terhubung"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Akun '%s' Dihapus."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Silakan masukkan kredensial Anda…"
 
 #~ msgid "URL"
 #~ msgstr "URL"

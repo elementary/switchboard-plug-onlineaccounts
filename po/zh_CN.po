@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 22:12+0000\n"
+"POT-Creation-Date: 2021-07-23 23:47+0000\n"
 "PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -40,7 +40,7 @@ msgstr "密码"
 msgid "Cancel"
 msgstr "取消"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "登录"
 
@@ -55,7 +55,7 @@ msgid ""
 msgstr "此名称可自定义用于区分账户。如“工作”或“个人”。"
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "返回"
 
@@ -67,7 +67,7 @@ msgstr "保存"
 msgid "Saving the configuration…"
 msgstr "保存配置…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "成功"
 
@@ -75,11 +75,11 @@ msgstr "成功"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "CalDAV 账户已成功添加。"
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "关闭"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "保存配置出错"
 
@@ -99,60 +99,49 @@ msgstr "查找可用日历和任务…"
 msgid "Error Fetching Calendars"
 msgstr "获取日历出错"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "用户名："
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "密码："
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "服务器地址："
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "端口："
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "加密："
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "无"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "使用 IMAP 证书"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "无须身份验证"
 
-#. Configuring the well known folder URI code borrows heavily from Evolution:
-#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
-#: src/Dialogs/Imap/ImapDialog.vala:357
-msgid "Archive"
-msgstr ""
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Please enter your credentials…"
+msgid "Can't login. Please verify your credentials."
+msgstr "请输入您的认证信息…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:358
-msgid "Sent"
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
 msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:359
-msgid "Drafts"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:360
-msgid "Templates"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "邮件账户已成功添加。"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -165,6 +154,18 @@ msgstr "电子邮件"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "下一步"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+msgid "Configuring the mail account…"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+msgid "Unable to add mail account"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+msgid "The mail account has been sucessfuly added."
+msgstr "邮件账户已成功添加。"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -298,9 +299,6 @@ msgstr "管理网络账户和已连接的应用"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "帐户“%s”已删除。"
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "请输入您的认证信息…"
 
 #~ msgid "URL"
 #~ msgstr "网址"

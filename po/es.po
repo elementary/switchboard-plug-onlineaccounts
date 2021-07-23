@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 22:12+0000\n"
+"POT-Creation-Date: 2021-07-23 23:47+0000\n"
 "PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Contraseña"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Acceder"
 
@@ -57,7 +57,7 @@ msgstr ""
 "ejemplo, \"Trabajo\" o \"Personal\"."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Atrás"
 
@@ -69,7 +69,7 @@ msgstr "Guardar"
 msgid "Saving the configuration…"
 msgstr "Guardando la configuración …"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 #, fuzzy
 msgid "Success"
 msgstr "Éxito"
@@ -78,11 +78,11 @@ msgstr "Éxito"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "La cuenta de CalDAV se ha agregado con éxito."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Cerrar"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Error al guardar la configuración"
 
@@ -102,64 +102,53 @@ msgstr "Buscando calendarios y tareas disponibles …"
 msgid "Error Fetching Calendars"
 msgstr "Error al obtener los calendarios"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 #, fuzzy
 #| msgid "User Name"
 msgid "Username:"
 msgstr "Nombre de usuario"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 #, fuzzy
 #| msgid "Password"
 msgid "Password:"
 msgstr "Contraseña"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "URL del servidor:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Puerto:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Cifrado:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Ninguno"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "Usar credenciales IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "No se requiere autenticación"
 
-#. Configuring the well known folder URI code borrows heavily from Evolution:
-#. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
-#: src/Dialogs/Imap/ImapDialog.vala:357
-msgid "Archive"
-msgstr ""
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Please enter your credentials…"
+msgid "Can't login. Please verify your credentials."
+msgstr "Proporcione sus datos de acceso…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:358
-msgid "Sent"
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
 msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:359
-msgid "Drafts"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:360
-msgid "Templates"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "La cuenta de correo se ha agregado correctamente."
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 #, fuzzy
@@ -174,6 +163,18 @@ msgstr "Correo electrónico"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Siguiente"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+msgid "Configuring the mail account…"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+msgid "Unable to add mail account"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+msgid "The mail account has been sucessfuly added."
+msgstr "La cuenta de correo se ha agregado correctamente."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -311,9 +312,6 @@ msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Se eliminó la cuenta «%s»."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Proporcione sus datos de acceso…"
 
 #~ msgid "URL"
 #~ msgstr "URL"
