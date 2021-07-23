@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-22 22:12+0000\n"
-"PO-Revision-Date: 2021-06-09 16:50+0000\n"
+"PO-Revision-Date: 2021-07-23 10:18+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ca/>\n"
@@ -138,19 +138,19 @@ msgstr "No cal autenticació"
 #. https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
 #: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "Archive"
-msgstr ""
+msgstr "Arxiu"
 
 #: src/Dialogs/Imap/ImapDialog.vala:358
 msgid "Sent"
-msgstr ""
+msgstr "Enviat"
 
 #: src/Dialogs/Imap/ImapDialog.vala:359
 msgid "Drafts"
-msgstr ""
+msgstr "Esborranys"
 
 #: src/Dialogs/Imap/ImapDialog.vala:360
 msgid "Templates"
-msgstr ""
+msgstr "Plantilles"
 
 #: src/Dialogs/Imap/ImapDonePage.vala:30
 msgid "The mail account has been sucessfuly added."
