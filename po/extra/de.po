@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-23 23:47+0000\n"
 "PO-Revision-Date: 2021-07-24 12:27+0000\n"
-"Last-Translator: Uwe S <saabisto@gmx.de>\n"
+"Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/de/>\n"
 "Language: de\n"
@@ -29,7 +29,7 @@ msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Verify login credentails when saving IMAP accounts"
-msgstr ""
+msgstr "Logindaten vor dem Speichern des IMAP-Accounts überprüfen"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
