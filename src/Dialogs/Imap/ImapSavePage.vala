@@ -29,7 +29,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
     private GLib.Cancellable? cancellable = null;
 
     construct {
-        var busy_label = new Gtk.Label (_("Configuring the mail account…"));
+        var busy_label = new Gtk.Label (_("Setting up the e-mail account…"));
 
         var busy_spinner = new Gtk.Spinner ();
         busy_spinner.start ();
@@ -41,7 +41,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
         busy_grid.add (busy_spinner);
 
         error_alert_view = new Granite.Widgets.AlertView (
-            _("Unable to add mail account"),
+            _("Could not add the e-mail account"),
             "",
             "process-error"
         );
@@ -50,7 +50,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
 
         var success_alert_view = new Granite.Widgets.AlertView (
             _("Success"),
-            _("The mail account has been sucessfuly added."),
+            _("E-mail account added."),
             "process-completed"
         );
         success_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
