@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2019-01-11 20:54+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
@@ -138,7 +138,7 @@ msgstr "Nereikia tapatybės nustatymo"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Prašome įrašyti savo prisijungimo duomenis…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -159,16 +159,18 @@ msgid "Next"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr ""
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Pašto paskyra"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -268,9 +270,6 @@ msgstr "Tvarkyti internetines paskyras ir prijungtas programas"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Taikykite visai savo muzikai Scrobble paslaugą"
-
-#~ msgid "Mail Account"
-#~ msgstr "Pašto paskyra"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Gaukite el. paštą iš IMAP serverio"

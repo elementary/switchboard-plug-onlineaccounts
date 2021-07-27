@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-06-09 10:42+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -137,7 +137,7 @@ msgstr "Não é necessária autenticação"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Introduza as suas credenciais…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -158,16 +158,18 @@ msgid "Next"
 msgstr "Seguinte"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "A conta de correio foi adicionada com sucesso."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Conta de Email"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -226,6 +228,9 @@ msgstr "Contas Online"
 msgid "Manage online accounts and connected applications"
 msgstr "Gerir contas online e aplicações associadas"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "A conta de correio foi adicionada com sucesso."
+
 #~ msgid "Posts"
 #~ msgstr "Publicações"
 
@@ -261,9 +266,6 @@ msgstr "Gerir contas online e aplicações associadas"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Scrobble toda a sua música"
-
-#~ msgid "Mail Account"
-#~ msgstr "Conta de Email"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Consultar email do Servidor IMAP"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -135,7 +135,9 @@ msgid "No authentication required"
 msgstr "Kimlik denetimi gerekmiyor"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-msgid "Can't login. Please verify your credentials."
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Giriş yapılamıyor. Lütfen kimlik bilgilerinizi doğrulayın."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -156,16 +158,22 @@ msgid "Next"
 msgstr "İleri"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr "Posta hesabını yapılandırma…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr "Posta hesabı eklenemiyor"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "Posta hesabı başarıyla eklendi."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "E-posta Hesabı"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -224,6 +232,9 @@ msgstr "Çevrimiçi Hesaplar"
 msgid "Manage online accounts and connected applications"
 msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Posta hesabı başarıyla eklendi."
+
 #~ msgid "Archive"
 #~ msgstr "Arşiv"
 
@@ -271,9 +282,6 @@ msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Müziğinizi skroplayın"
-
-#~ msgid "Mail Account"
-#~ msgstr "E-posta Hesabı"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "E-postayı IMAP Sunucusu aracılığı ile alın"

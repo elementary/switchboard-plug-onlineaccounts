@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -135,7 +135,9 @@ msgid "No authentication required"
 msgstr "認証は不要"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-msgid "Can't login. Please verify your credentials."
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "ログインできません。証明書を認証してください。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -156,16 +158,22 @@ msgid "Next"
 msgstr "次へ"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr "メールアカウントを設定しています…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr "メールアカウントを追加できません"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "メールアカウントは正常に追加されました。"
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "メールアカウント"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -225,6 +233,9 @@ msgstr "オンラインアカウント"
 msgid "Manage online accounts and connected applications"
 msgstr "オンラインアカウントと接続されたアプリケーションを管理します"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "メールアカウントは正常に追加されました。"
+
 #~ msgid "Archive"
 #~ msgstr "アーカイブ"
 
@@ -272,9 +283,6 @@ msgstr "オンラインアカウントと接続されたアプリケーション
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "すべての曲を Scrobble します"
-
-#~ msgid "Mail Account"
-#~ msgstr "メールアカウント"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "IMAP サーバーからメールを取得します"

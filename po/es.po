@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -142,7 +142,7 @@ msgstr "No se requiere autenticación"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Proporcione sus datos de acceso…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -165,16 +165,18 @@ msgid "Next"
 msgstr "Siguiente"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "La cuenta de correo se ha agregado correctamente."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Cuenta de correo"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -235,6 +237,9 @@ msgstr "Cuentas en línea"
 msgid "Manage online accounts and connected applications"
 msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "La cuenta de correo se ha agregado correctamente."
+
 #~ msgid "Posts"
 #~ msgstr "Publicaciones"
 
@@ -270,9 +275,6 @@ msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Haga un seguimiento de su música"
-
-#~ msgid "Mail Account"
-#~ msgstr "Cuenta de correo"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Obtener correo electrónico desde el servidor IMAP"

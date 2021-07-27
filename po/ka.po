@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2019-10-16 20:23+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -133,7 +133,7 @@ msgid "No authentication required"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -154,15 +154,15 @@ msgid "Next"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
+msgid "E-mail account added."
 msgstr ""
 
 #: src/MainView.vala:30

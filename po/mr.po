@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2020-03-17 18:09+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -136,7 +136,7 @@ msgstr "प्रमाणीकरण आवश्यक नाही"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -157,16 +157,18 @@ msgid "Next"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr ""
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "मेल खाते"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -262,9 +264,6 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "आपले सर्व संगीत स्क्रोबल करा"
-
-#~ msgid "Mail Account"
-#~ msgstr "मेल खाते"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "IMAP सर्व्हरकडून ईमेल प्राप्त करा"

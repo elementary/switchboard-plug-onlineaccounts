@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-07-24 02:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -136,7 +136,9 @@ msgid "No authentication required"
 msgstr "Автентифікація не потрібна"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-msgid "Can't login. Please verify your credentials."
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Не вдалося увійти. Перевірте свої облікові дані."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -157,16 +159,22 @@ msgid "Next"
 msgstr "Далі"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr "Конфігурування облікового запису е-пошти…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr "Не вдалося додати обліковий запис е-пошти"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "Обліковий запис пошти успішно додано."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Обліковий запис електронної пошти"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -227,6 +235,9 @@ msgstr "Мережні облікові записи"
 msgid "Manage online accounts and connected applications"
 msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Обліковий запис пошти успішно додано."
+
 #~ msgid "Archive"
 #~ msgstr "Архівовані"
 
@@ -274,9 +285,6 @@ msgstr "Керування мережними обліковими записа�
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Скроблінг всієї вашої музики"
-
-#~ msgid "Mail Account"
-#~ msgstr "Обліковий запис електронної пошти"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Отримати електронну пошту з сервера IMAP"

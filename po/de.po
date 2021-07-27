@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-07-25 04:46+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -135,7 +135,9 @@ msgid "No authentication required"
 msgstr "Keine Authentifizierung erforderlich"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-msgid "Can't login. Please verify your credentials."
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Zugangsdaten."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -156,16 +158,22 @@ msgid "Next"
 msgstr "Weiter"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr "E-Mail-Konto einrichten …"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr "E-Mail-Konto konnte nicht hinzugefügt werden"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "Das E-Mail-Konto wurde erfolgreich hinzugefügt."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "E-Mail-Konto"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -226,6 +234,9 @@ msgstr "Internetkonten"
 msgid "Manage online accounts and connected applications"
 msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Das E-Mail-Konto wurde erfolgreich hinzugefügt."
+
 #~ msgid "Archive"
 #~ msgstr "Archiv"
 
@@ -273,9 +284,6 @@ msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Ihre gesamte Musik scrobbeln"
-
-#~ msgid "Mail Account"
-#~ msgstr "E-Mail-Konto"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "E-Mails von einem IMAP-Server abrufen"

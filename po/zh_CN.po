@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -135,7 +135,7 @@ msgstr "无须身份验证"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "请输入您的认证信息…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -156,16 +156,18 @@ msgid "Next"
 msgstr "下一步"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "邮件账户已成功添加。"
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "邮件账户"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -222,6 +224,9 @@ msgstr "网络账户"
 msgid "Manage online accounts and connected applications"
 msgstr "管理网络账户和已连接的应用"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "邮件账户已成功添加。"
+
 #~ msgid "Posts"
 #~ msgstr "帖子"
 
@@ -257,9 +262,6 @@ msgstr "管理网络账户和已连接的应用"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "同步您的音乐"
-
-#~ msgid "Mail Account"
-#~ msgstr "邮件账户"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "从 IMAP 服务器接收邮件"

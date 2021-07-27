@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -135,7 +135,9 @@ msgid "No authentication required"
 msgstr "Tunnistautumista ei vaadita"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-msgid "Can't login. Please verify your credentials."
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Kirjautuminen ei onnistu. Varmista kirjautumistietosi."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -156,16 +158,22 @@ msgid "Next"
 msgstr "Seuraava"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr "Määritetään uutta sähköpostitiliä…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr "Sähköpostitilin lisääminen ei onnistu"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr "Sähköpostitili on lisätty onnistuneesti."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Sähköpostitili"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -226,6 +234,9 @@ msgstr "Verkkotilit"
 msgid "Manage online accounts and connected applications"
 msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Sähköpostitili on lisätty onnistuneesti."
+
 #~ msgid "Posts"
 #~ msgstr "Julkaisut"
 
@@ -261,9 +272,6 @@ msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Lähetä tiedot kuuntelemastasi musiikista"
-
-#~ msgid "Mail Account"
-#~ msgstr "Sähköpostitili"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Hae sähköpostit IMAP-palvelimelta"

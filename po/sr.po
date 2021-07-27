@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2020-12-19 11:16+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -142,7 +142,7 @@ msgstr "Није потребно потврђивање идентитета"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Унесите појединости вашег налога…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -163,16 +163,18 @@ msgid "Next"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr ""
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Налог поште"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -268,9 +270,6 @@ msgstr "Управљајте налозима на мрежи и повезан�
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Скроблујте сву вашу музику"
-
-#~ msgid "Mail Account"
-#~ msgstr "Налог поште"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Довуци пошту са ИМАП сервера"

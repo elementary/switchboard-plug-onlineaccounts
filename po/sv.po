@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2019-09-05 19:22+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
@@ -142,7 +142,7 @@ msgstr "Ingen autentisering krävs"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Skriv in dina inloggningsuppgifter…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -163,16 +163,18 @@ msgid "Next"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr ""
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "E-postkonto"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -270,9 +272,6 @@ msgstr "Hantera online-konton och anslutna program"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Scrobbla all din musik"
-
-#~ msgid "Mail Account"
-#~ msgstr "E-postkonto"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Hämta e-post från IMAP-server"

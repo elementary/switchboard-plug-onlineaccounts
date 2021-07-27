@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-23 23:47+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2018-11-09 18:59+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -137,7 +137,7 @@ msgstr "Nije potrebna autentifikacija"
 #: src/Dialogs/Imap/ImapDialog.vala:434
 #, fuzzy
 #| msgid "Please enter your credentials…"
-msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
 msgstr "Unesite svoje podatke za prijavu…"
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
@@ -158,16 +158,18 @@ msgid "Next"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "The mail account has been sucessfuly added."
-msgstr ""
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Račun pošte"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -265,9 +267,6 @@ msgstr "Upravljajte online računima i povezanim aplikacijama"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Scrobble svu svoju muziku"
-
-#~ msgid "Mail Account"
-#~ msgstr "Račun pošte"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Preuzmi e-poštu s IMAP servera"
