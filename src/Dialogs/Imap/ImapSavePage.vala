@@ -18,32 +18,57 @@
 *
 */
 
-public class OnlineAccounts.ImapDonePage : Gtk.Grid {
+public class OnlineAccounts.ImapSavePage : Gtk.Grid {
     public signal void back ();
     public signal void close ();
 
-    private Gtk.Stack alert_view_stack;
+    private Gtk.Stack stack;
+    private Gtk.Button back_button;
+    private Gtk.Button close_button;
+    private Granite.Widgets.AlertView error_alert_view;
+    private GLib.Cancellable? cancellable = null;
 
     construct {
+        var busy_label = new Gtk.Label (_("Setting up the e-mail account…"));
+
+        var busy_spinner = new Gtk.Spinner ();
+        busy_spinner.start ();
+
+        var busy_grid = new Gtk.Grid () {
+            column_spacing = 6
+        };
+        busy_grid.add (busy_label);
+        busy_grid.add (busy_spinner);
+
+        error_alert_view = new Granite.Widgets.AlertView (
+            _("Could not add the e-mail account"),
+            "",
+            "process-error"
+        );
+        error_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        error_alert_view.show_all ();
+
         var success_alert_view = new Granite.Widgets.AlertView (
             _("Success"),
-            _("The mail account has been sucessfuly added."),
+            _("E-mail account added."),
             "process-completed"
         );
         success_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
         success_alert_view.show_all ();
 
-        alert_view_stack = new Gtk.Stack () {
+        stack = new Gtk.Stack () {
             expand = true,
             homogeneous = false,
             halign = Gtk.Align.CENTER,
             valign = Gtk.Align.CENTER
         };
-        alert_view_stack.add_named (success_alert_view, "success");
+        stack.add_named (busy_grid, "busy");
+        stack.add_named (error_alert_view, "error");
+        stack.add_named (success_alert_view, "success");
 
-        var back_button = new Gtk.Button.with_label (_("Back"));
+        back_button = new Gtk.Button.with_label (_("Back"));
 
-        var close_button = new Gtk.Button.with_label (_("Close")) {
+        close_button = new Gtk.Button.with_label (_("Close")) {
             can_default = true
         };
         close_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
@@ -61,37 +86,36 @@ public class OnlineAccounts.ImapDonePage : Gtk.Grid {
         margin = 12;
         orientation = Gtk.Orientation.VERTICAL;
         row_spacing = 6;
-        add (alert_view_stack);
+        add (stack);
         add (action_area);
 
         back_button.clicked.connect (() => {
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
             back ();
         });
 
         close_button.clicked.connect (() => {
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
             close ();
         });
     }
 
-    public void set_error (Error? error = null) {
-        var error_view = alert_view_stack.get_child_by_name ("error");
-        if (error_view != null) {
-            alert_view_stack.remove (error_view);
-        }
+    public void show_busy (GLib.Cancellable cancellable) {
+        this.cancellable = cancellable;
+        stack.set_visible_child_name ("busy");
+    }
 
-        if (error == null) {
-            alert_view_stack.set_visible_child_name ("success");
+    public void show_success () {
+        stack.set_visible_child_name ("success");
+        back_button.sensitive = false;
+    }
 
-        } else {
-            error_view = new Granite.Widgets.AlertView (
-                _("Error Saving Configuration"),
-                error.message,
-                "dialog-error"
-            );
-            error_view.show_all ();
-
-            alert_view_stack.add_named (error_view, "error");
-            alert_view_stack.set_visible_child_name ("error");
-        }
+    public void show_error (Error error) {
+        error_alert_view.description = error.message;
+        stack.set_visible_child_name ("error");
     }
 }

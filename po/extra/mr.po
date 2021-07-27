@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2020-10-30 09:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -28,17 +28,30 @@ msgid "Manage online accounts and connected applications"
 msgstr "ऑनलाइन खाती आणि कनेक्ट केलेले अप्लिकेशन्स व्यवस्थापित करा"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Major redesign"
-msgstr "पुन्हा डिझाईन करण्याचे मोठे काम"
+msgid "Verify login credentails when saving IMAP accounts"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make external links open in the web browser"
-msgstr "बाह्य दुवे वेब ब्राउझरमध्ये उघडण्यास सक्ती करा"
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:15
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "अद्ययावत भाषांतर"
+
+#: data/onlineaccounts.appdata.xml.in:23
+#, fuzzy
+#| msgid "Major redesign"
+msgid "Complete redesign"
+msgstr "पुन्हा डिझाईन करण्याचे मोठे काम"
+
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Fix blurry icons on HiDPI"
 msgstr "हायडीपीआय वर अस्पष्ट चिन्हांशी संबंधित समस्यांचे निराकरण करा"
 
-#: data/onlineaccounts.appdata.xml.in:16
-msgid "Updated translations"
-msgstr "अद्ययावत भाषांतर"
+#~ msgid "Make external links open in the web browser"
+#~ msgstr "बाह्य दुवे वेब ब्राउझरमध्ये उघडण्यास सक्ती करा"

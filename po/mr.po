@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2020-03-17 18:09+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -37,7 +37,7 @@ msgstr "पासवर्ड"
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "लॉग इन"
 
@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "मागे"
 
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr ""
 
@@ -72,11 +72,11 @@ msgstr ""
 msgid "The CalDAV account has been sucessfuly added."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr ""
 
@@ -96,45 +96,52 @@ msgstr ""
 msgid "Error Fetching Calendars"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 #, fuzzy
 #| msgid "Password"
 msgid "Password:"
 msgstr "पासवर्ड"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 #, fuzzy
 #| msgid "Server"
 msgid "Server URL:"
 msgstr "सर्व्हर"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "कूटबद्धीकरण :"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "काहीही नाही"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "IMAP क्रेडेन्शियल्स वापरा"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "प्रमाणीकरण आवश्यक नाही"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Please enter your credentials…"
+msgid "Could not log in. Please verify your credentials."
+msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
@@ -148,6 +155,20 @@ msgstr "ईमेल"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+msgid "Setting up the e-mail account…"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+msgid "Could not add the e-mail account"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "मेल खाते"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -179,22 +200,22 @@ msgstr ""
 msgid "Add Account…"
 msgstr "खाते जोडा…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 #, fuzzy
 #| msgid "New Account"
 msgid "Remove Account"
@@ -244,9 +265,6 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 #~ msgid "Scrobble all your music"
 #~ msgstr "आपले सर्व संगीत स्क्रोबल करा"
 
-#~ msgid "Mail Account"
-#~ msgstr "मेल खाते"
-
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "IMAP सर्व्हरकडून ईमेल प्राप्त करा"
 
@@ -285,9 +303,6 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "खाते '%s'काढले."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
 
 #~ msgid "URL"
 #~ msgstr "यूआरएल"

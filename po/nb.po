@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-07-03 07:44+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-24 14:26+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/nb/>\n"
@@ -40,7 +40,7 @@ msgstr "Passord"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Logg inn"
 
@@ -53,11 +53,11 @@ msgid ""
 "The above name will be used to identify this account. Use for example “Work” "
 "or “Personal”."
 msgstr ""
-"Navnet ovenfor brukes til å identifisere kontoen. Bruk for eksempel «Arbeid»"
-", eller «Personlig»."
+"Navnet ovenfor brukes til å identifisere kontoen. Bruk for eksempel "
+"«Arbeid», eller «Personlig»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Tilbake"
 
@@ -69,7 +69,7 @@ msgstr "Lagre"
 msgid "Saving the configuration…"
 msgstr "Lagrer oppsettet …"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Vellykket"
 
@@ -77,11 +77,11 @@ msgstr "Vellykket"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "CalDAV-konto lagt til."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Lukk"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Kunne ikke lagre oppsett"
 
@@ -101,42 +101,49 @@ msgstr "Finner tilgjengelige kalendere og gjøremål …"
 msgid "Error Fetching Calendars"
 msgstr "Klarte ikke å hente kalendere"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "Brukernavn:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "Passord:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "Tjenernettadresse:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Port:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Kryptering:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Ingen"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "Bruk IMAP-identitetsdetaljer"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Ingen identitetsbekreftelse kreves"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "E-postkonto lagt til."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "Kan ikke logge inn. Bekreft innloggingsdetaljene dine."
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "IMAP-bekreftelse mislyktes: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -149,6 +156,24 @@ msgstr "E-post"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Neste"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "Setter opp e-postkontoen…"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "Kunne ikke legge til e-postkonto"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "E-postkonto"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -181,22 +206,22 @@ msgstr "E-post"
 msgid "Add Account…"
 msgstr "Legg til konto …"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Fjern denne kontoen"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Fjern «%s» fra denne enheten"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Fjern konto"
 
@@ -207,6 +232,9 @@ msgstr "Nettkontoer"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Håndter nettkontoer og tilknyttede programmer"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "E-postkonto lagt til."
 
 #~ msgid "Posts"
 #~ msgstr "Innlegg"
@@ -245,9 +273,6 @@ msgstr "Håndter nettkontoer og tilknyttede programmer"
 #, fuzzy
 #~ msgid "Scrobble all your music"
 #~ msgstr "Send sanginformasjon for anbefalinger"
-
-#~ msgid "Mail Account"
-#~ msgstr "E-postkonto"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Hent e-post fra IMAP-tjener"
@@ -288,9 +313,6 @@ msgstr "Håndter nettkontoer og tilknyttede programmer"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Kontoen '%s' fjernet."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Oppgi brukerdetaljer…"
 
 #~ msgid "URL"
 #~ msgstr "Nettadresse"

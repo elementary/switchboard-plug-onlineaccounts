@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2020-05-01 03:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -28,17 +28,30 @@ msgid "Manage online accounts and connected applications"
 msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Major redesign"
-msgstr "Reconception majeure"
+msgid "Verify login credentails when saving IMAP accounts"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make external links open in the web browser"
-msgstr "Les liens externes sont désormais ouverts dans le navigateur Web"
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:15
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
+msgid "Updated translations"
+msgstr "Mise à jour des traductions"
+
+#: data/onlineaccounts.appdata.xml.in:23
+#, fuzzy
+#| msgid "Major redesign"
+msgid "Complete redesign"
+msgstr "Reconception majeure"
+
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Fix blurry icons on HiDPI"
 msgstr "Correction des icônes floues sur les affichages HiDPI"
 
-#: data/onlineaccounts.appdata.xml.in:16
-msgid "Updated translations"
-msgstr "Mise à jour des traductions"
+#~ msgid "Make external links open in the web browser"
+#~ msgstr "Les liens externes sont désormais ouverts dans le navigateur Web"

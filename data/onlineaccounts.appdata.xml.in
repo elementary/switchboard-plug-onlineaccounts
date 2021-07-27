@@ -7,11 +7,20 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="2.1.0" date="2019-11-04" urgency="medium">
+    <release version="6.1.0" date="2021-07-21" urgency="medium">
       <description>
         <ul>
-          <li>Major redesign</li>
-          <li>Make external links open in the web browser</li>
+          <li>Verify login credentails when saving IMAP accounts</li>
+          <li>Set up Archive, Drafts, Sent, and Templates folders for IMAP</li>
+          <li>Close "Add Account" popover when an item is selected</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.0.0" date="2021-07-15" urgency="medium">
+      <description>
+        <ul>
+          <li>Complete redesign</li>
           <li>Fix blurry icons on HiDPI</li>
           <li>Updated translations</li>
         </ul>

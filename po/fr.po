@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-06-09 07:50+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Mot de passe"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Connexion"
 
@@ -57,7 +57,7 @@ msgstr ""
 "pouvez utiliser « Travail » ou « Personnel »."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Retour"
 
@@ -69,7 +69,7 @@ msgstr "Enregistrer"
 msgid "Saving the configuration…"
 msgstr "Enregistrement de la configuration…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Succès"
 
@@ -77,11 +77,11 @@ msgstr "Succès"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "Le compte CalDAV a bien été ajouté."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Fermer"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Erreur lors de l'enregistrement de la configuration"
 
@@ -101,42 +101,49 @@ msgstr "Recherche des calendriers et tâches disponibles…"
 msgid "Error Fetching Calendars"
 msgstr "Erreur lors de la récupération des calendriers"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "Mot de passe :"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "URL du serveur :"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Port :"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Chiffrement :"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Aucun"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "Utiliser les identifiants IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Aucune authentification nécessaire"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "Le compte de messagerie a bien été ajouté."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Please enter your credentials…"
+msgid "Could not log in. Please verify your credentials."
+msgstr "Veuillez saisir vos identifiants…"
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr ""
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -149,6 +156,20 @@ msgstr "E-Mail"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Suivant"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+msgid "Setting up the e-mail account…"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+msgid "Could not add the e-mail account"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Compte de messagerie"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -180,16 +201,16 @@ msgstr "Messagerie"
 msgid "Add Account…"
 msgstr "Ajouter un compte…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Supprimer ce compte"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Supprimer « %s » de cet appareil"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -197,7 +218,7 @@ msgstr ""
 "Ce compte sera supprimé et n'apparaîtra plus dans les applications sur cet "
 "appareil."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Supprimer le compte"
 
@@ -208,6 +229,9 @@ msgstr "Comptes en ligne"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Gérez les comptes en ligne et les applications connectées"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Le compte de messagerie a bien été ajouté."
 
 #~ msgid "Posts"
 #~ msgstr "Publications"
@@ -244,9 +268,6 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Scrobblez votre musique"
-
-#~ msgid "Mail Account"
-#~ msgstr "Compte de messagerie"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Récupérer les E-Mails d'un serveur IMAP"
@@ -287,9 +308,6 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Compte « %s » supprimé."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Veuillez saisir vos identifiants…"
 
 #~ msgid "URL"
 #~ msgstr "URL"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-09 06:26+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -35,7 +35,7 @@ msgstr "ססמה"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "כניסה"
 
@@ -50,7 +50,7 @@ msgid ""
 msgstr "השם שלעיל ישמש לזיהוי החשבון. ניתן להשתמש ב„עבודה” או „אישי” למשל."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "חזרה"
 
@@ -62,7 +62,7 @@ msgstr "שמירה"
 msgid "Saving the configuration…"
 msgstr "ההגדרות נשמרות…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "הצלחה"
 
@@ -70,11 +70,11 @@ msgstr "הצלחה"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "חשבון ה־CalDAV נוסף בהצלחה."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "סגירה"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "שגיאה בשמירת ההגדרות"
 
@@ -94,42 +94,49 @@ msgstr "איתור לוחות שנה ומשימות זמינים…"
 msgid "Error Fetching Calendars"
 msgstr "משיכת לוחות השנה נכשלה"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "ססמה:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "כתובת השרת:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "פתחה:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "הצפנה:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "ללא"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "שימוש בפרטי הגישה ל־IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "לא נדרש אימות"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "חשבון הדוא״ל נוסף בהצלחה."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "לא ניתן להיכנס. נא לאמת את פרטי הגישה שלך."
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "האימות מול ה־IMAP נכשל: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -142,6 +149,24 @@ msgstr "דוא״ל"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "הבא"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "חשבון הדוא״ל מוגדר…"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "לא ניתן להוסיף חשבון דוא״ל"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "חשבון דואר"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -171,22 +196,22 @@ msgstr "דוא״ל"
 msgid "Add Account…"
 msgstr "הוספת חשבון…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "להסיר את החשבון הזה"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "להסיר את „%s” מהמכשיר"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr "החשבון הזה יוסר ולא יופיע עוד תחת היישומים שבמכשיר הזה."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "הסרת חשבון"
 
@@ -197,6 +222,21 @@ msgstr "חשבונות מקוונים"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "ניהול חשבונות מקוונים ויישומים מקושרים"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "חשבון הדוא״ל נוסף בהצלחה."
+
+#~ msgid "Archive"
+#~ msgstr "ארכיון"
+
+#~ msgid "Sent"
+#~ msgstr "נשלח"
+
+#~ msgid "Drafts"
+#~ msgstr "טיוטות"
+
+#~ msgid "Templates"
+#~ msgstr "תבניות"
 
 #~ msgid "Posts"
 #~ msgstr "רשומות"
@@ -233,9 +273,6 @@ msgstr "ניהול חשבונות מקוונים ויישומים מקושרים
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "תפעול כל המוזיקה שלך"
-
-#~ msgid "Mail Account"
-#~ msgstr "חשבון דואר"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "משיכת דוא״ל משרת IMAP"
@@ -275,9 +312,6 @@ msgstr "ניהול חשבונות מקוונים ויישומים מקושרים
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "החשבון ‚%s‘ הוסר."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "נא להקליד את פרטי הגישה שלך…"
 
 #~ msgid "URL"
 #~ msgstr "כתובת"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-21 00:19+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-25 04:46+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/de/>\n"
@@ -40,7 +40,7 @@ msgstr "Passwort"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Anmelden"
 
@@ -57,7 +57,7 @@ msgstr ""
 "oder »Privat«."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Zurück"
 
@@ -69,7 +69,7 @@ msgstr "Speichern"
 msgid "Saving the configuration…"
 msgstr "Einrichtung speichern …"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Erfolgreich"
 
@@ -77,11 +77,11 @@ msgstr "Erfolgreich"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "Das CalDAV-Konto wurde erfolgreich hinzugefügt."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Schließen"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Fehler beim Speichern der Einrichtung"
 
@@ -101,42 +101,49 @@ msgstr "Verfügbare Kalender und Aufgaben ermitteln …"
 msgid "Error Fetching Calendars"
 msgstr "Fehler beim Laden der Kalender"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
-msgstr "Benutzername"
+msgstr "Benutzername:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "Passwort:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "Server-Adresse:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Port:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Verschlüsselung:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Keine"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "IMAP-Zugangsdaten verwenden"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Keine Authentifizierung erforderlich"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "Das E-Mail-Konto wurde erfolgreich hinzugefügt."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Zugangsdaten."
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "IMAP-Verifizierung fehlgeschlagen: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -150,15 +157,33 @@ msgstr "E-Mail"
 msgid "Next"
 msgstr "Weiter"
 
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "E-Mail-Konto einrichten …"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "E-Mail-Konto konnte nicht hinzugefügt werden"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "E-Mail-Konto"
+
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
-msgstr "Mit Ihren Internetkonten verbinden"
+msgstr "Mit Internetkonten verbinden"
 
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
-"Verbinden Sie Online-Konten, indem Sie auf das Symbol in der Werkzeugleiste "
-"unten klicken."
+"Mit einem Klick auf das Symbol in der Werkzeugleiste unten mit "
+"Internetkonten verbinden."
 
 #: src/MainView.vala:48 src/Plug.vala:58
 msgid "CalDAV"
@@ -180,16 +205,16 @@ msgstr "E-Mail"
 msgid "Add Account…"
 msgstr "Konto hinzufügen …"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Dieses Konto entfernen"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "»%s« von diesem Gerät entfernen"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -197,7 +222,7 @@ msgstr ""
 "Dieses Konto wird entfernt und nicht länger in den Anwendungen auf diesem "
 "Gerät erscheinen."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Konto entfernen"
 
@@ -207,7 +232,22 @@ msgstr "Internetkonten"
 
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
-msgstr "Online-Konten und verbundene Anwendungen verwalten"
+msgstr "Internetkonten und verbundene Anwendungen verwalten"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Das E-Mail-Konto wurde erfolgreich hinzugefügt."
+
+#~ msgid "Archive"
+#~ msgstr "Archiv"
+
+#~ msgid "Sent"
+#~ msgstr "Gesendet"
+
+#~ msgid "Drafts"
+#~ msgstr "Entwürfe"
+
+#~ msgid "Templates"
+#~ msgstr "Vorlagen"
 
 #~ msgid "Posts"
 #~ msgstr "Beiträge"
@@ -244,9 +284,6 @@ msgstr "Online-Konten und verbundene Anwendungen verwalten"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Ihre gesamte Musik scrobbeln"
-
-#~ msgid "Mail Account"
-#~ msgstr "E-Mail-Konto"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "E-Mails von einem IMAP-Server abrufen"
@@ -287,9 +324,6 @@ msgstr "Online-Konten und verbundene Anwendungen verwalten"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Konto »%s« entfernt."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Bitte geben Sie Ihre Anmeldedaten ein …"
 
 #~ msgid "URL"
 #~ msgstr "URL"

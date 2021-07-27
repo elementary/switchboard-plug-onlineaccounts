@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
 "PO-Revision-Date: 2021-01-25 07:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -30,17 +30,25 @@ msgid "Manage online accounts and connected applications"
 msgstr "管理网络账户和已连接的应用"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Major redesign"
+msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make external links open in the web browser"
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:15
-msgid "Fix blurry icons on HiDPI"
+msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "翻译更新"
+
+#: data/onlineaccounts.appdata.xml.in:23
+msgid "Complete redesign"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:24
+msgid "Fix blurry icons on HiDPI"
+msgstr ""

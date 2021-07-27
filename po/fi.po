@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-13 10:19+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -40,7 +40,7 @@ msgstr "Salasana"
 msgid "Cancel"
 msgstr "Peru"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Kirjaudu sisään"
 
@@ -57,7 +57,7 @@ msgstr ""
 "\"Henkilökohtainen\"."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Takaisin"
 
@@ -69,7 +69,7 @@ msgstr "Tallenna"
 msgid "Saving the configuration…"
 msgstr "Tallennetaan asetuksia…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Onnistui"
 
@@ -77,11 +77,11 @@ msgstr "Onnistui"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "CalDAV-tili on lisätty onnistuneesti."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Sulje"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Virhe asetuksia tallentaessa"
 
@@ -101,42 +101,49 @@ msgstr "Etsitään saatavilla olevia kalentereita ja tehtäviä…"
 msgid "Error Fetching Calendars"
 msgstr "Virhe kalentereja noutaessa"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "Käyttäjätunnus:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "Salasana:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "Palvelimen osoite:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Portti:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Salaus:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Ei mitään"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "Käytä IMAP-kirjautumistietoja"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Tunnistautumista ei vaadita"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "Sähköpostitili on lisätty onnistuneesti."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "Kirjautuminen ei onnistu. Varmista kirjautumistietosi."
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "IMAP-todennus epäonnistui: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -149,6 +156,24 @@ msgstr "Sähköposti"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Seuraava"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "Määritetään uutta sähköpostitiliä…"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "Sähköpostitilin lisääminen ei onnistu"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Sähköpostitili"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -180,16 +205,16 @@ msgstr "Sähköposti"
 msgid "Add Account…"
 msgstr "Lisää tili…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Poista tämä tili"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Poista “%s” tältä laitteelta"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -197,7 +222,7 @@ msgstr ""
 "Tämä tili poistetaan, eikä se enää ole näkyvissä tämän laitteen "
 "sovelluksissa."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Poista tili"
 
@@ -208,6 +233,9 @@ msgstr "Verkkotilit"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Sähköpostitili on lisätty onnistuneesti."
 
 #~ msgid "Posts"
 #~ msgstr "Julkaisut"
@@ -244,9 +272,6 @@ msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Lähetä tiedot kuuntelemastasi musiikista"
-
-#~ msgid "Mail Account"
-#~ msgstr "Sähköpostitili"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Hae sähköpostit IMAP-palvelimelta"
@@ -286,9 +311,6 @@ msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Tili '%s' poistettu."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Anna käyttäjätietosi…"
 
 #~ msgid "URL"
 #~ msgstr "Osoite"

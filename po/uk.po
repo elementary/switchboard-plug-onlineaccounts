@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-07-08 17:34+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-24 02:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -41,7 +41,7 @@ msgstr "Пароль"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Вхід"
 
@@ -58,7 +58,7 @@ msgstr ""
 "запису. Використовуйте, наприклад, «Робота» або «Особисте»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Назад"
 
@@ -70,7 +70,7 @@ msgstr "Зберегти"
 msgid "Saving the configuration…"
 msgstr "Збереження конфігурації…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Успішно"
 
@@ -78,11 +78,11 @@ msgstr "Успішно"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "Обліковий запис CalDAV успішно додано."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Закрити"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Помилка збереження конфігурації"
 
@@ -102,42 +102,49 @@ msgstr "Пошук доступних календарів та завдань�
 msgid "Error Fetching Calendars"
 msgstr "Помилка отримання календарів"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "Ім'я користувача:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "URL-адреса сервера:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Порт:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Шифрування:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Немає"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "Використовувати облікові дані IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Автентифікація не потрібна"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "Обліковий запис пошти успішно додано."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "Не вдалося увійти. Перевірте свої облікові дані."
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "Не вдалося виконати перевірку IMAP: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -150,6 +157,24 @@ msgstr "Електронна пошта"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "Далі"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "Конфігурування облікового запису е-пошти…"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "Не вдалося додати обліковий запис е-пошти"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "Обліковий запис електронної пошти"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -181,16 +206,16 @@ msgstr "Пошта"
 msgid "Add Account…"
 msgstr "Додати обліковий запис…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Вилучити цей обліковий запис"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Вилучити «%s» з цього пристрою"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
@@ -198,7 +223,7 @@ msgstr ""
 "Цей обліковий запис буде вилучено і надалі він не з'являтиметься у "
 "застосунках на цьому пристрої."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Вилучити обліковий запис"
 
@@ -209,6 +234,21 @@ msgstr "Мережні облікові записи"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Обліковий запис пошти успішно додано."
+
+#~ msgid "Archive"
+#~ msgstr "Архівовані"
+
+#~ msgid "Sent"
+#~ msgstr "Надіслані"
+
+#~ msgid "Drafts"
+#~ msgstr "Чернетки"
+
+#~ msgid "Templates"
+#~ msgstr "Шаблони"
 
 #~ msgid "Posts"
 #~ msgstr "Дописи"
@@ -245,9 +285,6 @@ msgstr "Керування мережними обліковими записа�
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Скроблінг всієї вашої музики"
-
-#~ msgid "Mail Account"
-#~ msgstr "Обліковий запис електронної пошти"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "Отримати електронну пошту з сервера IMAP"
@@ -287,9 +324,6 @@ msgstr "Керування мережними обліковими записа�
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "Обліковий запис '%s' вилучено."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Введіть свої облікові дані…"
 
 #~ msgid "URL"
 #~ msgstr "URL-адреса"

@@ -96,6 +96,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             caldav_dialog.show_all ();
+            add_account_popover.popdown ();
         });
 
         imap_menuitem.clicked.connect (() => {
@@ -103,6 +104,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             imap_dialog.show_all ();
+            add_account_popover.popdown ();
         });
     }
 

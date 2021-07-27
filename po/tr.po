@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-09 13:59+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -40,7 +40,7 @@ msgstr "Parola"
 msgid "Cancel"
 msgstr "İptal"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "Oturum Aç"
 
@@ -57,7 +57,7 @@ msgstr ""
 "“Kişisel” gibi."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Geri"
 
@@ -69,7 +69,7 @@ msgstr "Kaydet"
 msgid "Saving the configuration…"
 msgstr "Yapılandırma kaydediliyor…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Başarılı"
 
@@ -77,11 +77,11 @@ msgstr "Başarılı"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "CalDAV hesabı başarıyla eklendi."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Kapat"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "Yapılandırma Kaydedilirken Hata Oluştu"
 
@@ -101,42 +101,49 @@ msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 msgid "Error Fetching Calendars"
 msgstr "Takvimler Alınırken Hata Oluştu"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "Parola:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "Sunucu URL'si:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "Bağlantı Noktası:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "Şifreleme:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "Yok"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "IMAP Kimliğı Kullan"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "Kimlik denetimi gerekmiyor"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "Posta hesabı başarıyla eklendi."
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "Giriş yapılamıyor. Lütfen kimlik bilgilerinizi doğrulayın."
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "IMAP doğrulaması başarısız oldu: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -149,6 +156,24 @@ msgstr "E-posta"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "İleri"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "Posta hesabını yapılandırma…"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "Posta hesabı eklenemiyor"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "E-posta Hesabı"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -179,23 +204,23 @@ msgstr "Posta"
 msgid "Add Account…"
 msgstr "Hesap Ekle…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "Bu hesabı kaldır"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "“%s” hesabını bu cihazdan kaldır"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
 "Bu hesap kaldırılacak ve artık bu cihazdaki uygulamalarda görünmeyecek."
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "Hesabı Kaldır"
 
@@ -206,6 +231,21 @@ msgstr "Çevrimiçi Hesaplar"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "Posta hesabı başarıyla eklendi."
+
+#~ msgid "Archive"
+#~ msgstr "Arşiv"
+
+#~ msgid "Sent"
+#~ msgstr "Gönderilen"
+
+#~ msgid "Drafts"
+#~ msgstr "Taslaklar"
+
+#~ msgid "Templates"
+#~ msgstr "Şablonlar"
 
 #~ msgid "Posts"
 #~ msgstr "Gönderiler"
@@ -242,9 +282,6 @@ msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "Müziğinizi skroplayın"
-
-#~ msgid "Mail Account"
-#~ msgstr "E-posta Hesabı"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "E-postayı IMAP Sunucusu aracılığı ile alın"
@@ -284,9 +321,6 @@ msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "'%s' Hesabı Kaldırıldı."
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "Lütfen bilgilerinizi giriniz…"
 
 #~ msgid "URL"
 #~ msgstr "URL"

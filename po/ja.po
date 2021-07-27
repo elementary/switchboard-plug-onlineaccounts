@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-08 23:41+0000\n"
-"PO-Revision-Date: 2021-06-10 11:43+0000\n"
+"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -40,7 +40,7 @@ msgstr "パスワード"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:186
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "Log In"
 msgstr "ログイン"
 
@@ -57,7 +57,7 @@ msgstr ""
 "“プライベート” などと入力してください。"
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:184 src/Dialogs/Imap/ImapDonePage.vala:44
+#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "戻る"
 
@@ -69,7 +69,7 @@ msgstr "保存"
 msgid "Saving the configuration…"
 msgstr "設定を保存しています…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapDonePage.vala:29
+#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "成功しました"
 
@@ -77,11 +77,11 @@ msgstr "成功しました"
 msgid "The CalDAV account has been sucessfuly added."
 msgstr "CalDAV アカウントは正常に追加されました。"
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapDonePage.vala:46
+#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "閉じる"
 
-#: src/Dialogs/CaldavDialog.vala:238 src/Dialogs/Imap/ImapDonePage.vala:87
+#: src/Dialogs/CaldavDialog.vala:238
 msgid "Error Saving Configuration"
 msgstr "設定を保存する際にエラーが発生しました"
 
@@ -101,42 +101,49 @@ msgstr "利用可能なカレンダーとタスクを検索しています…"
 msgid "Error Fetching Calendars"
 msgstr "カレンダーを取得する際にエラーが発生しました"
 
-#: src/Dialogs/Imap/ImapDialog.vala:43 src/Dialogs/Imap/ImapDialog.vala:105
+#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
 msgstr "ユーザー名:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:51 src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
 msgid "Password:"
 msgstr "パスワード:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:135
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
 msgid "Server URL:"
 msgstr "サーバーの URL:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:66 src/Dialogs/Imap/ImapDialog.vala:141
+#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
 msgid "Port:"
 msgstr "ポート:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:149
+#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
 msgid "Encryption:"
 msgstr "暗号化:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:78 src/Dialogs/Imap/ImapDialog.vala:157
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "None"
 msgstr "なし"
 
-#: src/Dialogs/Imap/ImapDialog.vala:97
+#: src/Dialogs/Imap/ImapDialog.vala:99
 msgid "Use IMAP Credentials"
 msgstr "IMAP 証明書を使う"
 
-#: src/Dialogs/Imap/ImapDialog.vala:101
+#: src/Dialogs/Imap/ImapDialog.vala:103
 msgid "No authentication required"
 msgstr "認証は不要"
 
-#: src/Dialogs/Imap/ImapDonePage.vala:30
-msgid "The mail account has been sucessfuly added."
-msgstr "メールアカウントは正常に追加されました。"
+#: src/Dialogs/Imap/ImapDialog.vala:434
+#, fuzzy
+#| msgid "Can't login. Please verify your credentials."
+msgid "Could not log in. Please verify your credentials."
+msgstr "ログインできません。証明書を認証してください。"
+
+#: src/Dialogs/Imap/ImapDialog.vala:444
+#, c-format
+msgid "IMAP verification failed: %s"
+msgstr "IMAP を認証できませんでした: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -149,6 +156,24 @@ msgstr "メール"
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
 msgstr "次へ"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:32
+#, fuzzy
+#| msgid "Configuring the mail account…"
+msgid "Setting up the e-mail account…"
+msgstr "メールアカウントを設定しています…"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:44
+#, fuzzy
+#| msgid "Unable to add mail account"
+msgid "Could not add the e-mail account"
+msgstr "メールアカウントを追加できません"
+
+#: src/Dialogs/Imap/ImapSavePage.vala:53
+#, fuzzy
+#| msgid "Mail Account"
+msgid "E-mail account added."
+msgstr "メールアカウント"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -180,23 +205,23 @@ msgstr "メール"
 msgid "Add Account…"
 msgstr "アカウントを追加…"
 
-#: src/MainView.vala:135
+#: src/MainView.vala:137
 msgid "Remove this account"
 msgstr "このアカウントを削除"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:152
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "“%s” をこのデバイスから削除します"
 
-#: src/MainView.vala:151
+#: src/MainView.vala:153
 msgid ""
 "This account will be removed and will no longer appear in apps on this "
 "device."
 msgstr ""
 "このアカウントは削除され、このデバイス上のアプリで表示されなくなります。"
 
-#: src/MainView.vala:159
+#: src/MainView.vala:161
 msgid "Remove Account"
 msgstr "アカウントを削除"
 
@@ -207,6 +232,21 @@ msgstr "オンラインアカウント"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "オンラインアカウントと接続されたアプリケーションを管理します"
+
+#~ msgid "The mail account has been sucessfuly added."
+#~ msgstr "メールアカウントは正常に追加されました。"
+
+#~ msgid "Archive"
+#~ msgstr "アーカイブ"
+
+#~ msgid "Sent"
+#~ msgstr "送信"
+
+#~ msgid "Drafts"
+#~ msgstr "下書き"
+
+#~ msgid "Templates"
+#~ msgstr "テンプレート"
 
 #~ msgid "Posts"
 #~ msgstr "投稿"
@@ -243,9 +283,6 @@ msgstr "オンラインアカウントと接続されたアプリケーション
 
 #~ msgid "Scrobble all your music"
 #~ msgstr "すべての曲を Scrobble します"
-
-#~ msgid "Mail Account"
-#~ msgstr "メールアカウント"
 
 #~ msgid "Fetch Email from IMAP Server"
 #~ msgstr "IMAP サーバーからメールを取得します"
@@ -286,9 +323,6 @@ msgstr "オンラインアカウントと接続されたアプリケーション
 
 #~ msgid "Account '%s' Removed."
 #~ msgstr "アカウント '%s' を削除しました。"
-
-#~ msgid "Please enter your credentials…"
-#~ msgstr "証明書を入力してください…"
 
 #~ msgid "URL"
 #~ msgstr "URL"
