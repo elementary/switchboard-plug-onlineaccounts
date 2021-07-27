@@ -431,7 +431,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    _("Can't login. Please verify your credentials.")
+                    _("Could not log in. Please verify your credentials.")
                 );
             }
 
@@ -476,7 +476,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                         var keys = key.split (":");
 
                         if (keys.length < 3 || keys.length > 4) {
-                            warning ("Incorrect store setup key, expects 3 or 4 parts, but %d given in '%s'", keys.length, key);
+                            warning ("Incorrect store setup key. 3 or 4 parts expected, but %d given in “%s”", keys.length, key);
                             continue;
 
                         } else {
@@ -510,7 +510,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                                     break;
 
                                 default:
-                                    debug ("Initial setup key is not stored: '%s'", key);
+                                    debug ("Initial setup key is not stored: “%s”", key);
                                     break;
                             }
                         }
@@ -520,7 +520,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 }
 
             } catch (Error e) {
-                warning ("Initial setup failed. Although it is possible to use this mail account, well known folders are most likely not working as expected: %s", e.message);
+                warning ("Incomplete setup. It is possible to use this e-mail account, but well known folders most likely will not work as expected: %s", e.message);
             }
         }
 
@@ -543,7 +543,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             }
 
             if (transport_service is Camel.NetworkService) {
-                debug ("Test if we can reach the transport service");
+                debug ("Test if the transport service can be reached");
                 yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
             }
 
@@ -560,7 +560,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 throw new GLib.Error (
                     Camel.Service.error_quark (),
                     Camel.ServiceError.CANT_AUTHENTICATE,
-                    "Can't login. Please verify your credentials."
+                    "Could not log in. Please verify your credentials."
                 );
             }
 
