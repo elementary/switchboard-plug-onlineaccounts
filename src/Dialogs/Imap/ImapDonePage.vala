@@ -26,8 +26,8 @@ public class OnlineAccounts.ImapDonePage : Gtk.Grid {
 
     construct {
         var success_alert_view = new Granite.Widgets.AlertView (
-            _("All done"),
-            _("E-mail account added."),
+            _("Success"),
+            _("The mail account has been sucessfuly added."),
             "process-completed"
         );
         success_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -84,7 +84,7 @@ public class OnlineAccounts.ImapDonePage : Gtk.Grid {
 
         } else {
             error_view = new Granite.Widgets.AlertView (
-                _("Could not save configuration"),
+                _("Error Saving Configuration"),
                 error.message,
                 "dialog-error"
             );
