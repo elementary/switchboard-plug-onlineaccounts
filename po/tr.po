@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:41+0000\n"
-"PO-Revision-Date: 2021-07-24 17:19+0000\n"
+"PO-Revision-Date: 2021-07-28 09:19+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -135,10 +135,8 @@ msgid "No authentication required"
 msgstr "Kimlik denetimi gerekmiyor"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-#, fuzzy
-#| msgid "Can't login. Please verify your credentials."
 msgid "Could not log in. Please verify your credentials."
-msgstr "Giriş yapılamıyor. Lütfen kimlik bilgilerinizi doğrulayın."
+msgstr "Giriş yapılamadı. Lütfen kimlik bilgilerinizi doğrulayın."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
 #, c-format
@@ -158,22 +156,16 @@ msgid "Next"
 msgstr "İleri"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-#, fuzzy
-#| msgid "Configuring the mail account…"
 msgid "Setting up the e-mail account…"
-msgstr "Posta hesabını yapılandırma…"
+msgstr "Posta hesabı ayarlanıyor…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Unable to add mail account"
 msgid "Could not add the e-mail account"
-msgstr "Posta hesabı eklenemiyor"
+msgstr "Posta hesabı eklenemedi"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account added."
-msgstr "E-posta Hesabı"
+msgstr "E-posta hesabı eklendi."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
