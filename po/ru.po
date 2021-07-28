@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -50,12 +50,8 @@ msgid "Account Display Name"
 msgstr "Отображаемое имя учётной записи"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
-msgid ""
-"The above name will be used to identify this account. Use for example “Work” "
-"or “Personal”."
+msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
-"Указанное выше имя будет использоваться для идентификации этой учётной "
-"записи. Используйте, например, «Работа» или «Персональный»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -70,20 +66,24 @@ msgstr "Сохранить"
 msgid "Saving the configuration…"
 msgstr "Сохранение конфигурации…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
-msgid "Success"
-msgstr "Успешно"
+#: src/Dialogs/CaldavDialog.vala:155
+msgid "All done"
+msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:156
-msgid "The CalDAV account has been sucessfuly added."
-msgstr "Учетная запись CalDAV была успешно добавлена."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "CalDAV account added."
+msgstr "Учётная запись почты"
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Закрыть"
 
 #: src/Dialogs/CaldavDialog.vala:238
-msgid "Error Saving Configuration"
+#, fuzzy
+#| msgid "Error Saving Configuration"
+msgid "Could not save configuration"
 msgstr "Ошибка сохранения конфигурации"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
@@ -99,7 +99,9 @@ msgid "Finding available calendars and tasks…"
 msgstr "Поиск доступных календарей и задач…"
 
 #: src/Dialogs/CaldavDialog.vala:406
-msgid "Error Fetching Calendars"
+#, fuzzy
+#| msgid "Error Fetching Calendars"
+msgid "Could not fetch calendars"
 msgstr "Ошибка при поиске календарей"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
@@ -170,6 +172,10 @@ msgstr "Конфигурация учетной записи почты…"
 msgid "Could not add the e-mail account"
 msgstr "Не удалось добавить учетную запись почты"
 
+#: src/Dialogs/Imap/ImapSavePage.vala:52
+msgid "Success"
+msgstr "Успешно"
+
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 #, fuzzy
 #| msgid "Mail Account"
@@ -215,9 +221,12 @@ msgid "Remove “%s” from this device"
 msgstr "Удалить «%s» с этого устройства"
 
 #: src/MainView.vala:153
+#, fuzzy
+#| msgid ""
+#| "This account will be removed and will no longer appear in apps on this "
+#| "device."
 msgid ""
-"This account will be removed and will no longer appear in apps on this "
-"device."
+"This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Эта учетная запись будет удалена и больше не будет отображаться в "
 "приложениях на этом устройстве."
@@ -233,6 +242,16 @@ msgstr "Онлайн аккаунты"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн аккаунтами и подключенными приложениями"
+
+#~ msgid ""
+#~ "The above name will be used to identify this account. Use for example "
+#~ "“Work” or “Personal”."
+#~ msgstr ""
+#~ "Указанное выше имя будет использоваться для идентификации этой учётной "
+#~ "записи. Используйте, например, «Работа» или «Персональный»."
+
+#~ msgid "The CalDAV account has been sucessfuly added."
+#~ msgstr "Учетная запись CalDAV была успешно добавлена."
 
 #~ msgid "The mail account has been sucessfuly added."
 #~ msgstr "Учетная запись почты была успешно добавлена."

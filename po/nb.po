@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2021-07-24 14:26+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -49,12 +49,8 @@ msgid "Account Display Name"
 msgstr "Kontovisningsnavn"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
-msgid ""
-"The above name will be used to identify this account. Use for example “Work” "
-"or “Personal”."
+msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
-"Navnet ovenfor brukes til å identifisere kontoen. Bruk for eksempel "
-"«Arbeid», eller «Personlig»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -69,20 +65,24 @@ msgstr "Lagre"
 msgid "Saving the configuration…"
 msgstr "Lagrer oppsettet …"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
-msgid "Success"
-msgstr "Vellykket"
+#: src/Dialogs/CaldavDialog.vala:155
+msgid "All done"
+msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:156
-msgid "The CalDAV account has been sucessfuly added."
-msgstr "CalDAV-konto lagt til."
+#, fuzzy
+#| msgid "Mail Account"
+msgid "CalDAV account added."
+msgstr "E-postkonto"
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Lukk"
 
 #: src/Dialogs/CaldavDialog.vala:238
-msgid "Error Saving Configuration"
+#, fuzzy
+#| msgid "Error Saving Configuration"
+msgid "Could not save configuration"
 msgstr "Kunne ikke lagre oppsett"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
@@ -98,7 +98,9 @@ msgid "Finding available calendars and tasks…"
 msgstr "Finner tilgjengelige kalendere og gjøremål …"
 
 #: src/Dialogs/CaldavDialog.vala:406
-msgid "Error Fetching Calendars"
+#, fuzzy
+#| msgid "Error Fetching Calendars"
+msgid "Could not fetch calendars"
 msgstr "Klarte ikke å hente kalendere"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
@@ -169,6 +171,10 @@ msgstr "Setter opp e-postkontoen…"
 msgid "Could not add the e-mail account"
 msgstr "Kunne ikke legge til e-postkonto"
 
+#: src/Dialogs/Imap/ImapSavePage.vala:52
+msgid "Success"
+msgstr "Vellykket"
+
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 #, fuzzy
 #| msgid "Mail Account"
@@ -216,9 +222,12 @@ msgid "Remove “%s” from this device"
 msgstr "Fjern «%s» fra denne enheten"
 
 #: src/MainView.vala:153
+#, fuzzy
+#| msgid ""
+#| "This account will be removed and will no longer appear in apps on this "
+#| "device."
 msgid ""
-"This account will be removed and will no longer appear in apps on this "
-"device."
+"This account will be removed and no longer appear in any apps on this device."
 msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
 
 #: src/MainView.vala:161
@@ -232,6 +241,16 @@ msgstr "Nettkontoer"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Håndter nettkontoer og tilknyttede programmer"
+
+#~ msgid ""
+#~ "The above name will be used to identify this account. Use for example "
+#~ "“Work” or “Personal”."
+#~ msgstr ""
+#~ "Navnet ovenfor brukes til å identifisere kontoen. Bruk for eksempel "
+#~ "«Arbeid», eller «Personlig»."
+
+#~ msgid "The CalDAV account has been sucessfuly added."
+#~ msgstr "CalDAV-konto lagt til."
 
 #~ msgid "The mail account has been sucessfuly added."
 #~ msgstr "E-postkonto lagt til."

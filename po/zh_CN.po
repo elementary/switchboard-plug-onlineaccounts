@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -49,10 +49,8 @@ msgid "Account Display Name"
 msgstr "账户名称"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
-msgid ""
-"The above name will be used to identify this account. Use for example “Work” "
-"or “Personal”."
-msgstr "此名称可自定义用于区分账户。如“工作”或“个人”。"
+msgid "Pick a name like “Work” or “Personal” for the account."
+msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -67,20 +65,24 @@ msgstr "保存"
 msgid "Saving the configuration…"
 msgstr "保存配置…"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
-msgid "Success"
-msgstr "成功"
+#: src/Dialogs/CaldavDialog.vala:155
+msgid "All done"
+msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:156
-msgid "The CalDAV account has been sucessfuly added."
-msgstr "CalDAV 账户已成功添加。"
+#, fuzzy
+#| msgid "Mail Account"
+msgid "CalDAV account added."
+msgstr "邮件账户"
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "关闭"
 
 #: src/Dialogs/CaldavDialog.vala:238
-msgid "Error Saving Configuration"
+#, fuzzy
+#| msgid "Error Saving Configuration"
+msgid "Could not save configuration"
 msgstr "保存配置出错"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
@@ -96,7 +98,9 @@ msgid "Finding available calendars and tasks…"
 msgstr "查找可用日历和任务…"
 
 #: src/Dialogs/CaldavDialog.vala:406
-msgid "Error Fetching Calendars"
+#, fuzzy
+#| msgid "Error Fetching Calendars"
+msgid "Could not fetch calendars"
 msgstr "获取日历出错"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
@@ -163,6 +167,10 @@ msgstr ""
 msgid "Could not add the e-mail account"
 msgstr ""
 
+#: src/Dialogs/Imap/ImapSavePage.vala:52
+msgid "Success"
+msgstr "成功"
+
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 #, fuzzy
 #| msgid "Mail Account"
@@ -207,9 +215,12 @@ msgid "Remove “%s” from this device"
 msgstr "从设备移除 “%s”"
 
 #: src/MainView.vala:153
+#, fuzzy
+#| msgid ""
+#| "This account will be removed and will no longer appear in apps on this "
+#| "device."
 msgid ""
-"This account will be removed and will no longer appear in apps on this "
-"device."
+"This account will be removed and no longer appear in any apps on this device."
 msgstr "此账户将会被删除，且不会再出现在设备上的其他应用中。"
 
 #: src/MainView.vala:161
@@ -223,6 +234,14 @@ msgstr "网络账户"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "管理网络账户和已连接的应用"
+
+#~ msgid ""
+#~ "The above name will be used to identify this account. Use for example "
+#~ "“Work” or “Personal”."
+#~ msgstr "此名称可自定义用于区分账户。如“工作”或“个人”。"
+
+#~ msgid "The CalDAV account has been sucessfuly added."
+#~ msgstr "CalDAV 账户已成功添加。"
 
 #~ msgid "The mail account has been sucessfuly added."
 #~ msgstr "邮件账户已成功添加。"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -51,9 +51,7 @@ msgid "Account Display Name"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
-msgid ""
-"The above name will be used to identify this account. Use for example “Work” "
-"or “Personal”."
+msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
@@ -69,20 +67,22 @@ msgstr ""
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
-msgid "Success"
+#: src/Dialogs/CaldavDialog.vala:155
+msgid "All done"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:156
-msgid "The CalDAV account has been sucessfuly added."
-msgstr ""
+#, fuzzy
+#| msgid "Mail Account"
+msgid "CalDAV account added."
+msgstr "메일 계정"
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:238
-msgid "Error Saving Configuration"
+msgid "Could not save configuration"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
@@ -98,7 +98,7 @@ msgid "Finding available calendars and tasks…"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:406
-msgid "Error Fetching Calendars"
+msgid "Could not fetch calendars"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
@@ -169,6 +169,10 @@ msgstr ""
 msgid "Could not add the e-mail account"
 msgstr ""
 
+#: src/Dialogs/Imap/ImapSavePage.vala:52
+msgid "Success"
+msgstr ""
+
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 #, fuzzy
 #| msgid "Mail Account"
@@ -218,8 +222,7 @@ msgstr ""
 
 #: src/MainView.vala:153
 msgid ""
-"This account will be removed and will no longer appear in apps on this "
-"device."
+"This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 
 #: src/MainView.vala:161

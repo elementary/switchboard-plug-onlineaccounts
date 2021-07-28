@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:41+0000\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2021-07-28 01:17+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -49,12 +49,8 @@ msgid "Account Display Name"
 msgstr "Kontobezeichnung"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
-msgid ""
-"The above name will be used to identify this account. Use for example “Work” "
-"or “Personal”."
+msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
-"Dieser Name dient der Identifizierung des Kontos. Beispiele wären »Arbeit« "
-"oder »Privat«."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -69,20 +65,24 @@ msgstr "Speichern"
 msgid "Saving the configuration…"
 msgstr "Einrichtung speichern …"
 
-#: src/Dialogs/CaldavDialog.vala:155 src/Dialogs/Imap/ImapSavePage.vala:52
-msgid "Success"
-msgstr "Erfolgreich"
+#: src/Dialogs/CaldavDialog.vala:155
+msgid "All done"
+msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:156
-msgid "The CalDAV account has been sucessfuly added."
-msgstr "Das CalDAV-Konto wurde erfolgreich hinzugefügt."
+#, fuzzy
+#| msgid "E-mail account added."
+msgid "CalDAV account added."
+msgstr "E-Mail-Konto hinzugefügt."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Schließen"
 
 #: src/Dialogs/CaldavDialog.vala:238
-msgid "Error Saving Configuration"
+#, fuzzy
+#| msgid "Error Saving Configuration"
+msgid "Could not save configuration"
 msgstr "Fehler beim Speichern der Einrichtung"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
@@ -98,7 +98,9 @@ msgid "Finding available calendars and tasks…"
 msgstr "Verfügbare Kalender und Aufgaben ermitteln …"
 
 #: src/Dialogs/CaldavDialog.vala:406
-msgid "Error Fetching Calendars"
+#, fuzzy
+#| msgid "Error Fetching Calendars"
+msgid "Could not fetch calendars"
 msgstr "Fehler beim Laden der Kalender"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
@@ -163,6 +165,10 @@ msgstr "E-Mail-Konto einrichten …"
 msgid "Could not add the e-mail account"
 msgstr "E-Mail-Konto konnte nicht hinzugefügt werden"
 
+#: src/Dialogs/Imap/ImapSavePage.vala:52
+msgid "Success"
+msgstr "Erfolgreich"
+
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "E-mail account added."
 msgstr "E-Mail-Konto hinzugefügt."
@@ -207,9 +213,12 @@ msgid "Remove “%s” from this device"
 msgstr "»%s« von diesem Gerät entfernen"
 
 #: src/MainView.vala:153
+#, fuzzy
+#| msgid ""
+#| "This account will be removed and will no longer appear in apps on this "
+#| "device."
 msgid ""
-"This account will be removed and will no longer appear in apps on this "
-"device."
+"This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Dieses Konto wird entfernt und nicht länger in den Anwendungen auf diesem "
 "Gerät erscheinen."
@@ -225,6 +234,16 @@ msgstr "Internetkonten"
 #: src/Plug.vala:28
 msgid "Manage online accounts and connected applications"
 msgstr "Internetkonten und verbundene Anwendungen verwalten"
+
+#~ msgid ""
+#~ "The above name will be used to identify this account. Use for example "
+#~ "“Work” or “Personal”."
+#~ msgstr ""
+#~ "Dieser Name dient der Identifizierung des Kontos. Beispiele wären "
+#~ "»Arbeit« oder »Privat«."
+
+#~ msgid "The CalDAV account has been sucessfuly added."
+#~ msgstr "Das CalDAV-Konto wurde erfolgreich hinzugefügt."
 
 #~ msgid "The mail account has been sucessfuly added."
 #~ msgstr "Das E-Mail-Konto wurde erfolgreich hinzugefügt."
