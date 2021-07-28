@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-07-28 01:17+0000\n"
+"PO-Revision-Date: 2021-07-28 19:42+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/de/>\n"
@@ -51,6 +51,7 @@ msgstr "Kontobezeichnung"
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
+"Wählen Sie einen Namen für das Konto, wie z.B. \"Arbeit\" oder \"Privat\"."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -63,27 +64,23 @@ msgstr "Speichern"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr "Einrichtung speichern …"
+msgstr "Konfiguration speichern …"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "Abgeschlossen"
 
 #: src/Dialogs/CaldavDialog.vala:156
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "CalDAV account added."
-msgstr "E-Mail-Konto hinzugefügt."
+msgstr "CalDAV-Konto hinzugefügt."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Schließen"
 
 #: src/Dialogs/CaldavDialog.vala:238
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
-msgstr "Fehler beim Speichern der Einrichtung"
+msgstr "Fehler beim Speichern der Konfiguration"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -98,8 +95,6 @@ msgid "Finding available calendars and tasks…"
 msgstr "Verfügbare Kalender und Aufgaben ermitteln …"
 
 #: src/Dialogs/CaldavDialog.vala:406
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
 msgstr "Fehler beim Laden der Kalender"
 
@@ -213,15 +208,11 @@ msgid "Remove “%s” from this device"
 msgstr "»%s« von diesem Gerät entfernen"
 
 #: src/MainView.vala:153
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
-"Dieses Konto wird entfernt und nicht länger in den Anwendungen auf diesem "
-"Gerät erscheinen."
+"Dieses Konto wird entfernt und nicht länger in Anwendungen auf diesem Gerät "
+"erscheinen."
 
 #: src/MainView.vala:161
 msgid "Remove Account"
