@@ -25,6 +25,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Granite.ValidatedEntry smtp_server_entry;
     private Gtk.Button save_button;
     private Gtk.CheckButton use_imap_credentials;
+    private Gtk.CheckButton smtp_no_credentials;
     private Gtk.ComboBoxText imap_encryption_combobox;
     private Gtk.ComboBoxText smtp_encryption_combobox;
     private Gtk.Entry smtp_password_entry;
@@ -32,11 +33,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Gtk.SpinButton imap_port_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
-    private ImapDonePage done_page;
+    private ImapSavePage save_page;
+    private uint cancel_timeout_id = 0;
 
     construct {
         login_page = new ImapLoginPage ();
-        done_page = new ImapDonePage ();
+        save_page = new ImapSavePage ();
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
@@ -98,7 +100,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             active = true
         };
 
-        var no_credentials = new Gtk.CheckButton.with_label (_("No authentication required"));
+        smtp_no_credentials = new Gtk.CheckButton.with_label (_("No authentication required"));
 
         var smtp_header = new Granite.HeaderLabel ("SMTP");
 
@@ -164,7 +166,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             row_spacing = 6
         };
         smtp_server_grid.attach (smtp_header, 0, 0, 2);
-        smtp_server_grid.attach (no_credentials, 1, 1);
+        smtp_server_grid.attach (smtp_no_credentials, 1, 1);
         smtp_server_grid.attach (use_imap_credentials, 1, 2);
         smtp_server_grid.attach (smtp_revealer, 0, 3, 2);
         smtp_server_grid.attach (smtp_url_label, 0, 4);
@@ -215,7 +217,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
         deck.add (login_page);
         deck.add (main_grid);
-        deck.add (done_page);
+        deck.add (save_page);
 
         var window_handle = new Hdy.WindowHandle ();
         window_handle.add (deck);
@@ -232,9 +234,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             deck.visible_child = main_grid;
         });
 
-        done_page.close.connect (destroy);
+        save_page.close.connect (destroy);
 
-        done_page.back.connect (() => {
+        save_page.back.connect (() => {
             deck.navigate (Hdy.NavigationDirection.BACK);
         });
 
@@ -242,9 +244,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             deck.navigate (Hdy.NavigationDirection.BACK);
         });
 
-        no_credentials.notify["active"].connect (() => {
-            smtp_revealer.reveal_child = !no_credentials.active && !use_imap_credentials.active;
-            use_imap_credentials.sensitive = ! no_credentials.active;
+        smtp_no_credentials.notify["active"].connect (() => {
+            smtp_revealer.reveal_child = !smtp_no_credentials.active && !use_imap_credentials.active;
+            use_imap_credentials.sensitive = ! smtp_no_credentials.active;
         });
 
         use_imap_credentials.bind_property ("active", smtp_revealer, "reveal-child", GLib.BindingFlags.INVERT_BOOLEAN);
@@ -308,15 +310,22 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         });
 
         save_button.clicked.connect (() => {
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
+            cancellable = new GLib.Cancellable ();
+
+            deck.visible_child = save_page;
+            save_page.show_busy (cancellable);
+
             save_configuration.begin ((obj, res) => {
                 try {
                     save_configuration.end (res);
-                    done_page.set_error (null);
+                    save_page.show_success ();
 
                 } catch (Error e) {
-                    done_page.set_error (e);
+                    save_page.show_error (e);
                 }
-                deck.visible_child = done_page;
             });
         });
     }
@@ -326,11 +335,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     }
 
     private async void save_configuration () throws Error {
-        if (cancellable != null) {
-            cancellable.cancel ();
-        }
-        cancellable = new GLib.Cancellable ();
-
         var registry = yield new E.SourceRegistry (cancellable);
         if (cancellable.is_cancelled ()) {
             return;
@@ -351,31 +355,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             display_name = login_page.display_name
         };
 
-        // Configuring the well known folder URI code borrows heavily from Evolution:
-        // https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/mail/e-mail-config-assistant.c#L748-761
-        var account_uri = account_source.uid;
-        var archive_folder_name = N_("Archive");
-        var sent_folder_name = N_("Sent");
-        var drafts_folder_name = N_("Drafts");
-        var templates_folder_name = N_("Templates");
-
-        if (
-            E.util_utf8_strstrcase (imap_server_entry.text, "gmail.com") != null ||
-            E.util_utf8_strstrcase (imap_server_entry.text, "googlemail.com") != null
-        ) {
-            archive_folder_name = "[Gmail]/All Mail";
-            drafts_folder_name = "[Gmail]/Drafts";
-            sent_folder_name = "[Gmail]/Sent Mail";
-        }
-
-        var encoded_account_uri = Camel.URL.encode (account_uri, ":;@/");
-
         /* configure account_source */
 
         unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
         account_extension.identity_uid = identity_source.uid;
-        account_extension.backend_name = "imap";
-        account_extension.archive_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (archive_folder_name, ":;@?#"));
+        account_extension.needs_initial_setup = true;
+        account_extension.backend_name = "imapx";
 
         unowned var account_security_extension = (E.SourceSecurity) account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
         account_security_extension.set_method (imap_encryption_combobox.active_id);
@@ -390,15 +375,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         unowned var submission_extension = (E.SourceMailSubmission) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
         submission_extension.transport_uid = transport_source.uid;
-        submission_extension.sent_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (sent_folder_name, ":;@?#"));
 
         unowned var identity_extension = (E.SourceMailIdentity) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
         identity_extension.address = login_page.email;
         identity_extension.name = login_page.real_name;
 
         unowned var composition_extension = (E.SourceMailComposition) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_COMPOSITION);
-        composition_extension.drafts_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (drafts_folder_name, ":;@?#"));
-        composition_extension.templates_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (templates_folder_name, ":;@?#"));
 
         /* configure transport_source */
 
@@ -412,7 +394,189 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.host = smtp_server_entry.text;
         transport_auth_extension.port = (uint) smtp_port_spin.value;
         transport_auth_extension.user = smtp_username_entry.text;
-        transport_auth_extension.method = "PLAIN";
+        transport_auth_extension.method = "LOGIN";
+
+        /* verify connection */
+        unowned var session = CamelSession.get_default ();
+
+        Camel.Service? imap_service = null;
+        try {
+            debug ("Add imap service for mail account extension");
+            imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
+
+            imap_service.set_password (login_page.password);
+            account_source.camel_configure_service (imap_service);
+
+            if (imap_service is Camel.NetworkService) {
+                debug ("Test if we can reach the imap service");
+                yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
+            }
+
+            set_cancel_timeout (cancellable);
+
+            try {
+                if (imap_service is Camel.OfflineStore) {
+                    debug ("Set the imap service online");
+                    yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, cancellable);
+                } else {
+                    debug ("Connect to the imap service");
+                    yield imap_service.connect (GLib.Priority.DEFAULT, cancellable);
+                }
+
+            } catch (GLib.IOError e) {
+                if (!(e is GLib.IOError.CANCELLED)) {
+                    throw e;
+                }
+
+                throw new GLib.Error (
+                    Camel.Service.error_quark (),
+                    Camel.ServiceError.CANT_AUTHENTICATE,
+                    _("Could not log in. Please verify your credentials.")
+                );
+            }
+
+            unset_cancel_timeout ();
+
+        } catch (Error e) {
+            throw new GLib.Error (
+                Camel.Service.error_quark (),
+                Camel.ServiceError.CANT_AUTHENTICATE,
+                _("IMAP verification failed: %s").printf (e.message)
+            );
+        }
+
+        if (imap_service is Camel.Store) {
+            var imap_store = (Camel.Store) imap_service;
+
+            try {
+                HashTable<unowned string, unowned string> save_setup;
+                imap_store.initial_setup_sync (out save_setup, cancellable);
+
+                if (save_setup == null) {
+                    warning ("Initial setup is NULL. Well known folders will probably not work correctly.");
+
+                } else {
+                    /*
+                     * The key name consists of up to four parts: Source:Extension:Property[:Type]
+                     * Source can be 'Collection', 'Account', 'Submission', 'Transport', 'Backend'
+                     * Extension is any extension name; it's up to the key creator to make sure
+                     * the extension belongs to that particular Source.
+                     * Property is a property name in the Extension.
+                     * Type is an optional letter describing the type of the value; if not set, then
+                     * string is used. Available values are: 'b' for boolean, 'i' for integer,
+                     * 's' for string, 'f' for folder full path.
+                     * All the part values are case sensitive.
+                     *
+                     * https://gitlab.gnome.org/GNOME/evolution/-/blob/master/src/libemail-engine/e-mail-store-utils.c#L469
+                    */
+
+                    var encoded_account_uri = Camel.URL.encode (account_source.uid, ":;@/");
+
+                    foreach (unowned var key in save_setup.get_keys ()) {
+                        var keys = key.split (":");
+
+                        if (keys.length < 3 || keys.length > 4) {
+                            warning ("Incorrect store setup key. 3 or 4 parts expected, but %d given in “%s”", keys.length, key);
+                            continue;
+
+                        } else {
+                            var save_setup_source_type = keys[0];
+                            var save_setup_extension_name = keys[1];
+                            var save_setup_property_name = keys[2];
+
+                            switch (save_setup_source_type) {
+                                case "Account":
+                                    if (
+                                        save_setup_extension_name == E.SOURCE_EXTENSION_MAIL_ACCOUNT &&
+                                        save_setup_property_name == "archive-folder"
+                                    ) {
+                                        account_extension.archive_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (save_setup.get (key), ":;@?#"));
+                                    }
+                                    break;
+
+                                case "Submission":
+                                    if (
+                                        save_setup_extension_name == E.SOURCE_EXTENSION_MAIL_COMPOSITION &&
+                                        save_setup_property_name == "drafts-folder"
+                                    ) {
+                                        composition_extension.drafts_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (save_setup.get (key), ":;@?#"));
+
+                                    } else if (
+                                        save_setup_extension_name == E.SOURCE_EXTENSION_MAIL_SUBMISSION &&
+                                        save_setup_property_name == "sent-folder"
+                                    ) {
+                                        submission_extension.sent_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (save_setup.get (key), ":;@?#"));
+                                    }
+                                    break;
+
+                                default:
+                                    debug ("Initial setup key is not stored: “%s”", key);
+                                    break;
+                            }
+                        }
+                    }
+
+                    account_extension.needs_initial_setup = false;
+                }
+
+            } catch (Error e) {
+                warning ("Incomplete setup. It is possible to use this e-mail account, but well known folders most likely will not work as expected: %s", e.message);
+            }
+        }
+
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
+
+        Camel.Service? transport_service = null;
+        try {
+            debug ("Add transport service");
+            transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
+            transport_source.camel_configure_service (transport_service);
+
+            if (!smtp_no_credentials.active) {
+                if (use_imap_credentials.active) {
+                    transport_service.set_password (login_page.password);
+                } else {
+                    transport_service.set_password (smtp_password_entry.text);
+                }
+            }
+
+            if (transport_service is Camel.NetworkService) {
+                debug ("Test if the transport service can be reached");
+                yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
+            }
+
+            set_cancel_timeout (cancellable);
+
+            try {
+                debug ("Connect to the transport service");
+                yield transport_service.connect (GLib.Priority.DEFAULT, cancellable);
+            } catch (GLib.IOError e) {
+                if (!(e is GLib.IOError.CANCELLED)) {
+                    throw e;
+                }
+
+                throw new GLib.Error (
+                    Camel.Service.error_quark (),
+                    Camel.ServiceError.CANT_AUTHENTICATE,
+                    "Could not log in. Please verify your credentials."
+                );
+            }
+
+            unset_cancel_timeout ();
+
+        } catch (Error e) {
+            throw new GLib.Error (
+                Camel.Service.error_quark (),
+                Camel.ServiceError.CANT_AUTHENTICATE,
+                "SMTP verification failed: %s".printf (e.message)
+            );
+        }
+
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
 
         /* let's save everything */
 
@@ -431,5 +595,20 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         }
 
         yield registry.create_sources (sources, cancellable);
+    }
+
+
+    private void set_cancel_timeout (GLib.Cancellable cancellable) {
+        cancel_timeout_id = GLib.Timeout.add (4000, () => {
+            cancel_timeout_id = 0;
+            cancellable.cancel ();
+            return GLib.Source.REMOVE;
+        });
+    }
+
+    private void unset_cancel_timeout () {
+        if (cancel_timeout_id != 0) {
+            GLib.Source.remove (cancel_timeout_id);
+        }
     }
 }

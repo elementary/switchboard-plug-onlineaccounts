@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 22:12+0000\n"
-"PO-Revision-Date: 2021-07-20 18:18+0000\n"
-"Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"PO-Revision-Date: 2021-07-24 17:19+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/de/>\n"
 "Language: de\n"
@@ -21,28 +21,33 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
-msgstr "Einstellungen für Internetaccounts"
+msgstr "Einstellungen für Internetkonten"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr "Online-Konten und verbundene Anwendungen verwalten"
+msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr ""
+msgid "Verify login credentails when saving IMAP accounts"
+msgstr "Anmeldedaten vor dem Speichern des IMAP-Kontos überprüfen"
 
 #: data/onlineaccounts.appdata.xml.in:14
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr "IMAP-Ordner einrichten: Archiv, Entwürfe, Gesendet und Vorlagen"
+
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
+"Einblenddialog »Konto hinzufügen« schließen, wenn ein Eintrag ausgewählt wird"
 
-#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Aktualisierte Übersetzungen"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Complete redesign"
 msgstr "Komplettes Redesign"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Fix blurry icons on HiDPI"
 msgstr "Behebt ein Problem mit unscharfen Icons bei HiDPI Bildschirmen"

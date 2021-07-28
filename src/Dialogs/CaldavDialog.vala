@@ -88,7 +88,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             hexpand = true
         };
 
-        var display_name_hint_label = new Gtk.Label (_("The above name will be used to identify this account. Use for example “Work” or “Personal”.")) {
+        var display_name_hint_label = new Gtk.Label (_("Pick a name like “Work” or “Personal” for the account.")) {
             hexpand = true,
             xalign = 0
         };
@@ -152,8 +152,8 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         save_configuration_busy_grid.add (save_configuration_busy_spinner);
 
         var save_configuration_success_view = new Granite.Widgets.AlertView (
-            _("Success"),
-            _("The CalDAV account has been sucessfuly added."),
+            _("All done"),
+            _("CalDAV account added."),
             "process-completed"
         );
         save_configuration_success_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -235,7 +235,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                         save_configuration_page_stack.remove (error_view);
                     }
                     error_view = new Granite.Widgets.AlertView (
-                        _("Error Saving Configuration"),
+                        _("Could not save configuration"),
                         e.message,
                         "dialog-error"
                     );
@@ -403,7 +403,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         } catch (GLib.Error e) {
             var error_placeholder = new Granite.Widgets.AlertView (
-                _("Error Fetching Calendars"),
+                _("Could not fetch calendars"),
                 e.message,
                 "dialog-error"
             );

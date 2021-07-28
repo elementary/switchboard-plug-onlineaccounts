@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 22:12+0000\n"
+"POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/online-"
@@ -28,24 +28,28 @@ msgid "Manage online accounts and connected applications"
 msgstr "Spravovat online účty a propojené aplikace"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 #, fuzzy
 #| msgid "Major redesign"
 msgid "Complete redesign"
 msgstr "Velké předělání"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
 "Oprava rozmazaných ikon na displejích s velmi vysokým rozlišením (HiDPI)"
