@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-07-28 09:19+0000\n"
+"PO-Revision-Date: 2021-07-29 13:43+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/tr/>\n"
@@ -50,7 +50,7 @@ msgstr "Hesap Görünen Adı"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Hesap için \"İş\" veya \"Kişisel\" gibi bir ad seçin."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -67,23 +67,19 @@ msgstr "Yapılandırma kaydediliyor…"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "İşlem tamamlandı"
 
 #: src/Dialogs/CaldavDialog.vala:156
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "CalDAV account added."
-msgstr "E-posta hesabı eklendi."
+msgstr "CalDAV hesabı eklendi."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Kapat"
 
 #: src/Dialogs/CaldavDialog.vala:238
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
-msgstr "Yapılandırma Kaydedilirken Hata Oluştu"
+msgstr "Yapılandırma kaydedilemedi"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -98,10 +94,8 @@ msgid "Finding available calendars and tasks…"
 msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 
 #: src/Dialogs/CaldavDialog.vala:406
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
-msgstr "Takvimler Alınırken Hata Oluştu"
+msgstr "Takvimler getirilemedi"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
@@ -212,14 +206,10 @@ msgid "Remove “%s” from this device"
 msgstr "“%s” hesabını bu cihazdan kaldır"
 
 #: src/MainView.vala:153
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
-"Bu hesap kaldırılacak ve artık bu cihazdaki uygulamalarda görünmeyecek."
+"Bu hesap kaldırılacak ve artık bu cihazdaki hiçbir uygulamada görünmeyecek."
 
 #: src/MainView.vala:161
 msgid "Remove Account"
