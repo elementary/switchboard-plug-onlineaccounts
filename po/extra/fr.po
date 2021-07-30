@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2020-05-01 03:10+0000\n"
+"PO-Revision-Date: 2021-07-30 20:57+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
@@ -30,24 +30,27 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
+"Vérification des identifiants de connexion lors de l'enregistrement des "
+"comptes IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
+"Définition des dossiers Archive, Brouillons, Envoyés et Modèles pour l'IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
+"Fermeture de la fenêtre flottante « Ajouter un compte » lorsqu'un élément "
+"est sélectionné"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
 #: data/onlineaccounts.appdata.xml.in:23
-#, fuzzy
-#| msgid "Major redesign"
 msgid "Complete redesign"
-msgstr "Reconception majeure"
+msgstr "Refonte complète"
 
 #: data/onlineaccounts.appdata.xml.in:24
 msgid "Fix blurry icons on HiDPI"
