@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-07-24 17:19+0000\n"
+"PO-Revision-Date: 2021-08-04 08:13+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -70,10 +70,8 @@ msgid "All done"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:156
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account added."
-msgstr "Sähköpostitili"
+msgstr "CalDAV-tili lisätty."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
@@ -160,10 +158,8 @@ msgid "Next"
 msgstr "Seuraava"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-#, fuzzy
-#| msgid "Configuring the mail account…"
 msgid "Setting up the e-mail account…"
-msgstr "Määritetään uutta sähköpostitiliä…"
+msgstr "Määritetään sähköpostitiliä…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
 #, fuzzy
@@ -176,10 +172,8 @@ msgid "Success"
 msgstr "Onnistui"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account added."
-msgstr "Sähköpostitili"
+msgstr "Sähköpostitili lisätty."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
