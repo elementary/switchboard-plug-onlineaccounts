@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-08-04 08:13+0000\n"
+"PO-Revision-Date: 2021-08-04 12:13+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -50,7 +50,7 @@ msgstr "Tilin näyttönimi"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Valitse nimi kuten “Työ” tai “Henkilökohtainen” tälle tilille."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -67,7 +67,7 @@ msgstr "Tallennetaan asetuksia…"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "Kaikki valmista"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "CalDAV account added."
@@ -78,10 +78,8 @@ msgid "Close"
 msgstr "Sulje"
 
 #: src/Dialogs/CaldavDialog.vala:238
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
-msgstr "Virhe asetuksia tallentaessa"
+msgstr "Asetusten tallentaminen ei onnistunut"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -96,10 +94,8 @@ msgid "Finding available calendars and tasks…"
 msgstr "Etsitään saatavilla olevia kalentereita ja tehtäviä…"
 
 #: src/Dialogs/CaldavDialog.vala:406
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
-msgstr "Virhe kalentereja noutaessa"
+msgstr "Kalenterien noutaminen ei onnistunut"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
@@ -135,10 +131,8 @@ msgid "No authentication required"
 msgstr "Tunnistautumista ei vaadita"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-#, fuzzy
-#| msgid "Can't login. Please verify your credentials."
 msgid "Could not log in. Please verify your credentials."
-msgstr "Kirjautuminen ei onnistu. Varmista kirjautumistietosi."
+msgstr "Kirjautuminen ei onnistunut. Varmista kirjautumistietosi."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
 #, c-format
@@ -162,10 +156,8 @@ msgid "Setting up the e-mail account…"
 msgstr "Määritetään sähköpostitiliä…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Unable to add mail account"
 msgid "Could not add the e-mail account"
-msgstr "Sähköpostitilin lisääminen ei onnistu"
+msgstr "Sähköpostitilin lisääminen ei onnistunut"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
@@ -215,10 +207,6 @@ msgid "Remove “%s” from this device"
 msgstr "Poista “%s” tältä laitteelta"
 
 #: src/MainView.vala:153
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
