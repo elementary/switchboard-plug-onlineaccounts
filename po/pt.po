@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-06-09 10:42+0000\n"
+"PO-Revision-Date: 2021-08-08 14:22+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pt/>\n"
@@ -50,7 +50,7 @@ msgstr "Nome de exibição de conta"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Escolha um nome como \"Trabalho\" ou \"Pessoal\" para a conta."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -67,23 +67,19 @@ msgstr "Guardar a configuração…"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "Tudo pronto"
 
 #: src/Dialogs/CaldavDialog.vala:156
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account added."
-msgstr "Conta de Email"
+msgstr "Conta CalDAV adicionada."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Fechar"
 
 #: src/Dialogs/CaldavDialog.vala:238
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
-msgstr "Erro ao guardar configuração"
+msgstr "Não foi possível guardar a configuração"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -98,10 +94,8 @@ msgid "Finding available calendars and tasks…"
 msgstr "Localizar calendários e tarefas disponíveis…"
 
 #: src/Dialogs/CaldavDialog.vala:406
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
-msgstr "Erro ao procurar calendários"
+msgstr "Não foi possível obter calendários"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
@@ -137,15 +131,13 @@ msgid "No authentication required"
 msgstr "Não é necessária autenticação"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-#, fuzzy
-#| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
-msgstr "Introduza as suas credenciais…"
+msgstr "Não foi possível iniciar sessão. Verifique as suas credenciais."
 
 #: src/Dialogs/Imap/ImapDialog.vala:444
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "A verificação IMAP falhou: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -161,21 +153,19 @@ msgstr "Seguinte"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "A configurar a conta de e-mail…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
 msgid "Could not add the e-mail account"
-msgstr ""
+msgstr "Não foi possível adicionar a conta de e-mail"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Sucesso"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account added."
-msgstr "Conta de Email"
+msgstr "Conta de e-mail adicionada."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -215,14 +205,10 @@ msgid "Remove “%s” from this device"
 msgstr "Remover \"%s\" deste dispositivo"
 
 #: src/MainView.vala:153
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
-"Esta conta será removida e deixará de aparecer nas aplicações deste "
+"Esta conta será removida e deixará de aparecer em qualquer aplicação deste "
 "dispositivo."
 
 #: src/MainView.vala:161
