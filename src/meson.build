@@ -17,6 +17,7 @@ shared_module(
     meson.project_name(),
     gresource,
     plug_files,
+    config_file,
     dependencies: [
         glib_dep,
         gobject_dep,

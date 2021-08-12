@@ -19,6 +19,15 @@ add_project_arguments(
     language:'c'
 )
 
+config_data = configuration_data()
+config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name() + '-plug')
+config_file = configure_file(
+    input: 'src/Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
+)
+
 ecal_vapi = meson.get_compiler('vala').find_library('libecal-2.0-fixes', dirs: meson.current_source_dir() / 'vapi')
 edataserver_dep = dependency('libedataserver-1.2')
 edataserverui_dep = dependency('libedataserverui-1.2')
