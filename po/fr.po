@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-07-30 20:57+0000\n"
+"PO-Revision-Date: 2021-08-12 10:19+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
@@ -145,7 +145,7 @@ msgstr "Nom complet"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
-msgstr "E-Mail"
+msgstr "Adresse e-mail"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
@@ -153,11 +153,11 @@ msgstr "Suivant"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
-msgstr "Configuration du compte d'e-mail…"
+msgstr "Configuration du compte de messagerie…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
 msgid "Could not add the e-mail account"
-msgstr "Échec de l'ajout du compte d'e-mail"
+msgstr "Échec de l'ajout du compte de messagerie"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
@@ -165,7 +165,7 @@ msgstr "Succès"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "E-mail account added."
-msgstr "Compte e-mail ajouté."
+msgstr "Compte de messagerie ajouté."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -183,7 +183,7 @@ msgstr "CalDAV"
 
 #: src/MainView.vala:49
 msgid "Calendars and Tasks"
-msgstr "Calendriers et tâches"
+msgstr "Calendrier et Tâches"
 
 #: src/MainView.vala:54 src/Plug.vala:60
 msgid "IMAP"
