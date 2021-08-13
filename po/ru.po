@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
 "PO-Revision-Date: 2021-08-13 18:58+0000\n"
-"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
+"Last-Translator: Nikita Kharchenko <m4r5hdev@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
 "Language: ru\n"
@@ -68,7 +68,7 @@ msgstr "Сохранение конфигурации…"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "Готово"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "CalDAV account added."
@@ -175,10 +175,8 @@ msgid "Success"
 msgstr "Успешно"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account added."
-msgstr "Учётная запись почты"
+msgstr "Учётная запись почты добавлена"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
