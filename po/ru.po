@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-08-13 18:58+0000\n"
-"Last-Translator: Nikita Kharchenko <m4r5hdev@gmail.com>\n"
+"PO-Revision-Date: 2021-08-14 01:28+0000\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
 "Language: ru\n"
@@ -51,7 +51,7 @@ msgstr "Отображаемое имя учётной записи"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Выберите название для учетной записи, например «Рабочая» или «Личная»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
@@ -79,10 +79,8 @@ msgid "Close"
 msgstr "Закрыть"
 
 #: src/Dialogs/CaldavDialog.vala:238
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
-msgstr "Ошибка сохранения конфигурации"
+msgstr "Не удалось сохранить конфигурацию"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
 msgid "Calendars"
@@ -97,10 +95,8 @@ msgid "Finding available calendars and tasks…"
 msgstr "Поиск доступных календарей и задач…"
 
 #: src/Dialogs/CaldavDialog.vala:406
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
-msgstr "Ошибка при поиске календарей"
+msgstr "Не удалось получить календари"
 
 #: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
 msgid "Username:"
@@ -136,8 +132,6 @@ msgid "No authentication required"
 msgstr "Авторизация не требуется"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-#, fuzzy
-#| msgid "Can't login. Please verify your credentials."
 msgid "Could not log in. Please verify your credentials."
 msgstr "Не удалось войти. Пожалуйста, проверьте свои учетные данные."
 
@@ -159,16 +153,12 @@ msgid "Next"
 msgstr "Далее"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-#, fuzzy
-#| msgid "Configuring the mail account…"
 msgid "Setting up the e-mail account…"
-msgstr "Конфигурация учетной записи почты…"
+msgstr "Настройка учетной записи эл. почты…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Unable to add mail account"
 msgid "Could not add the e-mail account"
-msgstr "Не удалось добавить учетную запись почты"
+msgstr "Не удалось добавить учетную запись эл. почты"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
@@ -176,7 +166,7 @@ msgstr "Успешно"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "E-mail account added."
-msgstr "Учётная запись почты добавлена"
+msgstr "Учётная запись эл. почты добавлена."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -217,15 +207,11 @@ msgid "Remove “%s” from this device"
 msgstr "Удалить «%s» с этого устройства"
 
 #: src/MainView.vala:153
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
-"Эта учетная запись будет удалена и больше не будет отображаться в "
-"приложениях на этом устройстве."
+"Эта учетная запись будет удалена и больше не появится ни в одном приложении "
+"на этом устройстве."
 
 #: src/MainView.vala:161
 msgid "Remove Account"
