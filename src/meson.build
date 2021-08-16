@@ -19,6 +19,7 @@ shared_module(
     plug_files,
     config_file,
     dependencies: [
+        camel_dep,
         glib_dep,
         gobject_dep,
         granite_dep,
