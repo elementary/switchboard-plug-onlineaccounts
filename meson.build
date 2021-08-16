@@ -28,7 +28,10 @@ config_file = configure_file(
     configuration: config_data
 )
 
+add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
+
 ecal_vapi = meson.get_compiler('vala').find_library('libecal-2.0-fixes', dirs: meson.current_source_dir() / 'vapi')
+camel_dep = dependency('camel-1.2', version: '>= 3.28')
 edataserver_dep = dependency('libedataserver-1.2')
 edataserverui_dep = dependency('libedataserverui-1.2')
 glib_dep = dependency('glib-2.0')
