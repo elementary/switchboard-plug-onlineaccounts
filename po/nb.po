@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-28 16:13+0000\n"
-"PO-Revision-Date: 2021-08-15 14:16+0000\n"
+"PO-Revision-Date: 2021-08-21 13:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/nb/>\n"
@@ -70,18 +70,14 @@ msgid "All done"
 msgstr "Ferdig"
 
 #: src/Dialogs/CaldavDialog.vala:156
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account added."
-msgstr "E-postkonto"
+msgstr "CalDAV-konto lagt til."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
 msgstr "Lukk"
 
 #: src/Dialogs/CaldavDialog.vala:238
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
 msgstr "Kunne ikke lagre oppsett"
 
@@ -98,8 +94,6 @@ msgid "Finding available calendars and tasks…"
 msgstr "Finner tilgjengelige kalendere og gjøremål …"
 
 #: src/Dialogs/CaldavDialog.vala:406
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
 msgstr "Klarte ikke å hente kalendere"
 
@@ -137,8 +131,6 @@ msgid "No authentication required"
 msgstr "Ingen identitetsbekreftelse kreves"
 
 #: src/Dialogs/Imap/ImapDialog.vala:434
-#, fuzzy
-#| msgid "Can't login. Please verify your credentials."
 msgid "Could not log in. Please verify your credentials."
 msgstr "Kan ikke logge inn. Bekreft innloggingsdetaljene dine."
 
@@ -160,14 +152,10 @@ msgid "Next"
 msgstr "Neste"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
-#, fuzzy
-#| msgid "Configuring the mail account…"
 msgid "Setting up the e-mail account…"
 msgstr "Setter opp e-postkontoen…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Unable to add mail account"
 msgid "Could not add the e-mail account"
 msgstr "Kunne ikke legge til e-postkonto"
 
@@ -176,10 +164,8 @@ msgid "Success"
 msgstr "Vellykket"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account added."
-msgstr "E-postkonto"
+msgstr "E-postkonto lagt til."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -222,10 +208,6 @@ msgid "Remove “%s” from this device"
 msgstr "Fjern «%s» fra denne enheten"
 
 #: src/MainView.vala:153
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
