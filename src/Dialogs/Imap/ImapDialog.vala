@@ -27,7 +27,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Gtk.CheckButton use_imap_credentials;
     private Gtk.CheckButton smtp_no_credentials;
     private Gtk.ComboBoxText imap_encryption_combobox;
+    private Gtk.ComboBoxText imap_auth_combobox;
     private Gtk.ComboBoxText smtp_encryption_combobox;
+    private Gtk.ComboBoxText smtp_auth_combobox;
     private Gtk.Entry smtp_password_entry;
     private Gtk.Entry smtp_username_entry;
     private Gtk.SpinButton imap_port_spin;
@@ -82,6 +84,16 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         imap_encryption_combobox.append ("starttls-on-standard-port", "STARTTLS");
         imap_encryption_combobox.active = 1;
 
+        var imap_auth_label = new Gtk.Label (_("Authentication:")) {
+            halign = Gtk.Align.END
+        };
+        imap_auth_combobox = new Gtk.ComboBoxText () {
+            hexpand = true
+        };
+        imap_auth_combobox.append ("PLAIN", "PLAIN");
+        imap_auth_combobox.append ("LOGIN", "LOGIN");
+        imap_auth_combobox.active = 0;
+
         var imap_server_grid = new Gtk.Grid () {
             column_spacing = 6,
             row_spacing = 6
@@ -91,10 +103,13 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         imap_server_grid.attach (imap_username_entry, 1, 1);
         imap_server_grid.attach (imap_url_label, 0, 3);
         imap_server_grid.attach (imap_server_entry, 1, 3);
-        imap_server_grid.attach (imap_encryption_label, 0, 4);
-        imap_server_grid.attach (imap_encryption_combobox, 1, 4);
-        imap_server_grid.attach (imap_port_label, 0, 5);
-        imap_server_grid.attach (imap_port_spin, 1, 5);
+        imap_server_grid.attach (imap_port_label, 0, 4);
+        imap_server_grid.attach (imap_port_spin, 1, 4);
+        imap_server_grid.attach (imap_encryption_label, 0, 5);
+        imap_server_grid.attach (imap_encryption_combobox, 1, 5);
+        imap_server_grid.attach (imap_auth_label, 0, 6);
+        imap_server_grid.attach (imap_auth_combobox, 1, 6);
+
 
         use_imap_credentials = new Gtk.CheckButton.with_label (_("Use IMAP Credentials")) {
             active = true
@@ -161,6 +176,17 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_encryption_combobox.append ("starttls-on-standard-port", "STARTTLS");
         smtp_encryption_combobox.active = 2;
 
+        var smtp_auth_label = new Gtk.Label (_("Authentication:")) {
+            xalign = 1
+        };
+
+        smtp_auth_combobox = new Gtk.ComboBoxText () {
+            hexpand = true
+        };
+        smtp_auth_combobox.append ("PLAIN", "PLAIN");
+        smtp_auth_combobox.append ("LOGIN", "LOGIN");
+        smtp_auth_combobox.active = 1;
+
         var smtp_server_grid = new Gtk.Grid () {
             column_spacing = 6,
             row_spacing = 6
@@ -171,10 +197,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_server_grid.attach (smtp_revealer, 0, 3, 2);
         smtp_server_grid.attach (smtp_url_label, 0, 4);
         smtp_server_grid.attach (smtp_server_entry, 1, 4);
-        smtp_server_grid.attach (smtp_encryption_label, 0, 5);
-        smtp_server_grid.attach (smtp_encryption_combobox, 1, 5);
-        smtp_server_grid.attach (smtp_port_label, 0, 6);
-        smtp_server_grid.attach (smtp_port_spin, 1, 6);
+        smtp_server_grid.attach (smtp_port_label, 0, 5);
+        smtp_server_grid.attach (smtp_port_spin, 1, 5);
+        smtp_server_grid.attach (smtp_encryption_label, 0, 6);
+        smtp_server_grid.attach (smtp_encryption_combobox, 1, 6);
+        smtp_server_grid.attach (smtp_auth_label, 0, 7);
+        smtp_server_grid.attach (smtp_auth_combobox, 1, 7);
 
         var smtp_sizegroup = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
         smtp_sizegroup.add_widget (smtp_username_label);
@@ -369,7 +397,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         account_auth_extension.host = imap_server_entry.text;
         account_auth_extension.port = (uint) imap_port_spin.value;
         account_auth_extension.user = imap_username_entry.text;
-        account_auth_extension.method = "PLAIN";
+        account_auth_extension.method = imap_auth_combobox.active_id;
 
         /* configure identity_source */
 
@@ -394,7 +422,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.host = smtp_server_entry.text;
         transport_auth_extension.port = (uint) smtp_port_spin.value;
         transport_auth_extension.user = smtp_username_entry.text;
-        transport_auth_extension.method = "LOGIN";
+        transport_auth_extension.method = smtp_auth_combobox.active_id;
 
         /* verify connection */
         unowned var session = CamelSession.get_default ();
