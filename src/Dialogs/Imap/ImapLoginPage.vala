@@ -22,10 +22,10 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
     public signal void cancel ();
     public signal void next ();
 
-    public string display_name { get; private set; }
-    public string email { get; private set; }
-    public string password { get; private set; }
-    public string real_name { get; private set; }
+    public string display_name { get; set; }
+    public string email { get; set; }
+    public string password { get; set; }
+    public string real_name { get; set; }
 
     private Granite.ValidatedEntry display_name_entry;
     private Granite.ValidatedEntry email_entry;
@@ -107,24 +107,28 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
         add (display_name_hint_label);
         add (action_area);
 
+        bind_property ("email", email_entry, "text", GLib.BindingFlags.DEFAULT);
         email_entry.changed.connect (() => {
             display_name_entry.text = email_entry.text;
             email = email_entry.text;
             set_button_sensitivity ();
         });
 
+        bind_property ("real_name", real_name_entry, "text", GLib.BindingFlags.DEFAULT);
         real_name_entry.changed.connect (() => {
             real_name_entry.is_valid = real_name_entry.text.length > 0;
             real_name = real_name_entry.text;
             set_button_sensitivity ();
         });
 
+        bind_property ("display_name", display_name_entry, "text", GLib.BindingFlags.DEFAULT);
         display_name_entry.changed.connect (() => {
             display_name_entry.is_valid = display_name_entry.text.length > 0;
             display_name = display_name_entry.text;
             set_button_sensitivity ();
         });
 
+        bind_property ("password", password_entry, "text", GLib.BindingFlags.DEFAULT);
         password_entry.changed.connect (() => {
             password_entry.is_valid = password_entry.text.length > 0;
             password = password_entry.text;

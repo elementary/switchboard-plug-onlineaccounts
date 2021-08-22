@@ -36,6 +36,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private ImapSavePage save_page;
     private uint cancel_timeout_id = 0;
 
+    private E.SourceRegistry? registry = null;
+    private E.Source? source = null;
+
     construct {
         login_page = new ImapLoginPage ();
         save_page = new ImapSavePage ();
@@ -201,7 +204,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         action_area.add (back_button);
         action_area.add (save_button);
 
-
         var main_grid = new Gtk.Grid () {
             margin = 12,
             orientation = Gtk.Orientation.VERTICAL,
@@ -334,26 +336,154 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         save_button.sensitive = imap_username_entry.is_valid && imap_server_entry.is_valid && smtp_server_entry.is_valid;
     }
 
+    public async void load_configuration (E.Source account_source, GLib.Cancellable? cancellable) throws Error {
+        if (!account_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+            throw new Camel.Error.ERROR_GENERIC (_("The data provided does not seem to reflect a valid mail account."));
+        }
+
+        registry = yield new E.SourceRegistry (cancellable);
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
+        this.source = account_source;
+        var credentials_provider = new E.SourceCredentialsProvider (registry);
+
+        E.NamedParameters account_credentials;
+        credentials_provider.lookup_sync (account_source, null, out account_credentials);
+        if (account_credentials != null) {
+            login_page.password = account_credentials.get("password");
+        }
+
+        /* load configuration from identity_source */
+        unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+
+        if (account_extension.identity_uid != "") {
+            var identity_source = registry.ref_source (account_extension.identity_uid);
+
+            if (identity_source != null) {
+
+                if (identity_source.has_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY)) {
+                    unowned var identity_extension = (E.SourceMailIdentity) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_IDENTITY);
+                    login_page.email = identity_extension.address;
+                    login_page.real_name = identity_extension.name;
+                }
+
+                if (identity_source.has_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION)) {
+
+                    /* load configuration from transport_source */
+
+                    unowned var submission_extension = (E.SourceMailSubmission) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
+
+                    if (submission_extension.transport_uid != null) {
+                        var transport_source = registry.ref_source (submission_extension.transport_uid);
+
+                        if (transport_source != null) {
+                            if (transport_source.has_extension (E.SOURCE_EXTENSION_SECURITY)) {
+                                unowned var transport_security_extension = (E.SourceSecurity) transport_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
+                                smtp_encryption_combobox.set_active_id (transport_security_extension.method);
+                            }
+
+                            if (transport_source.has_extension (E.SOURCE_EXTENSION_AUTHENTICATION)) {
+                                unowned var transport_auth_extension = (E.SourceAuthentication) transport_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+
+                                smtp_username_entry.text = transport_auth_extension.user;
+                                smtp_server_entry.text = transport_auth_extension.host;
+                                smtp_port_spin.value = transport_auth_extension.port;
+                            }
+
+                            E.NamedParameters transport_credentials;
+                            credentials_provider.lookup_sync (transport_source, null, out transport_credentials);
+
+                            if (transport_credentials == null) {
+                                smtp_no_credentials.active = true;
+
+                            } else if (account_credentials != null && account_credentials.get("password") == transport_credentials.get("password")) {
+                                use_imap_credentials.active = true;
+
+                            } else {
+                                use_imap_credentials.active = false;
+                                smtp_password_entry.text = transport_credentials.get("password");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* load configuration from account_source */
+
+        if (account_source.has_extension (E.SOURCE_EXTENSION_SECURITY)) {
+            unowned var account_security_extension = (E.SourceSecurity) account_source.get_extension (E.SOURCE_EXTENSION_SECURITY);
+            imap_encryption_combobox.set_active_id (account_security_extension.method);
+        }
+
+        if (account_source.has_extension (E.SOURCE_EXTENSION_AUTHENTICATION)) {
+            unowned var account_auth_extension = (E.SourceAuthentication) account_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
+            imap_username_entry.text = account_auth_extension.user;
+            imap_server_entry.text = account_auth_extension.host;
+            imap_port_spin.value = account_auth_extension.port;
+        }
+
+        if (account_source.display_name != "") {
+            /* set the display name as last value to avoid having
+            it overwritten by event handlers in login_page */
+            login_page.display_name = account_source.display_name;
+        }
+    }
+
     private async void save_configuration () throws Error {
-        var registry = yield new E.SourceRegistry (cancellable);
+        if (registry == null) {
+            registry = yield new E.SourceRegistry (cancellable);
+        }
+
         if (cancellable.is_cancelled ()) {
             return;
         }
 
-        var account_source = new E.Source (null, null) {
-            parent = "",
-            display_name = login_page.display_name
-        };
+        E.Source? account_source = null;
+        E.Source? identity_source = null;
+        E.Source? transport_source = null;
 
-        var identity_source = new E.Source (null, null) {
-            parent = account_source.uid,
-            display_name = login_page.display_name
-        };
+        if (source != null) {
+            account_source = source;
 
-        var transport_source = new E.Source (null, null) {
-            parent = account_source.uid,
-            display_name = login_page.display_name
-        };
+            if (!account_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+                unowned var account_extension = (E.SourceMailAccount) account_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+
+                if (account_extension.identity_uid != "") {
+                    identity_source = registry.ref_source (account_extension.identity_uid);
+
+                    if (identity_source != null && identity_source.has_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION)) {
+                        unowned var submission_extension = (E.SourceMailSubmission) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);
+
+                        if (submission_extension.transport_uid != "") {
+                            transport_source = registry.ref_source (submission_extension.transport_uid);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (account_source == null) {
+            account_source = new E.Source (null, null) {
+                parent = ""
+            };
+        }
+
+        if (identity_source == null) {
+            identity_source = new E.Source (null, null) {
+                parent = account_source.uid
+            };
+        }
+
+        if (transport_source == null) {
+            transport_source = new E.Source (null, null) {
+                parent = account_source.uid
+            };
+        }
+
+        account_source.display_name = identity_source.display_name = transport_source.display_name = login_page.display_name;
+
 
         /* configure account_source */
 
@@ -578,13 +708,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             return;
         }
 
-        /* let's save everything */
-
-        var sources = new GLib.List<E.Source> ();
-        sources.append (account_source);
-        sources.append (identity_source);
-        sources.append (transport_source);
-
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
         yield account_source.store_password (login_page.password, true, cancellable);
 
@@ -594,7 +717,10 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             yield transport_source.store_password (smtp_password_entry.text, true, cancellable);
         }
 
-        yield registry.create_sources (sources, cancellable);
+        /* let's save the sources */
+        yield registry.commit_source (account_source, cancellable);
+        yield registry.commit_source (identity_source, cancellable);
+        yield registry.commit_source (transport_source, cancellable);
     }
 
 

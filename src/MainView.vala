@@ -138,13 +138,28 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         };
         remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
+        Gtk.Button? edit_button = null;
+        if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+            edit_button = new Gtk.Button.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU) {
+                tooltip_text = _("Edit this account")
+            };
+            edit_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        }
+
         var grid = new Gtk.Grid () {
             column_spacing = 6,
             margin = 6
         };
+
         grid.attach (image, 0, 0);
         grid.attach (label, 1, 0);
-        grid.attach (remove_button, 2, 0);
+        if (edit_button != null) {
+            grid.attach (edit_button, 2, 0);
+            grid.attach (remove_button, 3, 0);
+
+        } else {
+            grid.attach (remove_button, 2, 0);
+        }
         grid.show_all ();
 
         remove_button.clicked.connect (() => {
@@ -167,6 +182,37 @@ public class OnlineAccounts.MainView : Gtk.Grid {
 
             message_dialog.destroy ();
         });
+
+        if (edit_button != null) {
+            edit_button.clicked.connect (() => {
+                if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+                    var imap_dialog = new ImapDialog() {
+                        transient_for = (Gtk.Window) get_toplevel ()
+                    };
+
+                    imap_dialog.load_configuration.begin (e_source, null, (obj, res) => {
+                        try {
+                            imap_dialog.load_configuration.end (res);
+                            imap_dialog.show_all ();
+
+                        } catch (Error e) {
+                            var error_dialog = new Granite.MessageDialog (
+                                _("Edit account failed"),
+                                _("There was an unexpected error while reading the configuration of '%s'.").printf (e_source.display_name),
+                                new ThemedIcon ("onlineaccounts-mail"),
+                                Gtk.ButtonsType.CLOSE
+                            ) {
+                                badge_icon = new ThemedIcon ("dialog-error"),
+                                transient_for = (Gtk.Window) get_toplevel ()
+                            };
+                            error_dialog.show_error_details (e.message);
+                            error_dialog.run ();
+                            error_dialog.destroy ();
+                        }
+                    });
+                }
+            });
+        }
 
         return grid;
     }
