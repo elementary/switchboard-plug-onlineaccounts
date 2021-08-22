@@ -186,7 +186,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         if (edit_button != null) {
             edit_button.clicked.connect (() => {
                 if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-                    var imap_dialog = new ImapDialog() {
+                    var imap_dialog = new ImapDialog () {
                         transient_for = (Gtk.Window) get_toplevel ()
                     };
 
