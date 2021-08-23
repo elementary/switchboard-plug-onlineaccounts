@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Online Accounts Daemon
+Exec=@LIBEXECDIR@/online-accounts-daemon
+X-GNOME-AutoRestart=true
+OnlyShowIn=Pantheon

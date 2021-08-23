@@ -33,3 +33,14 @@ shared_module(
     install: true,
     install_dir : join_paths(switchboard_plugsdir, 'network')
 )
+
+executable(
+    meson.project_name() + '-daemon',
+    'Daemon.vala',
+    dependencies: [
+        gio_dep,
+        edataserver_dep
+    ],
+    install_dir: libexecdir,
+    install: true
+)
