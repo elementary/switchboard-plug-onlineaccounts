@@ -351,7 +351,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         E.NamedParameters account_credentials;
         credentials_provider.lookup_sync (account_source, null, out account_credentials);
         if (account_credentials != null) {
-            login_page.password = account_credentials.get ("password");
+            login_page.password = account_credentials.get (E.SOURCE_CREDENTIAL_PASSWORD);
         }
 
         /* load configuration from identity_source */
@@ -397,12 +397,12 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                             if (transport_credentials == null) {
                                 smtp_no_credentials.active = true;
 
-                            } else if (account_credentials != null && account_credentials.get ("password") == transport_credentials.get ("password")) {
+                            } else if (account_credentials != null && account_credentials.get (E.SOURCE_CREDENTIAL_PASSWORD) == transport_credentials.get (E.SOURCE_CREDENTIAL_PASSWORD)) {
                                 use_imap_credentials.active = true;
 
                             } else {
                                 use_imap_credentials.active = false;
-                                smtp_password_entry.text = transport_credentials.get ("password");
+                                smtp_password_entry.text = transport_credentials.get (E.SOURCE_CREDENTIAL_PASSWORD);
                             }
                         }
                     }
