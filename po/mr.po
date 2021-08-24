@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
 "PO-Revision-Date: 2020-03-17 18:09+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -37,7 +37,7 @@ msgstr "पासवर्ड"
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "लॉग इन"
 
@@ -50,7 +50,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "मागे"
 
@@ -96,50 +96,54 @@ msgstr ""
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 #, fuzzy
 #| msgid "Password"
 msgid "Password:"
 msgstr "पासवर्ड"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 #, fuzzy
 #| msgid "Server"
 msgid "Server URL:"
 msgstr "सर्व्हर"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
 msgstr "कूटबद्धीकरण :"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "काहीही नाही"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
 msgstr "IMAP क्रेडेन्शियल्स वापरा"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
 msgstr "प्रमाणीकरण आवश्यक नाही"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -161,7 +165,7 @@ msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
+msgid "Could not save the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
@@ -171,7 +175,7 @@ msgstr ""
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 #, fuzzy
 #| msgid "Mail Account"
-msgid "E-mail account added."
+msgid "E-mail account saved."
 msgstr "मेल खाते"
 
 #: src/MainView.vala:30
@@ -208,21 +212,38 @@ msgstr "खाते जोडा…"
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+#, fuzzy
+#| msgid "Other Account"
+msgid "Edit this account"
+msgstr "इतर खाते"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 
-#: src/MainView.vala:161
+#: src/MainView.vala:176
 #, fuzzy
 #| msgid "New Account"
 msgid "Remove Account"
 msgstr "नवीन खाते"
+
+#: src/MainView.vala:200
+#, fuzzy
+#| msgid "Mail Account"
+msgid "Edit account failed"
+msgstr "मेल खाते"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr ""
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
@@ -327,9 +348,6 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 
 #~ msgid "Don't have an account? Sign Up"
 #~ msgstr "खाते नाही? साइन अप करा"
-
-#~ msgid "Other Account"
-#~ msgstr "इतर खाते"
 
 #~ msgid "Loading…"
 #~ msgstr "लोड करीत आहे …"
