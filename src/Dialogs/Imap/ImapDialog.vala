@@ -338,7 +338,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
     public async void load_configuration (E.Source account_source, GLib.Cancellable? cancellable) throws Error {
         if (!account_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-            throw new Camel.Error.ERROR_GENERIC (_("The data provided does not seem to reflect a valid mail account."));
+            throw new Camel.Error.ERROR_GENERIC (_("Something is wrong with the provided e-mail account data."));
         }
 
         registry = yield new E.SourceRegistry (cancellable);
@@ -527,20 +527,20 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         /* verify connection */
         unowned var session = CamelSession.get_default ();
 
-        debug ("Add imap service for mail account extension");
+        debug ("Add IMAP service for e-mail account extension");
         var imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
         imap_service.set_password (login_page.password);
         account_source.camel_configure_service (imap_service);
 
         if (imap_service is Camel.NetworkService) {
-            debug ("Test if we can reach the imap service…");
+            debug ("Test if the IMAP service can be reached…");
             yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
         }
 
         string[] imap_auth_methods = { "LOGIN", "PLAIN" };
         GLib.Error? imap_auth_error = null;
         foreach (var imap_auth_method in imap_auth_methods) {
-            debug ("Testing %s authentication for imap service…", imap_auth_method);
+            debug ("Testing %s authentication for IMAP service…", imap_auth_method);
 
             account_auth_extension.method = imap_auth_method;
             account_source.camel_configure_service (imap_service);
@@ -551,18 +551,18 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
             try {
                 if (imap_service is Camel.OfflineStore) {
-                    debug ("Setting the imap service online…");
+                    debug ("Setting the IMAP service online…");
                     yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, imap_auth_cancellable);
                 } else {
-                    debug ("Connecting to the imap service…");
+                    debug ("Connecting to the IMAP service…");
                     yield imap_service.connect (GLib.Priority.DEFAULT, imap_auth_cancellable);
                 }
 
-                debug ("Successfully connected to the imap service using %s authentication.", imap_auth_method);
+                debug ("Successfully connected to the IMAP service using %s authentication.", imap_auth_method);
                 break;
 
             } catch (GLib.Error e) {
-                debug ("Error using %s authentication for imap service: %s", imap_auth_method, e.message);
+                debug ("Error using %s authentication for IMAP service: %s", imap_auth_method, e.message);
 
                 if (e is GLib.IOError.CANCELLED) {
                     imap_auth_error = new GLib.Error (
@@ -669,7 +669,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             return;
         }
 
-        debug ("Add smtp service");
+        debug ("Add SMTP service");
         var transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
         transport_source.camel_configure_service (transport_service);
 
@@ -682,14 +682,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         }
 
         if (transport_service is Camel.NetworkService) {
-            debug ("Test if the smtp service can be reached…");
+            debug ("Test if the SMTP service can be reached…");
             yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
         }
 
         string[] smtp_auth_methods = { "LOGIN", "PLAIN" };
         GLib.Error? smtp_auth_error = null;
         foreach (var smtp_auth_method in smtp_auth_methods) {
-            debug ("Testing %s authentication for smtp service…", smtp_auth_method);
+            debug ("Testing %s authentication for SMTP service…", smtp_auth_method);
 
             transport_auth_extension.method = smtp_auth_method;
             transport_source.camel_configure_service (transport_service);
@@ -700,14 +700,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             set_cancel_timeout (smtp_auth_cancellable);
 
             try {
-                debug ("Connecting to the smtp service…");
+                debug ("Connecting to the SMTP service…");
                 yield transport_service.connect (GLib.Priority.DEFAULT, smtp_auth_cancellable);
 
-                debug ("Successfully connected to the smtp service using %s authentication.", smtp_auth_method);
+                debug ("Successfully connected to the SMTP service using %s authentication.", smtp_auth_method);
                 break;
 
             } catch (GLib.Error e) {
-                debug ("Error using %s authentication for smtp service: %s", smtp_auth_method, e.message);
+                debug ("Error using %s authentication for SMTP service: %s", smtp_auth_method, e.message);
 
                 if (e is GLib.IOError.CANCELLED) {
                     smtp_auth_error = new GLib.Error (
