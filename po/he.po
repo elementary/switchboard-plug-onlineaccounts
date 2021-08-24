@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-07-28 19:42+0000\n"
+"PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -127,7 +127,7 @@ msgstr "לא נדרש אימות"
 
 #: src/Dialogs/Imap/ImapDialog.vala:341
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "הנתונים שסופקו לא משקפים כתובת דוא״ל תקנית."
 
 #: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
@@ -155,20 +155,16 @@ msgid "Setting up the e-mail account…"
 msgstr "חשבון הדוא״ל מוגדר…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Could not add the e-mail account"
 msgid "Could not save the e-mail account"
-msgstr "לא ניתן להוסיף את חשבון הדוא״ל"
+msgstr "לא ניתן לשמור את חשבון הדוא״ל"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "הצלחה"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "E-mail account saved."
-msgstr "חשבון הדוא״ל נוסף."
+msgstr "חשבון הדוא״ל נשמר."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -203,10 +199,8 @@ msgid "Remove this account"
 msgstr "להסיר את החשבון הזה"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Remove this account"
 msgid "Edit this account"
-msgstr "להסיר את החשבון הזה"
+msgstr "עריכת החשבון הזה"
 
 #: src/MainView.vala:167
 #, c-format
@@ -223,15 +217,13 @@ msgid "Remove Account"
 msgstr "הסרת חשבון"
 
 #: src/MainView.vala:200
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "Edit account failed"
-msgstr "חשבון הדוא״ל נוסף."
+msgstr "עריכת החשבון נכשלה"
 
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "אירעה שגיאה בלתי צפויה בעת קריאת ההגדרות מתוך ‚%s’."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
