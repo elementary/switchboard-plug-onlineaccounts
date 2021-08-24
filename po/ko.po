@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "일정표"
 
@@ -138,13 +138,13 @@ msgstr "IMAP 인증 사용"
 msgid "No authentication required"
 msgstr "인증 없이 실행"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "로그인 정보를 입력하세요…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -187,7 +187,7 @@ msgstr "온라인 계정 연결"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 연결하세요."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr ""
 
@@ -197,11 +197,11 @@ msgstr ""
 msgid "Calendars and Tasks"
 msgstr "일정표"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr ""
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr ""
 
@@ -231,11 +231,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "새 계정"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "온라인 계정"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "온라인 계정과 계정에 연결된 애플리케이션들을 관리합니다"
 

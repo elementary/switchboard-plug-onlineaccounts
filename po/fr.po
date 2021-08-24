@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-08-12 10:19+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -81,7 +81,7 @@ msgstr "Fermer"
 msgid "Could not save configuration"
 msgstr "Impossible d'enregistrer la configuration"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendriers"
 
@@ -130,11 +130,11 @@ msgstr "Utiliser les identifiants IMAP"
 msgid "No authentication required"
 msgstr "Aucune authentification nécessaire"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 msgid "Could not log in. Please verify your credentials."
 msgstr "Connexion impossible. Veuillez vérifier vos identifiants."
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Échec de la vérification des paramètres IMAP : %s"
@@ -177,7 +177,7 @@ msgstr ""
 "Connectez vos comptes en-ligne en cliquant sur l'icône dans la barre "
 "d'outils ci-dessous."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -185,11 +185,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Calendrier et Tâches"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr "Messagerie"
 
@@ -217,11 +217,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "Supprimer le compte"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "Comptes en ligne"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Gérez les comptes en ligne et les applications connectées"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2019-09-05 19:22+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
@@ -86,7 +86,7 @@ msgstr ""
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalendrar"
 
@@ -139,13 +139,13 @@ msgstr "Använd IMAP-inloggningsuppgifter"
 msgid "No authentication required"
 msgstr "Ingen autentisering krävs"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Skriv in dina inloggningsuppgifter…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -188,7 +188,7 @@ msgstr "Anslut dina online-konton"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr ""
 
@@ -198,11 +198,11 @@ msgstr ""
 msgid "Calendars and Tasks"
 msgstr "Kalendrar"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr ""
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr ""
 
@@ -232,11 +232,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "Nytt konto"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "Online-konton"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Hantera online-konton och anslutna program"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-08-08 14:22+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -81,7 +81,7 @@ msgstr "Fechar"
 msgid "Could not save configuration"
 msgstr "Não foi possível guardar a configuração"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendários"
 
@@ -130,11 +130,11 @@ msgstr "Usar credenciais IMAP"
 msgid "No authentication required"
 msgstr "Não é necessária autenticação"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 msgid "Could not log in. Please verify your credentials."
 msgstr "Não foi possível iniciar sessão. Verifique as suas credenciais."
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "A verificação IMAP falhou: %s"
@@ -175,7 +175,7 @@ msgstr "Estabelecer ligação às suas contas online"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "Ligar contas online clicando no ícone da barra de ferramentas abaixo."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -183,11 +183,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Calendários e Tarefas"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr "Correio"
 
@@ -215,11 +215,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "Remover Conta"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "Contas Online"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Gerir contas online e aplicações associadas"
 

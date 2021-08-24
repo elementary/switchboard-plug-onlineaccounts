@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-07-28 19:42+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -76,7 +76,7 @@ msgstr "סגירה"
 msgid "Could not save configuration"
 msgstr "לא ניתן לשמור את ההגדרות"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "יומנים"
 
@@ -125,11 +125,11 @@ msgstr "שימוש בפרטי הגישה ל־IMAP"
 msgid "No authentication required"
 msgstr "לא נדרש אימות"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 msgid "Could not log in. Please verify your credentials."
 msgstr "לא ניתן להיכנס. נא לאמת את פרטי הגישה שלך."
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "האימות מול ה־IMAP נכשל: %s"
@@ -170,7 +170,7 @@ msgstr "התחברות לחשבונות המקוונים שלך"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "ניתן לחבר חשבונות מקוונים על ידי לחיצה על הסמל בסרגל הכלים שלמעלה."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -178,11 +178,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "לוחות שנה ומשימות"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr "דוא״ל"
 
@@ -208,11 +208,11 @@ msgstr "החשבון הזה יוסר ולא יופיע תחת יישומים כ�
 msgid "Remove Account"
 msgstr "הסרת חשבון"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "חשבונות מקוונים"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "ניהול חשבונות מקוונים ויישומים מקושרים"
 
