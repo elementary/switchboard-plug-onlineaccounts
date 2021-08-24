@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
 "PO-Revision-Date: 2021-07-24 15:22+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -28,31 +28,35 @@ msgid "Manage online accounts and connected applications"
 msgstr "ניהול חשבונות מקוונים ויישומים מקושרים"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Edit saved IMAP accounts"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:24
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr "פרטי הגישה מאומתים בעת שמירת חשבונות IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "אפשר להקים תיקיות ארכיון, טיוטות, נשלח ותבניות ב־IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr "החלונית הצפה „הוספת חשבון” נסגרת כשנבחר פריט"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Complete redesign"
 msgstr "עיצוב מחדש מאפס"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Fix blurry icons on HiDPI"
 msgstr "תיקון סמלים מטושטשים ברזולוציה גבוהה"
 
