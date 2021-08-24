@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-08-21 13:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -81,7 +81,7 @@ msgstr "Lukk"
 msgid "Could not save configuration"
 msgstr "Kunne ikke lagre oppsett"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalendere"
 
@@ -130,11 +130,11 @@ msgstr "Bruk IMAP-identitetsdetaljer"
 msgid "No authentication required"
 msgstr "Ingen identitetsbekreftelse kreves"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 msgid "Could not log in. Please verify your credentials."
 msgstr "Kan ikke logge inn. Bekreft innloggingsdetaljene dine."
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP-bekreftelse mislyktes: %s"
@@ -177,7 +177,7 @@ msgstr ""
 "Koble til nettbaserte kontoer ved å klikke på ikonet i verktøyslinjen "
 "nedenfor."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -185,11 +185,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Kalendere og gjøremål"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 #, fuzzy
 msgid "Mail"
 msgstr "E-post"
@@ -216,11 +216,11 @@ msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
 msgid "Remove Account"
 msgstr "Fjern konto"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "Nettkontoer"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Håndter nettkontoer og tilknyttede programmer"
 

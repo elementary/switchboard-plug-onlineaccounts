@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2020-05-11 16:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,28 +28,33 @@ msgid "Manage online accounts and connected applications"
 msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Verify login credentails when saving IMAP accounts"
+msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14
-msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Close \"Add Account\" popover when an item is selected"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
+#: data/onlineaccounts.appdata.xml.in:21
+msgid "Verify login credentails when saving IMAP accounts"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:22
+msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+msgstr ""
+
 #: data/onlineaccounts.appdata.xml.in:23
+msgid "Close \"Add Account\" popover when an item is selected"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:31
 #, fuzzy
 #| msgid "Major redesign"
 msgid "Complete redesign"
 msgstr "Rediseño significativo"
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Fix blurry icons on HiDPI"
 msgstr ""
 "Se corrigieron los iconos borrosos en pantallas con alta densidad de píxeles"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-07-28 21:38+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -81,7 +81,7 @@ msgstr "Close"
 msgid "Could not save configuration"
 msgstr "Could not save configuration"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendars"
 
@@ -130,11 +130,11 @@ msgstr "Use IMAP Credentials"
 msgid "No authentication required"
 msgstr "No authentication required"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 msgid "Could not log in. Please verify your credentials."
 msgstr "Could not log in. Please verify your credentials."
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP verification failed: %s"
@@ -175,7 +175,7 @@ msgstr "Connect Your Online Accounts"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "Connect online accounts by clicking the icon in the toolbar below."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -183,11 +183,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Calendars and Tasks"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr "Mail"
 
@@ -214,11 +214,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "Remove Account"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "Online Accounts"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Manage online accounts and connected applications"
 

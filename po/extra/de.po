@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -28,26 +28,31 @@ msgid "Manage online accounts and connected applications"
 msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Automatically detect authentication method for IMAP"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:33
+msgid "Updated translations"
+msgstr "Aktualisierte Übersetzungen"
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr "Anmeldedaten vor dem Speichern des IMAP-Kontos überprüfen"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "IMAP-Ordner einrichten: Archiv, Entwürfe, Gesendet und Vorlagen"
 
-#: data/onlineaccounts.appdata.xml.in:15
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Einblenddialog »Konto hinzufügen« schließen, wenn ein Eintrag ausgewählt wird"
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
-msgid "Updated translations"
-msgstr "Aktualisierte Übersetzungen"
-
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Complete redesign"
 msgstr "Komplettes Redesign"
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Fix blurry icons on HiDPI"
 msgstr "Behebt ein Problem mit unscharfen Icons bei HiDPI Bildschirmen"

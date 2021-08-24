@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-07-29 09:12+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -81,7 +81,7 @@ msgstr "Tanca"
 msgid "Could not save configuration"
 msgstr "No s'ha pogut desar la configuració."
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendaris"
 
@@ -130,11 +130,11 @@ msgstr "Usa credencials d'IMAP"
 msgid "No authentication required"
 msgstr "No cal autenticació"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 msgid "Could not log in. Please verify your credentials."
 msgstr "No s'ha pogut iniciar la sessió. Verifiqueu les credencials."
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Ha fallat la verificació d'IMAP: %s"
@@ -177,7 +177,7 @@ msgstr ""
 "Connecteu-vos a comptes en línia clicant a la icona de la barra d'eines de "
 "baix."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -185,11 +185,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Calendaris i tasques"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr "Correu"
 
@@ -217,11 +217,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "Suprimeix el compte"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "Comptes en línia"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Gestioneu els comptes en línia i les aplicacions connectades."
 

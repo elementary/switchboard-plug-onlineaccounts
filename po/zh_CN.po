@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -85,7 +85,7 @@ msgstr "关闭"
 msgid "Could not save configuration"
 msgstr "保存配置出错"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "日历"
 
@@ -136,13 +136,13 @@ msgstr "使用 IMAP 证书"
 msgid "No authentication required"
 msgstr "无须身份验证"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "请输入您的认证信息…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -185,7 +185,7 @@ msgstr "连接您的网络账户"
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "点击下方工具栏中的添加账户按钮连接网络账户。"
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -193,11 +193,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "日历和任务"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr "邮件"
 
@@ -227,11 +227,11 @@ msgstr "此账户将会被删除，且不会再出现在设备上的其他应用
 msgid "Remove Account"
 msgstr "移除帐户"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "网络账户"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "管理网络账户和已连接的应用"
 

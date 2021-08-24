@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2020-03-17 18:09+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:59
+#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
 msgstr "कॅलेंडर"
 
@@ -133,13 +133,13 @@ msgstr "IMAP क्रेडेन्शियल्स वापरा"
 msgid "No authentication required"
 msgstr "प्रमाणीकरण आवश्यक नाही"
 
-#: src/Dialogs/Imap/ImapDialog.vala:434
+#: src/Dialogs/Imap/ImapDialog.vala:441
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
 
-#: src/Dialogs/Imap/ImapDialog.vala:444
+#: src/Dialogs/Imap/ImapDialog.vala:455
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -182,7 +182,7 @@ msgstr "आपले ऑनलाइन खाते कनेक्ट कर�
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr "खालील टूलबारमधील चिन्हावर क्लिक करून ऑनलाइन खाती कनेक्ट करा."
 
-#: src/MainView.vala:48 src/Plug.vala:58
+#: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
 msgstr ""
 
@@ -192,11 +192,11 @@ msgstr ""
 msgid "Calendars and Tasks"
 msgstr "कॅलेंडर"
 
-#: src/MainView.vala:54 src/Plug.vala:60
+#: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
 msgstr ""
 
-#: src/MainView.vala:55 src/Plug.vala:61
+#: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
 msgstr ""
 
@@ -224,11 +224,11 @@ msgstr ""
 msgid "Remove Account"
 msgstr "नवीन खाते"
 
-#: src/Plug.vala:27
+#: src/Plug.vala:30
 msgid "Online Accounts"
 msgstr "ऑनलाइन खाती"
 
-#: src/Plug.vala:28
+#: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "ऑनलाइन खाती आणि कनेक्ट केलेले अप्लिकेशन्स व्यवस्थापित करा"
 
