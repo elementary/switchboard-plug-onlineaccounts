@@ -369,7 +369,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         account_auth_extension.host = imap_server_entry.text;
         account_auth_extension.port = (uint) imap_port_spin.value;
         account_auth_extension.user = imap_username_entry.text;
-        account_auth_extension.method = "PLAIN";
 
         /* configure identity_source */
 
@@ -394,54 +393,66 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         transport_auth_extension.host = smtp_server_entry.text;
         transport_auth_extension.port = (uint) smtp_port_spin.value;
         transport_auth_extension.user = smtp_username_entry.text;
-        transport_auth_extension.method = "LOGIN";
 
         /* verify connection */
         unowned var session = CamelSession.get_default ();
 
-        Camel.Service? imap_service = null;
-        try {
-            debug ("Add imap service for mail account extension");
-            imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
+        debug ("Add imap service for mail account extension");
+        var imap_service = session.add_service (account_source.uid, account_extension.backend_name, Camel.ProviderType.STORE);
+        imap_service.set_password (login_page.password);
+        account_source.camel_configure_service (imap_service);
 
-            imap_service.set_password (login_page.password);
+        if (imap_service is Camel.NetworkService) {
+            debug ("Test if we can reach the imap service…");
+            yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
+        }
+
+        string[] imap_auth_methods = { "LOGIN", "PLAIN" };
+        GLib.Error? imap_auth_error = null;
+        foreach (var imap_auth_method in imap_auth_methods) {
+            debug ("Testing %s authentication for imap service…", imap_auth_method);
+
+            account_auth_extension.method = imap_auth_method;
             account_source.camel_configure_service (imap_service);
 
-            if (imap_service is Camel.NetworkService) {
-                debug ("Test if we can reach the imap service");
-                yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
-            }
-
-            set_cancel_timeout (cancellable);
+            imap_auth_error = null;
+            var imap_auth_cancellable = new GLib.Cancellable ();
+            set_cancel_timeout (imap_auth_cancellable);
 
             try {
                 if (imap_service is Camel.OfflineStore) {
-                    debug ("Set the imap service online");
-                    yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, cancellable);
+                    debug ("Setting the imap service online…");
+                    yield ((Camel.OfflineStore) imap_service).set_online (true, GLib.Priority.DEFAULT, imap_auth_cancellable);
                 } else {
-                    debug ("Connect to the imap service");
-                    yield imap_service.connect (GLib.Priority.DEFAULT, cancellable);
+                    debug ("Connecting to the imap service…");
+                    yield imap_service.connect (GLib.Priority.DEFAULT, imap_auth_cancellable);
                 }
 
-            } catch (GLib.IOError e) {
-                if (!(e is GLib.IOError.CANCELLED)) {
-                    throw e;
-                }
+                debug ("Successfully connected to the imap service using %s authentication.", imap_auth_method);
+                break;
 
-                throw new GLib.Error (
-                    Camel.Service.error_quark (),
-                    Camel.ServiceError.CANT_AUTHENTICATE,
-                    _("Could not log in. Please verify your credentials.")
-                );
+            } catch (GLib.Error e) {
+                debug ("Error using %s authentication for imap service: %s", imap_auth_method, e.message);
+
+                if (e is GLib.IOError.CANCELLED) {
+                    imap_auth_error = new GLib.Error (
+                        Camel.Service.error_quark (),
+                        Camel.ServiceError.CANT_AUTHENTICATE,
+                        _("Could not log in. Please verify your credentials.")
+                    );
+
+                } else {
+                    imap_auth_error = e;
+                }
             }
-
             unset_cancel_timeout ();
+        }
 
-        } catch (Error e) {
+        if (imap_auth_error != null) {
             throw new GLib.Error (
                 Camel.Service.error_quark (),
                 Camel.ServiceError.CANT_AUTHENTICATE,
-                _("IMAP verification failed: %s").printf (e.message)
+                _("IMAP verification failed: %s").printf (imap_auth_error.message)
             );
         }
 
@@ -528,49 +539,65 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             return;
         }
 
-        Camel.Service? transport_service = null;
-        try {
-            debug ("Add transport service");
-            transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
+        debug ("Add smtp service");
+        var transport_service = session.add_service (transport_source.uid, transport_extension.backend_name, Camel.ProviderType.TRANSPORT);
+        transport_source.camel_configure_service (transport_service);
+
+        if (!smtp_no_credentials.active) {
+            if (use_imap_credentials.active) {
+                transport_service.set_password (login_page.password);
+            } else {
+                transport_service.set_password (smtp_password_entry.text);
+            }
+        }
+
+        if (transport_service is Camel.NetworkService) {
+            debug ("Test if the smtp service can be reached…");
+            yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
+        }
+
+        string[] smtp_auth_methods = { "LOGIN", "PLAIN" };
+        GLib.Error? smtp_auth_error = null;
+        foreach (var smtp_auth_method in smtp_auth_methods) {
+            debug ("Testing %s authentication for smtp service…", smtp_auth_method);
+
+            transport_auth_extension.method = smtp_auth_method;
             transport_source.camel_configure_service (transport_service);
 
-            if (!smtp_no_credentials.active) {
-                if (use_imap_credentials.active) {
-                    transport_service.set_password (login_page.password);
-                } else {
-                    transport_service.set_password (smtp_password_entry.text);
-                }
-            }
+            smtp_auth_error = null;
 
-            if (transport_service is Camel.NetworkService) {
-                debug ("Test if the transport service can be reached");
-                yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
-            }
-
-            set_cancel_timeout (cancellable);
+            var smtp_auth_cancellable = new GLib.Cancellable ();
+            set_cancel_timeout (smtp_auth_cancellable);
 
             try {
-                debug ("Connect to the transport service");
-                yield transport_service.connect (GLib.Priority.DEFAULT, cancellable);
-            } catch (GLib.IOError e) {
-                if (!(e is GLib.IOError.CANCELLED)) {
-                    throw e;
+                debug ("Connecting to the smtp service…");
+                yield transport_service.connect (GLib.Priority.DEFAULT, smtp_auth_cancellable);
+
+                debug ("Successfully connected to the smtp service using %s authentication.", smtp_auth_method);
+                break;
+
+            } catch (GLib.Error e) {
+                debug ("Error using %s authentication for smtp service: %s", smtp_auth_method, e.message);
+
+                if (e is GLib.IOError.CANCELLED) {
+                    smtp_auth_error = new GLib.Error (
+                        Camel.Service.error_quark (),
+                        Camel.ServiceError.CANT_AUTHENTICATE,
+                        "Could not log in. Please verify your credentials."
+                    );
+
+                } else {
+                    smtp_auth_error = e;
                 }
-
-                throw new GLib.Error (
-                    Camel.Service.error_quark (),
-                    Camel.ServiceError.CANT_AUTHENTICATE,
-                    "Could not log in. Please verify your credentials."
-                );
             }
-
             unset_cancel_timeout ();
+        }
 
-        } catch (Error e) {
+        if (smtp_auth_error != null) {
             throw new GLib.Error (
                 Camel.Service.error_quark (),
                 Camel.ServiceError.CANT_AUTHENTICATE,
-                "SMTP verification failed: %s".printf (e.message)
+                "SMTP verification failed: %s".printf (smtp_auth_error.message)
             );
         }
 
