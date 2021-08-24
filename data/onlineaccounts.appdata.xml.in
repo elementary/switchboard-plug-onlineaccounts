@@ -7,6 +7,14 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
+    <release version="6.2.0" date="2021-08-24" urgency="medium">
+      <description>
+        <ul>
+          <li>Automatically detect authentication method for IMAP</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.1.0" date="2021-07-28" urgency="medium">
       <description>
         <ul>
