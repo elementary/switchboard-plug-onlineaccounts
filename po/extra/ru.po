@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-28 16:13+0000\n"
+"POT-Creation-Date: 2021-08-24 19:14+0000\n"
 "PO-Revision-Date: 2021-07-24 17:19+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,28 +29,33 @@ msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн аккаунтами и подключенными приложениями"
 
 #: data/onlineaccounts.appdata.xml.in:13
+msgid "Automatically detect authentication method for IMAP"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:33
+msgid "Updated translations"
+msgstr "Обновлены переводы"
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 "Проверка учетных данных для входа во время сохранении учетных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Настройка папок Архив, Черновики, Отправленные и Шаблоны для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:15
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Закрытие всплывающего окна «Добавить учетную запись» при выборе элемента"
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
-msgid "Updated translations"
-msgstr "Обновлены переводы"
-
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Complete redesign"
 msgstr "Полное изменение дизайна"
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Fix blurry icons on HiDPI"
 msgstr "Исправлены размытые значки на HiDPI"
 
