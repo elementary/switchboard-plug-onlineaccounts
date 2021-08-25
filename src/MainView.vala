@@ -139,7 +139,13 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
         Gtk.Button? edit_button = null;
-        if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+        if (
+            e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT) ||
+            (
+                e_source.has_extension (E.SOURCE_EXTENSION_COLLECTION) &&
+                "webdav" == ((E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION)).backend_name
+            )
+        ){
             edit_button = new Gtk.Button.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU) {
                 tooltip_text = _("Edit this account")
             };
@@ -199,7 +205,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                             var error_dialog = new Granite.MessageDialog (
                                 _("Edit account failed"),
                                 _("There was an unexpected error while reading the configuration of '%s'.").printf (e_source.display_name),
-                                new ThemedIcon ("onlineaccounts-mail"),
+                                new ThemedIcon.with_default_fallbacks (icon_name),
                                 Gtk.ButtonsType.CLOSE
                             ) {
                                 badge_icon = new ThemedIcon ("dialog-error"),
@@ -210,6 +216,36 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                             error_dialog.destroy ();
                         }
                     });
+
+                } else if (e_source.has_extension (E.SOURCE_EXTENSION_COLLECTION)) {
+                    unowned var collection_extension = (E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
+
+                    if ("webdav" == collection_extension.backend_name) {
+                        var caldav_dialog = new CaldavDialog () {
+                            transient_for = (Gtk.Window) get_toplevel ()
+                        };
+
+                        caldav_dialog.load_configuration.begin (e_source, null, (obj, res) => {
+                            try {
+                                caldav_dialog.load_configuration.end (res);
+                                caldav_dialog.show_all ();
+
+                            } catch (Error e) {
+                                var error_dialog = new Granite.MessageDialog (
+                                    _("Edit account failed"),
+                                    _("There was an unexpected error while reading the configuration of '%s'.").printf (e_source.display_name),
+                                    new ThemedIcon.with_default_fallbacks (icon_name),
+                                    Gtk.ButtonsType.CLOSE
+                                ) {
+                                    badge_icon = new ThemedIcon ("dialog-error"),
+                                    transient_for = (Gtk.Window) get_toplevel ()
+                                };
+                                error_dialog.show_error_details (e.message);
+                                error_dialog.run ();
+                                error_dialog.destroy ();
+                            }
+                        });
+                    }
                 }
             });
         }
