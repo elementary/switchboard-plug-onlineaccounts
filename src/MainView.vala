@@ -145,7 +145,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                 e_source.has_extension (E.SOURCE_EXTENSION_COLLECTION) &&
                 "webdav" == ((E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION)).backend_name
             )
-        ){
+        ) {
             edit_button = new Gtk.Button.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU) {
                 tooltip_text = _("Edit this account")
             };
