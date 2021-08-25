@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-12 10:19+0000\n"
+"PO-Revision-Date: 2021-08-25 07:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
@@ -133,6 +133,8 @@ msgstr "Aucune authentification nécessaire"
 #: src/Dialogs/Imap/ImapDialog.vala:341
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
+"Les données fournies ne semblent pas correspondre à un compte de messagerie "
+"valide."
 
 #: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
@@ -160,20 +162,16 @@ msgid "Setting up the e-mail account…"
 msgstr "Configuration du compte de messagerie…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Could not add the e-mail account"
 msgid "Could not save the e-mail account"
-msgstr "Échec de l'ajout du compte de messagerie"
+msgstr "Échec de l'enregistrement du compte de messagerie"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Succès"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "E-mail account saved."
-msgstr "Compte de messagerie ajouté."
+msgstr "Compte de messagerie enregistré."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -210,10 +208,8 @@ msgid "Remove this account"
 msgstr "Supprimer ce compte"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Remove this account"
 msgid "Edit this account"
-msgstr "Supprimer ce compte"
+msgstr "Modifier ce compte"
 
 #: src/MainView.vala:167
 #, c-format
@@ -232,15 +228,15 @@ msgid "Remove Account"
 msgstr "Supprimer le compte"
 
 #: src/MainView.vala:200
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "Edit account failed"
-msgstr "Compte de messagerie ajouté."
+msgstr "Échec de la modification du compte"
 
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""
+"Une erreur inattendue s'est produite lors de la lecture de la configuration "
+"de « %s »."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
