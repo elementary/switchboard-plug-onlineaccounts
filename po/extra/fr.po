@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-07-30 20:57+0000\n"
+"PO-Revision-Date: 2021-08-25 07:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -29,11 +29,12 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Modifiez les comptes IMAP enregistrés"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
+"Détection automatique de la méthode d'authentification pour le protocole IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
 #: data/onlineaccounts.appdata.xml.in:34
