@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-07-29 09:12+0000\n"
+"PO-Revision-Date: 2021-08-25 18:30+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ca/>\n"
@@ -133,6 +133,7 @@ msgstr "No cal autenticació"
 #: src/Dialogs/Imap/ImapDialog.vala:341
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
+"Les dades proporcionades no semblen reflectir un compte de correu vàlid."
 
 #: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
@@ -160,20 +161,16 @@ msgid "Setting up the e-mail account…"
 msgstr "Es configura el compte de correu electrònic …"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Could not add the e-mail account"
 msgid "Could not save the e-mail account"
-msgstr "No s'ha pogut afegir el compte de correu."
+msgstr "No s'ha pogut desar el compte de correu."
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Correcte"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "E-mail account saved."
-msgstr "Compte de correu afegit"
+msgstr "Compte de correu desat"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -210,10 +207,8 @@ msgid "Remove this account"
 msgstr "Suprimeix aquest compte"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Remove this account"
 msgid "Edit this account"
-msgstr "Suprimeix aquest compte"
+msgstr "Edita aquest compte"
 
 #: src/MainView.vala:167
 #, c-format
@@ -232,15 +227,13 @@ msgid "Remove Account"
 msgstr "Suprimeix el compte"
 
 #: src/MainView.vala:200
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "Edit account failed"
-msgstr "Compte de correu afegit"
+msgstr "Ha fallat l'edició del compte."
 
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "Hi ha hagut un error inesperat mentre es llegia la configuració de %s."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
