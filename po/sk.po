@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-26 17:56+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sk/>\n"
@@ -22,56 +22,56 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:36
 msgid "Server URL"
-msgstr ""
+msgstr "URL adresa servera"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Neplatná URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Používateľské meno"
 
 #: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "Prihlásiť sa"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "Zobrazované meno účtu"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Vyberte si názov pre účet, ako napríklad „Pracovný“ alebo „Osobný“."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Späť"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Nastavenie sa ukladá…"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "Hotovo"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "CalDAV account added."
-msgstr ""
+msgstr "CalDAV účet bol pridaný."
 
 #: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
 msgid "Close"
@@ -79,7 +79,7 @@ msgstr "Zatvoriť"
 
 #: src/Dialogs/CaldavDialog.vala:238
 msgid "Could not save configuration"
-msgstr ""
+msgstr "Uloženie nastavenia sa nepodarilo"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
@@ -87,63 +87,65 @@ msgstr "Kalendáre"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "Zoznamy úloh"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Hľadajú sa dostupné kalendáre a úlohy…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "Nepodarilo sa získať kalendáre"
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
-msgstr ""
+msgstr "Používateľské meno:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 msgid "Server URL:"
-msgstr ""
+msgstr "URL adresa servera:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
-msgstr ""
+msgstr "Šifrovanie:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "Žiadne"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "Použiť prihlasovacie údaje IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
-msgstr ""
+msgstr "Overenie nie je potrebné"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
-#, fuzzy
-#| msgid "Please enter your credentials…"
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr "Poskytnuté údaje sa nezhodujú s platným e-mailovým účtom."
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
-msgstr "Prosím, zadajte svoje prihlasovacie údaje..."
+msgstr "Nepodarilo sa prihlásiť. Prosím, skontrolujte vaše prihlasovacie údaje."
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "Overenie IMAP sa nepodarilo: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "Skutočné meno"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -151,74 +153,84 @@ msgstr "E-mail"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "Ďalej"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "Nastavuje sa e-mailový účet…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
-msgstr ""
+msgid "Could not save the e-mail account"
+msgstr "Nepodarilo sa uložiť e-mailový účet"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
-msgstr ""
+msgstr "Úspešné"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "E-mail account added."
-msgstr ""
+msgid "E-mail account saved."
+msgstr "E-mailový účet bol uložený."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
-msgstr "Pripojiť k vašim online kontám"
+msgstr "Pripojte vaše online účty"
 
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "Pripojte online účty kliknutím na ikonku dole na lište."
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "Kalendáre"
+msgstr "Kalendáre a úlohy"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "E-mail"
 
 #: src/MainView.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Pridať nový účet"
+msgstr "Pridať účet…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "Odstrániť tento účet"
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+msgid "Edit this account"
+msgstr "Upraviť tento účet"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "Odstrániť „%s“ z tohto zariadenia"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
+"Tento účet bude odstránený a už sa nebude zobrazovať v žiadnych aplikáciách "
+"na tomto zariadení."
 
-#: src/MainView.vala:161
-#, fuzzy
+#: src/MainView.vala:176
 msgid "Remove Account"
-msgstr "Online účty"
+msgstr "Odstrániť účet"
+
+#: src/MainView.vala:200
+msgid "Edit account failed"
+msgstr "Úprava účtu zlyhala"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr "Vyskytla sa nečakaná chyba pri čítaní nastavenia ‚%s‘."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
@@ -226,7 +238,7 @@ msgstr "Online účty"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Spravujte online účty a pripojené aplikácie"
 
 #~ msgid "Watch your newsfeed"
 #~ msgstr "Pozrieť vaše zdroje správ"
@@ -273,10 +285,6 @@ msgstr ""
 
 #~ msgid "Enter above text here"
 #~ msgstr "Zadajte nad textom tu"
-
-#, fuzzy
-#~ msgid "Other Account"
-#~ msgstr "Online účty"
 
 #~ msgid "Loading…"
 #~ msgstr "Načítava sa…"

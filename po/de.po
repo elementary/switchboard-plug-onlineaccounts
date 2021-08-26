@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-07-29 13:43+0000\n"
-"Last-Translator: Uwe S <saabisto@gmx.de>\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-25 07:16+0000\n"
+"Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/de/>\n"
 "Language: de\n"
@@ -40,7 +40,7 @@ msgstr "Passwort"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "Anmelden"
 
@@ -54,7 +54,7 @@ msgstr ""
 "Wählen Sie einen Namen für das Konto, beispielsweise »Arbeit« oder »Privat«."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Zurück"
 
@@ -98,44 +98,48 @@ msgstr "Verfügbare Kalender und Aufgaben ermitteln …"
 msgid "Could not fetch calendars"
 msgstr "Fehler beim Laden der Kalender"
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
 msgstr "Benutzername:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
 msgstr "Passwort:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 msgid "Server URL:"
 msgstr "Server-Adresse:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
 msgstr "Port:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
 msgstr "Verschlüsselung:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "Keine"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
 msgstr "IMAP-Zugangsdaten verwenden"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
 msgstr "Keine Authentifizierung erforderlich"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr "Die eingegebenen Daten scheinen nicht gültig zu sein."
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
 msgstr "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Zugangsdaten."
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP-Verifizierung fehlgeschlagen: %s"
@@ -157,16 +161,16 @@ msgid "Setting up the e-mail account…"
 msgstr "E-Mail-Konto einrichten …"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
-msgstr "E-Mail-Konto konnte nicht hinzugefügt werden"
+msgid "Could not save the e-mail account"
+msgstr "E-Mail-Konto konnte nicht gespeichert werden"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Erfolgreich"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "E-mail account added."
-msgstr "E-Mail-Konto hinzugefügt."
+msgid "E-mail account saved."
+msgstr "E-Mail-Konto gespeichert."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -202,21 +206,36 @@ msgstr "Konto hinzufügen …"
 msgid "Remove this account"
 msgstr "Dieses Konto entfernen"
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+msgid "Edit this account"
+msgstr "Dieses Konto bearbeiten"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "»%s« von diesem Gerät entfernen"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Dieses Konto wird entfernt und nicht länger in Anwendungen auf diesem Gerät "
 "erscheinen."
 
-#: src/MainView.vala:161
+#: src/MainView.vala:176
 msgid "Remove Account"
 msgstr "Konto entfernen"
+
+#: src/MainView.vala:200
+msgid "Edit account failed"
+msgstr "Bearbeiten des Kontos ist fehlgeschlagen"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr ""
+"Ein unerwarteter Fehler ist beim Lesen der Konfiguration von \"%s\" "
+"aufgetreten."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"

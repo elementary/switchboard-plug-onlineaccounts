@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-07-28 19:42+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -41,7 +41,7 @@ msgstr "Пароль"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "Вхід"
 
@@ -54,7 +54,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Оберіть назву облікового запису, наприклад «Робота» або «Особистий»."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "Назад"
 
@@ -98,44 +98,48 @@ msgstr "Пошук доступних календарів та завдань�
 msgid "Could not fetch calendars"
 msgstr "Не вдалося отримати календарі"
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
 msgstr "Ім'я користувача:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 msgid "Server URL:"
 msgstr "URL-адреса сервера:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
 msgstr "Порт:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
 msgstr "Шифрування:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "Немає"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
 msgstr "Використовувати облікові дані IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
 msgstr "Автентифікація не потрібна"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr "Схоже, що надані дані, не відбивають дійсний поштовий обліковий запис."
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
 msgstr "Не вдалося увійти. Перевірте свої облікові дані."
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Не вдалося виконати перевірку IMAP: %s"
@@ -157,16 +161,16 @@ msgid "Setting up the e-mail account…"
 msgstr "Налаштування облікового запису е-пошти…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
-msgstr "Не вдалося додати обліковий запис е-пошти"
+msgid "Could not save the e-mail account"
+msgstr "Не вдалося зберегти обліковий запис е-пошти"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Успішно"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "E-mail account added."
-msgstr "Обліковий запис е-пошти додано."
+msgid "E-mail account saved."
+msgstr "Обліковий запис е-пошти збережено."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -202,21 +206,34 @@ msgstr "Додати обліковий запис…"
 msgid "Remove this account"
 msgstr "Вилучити цей обліковий запис"
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+msgid "Edit this account"
+msgstr "Редагувати цей обліковий запис"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Вилучити «%s» з цього пристрою"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Цей обліковий запис буде вилучено і надалі він не з'являтиметься у жодному "
 "застосунку на цьому пристрої."
 
-#: src/MainView.vala:161
+#: src/MainView.vala:176
 msgid "Remove Account"
 msgstr "Вилучити обліковий запис"
+
+#: src/MainView.vala:200
+msgid "Edit account failed"
+msgstr "Не вдалося редагувати обліковий запис"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr "Сталася помилка під час читання конфігурації «%s»."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"

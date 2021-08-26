@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-07-28 19:42+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -35,7 +35,7 @@ msgstr "ססמה"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "כניסה"
 
@@ -48,7 +48,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "נא לבחור שם כמו „עבודה” או „פרטי” לחשבון."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "חזרה"
 
@@ -92,44 +92,48 @@ msgstr "איתור לוחות שנה ומשימות זמינים…"
 msgid "Could not fetch calendars"
 msgstr "לא ניתן למשוך לוחות שנה"
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
 msgstr "ססמה:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 msgid "Server URL:"
 msgstr "כתובת השרת:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
 msgstr "פתחה:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
 msgstr "הצפנה:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "ללא"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
 msgstr "שימוש בפרטי הגישה ל־IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
 msgstr "לא נדרש אימות"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr "הנתונים שסופקו לא משקפים כתובת דוא״ל תקנית."
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
 msgstr "לא ניתן להיכנס. נא לאמת את פרטי הגישה שלך."
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "האימות מול ה־IMAP נכשל: %s"
@@ -151,16 +155,16 @@ msgid "Setting up the e-mail account…"
 msgstr "חשבון הדוא״ל מוגדר…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
-msgstr "לא ניתן להוסיף את חשבון הדוא״ל"
+msgid "Could not save the e-mail account"
+msgstr "לא ניתן לשמור את חשבון הדוא״ל"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "הצלחה"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "E-mail account added."
-msgstr "חשבון הדוא״ל נוסף."
+msgid "E-mail account saved."
+msgstr "חשבון הדוא״ל נשמר."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -194,19 +198,32 @@ msgstr "הוספת חשבון…"
 msgid "Remove this account"
 msgstr "להסיר את החשבון הזה"
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+msgid "Edit this account"
+msgstr "עריכת החשבון הזה"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "להסיר את „%s” מהמכשיר"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr "החשבון הזה יוסר ולא יופיע תחת יישומים כלשהם שבמכשיר הזה."
 
-#: src/MainView.vala:161
+#: src/MainView.vala:176
 msgid "Remove Account"
 msgstr "הסרת חשבון"
+
+#: src/MainView.vala:200
+msgid "Edit account failed"
+msgstr "עריכת החשבון נכשלה"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr "אירעה שגיאה בלתי צפויה בעת קריאת ההגדרות מתוך ‚%s’."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"

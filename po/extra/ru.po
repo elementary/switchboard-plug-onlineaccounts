@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-07-24 17:19+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-25 17:20+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
 "Language: ru\n"
@@ -29,33 +29,37 @@ msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн аккаунтами и подключенными приложениями"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgid "Edit saved IMAP accounts"
+msgstr "Редактирование сохраненных учётных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:24
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Automatically detect authentication method for IMAP"
+msgstr "Автоматическое определение метода аутентификации для IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 "Проверка учетных данных для входа во время сохранении учетных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Настройка папок Архив, Черновики, Отправленные и Шаблоны для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Закрытие всплывающего окна «Добавить учетную запись» при выборе элемента"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Complete redesign"
 msgstr "Полное изменение дизайна"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Fix blurry icons on HiDPI"
 msgstr "Исправлены размытые значки на HiDPI"
 

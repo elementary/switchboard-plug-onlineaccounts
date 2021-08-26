@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-07-29 00:00+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-25 03:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -40,7 +40,7 @@ msgstr "パスワード"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "ログイン"
 
@@ -53,7 +53,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "“仕事用”や“プライベート”といった名前をアカウントにつけましょう。"
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr "戻る"
 
@@ -97,44 +97,48 @@ msgstr "利用可能なカレンダーとタスクを検索しています…"
 msgid "Could not fetch calendars"
 msgstr "カレンダーを取得できませんでした"
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
 msgstr "ユーザー名:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
 msgstr "パスワード:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 msgid "Server URL:"
 msgstr "サーバーの URL:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
 msgstr "ポート:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
 msgstr "暗号化:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "なし"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
 msgstr "IMAP 証明書を使う"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
 msgstr "認証は不要"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr "指定されたデータは適切なメールアカウントではない可能性があります。"
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
 msgstr "ログインできませんでした。証明書を認証してください。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP を認証できませんでした: %s"
@@ -156,16 +160,16 @@ msgid "Setting up the e-mail account…"
 msgstr "メールアカウントを設定しています…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
-msgstr "メールアカウントを追加できませんでした"
+msgid "Could not save the e-mail account"
+msgstr "メールアカウントを保存できませんでした"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "成功しました"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-msgid "E-mail account added."
-msgstr "メールアカウントを追加しました。"
+msgid "E-mail account saved."
+msgstr "メールアカウントを保存しました。"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -201,21 +205,34 @@ msgstr "アカウントを追加…"
 msgid "Remove this account"
 msgstr "このアカウントを削除"
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+msgid "Edit this account"
+msgstr "このアカウントを編集"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "“%s” をこのデバイスから削除します"
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "このアカウントは削除され、このデバイス上のすべてのアプリで表示されなくなりま"
 "す。"
 
-#: src/MainView.vala:161
+#: src/MainView.vala:176
 msgid "Remove Account"
 msgstr "アカウントを削除"
+
+#: src/MainView.vala:200
+msgid "Edit account failed"
+msgstr "メールアカウントを編集できません"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr "'%s' の設定を読み込む際に予期しないエラーが発生しました。"
 
 #: src/Plug.vala:30
 msgid "Online Accounts"

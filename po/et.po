@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
 "PO-Revision-Date: 2016-09-03 20:10+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -40,7 +40,7 @@ msgstr "Parool"
 msgid "Cancel"
 msgstr "Loobu"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
 msgid "Log In"
 msgstr "Logi sisse"
 
@@ -53,7 +53,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:186 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
 msgstr ""
 
@@ -99,50 +99,54 @@ msgstr ""
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:45 src/Dialogs/Imap/ImapDialog.vala:107
+#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:115
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 #, fuzzy
 #| msgid "Password"
 msgid "Password:"
 msgstr "Parool"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:137
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 #, fuzzy
 #| msgid "Server"
 msgid "Server URL:"
 msgstr "Server"
 
-#: src/Dialogs/Imap/ImapDialog.vala:68 src/Dialogs/Imap/ImapDialog.vala:143
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:72 src/Dialogs/Imap/ImapDialog.vala:151
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
 msgstr "Krüpteering:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
 msgid "None"
 msgstr "Puudub"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
 msgstr "IMAP-i konto kasutamine"
 
-#: src/Dialogs/Imap/ImapDialog.vala:103
+#: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
 msgstr "Autentimine pole vajalik"
 
-#: src/Dialogs/Imap/ImapDialog.vala:441
+#: src/Dialogs/Imap/ImapDialog.vala:341
+msgid "The data provided does not seem to reflect a valid mail account."
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:571
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Sisesta oma konto andmed..."
 
-#: src/Dialogs/Imap/ImapDialog.vala:455
+#: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -164,7 +168,7 @@ msgid "Setting up the e-mail account…"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-msgid "Could not add the e-mail account"
+msgid "Could not save the e-mail account"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
@@ -174,7 +178,7 @@ msgstr ""
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 #, fuzzy
 #| msgid "Mail Account"
-msgid "E-mail account added."
+msgid "E-mail account saved."
 msgstr "E-posti konto"
 
 #: src/MainView.vala:30
@@ -213,20 +217,37 @@ msgstr "Uue konto lisamine…"
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:152
+#: src/MainView.vala:144
+#, fuzzy
+#| msgid "Other Account"
+msgid "Edit this account"
+msgstr "Teine konto"
+
+#: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:153
+#: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 
-#: src/MainView.vala:161
+#: src/MainView.vala:176
 #, fuzzy
 msgid "Remove Account"
 msgstr "Teine konto"
+
+#: src/MainView.vala:200
+#, fuzzy
+#| msgid "Mail Account"
+msgid "Edit account failed"
+msgstr "E-posti konto"
+
+#: src/MainView.vala:201
+#, c-format
+msgid "There was an unexpected error while reading the configuration of '%s'."
+msgstr ""
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
@@ -306,9 +327,6 @@ msgstr "Online kontode ja ühendatud rakenduste haldamine"
 
 #~ msgid "Don't have an account? Sign Up"
 #~ msgstr "Sul pole veel kontot? Registreeri"
-
-#~ msgid "Other Account"
-#~ msgstr "Teine konto"
 
 #~ msgid "Loading…"
 #~ msgstr "Laadimine…"

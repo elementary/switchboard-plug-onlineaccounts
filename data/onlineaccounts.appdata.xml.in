@@ -10,6 +10,7 @@
     <release version="6.2.0" date="2021-08-25" urgency="medium">
       <description>
         <ul>
+          <li>Edit saved IMAP accounts</li>
           <li>Automatically detect authentication method for IMAP</li>
           <li>Updated translations</li>
         </ul>

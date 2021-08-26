@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 19:14+0000\n"
-"PO-Revision-Date: 2021-07-24 02:10+0000\n"
+"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -29,32 +29,36 @@ msgid "Manage online accounts and connected applications"
 msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgid "Edit saved IMAP accounts"
+msgstr "Редагування збережених облікових записів IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:24
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Automatically detect authentication method for IMAP"
+msgstr "Автовизначення методу автентифікації для IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Updated translations"
 msgstr "Оновлено переклади"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 "Перевірка облікових даних для входу під час збереження облікових записів IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Налаштування тек Архівовані, Чернетки, Надіслані та Шаблони для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr "Закриття вікна «Додати обліковий запис», коли вибрано елемент"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Complete redesign"
 msgstr "Завершено зміну зовнішнього вигляду"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Fix blurry icons on HiDPI"
 msgstr "Виправлено розмиті піктограми на HiDPI"
 
