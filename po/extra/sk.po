@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2021-08-26 17:56+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/sk/>\n"
@@ -21,19 +21,19 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
-msgstr ""
+msgstr "Nastavenia online účtov"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "Spravujte online účty a pripojené aplikácie"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Upravujte uložené IMAP účty"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgstr "Automaticky zistiť metódu overenia pre IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
 #: data/onlineaccounts.appdata.xml.in:34
@@ -42,20 +42,20 @@ msgstr "Aktualizované preklady"
 
 #: data/onlineaccounts.appdata.xml.in:22
 msgid "Verify login credentails when saving IMAP accounts"
-msgstr ""
+msgstr "Overovať prihlasovacie údaje pri ukladaní IMAP účtov"
 
 #: data/onlineaccounts.appdata.xml.in:23
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr ""
+msgstr "Nastavujte priečinky Archív, Koncepty, Odoslané a Predlohy pre IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:24
 msgid "Close \"Add Account\" popover when an item is selected"
-msgstr ""
+msgstr "Zatvoriť vyskakovacie okno „Pridať účet“ pri označení položky"
 
 #: data/onlineaccounts.appdata.xml.in:32
 msgid "Complete redesign"
-msgstr ""
+msgstr "Úplná prerábka"
 
 #: data/onlineaccounts.appdata.xml.in:33
 msgid "Fix blurry icons on HiDPI"
-msgstr ""
+msgstr "Opravené rozmazané ikonky na displejoch s vysokým rozlíšením (HiDPI)"
