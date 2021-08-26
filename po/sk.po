@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2021-08-26 08:14+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sk/>\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Neplatná URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
-msgstr ""
+msgstr "Heslo:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
 msgid "Server URL:"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Encryption:"
