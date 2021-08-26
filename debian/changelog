@@ -1,3 +1,15 @@
+switchboard-plug-onlineaccounts (6.2.0) focal; urgency=medium
+
+  * Release 6.2.0 (#214)
+  * Update translation files
+  * Update translation template
+  * New feature: Edit mail account (#208)
+  * Auto detect auth mechanism for IMAP and SMTP (#211)
+  * Add VAPI file for camel-1.2 (#202)
+  * l10n: Correctly setup the locales (#205)
+
+ -- elementary, Inc. <builds@elementary.io>  Thu, 26 Aug 2021 20:40:56 +0000
+
 switchboard-plug-onlineaccounts (6.1.0) focal; urgency=medium
 
   * New upstream release.
