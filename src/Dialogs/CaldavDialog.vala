@@ -561,6 +561,41 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
         yield collection_source.store_password (password_entry.text, true, cancellable);
         yield registry.create_sources (sources, cancellable);
+
+        var goa_client = yield new Goa.Client (cancellable);
+
+        string account_object_path;
+
+        var arg_credentials_builder = new VariantBuilder (new VariantType ("a{sv}"));
+        // arg_credentials_builder.add ("{sv}", E.SOURCE_CREDENTIAL_USERNAME, new GLib.Variant.string (password_entry.text));
+
+        var arg_details_builder = new VariantBuilder (new VariantType ("a{ss}"));
+        //arg_details_builder.add ("{ss}", "uri", new GLib.Variant.string (webdav_extension.soup_uri.to_string (false)));
+
+        yield goa_client.get_manager ().call_add_account (
+            "imap_smtp",
+            authentication_extension.user,
+            collection_source.display_name,
+            arg_credentials_builder.end (),
+            arg_details_builder.end (),
+            cancellable,
+            out account_object_path);
+
+        warning ("Object path: %s", account_object_path);
+
+        /*var goa_account = new Goa.AccountSkeleton ();
+        goa_account.id = collection_source.uid;
+        goa_account.presentation_identity = collection_source.display_name;
+        goa_account.identity = authentication_extension.user;
+
+        var goa_password_based = new Goa.PasswordBasedSkeleton ();
+
+        var goa_calendar = new Goa.CalendarSkeleton ();
+        goa_calendar.uri = webdav_extension.soup_uri.to_string (false);
+
+        var goa_object = new Goa.ObjectSkeleton (collection_source.uid);
+        goa_object.set_account (goa_account);
+        goa_object.set_password_based (goa_password_based);*/
     }
 
     private class SourceRow : Gtk.ListBoxRow {

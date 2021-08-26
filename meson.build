@@ -41,6 +41,9 @@ gtk_dep = dependency('gtk+-3.0')
 handy_dep = dependency('libhandy-1', version: '>=1.0.0')
 switchboard_dep = dependency('switchboard-2.0')
 
+add_project_arguments('-DGOA_API_IS_SUBJECT_TO_CHANGE', language: 'c')
+goa_dep = dependency('goa-1.0')
+
 if edataserverui_dep.version().version_compare('>=3.39.2')
     add_project_arguments('--define=HAS_EDS_3_40', language: 'vala')
 endif

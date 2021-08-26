@@ -21,59 +21,93 @@
 public class OnlineAccounts.AccountsModel : Object {
     public ListStore accounts_liststore { get; private set; }
 
-    private E.SourceRegistryWatcher collection_extension_watcher;
-    private E.SourceRegistryWatcher mail_account_extension_watcher;
+    //  private E.SourceRegistryWatcher collection_extension_watcher;
+    //  private E.SourceRegistryWatcher mail_account_extension_watcher;
+
+
+    private Goa.Client client;
 
     construct {
-        accounts_liststore = new ListStore (typeof (E.Source));
+        accounts_liststore = new ListStore (typeof (Goa.Object));
 
-        init_registry.begin ();
+        //init_registry.begin ();
+        init_client.begin ();
     }
 
-    private async void init_registry () {
+    private async void init_client () {
         try {
-            var registry = yield new E.SourceRegistry (null);
+            client = yield new Goa.Client (null);
 
-            collection_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_COLLECTION);
-            collection_extension_watcher.appeared.connect (add_esource);
-            collection_extension_watcher.disappeared.connect (remove_esource);
-            collection_extension_watcher.reclaim ();
+            client.account_added.connect (add_account);
+            client.account_changed.connect (update_account);
+            client.account_removed.connect (remove_account);
 
-            mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
-            mail_account_extension_watcher.appeared.connect (add_esource);
-            mail_account_extension_watcher.disappeared.connect (remove_esource);
-            mail_account_extension_watcher.reclaim ();
+            client.get_accounts ().foreach ((object) => {
+                add_account (object);
+            });
+
         } catch (Error e) {
             critical (e.message);
         }
     }
 
-    private void add_esource (E.Source e_source) {
-        uint position;
-        if (accounts_liststore.find (e_source, out position)) {
-            return;
-        }
-
-        // Ignore children of collection accounts
-        if (e_source.parent != null) {
-            return;
-        }
-
-        // Ignore "Search", "On This Computer" and "local_mbox"
-        if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-            unowned var mail_source = (E.SourceMailAccount) e_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
-            if (mail_source.backend_name == "vfolder" || mail_source.backend_name == "maildir" || mail_source.backend_name == "mbox" ) {
-                return;
-            }
-        }
-
-        accounts_liststore.append (e_source);
+    private void add_account (Goa.Object object) {
+        warning ("add_account: %s", object.account.id);
+        accounts_liststore.append (object);
     }
 
-    private void remove_esource (E.Source e_source) {
-        uint position;
-        if (accounts_liststore.find (e_source, out position)) {
-            accounts_liststore.remove (position);
-        }
+    private void update_account (Goa.Object object) {
+        warning ("update_account: %s", object.account.id);
     }
+
+    private void remove_account (Goa.Object object) {
+        warning ("remove_account: %s", object.account.id);
+    }
+
+    //  private async void init_registry () {
+    //      try {
+    //          var registry = yield new E.SourceRegistry (null);
+
+    //          collection_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_COLLECTION);
+    //          collection_extension_watcher.appeared.connect (add_esource);
+    //          collection_extension_watcher.disappeared.connect (remove_esource);
+    //          collection_extension_watcher.reclaim ();
+
+    //          mail_account_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+    //          mail_account_extension_watcher.appeared.connect (add_esource);
+    //          mail_account_extension_watcher.disappeared.connect (remove_esource);
+    //          mail_account_extension_watcher.reclaim ();
+    //      } catch (Error e) {
+    //          critical (e.message);
+    //      }
+    //  }
+
+    //  private void add_esource (E.Source e_source) {
+    //      uint position;
+    //      if (accounts_liststore.find (e_source, out position)) {
+    //          return;
+    //      }
+
+    //      // Ignore children of collection accounts
+    //      if (e_source.parent != null) {
+    //          return;
+    //      }
+
+    //      // Ignore "Search", "On This Computer" and "local_mbox"
+    //      if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+    //          unowned var mail_source = (E.SourceMailAccount) e_source.get_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT);
+    //          if (mail_source.backend_name == "vfolder" || mail_source.backend_name == "maildir" || mail_source.backend_name == "mbox" ) {
+    //              return;
+    //          }
+    //      }
+
+    //      accounts_liststore.append (e_source);
+    //  }
+
+    //  private void remove_esource (E.Source e_source) {
+    //      uint position;
+    //      if (accounts_liststore.find (e_source, out position)) {
+    //          accounts_liststore.remove (position);
+    //      }
+    //  }
 }

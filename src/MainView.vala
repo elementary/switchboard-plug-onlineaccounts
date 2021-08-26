@@ -109,110 +109,112 @@ public class OnlineAccounts.MainView : Gtk.Grid {
     }
 
     private Gtk.Widget create_account_row (GLib.Object object) {
-        var e_source = (E.Source) object;
+        var goa_object = (Goa.Object) object;
+        //  var e_source = (E.Source) object;
 
-        var icon_name = "onlineaccounts";
-        if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
-            icon_name = "onlineaccounts-tasks";
-        } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
-            icon_name = "x-office-calendar";
-        } else if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-            icon_name = "onlineaccounts-mail";
-        } else if (e_source.has_extension (E.SOURCE_EXTENSION_COLLECTION)) {
-            unowned var collection_source = (E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
-            icon_name = "onlineaccounts-%s".printf (collection_source.backend_name);
-        }
+        //  var icon_name = "onlineaccounts";
+        //  if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
+        //      icon_name = "onlineaccounts-tasks";
+        //  } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
+        //      icon_name = "x-office-calendar";
+        //  } else if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+        //      icon_name = "onlineaccounts-mail";
+        //  } else if (e_source.has_extension (E.SOURCE_EXTENSION_COLLECTION)) {
+        //      unowned var collection_source = (E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
+        //      icon_name = "onlineaccounts-%s".printf (collection_source.backend_name);
+        //  }
 
-        var label = new Gtk.Label (e_source.display_name) {
+        //var label = new Gtk.Label (e_source.display_name) {
+        var label = new Gtk.Label (goa_object.account.id) {
             halign = Gtk.Align.START,
             hexpand = true
         };
         label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND) {
-            use_fallback = true
-        };
+        //  var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND) {
+        //      use_fallback = true
+        //  };
 
-        var remove_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU) {
-            tooltip_text = _("Remove this account")
-        };
-        remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        //  var remove_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU) {
+        //      tooltip_text = _("Remove this account")
+        //  };
+        //  remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-        Gtk.Button? edit_button = null;
-        if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-            edit_button = new Gtk.Button.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU) {
-                tooltip_text = _("Edit this account")
-            };
-            edit_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        }
+        //  Gtk.Button? edit_button = null;
+        //  if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+        //      edit_button = new Gtk.Button.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU) {
+        //          tooltip_text = _("Edit this account")
+        //      };
+        //      edit_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        //  }
 
         var grid = new Gtk.Grid () {
             column_spacing = 6,
             margin = 6
         };
 
-        grid.attach (image, 0, 0);
+        //  grid.attach (image, 0, 0);
         grid.attach (label, 1, 0);
-        if (edit_button != null) {
-            grid.attach (edit_button, 2, 0);
-            grid.attach (remove_button, 3, 0);
+        //  if (edit_button != null) {
+        //      grid.attach (edit_button, 2, 0);
+        //      grid.attach (remove_button, 3, 0);
 
-        } else {
-            grid.attach (remove_button, 2, 0);
-        }
-        grid.show_all ();
+        //  } else {
+        //      grid.attach (remove_button, 2, 0);
+        //  }
+        //  grid.show_all ();
 
-        remove_button.clicked.connect (() => {
-            var message_dialog = new Granite.MessageDialog (
-                _("Remove “%s” from this device").printf (e_source.display_name),
-                _("This account will be removed and no longer appear in any apps on this device."),
-                new ThemedIcon.with_default_fallbacks (icon_name),
-                Gtk.ButtonsType.CANCEL
-            ) {
-                badge_icon = new ThemedIcon ("edit-delete"),
-                transient_for = (Gtk.Window) get_toplevel ()
-            };
+        //  remove_button.clicked.connect (() => {
+        //      var message_dialog = new Granite.MessageDialog (
+        //          _("Remove “%s” from this device").printf (e_source.display_name),
+        //          _("This account will be removed and no longer appear in any apps on this device."),
+        //          new ThemedIcon.with_default_fallbacks (icon_name),
+        //          Gtk.ButtonsType.CANCEL
+        //      ) {
+        //          badge_icon = new ThemedIcon ("edit-delete"),
+        //          transient_for = (Gtk.Window) get_toplevel ()
+        //      };
 
-            var accept_button = (Gtk.Button) message_dialog.add_button (_("Remove Account"), Gtk.ResponseType.ACCEPT);
-            accept_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        //      var accept_button = (Gtk.Button) message_dialog.add_button (_("Remove Account"), Gtk.ResponseType.ACCEPT);
+        //      accept_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-                e_source.remove.begin (null);
-            }
+        //      if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
+        //          e_source.remove.begin (null);
+        //      }
 
-            message_dialog.destroy ();
-        });
+        //      message_dialog.destroy ();
+        //  });
 
-        if (edit_button != null) {
-            edit_button.clicked.connect (() => {
-                if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
-                    var imap_dialog = new ImapDialog () {
-                        transient_for = (Gtk.Window) get_toplevel ()
-                    };
+        //  if (edit_button != null) {
+        //      edit_button.clicked.connect (() => {
+        //          if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
+        //              var imap_dialog = new ImapDialog () {
+        //                  transient_for = (Gtk.Window) get_toplevel ()
+        //              };
 
-                    imap_dialog.load_configuration.begin (e_source, null, (obj, res) => {
-                        try {
-                            imap_dialog.load_configuration.end (res);
-                            imap_dialog.show_all ();
+        //              imap_dialog.load_configuration.begin (e_source, null, (obj, res) => {
+        //                  try {
+        //                      imap_dialog.load_configuration.end (res);
+        //                      imap_dialog.show_all ();
 
-                        } catch (Error e) {
-                            var error_dialog = new Granite.MessageDialog (
-                                _("Edit account failed"),
-                                _("There was an unexpected error while reading the configuration of '%s'.").printf (e_source.display_name),
-                                new ThemedIcon ("onlineaccounts-mail"),
-                                Gtk.ButtonsType.CLOSE
-                            ) {
-                                badge_icon = new ThemedIcon ("dialog-error"),
-                                transient_for = (Gtk.Window) get_toplevel ()
-                            };
-                            error_dialog.show_error_details (e.message);
-                            error_dialog.run ();
-                            error_dialog.destroy ();
-                        }
-                    });
-                }
-            });
-        }
+        //                  } catch (Error e) {
+        //                      var error_dialog = new Granite.MessageDialog (
+        //                          _("Edit account failed"),
+        //                          _("There was an unexpected error while reading the configuration of '%s'.").printf (e_source.display_name),
+        //                          new ThemedIcon ("onlineaccounts-mail"),
+        //                          Gtk.ButtonsType.CLOSE
+        //                      ) {
+        //                          badge_icon = new ThemedIcon ("dialog-error"),
+        //                          transient_for = (Gtk.Window) get_toplevel ()
+        //                      };
+        //                      error_dialog.show_error_details (e.message);
+        //                      error_dialog.run ();
+        //                      error_dialog.destroy ();
+        //                  }
+        //              });
+        //          }
+        //      });
+        //  }
 
         return grid;
     }

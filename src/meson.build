@@ -21,6 +21,7 @@ shared_module(
     dependencies: [
         camel_dep,
         glib_dep,
+        goa_dep,
         gobject_dep,
         granite_dep,
         gtk_dep,
