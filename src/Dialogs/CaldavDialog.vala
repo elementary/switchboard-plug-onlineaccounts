@@ -525,6 +525,10 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
         offline_extension.set_stay_synchronized (true);
 
+        unowned var goa_extension = (E.SourceGoa) collection_source.get_extension (E.SOURCE_EXTENSION_GOA);
+        goa_extension.account_id = collection_source.uid;
+        goa_extension.name = display_name_entry.text;
+
         sources.append (collection_source);
 
         /* next we add all child sources */
