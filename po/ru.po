@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-25 18:30+0000\n"
+"PO-Revision-Date: 2021-08-26 12:30+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
@@ -232,7 +232,7 @@ msgstr "Не удалось редактировать учетную запис
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "Произошла непредвиденная ошибка при чтении конфигурации «%s»."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
