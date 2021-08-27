@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-27 14:50+0000\n"
+"PO-Revision-Date: 2021-08-27 17:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/hu/>\n"
@@ -30,7 +30,7 @@ msgstr "Érvénytelen URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Felhasználónév"
 
 #: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
@@ -46,28 +46,28 @@ msgstr "Bejelentkezés"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "A fiók megjelenített neve"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Válasszon egy nevet a fóknak, mint \"Személyes\" vagy \"Cégi\"."
 
 #: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
 #: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: src/Dialogs/CaldavDialog.vala:119
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: src/Dialogs/CaldavDialog.vala:143
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Beállítás mentése…"
 
 #: src/Dialogs/CaldavDialog.vala:155
 msgid "All done"
-msgstr ""
+msgstr "Minden kész"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "CalDAV account added."
@@ -79,7 +79,7 @@ msgstr "Bezárás"
 
 #: src/Dialogs/CaldavDialog.vala:238
 msgid "Could not save configuration"
-msgstr ""
+msgstr "Beállítás mentése sikertelen"
 
 #: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
 msgid "Calendars"
@@ -87,19 +87,19 @@ msgstr "Naptárak"
 
 #: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
 msgid "Task Lists"
-msgstr ""
+msgstr "Feladatlista"
 
 #: src/Dialogs/CaldavDialog.vala:356
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Elérhető naptárak és feladatok keresése…"
 
 #: src/Dialogs/CaldavDialog.vala:406
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "Naptárak lekérése sikertelen"
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
-msgstr ""
+msgstr "Felhasználónév:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
 msgid "Password:"
@@ -124,7 +124,7 @@ msgstr "Nincs"
 
 #: src/Dialogs/Imap/ImapDialog.vala:102
 msgid "Use IMAP Credentials"
-msgstr "Az IMAP-hitelesítő adatok használata"
+msgstr "Az IMAP-hitelesítőadatok használata"
 
 #: src/Dialogs/Imap/ImapDialog.vala:106
 msgid "No authentication required"
@@ -132,20 +132,20 @@ msgstr "Nincs szükség hitelesítésre"
 
 #: src/Dialogs/Imap/ImapDialog.vala:341
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "A kapott adatok nem tűnnek érvényes e-mail-címnek."
 
 #: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
-msgstr "Bejelentkezés sikertelen. Ellenőrizze a hitelesítő adatait."
+msgstr "Bejelentkezés sikertelen. Ellenőrizze a hitelesítőadatait."
 
 #: src/Dialogs/Imap/ImapDialog.vala:585
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "IMAP-hitelesítés sikertelen: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "Valódi név"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -157,15 +157,15 @@ msgstr "Következő"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "E-mail-fiók beállítása…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "E-mail-fiók mentése sikertelen"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
-msgstr ""
+msgstr "Sikeres"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "E-mail account saved."
@@ -178,10 +178,11 @@ msgstr "Kapcsolódás az online fiókokhoz"
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"Csatlakoztasson online fiókokat az alsó eszköztáron lévő ikonra kattintva."
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
 msgid "Calendars and Tasks"
@@ -189,11 +190,11 @@ msgstr "Naptárak és Feladatok"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "E-mail"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -201,7 +202,7 @@ msgstr "Fiók hozzáadása…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "Fiók eltávolítása"
 
 #: src/MainView.vala:144
 msgid "Edit this account"
@@ -210,12 +211,14 @@ msgstr "Fiók szerkesztése"
 #: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "\"%s\" eltávolítása a készülékről"
 
 #: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
+"A fiók eltávolításra kerül és nem lesz elérhető a készüléken egy "
+"alkalmazásban sem."
 
 #: src/MainView.vala:176
 msgid "Remove Account"
@@ -228,7 +231,7 @@ msgstr "Fiók szerkesztése sikertelen"
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "Egy váratlan hiba történt a(z) \"%s\" beállításainak olvasása közben."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
