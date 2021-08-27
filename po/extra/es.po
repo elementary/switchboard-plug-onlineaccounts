@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-27 08:04+0000\n"
+"PO-Revision-Date: 2021-08-27 09:34+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/es/>\n"
@@ -25,7 +25,7 @@ msgstr "Configuración de cuentas en línea"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr "Gestionar las cuentas en línea y las aplicaciones conectadas"
+msgstr "Gestione las cuentas en línea y las aplicaciones conectadas"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Edit saved IMAP accounts"
