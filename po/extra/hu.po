@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"PO-Revision-Date: 2021-08-27 08:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/hu/>\n"
@@ -38,7 +38,7 @@ msgstr ""
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
 #: data/onlineaccounts.appdata.xml.in:34
 msgid "Updated translations"
-msgstr ""
+msgstr "Frissített fordítások"
 
 #: data/onlineaccounts.appdata.xml.in:22
 msgid "Verify login credentails when saving IMAP accounts"
