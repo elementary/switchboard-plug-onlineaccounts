@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-08-04 12:13+0000\n"
+"PO-Revision-Date: 2021-08-29 11:10+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -132,7 +132,7 @@ msgstr "Tunnistautumista ei vaadita"
 
 #: src/Dialogs/Imap/ImapDialog.vala:341
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "Annetut tiedot eivät vaikuta kuvastavan kelvollista sähköpostitiliä."
 
 #: src/Dialogs/Imap/ImapDialog.vala:571
 msgid "Could not log in. Please verify your credentials."
@@ -160,20 +160,16 @@ msgid "Setting up the e-mail account…"
 msgstr "Määritetään sähköpostitiliä…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:44
-#, fuzzy
-#| msgid "Could not add the e-mail account"
 msgid "Could not save the e-mail account"
-msgstr "Sähköpostitilin lisääminen ei onnistunut"
+msgstr "Sähköpostitiliä ei voitu tallentaa"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:52
 msgid "Success"
 msgstr "Onnistui"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "E-mail account saved."
-msgstr "Sähköpostitili lisätty."
+msgstr "Sähköpostitili tallennettu."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -210,10 +206,8 @@ msgid "Remove this account"
 msgstr "Poista tämä tili"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Remove this account"
 msgid "Edit this account"
-msgstr "Poista tämä tili"
+msgstr "Muokkaa tätä tiliä"
 
 #: src/MainView.vala:167
 #, c-format
@@ -232,15 +226,13 @@ msgid "Remove Account"
 msgstr "Poista tili"
 
 #: src/MainView.vala:200
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "Edit account failed"
-msgstr "Sähköpostitili lisätty."
+msgstr "Tilin muokkaaminen epäonnistui"
 
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "Kohteen '%s' asetuksia lukiessa ilmeni odottamaton virhe."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
