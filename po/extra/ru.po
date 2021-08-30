@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 20:20+0000\n"
-"PO-Revision-Date: 2021-07-24 17:19+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"PO-Revision-Date: 2021-08-25 17:20+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
 "Language: ru\n"
@@ -30,11 +30,11 @@ msgstr "Управление онлайн аккаунтами и подключ
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Редактирование сохраненных учётных записей IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgstr "Автоматическое определение метода аутентификации для IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
 #: data/onlineaccounts.appdata.xml.in:34

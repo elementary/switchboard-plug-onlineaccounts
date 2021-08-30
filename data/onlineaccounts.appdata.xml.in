@@ -7,7 +7,7 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="6.2.0" date="2021-08-24" urgency="medium">
+    <release version="6.2.0" date="2021-08-25" urgency="medium">
       <description>
         <ul>
           <li>Edit saved IMAP accounts</li>
