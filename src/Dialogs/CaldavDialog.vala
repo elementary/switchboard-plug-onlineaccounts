@@ -448,8 +448,20 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                     out calendar_user_addresses
                 );
 
+                /** Get WebDAV host: This is used to check whether we are dealing with a calendar source
+                * stored on the server itself or if its a subscription from a third party server. In case
+                * we are dealing with a calendar subscription we are going to ignore it, because we can't
+                * possibly know its credentials. So the user has to add any subscription in the corresponding
+                * app manually.
+                */
+                string? webdav_host = null;
+                if (source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND)) {
+                    unowned var webdav_extension = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+                    webdav_host = webdav_extension.soup_uri.host;
+                }
+
                 foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
-                    if (disc_source == null) {
+                    if (disc_source == null || webdav_host != null && !disc_source.href.contains (webdav_host)) {
                         continue;
                     }
 
