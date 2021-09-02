@@ -112,6 +112,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
 
         smtp_username_entry = new Gtk.Entry () {
+            activates_default = true,
             hexpand = true
         };
 
@@ -120,6 +121,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         };
 
         smtp_password_entry = new Gtk.Entry () {
+            activates_default = true,
             input_purpose = Gtk.InputPurpose.PASSWORD,
             visibility = false
         };
@@ -190,7 +192,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         save_button = new Gtk.Button.with_label (_("Log In")) {
             can_default = true,
-            has_default = true,
             sensitive = false
         };
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
@@ -230,20 +231,25 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         modal = true;
         add (window_handle);
 
+        login_page.next_button.has_default = true;
+
         login_page.cancel.connect (destroy);
 
-        login_page.next.connect (() => {
+        login_page.next_button.clicked.connect (() => {
             deck.visible_child = main_grid;
+            save_button.has_default = true;
         });
 
         save_page.close.connect (destroy);
 
         save_page.back.connect (() => {
             deck.navigate (Hdy.NavigationDirection.BACK);
+            save_button.has_default = true;
         });
 
         back_button.clicked.connect (() => {
             deck.navigate (Hdy.NavigationDirection.BACK);
+            login_page.next_button.has_default = true;
         });
 
         smtp_no_credentials.notify["active"].connect (() => {
