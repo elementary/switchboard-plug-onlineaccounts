@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-02 23:08+0000\n"
 "PO-Revision-Date: 2016-06-03 03:10+0000\n"
 "Last-Translator: Yvo Marques <macghivo@gmail.com>\n"
 "Language-Team: Luxembourgish <lb@li.org>\n"
@@ -79,19 +79,19 @@ msgstr ""
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:320 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalenneren"
 
-#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+#: src/Dialogs/CaldavDialog.vala:322 src/Dialogs/CaldavDialog.vala:330
 msgid "Task Lists"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:356
+#: src/Dialogs/CaldavDialog.vala:365
 msgid "Finding available calendars and tasks…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:406
+#: src/Dialogs/CaldavDialog.vala:415
 msgid "Could not fetch calendars"
 msgstr ""
 
@@ -128,15 +128,15 @@ msgstr ""
 msgid "No authentication required"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:341
+#: src/Dialogs/Imap/ImapDialog.vala:350
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:571
+#: src/Dialogs/Imap/ImapDialog.vala:580
 msgid "Could not log in. Please verify your credentials."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:585
+#: src/Dialogs/Imap/ImapDialog.vala:594
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

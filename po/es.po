@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-02 23:08+0000\n"
 "PO-Revision-Date: 2021-08-27 09:34+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -85,19 +85,19 @@ msgstr "Cerrar"
 msgid "Could not save configuration"
 msgstr "Error al guardar la configuración"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:320 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendarios"
 
-#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+#: src/Dialogs/CaldavDialog.vala:322 src/Dialogs/CaldavDialog.vala:330
 msgid "Task Lists"
 msgstr "Listas de tareas"
 
-#: src/Dialogs/CaldavDialog.vala:356
+#: src/Dialogs/CaldavDialog.vala:365
 msgid "Finding available calendars and tasks…"
 msgstr "Buscando calendarios y tareas disponibles …"
 
-#: src/Dialogs/CaldavDialog.vala:406
+#: src/Dialogs/CaldavDialog.vala:415
 #, fuzzy
 #| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
@@ -140,17 +140,17 @@ msgstr "Usar credenciales IMAP"
 msgid "No authentication required"
 msgstr "No se requiere autenticación"
 
-#: src/Dialogs/Imap/ImapDialog.vala:341
+#: src/Dialogs/Imap/ImapDialog.vala:350
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:571
+#: src/Dialogs/Imap/ImapDialog.vala:580
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Proporcione sus datos de acceso…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:585
+#: src/Dialogs/Imap/ImapDialog.vala:594
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
