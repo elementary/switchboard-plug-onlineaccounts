@@ -280,6 +280,15 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
             validate_form ();
         });
+
+        key_release_event.connect ((event_key) => {
+            if (event_key.keyval == Gdk.Key.Escape) {
+                if (cancellable != null) {
+                    cancellable.cancel ();
+                }
+                destroy ();
+            }
+        });
     }
 
     private void back_button_clicked () {

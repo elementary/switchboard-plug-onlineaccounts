@@ -330,6 +330,15 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 }
             });
         });
+
+        key_release_event.connect ((event_key) => {
+            if (event_key.keyval == Gdk.Key.Escape) {
+                if (cancellable != null) {
+                    cancellable.cancel ();
+                }
+                destroy ();
+            }
+        });
     }
 
     private void set_button_sensitivity () {
