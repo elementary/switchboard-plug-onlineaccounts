@@ -231,8 +231,8 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
                 try {
                     save_configuration.end (res);
-                    save_configuration_page_stack.set_visible_child_name ("success");
                     save_configuration_back_button.visible = false;
+                    save_configuration_page_stack.set_visible_child_name ("success");
                 } catch (Error e) {
                     var error_view = save_configuration_page_stack.get_child_by_name ("error");
                     if (error_view != null) {
