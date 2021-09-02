@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-02 23:08+0000\n"
 "PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -85,19 +85,19 @@ msgstr "关闭"
 msgid "Could not save configuration"
 msgstr "保存配置出错"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:320 src/Plug.vala:62
 msgid "Calendars"
 msgstr "日历"
 
-#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+#: src/Dialogs/CaldavDialog.vala:322 src/Dialogs/CaldavDialog.vala:330
 msgid "Task Lists"
 msgstr "任务列表"
 
-#: src/Dialogs/CaldavDialog.vala:356
+#: src/Dialogs/CaldavDialog.vala:365
 msgid "Finding available calendars and tasks…"
 msgstr "查找可用日历和任务…"
 
-#: src/Dialogs/CaldavDialog.vala:406
+#: src/Dialogs/CaldavDialog.vala:415
 #, fuzzy
 #| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
@@ -136,17 +136,17 @@ msgstr "使用 IMAP 证书"
 msgid "No authentication required"
 msgstr "无须身份验证"
 
-#: src/Dialogs/Imap/ImapDialog.vala:341
+#: src/Dialogs/Imap/ImapDialog.vala:350
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:571
+#: src/Dialogs/Imap/ImapDialog.vala:580
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "请输入您的认证信息…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:585
+#: src/Dialogs/Imap/ImapDialog.vala:594
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-02 23:08+0000\n"
 "PO-Revision-Date: 2021-08-25 18:30+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -81,19 +81,19 @@ msgstr "Tanca"
 msgid "Could not save configuration"
 msgstr "No s'ha pogut desar la configuració."
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:320 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendaris"
 
-#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+#: src/Dialogs/CaldavDialog.vala:322 src/Dialogs/CaldavDialog.vala:330
 msgid "Task Lists"
 msgstr "Llistes de tasques"
 
-#: src/Dialogs/CaldavDialog.vala:356
+#: src/Dialogs/CaldavDialog.vala:365
 msgid "Finding available calendars and tasks…"
 msgstr "Es troben els calendaris i les tasques disponibles…"
 
-#: src/Dialogs/CaldavDialog.vala:406
+#: src/Dialogs/CaldavDialog.vala:415
 msgid "Could not fetch calendars"
 msgstr "No s'han pogut obtenir els calendaris."
 
@@ -130,16 +130,16 @@ msgstr "Usa credencials d'IMAP"
 msgid "No authentication required"
 msgstr "No cal autenticació"
 
-#: src/Dialogs/Imap/ImapDialog.vala:341
+#: src/Dialogs/Imap/ImapDialog.vala:350
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Les dades proporcionades no semblen reflectir un compte de correu vàlid."
 
-#: src/Dialogs/Imap/ImapDialog.vala:571
+#: src/Dialogs/Imap/ImapDialog.vala:580
 msgid "Could not log in. Please verify your credentials."
 msgstr "No s'ha pogut iniciar la sessió. Verifiqueu les credencials."
 
-#: src/Dialogs/Imap/ImapDialog.vala:585
+#: src/Dialogs/Imap/ImapDialog.vala:594
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Ha fallat la verificació d'IMAP: %s"
