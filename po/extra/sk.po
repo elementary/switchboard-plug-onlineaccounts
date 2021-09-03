@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 23:08+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2021-08-26 17:56+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -31,35 +31,39 @@ msgstr "Spravujte online účty a pripojené aplikácie"
 msgid "Close dialogs when pressing \"ESC\""
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
-#: data/onlineaccounts.appdata.xml.in:33 data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Make sure you can always navigate next by pressing \"enter\""
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
 msgid "Updated translations"
 msgstr "Aktualizované preklady"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Edit saved IMAP accounts"
 msgstr "Upravujte uložené IMAP účty"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Automatically detect authentication method for IMAP"
 msgstr "Automaticky zistiť metódu overenia pre IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:30
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr "Overovať prihlasovacie údaje pri ukladaní IMAP účtov"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Nastavujte priečinky Archív, Koncepty, Odoslané a Predlohy pre IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr "Zatvoriť vyskakovacie okno „Pridať účet“ pri označení položky"
 
-#: data/onlineaccounts.appdata.xml.in:40
+#: data/onlineaccounts.appdata.xml.in:41
 msgid "Complete redesign"
 msgstr "Úplná prerábka"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Fix blurry icons on HiDPI"
 msgstr "Opravené rozmazané ikonky na displejoch s vysokým rozlíšením (HiDPI)"

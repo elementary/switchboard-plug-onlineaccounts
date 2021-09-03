@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 23:08+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2020-10-30 09:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -31,38 +31,42 @@ msgstr "ऑनलाइन खाती आणि कनेक्ट केल�
 msgid "Close dialogs when pressing \"ESC\""
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
-#: data/onlineaccounts.appdata.xml.in:33 data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Make sure you can always navigate next by pressing \"enter\""
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
 msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Edit saved IMAP accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:30
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:40
+#: data/onlineaccounts.appdata.xml.in:41
 #, fuzzy
 #| msgid "Major redesign"
 msgid "Complete redesign"
 msgstr "पुन्हा डिझाईन करण्याचे मोठे काम"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Fix blurry icons on HiDPI"
 msgstr "हायडीपीआय वर अस्पष्ट चिन्हांशी संबंधित समस्यांचे निराकरण करा"
 

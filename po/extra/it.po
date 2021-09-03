@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 23:08+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -31,38 +31,42 @@ msgstr "Gestisci gli account online e le applicazioni collegate"
 msgid "Close dialogs when pressing \"ESC\""
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
-#: data/onlineaccounts.appdata.xml.in:33 data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Make sure you can always navigate next by pressing \"enter\""
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
 msgid "Updated translations"
 msgstr "Traduzioni aggiornate"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Edit saved IMAP accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:30
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:40
+#: data/onlineaccounts.appdata.xml.in:41
 #, fuzzy
 #| msgid "Major redesign"
 msgid "Complete redesign"
 msgstr "Grande riprogettazione"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Fix blurry icons on HiDPI"
 msgstr "Corregge le icone sfocate su schermi HiDPI"
 

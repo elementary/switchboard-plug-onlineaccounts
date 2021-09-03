@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-02 23:08+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2021-08-25 07:16+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -31,36 +31,40 @@ msgstr "Internetkonten und verbundene Anwendungen verwalten"
 msgid "Close dialogs when pressing \"ESC\""
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:23
-#: data/onlineaccounts.appdata.xml.in:33 data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Make sure you can always navigate next by pressing \"enter\""
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
 msgid "Updated translations"
 msgstr "Aktualisierte Übersetzungen"
 
-#: data/onlineaccounts.appdata.xml.in:21
+#: data/onlineaccounts.appdata.xml.in:22
 msgid "Edit saved IMAP accounts"
 msgstr "Gespeicherte IMAP-Konten bearbeiten"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Automatically detect authentication method for IMAP"
 msgstr "IMAP-Authentifizierungsmethode automatisch ermitteln"
 
-#: data/onlineaccounts.appdata.xml.in:30
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr "Anmeldedaten vor dem Speichern des IMAP-Kontos überprüfen"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "IMAP-Ordner einrichten: Archiv, Entwürfe, Gesendet und Vorlagen"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Einblenddialog »Konto hinzufügen« schließen, wenn ein Eintrag ausgewählt wird"
 
-#: data/onlineaccounts.appdata.xml.in:40
+#: data/onlineaccounts.appdata.xml.in:41
 msgid "Complete redesign"
 msgstr "Komplettes Redesign"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Fix blurry icons on HiDPI"
 msgstr "Behebt ein Problem mit unscharfen Icons bei HiDPI Bildschirmen"
