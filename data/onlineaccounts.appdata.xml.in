@@ -11,6 +11,7 @@
       <description>
         <ul>
           <li>Close dialogs when pressing "ESC"</li>
+          <li>Make sure you can always navigate next by pressing "enter"</li>
           <li>Updated translations</li>
         </ul>
       </description>

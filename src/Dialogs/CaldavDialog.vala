@@ -85,6 +85,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         var display_name_label = new Granite.HeaderLabel (_("Account Display Name"));
 
         display_name_entry = new Gtk.Entry () {
+            activates_default = true,
             hexpand = true
         };
 
@@ -160,7 +161,10 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         save_configuration_success_view.show_all ();
 
         var save_configuration_back_button = new Gtk.Button.with_label (_("Back"));
-        save_configuration_close_button = new Gtk.Button.with_label (_("Close"));
+
+        save_configuration_close_button = new Gtk.Button.with_label (_("Close")) {
+            can_default = true
+        };
         save_configuration_close_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         var save_configuration_page_action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
@@ -222,13 +226,13 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             save_configuration_page_stack.set_visible_child_name ("busy");
 
             save_configuration.begin ((obj, res) => {
+                save_configuration_close_button.has_default = true;
                 save_configuration_close_button.sensitive = true;
 
                 try {
                     save_configuration.end (res);
-                    save_configuration_back_button.sensitive = false;
+                    save_configuration_back_button.visible = false;
                     save_configuration_page_stack.set_visible_child_name ("success");
-
                 } catch (Error e) {
                     var error_view = save_configuration_page_stack.get_child_by_name ("error");
                     if (error_view != null) {
