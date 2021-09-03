@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 07:17+0000\n"
-"PO-Revision-Date: 2021-09-03 01:11+0000\n"
+"PO-Revision-Date: 2021-09-03 11:23+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -34,7 +34,7 @@ msgstr "Закриття діалогових вікон натисканням 
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr ""
+msgstr "Натиснувши «Enter» ви завжди можете перейти далі"
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
 #: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
