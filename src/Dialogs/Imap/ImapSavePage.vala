@@ -22,9 +22,10 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
     public signal void back ();
     public signal void close ();
 
+    private Gtk.Button close_button;
+
     private Gtk.Stack stack;
     private Gtk.Button back_button;
-    private Gtk.Button close_button;
     private Granite.Widgets.AlertView error_alert_view;
     private GLib.Cancellable? cancellable = null;
 
@@ -107,11 +108,12 @@ public class OnlineAccounts.ImapSavePage : Gtk.Grid {
     public void show_busy (GLib.Cancellable cancellable) {
         this.cancellable = cancellable;
         stack.set_visible_child_name ("busy");
+        close_button.has_default = true;
     }
 
     public void show_success () {
         stack.set_visible_child_name ("success");
-        back_button.sensitive = false;
+        back_button.visible = false;
     }
 
     public void show_error (Error error) {
