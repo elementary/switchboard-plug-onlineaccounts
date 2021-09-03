@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 07:17+0000\n"
-"PO-Revision-Date: 2021-08-24 21:51+0000\n"
+"PO-Revision-Date: 2021-09-04 03:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/he/>\n"
@@ -29,11 +29,11 @@ msgstr "ניהול חשבונות מקוונים ויישומים מקושרים
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Close dialogs when pressing \"ESC\""
-msgstr ""
+msgstr "תיבות דו־שיח נסגרות בלחיצה על „Esc”"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr ""
+msgstr "וידאנו שתמיד ניתן לנווט הלאה עם „Enter”"
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
 #: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
