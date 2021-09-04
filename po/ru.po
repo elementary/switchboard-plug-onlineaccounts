@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2021-08-26 23:07+0000\n"
 "Last-Translator: asdffdsdaf <asdffdsdaf@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -41,7 +41,7 @@ msgstr "Пароль"
 msgid "Cancel"
 msgstr "Отменить"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Log In"
 msgstr "Войти"
 
@@ -49,52 +49,52 @@ msgstr "Войти"
 msgid "Account Display Name"
 msgstr "Отображаемое имя учётной записи"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Выберите название для учетной записи, например «Рабочая» или «Личная»."
 
-#: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "Назад"
 
-#: src/Dialogs/CaldavDialog.vala:119
+#: src/Dialogs/CaldavDialog.vala:120
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/Dialogs/CaldavDialog.vala:143
+#: src/Dialogs/CaldavDialog.vala:144
 msgid "Saving the configuration…"
 msgstr "Сохранение конфигурации…"
 
-#: src/Dialogs/CaldavDialog.vala:155
+#: src/Dialogs/CaldavDialog.vala:156
 msgid "All done"
 msgstr "Готово"
 
-#: src/Dialogs/CaldavDialog.vala:156
+#: src/Dialogs/CaldavDialog.vala:157
 msgid "CalDAV account added."
 msgstr "Учётная запись CalDAV добавлена."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
+#: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "Закрыть"
 
-#: src/Dialogs/CaldavDialog.vala:238
+#: src/Dialogs/CaldavDialog.vala:242
 msgid "Could not save configuration"
 msgstr "Не удалось сохранить конфигурацию"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Календари"
 
-#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+#: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
 msgid "Task Lists"
 msgstr "Списки задач"
 
-#: src/Dialogs/CaldavDialog.vala:356
+#: src/Dialogs/CaldavDialog.vala:369
 msgid "Finding available calendars and tasks…"
 msgstr "Поиск доступных календарей и задач…"
 
-#: src/Dialogs/CaldavDialog.vala:406
+#: src/Dialogs/CaldavDialog.vala:419
 msgid "Could not fetch calendars"
 msgstr "Не удалось получить календари"
 
@@ -102,24 +102,24 @@ msgstr "Не удалось получить календари"
 msgid "Username:"
 msgstr "Имя пользователя:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:119
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:142
 msgid "Server URL:"
 msgstr "URL-адрес сервера:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:148
 msgid "Port:"
 msgstr "Порт:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:156
 msgid "Encryption:"
 msgstr "Шифрование:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:164
 msgid "None"
 msgstr "Отсутствует"
 
@@ -131,17 +131,17 @@ msgstr "Использовать учётные данные IMAP"
 msgid "No authentication required"
 msgstr "Авторизация не требуется"
 
-#: src/Dialogs/Imap/ImapDialog.vala:341
+#: src/Dialogs/Imap/ImapDialog.vala:356
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Существующие данные не соответствуют действующей учетной записи электронной "
 "почты."
 
-#: src/Dialogs/Imap/ImapDialog.vala:571
+#: src/Dialogs/Imap/ImapDialog.vala:586
 msgid "Could not log in. Please verify your credentials."
 msgstr "Не удалось войти. Пожалуйста, проверьте свои учетные данные."
 
-#: src/Dialogs/Imap/ImapDialog.vala:585
+#: src/Dialogs/Imap/ImapDialog.vala:600
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Не удалось выполнить проверку IMAP: %s"
@@ -158,19 +158,19 @@ msgstr "Электронная почта"
 msgid "Next"
 msgstr "Далее"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:32
+#: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
 msgstr "Настройка учетной записи эл. почты…"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:44
+#: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
 msgstr "Не удалось сохранить учетную запись эл. почты"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:52
+#: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
 msgstr "Успешно"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:53
+#: src/Dialogs/Imap/ImapSavePage.vala:54
 msgid "E-mail account saved."
 msgstr "Учётная запись эл. почты сохранена."
 

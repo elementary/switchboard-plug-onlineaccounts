@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -35,7 +35,7 @@ msgstr "ססמה"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:191
+#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Log In"
 msgstr "כניסה"
 
@@ -43,52 +43,52 @@ msgstr "כניסה"
 msgid "Account Display Name"
 msgstr "שם תצוגת חשבון"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "נא לבחור שם כמו „עבודה” או „פרטי” לחשבון."
 
-#: src/Dialogs/CaldavDialog.vala:117 src/Dialogs/CaldavDialog.vala:162
-#: src/Dialogs/Imap/ImapDialog.vala:189 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "חזרה"
 
-#: src/Dialogs/CaldavDialog.vala:119
+#: src/Dialogs/CaldavDialog.vala:120
 msgid "Save"
 msgstr "שמירה"
 
-#: src/Dialogs/CaldavDialog.vala:143
+#: src/Dialogs/CaldavDialog.vala:144
 msgid "Saving the configuration…"
 msgstr "ההגדרות נשמרות…"
 
-#: src/Dialogs/CaldavDialog.vala:155
+#: src/Dialogs/CaldavDialog.vala:156
 msgid "All done"
 msgstr "הכול בוצע"
 
-#: src/Dialogs/CaldavDialog.vala:156
+#: src/Dialogs/CaldavDialog.vala:157
 msgid "CalDAV account added."
 msgstr "נוסף חשבון CalDAV."
 
-#: src/Dialogs/CaldavDialog.vala:163 src/Dialogs/Imap/ImapSavePage.vala:71
+#: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "סגירה"
 
-#: src/Dialogs/CaldavDialog.vala:238
+#: src/Dialogs/CaldavDialog.vala:242
 msgid "Could not save configuration"
 msgstr "לא ניתן לשמור את ההגדרות"
 
-#: src/Dialogs/CaldavDialog.vala:311 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
 msgid "Calendars"
 msgstr "יומנים"
 
-#: src/Dialogs/CaldavDialog.vala:313 src/Dialogs/CaldavDialog.vala:321
+#: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
 msgid "Task Lists"
 msgstr "רשימות משימות"
 
-#: src/Dialogs/CaldavDialog.vala:356
+#: src/Dialogs/CaldavDialog.vala:369
 msgid "Finding available calendars and tasks…"
 msgstr "איתור לוחות שנה ומשימות זמינים…"
 
-#: src/Dialogs/CaldavDialog.vala:406
+#: src/Dialogs/CaldavDialog.vala:419
 msgid "Could not fetch calendars"
 msgstr "לא ניתן למשוך לוחות שנה"
 
@@ -96,24 +96,24 @@ msgstr "לא ניתן למשוך לוחות שנה"
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:118
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:119
 msgid "Password:"
 msgstr "ססמה:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:140
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:142
 msgid "Server URL:"
 msgstr "כתובת השרת:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:146
+#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:148
 msgid "Port:"
 msgstr "פתחה:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:154
+#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:156
 msgid "Encryption:"
 msgstr "הצפנה:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:162
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:164
 msgid "None"
 msgstr "ללא"
 
@@ -125,15 +125,15 @@ msgstr "שימוש בפרטי הגישה ל־IMAP"
 msgid "No authentication required"
 msgstr "לא נדרש אימות"
 
-#: src/Dialogs/Imap/ImapDialog.vala:341
+#: src/Dialogs/Imap/ImapDialog.vala:356
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "הנתונים שסופקו לא משקפים כתובת דוא״ל תקנית."
 
-#: src/Dialogs/Imap/ImapDialog.vala:571
+#: src/Dialogs/Imap/ImapDialog.vala:586
 msgid "Could not log in. Please verify your credentials."
 msgstr "לא ניתן להיכנס. נא לאמת את פרטי הגישה שלך."
 
-#: src/Dialogs/Imap/ImapDialog.vala:585
+#: src/Dialogs/Imap/ImapDialog.vala:600
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "האימות מול ה־IMAP נכשל: %s"
@@ -150,19 +150,19 @@ msgstr "דוא״ל"
 msgid "Next"
 msgstr "הבא"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:32
+#: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
 msgstr "חשבון הדוא״ל מוגדר…"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:44
+#: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
 msgstr "לא ניתן לשמור את חשבון הדוא״ל"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:52
+#: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
 msgstr "הצלחה"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:53
+#: src/Dialogs/Imap/ImapSavePage.vala:54
 msgid "E-mail account saved."
 msgstr "חשבון הדוא״ל נשמר."
 

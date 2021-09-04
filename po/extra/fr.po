@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 20:20+0000\n"
+"POT-Creation-Date: 2021-09-03 07:17+0000\n"
 "PO-Revision-Date: 2021-08-25 07:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -28,41 +28,49 @@ msgid "Manage online accounts and connected applications"
 msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #: data/onlineaccounts.appdata.xml.in:13
-msgid "Edit saved IMAP accounts"
-msgstr "Modifiez les comptes IMAP enregistrés"
+msgid "Close dialogs when pressing \"ESC\""
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Automatically detect authentication method for IMAP"
+msgid "Make sure you can always navigate next by pressing \"enter\""
 msgstr ""
-"Détection automatique de la méthode d'authentification pour le protocole IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:25
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
 #: data/onlineaccounts.appdata.xml.in:22
+msgid "Edit saved IMAP accounts"
+msgstr "Modifiez les comptes IMAP enregistrés"
+
+#: data/onlineaccounts.appdata.xml.in:23
+msgid "Automatically detect authentication method for IMAP"
+msgstr ""
+"Détection automatique de la méthode d'authentification pour le protocole IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 "Vérification des identifiants de connexion lors de l'enregistrement des "
 "comptes IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 "Définition des dossiers Archive, Brouillons, Envoyés et Modèles pour l'IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Fermeture de la fenêtre flottante « Ajouter un compte » lorsqu'un élément "
 "est sélectionné"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:41
 msgid "Complete redesign"
 msgstr "Refonte complète"
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Fix blurry icons on HiDPI"
 msgstr "Correction des icônes floues sur les affichages HiDPI"
 

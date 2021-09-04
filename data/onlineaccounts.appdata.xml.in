@@ -7,6 +7,15 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
+    <release version="6.2.1" date="2021-09-02" urgency="medium">
+      <description>
+        <ul>
+          <li>Close dialogs when pressing "ESC"</li>
+          <li>Make sure you can always navigate next by pressing "enter"</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.2.0" date="2021-08-25" urgency="medium">
       <description>
         <ul>

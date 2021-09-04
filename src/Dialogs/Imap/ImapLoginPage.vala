@@ -20,7 +20,6 @@
 
 public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
     public signal void cancel ();
-    public signal void next ();
 
     public string display_name { get; set; }
     public string email { get; set; }
@@ -31,7 +30,8 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
     private Granite.ValidatedEntry email_entry;
     private Granite.ValidatedEntry password_entry;
     private Granite.ValidatedEntry real_name_entry;
-    private Gtk.Button next_button;
+
+    public Gtk.Button next_button { get; set; }
 
     construct {
         Regex? email_regex = null;
@@ -137,10 +137,6 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
 
         cancel_button.clicked.connect (() => {
             cancel ();
-        });
-
-        next_button.clicked.connect (() => {
-            next ();
         });
     }
 
