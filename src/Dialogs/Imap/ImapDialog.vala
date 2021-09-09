@@ -515,6 +515,10 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         account_auth_extension.port = (uint) imap_port_spin.value;
         account_auth_extension.user = imap_username_entry.text;
 
+        unowned var refresh_extension = (E.SourceRefresh) account_source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+        refresh_extension.enabled = true;
+        refresh_extension.interval_minutes = 10;
+
         /* configure identity_source */
 
         unowned var submission_extension = (E.SourceMailSubmission) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_SUBMISSION);

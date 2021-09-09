@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
+"POT-Creation-Date: 2021-09-09 18:32+0000\n"
 "PO-Revision-Date: 2021-08-26 17:56+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -134,12 +134,12 @@ msgstr "Overenie nie je potrebné"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "Poskytnuté údaje sa nezhodujú s platným e-mailovým účtom."
 
-#: src/Dialogs/Imap/ImapDialog.vala:586
+#: src/Dialogs/Imap/ImapDialog.vala:590
 msgid "Could not log in. Please verify your credentials."
 msgstr ""
 "Nepodarilo sa prihlásiť. Prosím, skontrolujte vaše prihlasovacie údaje."
 
-#: src/Dialogs/Imap/ImapDialog.vala:600
+#: src/Dialogs/Imap/ImapDialog.vala:604
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Overenie IMAP sa nepodarilo: %s"
