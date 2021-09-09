@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
+"POT-Creation-Date: 2021-09-09 18:32+0000\n"
 "PO-Revision-Date: 2021-09-04 15:00+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -36,38 +36,42 @@ msgstr "Закрытие диалоговых окон нажатием «ESC»"
 msgid "Make sure you can always navigate next by pressing \"enter\""
 msgstr "Вы всегда можете перейти дальше нажав «enter»"
 
-#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
-#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Make sure the refresh interval for an IMAP account is set"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:44
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:23
 msgid "Edit saved IMAP accounts"
 msgstr "Редактирование сохраненных учётных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Automatically detect authentication method for IMAP"
 msgstr "Автоматическое определение метода аутентификации для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:32
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 "Проверка учетных данных для входа во время сохранении учетных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Настройка папок Архив, Черновики, Отправленные и Шаблоны для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Закрытие всплывающего окна «Добавить учетную запись» при выборе элемента"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Complete redesign"
 msgstr "Полное изменение дизайна"
 
-#: data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:43
 msgid "Fix blurry icons on HiDPI"
 msgstr "Исправлены размытые значки на HiDPI"
 
