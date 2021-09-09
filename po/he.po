@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
+"POT-Creation-Date: 2021-09-09 18:32+0000\n"
 "PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -129,11 +129,11 @@ msgstr "לא נדרש אימות"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "הנתונים שסופקו לא משקפים כתובת דוא״ל תקנית."
 
-#: src/Dialogs/Imap/ImapDialog.vala:586
+#: src/Dialogs/Imap/ImapDialog.vala:590
 msgid "Could not log in. Please verify your credentials."
 msgstr "לא ניתן להיכנס. נא לאמת את פרטי הגישה שלך."
 
-#: src/Dialogs/Imap/ImapDialog.vala:600
+#: src/Dialogs/Imap/ImapDialog.vala:604
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "האימות מול ה־IMAP נכשל: %s"

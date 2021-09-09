@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
+"POT-Creation-Date: 2021-09-09 18:32+0000\n"
 "PO-Revision-Date: 2021-08-25 07:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -136,11 +136,11 @@ msgstr ""
 "Les données fournies ne semblent pas correspondre à un compte de messagerie "
 "valide."
 
-#: src/Dialogs/Imap/ImapDialog.vala:586
+#: src/Dialogs/Imap/ImapDialog.vala:590
 msgid "Could not log in. Please verify your credentials."
 msgstr "Connexion impossible. Veuillez vérifier vos identifiants."
 
-#: src/Dialogs/Imap/ImapDialog.vala:600
+#: src/Dialogs/Imap/ImapDialog.vala:604
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Échec de la vérification des paramètres IMAP : %s"
