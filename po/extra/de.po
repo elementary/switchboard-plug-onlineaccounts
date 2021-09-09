@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-03 07:17+0000\n"
-"PO-Revision-Date: 2021-08-25 07:16+0000\n"
+"PO-Revision-Date: 2021-09-07 17:31+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/de/>\n"
@@ -29,11 +29,13 @@ msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Close dialogs when pressing \"ESC\""
-msgstr ""
+msgstr "Dialoge durch Drücken von \"ESC\" schliessen"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure you can always navigate next by pressing \"enter\""
 msgstr ""
+"Sicherstellen, dass immer durch Drücken von \"Enter\" zum nächsten Element "
+"navigiert werden kann"
 
 #: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
 #: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
