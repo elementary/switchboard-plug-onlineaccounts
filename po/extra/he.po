@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-09 18:32+0000\n"
+"POT-Creation-Date: 2021-09-09 18:50+0000\n"
 "PO-Revision-Date: 2021-09-04 03:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -39,36 +39,42 @@ msgstr "וידאנו שתמיד ניתן לנווט הלאה עם „Enter”"
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:25
-#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:16
+#, fuzzy
+#| msgid "Automatically detect authentication method for IMAP"
+msgid "Use a more complete list of authentication methods for IMAP"
+msgstr "לזהות את שיטת האימות ל־IMAP אוטומטית"
+
+#: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Edit saved IMAP accounts"
 msgstr "עריכת חשבונות IMAP שמורים"
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:25
 msgid "Automatically detect authentication method for IMAP"
 msgstr "לזהות את שיטת האימות ל־IMAP אוטומטית"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr "פרטי הגישה מאומתים בעת שמירת חשבונות IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "אפשר להקים תיקיות ארכיון, טיוטות, נשלח ותבניות ב־IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:35
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr "החלונית הצפה „הוספת חשבון” נסגרת כשנבחר פריט"
 
-#: data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:43
 msgid "Complete redesign"
 msgstr "עיצוב מחדש מאפס"
 
-#: data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:44
 msgid "Fix blurry icons on HiDPI"
 msgstr "תיקון סמלים מטושטשים ברזולוציה גבוהה"
 
