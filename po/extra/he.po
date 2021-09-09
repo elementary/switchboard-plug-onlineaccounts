@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-09 18:50+0000\n"
-"PO-Revision-Date: 2021-09-04 03:17+0000\n"
+"PO-Revision-Date: 2021-09-10 01:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/he/>\n"
@@ -37,13 +37,11 @@ msgstr "וידאנו שתמיד ניתן לנווט הלאה עם „Enter”"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
+msgstr "וידוא שמוגדר הפרש בין עדכונים בחשבון IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:16
-#, fuzzy
-#| msgid "Automatically detect authentication method for IMAP"
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "לזהות את שיטת האימות ל־IMAP אוטומטית"
+msgstr "נעשה שימוש ברשימה מלאה יותר של שיטות אימות ל־IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
 #: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
