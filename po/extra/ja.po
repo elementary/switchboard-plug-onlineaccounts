@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-09 18:50+0000\n"
-"PO-Revision-Date: 2021-09-03 11:23+0000\n"
+"PO-Revision-Date: 2021-09-10 05:50+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -37,13 +37,11 @@ msgstr "Enter キー押下で常に次のビューに遷移できるように修
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
+msgstr "IMAP アカウントを更新する時間が設定されていることを確認するように修正"
 
 #: data/onlineaccounts.appdata.xml.in:16
-#, fuzzy
-#| msgid "Automatically detect authentication method for IMAP"
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "IMAP の認証方式を自動的に検知するように修正"
+msgstr "IMAP の認証方式の一覧を外部ライブラリから取得するように修正"
 
 #: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
 #: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
