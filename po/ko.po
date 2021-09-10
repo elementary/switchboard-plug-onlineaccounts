@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
+"POT-Creation-Date: 2021-09-09 18:50+0000\n"
 "PO-Revision-Date: 2019-01-12 13:42+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
@@ -142,13 +142,13 @@ msgstr "인증 없이 실행"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:586
+#: src/Dialogs/Imap/ImapDialog.vala:590
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "로그인 정보를 입력하세요…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:600
+#: src/Dialogs/Imap/ImapDialog.vala:604
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

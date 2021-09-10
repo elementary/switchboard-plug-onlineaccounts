@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
+"POT-Creation-Date: 2021-09-09 18:50+0000\n"
 "PO-Revision-Date: 2021-07-28 21:38+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -134,11 +134,11 @@ msgstr "No authentication required"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:586
+#: src/Dialogs/Imap/ImapDialog.vala:590
 msgid "Could not log in. Please verify your credentials."
 msgstr "Could not log in. Please verify your credentials."
 
-#: src/Dialogs/Imap/ImapDialog.vala:600
+#: src/Dialogs/Imap/ImapDialog.vala:604
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP verification failed: %s"

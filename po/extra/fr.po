@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-03 07:17+0000\n"
-"PO-Revision-Date: 2021-08-25 07:16+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"POT-Creation-Date: 2021-09-09 18:50+0000\n"
+"PO-Revision-Date: 2021-09-09 10:53+0000\n"
+"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
 "Language: fr\n"
@@ -29,48 +29,59 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Close dialogs when pressing \"ESC\""
-msgstr ""
+msgstr "Fermer la boîte de dialogue en appuyant sur « Échap »"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure you can always navigate next by pressing \"enter\""
+msgstr "Faire en sorte de pouvoir toujours naviguer en appuyant sur « Entrée »"
+
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:15 data/onlineaccounts.appdata.xml.in:24
-#: data/onlineaccounts.appdata.xml.in:34 data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:16
+#, fuzzy
+#| msgid "Automatically detect authentication method for IMAP"
+msgid "Use a more complete list of authentication methods for IMAP"
+msgstr ""
+"Détection automatique de la méthode d'authentification pour le protocole IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
-#: data/onlineaccounts.appdata.xml.in:22
+#: data/onlineaccounts.appdata.xml.in:24
 msgid "Edit saved IMAP accounts"
 msgstr "Modifiez les comptes IMAP enregistrés"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:25
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 "Détection automatique de la méthode d'authentification pour le protocole IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:33
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 "Vérification des identifiants de connexion lors de l'enregistrement des "
 "comptes IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 "Définition des dossiers Archive, Brouillons, Envoyés et Modèles pour l'IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:35
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Fermeture de la fenêtre flottante « Ajouter un compte » lorsqu'un élément "
 "est sélectionné"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:43
 msgid "Complete redesign"
 msgstr "Refonte complète"
 
-#: data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:44
 msgid "Fix blurry icons on HiDPI"
 msgstr "Correction des icônes floues sur les affichages HiDPI"
 
