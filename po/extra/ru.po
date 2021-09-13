@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-09 18:50+0000\n"
-"PO-Revision-Date: 2021-09-04 15:00+0000\n"
+"PO-Revision-Date: 2021-09-11 15:50+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
@@ -38,13 +38,11 @@ msgstr "Вы всегда можете перейти дальше нажав «
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
+msgstr "Исправлена проблема установки интервала обновления учётной записи IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:16
-#, fuzzy
-#| msgid "Automatically detect authentication method for IMAP"
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "Автоматическое определение метода аутентификации для IMAP"
+msgstr "Используется более полный список методов аутентификации для IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
 #: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
