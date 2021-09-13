@@ -474,7 +474,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 }
 
                 foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
-                    if (disc_source == null || webdav_host != null && !disc_source.href.contains (webdav_host)) {
+                    if (disc_source == null || (only_supports & disc_source.supports) == 0 || webdav_host != null && !disc_source.href.contains (webdav_host)) {
                         continue;
                     }
 
