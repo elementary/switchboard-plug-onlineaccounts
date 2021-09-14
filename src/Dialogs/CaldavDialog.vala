@@ -474,7 +474,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 }
 
                 foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
-                    if (disc_source == null || webdav_host != null && !disc_source.href.contains (webdav_host)) {
+                    if (disc_source == null || (only_supports & disc_source.supports) == 0 || webdav_host != null && !disc_source.href.contains (webdav_host)) {
                         continue;
                     }
 
@@ -538,6 +538,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         unowned var collection_extension = (E.SourceCollection) collection_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
         collection_extension.backend_name = "webdav";
+        collection_extension.calendar_url = url_entry.text;
         collection_extension.identity = username_entry.text;
 
         unowned var authentication_extension = (E.SourceAuthentication) collection_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
@@ -552,40 +553,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         sources.append (collection_source);
 
-        /* next we add all child sources */
-        E.Source? source = null;
-        var position = 0;
-        while ((source = (E.Source) calendars_store.get_item (position)) != null) {
-            position++;
-
-            source.parent = collection_source.dup_uid ();
-
-            if (!source.has_extension (E.SOURCE_EXTENSION_AUTHENTICATION)) {
-                /**
-                 * Make sure the source has the Authentication extension,
-                 * thus the credentials can be reused. It's fine when the extension
-                 * doesn't have set values.
-                */
-                source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
-            }
-
-            unowned var webdav = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
-            webdav.calendar_auto_schedule = true;
-
-            unowned var auth_extension = (E.SourceAuthentication) source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
-            auth_extension.user = username_entry.text;
-
-            unowned var offline = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
-            offline.set_stay_synchronized (true);
-
-            yield source.store_password (password_entry.text, true, cancellable);
-
-            sources.append (source);
-        }
-
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
         yield collection_source.store_password (password_entry.text, true, cancellable);
         yield registry.create_sources (sources, cancellable);
+
+        /* Discovers all child sources and EDS automatically adds them */
+        yield registry.refresh_backend (collection_source.uid, cancellable);
     }
 
     private class SourceRow : Gtk.ListBoxRow {
