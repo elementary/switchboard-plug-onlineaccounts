@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-09 18:50+0000\n"
+"POT-Creation-Date: 2021-09-14 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -40,35 +40,39 @@ msgstr ""
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
-#: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.appdata.xml.in:17
+msgid "Fix adding, editing, and removing lists in Tasks"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
+#: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
 msgid "Updated translations"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:25
 msgid "Edit saved IMAP accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:26
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:35
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:35
+#: data/onlineaccounts.appdata.xml.in:36
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:44
 msgid "Complete redesign"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:45
 msgid "Fix blurry icons on HiDPI"
 msgstr ""

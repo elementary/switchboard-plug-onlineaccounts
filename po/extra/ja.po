@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-09 18:50+0000\n"
+"POT-Creation-Date: 2021-09-14 21:53+0000\n"
 "PO-Revision-Date: 2021-09-10 05:50+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -43,39 +43,43 @@ msgstr "IMAP アカウントを更新する時間が設定されていること�
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr "IMAP の認証方式の一覧を外部ライブラリから取得するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:17 data/onlineaccounts.appdata.xml.in:26
-#: data/onlineaccounts.appdata.xml.in:36 data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.appdata.xml.in:17
+msgid "Fix adding, editing, and removing lists in Tasks"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
+#: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:25
 msgid "Edit saved IMAP accounts"
 msgstr "保存済みの IMAP アカウントを編集する機能を追加"
 
-#: data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:26
 msgid "Automatically detect authentication method for IMAP"
 msgstr "IMAP の認証方式を自動的に検知するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:34
 msgid "Verify login credentails when saving IMAP accounts"
 msgstr "IMAP アカウントを保存する際にログイン資格情報を認証するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:35
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 "アーカイブ、下書き、送信済み、テンプレートフォルダーを IMAP 用にセットアップ"
 
-#: data/onlineaccounts.appdata.xml.in:35
+#: data/onlineaccounts.appdata.xml.in:36
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "\"アカウントを追加\" ポップオーバー内の項目が選択された場合にポップオーバーを"
 "閉じるように修正"
 
-#: data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:44
 msgid "Complete redesign"
 msgstr "抜本的なデザイン変更"
 
-#: data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:45
 msgid "Fix blurry icons on HiDPI"
 msgstr "HiDPI 環境でのアイコンの解像度が悪い不具合を修正"
 
