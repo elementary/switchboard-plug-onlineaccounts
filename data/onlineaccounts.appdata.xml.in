@@ -14,6 +14,7 @@
           <li>Make sure you can always navigate next by pressing "enter"</li>
           <li>Make sure the refresh interval for an IMAP account is set</li>
           <li>Use a more complete list of authentication methods for IMAP</li>
+          <li>Fix adding, editing, and removing lists in Tasks</li>
           <li>Updated translations</li>
         </ul>
       </description>
