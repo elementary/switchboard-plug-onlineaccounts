@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 21:53+0000\n"
-"PO-Revision-Date: 2021-09-07 17:31+0000\n"
+"PO-Revision-Date: 2021-09-15 05:59+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/de/>\n"
@@ -40,16 +40,18 @@ msgstr ""
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
+"Sicherstellen, dass das Aktualisierungsintervall für einen IMAP-Account "
+"gesetzt ist"
 
 #: data/onlineaccounts.appdata.xml.in:16
-#, fuzzy
-#| msgid "Automatically detect authentication method for IMAP"
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "IMAP-Authentifizierungsmethode automatisch ermitteln"
+msgstr "Vollständigere Liste für IMAP-Authentifizierungsmethoden verwenden"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Fix adding, editing, and removing lists in Tasks"
 msgstr ""
+"Behebt einen Fehler beim Hinzufügen, Editieren und Entfernen von Listen in "
+"Aufgaben"
 
 #: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
 #: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
