@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 21:53+0000\n"
-"PO-Revision-Date: 2021-09-11 14:13+0000\n"
+"PO-Revision-Date: 2021-09-16 10:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ca/>\n"
@@ -46,7 +46,7 @@ msgstr "Usa una llista més completa de mètodes d'autenticació per a IMAP."
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Fix adding, editing, and removing lists in Tasks"
-msgstr ""
+msgstr "Correcció per afegir, editar i eliminar llistes del Tasques"
 
 #: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
 #: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
