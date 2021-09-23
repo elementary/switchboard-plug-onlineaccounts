@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-14 21:53+0000\n"
-"PO-Revision-Date: 2021-07-28 21:38+0000\n"
+"PO-Revision-Date: 2021-09-22 22:06+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/online-accounts-extra/en_GB/>\n"
@@ -29,23 +29,23 @@ msgstr "Manage online accounts and connected applications"
 
 #: data/onlineaccounts.appdata.xml.in:13
 msgid "Close dialogs when pressing \"ESC\""
-msgstr ""
+msgstr "Close dialogs when pressing \"ESC\""
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr ""
+msgstr "Make sure you can always navigate next by pressing \"enter\""
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
+msgstr "Make sure the refresh interval for an IMAP account is set"
 
 #: data/onlineaccounts.appdata.xml.in:16
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr ""
+msgstr "Use a more complete list of authentication methods for IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Fix adding, editing, and removing lists in Tasks"
-msgstr ""
+msgstr "Fix adding, editing, and removing lists in Tasks"
 
 #: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
 #: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
@@ -54,11 +54,11 @@ msgstr "Updated translations"
 
 #: data/onlineaccounts.appdata.xml.in:25
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Edit saved IMAP accounts"
 
 #: data/onlineaccounts.appdata.xml.in:26
 msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgstr "Automatically detect authentication method for IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:34
 msgid "Verify login credentails when saving IMAP accounts"
