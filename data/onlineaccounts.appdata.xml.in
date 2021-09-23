@@ -31,7 +31,7 @@
     <release version="6.1.0" date="2021-07-28" urgency="medium">
       <description>
         <ul>
-          <li>Verify login credentails when saving IMAP accounts</li>
+          <li>Verify login credentials when saving IMAP accounts</li>
           <li>Set up Archive, Drafts, Sent, and Templates folders for IMAP</li>
           <li>Close "Add Account" popover when an item is selected</li>
           <li>Updated translations</li>
