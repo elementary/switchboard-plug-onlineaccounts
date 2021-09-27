@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-23 17:05+0000\n"
-"PO-Revision-Date: 2021-09-16 04:30+0000\n"
+"PO-Revision-Date: 2021-09-27 03:51+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -61,8 +61,6 @@ msgid "Automatically detect authentication method for IMAP"
 msgstr "IMAP の認証方式を自動的に検知するように修正"
 
 #: data/onlineaccounts.appdata.xml.in:34
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "IMAP アカウントを保存する際にログイン資格情報を認証するように修正"
 
