@@ -1,3 +1,19 @@
+switchboard-plug-onlineaccounts (6.2.1) focal; urgency=medium
+
+  * Release 6.2.1 (#231)
+  * Update translation files
+  * Update translation template
+  * Appdata: credentails → credentials (#230)
+  * Caldav set calendar url of collection source (#227)
+  * Retrieve login methods from camel (#225)
+  * Set refresh interval for IMAP (#222)
+  * Ignore calendar subscriptions
+  * CaldavDialog: set can/has/activate default (#220)
+  * ImapDialog: set can/has/activates default (#221)
+  * Fixes #210: Close dialog on ESC key release (#219)
+
+ -- elementary, Inc. <builds@elementary.io>  Tue, 28 Sep 2021 19:28:15 +0000
+
 switchboard-plug-onlineaccounts (6.2.0) focal; urgency=medium
 
   * Release 6.2.0 (#214)
