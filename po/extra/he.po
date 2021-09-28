@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-09-23 20:07+0000\n"
+"PO-Revision-Date: 2021-09-28 22:32+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/he/>\n"
@@ -29,33 +29,27 @@ msgstr "ניהול חשבונות מקוונים ויישומים מקושרים
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "תיקונים:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "וידוא שמוגדר הפרש בין עדכונים בחשבון IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Fix adding, editing, and removing lists in Tasks"
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr "תוקנה הוספת, עריכת והסרת רשימות ביישום המשימות"
+msgstr "תוקנה הוספת, עריכת והסרת רשימות ביישומי CalDAV כגון יישום המשימות"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
-msgstr ""
+msgstr "עדכונים משניים:"
 
 #: data/onlineaccounts.appdata.xml.in:19
-#, fuzzy
-#| msgid "Make sure you can always navigate next by pressing \"enter\""
 msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "וידאנו שתמיד ניתן לנווט הלאה עם „Enter”"
+msgstr "וידאנו שתמיד ניתן לנווט הלאה עם המקש Enter"
 
 #: data/onlineaccounts.appdata.xml.in:20
-#, fuzzy
-#| msgid "Close dialogs when pressing \"ESC\""
 msgid "Close dialogs when pressing the Escape key"
-msgstr "תיבות דו־שיח נסגרות בלחיצה על „Esc”"
+msgstr "תיבות דו־שיח נסגרות בלחיצה על המקש Escape"
 
 #: data/onlineaccounts.appdata.xml.in:21
 msgid "Use a more complete list of authentication methods for IMAP"
