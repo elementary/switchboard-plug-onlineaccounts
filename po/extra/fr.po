@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 17:05+0000\n"
+"POT-Creation-Date: 2021-09-28 19:32+0000\n"
 "PO-Revision-Date: 2021-09-09 10:53+0000\n"
 "Last-Translator: Corentin Noël <tintou@noel.tf>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -27,44 +27,56 @@ msgstr "Paramètres des comptes en ligne"
 msgid "Manage online accounts and connected applications"
 msgstr "Gérez les comptes en ligne et les applications connectées"
 
-#: data/onlineaccounts.appdata.xml.in:13
-msgid "Close dialogs when pressing \"ESC\""
-msgstr "Fermer la boîte de dialogue en appuyant sur « Échap »"
+#: data/onlineaccounts.appdata.xml.in:12
+msgid "Fixes:"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr "Faire en sorte de pouvoir toujours naviguer en appuyant sur « Entrée »"
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:17
+msgid "Minor updates:"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:19
+#, fuzzy
+#| msgid "Make sure you can always navigate next by pressing \"enter\""
+msgid "Make sure you can always navigate next by pressing the Enter key"
+msgstr "Faire en sorte de pouvoir toujours naviguer en appuyant sur « Entrée »"
+
+#: data/onlineaccounts.appdata.xml.in:20
+#, fuzzy
+#| msgid "Close dialogs when pressing \"ESC\""
+msgid "Close dialogs when pressing the Escape key"
+msgstr "Fermer la boîte de dialogue en appuyant sur « Échap »"
+
+#: data/onlineaccounts.appdata.xml.in:21
 #, fuzzy
 #| msgid "Automatically detect authentication method for IMAP"
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr ""
 "Détection automatique de la méthode d'authentification pour le protocole IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:17
-msgid "Fix adding, editing, and removing lists in Tasks"
-msgstr ""
-
-#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
-#: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
+#: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
-#: data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:29
 msgid "Edit saved IMAP accounts"
 msgstr "Modifiez les comptes IMAP enregistrés"
 
-#: data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:30
 msgid "Automatically detect authentication method for IMAP"
 msgstr ""
 "Détection automatique de la méthode d'authentification pour le protocole IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:38
 #, fuzzy
 #| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Verify login credentials when saving IMAP accounts"
@@ -72,22 +84,22 @@ msgstr ""
 "Vérification des identifiants de connexion lors de l'enregistrement des "
 "comptes IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:35
+#: data/onlineaccounts.appdata.xml.in:39
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 "Définition des dossiers Archive, Brouillons, Envoyés et Modèles pour l'IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:36
+#: data/onlineaccounts.appdata.xml.in:40
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Fermeture de la fenêtre flottante « Ajouter un compte » lorsqu'un élément "
 "est sélectionné"
 
-#: data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:48
 msgid "Complete redesign"
 msgstr "Refonte complète"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.appdata.xml.in:49
 msgid "Fix blurry icons on HiDPI"
 msgstr "Correction des icônes floues sur les affichages HiDPI"
 

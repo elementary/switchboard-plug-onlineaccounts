@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 17:05+0000\n"
+"POT-Creation-Date: 2021-09-28 19:32+0000\n"
 "PO-Revision-Date: 2021-09-27 15:07+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -27,61 +27,75 @@ msgstr "Paràmetres dels comptes en línia"
 msgid "Manage online accounts and connected applications"
 msgstr "Gestioneu els comptes en línia i les aplicacions connectades."
 
-#: data/onlineaccounts.appdata.xml.in:13
-msgid "Close dialogs when pressing \"ESC\""
-msgstr "Es tanquen els diàlegs prement ESC."
+#: data/onlineaccounts.appdata.xml.in:12
+msgid "Fixes:"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr "S'assegura que es pugui passar al següent sempre prement Retorn."
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
 "S'assegura que l'interval de refresc per a un compte d'IMAP s'estableixi."
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:15
+#, fuzzy
+#| msgid "Fix adding, editing, and removing lists in Tasks"
+msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+msgstr "Correcció per afegir, editar i eliminar llistes del Tasques"
+
+#: data/onlineaccounts.appdata.xml.in:17
+msgid "Minor updates:"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:19
+#, fuzzy
+#| msgid "Make sure you can always navigate next by pressing \"enter\""
+msgid "Make sure you can always navigate next by pressing the Enter key"
+msgstr "S'assegura que es pugui passar al següent sempre prement Retorn."
+
+#: data/onlineaccounts.appdata.xml.in:20
+#, fuzzy
+#| msgid "Close dialogs when pressing \"ESC\""
+msgid "Close dialogs when pressing the Escape key"
+msgstr "Es tanquen els diàlegs prement ESC."
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr "Usa una llista més completa de mètodes d'autenticació per a IMAP."
 
-#: data/onlineaccounts.appdata.xml.in:17
-msgid "Fix adding, editing, and removing lists in Tasks"
-msgstr "Correcció per afegir, editar i eliminar llistes del Tasques"
-
-#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
-#: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
+#: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:29
 msgid "Edit saved IMAP accounts"
 msgstr "Edita els comptes d'IMAP desats"
 
-#: data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:30
 msgid "Automatically detect authentication method for IMAP"
 msgstr "Detecta automàticament el mètode d'autenticació per a IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:38
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "Verifica les credencials d’inici de sessió en desar comptes IMAP."
 
-#: data/onlineaccounts.appdata.xml.in:35
+#: data/onlineaccounts.appdata.xml.in:39
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 "Configuració de les carpetes Arxiu, Esborranys, Enviats i Plantilles per a "
 "IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:36
+#: data/onlineaccounts.appdata.xml.in:40
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Es tanca la finestra emergent \"Afegeix un compte\" quan se selecciona un "
 "element."
 
-#: data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:48
 msgid "Complete redesign"
 msgstr "Redisseny complet"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.appdata.xml.in:49
 msgid "Fix blurry icons on HiDPI"
 msgstr "Correcció de les icones borroses en HiDPI"
 

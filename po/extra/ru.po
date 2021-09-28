@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 17:05+0000\n"
+"POT-Creation-Date: 2021-09-28 19:32+0000\n"
 "PO-Revision-Date: 2021-09-24 11:04+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -28,60 +28,74 @@ msgstr "Настройки онлайн аккаунтов"
 msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн аккаунтами и подключенными приложениями"
 
-#: data/onlineaccounts.appdata.xml.in:13
-msgid "Close dialogs when pressing \"ESC\""
-msgstr "Закрытие диалоговых окон нажатием «ESC»"
+#: data/onlineaccounts.appdata.xml.in:12
+msgid "Fixes:"
+msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr "Вы всегда можете перейти дальше нажав «enter»"
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "Исправлена проблема установки интервала обновления учётной записи IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:16
-msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "Используется более полный список методов аутентификации для IMAP"
-
-#: data/onlineaccounts.appdata.xml.in:17
-msgid "Fix adding, editing, and removing lists in Tasks"
+#: data/onlineaccounts.appdata.xml.in:15
+#, fuzzy
+#| msgid "Fix adding, editing, and removing lists in Tasks"
+msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
 "Исправлено добавление, редактирование и удаление списков в приложении "
 "«Задачи»"
 
-#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
-#: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
+#: data/onlineaccounts.appdata.xml.in:17
+msgid "Minor updates:"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:19
+#, fuzzy
+#| msgid "Make sure you can always navigate next by pressing \"enter\""
+msgid "Make sure you can always navigate next by pressing the Enter key"
+msgstr "Вы всегда можете перейти дальше нажав «enter»"
+
+#: data/onlineaccounts.appdata.xml.in:20
+#, fuzzy
+#| msgid "Close dialogs when pressing \"ESC\""
+msgid "Close dialogs when pressing the Escape key"
+msgstr "Закрытие диалоговых окон нажатием «ESC»"
+
+#: data/onlineaccounts.appdata.xml.in:21
+msgid "Use a more complete list of authentication methods for IMAP"
+msgstr "Используется более полный список методов аутентификации для IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:29
 msgid "Edit saved IMAP accounts"
 msgstr "Редактирование сохраненных учётных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:30
 msgid "Automatically detect authentication method for IMAP"
 msgstr "Автоматическое определение метода аутентификации для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:38
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr ""
 "Проверка учетных данных для входа во время сохранения учетных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:35
+#: data/onlineaccounts.appdata.xml.in:39
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Настройка папок Архив, Черновики, Отправленные и Шаблоны для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:36
+#: data/onlineaccounts.appdata.xml.in:40
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Закрытие всплывающего окна «Добавить учетную запись» при выборе элемента"
 
-#: data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:48
 msgid "Complete redesign"
 msgstr "Полное изменение дизайна"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.appdata.xml.in:49
 msgid "Fix blurry icons on HiDPI"
 msgstr "Исправлены размытые значки на HiDPI"
 
