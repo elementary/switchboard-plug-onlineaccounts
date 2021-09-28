@@ -11,12 +11,12 @@
       <description>
         <p>Fixes:</p>
         <ul>
-          <li>Make sure you can always navigate next by pressing the Enter key</li>
           <li>Make sure the refresh interval for an IMAP account is set</li>
           <li>Fix adding, editing, and removing lists in CalDAV apps like Tasks</li>
         </ul>
         <p>Minor updates:</p>
         <ul>
+          <li>Make sure you can always navigate next by pressing the Enter key</li>
           <li>Close dialogs when pressing the Escape key</li>
           <li>Use a more complete list of authentication methods for IMAP</li>
           <li>Updated translations</li>
