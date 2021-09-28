@@ -7,14 +7,18 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="6.2.1" date="2021-09-02" urgency="medium">
+    <release version="6.2.1" date="2021-09-28" urgency="medium">
       <description>
+        <p>Fixes:</p>
         <ul>
-          <li>Close dialogs when pressing "ESC"</li>
-          <li>Make sure you can always navigate next by pressing "enter"</li>
+          <li>Make sure you can always navigate next by pressing the Enter key</li>
           <li>Make sure the refresh interval for an IMAP account is set</li>
+          <li>Fix adding, editing, and removing lists in CalDAV apps like Tasks</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Close dialogs when pressing the Escape key</li>
           <li>Use a more complete list of authentication methods for IMAP</li>
-          <li>Fix adding, editing, and removing lists in Tasks</li>
           <li>Updated translations</li>
         </ul>
       </description>
