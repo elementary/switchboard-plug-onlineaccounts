@@ -1,7 +1,7 @@
 project(
     'online-accounts',
     'vala', 'c',
-    version: '6.1.0'
+    version: '6.2.1'
 )
 
 gettext_name = meson.project_name() + '-plug'
