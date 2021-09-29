@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-09-27 03:51+0000\n"
+"PO-Revision-Date: 2021-09-29 02:52+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -29,31 +29,25 @@ msgstr "オンラインアカウントと接続されたアプリケーション
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "修正点:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "IMAP アカウントを更新する時間が設定されていることを確認するように修正"
 
 #: data/onlineaccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Fix adding, editing, and removing lists in Tasks"
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr "“タスク”でリストを追加・編集・削除する際の不具合を修正"
+msgstr "“タスク”などの CalDAV アプリでリストを追加・編集・削除する際の不具合を修正"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
-msgstr ""
+msgstr "軽微なアップデート:"
 
 #: data/onlineaccounts.appdata.xml.in:19
-#, fuzzy
-#| msgid "Make sure you can always navigate next by pressing \"enter\""
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr "Enter キー押下で常に次のビューに遷移できるように修正"
 
 #: data/onlineaccounts.appdata.xml.in:20
-#, fuzzy
-#| msgid "Close dialogs when pressing \"ESC\""
 msgid "Close dialogs when pressing the Escape key"
 msgstr "Esc キー押下でダイアログを閉じるように修正"
 
