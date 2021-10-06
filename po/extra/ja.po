@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 17:05+0000\n"
-"PO-Revision-Date: 2021-09-27 03:51+0000\n"
+"POT-Creation-Date: 2021-09-28 19:32+0000\n"
+"PO-Revision-Date: 2021-09-29 02:52+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -27,59 +27,67 @@ msgstr "オンラインアカウントの設定"
 msgid "Manage online accounts and connected applications"
 msgstr "オンラインアカウントと接続されたアプリケーションを管理します"
 
-#: data/onlineaccounts.appdata.xml.in:13
-msgid "Close dialogs when pressing \"ESC\""
-msgstr "Esc キー押下でダイアログを閉じるように修正"
+#: data/onlineaccounts.appdata.xml.in:12
+msgid "Fixes:"
+msgstr "修正点:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make sure you can always navigate next by pressing \"enter\""
-msgstr "Enter キー押下で常に次のビューに遷移できるように修正"
-
-#: data/onlineaccounts.appdata.xml.in:15
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "IMAP アカウントを更新する時間が設定されていることを確認するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:16
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+msgstr "“タスク”などの CalDAV アプリでリストを追加・編集・削除する際の不具合を修正"
+
+#: data/onlineaccounts.appdata.xml.in:17
+msgid "Minor updates:"
+msgstr "軽微なアップデート:"
+
+#: data/onlineaccounts.appdata.xml.in:19
+msgid "Make sure you can always navigate next by pressing the Enter key"
+msgstr "Enter キー押下で常に次のビューに遷移できるように修正"
+
+#: data/onlineaccounts.appdata.xml.in:20
+msgid "Close dialogs when pressing the Escape key"
+msgstr "Esc キー押下でダイアログを閉じるように修正"
+
+#: data/onlineaccounts.appdata.xml.in:21
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr "IMAP の認証方式の一覧を外部ライブラリから取得するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:17
-msgid "Fix adding, editing, and removing lists in Tasks"
-msgstr "“タスク”でリストを追加・編集・削除する際の不具合を修正"
-
-#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:27
-#: data/onlineaccounts.appdata.xml.in:37 data/onlineaccounts.appdata.xml.in:46
+#: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/onlineaccounts.appdata.xml.in:25
+#: data/onlineaccounts.appdata.xml.in:29
 msgid "Edit saved IMAP accounts"
 msgstr "保存済みの IMAP アカウントを編集する機能を追加"
 
-#: data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:30
 msgid "Automatically detect authentication method for IMAP"
 msgstr "IMAP の認証方式を自動的に検知するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:38
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "IMAP アカウントを保存する際にログイン資格情報を認証するように修正"
 
-#: data/onlineaccounts.appdata.xml.in:35
+#: data/onlineaccounts.appdata.xml.in:39
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
 "アーカイブ、下書き、送信済み、テンプレートフォルダーを IMAP 用にセットアップ"
 
-#: data/onlineaccounts.appdata.xml.in:36
+#: data/onlineaccounts.appdata.xml.in:40
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "\"アカウントを追加\" ポップオーバー内の項目が選択された場合にポップオーバーを"
 "閉じるように修正"
 
-#: data/onlineaccounts.appdata.xml.in:44
+#: data/onlineaccounts.appdata.xml.in:48
 msgid "Complete redesign"
 msgstr "抜本的なデザイン変更"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.appdata.xml.in:49
 msgid "Fix blurry icons on HiDPI"
 msgstr "HiDPI 環境でのアイコンの解像度が悪い不具合を修正"
 
