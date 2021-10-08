@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-09-24 11:04+0000\n"
-"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
+"PO-Revision-Date: 2021-10-08 21:09+0000\n"
+"Last-Translator: asdffdsdaf <asdffdsdaf@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
 "Language: ru\n"
@@ -30,35 +30,29 @@ msgstr "Управление онлайн аккаунтами и подключ
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Исправления:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "Исправлена проблема установки интервала обновления учётной записи IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Fix adding, editing, and removing lists in Tasks"
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
-"Исправлено добавление, редактирование и удаление списков в приложении "
-"«Задачи»"
+"Исправлено добавление, редактирование и удаление списков в приложениях "
+"CalDAV по типу «Задачи»"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
-msgstr ""
+msgstr "Незначительные обновления:"
 
 #: data/onlineaccounts.appdata.xml.in:19
-#, fuzzy
-#| msgid "Make sure you can always navigate next by pressing \"enter\""
 msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "Вы всегда можете перейти дальше нажав «enter»"
+msgstr "Вы всегда можете перейти дальше нажав клавишу «enter»"
 
 #: data/onlineaccounts.appdata.xml.in:20
-#, fuzzy
-#| msgid "Close dialogs when pressing \"ESC\""
 msgid "Close dialogs when pressing the Escape key"
-msgstr "Закрытие диалоговых окон нажатием «ESC»"
+msgstr "Закрытие диалоговых окон нажатием клавиши «ESC»"
 
 #: data/onlineaccounts.appdata.xml.in:21
 msgid "Use a more complete list of authentication methods for IMAP"
