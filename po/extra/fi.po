@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-07-21 23:39+0000\n"
+"PO-Revision-Date: 2021-10-08 08:05+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fi/>\n"
@@ -29,7 +29,7 @@ msgstr "Hallitse verkkotilejä ja yhdistettyjä sovelluksia"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Korjaukset:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
-msgstr ""
+msgstr "Pienet päivitykset:"
 
 #: data/onlineaccounts.appdata.xml.in:19
 msgid "Make sure you can always navigate next by pressing the Enter key"
