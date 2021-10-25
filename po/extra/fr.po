@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-09-09 10:53+0000\n"
-"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
+"PO-Revision-Date: 2021-10-21 17:32+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
 "Language: fr\n"
@@ -29,38 +29,39 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Corrections :"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
+"Nous nous sommes assurés que l'intervalle d'actualisation pour un compte "
+"IMAP soit défini"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
+"Correction de l'ajout, modification et suppression de listes dans les "
+"applications CalDAV telles que Tâches"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
-msgstr ""
+msgstr "Mises à jour mineures :"
 
 #: data/onlineaccounts.appdata.xml.in:19
-#, fuzzy
-#| msgid "Make sure you can always navigate next by pressing \"enter\""
 msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "Faire en sorte de pouvoir toujours naviguer en appuyant sur « Entrée »"
+msgstr ""
+"Nous nous sommes assurés que vous puissiez toujours naviguer en appuyant sur "
+"la touche Entrée"
 
 #: data/onlineaccounts.appdata.xml.in:20
-#, fuzzy
-#| msgid "Close dialogs when pressing \"ESC\""
 msgid "Close dialogs when pressing the Escape key"
-msgstr "Fermer la boîte de dialogue en appuyant sur « Échap »"
+msgstr "Fermeture de la boîte de dialogue en appuyant sur la touche Échap"
 
 #: data/onlineaccounts.appdata.xml.in:21
-#, fuzzy
-#| msgid "Automatically detect authentication method for IMAP"
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr ""
-"Détection automatique de la méthode d'authentification pour le protocole IMAP"
+"Utilisation d'une liste plus complète de méthodes d'authentification pour le "
+"protocole IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
 #: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
@@ -77,8 +78,6 @@ msgstr ""
 "Détection automatique de la méthode d'authentification pour le protocole IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:38
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr ""
 "Vérification des identifiants de connexion lors de l'enregistrement des "
