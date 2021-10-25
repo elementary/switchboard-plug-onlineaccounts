@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-09-22 22:06+0000\n"
+"PO-Revision-Date: 2021-10-25 20:25+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/online-accounts-extra/en_GB/>\n"
@@ -29,33 +29,27 @@ msgstr "Manage online accounts and connected applications"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Fixes:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "Make sure the refresh interval for an IMAP account is set"
 
 #: data/onlineaccounts.appdata.xml.in:15
-#, fuzzy
-#| msgid "Fix adding, editing, and removing lists in Tasks"
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr "Fix adding, editing, and removing lists in Tasks"
+msgstr "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
-msgstr ""
+msgstr "Minor updates:"
 
 #: data/onlineaccounts.appdata.xml.in:19
-#, fuzzy
-#| msgid "Make sure you can always navigate next by pressing \"enter\""
 msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "Make sure you can always navigate next by pressing \"enter\""
+msgstr "Make sure you can always navigate next by pressing the Enter key"
 
 #: data/onlineaccounts.appdata.xml.in:20
-#, fuzzy
-#| msgid "Close dialogs when pressing \"ESC\""
 msgid "Close dialogs when pressing the Escape key"
-msgstr "Close dialogs when pressing \"ESC\""
+msgstr "Close dialogs when pressing the Escape key"
 
 #: data/onlineaccounts.appdata.xml.in:21
 msgid "Use a more complete list of authentication methods for IMAP"
@@ -75,10 +69,8 @@ msgid "Automatically detect authentication method for IMAP"
 msgstr "Automatically detect authentication method for IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:38
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Verify login credentials when saving IMAP accounts"
-msgstr "Verify login credentails when saving IMAP accounts"
+msgstr "Verify login credentials when saving IMAP accounts"
 
 #: data/onlineaccounts.appdata.xml.in:39
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
