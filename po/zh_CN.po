@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-07-20 18:18+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2021-11-01 10:01+0000\n"
+"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -50,7 +50,7 @@ msgstr "账户名称"
 
 #: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "为帐户选择一个名称，例如“Work”或“Personal”。"
 
 #: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
 #: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
@@ -67,23 +67,19 @@ msgstr "保存配置…"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "All done"
-msgstr ""
+msgstr "全部完成"
 
 #: src/Dialogs/CaldavDialog.vala:157
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account added."
-msgstr "邮件账户"
+msgstr "添加了 CalDAV 帐户。"
 
 #: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "关闭"
 
 #: src/Dialogs/CaldavDialog.vala:242
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
-msgstr "保存配置出错"
+msgstr "无法保存配置"
 
 #: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
 msgid "Calendars"
@@ -98,10 +94,8 @@ msgid "Finding available calendars and tasks…"
 msgstr "查找可用日历和任务…"
 
 #: src/Dialogs/CaldavDialog.vala:419
-#, fuzzy
-#| msgid "Error Fetching Calendars"
 msgid "Could not fetch calendars"
-msgstr "获取日历出错"
+msgstr "无法获取日历"
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
@@ -138,18 +132,16 @@ msgstr "无须身份验证"
 
 #: src/Dialogs/Imap/ImapDialog.vala:356
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "提供的数据似乎没有反映有效的邮件帐户。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:590
-#, fuzzy
-#| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
-msgstr "请输入您的认证信息…"
+msgstr "无法登录。请验证您的凭据。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:604
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "IMAP 验证失败：%s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
@@ -165,23 +157,19 @@ msgstr "下一步"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "正在设置电子邮件帐户…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
-#, fuzzy
-#| msgid "Error Saving Configuration"
 msgid "Could not save the e-mail account"
-msgstr "保存配置出错"
+msgstr "无法保存电子邮件帐户"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
 msgstr "成功"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account saved."
-msgstr "邮件账户"
+msgstr "电子邮件帐户已保存。"
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -216,10 +204,8 @@ msgid "Remove this account"
 msgstr "移除账户"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Remove this account"
 msgid "Edit this account"
-msgstr "移除账户"
+msgstr "编辑此帐户"
 
 #: src/MainView.vala:167
 #, c-format
@@ -227,28 +213,22 @@ msgid "Remove “%s” from this device"
 msgstr "从设备移除 “%s”"
 
 #: src/MainView.vala:168
-#, fuzzy
-#| msgid ""
-#| "This account will be removed and will no longer appear in apps on this "
-#| "device."
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
-msgstr "此账户将会被删除，且不会再出现在设备上的其他应用中。"
+msgstr "此帐户将被删除，并且不再出现在此设备上的任何应用中。"
 
 #: src/MainView.vala:176
 msgid "Remove Account"
 msgstr "移除帐户"
 
 #: src/MainView.vala:200
-#, fuzzy
-#| msgid "Mail Account"
 msgid "Edit account failed"
-msgstr "邮件账户"
+msgstr "修改帐号失败"
 
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "读取“%s”的配置时出现意外错误。"
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
