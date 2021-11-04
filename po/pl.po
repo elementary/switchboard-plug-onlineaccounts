@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
 "PO-Revision-Date: 2021-11-04 10:25+0000\n"
-"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pl/>\n"
 "Language: pl\n"
@@ -218,12 +218,12 @@ msgstr "Usuń „%s” z tego urządzenia"
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
+"To konto zostanie usunięte i nie będzie się więcej pojawiać w żadnych "
+"aplikacjach na tym urządzeniu."
 
 #: src/MainView.vala:176
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "Nowe konto"
+msgstr "Usuń konto"
 
 #: src/MainView.vala:200
 msgid "Edit account failed"
