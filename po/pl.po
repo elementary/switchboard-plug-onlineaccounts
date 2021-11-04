@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
 "PO-Revision-Date: 2021-11-04 08:11+0000\n"
-"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
+"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pl/>\n"
 "Language: pl\n"
@@ -163,17 +163,15 @@ msgstr "Konfigurowanie konta e-mail…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "Nie udało się zapisać konta e-mail"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
 msgstr "Powodzenie"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account saved."
-msgstr "Konto pocztowe"
+msgstr "Konto pocztowe zapisane."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -197,7 +195,7 @@ msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "Poczta"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -208,10 +206,8 @@ msgid "Remove this account"
 msgstr "Usuń to konto"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Other Account"
 msgid "Edit this account"
-msgstr "Inne konto"
+msgstr "Edytuj to konto"
 
 #: src/MainView.vala:167
 #, c-format
