@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-11-06 12:00+0000\n"
+"PO-Revision-Date: 2021-11-08 08:35+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pl/>\n"
@@ -32,7 +32,7 @@ msgstr "Zarządzaj kontami sieciowymi i połączonymi programami"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Poprawki:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
