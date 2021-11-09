@@ -229,6 +229,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         default_width = 300;
         window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
         modal = true;
+        type_hint = Gdk.WindowTypeHint.DIALOG;
         add (window_handle);
 
         login_page.next_button.has_default = true;
