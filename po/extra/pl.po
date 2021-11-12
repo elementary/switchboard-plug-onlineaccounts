@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-11-08 08:35+0000\n"
+"PO-Revision-Date: 2021-11-12 18:21+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pl/>\n"
@@ -21,10 +21,8 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
-#, fuzzy
-#| msgid "Online Accounts"
 msgid "Online Accounts Settings"
-msgstr "Konta sieciowe"
+msgstr "Ustawienia kont sieciowych"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
@@ -36,11 +34,13 @@ msgstr "Poprawki:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
+msgstr "Upewniono się, że okresowe odświeżanie dla kont IMAP jest ustawione"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
+"Naprawiono dodawanie, edytowanie i usuwanie list w aplikacjach CalDAV takich "
+"jak Zadania"
 
 #: data/onlineaccounts.appdata.xml.in:17
 msgid "Minor updates:"
@@ -49,14 +49,15 @@ msgstr "Mniejsze aktualizacje:"
 #: data/onlineaccounts.appdata.xml.in:19
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr ""
+"Upewniono się, że zawsze można nawigować dalej przy użyciu przycisku Enter"
 
 #: data/onlineaccounts.appdata.xml.in:20
 msgid "Close dialogs when pressing the Escape key"
-msgstr ""
+msgstr "Zamykanie okien dialogowych przyciskiem Escape"
 
 #: data/onlineaccounts.appdata.xml.in:21
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr ""
+msgstr "Użycie bardziej kompletnej listy metod uwierzytelniania dla IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
 #: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
@@ -65,28 +66,29 @@ msgstr "Zaktualizowane tłumaczenia"
 
 #: data/onlineaccounts.appdata.xml.in:29
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Edycja zapisanych kont IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:30
 msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgstr "Automatyczne wykrywanie metody uwierzytelniania dla IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:38
 msgid "Verify login credentials when saving IMAP accounts"
-msgstr ""
+msgstr "Weryfikacja danych uwierzytelniających przy zapisywaniu IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:39
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr ""
+"Przygotowanie folderów Archiwum, Wersje robocze, Wysłane i Szablony dla IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:40
 msgid "Close \"Add Account\" popover when an item is selected"
-msgstr ""
+msgstr "Zamknij popover „Dodaj konto” po wybraniu elementu"
 
 #: data/onlineaccounts.appdata.xml.in:48
 msgid "Complete redesign"
-msgstr ""
+msgstr "Całkowite przeprojektowanie"
 
 #: data/onlineaccounts.appdata.xml.in:49
 msgid "Fix blurry icons on HiDPI"
-msgstr ""
+msgstr "Naprawiono rozmyte ikony w HiDPI"
