@@ -1,3 +1,12 @@
+switchboard-plug-onlineaccounts (6.2.2) focal; urgency=medium
+
+  * Release 6.2.2 (#235)
+  * Update translation files
+  * Update translation template
+  * ImapDialog: Set dialog type_hint to fix parenting (#233)
+
+ -- elementary, Inc. <builds@elementary.io>  Wed, 24 Nov 2021 23:57:51 +0000
+
 switchboard-plug-onlineaccounts (6.2.1) focal; urgency=medium
 
   * Release 6.2.1 (#231)
