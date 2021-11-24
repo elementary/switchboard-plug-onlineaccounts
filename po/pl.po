@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
 "PO-Revision-Date: 2021-11-04 10:25+0000\n"
 "Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -131,16 +131,16 @@ msgstr "Używaj danych uwierzytelniających IMAP"
 msgid "No authentication required"
 msgstr "Uwierzytelnianie nie jest wymagane"
 
-#: src/Dialogs/Imap/ImapDialog.vala:356
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Dostarczone informację wydają się nie odpowiadać prawidłowemu kontu e-mail."
 
-#: src/Dialogs/Imap/ImapDialog.vala:590
+#: src/Dialogs/Imap/ImapDialog.vala:591
 msgid "Could not log in. Please verify your credentials."
 msgstr "Nie można zalogować. Proszę zweryfikować swoje dane logowania."
 
-#: src/Dialogs/Imap/ImapDialog.vala:604
+#: src/Dialogs/Imap/ImapDialog.vala:605
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Niepowodzenie weryfikacji IMAP: %s"

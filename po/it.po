@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -138,17 +138,17 @@ msgstr "Usa credenziali IMAP"
 msgid "No authentication required"
 msgstr "Nessuna autenticazione richiesta"
 
-#: src/Dialogs/Imap/ImapDialog.vala:356
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:590
+#: src/Dialogs/Imap/ImapDialog.vala:591
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Inserisci le tue credenziali…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:604
+#: src/Dialogs/Imap/ImapDialog.vala:605
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

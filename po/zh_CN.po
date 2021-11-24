@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
 "PO-Revision-Date: 2021-11-01 10:01+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -130,15 +130,15 @@ msgstr "使用 IMAP 证书"
 msgid "No authentication required"
 msgstr "无须身份验证"
 
-#: src/Dialogs/Imap/ImapDialog.vala:356
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "提供的数据似乎没有反映有效的邮件帐户。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:590
+#: src/Dialogs/Imap/ImapDialog.vala:591
 msgid "Could not log in. Please verify your credentials."
 msgstr "无法登录。请验证您的凭据。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:604
+#: src/Dialogs/Imap/ImapDialog.vala:605
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP 验证失败：%s"

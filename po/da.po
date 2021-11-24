@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
 "PO-Revision-Date: 2020-05-27 12:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -138,17 +138,17 @@ msgstr "Brug IMAP-logininfo"
 msgid "No authentication required"
 msgstr "Ingen autentifikation påkrævet"
 
-#: src/Dialogs/Imap/ImapDialog.vala:356
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:590
+#: src/Dialogs/Imap/ImapDialog.vala:591
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Indtast venligst dine brugeroplysninger…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:604
+#: src/Dialogs/Imap/ImapDialog.vala:605
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

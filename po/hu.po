@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
 "PO-Revision-Date: 2021-08-27 17:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -130,15 +130,15 @@ msgstr "Az IMAP-hitelesítőadatok használata"
 msgid "No authentication required"
 msgstr "Nincs szükség hitelesítésre"
 
-#: src/Dialogs/Imap/ImapDialog.vala:356
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "A kapott adatok nem tűnnek érvényes e-mail-címnek."
 
-#: src/Dialogs/Imap/ImapDialog.vala:590
+#: src/Dialogs/Imap/ImapDialog.vala:591
 msgid "Could not log in. Please verify your credentials."
 msgstr "Bejelentkezés sikertelen. Ellenőrizze a hitelesítőadatait."
 
-#: src/Dialogs/Imap/ImapDialog.vala:604
+#: src/Dialogs/Imap/ImapDialog.vala:605
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP-hitelesítés sikertelen: %s"
