@@ -7,6 +7,18 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
+    <release version="6.2.2" date="2021-11-23" urgency="medium">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>Dim window when creating a new IMAP account</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.2.1" date="2021-09-28" urgency="medium">
       <description>
         <p>Fixes:</p>
