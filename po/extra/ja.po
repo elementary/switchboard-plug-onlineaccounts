@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-09-29 02:52+0000\n"
+"PO-Revision-Date: 2021-11-24 22:48+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -32,10 +32,8 @@ msgid "Fixes:"
 msgstr "修正点:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Verify login credentials when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
-msgstr "IMAP アカウントを保存する際にログイン資格情報を認証するように修正"
+msgstr "IMAP アカウントを作成する際に親ウィンドウを薄暗くするように修正"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
 msgid "Minor updates:"
