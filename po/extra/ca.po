@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-09-29 08:12+0000\n"
+"PO-Revision-Date: 2021-11-25 14:14+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ca/>\n"
@@ -32,10 +32,8 @@ msgid "Fixes:"
 msgstr "Correccions:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Verify login credentials when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
-msgstr "Verifica les credencials d’inici de sessió en desar comptes IMAP."
+msgstr "Atenuació de la finestra en crear un compte IMAP nou"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
 msgid "Minor updates:"
