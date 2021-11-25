@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-10-21 17:32+0000\n"
+"PO-Revision-Date: 2021-11-25 14:14+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -32,12 +32,8 @@ msgid "Fixes:"
 msgstr "Corrections :"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Verify login credentials when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
-msgstr ""
-"Vérification des identifiants de connexion lors de l'enregistrement des "
-"comptes IMAP"
+msgstr "Fenêtre réduite lors de la création d'un nouveau compte IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
 msgid "Minor updates:"
