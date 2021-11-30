@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-10-08 21:09+0000\n"
-"Last-Translator: asdffdsdaf <asdffdsdaf@gmail.com>\n"
+"PO-Revision-Date: 2021-11-30 13:42+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
 "Language: ru\n"
@@ -33,11 +33,8 @@ msgid "Fixes:"
 msgstr "Исправления:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Verify login credentials when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
-msgstr ""
-"Проверка учетных данных для входа во время сохранения учетных записей IMAP"
+msgstr "При создании новой учетной записи IMAP окно затемняется"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
 msgid "Minor updates:"
