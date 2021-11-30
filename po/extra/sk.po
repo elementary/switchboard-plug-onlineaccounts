@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-11-30 16:52+0000\n"
+"PO-Revision-Date: 2021-11-30 18:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/sk/>\n"
@@ -32,10 +32,8 @@ msgid "Fixes:"
 msgstr "Opravy:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
-msgstr "Overovať prihlasovacie údaje pri ukladaní IMAP účtov"
+msgstr "Stmaviť okno pri vytváraní nového IMAP účtu"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
 msgid "Minor updates:"
@@ -52,23 +50,18 @@ msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "Zaistené, že interval obnovovania účtu IMAP je nastavený"
 
 #: data/onlineaccounts.appdata.xml.in:27
-#, fuzzy
-#| msgid "Fix adding, editing, and removing lists in Tasks"
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
-"Opravená chyba s pridávaním, úpravou a odstraňovaním zoznamov v Úlohách"
+"Opravená chyba s pridávaním, úpravou a odstraňovaním zoznamov v aplikáciach "
+"podporujúcich CalDAV, ako napríklad aplikácia Úlohy"
 
 #: data/onlineaccounts.appdata.xml.in:31
-#, fuzzy
-#| msgid "Make sure you can always navigate next by pressing \"enter\""
 msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "Zaistené, aby bolo vždy možné sa posúvať ďalej pomocou klávesy „Enter“"
+msgstr "Zaistené, aby bolo vždy možné presúvať sa ďalej pomocou klávesy Enter"
 
 #: data/onlineaccounts.appdata.xml.in:32
-#, fuzzy
-#| msgid "Close dialogs when pressing \"ESC\""
 msgid "Close dialogs when pressing the Escape key"
-msgstr "Zatvárať dialógy pri stlačení klávesy „ESC“"
+msgstr "Zatvárať dialógy pri stlačení klávesy ESC"
 
 #: data/onlineaccounts.appdata.xml.in:33
 msgid "Use a more complete list of authentication methods for IMAP"
@@ -83,8 +76,6 @@ msgid "Automatically detect authentication method for IMAP"
 msgstr "Automaticky zistiť metódu overenia pre IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:50
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "Overovať prihlasovacie údaje pri ukladaní IMAP účtov"
 
