@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-24 22:37+0000\n"
+"POT-Creation-Date: 2021-12-09 18:26+0000\n"
 "PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -15,82 +15,90 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:36
+#: src/Dialogs/CaldavDialog.vala:39
 msgid "Server URL"
 msgstr "כתובת השרת"
 
-#: src/Dialogs/CaldavDialog.vala:41
+#: src/Dialogs/CaldavDialog.vala:44
 msgid "Invalid URL"
 msgstr "כתובת שגויה"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "User Name"
 msgstr "שם משתמש"
 
-#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "ססמה"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "ביטול"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Log In"
 msgstr "כניסה"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "שם תצוגת חשבון"
 
-#: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "נא לבחור שם כמו „עבודה” או „פרטי” לחשבון."
 
-#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
 #: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "חזרה"
 
-#: src/Dialogs/CaldavDialog.vala:120
+#: src/Dialogs/CaldavDialog.vala:123
 msgid "Save"
 msgstr "שמירה"
 
-#: src/Dialogs/CaldavDialog.vala:144
+#: src/Dialogs/CaldavDialog.vala:147
 msgid "Saving the configuration…"
 msgstr "ההגדרות נשמרות…"
 
-#: src/Dialogs/CaldavDialog.vala:156
+#: src/Dialogs/CaldavDialog.vala:159
 msgid "All done"
 msgstr "הכול בוצע"
 
-#: src/Dialogs/CaldavDialog.vala:157
-msgid "CalDAV account added."
+#: src/Dialogs/CaldavDialog.vala:160
+#, fuzzy
+#| msgid "CalDAV account added."
+msgid "CalDAV account saved."
 msgstr "נוסף חשבון CalDAV."
 
-#: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "סגירה"
 
-#: src/Dialogs/CaldavDialog.vala:242
+#: src/Dialogs/CaldavDialog.vala:245
 msgid "Could not save configuration"
 msgstr "לא ניתן לשמור את ההגדרות"
 
-#: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
 msgid "Calendars"
 msgstr "יומנים"
 
-#: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
+#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
 msgid "Task Lists"
 msgstr "רשימות משימות"
 
-#: src/Dialogs/CaldavDialog.vala:369
+#: src/Dialogs/CaldavDialog.vala:372
 msgid "Finding available calendars and tasks…"
 msgstr "איתור לוחות שנה ומשימות זמינים…"
 
-#: src/Dialogs/CaldavDialog.vala:419
+#: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
 msgstr "לא ניתן למשוך לוחות שנה"
+
+#: src/Dialogs/CaldavDialog.vala:530
+#, fuzzy
+#| msgid "The data provided does not seem to reflect a valid mail account."
+msgid "The data provided does not seem to reflect a valid CalDav account."
+msgstr "הנתונים שסופקו לא משקפים כתובת דוא״ל תקנית."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
@@ -198,29 +206,29 @@ msgstr "הוספת חשבון…"
 msgid "Remove this account"
 msgstr "להסיר את החשבון הזה"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:150
 msgid "Edit this account"
 msgstr "עריכת החשבון הזה"
 
-#: src/MainView.vala:167
+#: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "להסיר את „%s” מהמכשיר"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr "החשבון הזה יוסר ולא יופיע תחת יישומים כלשהם שבמכשיר הזה."
 
-#: src/MainView.vala:176
+#: src/MainView.vala:182
 msgid "Remove Account"
 msgstr "הסרת חשבון"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:206 src/MainView.vala:235
 msgid "Edit account failed"
 msgstr "עריכת החשבון נכשלה"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "אירעה שגיאה בלתי צפויה בעת קריאת ההגדרות מתוך ‚%s’."
