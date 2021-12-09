@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 18:26+0000\n"
-"PO-Revision-Date: 2021-11-30 10:04+0000\n"
+"PO-Revision-Date: 2021-12-09 20:00+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/online-accounts-extra/en_GB/>\n"
@@ -29,13 +29,11 @@ msgstr "Manage online accounts and connected applications"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "New Features:"
-msgstr ""
+msgstr "New Features:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Edit saved IMAP accounts"
 msgid "Edit saved CalDAV accounts"
-msgstr "Edit saved IMAP accounts"
+msgstr "Edit saved CalDAV accounts"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 msgid "Fixes:"
