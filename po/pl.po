@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2019-11-17 20:24+0000\n"
-"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
+"PO-Revision-Date: 2021-11-04 10:25+0000\n"
+"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pl/>\n"
 "Language: pl\n"
@@ -18,22 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:36
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Serwer"
+msgstr "Serwer URL"
 
 #: src/Dialogs/CaldavDialog.vala:41
 msgid "Invalid URL"
-msgstr ""
+msgstr "Niepoprawny URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "User Name"
-msgstr ""
+msgstr "Nazwa użytkownika"
 
 #: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
@@ -49,11 +47,11 @@ msgstr "Zaloguj się"
 
 #: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "Wyświetlana nazwa konta"
 
 #: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Wybierz nazwę, taką jak \"Praca\" lub \"Personalne\" dla konta."
 
 #: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
 #: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
@@ -62,29 +60,27 @@ msgstr "Wstecz"
 
 #: src/Dialogs/CaldavDialog.vala:120
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #: src/Dialogs/CaldavDialog.vala:144
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Zapisywanie konfiguracji…"
 
 #: src/Dialogs/CaldavDialog.vala:156
 msgid "All done"
-msgstr ""
+msgstr "Wszystko ukończone"
 
 #: src/Dialogs/CaldavDialog.vala:157
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account added."
-msgstr "Konto pocztowe"
+msgstr "Dodano konto CalDAV."
 
 #: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
-msgstr ""
+msgstr "Zakmnij"
 
 #: src/Dialogs/CaldavDialog.vala:242
 msgid "Could not save configuration"
-msgstr ""
+msgstr "Nie można zapisać konfiguracji"
 
 #: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
 msgid "Calendars"
@@ -92,35 +88,31 @@ msgstr "Kalendarze"
 
 #: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
 msgid "Task Lists"
-msgstr ""
+msgstr "Lista zadań"
 
 #: src/Dialogs/CaldavDialog.vala:369
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Szukanie dostępnych kalendarzy i zadań…"
 
 #: src/Dialogs/CaldavDialog.vala:419
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "Nie można pobrać kalendarzy"
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
-msgstr ""
+msgstr "Nazwa użytkownika:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:119
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Hasło"
+msgstr "Hasło:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:142
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "Serwer"
+msgstr "Serwer URL:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:148
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:156
 msgid "Encryption:"
@@ -139,24 +131,23 @@ msgstr "Używaj danych uwierzytelniających IMAP"
 msgid "No authentication required"
 msgstr "Uwierzytelnianie nie jest wymagane"
 
-#: src/Dialogs/Imap/ImapDialog.vala:356
+#: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
+"Dostarczone informację wydają się nie odpowiadać prawidłowemu kontu e-mail."
 
-#: src/Dialogs/Imap/ImapDialog.vala:590
-#, fuzzy
-#| msgid "Please enter your credentials…"
+#: src/Dialogs/Imap/ImapDialog.vala:591
 msgid "Could not log in. Please verify your credentials."
-msgstr "Proszę wpisać swoje dane dostępowe…"
+msgstr "Nie można zalogować. Proszę zweryfikować swoje dane logowania."
 
-#: src/Dialogs/Imap/ImapDialog.vala:604
+#: src/Dialogs/Imap/ImapDialog.vala:605
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "Niepowodzenie weryfikacji IMAP: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "Prawdziwa nazwa"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -164,25 +155,23 @@ msgstr "Poczta"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "Dalej"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "Konfigurowanie konta e-mail…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "Nie udało się zapisać konta e-mail"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
-msgstr ""
+msgstr "Powodzenie"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account saved."
-msgstr "Konto pocztowe"
+msgstr "Konto pocztowe zapisane."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -194,64 +183,56 @@ msgstr "Połącz konta sieciowe, klikając ikonę na poniższym pasku narzędzi.
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "Kalendarze"
+msgstr "Kalendarze i Zadania"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "Poczta"
 
 #: src/MainView.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "Dodaj nowe konto…"
+msgstr "Dodaj konto…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "Usuń to konto"
 
 #: src/MainView.vala:144
-#, fuzzy
-#| msgid "Other Account"
 msgid "Edit this account"
-msgstr "Inne konto"
+msgstr "Edytuj to konto"
 
 #: src/MainView.vala:167
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "Usuń „%s” z tego urządzenia"
 
 #: src/MainView.vala:168
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
+"To konto zostanie usunięte i nie będzie się więcej pojawiać w żadnych "
+"aplikacjach na tym urządzeniu."
 
 #: src/MainView.vala:176
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "Nowe konto"
+msgstr "Usuń konto"
 
 #: src/MainView.vala:200
-#, fuzzy
-#| msgid "Mail Account"
 msgid "Edit account failed"
-msgstr "Konto pocztowe"
+msgstr "Edycja konta nie powiodła się"
 
 #: src/MainView.vala:201
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "Podczas czytania konfiguracji „%s” pojawił się niespodziewany błąd."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"

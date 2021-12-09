@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-28 19:32+0000\n"
-"PO-Revision-Date: 2021-09-28 22:32+0000\n"
+"POT-Creation-Date: 2021-11-24 22:37+0000\n"
+"PO-Revision-Date: 2021-11-25 14:14+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/he/>\n"
@@ -27,64 +27,69 @@ msgstr "הגדרות חשבונות מקוונים"
 msgid "Manage online accounts and connected applications"
 msgstr "ניהול חשבונות מקוונים ויישומים מקושרים"
 
-#: data/onlineaccounts.appdata.xml.in:12
+#: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:24
 msgid "Fixes:"
 msgstr "תיקונים:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr "וידוא שמוגדר הפרש בין עדכונים בחשבון IMAP"
+msgid "Dim window when creating a new IMAP account"
+msgstr "לעמעם את החלון בעת יצירת חשבון IMAP חדש"
 
-#: data/onlineaccounts.appdata.xml.in:15
-msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr "תוקנה הוספת, עריכת והסרת רשימות ביישומי CalDAV כגון יישום המשימות"
-
-#: data/onlineaccounts.appdata.xml.in:17
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
 msgid "Minor updates:"
 msgstr "עדכונים משניים:"
 
-#: data/onlineaccounts.appdata.xml.in:19
-msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "וידאנו שתמיד ניתן לנווט הלאה עם המקש Enter"
-
-#: data/onlineaccounts.appdata.xml.in:20
-msgid "Close dialogs when pressing the Escape key"
-msgstr "תיבות דו־שיח נסגרות בלחיצה על המקש Escape"
-
-#: data/onlineaccounts.appdata.xml.in:21
-msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "נעשה שימוש ברשימה מלאה יותר של שיטות אימות ל־IMAP"
-
-#: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:31
-#: data/onlineaccounts.appdata.xml.in:41 data/onlineaccounts.appdata.xml.in:50
+#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:34
+#: data/onlineaccounts.appdata.xml.in:43 data/onlineaccounts.appdata.xml.in:53
+#: data/onlineaccounts.appdata.xml.in:62
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/onlineaccounts.appdata.xml.in:29
+#: data/onlineaccounts.appdata.xml.in:26
+msgid "Make sure the refresh interval for an IMAP account is set"
+msgstr "וידוא שמוגדר הפרש בין עדכונים בחשבון IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:27
+msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+msgstr "תוקנה הוספת, עריכת והסרת רשימות ביישומי CalDAV כגון יישום המשימות"
+
+#: data/onlineaccounts.appdata.xml.in:31
+msgid "Make sure you can always navigate next by pressing the Enter key"
+msgstr "וידאנו שתמיד ניתן לנווט הלאה עם המקש Enter"
+
+#: data/onlineaccounts.appdata.xml.in:32
+msgid "Close dialogs when pressing the Escape key"
+msgstr "תיבות דו־שיח נסגרות בלחיצה על המקש Escape"
+
+#: data/onlineaccounts.appdata.xml.in:33
+msgid "Use a more complete list of authentication methods for IMAP"
+msgstr "נעשה שימוש ברשימה מלאה יותר של שיטות אימות ל־IMAP"
+
+#: data/onlineaccounts.appdata.xml.in:41
 msgid "Edit saved IMAP accounts"
 msgstr "עריכת חשבונות IMAP שמורים"
 
-#: data/onlineaccounts.appdata.xml.in:30
+#: data/onlineaccounts.appdata.xml.in:42
 msgid "Automatically detect authentication method for IMAP"
 msgstr "לזהות את שיטת האימות ל־IMAP אוטומטית"
 
-#: data/onlineaccounts.appdata.xml.in:38
+#: data/onlineaccounts.appdata.xml.in:50
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "פרטי הגישה מאומתים בעת שמירת חשבונות IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:39
+#: data/onlineaccounts.appdata.xml.in:51
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "אפשר להקים תיקיות ארכיון, טיוטות, נשלח ותבניות ב־IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:40
+#: data/onlineaccounts.appdata.xml.in:52
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr "החלונית הצפה „הוספת חשבון” נסגרת כשנבחר פריט"
 
-#: data/onlineaccounts.appdata.xml.in:48
+#: data/onlineaccounts.appdata.xml.in:60
 msgid "Complete redesign"
 msgstr "עיצוב מחדש מאפס"
 
-#: data/onlineaccounts.appdata.xml.in:49
+#: data/onlineaccounts.appdata.xml.in:61
 msgid "Fix blurry icons on HiDPI"
 msgstr "תיקון סמלים מטושטשים ברזולוציה גבוהה"
 
