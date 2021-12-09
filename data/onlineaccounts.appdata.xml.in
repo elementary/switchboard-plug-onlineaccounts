@@ -7,8 +7,12 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="6.2.2" date="2021-11-24" urgency="medium">
+    <release version="6.3.0" date="2021-12-08" urgency="medium">
       <description>
+        <p>New Features:</p>
+        <ul>
+          <li>Edit saved CalDAV accounts</li>
+        </ul>
         <p>Fixes:</p>
         <ul>
           <li>Dim window when creating a new IMAP account</li>

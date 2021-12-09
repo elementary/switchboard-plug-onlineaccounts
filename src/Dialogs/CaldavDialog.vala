@@ -32,6 +32,9 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private Hdy.Deck deck;
     private ListStore calendars_store;
 
+    private E.SourceRegistry? registry = null;
+    private E.Source? source = null;
+
     construct {
         var url_label = new Granite.HeaderLabel (_("Server URL"));
         url_entry = new Granite.ValidatedEntry () {
@@ -154,7 +157,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         var save_configuration_success_view = new Granite.Widgets.AlertView (
             _("All done"),
-            _("CalDAV account added."),
+            _("CalDAV account saved."),
             "process-completed"
         );
         save_configuration_success_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -519,17 +522,58 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         return e_sources;
     }
 
+    public async void load_configuration (E.Source collection_source, GLib.Cancellable? cancellable) throws Error {
+        if (
+            !collection_source.has_extension (E.SOURCE_EXTENSION_COLLECTION) ||
+            "webdav" != ((E.SourceCollection) collection_source.get_extension (E.SOURCE_EXTENSION_COLLECTION)).backend_name
+        ) {
+            throw new Camel.Error.ERROR_GENERIC (_("The data provided does not seem to reflect a valid CalDav account."));
+        }
+
+        registry = yield new E.SourceRegistry (cancellable);
+        if (cancellable.is_cancelled ()) {
+            return;
+        }
+        this.source = collection_source;
+        var credentials_provider = new E.SourceCredentialsProvider (registry);
+
+        E.NamedParameters collection_credentials;
+        credentials_provider.lookup_sync (collection_source, null, out collection_credentials);
+        if (collection_credentials != null) {
+            password_entry.text = collection_credentials.get (E.SOURCE_CREDENTIAL_PASSWORD);
+        }
+
+        /* load configuration from collection_source */
+
+        unowned var collection_extension = (E.SourceCollection) collection_source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
+        username_entry.text = collection_extension.identity;
+
+        if (collection_source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND)) {
+            unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+            url_entry.text = webdav_extension.soup_uri.to_string (false);
+
+            if (webdav_extension.soup_uri.user != null && webdav_extension.soup_uri.user != "") {
+                url_entry.text = url_entry.text.replace (webdav_extension.soup_uri.user + "@", "");
+            }
+        }
+
+        display_name_entry.text = collection_source.display_name;
+    }
+
     private async void save_configuration () throws Error {
         if (cancellable != null) {
             cancellable.cancel ();
         }
         cancellable = new GLib.Cancellable ();
 
-        var registry = yield new E.SourceRegistry (cancellable);
+        if (registry == null) {
+            registry = yield new E.SourceRegistry (cancellable);
+        }
+
         if (cancellable.is_cancelled ()) {
             return;
         }
-        GLib.List<E.Source> sources = new GLib.List<E.Source> ();
+        GLib.List<E.Source> new_sources = new GLib.List<E.Source> ();
 
         /* store the collection source first, so we can use it as parent for the other ones */
         var collection_source = new E.Source (null, null);
@@ -551,14 +595,19 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
         offline_extension.set_stay_synchronized (true);
 
-        sources.append (collection_source);
+        new_sources.append (collection_source);
 
         /* First store passwords, thus the evolution-source-registry has them ready if needed. */
         yield collection_source.store_password (password_entry.text, true, cancellable);
-        yield registry.create_sources (sources, cancellable);
+        yield registry.create_sources (new_sources, cancellable);
 
         /* Discovers all child sources and EDS automatically adds them */
         yield registry.refresh_backend (collection_source.uid, cancellable);
+
+        /* if we are editing an existing account, make sure we delete the old collection source at this point */
+        if (this.source != null) {
+            yield this.source.remove (cancellable);
+        }
     }
 
     private class SourceRow : Gtk.ListBoxRow {
