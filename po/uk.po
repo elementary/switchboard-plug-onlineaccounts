@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 18:26+0000\n"
-"PO-Revision-Date: 2021-08-24 21:51+0000\n"
+"PO-Revision-Date: 2021-12-09 20:00+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -71,10 +71,8 @@ msgid "All done"
 msgstr "Усе готово"
 
 #: src/Dialogs/CaldavDialog.vala:160
-#, fuzzy
-#| msgid "CalDAV account added."
 msgid "CalDAV account saved."
-msgstr "Обліковий запис CalDAV додано."
+msgstr "Обліковий запис CalDAV збережено."
 
 #: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
@@ -101,10 +99,8 @@ msgid "Could not fetch calendars"
 msgstr "Не вдалося отримати календарі"
 
 #: src/Dialogs/CaldavDialog.vala:530
-#, fuzzy
-#| msgid "The data provided does not seem to reflect a valid mail account."
 msgid "The data provided does not seem to reflect a valid CalDav account."
-msgstr "Схоже, що надані дані, не відбивають дійсний поштовий обліковий запис."
+msgstr "Схоже, що надані дані, не відбивають дійсний обліковий запис CalDav."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
