@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 18:26+0000\n"
-"PO-Revision-Date: 2021-11-25 14:14+0000\n"
+"PO-Revision-Date: 2021-12-10 09:58+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ca/>\n"
@@ -29,13 +29,11 @@ msgstr "Gestioneu els comptes en línia i les aplicacions connectades."
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "New Features:"
-msgstr ""
+msgstr "Característiques noves:"
 
 #: data/onlineaccounts.appdata.xml.in:14
-#, fuzzy
-#| msgid "Edit saved IMAP accounts"
 msgid "Edit saved CalDAV accounts"
-msgstr "Edita els comptes d'IMAP desats"
+msgstr "Edita els comptes de CalDAV desats"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 msgid "Fixes:"
