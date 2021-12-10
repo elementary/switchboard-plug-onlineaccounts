@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 18:26+0000\n"
-"PO-Revision-Date: 2021-08-25 07:16+0000\n"
+"PO-Revision-Date: 2021-12-10 11:52+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
@@ -70,10 +70,8 @@ msgid "All done"
 msgstr "Terminé"
 
 #: src/Dialogs/CaldavDialog.vala:160
-#, fuzzy
-#| msgid "CalDAV account added."
 msgid "CalDAV account saved."
-msgstr "Compte CalDAV ajouté."
+msgstr "Compte CalDAV enregistré."
 
 #: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
@@ -100,12 +98,9 @@ msgid "Could not fetch calendars"
 msgstr "Impossible de récupérer les calendriers"
 
 #: src/Dialogs/CaldavDialog.vala:530
-#, fuzzy
-#| msgid "The data provided does not seem to reflect a valid mail account."
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
-"Les données fournies ne semblent pas correspondre à un compte de messagerie "
-"valide."
+"Les données fournies ne semblent pas correspondre à un compte CalDav valide."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
