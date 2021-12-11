@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-09 18:26+0000\n"
-"PO-Revision-Date: 2021-08-29 11:10+0000\n"
+"PO-Revision-Date: 2021-12-11 18:32+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fi/>\n"
@@ -70,10 +70,8 @@ msgid "All done"
 msgstr "Kaikki valmista"
 
 #: src/Dialogs/CaldavDialog.vala:160
-#, fuzzy
-#| msgid "CalDAV account added."
 msgid "CalDAV account saved."
-msgstr "CalDAV-tili lisätty."
+msgstr "CalDAV-tili tallennettu."
 
 #: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
@@ -100,10 +98,8 @@ msgid "Could not fetch calendars"
 msgstr "Kalenterien noutaminen ei onnistunut"
 
 #: src/Dialogs/CaldavDialog.vala:530
-#, fuzzy
-#| msgid "The data provided does not seem to reflect a valid mail account."
 msgid "The data provided does not seem to reflect a valid CalDav account."
-msgstr "Annetut tiedot eivät vaikuta kuvastavan kelvollista sähköpostitiliä."
+msgstr "Annetut tiedot eivät vaikuta kuvastavan kelvollista CalDav-tiliä."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
