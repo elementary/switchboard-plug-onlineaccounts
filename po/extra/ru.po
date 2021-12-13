@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-11-30 13:42+0000\n"
+"POT-Creation-Date: 2021-12-09 18:26+0000\n"
+"PO-Revision-Date: 2021-12-10 18:18+0000\n"
 "Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
@@ -28,73 +28,81 @@ msgstr "Настройки онлайн аккаунтов"
 msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн аккаунтами и подключенными приложениями"
 
-#: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:24
+#: data/onlineaccounts.appdata.xml.in:12
+msgid "New Features:"
+msgstr "Новые возможности:"
+
+#: data/onlineaccounts.appdata.xml.in:14
+msgid "Edit saved CalDAV accounts"
+msgstr "Редактирование сохраненных учётных записей CalDAV"
+
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/onlineaccounts.appdata.xml.in:14
+#: data/onlineaccounts.appdata.xml.in:18
 msgid "Dim window when creating a new IMAP account"
 msgstr "При создании новой учетной записи IMAP окно затемняется"
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:29
+#: data/onlineaccounts.appdata.xml.in:20 data/onlineaccounts.appdata.xml.in:33
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:34
-#: data/onlineaccounts.appdata.xml.in:43 data/onlineaccounts.appdata.xml.in:53
-#: data/onlineaccounts.appdata.xml.in:62
+#: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:38
+#: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:57
+#: data/onlineaccounts.appdata.xml.in:66
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:30
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "Исправлена проблема установки интервала обновления учётной записи IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:27
+#: data/onlineaccounts.appdata.xml.in:31
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
 "Исправлено добавление, редактирование и удаление списков в приложениях "
 "CalDAV по типу «Задачи»"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:35
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr "Вы всегда можете перейти дальше нажав клавишу «enter»"
 
-#: data/onlineaccounts.appdata.xml.in:32
+#: data/onlineaccounts.appdata.xml.in:36
 msgid "Close dialogs when pressing the Escape key"
 msgstr "Закрытие диалоговых окон нажатием клавиши «ESC»"
 
-#: data/onlineaccounts.appdata.xml.in:33
+#: data/onlineaccounts.appdata.xml.in:37
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr "Используется более полный список методов аутентификации для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:45
 msgid "Edit saved IMAP accounts"
 msgstr "Редактирование сохраненных учётных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:42
+#: data/onlineaccounts.appdata.xml.in:46
 msgid "Automatically detect authentication method for IMAP"
 msgstr "Автоматическое определение метода аутентификации для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:50
+#: data/onlineaccounts.appdata.xml.in:54
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr ""
 "Проверка учетных данных для входа во время сохранения учетных записей IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:51
+#: data/onlineaccounts.appdata.xml.in:55
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Настройка папок Архив, Черновики, Отправленные и Шаблоны для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:52
+#: data/onlineaccounts.appdata.xml.in:56
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Закрытие всплывающего окна «Добавить учетную запись» при выборе элемента"
 
-#: data/onlineaccounts.appdata.xml.in:60
+#: data/onlineaccounts.appdata.xml.in:64
 msgid "Complete redesign"
 msgstr "Полное изменение дизайна"
 
-#: data/onlineaccounts.appdata.xml.in:61
+#: data/onlineaccounts.appdata.xml.in:65
 msgid "Fix blurry icons on HiDPI"
 msgstr "Исправлены размытые значки на HiDPI"
 

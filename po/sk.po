@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-24 22:37+0000\n"
+"POT-Creation-Date: 2021-12-09 18:26+0000\n"
 "PO-Revision-Date: 2021-08-26 17:56+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -20,82 +20,90 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:36
+#: src/Dialogs/CaldavDialog.vala:39
 msgid "Server URL"
 msgstr "URL adresa servera"
 
-#: src/Dialogs/CaldavDialog.vala:41
+#: src/Dialogs/CaldavDialog.vala:44
 msgid "Invalid URL"
 msgstr "Neplatná URL"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "User Name"
 msgstr "Používateľské meno"
 
-#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Heslo"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Log In"
 msgstr "Prihlásiť sa"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Zobrazované meno účtu"
 
-#: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Vyberte si názov pre účet, ako napríklad „Pracovný“ alebo „Osobný“."
 
-#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
 #: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "Späť"
 
-#: src/Dialogs/CaldavDialog.vala:120
+#: src/Dialogs/CaldavDialog.vala:123
 msgid "Save"
 msgstr "Uložiť"
 
-#: src/Dialogs/CaldavDialog.vala:144
+#: src/Dialogs/CaldavDialog.vala:147
 msgid "Saving the configuration…"
 msgstr "Nastavenie sa ukladá…"
 
-#: src/Dialogs/CaldavDialog.vala:156
+#: src/Dialogs/CaldavDialog.vala:159
 msgid "All done"
 msgstr "Hotovo"
 
-#: src/Dialogs/CaldavDialog.vala:157
-msgid "CalDAV account added."
+#: src/Dialogs/CaldavDialog.vala:160
+#, fuzzy
+#| msgid "CalDAV account added."
+msgid "CalDAV account saved."
 msgstr "CalDAV účet bol pridaný."
 
-#: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "Zatvoriť"
 
-#: src/Dialogs/CaldavDialog.vala:242
+#: src/Dialogs/CaldavDialog.vala:245
 msgid "Could not save configuration"
 msgstr "Uloženie nastavenia sa nepodarilo"
 
-#: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalendáre"
 
-#: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
+#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
 msgid "Task Lists"
 msgstr "Zoznamy úloh"
 
-#: src/Dialogs/CaldavDialog.vala:369
+#: src/Dialogs/CaldavDialog.vala:372
 msgid "Finding available calendars and tasks…"
 msgstr "Hľadajú sa dostupné kalendáre a úlohy…"
 
-#: src/Dialogs/CaldavDialog.vala:419
+#: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
 msgstr "Nepodarilo sa získať kalendáre"
+
+#: src/Dialogs/CaldavDialog.vala:530
+#, fuzzy
+#| msgid "The data provided does not seem to reflect a valid mail account."
+msgid "The data provided does not seem to reflect a valid CalDav account."
+msgstr "Poskytnuté údaje sa nezhodujú s platným e-mailovým účtom."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
@@ -204,31 +212,31 @@ msgstr "Pridať účet…"
 msgid "Remove this account"
 msgstr "Odstrániť tento účet"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:150
 msgid "Edit this account"
 msgstr "Upraviť tento účet"
 
-#: src/MainView.vala:167
+#: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Odstrániť „%s“ z tohto zariadenia"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Tento účet bude odstránený a už sa nebude zobrazovať v žiadnych aplikáciách "
 "na tomto zariadení."
 
-#: src/MainView.vala:176
+#: src/MainView.vala:182
 msgid "Remove Account"
 msgstr "Odstrániť účet"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:206 src/MainView.vala:235
 msgid "Edit account failed"
 msgstr "Úprava účtu zlyhala"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "Vyskytla sa nečakaná chyba pri čítaní nastavenia ‚%s‘."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-24 22:37+0000\n"
+"POT-Creation-Date: 2021-12-09 18:26+0000\n"
 "PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -20,82 +20,90 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:36
+#: src/Dialogs/CaldavDialog.vala:39
 msgid "Server URL"
 msgstr "Tjenernettadresse"
 
-#: src/Dialogs/CaldavDialog.vala:41
+#: src/Dialogs/CaldavDialog.vala:44
 msgid "Invalid URL"
 msgstr "Ugyldig nettadresse"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "User Name"
 msgstr "Brukernavn"
 
-#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Passord"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Log In"
 msgstr "Logg inn"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Kontovisningsnavn"
 
-#: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Velg et navn som f.eks. «Arbeid» eller «Personlig» for kontoen."
 
-#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
 #: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "Tilbake"
 
-#: src/Dialogs/CaldavDialog.vala:120
+#: src/Dialogs/CaldavDialog.vala:123
 msgid "Save"
 msgstr "Lagre"
 
-#: src/Dialogs/CaldavDialog.vala:144
+#: src/Dialogs/CaldavDialog.vala:147
 msgid "Saving the configuration…"
 msgstr "Lagrer oppsettet …"
 
-#: src/Dialogs/CaldavDialog.vala:156
+#: src/Dialogs/CaldavDialog.vala:159
 msgid "All done"
 msgstr "Ferdig"
 
-#: src/Dialogs/CaldavDialog.vala:157
-msgid "CalDAV account added."
+#: src/Dialogs/CaldavDialog.vala:160
+#, fuzzy
+#| msgid "CalDAV account added."
+msgid "CalDAV account saved."
 msgstr "CalDAV-konto lagt til."
 
-#: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "Lukk"
 
-#: src/Dialogs/CaldavDialog.vala:242
+#: src/Dialogs/CaldavDialog.vala:245
 msgid "Could not save configuration"
 msgstr "Kunne ikke lagre oppsett"
 
-#: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalendere"
 
-#: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
+#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
 msgid "Task Lists"
 msgstr "Gjøremålslister"
 
-#: src/Dialogs/CaldavDialog.vala:369
+#: src/Dialogs/CaldavDialog.vala:372
 msgid "Finding available calendars and tasks…"
 msgstr "Finner tilgjengelige kalendere og gjøremål …"
 
-#: src/Dialogs/CaldavDialog.vala:419
+#: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
 msgstr "Klarte ikke å hente kalendere"
+
+#: src/Dialogs/CaldavDialog.vala:530
+#, fuzzy
+#| msgid "The data provided does not seem to reflect a valid mail account."
+msgid "The data provided does not seem to reflect a valid CalDav account."
+msgstr "Angitt data ser ikke ut til å være en gyldig e-postkonto."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
@@ -206,31 +214,31 @@ msgstr "Legg til konto …"
 msgid "Remove this account"
 msgstr "Fjern denne kontoen"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:150
 msgid "Edit this account"
 msgstr "Rediger denne kontoen"
 
-#: src/MainView.vala:167
+#: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Fjern «%s» fra denne enheten"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
 
-#: src/MainView.vala:176
+#: src/MainView.vala:182
 msgid "Remove Account"
 msgstr "Fjern konto"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:206 src/MainView.vala:235
 #, fuzzy
 #| msgid "E-mail account added."
 msgid "Edit account failed"
 msgstr "Kunne ikke redigere konto"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207 src/MainView.vala:236
 #, fuzzy, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "Uventet feil under lesing av oppsettet til «%s»"

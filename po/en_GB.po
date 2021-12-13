@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-24 22:37+0000\n"
-"PO-Revision-Date: 2021-09-22 22:06+0000\n"
+"POT-Creation-Date: 2021-12-09 18:26+0000\n"
+"PO-Revision-Date: 2021-12-09 20:00+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/en_GB/>\n"
@@ -20,82 +20,86 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:36
+#: src/Dialogs/CaldavDialog.vala:39
 msgid "Server URL"
 msgstr "Server URL"
 
-#: src/Dialogs/CaldavDialog.vala:41
+#: src/Dialogs/CaldavDialog.vala:44
 msgid "Invalid URL"
 msgstr "Invalid URL"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "User Name"
 msgstr "User Name"
 
-#: src/Dialogs/CaldavDialog.vala:47 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Password"
 
-#: src/Dialogs/CaldavDialog.vala:54 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/Dialogs/CaldavDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Log In"
 msgstr "Log In"
 
-#: src/Dialogs/CaldavDialog.vala:85 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Account Display Name"
 
-#: src/Dialogs/CaldavDialog.vala:92 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Pick a name like “Work” or “Personal” for the account."
 
-#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
 #: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "Back"
 
-#: src/Dialogs/CaldavDialog.vala:120
+#: src/Dialogs/CaldavDialog.vala:123
 msgid "Save"
 msgstr "Save"
 
-#: src/Dialogs/CaldavDialog.vala:144
+#: src/Dialogs/CaldavDialog.vala:147
 msgid "Saving the configuration…"
 msgstr "Saving the configuration…"
 
-#: src/Dialogs/CaldavDialog.vala:156
+#: src/Dialogs/CaldavDialog.vala:159
 msgid "All done"
 msgstr "All done"
 
-#: src/Dialogs/CaldavDialog.vala:157
-msgid "CalDAV account added."
-msgstr "CalDAV account added."
+#: src/Dialogs/CaldavDialog.vala:160
+msgid "CalDAV account saved."
+msgstr "CalDAV account saved."
 
-#: src/Dialogs/CaldavDialog.vala:165 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "Close"
 
-#: src/Dialogs/CaldavDialog.vala:242
+#: src/Dialogs/CaldavDialog.vala:245
 msgid "Could not save configuration"
 msgstr "Could not save configuration"
 
-#: src/Dialogs/CaldavDialog.vala:324 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendars"
 
-#: src/Dialogs/CaldavDialog.vala:326 src/Dialogs/CaldavDialog.vala:334
+#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
 msgid "Task Lists"
 msgstr "Task Lists"
 
-#: src/Dialogs/CaldavDialog.vala:369
+#: src/Dialogs/CaldavDialog.vala:372
 msgid "Finding available calendars and tasks…"
 msgstr "Finding available calendars and tasks…"
 
-#: src/Dialogs/CaldavDialog.vala:419
+#: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
 msgstr "Could not fetch calendars"
+
+#: src/Dialogs/CaldavDialog.vala:530
+msgid "The data provided does not seem to reflect a valid CalDav account."
+msgstr "The data provided does not seem to reflect a valid CalDav account."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
@@ -203,30 +207,30 @@ msgstr "Add Account…"
 msgid "Remove this account"
 msgstr "Remove this account"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:150
 msgid "Edit this account"
 msgstr "Edit this account"
 
-#: src/MainView.vala:167
+#: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Remove “%s” from this device"
 
-#: src/MainView.vala:168
+#: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "This account will be removed and no longer appear in any apps on this device."
 
-#: src/MainView.vala:176
+#: src/MainView.vala:182
 msgid "Remove Account"
 msgstr "Remove Account"
 
-#: src/MainView.vala:200
+#: src/MainView.vala:206 src/MainView.vala:235
 msgid "Edit account failed"
 msgstr "Edit account failed"
 
-#: src/MainView.vala:201
+#: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "There was an unexpected error while reading the configuration of '%s'."
