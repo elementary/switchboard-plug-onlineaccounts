@@ -9,7 +9,7 @@
   <releases>
     <release version="6.3.0" date="2021-12-13" urgency="medium">
       <description>
-        <p>New Features:</p>
+        <p>New features:</p>
         <ul>
           <li>Edit saved CalDAV accounts</li>
         </ul>
