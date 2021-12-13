@@ -7,9 +7,9 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="6.3.0" date="2021-12-08" urgency="medium">
+    <release version="6.3.0" date="2021-12-13" urgency="medium">
       <description>
-        <p>New Features:</p>
+        <p>New features:</p>
         <ul>
           <li>Edit saved CalDAV accounts</li>
         </ul>
