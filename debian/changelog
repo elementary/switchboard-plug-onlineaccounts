@@ -1,3 +1,12 @@
+switchboard-plug-onlineaccounts (6.3.0) focal; urgency=medium
+
+  * Release 6.3.0 (#236)
+  * Update translation files
+  * Update translation template
+  * New feature: Editing a CalDAV account (#216)
+
+ -- elementary, Inc. <builds@elementary.io>  Mon, 13 Dec 2021 22:24:23 +0000
+
 switchboard-plug-onlineaccounts (6.2.2) focal; urgency=medium
 
   * Release 6.2.2 (#235)
