@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-13 22:24+0000\n"
-"PO-Revision-Date: 2021-12-09 20:00+0000\n"
+"PO-Revision-Date: 2021-12-14 15:01+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -29,8 +29,6 @@ msgid "Manage online accounts and connected applications"
 msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
 
 #: data/onlineaccounts.appdata.xml.in:12
-#, fuzzy
-#| msgid "New Features:"
 msgid "New features:"
 msgstr "Нові функції:"
 
