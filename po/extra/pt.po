@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-13 22:24+0000\n"
-"PO-Revision-Date: 2021-11-23 23:34+0000\n"
+"PO-Revision-Date: 2021-12-21 22:04+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pt/>\n"
@@ -29,7 +29,7 @@ msgstr "Gerir contas online e aplicações associadas"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "New features:"
-msgstr ""
+msgstr "Novas funcionalidades:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Edit saved CalDAV accounts"
