@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-13 22:24+0000\n"
-"PO-Revision-Date: 2021-12-21 22:04+0000\n"
+"PO-Revision-Date: 2021-12-22 19:30+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pt/>\n"
@@ -33,17 +33,15 @@ msgstr "Novas funcionalidades:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Edit saved CalDAV accounts"
-msgstr ""
+msgstr "Editar contas CalDAV guardadas"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 msgid "Fixes:"
 msgstr "Correções:"
 
 #: data/onlineaccounts.appdata.xml.in:18
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
-msgstr "Verificar as credenciais de acesso ao guardar contas IMAP"
+msgstr "Escurecer janela quando se cria uma nova conta IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:20 data/onlineaccounts.appdata.xml.in:33
 msgid "Minor updates:"
@@ -58,34 +56,37 @@ msgstr "Traduções atualizadas"
 #: data/onlineaccounts.appdata.xml.in:30
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
+"Certifique-se de que o intervalo de atualização para uma conta IMAP está "
+"definido"
 
 #: data/onlineaccounts.appdata.xml.in:31
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
+"Corrige o adicionar, editar e remover listas em aplicações CalDAV tais como "
+"o Tarefas"
 
 #: data/onlineaccounts.appdata.xml.in:35
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr ""
+"Certifique-se de que pode sempre navegar o seguinte premindo a tecla Enter"
 
 #: data/onlineaccounts.appdata.xml.in:36
 msgid "Close dialogs when pressing the Escape key"
-msgstr ""
+msgstr "Fecha janelas de diálogos ao premir a tecla Escape"
 
 #: data/onlineaccounts.appdata.xml.in:37
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr ""
+msgstr "Utilizar uma lista mais completa de métodos de autenticação para IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:45
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Editar contas IMAP guardadas"
 
 #: data/onlineaccounts.appdata.xml.in:46
 msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgstr "Detetar automaticamente o método de autenticação para IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:54
-#, fuzzy
-#| msgid "Verify login credentails when saving IMAP accounts"
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "Verificar as credenciais de acesso ao guardar contas IMAP"
 
