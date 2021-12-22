@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-13 22:24+0000\n"
-"PO-Revision-Date: 2021-08-08 14:22+0000\n"
+"PO-Revision-Date: 2021-12-22 19:30+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/pt/>\n"
@@ -70,10 +70,8 @@ msgid "All done"
 msgstr "Tudo pronto"
 
 #: src/Dialogs/CaldavDialog.vala:160
-#, fuzzy
-#| msgid "CalDAV account added."
 msgid "CalDAV account saved."
-msgstr "Conta CalDAV adicionada."
+msgstr "Conta CalDAV guardada."
 
 #: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
@@ -101,7 +99,7 @@ msgstr "Não foi possível obter calendários"
 
 #: src/Dialogs/CaldavDialog.vala:530
 msgid "The data provided does not seem to reflect a valid CalDav account."
-msgstr ""
+msgstr "Os dados fornecidos não parecem refletir uma conta CalDav válida."
 
 #: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
 msgid "Username:"
@@ -138,7 +136,7 @@ msgstr "Não é necessária autenticação"
 
 #: src/Dialogs/Imap/ImapDialog.vala:357
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "Os dados fornecidos não parecem refletir uma conta de correio válida."
 
 #: src/Dialogs/Imap/ImapDialog.vala:591
 msgid "Could not log in. Please verify your credentials."
@@ -166,20 +164,16 @@ msgid "Setting up the e-mail account…"
 msgstr "A configurar a conta de e-mail…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
-#, fuzzy
-#| msgid "Could not add the e-mail account"
 msgid "Could not save the e-mail account"
-msgstr "Não foi possível adicionar a conta de e-mail"
+msgstr "Não foi possível guardar a conta de e-mail"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
 msgstr "Sucesso"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "E-mail account saved."
-msgstr "Conta de e-mail adicionada."
+msgstr "Conta de e-mail guardada."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -214,10 +208,8 @@ msgid "Remove this account"
 msgstr "Remover esta conta"
 
 #: src/MainView.vala:150
-#, fuzzy
-#| msgid "Remove this account"
 msgid "Edit this account"
-msgstr "Remover esta conta"
+msgstr "Editar esta conta"
 
 #: src/MainView.vala:173
 #, c-format
@@ -236,15 +228,13 @@ msgid "Remove Account"
 msgstr "Remover Conta"
 
 #: src/MainView.vala:206 src/MainView.vala:235
-#, fuzzy
-#| msgid "E-mail account added."
 msgid "Edit account failed"
-msgstr "Conta de e-mail adicionada."
+msgstr "Falha ao editar conta"
 
 #: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "Ocorreu um erro inesperado ao ler a configuração de '%s'."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
