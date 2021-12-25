@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-13 22:24+0000\n"
-"PO-Revision-Date: 2021-12-13 23:37+0000\n"
+"PO-Revision-Date: 2021-12-25 22:41+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
-msgstr ""
+msgstr "Online fiókok beállításai"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 msgid "Fixes:"
-msgstr ""
+msgstr "Javítások:"
 
 #: data/onlineaccounts.appdata.xml.in:18
 msgid "Dim window when creating a new IMAP account"
