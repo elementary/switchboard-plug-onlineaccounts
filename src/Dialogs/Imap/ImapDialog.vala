@@ -31,6 +31,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private Gtk.Entry smtp_password_entry;
     private Gtk.Entry smtp_username_entry;
     private Gtk.SpinButton imap_port_spin;
+    private Gtk.SpinButton imap_refresh_interval_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
     private ImapSavePage save_page;
@@ -68,11 +69,19 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             value = 993
         };
 
+        imap_refresh_interval_spin = new Gtk.SpinButton.with_range (1, 60, 1) {
+            value = 10
+        };
+
         var imap_port_label = new Gtk.Label (_("Port:")) {
             halign = Gtk.Align.END
         };
 
         var imap_encryption_label = new Gtk.Label (_("Encryption:")) {
+            halign = Gtk.Align.END
+        };
+
+        var imap_refresh_interval_label = new Gtk.Label (_("Refresh Interval in Minutes:")) {
             halign = Gtk.Align.END
         };
 
@@ -98,6 +107,8 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         imap_server_grid.attach (imap_encryption_combobox, 1, 4);
         imap_server_grid.attach (imap_port_label, 0, 5);
         imap_server_grid.attach (imap_port_spin, 1, 5);
+        imap_server_grid.attach (imap_refresh_interval_label, 0, 6);
+        imap_server_grid.attach (imap_refresh_interval_spin, 1, 6);
 
         use_imap_credentials = new Gtk.CheckButton.with_label (_("Use IMAP Credentials")) {
             active = true
@@ -440,6 +451,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             imap_port_spin.value = account_auth_extension.port;
         }
 
+        if (account_source.has_extension (E.SOURCE_EXTENSION_REFRESH)) {
+          unowned var refresh_extension = (E.SourceRefresh) account_source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+          imap_refresh_interval_spin.value = refresh_extension.interval_minutes;
+        }
+
         if (account_source.display_name != "") {
             /* set the display name as last value to avoid having
             it overwritten by event handlers in login_page */
@@ -518,7 +534,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         unowned var refresh_extension = (E.SourceRefresh) account_source.get_extension (E.SOURCE_EXTENSION_REFRESH);
         refresh_extension.enabled = true;
-        refresh_extension.interval_minutes = 10;
+        refresh_extension.interval_minutes = (uint) imap_refresh_interval_spin.value;
 
         /* configure identity_source */
 
