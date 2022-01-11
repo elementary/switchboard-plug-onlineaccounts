@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-13 22:24+0000\n"
-"PO-Revision-Date: 2020-05-28 22:11+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/online-"
-"accounts-extra/cs/>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
+"online-accounts-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
@@ -29,23 +29,23 @@ msgstr "Spravovat online účty a propojené aplikace"
 
 #: data/onlineaccounts.appdata.xml.in:12
 msgid "New features:"
-msgstr ""
+msgstr "Nové funkce:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Edit saved CalDAV accounts"
-msgstr ""
+msgstr "Možnost upravování uložených CalDAV účtů"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 msgid "Fixes:"
-msgstr ""
+msgstr "Opravy:"
 
 #: data/onlineaccounts.appdata.xml.in:18
 msgid "Dim window when creating a new IMAP account"
-msgstr ""
+msgstr "Při vytváření nového IMAP účtu ztmaveno okno"
 
 #: data/onlineaccounts.appdata.xml.in:20 data/onlineaccounts.appdata.xml.in:33
 msgid "Minor updates:"
-msgstr ""
+msgstr "Drobné aktualizace:"
 
 #: data/onlineaccounts.appdata.xml.in:22 data/onlineaccounts.appdata.xml.in:38
 #: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:57
@@ -55,49 +55,51 @@ msgstr "Aktualizovány překlady"
 
 #: data/onlineaccounts.appdata.xml.in:30
 msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
+msgstr "Ověřte že je nastavený interval opakovaného načítání pro IMAP účet"
 
 #: data/onlineaccounts.appdata.xml.in:31
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
+"Opraveno přidávání, upravování a odebírání seznamů v CalDAV aplikacích jako "
+"jsou Úkoly"
 
 #: data/onlineaccounts.appdata.xml.in:35
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr ""
+"Zajištěno, že vždy bude možné se pohybovat na následující položky stisknutím "
+"klávesy Enter"
 
 #: data/onlineaccounts.appdata.xml.in:36
 msgid "Close dialogs when pressing the Escape key"
-msgstr ""
+msgstr "Zavírání dialogů stiskem klávesy Esc"
 
 #: data/onlineaccounts.appdata.xml.in:37
 msgid "Use a more complete list of authentication methods for IMAP"
-msgstr ""
+msgstr "Použit úplnější seznam metod ověřování se pro IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:45
 msgid "Edit saved IMAP accounts"
-msgstr ""
+msgstr "Upravování uložených IMAP účtů"
 
 #: data/onlineaccounts.appdata.xml.in:46
 msgid "Automatically detect authentication method for IMAP"
-msgstr ""
+msgstr "Automatické zjišťován metody ověřování se pro IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:54
 msgid "Verify login credentials when saving IMAP accounts"
-msgstr ""
+msgstr "Při ukládání IMAP účtů jsou ověřovány přihlašovací údaje k nim"
 
 #: data/onlineaccounts.appdata.xml.in:55
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr ""
+msgstr "Nastavení složek pro Archiv, Koncepty, Odeslané a Šablony pro IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:56
 msgid "Close \"Add Account\" popover when an item is selected"
-msgstr ""
+msgstr "Po vybrání položky zavřít dialog „Přidat účet“"
 
 #: data/onlineaccounts.appdata.xml.in:64
-#, fuzzy
-#| msgid "Major redesign"
 msgid "Complete redesign"
-msgstr "Velké předělání"
+msgstr "Úplné předělání"
 
 #: data/onlineaccounts.appdata.xml.in:65
 msgid "Fix blurry icons on HiDPI"
