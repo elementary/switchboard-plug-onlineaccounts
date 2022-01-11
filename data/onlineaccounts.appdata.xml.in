@@ -7,6 +7,18 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
+    <release version="6.4.0" date="2022-01-11" urgency="medium">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Choose refresh rate for IMAP</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.3.0" date="2021-12-13" urgency="medium">
       <description>
         <p>New features:</p>
