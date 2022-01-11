@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 22:24+0000\n"
+"POT-Creation-Date: 2022-01-11 20:20+0000\n"
 "PO-Revision-Date: 2016-06-03 03:10+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Cancel"
 msgstr "Utzi"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
-#: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
+#: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr ""
 
@@ -101,50 +101,54 @@ msgstr ""
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
+#: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:119
+#: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
 msgid "Password:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:142
+#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
 msgid "Server URL:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:148
+#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:156
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
 msgstr ""
 
+#: src/Dialogs/Imap/ImapDialog.vala:84
+msgid "Refresh Interval in Minutes:"
+msgstr ""
+
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:164
+#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
 msgid "None"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:102
+#: src/Dialogs/Imap/ImapDialog.vala:113
 msgid "Use IMAP Credentials"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:106
+#: src/Dialogs/Imap/ImapDialog.vala:117
 msgid "No authentication required"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:357
+#: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:591
+#: src/Dialogs/Imap/ImapDialog.vala:607
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Idatzi zure kredentzialak…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:605
+#: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

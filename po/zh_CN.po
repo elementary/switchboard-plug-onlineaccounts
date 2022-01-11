@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 22:24+0000\n"
+"POT-Creation-Date: 2022-01-11 20:20+0000\n"
 "PO-Revision-Date: 2021-11-01 10:01+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -40,7 +40,7 @@ msgstr "密码"
 msgid "Cancel"
 msgstr "取消"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr "登录"
 
@@ -53,7 +53,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "为帐户选择一个名称，例如“Work”或“Personal”。"
 
 #: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
-#: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
+#: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "返回"
 
@@ -105,48 +105,52 @@ msgstr "无法获取日历"
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr "提供的数据似乎没有反映有效的邮件帐户。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
+#: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
 msgstr "用户名："
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:119
+#: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
 msgid "Password:"
 msgstr "密码："
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:142
+#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
 msgid "Server URL:"
 msgstr "服务器地址："
 
-#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:148
+#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
 msgstr "端口："
 
-#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:156
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
 msgstr "加密："
 
+#: src/Dialogs/Imap/ImapDialog.vala:84
+msgid "Refresh Interval in Minutes:"
+msgstr ""
+
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:164
+#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
 msgid "None"
 msgstr "无"
 
-#: src/Dialogs/Imap/ImapDialog.vala:102
+#: src/Dialogs/Imap/ImapDialog.vala:113
 msgid "Use IMAP Credentials"
 msgstr "使用 IMAP 证书"
 
-#: src/Dialogs/Imap/ImapDialog.vala:106
+#: src/Dialogs/Imap/ImapDialog.vala:117
 msgid "No authentication required"
 msgstr "无须身份验证"
 
-#: src/Dialogs/Imap/ImapDialog.vala:357
+#: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "提供的数据似乎没有反映有效的邮件帐户。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:591
+#: src/Dialogs/Imap/ImapDialog.vala:607
 msgid "Could not log in. Please verify your credentials."
 msgstr "无法登录。请验证您的凭据。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:605
+#: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP 验证失败：%s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-13 22:24+0000\n"
+"POT-Creation-Date: 2022-01-11 20:20+0000\n"
 "PO-Revision-Date: 2021-12-10 04:46+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "パスワード"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr "ログイン"
 
@@ -53,7 +53,7 @@ msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "“仕事用”や“プライベート”といった名前をアカウントにつけましょう。"
 
 #: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
-#: src/Dialogs/Imap/ImapDialog.vala:191 src/Dialogs/Imap/ImapSavePage.vala:70
+#: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "戻る"
 
@@ -101,48 +101,52 @@ msgstr "カレンダーを取得できませんでした"
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr "指定されたデータは適切な CalDav アカウントではない可能性があります。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:48 src/Dialogs/Imap/ImapDialog.vala:110
+#: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
 msgstr "ユーザー名:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:119
+#: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
 msgid "Password:"
 msgstr "パスワード:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:142
+#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
 msgid "Server URL:"
 msgstr "サーバーの URL:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:71 src/Dialogs/Imap/ImapDialog.vala:148
+#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
 msgstr "ポート:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:75 src/Dialogs/Imap/ImapDialog.vala:156
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
 msgstr "暗号化:"
 
+#: src/Dialogs/Imap/ImapDialog.vala:84
+msgid "Refresh Interval in Minutes:"
+msgstr ""
+
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:164
+#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
 msgid "None"
 msgstr "なし"
 
-#: src/Dialogs/Imap/ImapDialog.vala:102
+#: src/Dialogs/Imap/ImapDialog.vala:113
 msgid "Use IMAP Credentials"
 msgstr "IMAP 証明書を使う"
 
-#: src/Dialogs/Imap/ImapDialog.vala:106
+#: src/Dialogs/Imap/ImapDialog.vala:117
 msgid "No authentication required"
 msgstr "認証は不要"
 
-#: src/Dialogs/Imap/ImapDialog.vala:357
+#: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "指定されたデータは適切なメールアカウントではない可能性があります。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:591
+#: src/Dialogs/Imap/ImapDialog.vala:607
 msgid "Could not log in. Please verify your credentials."
 msgstr "ログインできませんでした。証明書を認証してください。"
 
-#: src/Dialogs/Imap/ImapDialog.vala:605
+#: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP を認証できませんでした: %s"
