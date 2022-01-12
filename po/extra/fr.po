@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2021-12-14 15:01+0000\n"
+"PO-Revision-Date: 2022-01-12 11:46+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -33,7 +33,7 @@ msgstr "Nouvelles fonctionnalités :"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Choose refresh rate for IMAP"
-msgstr ""
+msgstr "Sélection de l'intervalle de mise à jour pour les comptes IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:32
 #: data/onlineaccounts.appdata.xml.in:45
