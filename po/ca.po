@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2021-12-10 09:58+0000\n"
+"PO-Revision-Date: 2022-01-13 11:05+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ca/>\n"
@@ -124,7 +124,7 @@ msgstr "Encriptació:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "Interval d'actualització en minuts:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
