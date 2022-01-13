@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2021-12-14 21:55+0000\n"
+"PO-Revision-Date: 2022-01-13 11:05+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ca/>\n"
@@ -33,7 +33,7 @@ msgstr "Característiques noves:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Choose refresh rate for IMAP"
-msgstr ""
+msgstr "Trieu la freqüència d'actualització per a IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:32
 #: data/onlineaccounts.appdata.xml.in:45
