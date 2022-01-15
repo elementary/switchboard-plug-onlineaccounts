@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2022-01-15 13:59+0000\n"
+"PO-Revision-Date: 2022-01-15 22:24+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/nl/>\n"
@@ -26,7 +26,7 @@ msgstr "Online Accounts Instellingen"
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
 msgstr ""
-"Beheer online accounts en toepassingen die verbonden zijn met het internet"
+"Beheer online accounts en applicaties die verbonden zijn met het internet"
 
 #: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:24
 msgid "New features:"
