@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2020-05-11 16:10+0000\n"
-"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/online-"
-"accounts-extra/nl/>\n"
+"PO-Revision-Date: 2022-01-15 13:59+0000\n"
+"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
+"online-accounts-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:24
 msgid "New features:"
-msgstr ""
+msgstr "Nieuwe functionaliteit:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Choose refresh rate for IMAP"
@@ -39,7 +39,7 @@ msgstr ""
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:32
 #: data/onlineaccounts.appdata.xml.in:45
 msgid "Minor updates:"
-msgstr ""
+msgstr "Kleine updates:"
 
 #: data/onlineaccounts.appdata.xml.in:18 data/onlineaccounts.appdata.xml.in:34
 #: data/onlineaccounts.appdata.xml.in:50 data/onlineaccounts.appdata.xml.in:59
