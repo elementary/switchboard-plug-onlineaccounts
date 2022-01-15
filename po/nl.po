@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2020-03-16 12:09+0000\n"
-"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"PO-Revision-Date: 2022-01-15 13:59+0000\n"
+"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/nl/>\n"
 "Language: nl\n"
@@ -17,22 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:39
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "Server"
+msgstr "Server URL"
 
 #: src/Dialogs/CaldavDialog.vala:44
 msgid "Invalid URL"
-msgstr ""
+msgstr "Ongeldige URL"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "User Name"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
@@ -48,11 +46,11 @@ msgstr "Aanmelden"
 
 #: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "Weergavenaam"
 
 #: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "Kies een naam als “Werk” of “Persoonlijk” voor het account."
 
 #: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
@@ -61,29 +59,27 @@ msgstr "Terug"
 
 #: src/Dialogs/CaldavDialog.vala:123
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
 
 #: src/Dialogs/CaldavDialog.vala:147
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "Configuratie wordt opgeslagen…"
 
 #: src/Dialogs/CaldavDialog.vala:159
 msgid "All done"
-msgstr ""
+msgstr "Alles is afgerond"
 
 #: src/Dialogs/CaldavDialog.vala:160
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account saved."
-msgstr "E-mailaccount"
+msgstr "CalDAV account is opgeslagen."
 
 #: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
-msgstr ""
+msgstr "Sluiten"
 
 #: src/Dialogs/CaldavDialog.vala:245
 msgid "Could not save configuration"
-msgstr ""
+msgstr "Kon configuratie niet opslaan"
 
 #: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
 msgid "Calendars"
@@ -91,39 +87,36 @@ msgstr "Agenda's"
 
 #: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
 msgid "Task Lists"
-msgstr ""
+msgstr "Takenlijst"
 
 #: src/Dialogs/CaldavDialog.vala:372
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "Zoeken naar beschikbare agenda's en taken…"
 
 #: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "Kon agenda niet opvragen"
 
 #: src/Dialogs/CaldavDialog.vala:530
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
+"De opgegeven gegevens lijken niet van een geldig CalDav account te zijn."
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
-msgstr ""
+msgstr "Gebruikersnaam:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Wachtwoord"
+msgstr "Wachtwoord:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "Server"
+msgstr "Server URL:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
-msgstr ""
+msgstr "Poort:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
@@ -131,7 +124,7 @@ msgstr "Encryptie:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "Verversingsinterval in minuten:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
@@ -148,22 +141,20 @@ msgstr "Geen authenticatie vereist"
 
 #: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "De opgegeven gegevens lijken niet van een geldig mail account te zijn."
 
 #: src/Dialogs/Imap/ImapDialog.vala:607
-#, fuzzy
-#| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
-msgstr "Gelieve uw gegevens in te voeren…"
+msgstr "Kon niet inloggen. Controller uw gegevens."
 
 #: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "IMAP verificatie mislukt: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "Echte naam"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -171,25 +162,23 @@ msgstr "E-mail"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "Volgende"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "Het e-mailaccount wordt opgezet…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "Kon het e-mailaccount niet opslaan"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
-msgstr ""
+msgstr "Succes"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account saved."
-msgstr "E-mailaccount"
+msgstr "E-mailaccount is opgeslagen."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -203,21 +192,19 @@ msgstr ""
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "Agenda's"
+msgstr "Agenda en taken"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "Mail"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
@@ -225,40 +212,38 @@ msgstr "Account toevoegen…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "Verwijder dit account"
 
 #: src/MainView.vala:150
-#, fuzzy
-#| msgid "Other Account"
 msgid "Edit this account"
-msgstr "Ander account"
+msgstr "Dit account aanpassen"
 
 #: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "Verwijder “%s” van dit apparaat"
 
 #: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
+"Dit account zal worden verwijderd en zal niet langer worden gebruikt binnen "
+"ander apps op dit apparaat."
 
 #: src/MainView.vala:182
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "Nieuw account"
+msgstr "Account verwijderen"
 
 #: src/MainView.vala:206 src/MainView.vala:235
-#, fuzzy
-#| msgid "Mail Account"
 msgid "Edit account failed"
-msgstr "E-mailaccount"
+msgstr "Aanpassen van account is mislukt"
 
 #: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""
+"Er is een onverwachte fout opgestreden tijdens het lezen van de configuratie "
+"van '%s'."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
