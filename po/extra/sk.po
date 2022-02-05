@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2021-11-30 18:29+0000\n"
+"PO-Revision-Date: 2022-02-05 22:24+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/sk/>\n"
@@ -29,11 +29,11 @@ msgstr "Spravujte online účty a pripojené aplikácie"
 
 #: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:24
 msgid "New features:"
-msgstr ""
+msgstr "Nové funkcie:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Choose refresh rate for IMAP"
-msgstr ""
+msgstr "Zvoľte interval opätovného načítania pre IMAP"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:32
 #: data/onlineaccounts.appdata.xml.in:45
@@ -47,10 +47,8 @@ msgid "Updated translations"
 msgstr "Aktualizované preklady"
 
 #: data/onlineaccounts.appdata.xml.in:26
-#, fuzzy
-#| msgid "Edit saved IMAP accounts"
 msgid "Edit saved CalDAV accounts"
-msgstr "Upravujte uložené IMAP účty"
+msgstr "Upravujte uložené CalDAV účty"
 
 #: data/onlineaccounts.appdata.xml.in:28 data/onlineaccounts.appdata.xml.in:40
 msgid "Fixes:"
