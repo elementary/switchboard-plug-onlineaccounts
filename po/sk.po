@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
-"PO-Revision-Date: 2021-08-26 17:56+0000\n"
+"PO-Revision-Date: 2022-02-05 22:24+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sk/>\n"
@@ -70,10 +70,8 @@ msgid "All done"
 msgstr "Hotovo"
 
 #: src/Dialogs/CaldavDialog.vala:160
-#, fuzzy
-#| msgid "CalDAV account added."
 msgid "CalDAV account saved."
-msgstr "CalDAV účet bol pridaný."
+msgstr "CalDAV účet bol uložený."
 
 #: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
@@ -100,10 +98,8 @@ msgid "Could not fetch calendars"
 msgstr "Nepodarilo sa získať kalendáre"
 
 #: src/Dialogs/CaldavDialog.vala:530
-#, fuzzy
-#| msgid "The data provided does not seem to reflect a valid mail account."
 msgid "The data provided does not seem to reflect a valid CalDav account."
-msgstr "Poskytnuté údaje sa nezhodujú s platným e-mailovým účtom."
+msgstr "Poskytnuté údaje sa nezhodujú s platným CalDav účtom."
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
@@ -127,7 +123,7 @@ msgstr "Šifrovanie:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "Interval opätovného načítania v minútach:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
