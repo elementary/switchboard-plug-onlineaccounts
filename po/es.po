@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-11 20:20+0000\n"
 "PO-Revision-Date: 2022-02-17 12:46+0000\n"
-"Last-Translator: Eldhrimer <vico.220895@gmail.com>\n"
+"Last-Translator: Jose Manuel Hernandez Farias <ing.josemhf@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/es/>\n"
 "Language: es\n"
@@ -106,6 +106,7 @@ msgstr "Error al obtener los calendarios"
 #: src/Dialogs/CaldavDialog.vala:530
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
+"La información proporcionada no parece reflejar un cuenta CalDav válida."
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
