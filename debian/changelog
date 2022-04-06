@@ -1,3 +1,12 @@
+switchboard-plug-onlineaccounts (6.4.0) focal; urgency=medium
+
+  * Release 6.4.0 (#240)
+  * Update translation files
+  * Update translation template
+  * ImapDialog: add fetch interval setting (#238)
+
+ -- elementary, Inc. <builds@elementary.io>  Wed, 06 Apr 2022 18:37:56 +0000
+
 switchboard-plug-onlineaccounts (6.3.0) focal; urgency=medium
 
   * Release 6.3.0 (#236)
