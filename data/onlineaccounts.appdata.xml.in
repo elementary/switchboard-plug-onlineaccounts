@@ -7,7 +7,7 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
-    <release version="6.4.0" date="2022-01-11" urgency="medium">
+    <release version="6.4.0" date="2022-04-06" urgency="medium">
       <description>
         <p>New features:</p>
         <ul>
