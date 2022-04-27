@@ -625,7 +625,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         }
     }
 
-    private void configure_source_child(E.Source source) {
+    private void configure_source_child (E.Source source) {
         /* Make sure all child calendars and task lists are available even when we are offline */
         unowned var offline_extension = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
         offline_extension.stay_synchronized = true;
