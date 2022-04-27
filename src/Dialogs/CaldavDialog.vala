@@ -35,6 +35,9 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private E.SourceRegistry? registry = null;
     private E.Source? source = null;
 
+    private uint source_children_configuration_timeout_id = 0;
+    private uint source_children_configuration_count = 0;
+
     construct {
         var url_label = new Granite.HeaderLabel (_("Server URL"));
         url_entry = new Granite.ValidatedEntry () {
@@ -401,7 +404,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             auth.user = username_entry.text;
 
             unowned var offline = (E.SourceOffline)source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
-            offline.set_stay_synchronized (true);
+            offline.stay_synchronized = true;
+
+            unowned var refresh_extension = (E.SourceRefresh) source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+            refresh_extension.enabled = true;
+            refresh_extension.interval_minutes = 10;
 
             var credentials = new E.NamedParameters ();
             credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
@@ -593,7 +600,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         webdav_extension.calendar_auto_schedule = true;
 
         unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
-        offline_extension.set_stay_synchronized (true);
+        offline_extension.stay_synchronized = true;
 
         new_sources.append (collection_source);
 
@@ -601,13 +608,70 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         yield collection_source.store_password (password_entry.text, true, cancellable);
         yield registry.create_sources (new_sources, cancellable);
 
+        /* Make sure all child calendars and task lists are available even when we are offline */
+        
+        /* The refresh_backend call runs in the background, so we need to watch out for source_added events to configure source children */
+        source_children_configuration_count = 0;
+        registry.source_added.connect (configure_source_child);
+
         /* Discovers all child sources and EDS automatically adds them */
         yield registry.refresh_backend (collection_source.uid, cancellable);
+        yield await_source_children_configuration ();
+
+        /* We no longer need to watch for newly added source children, therefore we can safely disconnect the handler again */
+        registry.source_added.disconnect (configure_source_child);
 
         /* if we are editing an existing account, make sure we delete the old collection source at this point */
         if (this.source != null) {
             yield this.source.remove (cancellable);
         }
+    }
+
+    private void configure_source_child(E.Source source) {
+        unowned var offline_extension = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
+        offline_extension.stay_synchronized = true;
+
+        unowned var refresh_extension = (E.SourceRefresh) source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+        refresh_extension.enabled = true;
+        refresh_extension.interval_minutes = 10;
+
+        try {
+            registry.commit_source_sync (source, cancellable);
+            debug("Configured child source '%s'", source.display_name);
+
+        } catch (Error e) {
+            warning ("Configure child source '%s' failed: %s", source.display_name, e.message);
+        }
+        
+        source_children_configuration_count += 1;
+    }
+
+    private async void await_source_children_configuration () {
+        var timeout_seconds = 15;
+        var await_seconds = 0;
+
+        source_children_configuration_timeout_id = Timeout.add_seconds (1, () => {
+            await_seconds += 1;
+
+            if (
+                await_seconds > timeout_seconds ||
+                source_children_configuration_count >= calendars_store.get_n_items ()
+            ) {
+                if (source_children_configuration_timeout_id > 0) {
+                    Source.remove (source_children_configuration_timeout_id);
+                }
+
+                if (await_seconds > timeout_seconds) {
+                    warning ("Timeout while waiting for the source children to be configured.");
+                }
+                
+                await_source_children_configuration.callback ();
+
+                return Source.REMOVE;
+            }
+            return Source.CONTINUE;
+        });
+        yield;
     }
 
     private class SourceRow : Gtk.ListBoxRow {
