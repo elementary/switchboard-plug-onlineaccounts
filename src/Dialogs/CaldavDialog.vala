@@ -608,8 +608,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         yield collection_source.store_password (password_entry.text, true, cancellable);
         yield registry.create_sources (new_sources, cancellable);
 
-        /* Make sure all child calendars and task lists are available even when we are offline */
-        
         /* The refresh_backend call runs in the background, so we need to watch out for source_added events to configure source children */
         source_children_configuration_count = 0;
         registry.source_added.connect (configure_source_child);
@@ -628,6 +626,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     private void configure_source_child(E.Source source) {
+        /* Make sure all child calendars and task lists are available even when we are offline */
         unowned var offline_extension = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
         offline_extension.stay_synchronized = true;
 
@@ -637,12 +636,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         try {
             registry.commit_source_sync (source, cancellable);
-            debug("Configured child source '%s'", source.display_name);
+            debug ("Configured child source '%s'", source.display_name);
 
         } catch (Error e) {
             warning ("Configure child source '%s' failed: %s", source.display_name, e.message);
         }
-        
+
         source_children_configuration_count += 1;
     }
 
@@ -664,7 +663,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 if (await_seconds > timeout_seconds) {
                     warning ("Timeout while waiting for the source children to be configured.");
                 }
-                
+
                 await_source_children_configuration.callback ();
 
                 return Source.REMOVE;
