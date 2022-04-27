@@ -7,6 +7,14 @@
   <icon type="stock">preferences-desktop-online-accounts</icon>
   <translation type="gettext">online-accounts-plug</translation>
   <releases>
+    <release version="6.5.0" date="2022-04-27" urgency="medium">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Added offline support for CalDAV accounts</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.4.0" date="2022-04-06" urgency="medium">
       <description>
         <p>New features:</p>
