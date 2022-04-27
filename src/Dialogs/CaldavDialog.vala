@@ -626,20 +626,34 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     }
 
     private void configure_source_child (E.Source source) {
-        /* Make sure all child calendars and task lists are available even when we are offline */
-        unowned var offline_extension = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
-        offline_extension.stay_synchronized = true;
+        assert_nonnull (registry);
+        var collection_source = registry.find_extension (source, E.SOURCE_EXTENSION_COLLECTION);
 
-        unowned var refresh_extension = (E.SourceRefresh) source.get_extension (E.SOURCE_EXTENSION_REFRESH);
-        refresh_extension.enabled = true;
-        refresh_extension.interval_minutes = 10;
+        if (collection_source != null) {
+            /* Make sure all child sources use the same configuration as their collection source */
 
-        try {
-            registry.commit_source_sync (source, cancellable);
-            debug ("Configured child source '%s'", source.display_name);
+            if (collection_source.has_extension (E.SOURCE_EXTENSION_OFFLINE)) {
+                unowned var collection_offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
+                unowned var source_offline_extension = (E.SourceOffline) source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
 
-        } catch (Error e) {
-            warning ("Configure child source '%s' failed: %s", source.display_name, e.message);
+                source_offline_extension.stay_synchronized = collection_offline_extension.stay_synchronized;
+            }
+
+            if (collection_source.has_extension (E.SOURCE_EXTENSION_REFRESH)) {
+                unowned var collection_refresh_extension = (E.SourceRefresh) collection_source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+                unowned var source_refresh_extension = (E.SourceRefresh) source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+
+                source_refresh_extension.enabled = collection_refresh_extension.enabled;
+                source_refresh_extension.interval_minutes = collection_refresh_extension.interval_minutes;
+            }
+
+            try {
+                registry.commit_source_sync (source, cancellable);
+                debug ("Configured child source '%s'", source.display_name);
+    
+            } catch (Error e) {
+                warning ("Configure child source '%s' failed: %s", source.display_name, e.message);
+            }
         }
 
         source_children_configuration_count += 1;
