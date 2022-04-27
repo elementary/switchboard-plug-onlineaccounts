@@ -650,7 +650,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             try {
                 registry.commit_source_sync (source, cancellable);
                 debug ("Configured child source '%s'", source.display_name);
-    
+
             } catch (Error e) {
                 warning ("Configure child source '%s' failed: %s", source.display_name, e.message);
             }
