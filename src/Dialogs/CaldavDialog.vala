@@ -403,13 +403,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             unowned var auth = (E.SourceAuthentication)source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
             auth.user = username_entry.text;
 
-            unowned var offline = (E.SourceOffline)source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
-            offline.stay_synchronized = true;
-
-            unowned var refresh_extension = (E.SourceRefresh) source.get_extension (E.SOURCE_EXTENSION_REFRESH);
-            refresh_extension.enabled = true;
-            refresh_extension.interval_minutes = 10;
-
             var credentials = new E.NamedParameters ();
             credentials.set (E.SOURCE_CREDENTIAL_USERNAME, username_entry.text);
             credentials.set (E.SOURCE_CREDENTIAL_PASSWORD, password_entry.text);
@@ -601,6 +594,10 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
         offline_extension.stay_synchronized = true;
+
+        unowned var refresh_extension = (E.SourceRefresh) collection_source.get_extension (E.SOURCE_EXTENSION_REFRESH);
+        refresh_extension.enabled = true;
+        refresh_extension.interval_minutes = 10;
 
         new_sources.append (collection_source);
 
