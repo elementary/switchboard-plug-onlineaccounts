@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-11 20:20+0000\n"
+"POT-Creation-Date: 2022-05-16 19:19+0000\n"
 "PO-Revision-Date: 2019-10-16 20:24+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Tagalog <https://l10n.elementary.io/projects/switchboard/"
@@ -21,78 +21,78 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:39
+#: src/Dialogs/CaldavDialog.vala:42
 msgid "Server URL"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Ikansela"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
+#: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr "Mag-Log In"
 
-#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
+#: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:123
+#: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:147
+#: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:159
+#: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:160
+#: src/Dialogs/CaldavDialog.vala:163
 #, fuzzy
 #| msgid "Account '%s' Removed."
 msgid "CalDAV account saved."
 msgstr "Tinanggal na ang Account na '%s'"
 
-#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:245
+#: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Mga Kalendaryo"
 
-#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
+#: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:372
+#: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
 msgstr ""
 

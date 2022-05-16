@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-11 20:20+0000\n"
+"POT-Creation-Date: 2022-05-16 19:19+0000\n"
 "PO-Revision-Date: 2022-01-15 12:35+0000\n"
 "Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -20,76 +20,76 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:39
+#: src/Dialogs/CaldavDialog.vala:42
 msgid "Server URL"
 msgstr "服务器地址"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
 msgstr "无效 URL"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
 msgstr "用户名"
 
-#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "密码"
 
-#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "取消"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
+#: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr "登录"
 
-#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "账户名称"
 
-#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "为帐户选择一个名称，例如“Work”或“Personal”。"
 
-#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
+#: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "返回"
 
-#: src/Dialogs/CaldavDialog.vala:123
+#: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
 msgstr "保存"
 
-#: src/Dialogs/CaldavDialog.vala:147
+#: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
 msgstr "保存配置…"
 
-#: src/Dialogs/CaldavDialog.vala:159
+#: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
 msgstr "全部完成"
 
-#: src/Dialogs/CaldavDialog.vala:160
+#: src/Dialogs/CaldavDialog.vala:163
 msgid "CalDAV account saved."
 msgstr "CalDAV 帐户已保存。"
 
-#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "关闭"
 
-#: src/Dialogs/CaldavDialog.vala:245
+#: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
 msgstr "无法保存配置"
 
-#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
 msgstr "日历"
 
-#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
+#: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
 msgstr "任务列表"
 
-#: src/Dialogs/CaldavDialog.vala:372
+#: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
 msgstr "查找可用日历和任务…"
 

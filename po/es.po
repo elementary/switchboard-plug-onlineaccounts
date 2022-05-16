@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-11 20:20+0000\n"
+"POT-Creation-Date: 2022-05-16 19:19+0000\n"
 "PO-Revision-Date: 2022-02-17 12:46+0000\n"
 "Last-Translator: Jose Manuel Hernandez Farias <ing.josemhf@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,80 +20,80 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-21 06:47+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:39
+#: src/Dialogs/CaldavDialog.vala:42
 msgid "Server URL"
 msgstr "URL del servidor"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
 msgstr "URL invalida"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
 msgstr "Nombre de usuario"
 
-#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Contraseña"
 
-#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
+#: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr "Acceder"
 
-#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Nombre para mostrar de la cuenta"
 
-#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Elija un nombre como \"Trabajo\" o \"Personal\" para la cuenta."
 
-#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
+#: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "Atrás"
 
-#: src/Dialogs/CaldavDialog.vala:123
+#: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
 msgstr "Guardar"
 
-#: src/Dialogs/CaldavDialog.vala:147
+#: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
 msgstr "Guardando la configuración …"
 
-#: src/Dialogs/CaldavDialog.vala:159
+#: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
 msgstr "Finalizado"
 
-#: src/Dialogs/CaldavDialog.vala:160
+#: src/Dialogs/CaldavDialog.vala:163
 #, fuzzy
 #| msgid "Mail Account"
 msgid "CalDAV account saved."
 msgstr "Cuenta de correo"
 
-#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "Cerrar"
 
-#: src/Dialogs/CaldavDialog.vala:245
+#: src/Dialogs/CaldavDialog.vala:248
 #, fuzzy
 #| msgid "Error Saving Configuration"
 msgid "Could not save configuration"
 msgstr "Error al guardar la configuración"
 
-#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Calendarios"
 
-#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
+#: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
 msgstr "Listas de tareas"
 
-#: src/Dialogs/CaldavDialog.vala:372
+#: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
 msgstr "Buscando calendarios y tareas disponibles …"
 

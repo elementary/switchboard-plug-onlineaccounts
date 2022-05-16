@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-11 20:20+0000\n"
+"POT-Creation-Date: 2022-05-16 19:19+0000\n"
 "PO-Revision-Date: 2021-08-24 21:51+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -20,78 +20,78 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:39
+#: src/Dialogs/CaldavDialog.vala:42
 msgid "Server URL"
 msgstr "Tjenernettadresse"
 
-#: src/Dialogs/CaldavDialog.vala:44
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
 msgstr "Ugyldig nettadresse"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
 msgstr "Brukernavn"
 
-#: src/Dialogs/CaldavDialog.vala:50 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
 msgstr "Passord"
 
-#: src/Dialogs/CaldavDialog.vala:57 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/Dialogs/CaldavDialog.vala:59 src/Dialogs/Imap/ImapDialog.vala:204
+#: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
 msgstr "Logg inn"
 
-#: src/Dialogs/CaldavDialog.vala:88 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Kontovisningsnavn"
 
-#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Velg et navn som f.eks. «Arbeid» eller «Personlig» for kontoen."
 
-#: src/Dialogs/CaldavDialog.vala:121 src/Dialogs/CaldavDialog.vala:166
+#: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
 msgstr "Tilbake"
 
-#: src/Dialogs/CaldavDialog.vala:123
+#: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
 msgstr "Lagre"
 
-#: src/Dialogs/CaldavDialog.vala:147
+#: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
 msgstr "Lagrer oppsettet …"
 
-#: src/Dialogs/CaldavDialog.vala:159
+#: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
 msgstr "Ferdig"
 
-#: src/Dialogs/CaldavDialog.vala:160
+#: src/Dialogs/CaldavDialog.vala:163
 #, fuzzy
 #| msgid "CalDAV account added."
 msgid "CalDAV account saved."
 msgstr "CalDAV-konto lagt til."
 
-#: src/Dialogs/CaldavDialog.vala:168 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
 msgstr "Lukk"
 
-#: src/Dialogs/CaldavDialog.vala:245
+#: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
 msgstr "Kunne ikke lagre oppsett"
 
-#: src/Dialogs/CaldavDialog.vala:327 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalendere"
 
-#: src/Dialogs/CaldavDialog.vala:329 src/Dialogs/CaldavDialog.vala:337
+#: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
 msgstr "Gjøremålslister"
 
-#: src/Dialogs/CaldavDialog.vala:372
+#: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
 msgstr "Finner tilgjengelige kalendere og gjøremål …"
 
