@@ -11,7 +11,7 @@
       <description>
         <p>New features:</p>
         <ul>
-          <li>Enable offline support for CalDAV accounts</li>
+          <li>Added offline support for CalDAV accounts</li>
         </ul>
       </description>
     </release>
