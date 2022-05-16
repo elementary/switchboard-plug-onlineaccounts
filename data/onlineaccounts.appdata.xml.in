@@ -13,6 +13,10 @@
         <ul>
           <li>Added offline support for CalDAV accounts</li>
         </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
       </description>
     </release>
     <release version="6.4.0" date="2022-04-06" urgency="medium">
