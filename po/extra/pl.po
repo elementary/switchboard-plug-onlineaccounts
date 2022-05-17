@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-01-12 22:47+0000\n"
+"PO-Revision-Date: 2022-05-17 07:57+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pl/>\n"
@@ -35,7 +35,7 @@ msgstr "Nowe funkcje:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Added offline support for CalDAV accounts"
-msgstr ""
+msgstr "Dodano wsparcie offline dla kont CalDAV"
 
 #: data/onlineaccounts.appdata.xml.in:22
 msgid "Choose refresh rate for IMAP"
