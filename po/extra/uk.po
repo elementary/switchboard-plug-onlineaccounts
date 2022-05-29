@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-05-16 22:35+0000\n"
+"PO-Revision-Date: 2022-05-29 23:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -50,7 +50,7 @@ msgstr "Незначні оновлення:"
 #: data/onlineaccounts.appdata.xml.in:58 data/onlineaccounts.appdata.xml.in:67
 #: data/onlineaccounts.appdata.xml.in:77 data/onlineaccounts.appdata.xml.in:86
 msgid "Updated translations"
-msgstr "Оновлено переклади"
+msgstr "Оновлені переклади"
 
 #: data/onlineaccounts.appdata.xml.in:34
 msgid "Edit saved CalDAV accounts"
