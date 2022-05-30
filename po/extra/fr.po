@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-05-17 07:57+0000\n"
+"PO-Revision-Date: 2022-05-30 10:51+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -43,7 +43,7 @@ msgstr "Sélection de l'intervalle de mise à jour pour les comptes IMAP"
 #: data/onlineaccounts.appdata.xml.in:24 data/onlineaccounts.appdata.xml.in:40
 #: data/onlineaccounts.appdata.xml.in:53
 msgid "Minor updates:"
-msgstr "Mises à jour mineures :"
+msgstr "Mises à jour mineures :"
 
 #: data/onlineaccounts.appdata.xml.in:26 data/onlineaccounts.appdata.xml.in:42
 #: data/onlineaccounts.appdata.xml.in:58 data/onlineaccounts.appdata.xml.in:67
