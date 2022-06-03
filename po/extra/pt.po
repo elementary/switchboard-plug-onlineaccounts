@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-05-19 15:11+0000\n"
+"PO-Revision-Date: 2022-06-03 23:21+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pt/>\n"
@@ -43,7 +43,7 @@ msgstr "Escolher taxa de atualização para IMAP"
 #: data/onlineaccounts.appdata.xml.in:24 data/onlineaccounts.appdata.xml.in:40
 #: data/onlineaccounts.appdata.xml.in:53
 msgid "Minor updates:"
-msgstr "Pequena atualizações:"
+msgstr "Pequenas atualizações:"
 
 #: data/onlineaccounts.appdata.xml.in:26 data/onlineaccounts.appdata.xml.in:42
 #: data/onlineaccounts.appdata.xml.in:58 data/onlineaccounts.appdata.xml.in:67
