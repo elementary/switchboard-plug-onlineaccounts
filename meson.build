@@ -44,6 +44,9 @@ switchboard_dep = dependency('switchboard-2.0')
 if edataserverui_dep.version().version_compare('>=3.39.2')
     add_project_arguments('--define=HAS_EDS_3_40', language: 'vala')
 endif
+if edataserverui_dep.version().version_compare('>=3.45.1')
+    add_project_arguments('--define=HAS_EDS_3_46', language: 'vala')
+endif
 
 gresource = gnome.compile_resources(
     'gresource',
