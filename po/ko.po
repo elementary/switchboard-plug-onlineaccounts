@@ -8,31 +8,29 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2019-01-12 13:42+0000\n"
+"PO-Revision-Date: 2022-08-05 15:12+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:42
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "서버"
+msgstr "서버 URL"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
-msgstr ""
+msgstr "잘못된 URL"
 
 #: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
-msgstr ""
+msgstr "사용자 이름"
 
 #: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
@@ -48,11 +46,11 @@ msgstr "로그인"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "계정 표시 이름"
 
 #: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "계정에 대해 \"직장\" 또는 \"개인\"과 같은 이름을 선택합니다."
 
 #: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
@@ -61,69 +59,63 @@ msgstr "뒤로"
 
 #: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
-msgstr ""
+msgstr "저장"
 
 #: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "설정 저장하기…"
 
 #: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
-msgstr ""
+msgstr "모두 완료"
 
 #: src/Dialogs/CaldavDialog.vala:163
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account saved."
-msgstr "메일 계정"
+msgstr "CalDAV 계정을 저장했습니다."
 
 #: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
-msgstr ""
+msgstr "닫기"
 
 #: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
-msgstr ""
+msgstr "설정을 저장할 수 없습니다"
 
 #: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
-msgstr "일정표"
+msgstr "달력"
 
 #: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
-msgstr ""
+msgstr "작업 목록"
 
 #: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "사용 가능한 달력과 작업을 찾는 중…"
 
 #: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "달력을 불러올 수 없습니다"
 
 #: src/Dialogs/CaldavDialog.vala:530
 msgid "The data provided does not seem to reflect a valid CalDav account."
-msgstr ""
+msgstr "제공된 데이터가 유효한 CalDav 계정을 반영하지 않는 것 같습니다."
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
-msgstr ""
+msgstr "사용자 이름:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "비밀번호"
+msgstr "비밀번호:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "서버"
+msgstr "서버 URL:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
-msgstr ""
+msgstr "포트:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
@@ -131,7 +123,7 @@ msgstr "암호화:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "분 단위로 새로 고치기:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
@@ -148,22 +140,20 @@ msgstr "인증 없이 실행"
 
 #: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "제공된 데이터가 유효한 메일 계정을 반영하지 않는 것 같습니다."
 
 #: src/Dialogs/Imap/ImapDialog.vala:607
-#, fuzzy
-#| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
-msgstr "로그인 정보를 입력하세요…"
+msgstr "로그인할 수 없습니다. 유효한 인증인지 확인하세요."
 
 #: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "IMAP 인증 실패: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "본명"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -171,25 +161,23 @@ msgstr "이메일"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "다음"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "이메일 계정 설정하기…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "이메일 계정을 저장할 수 없습니다"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
-msgstr ""
+msgstr "성공"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account saved."
-msgstr "메일 계정"
+msgstr "이메일 계정을 저장했습니다."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
@@ -201,64 +189,54 @@ msgstr "아래 툴바에 있는 아이콘을 클릭해서 온라인 계정에 �
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "일정표"
+msgstr "달력 및 작업"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "메일"
 
 #: src/MainView.vala:73
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "새로 계정 만들기…"
+msgstr "계정 추가하기…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "이 계정 삭제하기"
 
 #: src/MainView.vala:150
-#, fuzzy
-#| msgid "Other Account"
 msgid "Edit this account"
-msgstr "다른 계정"
+msgstr "이 계정 수정하기"
 
 #: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "이 장치에서 “%s” 제거하기"
 
 #: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
-msgstr ""
+msgstr "이 계정은 제거되며 더 이상 이 기기의 앱에 표시되지 않습니다."
 
 #: src/MainView.vala:182
-#, fuzzy
-#| msgid "New Account"
 msgid "Remove Account"
-msgstr "새 계정"
+msgstr "계정 삭제"
 
 #: src/MainView.vala:206 src/MainView.vala:235
-#, fuzzy
-#| msgid "Mail Account"
 msgid "Edit account failed"
-msgstr "메일 계정"
+msgstr "계정 수정 실패"
 
 #: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "'%s'의 설정을 읽는 동안 예상치 않은 오류가 생겼습니다."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
@@ -266,7 +244,7 @@ msgstr "온라인 계정"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
-msgstr "온라인 계정과 계정에 연결된 애플리케이션들을 관리합니다"
+msgstr "온라인 계정 및 연결된 애플리케이션 관리"
 
 #~ msgid "Posts"
 #~ msgstr "포스트"
