@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-08-05 15:12+0000\n"
+"PO-Revision-Date: 2022-08-08 08:46+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ko/>\n"
@@ -30,7 +30,7 @@ msgstr "온라인 계정 및 연결된 애플리케이션 관리"
 #: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:20
 #: data/onlineaccounts.appdata.xml.in:32
 msgid "New features:"
-msgstr ""
+msgstr "새로운 기능:"
 
 #: data/onlineaccounts.appdata.xml.in:14
 msgid "Added offline support for CalDAV accounts"
@@ -43,13 +43,13 @@ msgstr ""
 #: data/onlineaccounts.appdata.xml.in:24 data/onlineaccounts.appdata.xml.in:40
 #: data/onlineaccounts.appdata.xml.in:53
 msgid "Minor updates:"
-msgstr ""
+msgstr "소소한 업데이트:"
 
 #: data/onlineaccounts.appdata.xml.in:26 data/onlineaccounts.appdata.xml.in:42
 #: data/onlineaccounts.appdata.xml.in:58 data/onlineaccounts.appdata.xml.in:67
 #: data/onlineaccounts.appdata.xml.in:77 data/onlineaccounts.appdata.xml.in:86
 msgid "Updated translations"
-msgstr ""
+msgstr "최신 번역"
 
 #: data/onlineaccounts.appdata.xml.in:34
 msgid "Edit saved CalDAV accounts"
