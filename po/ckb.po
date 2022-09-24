@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-09-21 02:54+0000\n"
+"PO-Revision-Date: 2022-09-25 06:58+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/ckb/>\n"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
-msgstr ""
+msgstr "داخستن"
 
 #: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
-msgstr ""
+msgstr "ئیمێڵ"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
