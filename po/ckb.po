@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-09-29 18:06+0000\n"
+"PO-Revision-Date: 2022-10-04 21:31+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/ckb/>\n"
@@ -17,19 +17,19 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:42
 msgid "Server URL"
-msgstr ""
+msgstr "لینکی (URL) ڕاژەکار"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
-msgstr ""
+msgstr "لینکەکە هەڵەیە"
 
 #: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
-msgstr ""
+msgstr "ناوی بەکارهێنەر"
 
 #: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
-msgstr ""
+msgstr "تێپەڕەوشە"
 
 #: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
@@ -37,15 +37,15 @@ msgstr "هەڵوەشاندنەوە"
 
 #: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
-msgstr ""
+msgstr "چوونەژورەوە"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "ناوی دیاری هەژمار"
 
 #: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "ناوێکی وەکو \"کار\" یان \"کەسی\" بۆ هەژمارەکە بنووسە."
 
 #: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
@@ -54,19 +54,19 @@ msgstr "گەڕانەوە"
 
 #: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
-msgstr ""
+msgstr "پاشەکەوتکردن"
 
 #: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "پاشەکەوتکردنی ڕێکخستنەکان…"
 
 #: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
-msgstr ""
+msgstr "هەمووی تەواوە"
 
 #: src/Dialogs/CaldavDialog.vala:163
 msgid "CalDAV account saved."
-msgstr ""
+msgstr "هەژماری کاڵداب پاشەکەوتکرا."
 
 #: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
@@ -74,31 +74,31 @@ msgstr "داخستن"
 
 #: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
-msgstr ""
+msgstr "نەتوانرا ڕێکخستنەکان پاشەکەوت بکرێت"
 
 #: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
-msgstr ""
+msgstr "ڕۆژمێرەکان"
 
 #: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
-msgstr ""
+msgstr "لیستی ئەرکەکان"
 
 #: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "دۆزینەوەی ڕۆژمێرە بەردەستەکان و ئەرکەکان…"
 
 #: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "نەتوانرا ڕۆژمێرەکان وەربگیرێن"
 
 #: src/Dialogs/CaldavDialog.vala:530
 msgid "The data provided does not seem to reflect a valid CalDav account."
-msgstr ""
+msgstr "پێ ناچێت زانیاری دابینکراو وێنەی هەژمارێکی دروستی کاڵداڤ بێت."
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
-msgstr ""
+msgstr "ناوی بەکارهێنەر:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
 msgid "Password:"
@@ -106,7 +106,7 @@ msgstr "تێپەڕەوشە:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
 msgid "Server URL:"
-msgstr ""
+msgstr "لینکی (URL) ڕاژەکار:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
@@ -114,41 +114,41 @@ msgstr "پۆرت:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
-msgstr ""
+msgstr "کۆدکردن:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "نوێکردنەوەی ئینتەرڤالەکان لە خولەکدا:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
 msgid "None"
-msgstr "هیج"
+msgstr "هیچ"
 
 #: src/Dialogs/Imap/ImapDialog.vala:113
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "بەکارهێنانی زانیاری نهێنی IMAP"
 
 #: src/Dialogs/Imap/ImapDialog.vala:117
 msgid "No authentication required"
-msgstr ""
+msgstr "هیچ سەلماندێک پێویست نییە"
 
 #: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "پێ ناچێت زانیاری پێدراو وێنەی هەژمارێکی پۆستی ئەلیکترۆنی دروست بێت."
 
 #: src/Dialogs/Imap/ImapDialog.vala:607
 msgid "Could not log in. Please verify your credentials."
-msgstr ""
+msgstr "نەتوانرا بکرێتەوە، تکایە دڵنیابە لە دروستی زانیارییەکانت."
 
 #: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "سەلماندنی IMAP شکستی هێنا: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "ناوی ڕاستەقینە"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
@@ -156,87 +156,91 @@ msgstr "ئیمێڵ"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "دواتر"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "ڕێکخستنی هەژماری پۆستە ئەلیکترۆنییەکە…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "نەتوانرا هەژماری پۆستە ئەلیکترۆنییەکە پاشەکەوت بکرێت"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
-msgstr ""
+msgstr "سەرکەوتوو بوو"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
 msgid "E-mail account saved."
-msgstr ""
+msgstr "هەژماری پۆستی ئەلیکترۆنی پاشەکەوت کرا."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "پەیوەستی هەژمارە سەرهێڵییەکانت بە"
 
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
+"بۆ زیادکردنی هەژمار، دەتوانی کرتە لەسەر ئایکۆنی زیادکردن بکەیت لە شریتەکەی "
+"خوارەوە."
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "کاڵداڤ"
 
 #: src/MainView.vala:49
 msgid "Calendars and Tasks"
-msgstr ""
+msgstr "ڕۆژمێرەکان و ئەرکەکان"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "نامە"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
-msgstr ""
+msgstr "زیادکردنی هەژمار…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "سڕینەوەی ئەم هەژمارە"
 
 #: src/MainView.vala:150
 msgid "Edit this account"
-msgstr ""
+msgstr "دەستکاریکردنی ئەم هەژمارە"
 
 #: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "سڕینەوەی \"%s\" لەم ئامێرەدا"
 
 #: src/MainView.vala:174
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
+"ئەم هەژمارە دەسڕدرێتەوە و لە هیچ بەرنامەیەکی تری سەر ئەم ئامێرە بەکارنایەت و "
+"دەرناکەوێت."
 
 #: src/MainView.vala:182
 msgid "Remove Account"
-msgstr ""
+msgstr "سڕینەوەی هەژمار"
 
 #: src/MainView.vala:206 src/MainView.vala:235
 msgid "Edit account failed"
-msgstr ""
+msgstr "دەستکاریکردنی هەژمار شکستی هێنا"
 
 #: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "هەڵەیەکی پێشبینی نەکراو ڕوویدا لە کاتی پشکنینی ڕێکخستنەکانی '%s'."
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
-msgstr ""
+msgstr "هەژمارە سەرهێڵییەکان"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "هەژمارە سەرهێڵییەکان و بەرنامە پەیوەستکراوەکان بەڕێوەبەرە"
