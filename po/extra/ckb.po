@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2019-05-10 13:03-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-10-04 21:31+0000\n"
+"Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
+"Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
+"switchboard/online-accounts-extra/ckb/>\n"
 "Language: ckb\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
@@ -22,7 +25,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr ""
+msgstr "هەژمارە سەرهێڵییەکان و بەرنامە پەیوەستکراوەکان بەڕێوەبەرە"
 
 #: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:20
 #: data/onlineaccounts.appdata.xml.in:32
