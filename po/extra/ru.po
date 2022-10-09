@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-16 19:19+0000\n"
-"PO-Revision-Date: 2022-09-30 14:01+0000\n"
+"PO-Revision-Date: 2022-10-09 14:07+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ru/>\n"
@@ -106,7 +106,7 @@ msgstr "Настройка папок Архив, Черновики, Отпра
 #: data/onlineaccounts.appdata.xml.in:76
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
-"Закрытие всплывающего окна «Добавить учетную запись» при выборе элемента"
+"Закрытие всплывающего окна «Добавить учётную запись» при выборе элемента"
 
 #: data/onlineaccounts.appdata.xml.in:84
 msgid "Complete redesign"
