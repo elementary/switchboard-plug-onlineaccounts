@@ -1,3 +1,11 @@
+switchboard-plug-onlineaccounts (6.5.1) focal; urgency=medium
+
+  * Release 6.5.1 (#245)
+  * Update translation files
+  * Update translation template
+
+ -- elementary, Inc. <builds@elementary.io>  Fri, 21 Oct 2022 22:09:13 +0000
+
 switchboard-plug-onlineaccounts (6.5.0) focal; urgency=medium
 
   * Release 6.5.0 (#242)
