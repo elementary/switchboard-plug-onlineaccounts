@@ -397,7 +397,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             col.backend_name = "caldav";
 
             unowned var webdav = (E.SourceWebdav)source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+            #if HAS_GLIB_2_66
+            webdav.uri = Uri.parse (url_entry.text, UriFlags.PARSE_RELAXED);
+            #else
             webdav.soup_uri = new Soup.URI (url_entry.text);
+            #endif
             webdav.calendar_auto_schedule = true;
 
             unowned var auth = (E.SourceAuthentication)source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
@@ -486,7 +490,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                     };
 
                     unowned var webdav = (E.SourceWebdav) e_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+                    #if HAS_GLIB_2_66
+                    webdav.uri = Uri.parse (disc_source.href, UriFlags.PARSE_RELAXED);
+                    #else
                     webdav.soup_uri = new Soup.URI (disc_source.href);
+                    #endif
                     webdav.color = disc_source.color;
 
                     switch (only_supports) {
@@ -589,7 +597,15 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         authentication_extension.user = username_entry.text;
 
         unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+        #if HAS_GLIB_2_66
+        try {
+            webdav_extension.soup_uri = Uri.parse (disc_source.href, UriFlags.PARSE_RELAXED);   
+        } catch (Error e) {
+            warning ("Unable to save webdav extension: %s", e.message);
+        }
+        #else
         webdav_extension.soup_uri = new Soup.URI (url_entry.text);
+        #endif
         webdav_extension.calendar_auto_schedule = true;
 
         unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
