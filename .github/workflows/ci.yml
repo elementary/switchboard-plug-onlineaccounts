@@ -43,7 +43,7 @@ jobs:
           ninja -C build install
           cd ..
           rm -rf granite
-          git clone --depth 1 https://github.com/elementary/switchboard
+          git clone --depth 1 --branch 6.0.2 https://github.com/elementary/switchboard
           dnf install -y libadwaita-devel
           cd switchboard
           meson build --prefix=/usr
