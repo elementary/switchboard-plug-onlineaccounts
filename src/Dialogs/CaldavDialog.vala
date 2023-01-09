@@ -477,7 +477,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 string? webdav_host = null;
                 if (source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND)) {
                     unowned var webdav_extension = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
-                    webdav_host = webdav_extension.soup_uri.host;
+                    #if HAS_EDS_3_45
+                    webdav_host = webdav_extension.uri.get_host ();
+                    #else
+                        webdav_host = webdav_extension.soup_uri.host;
+                    #endif
                 }
 
                 foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
@@ -558,11 +562,19 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         if (collection_source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND)) {
             unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+            #if HAS_EDS_3_45
+            url_entry.text = webdav_extension.uri.to_string ();
+
+            if (webdav_extension.uri.get_user () != null && webdav_extension.uri.get_user () != "") {
+                url_entry.text = url_entry.text.replace (webdav_extension.uri.get_user () + "@", "");
+            }
+            #else
             url_entry.text = webdav_extension.soup_uri.to_string (false);
 
             if (webdav_extension.soup_uri.user != null && webdav_extension.soup_uri.user != "") {
                 url_entry.text = url_entry.text.replace (webdav_extension.soup_uri.user + "@", "");
             }
+            #endif
         }
 
         display_name_entry.text = collection_source.display_name;
@@ -599,7 +611,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
         #if HAS_EDS_3_45
         try {
-            webdav_extension.soup_uri = Uri.parse (disc_source.href, UriFlags.PARSE_RELAXED);
+            webdav_extension.uri = Uri.parse (url_entry.text, UriFlags.PARSE_RELAXED);
         } catch (Error e) {
             warning ("Unable to save webdav extension: %s", e.message);
         }
