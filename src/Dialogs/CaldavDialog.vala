@@ -480,7 +480,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                     #if HAS_EDS_3_45
                     webdav_host = webdav_extension.uri.get_host ();
                     #else
-                        webdav_host = webdav_extension.soup_uri.host;
+                    webdav_host = webdav_extension.soup_uri.host;
                     #endif
                 }
 
