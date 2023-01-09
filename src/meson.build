@@ -13,6 +13,10 @@ plug_files = files(
 
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
+if glib_dep.version().version_compare('>=2.66')
+    args += '--define=HAS_GLIB_2_66'
+endif
+
 shared_module(
     meson.project_name(),
     gresource,
