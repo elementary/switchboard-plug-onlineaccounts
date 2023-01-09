@@ -599,7 +599,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
         #if HAS_EDS_3_45
         try {
-            webdav_extension.soup_uri = Uri.parse (disc_source.href, UriFlags.PARSE_RELAXED);   
+            webdav_extension.soup_uri = Uri.parse (disc_source.href, UriFlags.PARSE_RELAXED);
         } catch (Error e) {
             warning ("Unable to save webdav extension: %s", e.message);
         }
