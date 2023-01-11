@@ -55,6 +55,13 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             _("Mail")
         );
 
+        var settings_sync_menuitem = new AccountMenuItem (
+            "preferences-system",
+            _("Settings Sync"),
+            _("Synchronize your Settings"),
+            "emblem-synchronized"
+        );
+
         var add_acount_grid = new Gtk.Grid () {
             margin_top = 3,
             margin_bottom = 3,
@@ -62,6 +69,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         };
         add_acount_grid.add (caldav_menuitem);
         add_acount_grid.add (imap_menuitem);
+        add_acount_grid.add (settings_sync_menuitem);
         add_acount_grid.show_all ();
 
         var add_account_popover = new Gtk.Popover (null);
@@ -104,6 +112,14 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             imap_dialog.show_all ();
+            add_account_popover.popdown ();
+        });
+
+        settings_sync_menuitem.clicked.connect (() => {
+            var settings_sync_dialog = new SettingsSyncDialog () {
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+            settings_sync_dialog.show_all ();
             add_account_popover.popdown ();
         });
     }

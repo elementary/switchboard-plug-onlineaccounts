@@ -21,12 +21,14 @@ public class OnlineAccounts.AccountMenuItem : Gtk.Button {
     public string icon_name { get; construct; }
     public string primary_label { get; construct; }
     public string secondary_label { get; construct; }
+    public string? badge_icon_name { get; construct; }
 
-    public AccountMenuItem (string icon_name, string primary_label, string secondary_label) {
+    public AccountMenuItem (string icon_name, string primary_label, string secondary_label, string? badge_icon_name = null) {
         Object (
             icon_name: icon_name,
             primary_label: primary_label,
-            secondary_label: secondary_label
+            secondary_label: secondary_label,
+            badge_icon_name: badge_icon_name
         );
     }
 
@@ -45,12 +47,30 @@ public class OnlineAccounts.AccountMenuItem : Gtk.Button {
         };
         description.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
-
         var grid = new Gtk.Grid () {
             column_spacing = 6
         };
-        grid.attach (image, 0, 0, 1, 2);
+
+        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+
+        if (badge_icon_name == null) {
+            grid.attach (image, 0, 0, 1, 2);
+        } else {
+            var badge = new Gtk.Image.from_icon_name (badge_icon_name, Gtk.IconSize.SMALL_TOOLBAR) {
+                halign = Gtk.Align.END,
+                valign = Gtk.Align.END,
+                pixel_size = 16
+            };
+
+            var overlay = new Gtk.Overlay () {
+                valign = Gtk.Align.START
+            };
+            overlay.add (image);
+            overlay.add_overlay (badge);
+
+            grid.attach (overlay, 0, 0, 1, 2);
+        }
+
         grid.attach (label, 1, 0);
         grid.attach (description, 1, 1);
 
