@@ -39,9 +39,9 @@ namespace GitHub {
 }
 
 public class GitHub.Manager {
-    public async DeviceAndUserVerificationCodesResponse requestDeviceAndUserVerificationCodes () throws GitHub.Error {
+    public async DeviceAndUserVerificationCodesResponse request_device_and_user_verification_codes () throws GitHub.Error {
         Timeout.add (Random.int_range (3000, 10000), () => {
-            requestDeviceAndUserVerificationCodes.callback ();
+            request_device_and_user_verification_codes.callback ();
             return false;
         }, Priority.DEFAULT);
 
@@ -58,7 +58,7 @@ public class GitHub.Manager {
         return response;
     }
 
-    public async UserAuthorizedDeviceResponse requestUserAuthorizedDevice(string device_code) throws GitHub.Error {
+    public async UserAuthorizedDeviceResponse request_user_authorized_device (string device_code) throws GitHub.Error {
         var response = new UserAuthorizedDeviceResponse () {
             access_token = "asjfiajiufahjs89fahsf79ahf783h78aqfh783a",
             token_type = "bearer",
@@ -68,20 +68,20 @@ public class GitHub.Manager {
         return response;
     }
 
-    public async UserAuthorizedDeviceResponse pollUserAuthorizedDevice(string device_code, int expires_in, int interval) throws GitHub.Error {
+    public async UserAuthorizedDeviceResponse poll_user_authorized_device (string device_code, int expires_in, int interval) throws GitHub.Error {
         var seconds_left = expires_in - interval;
 
         UserAuthorizedDeviceResponse? response = null;
         Timeout.add_seconds_full (Priority.DEFAULT, interval, ()=> {
             if (seconds_left <= 0 || response != null) {
-                pollUserAuthorizedDevice.callback ();
+                poll_user_authorized_device.callback ();
                 return false;
             }
 
             if (seconds_left < 894) {
-                requestUserAuthorizedDevice.begin (device_code, (obj, res) => {
+                request_user_authorized_device.begin (device_code, (obj, res) => {
                     try {
-                        response = requestUserAuthorizedDevice.end (res);
+                        response = request_user_authorized_device.end (res);
                     } catch (Error e) {
                         warning ("Could not request user authorized device: %s", e.message);
                     }

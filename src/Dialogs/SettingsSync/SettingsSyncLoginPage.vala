@@ -31,7 +31,7 @@ public class OnlineAccounts.SettingsSyncLoginPage : Gtk.Grid {
             selectable = true
         };
         code_label.get_style_context ().add_class ("h3");
-        
+
         var spinner = new Gtk.Spinner () {
             margin = 12
         };

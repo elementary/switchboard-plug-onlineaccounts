@@ -108,13 +108,13 @@ public class OnlineAccounts.SettingsSyncDialog : Hdy.Window {
 
     private async void authenticate () throws Error {
         var github = GitHub.Manager.get_default ();
-        var device_response = yield github.requestDeviceAndUserVerificationCodes ();
+        var device_response = yield github.request_device_and_user_verification_codes ();
 
         spinner.stop ();
         login_page.update (device_response.user_code, device_response.verification_uri);
         deck.visible_child = login_page;
 
-        var token_response = yield github.pollUserAuthorizedDevice (device_response.device_code, device_response.expires_in, device_response.interval);
+        var token_response = yield github.poll_user_authorized_device (device_response.device_code, device_response.expires_in, device_response.interval);
 
         // TODO: save token
         save_page.show_success ();
