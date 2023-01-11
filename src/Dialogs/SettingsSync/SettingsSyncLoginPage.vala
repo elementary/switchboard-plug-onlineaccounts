@@ -37,10 +37,9 @@ public class OnlineAccounts.SettingsSyncLoginPage : Gtk.Grid {
         };
         spinner.start ();
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
-
         link_button = new Gtk.LinkButton.with_label ("", _("Open in browser"));
-        link_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
         var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
             layout_style = Gtk.ButtonBoxStyle.END,
@@ -50,7 +49,6 @@ public class OnlineAccounts.SettingsSyncLoginPage : Gtk.Grid {
             vexpand = true
         };
         action_area.add (cancel_button);
-        action_area.add (link_button);
 
         margin = 12;
         orientation = Gtk.Orientation.VERTICAL;
@@ -58,14 +56,11 @@ public class OnlineAccounts.SettingsSyncLoginPage : Gtk.Grid {
         add (header_label);
         add (code_label);
         add (spinner);
+        add (link_button);
         add (action_area);
 
         cancel_button.clicked.connect (() => {
             cancel ();
-        });
-
-        link_button.clicked.connect (() => {
-            link_button.sensitive = false;
         });
     }
 
