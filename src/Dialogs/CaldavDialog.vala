@@ -565,8 +565,9 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             #if HAS_EDS_3_45
             url_entry.text = webdav_extension.uri.to_string ();
 
-            if (webdav_extension.uri.get_user () != null && webdav_extension.uri.get_user () != "") {
-                url_entry.text = url_entry.text.replace (webdav_extension.uri.get_user () + "@", "");
+            unowned var uri_user = webdav_extension.uri.get_user ();
+            if (uri_user != null && uri_user != "") {
+                url_entry.text = url_entry.text.replace (uri_user + "@", "");
             }
             #else
             url_entry.text = webdav_extension.soup_uri.to_string (false);
