@@ -24,6 +24,41 @@ jobs:
         ninja -C build
         ninja -C build install
 
+  fedora:
+    runs-on: ubuntu-latest
+
+    container:
+      image: fedora:latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          dnf install -y git meson ninja-build vala evolution-data-server-devel glib2-devel granite-devel gtk3-devel libhandy-devel
+          git clone --depth 1 https://github.com/elementary/granite
+          dnf install -y libgee-devel
+          cd granite
+          meson build --prefix=/usr
+          ninja -C build
+          ninja -C build install
+          cd ..
+          rm -rf granite
+          git clone --depth 1 --branch 6.0.2 https://github.com/elementary/switchboard
+          dnf install -y libadwaita-devel
+          cd switchboard
+          meson build --prefix=/usr
+          ninja -C build
+          ninja -C build install
+          cd ..
+          rm -rf switchboard
+      - name: Build
+        env:
+          DESTDIR: out
+        run: |
+          meson build
+          ninja -C build
+          ninja -C build install
+
   lint:
 
     runs-on: ubuntu-latest

@@ -397,7 +397,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             col.backend_name = "caldav";
 
             unowned var webdav = (E.SourceWebdav)source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+#if HAS_EDS_3_45
+            webdav.uri = Uri.parse (url_entry.text, UriFlags.PARSE_RELAXED);
+#else
             webdav.soup_uri = new Soup.URI (url_entry.text);
+#endif
             webdav.calendar_auto_schedule = true;
 
             unowned var auth = (E.SourceAuthentication)source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
@@ -473,7 +477,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                 string? webdav_host = null;
                 if (source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND)) {
                     unowned var webdav_extension = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+#if HAS_EDS_3_45
+                    webdav_host = webdav_extension.uri.get_host ();
+#else
                     webdav_host = webdav_extension.soup_uri.host;
+#endif
                 }
 
                 foreach (unowned E.WebDAVDiscoveredSource? disc_source in discovered_sources) {
@@ -486,7 +494,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                     };
 
                     unowned var webdav = (E.SourceWebdav) e_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+#if HAS_EDS_3_45
+                    webdav.uri = Uri.parse (disc_source.href, UriFlags.PARSE_RELAXED);
+#else
                     webdav.soup_uri = new Soup.URI (disc_source.href);
+#endif
                     webdav.color = disc_source.color;
 
                     switch (only_supports) {
@@ -550,11 +562,20 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         if (collection_source.has_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND)) {
             unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+#if HAS_EDS_3_45
+            url_entry.text = webdav_extension.uri.to_string ();
+
+            unowned var uri_user = webdav_extension.uri.get_user ();
+            if (uri_user != null && uri_user != "") {
+                url_entry.text = url_entry.text.replace (uri_user + "@", "");
+            }
+#else
             url_entry.text = webdav_extension.soup_uri.to_string (false);
 
             if (webdav_extension.soup_uri.user != null && webdav_extension.soup_uri.user != "") {
                 url_entry.text = url_entry.text.replace (webdav_extension.soup_uri.user + "@", "");
             }
+#endif
         }
 
         display_name_entry.text = collection_source.display_name;
@@ -589,7 +610,15 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         authentication_extension.user = username_entry.text;
 
         unowned var webdav_extension = (E.SourceWebdav) collection_source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
+#if HAS_EDS_3_45
+        try {
+            webdav_extension.uri = Uri.parse (url_entry.text, UriFlags.PARSE_RELAXED);
+        } catch (Error e) {
+            warning ("Unable to save webdav extension: %s", e.message);
+        }
+#else
         webdav_extension.soup_uri = new Soup.URI (url_entry.text);
+#endif
         webdav_extension.calendar_auto_schedule = true;
 
         unowned var offline_extension = (E.SourceOffline) collection_source.get_extension (E.SOURCE_EXTENSION_OFFLINE);
