@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:34+0000\n"
-"PO-Revision-Date: 2021-12-09 20:00+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"PO-Revision-Date: 2023-02-17 17:25+0000\n"
+"Last-Translator: Joel Jose <joel750jose@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:42
@@ -123,7 +123,7 @@ msgstr "Encryption:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "Refresh Interval in Minutes:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
