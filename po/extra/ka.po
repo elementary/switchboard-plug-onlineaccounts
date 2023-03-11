@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:34+0000\n"
-"PO-Revision-Date: 2023-03-11 14:25+0000\n"
+"PO-Revision-Date: 2023-03-11 16:00+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ka/>\n"
@@ -58,7 +58,7 @@ msgstr ""
 
 #: data/onlineaccounts.appdata.xml.in:45 data/onlineaccounts.appdata.xml.in:57
 msgid "Fixes:"
-msgstr ""
+msgstr "შეცდომების გასწორებები:"
 
 #: data/onlineaccounts.appdata.xml.in:47
 msgid "Dim window when creating a new IMAP account"
