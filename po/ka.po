@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:34+0000\n"
-"PO-Revision-Date: 2019-10-16 20:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2023-03-11 16:00+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ka/>\n"
 "Language: ka\n"
@@ -17,36 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:42
 msgid "Server URL"
-msgstr ""
+msgstr "სერვერის URL"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
-msgstr ""
+msgstr "არასწორი URL"
 
 #: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
-msgstr ""
+msgstr "მომხმარებლის სახელი"
 
 #: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
-msgstr ""
+msgstr "პაროლი"
 
 #: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
 msgid "Log In"
-msgstr ""
+msgstr "შესვლა"
 
 #: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
-msgstr ""
+msgstr "ანგარიშის საჩვენებელი სახელი"
 
 #: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
@@ -55,47 +55,47 @@ msgstr ""
 #: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: src/Dialogs/CaldavDialog.vala:126
 msgid "Save"
-msgstr ""
+msgstr "შენახვა"
 
 #: src/Dialogs/CaldavDialog.vala:150
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "კონფიგურაციის შენახვა…"
 
 #: src/Dialogs/CaldavDialog.vala:162
 msgid "All done"
-msgstr ""
+msgstr "ყველაფერი მზადაა"
 
 #: src/Dialogs/CaldavDialog.vala:163
 msgid "CalDAV account saved."
-msgstr ""
+msgstr "CalDAV-ის ანგარიში შენახულია."
 
 #: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
 msgid "Close"
-msgstr ""
+msgstr "დახურვა"
 
 #: src/Dialogs/CaldavDialog.vala:248
 msgid "Could not save configuration"
-msgstr ""
+msgstr "კონფიგურაციის შენახვის შეცდომა"
 
 #: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
 msgid "Calendars"
-msgstr ""
+msgstr "კალენდრები"
 
 #: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
 msgid "Task Lists"
-msgstr ""
+msgstr "ამოცანების სიები"
 
 #: src/Dialogs/CaldavDialog.vala:375
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "ხელმისაწვდომი კალენდარებისა და ამოცანების ძებნა…"
 
 #: src/Dialogs/CaldavDialog.vala:422
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "კალენდარების გამოთხოვის შეცდომა"
 
 #: src/Dialogs/CaldavDialog.vala:530
 msgid "The data provided does not seem to reflect a valid CalDav account."
@@ -103,27 +103,27 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
 msgid "Username:"
-msgstr ""
+msgstr "მომხმარებელი:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
 msgid "Password:"
-msgstr ""
+msgstr "პაროლი:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
 msgid "Server URL:"
-msgstr ""
+msgstr "სერვერის URL:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
 msgid "Port:"
-msgstr ""
+msgstr "პორტი:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Encryption:"
-msgstr ""
+msgstr "შიფრაცია:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:84
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "განახლების ინტერვალი წამებში:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
@@ -132,11 +132,11 @@ msgstr "არცერთი"
 
 #: src/Dialogs/Imap/ImapDialog.vala:113
 msgid "Use IMAP Credentials"
-msgstr ""
+msgstr "IMAP-ის ავთენტიკაციის დეტალების გამოყენება"
 
 #: src/Dialogs/Imap/ImapDialog.vala:117
 msgid "No authentication required"
-msgstr ""
+msgstr "ავთენტიკაცია საჭირო არაა"
 
 #: src/Dialogs/Imap/ImapDialog.vala:368
 msgid "The data provided does not seem to reflect a valid mail account."
@@ -144,44 +144,44 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:607
 msgid "Could not log in. Please verify your credentials."
-msgstr ""
+msgstr "შესვლა შეუძლებელია. გადაამოწმეთ ავტორიზაციის დეტალები."
 
 #: src/Dialogs/Imap/ImapDialog.vala:621
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "IMAP-ის გადამოწმების შეცდომა: %s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:44
 msgid "Real Name"
-msgstr ""
+msgstr "ნამდვილი სახელი"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Email"
-msgstr ""
+msgstr "ელფოტა"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:80
 msgid "Next"
-msgstr ""
+msgstr "შემდეგი"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "ელფოსტის ანგარიშის მორგება…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "ელფოსტის ანგარიშის შენახვის შეცდომა"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
-msgstr ""
+msgstr "წარმატება"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:54
 msgid "E-mail account saved."
-msgstr ""
+msgstr "ელფოსტის ანგარიში შენახულია."
 
 #: src/MainView.vala:30
 msgid "Connect Your Online Accounts"
-msgstr ""
+msgstr "თქვენი ონლაინ ანგარიშების დამატება"
 
 #: src/MainView.vala:31
 msgid "Connect online accounts by clicking the icon in the toolbar below."
@@ -189,36 +189,36 @@ msgstr ""
 
 #: src/MainView.vala:48 src/Plug.vala:61
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:49
 msgid "Calendars and Tasks"
-msgstr ""
+msgstr "კალენდრები და ამოცანები"
 
 #: src/MainView.vala:54 src/Plug.vala:63
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:55 src/Plug.vala:64
 msgid "Mail"
-msgstr ""
+msgstr "ელფოსტა"
 
 #: src/MainView.vala:73
 msgid "Add Account…"
-msgstr ""
+msgstr "ანგარიშის დამატება…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr ""
+msgstr "ამ ანგარიშის წაშლა"
 
 #: src/MainView.vala:150
 msgid "Edit this account"
-msgstr ""
+msgstr "ამ ანგარიშის ჩასწორება"
 
 #: src/MainView.vala:173
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "\"%s\"-ის წაშლა ამ მოწყობილობიდან"
 
 #: src/MainView.vala:174
 msgid ""
@@ -226,14 +226,12 @@ msgid ""
 msgstr ""
 
 #: src/MainView.vala:182
-#, fuzzy
-#| msgid "Remove"
 msgid "Remove Account"
-msgstr "წაშლა"
+msgstr "ანგარიშის წაშლა"
 
 #: src/MainView.vala:206 src/MainView.vala:235
 msgid "Edit account failed"
-msgstr ""
+msgstr "ანგარიშის ჩასწორების შეცდომა"
 
 #: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
@@ -242,7 +240,7 @@ msgstr ""
 
 #: src/Plug.vala:30
 msgid "Online Accounts"
-msgstr ""
+msgstr "ონლაინ ანგარიშები"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
