@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:34+0000\n"
-"PO-Revision-Date: 2020-03-17 18:09+0000\n"
+"PO-Revision-Date: 2023-03-21 18:59+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/mr/>\n"
@@ -12,22 +12,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.16.4\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:42
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "सर्व्हर"
+msgstr "सर्व्हर URL"
 
 #: src/Dialogs/CaldavDialog.vala:47
 msgid "Invalid URL"
-msgstr ""
+msgstr "अवैध URL"
 
 #: src/Dialogs/CaldavDialog.vala:50
 msgid "User Name"
-msgstr ""
+msgstr "वापरकर्ता नाव"
 
 #: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
 msgid "Password"
