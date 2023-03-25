@@ -558,7 +558,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         unowned var transport_auth_extension = (E.SourceAuthentication) transport_source.get_extension (E.SOURCE_EXTENSION_AUTHENTICATION);
         transport_auth_extension.host = smtp_server_entry.text;
         transport_auth_extension.port = (uint) smtp_port_spin.value;
-        transport_auth_extension.user = smtp_username_entry.text;
+        if (use_imap_credentials.active) {
+            transport_auth_extension.user = imap_username_entry.text;
+        } else {
+            transport_auth_extension.user = smtp_username_entry.text;
+        }
 
         /* verify connection */
         unowned var session = CamelSession.get_default ();
