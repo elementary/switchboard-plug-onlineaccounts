@@ -288,6 +288,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
 
         imap_username_entry.changed.connect (() => {
             imap_username_entry.is_valid = imap_username_entry.text.length > 0;
+            if (use_imap_credentials.active) {
+                smtp_username_entry.text = imap_username_entry.text;
+            }
             set_button_sensitivity ();
         });
 
