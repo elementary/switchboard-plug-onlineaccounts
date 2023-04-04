@@ -8,7 +8,7 @@
   <translation type="gettext">online-accounts-plug</translation>
 
   <releases>
-    <release version="6.5.2" date="2023-04-02" urgency="medium">
+    <release version="6.5.2" date="2023-04-03" urgency="medium">
       <description>
         <p>Minor updates:</p>
         <ul>
@@ -113,7 +113,7 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-onlineaccounts/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-onlineaccounts/6.5.2/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>
