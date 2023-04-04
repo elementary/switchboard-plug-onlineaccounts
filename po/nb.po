@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-12-21 23:25+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -95,11 +95,11 @@ msgstr "Gjøremålslister"
 msgid "Finding available calendars and tasks…"
 msgstr "Finner tilgjengelige kalendere og gjøremål …"
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr "Klarte ikke å hente kalendere"
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 #, fuzzy
 #| msgid "The data provided does not seem to reflect a valid mail account."
 msgid "The data provided does not seem to reflect a valid CalDav account."
@@ -143,15 +143,15 @@ msgstr "Bruk IMAP-identitetsdetaljer"
 msgid "No authentication required"
 msgstr "Ingen identitetsbekreftelse kreves"
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "Angitt data ser ikke ut til å være en gyldig e-postkonto."
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr "Kan ikke logge inn. Bekreft innloggingsdetaljene dine."
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP-bekreftelse mislyktes: %s"
