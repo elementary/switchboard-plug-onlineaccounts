@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-07-15 22:41+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -27,98 +27,104 @@ msgstr "Einstellungen für Internetkonten"
 msgid "Manage online accounts and connected applications"
 msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
-#: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:33
-#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:62
+#: data/onlineaccounts.appdata.xml.in:13 data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:63
+#: data/onlineaccounts.appdata.xml.in:76
 msgid "Minor updates:"
 msgstr "Kleinere Aktualisierungen:"
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:35
-#: data/onlineaccounts.appdata.xml.in:51 data/onlineaccounts.appdata.xml.in:67
-#: data/onlineaccounts.appdata.xml.in:76 data/onlineaccounts.appdata.xml.in:86
-#: data/onlineaccounts.appdata.xml.in:95
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Update Mail and Tasks icons"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
+#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:65
+#: data/onlineaccounts.appdata.xml.in:81 data/onlineaccounts.appdata.xml.in:90
+#: data/onlineaccounts.appdata.xml.in:100
+#: data/onlineaccounts.appdata.xml.in:109
 msgid "Updated translations"
 msgstr "Aktualisierte Übersetzungen"
 
-#: data/onlineaccounts.appdata.xml.in:21 data/onlineaccounts.appdata.xml.in:29
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:55
 msgid "New features:"
 msgstr "Neue Funktionen:"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:37
 msgid "Added offline support for CalDAV accounts"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:45
 msgid "Choose refresh rate for IMAP"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:57
 #, fuzzy
 #| msgid "Edit saved IMAP accounts"
 msgid "Edit saved CalDAV accounts"
 msgstr "Gespeicherte IMAP-Konten bearbeiten"
 
-#: data/onlineaccounts.appdata.xml.in:45 data/onlineaccounts.appdata.xml.in:57
+#: data/onlineaccounts.appdata.xml.in:59 data/onlineaccounts.appdata.xml.in:71
 msgid "Fixes:"
 msgstr "Fehlerbehebungen:"
 
-#: data/onlineaccounts.appdata.xml.in:47
+#: data/onlineaccounts.appdata.xml.in:61
 #, fuzzy
 #| msgid "Verify login credentials when saving IMAP accounts"
 msgid "Dim window when creating a new IMAP account"
 msgstr "Anmeldedaten vor dem Speichern des IMAP-Kontos überprüfen"
 
-#: data/onlineaccounts.appdata.xml.in:59
+#: data/onlineaccounts.appdata.xml.in:73
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr ""
 "Sicherstellen, dass das Aktualisierungsintervall für einen IMAP-Account "
 "gesetzt ist"
 
-#: data/onlineaccounts.appdata.xml.in:60
+#: data/onlineaccounts.appdata.xml.in:74
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
 "Behebt einen Fehler beim Hinzufügen, Editieren und Entfernen von Listen in "
 "CalDAV Anwendungen wie z.B. Aufgaben"
 
-#: data/onlineaccounts.appdata.xml.in:64
+#: data/onlineaccounts.appdata.xml.in:78
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr ""
 "Sicherstellen, dass immer durch Drücken der Enter-Taste zum nächsten Element "
 "navigiert werden kann"
 
-#: data/onlineaccounts.appdata.xml.in:65
+#: data/onlineaccounts.appdata.xml.in:79
 msgid "Close dialogs when pressing the Escape key"
 msgstr "Dialoge durch Drücken der Escape-Taste schliessen"
 
-#: data/onlineaccounts.appdata.xml.in:66
+#: data/onlineaccounts.appdata.xml.in:80
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr "Vollständigere Liste für IMAP-Authentifizierungsmethoden verwenden"
 
-#: data/onlineaccounts.appdata.xml.in:74
+#: data/onlineaccounts.appdata.xml.in:88
 msgid "Edit saved IMAP accounts"
 msgstr "Gespeicherte IMAP-Konten bearbeiten"
 
-#: data/onlineaccounts.appdata.xml.in:75
+#: data/onlineaccounts.appdata.xml.in:89
 msgid "Automatically detect authentication method for IMAP"
 msgstr "IMAP-Authentifizierungsmethode automatisch ermitteln"
 
-#: data/onlineaccounts.appdata.xml.in:83
+#: data/onlineaccounts.appdata.xml.in:97
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "Anmeldedaten vor dem Speichern des IMAP-Kontos überprüfen"
 
-#: data/onlineaccounts.appdata.xml.in:84
+#: data/onlineaccounts.appdata.xml.in:98
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "IMAP-Ordner einrichten: Archiv, Entwürfe, Gesendet und Vorlagen"
 
-#: data/onlineaccounts.appdata.xml.in:85
+#: data/onlineaccounts.appdata.xml.in:99
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr ""
 "Einblenddialog »Konto hinzufügen« schließen, wenn ein Eintrag ausgewählt wird"
 
-#: data/onlineaccounts.appdata.xml.in:93
+#: data/onlineaccounts.appdata.xml.in:107
 msgid "Complete redesign"
 msgstr "Komplettes Redesign"
 
-#: data/onlineaccounts.appdata.xml.in:94
+#: data/onlineaccounts.appdata.xml.in:108
 msgid "Fix blurry icons on HiDPI"
 msgstr "Behebt ein Problem mit unscharfen Icons bei HiDPI Bildschirmen"

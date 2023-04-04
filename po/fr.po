@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-01-12 11:46+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -93,11 +93,11 @@ msgstr "Listes de tâche"
 msgid "Finding available calendars and tasks…"
 msgstr "Recherche des calendriers et tâches disponibles…"
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr "Impossible de récupérer les calendriers"
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 "Les données fournies ne semblent pas correspondre à un compte CalDav valide."
@@ -139,17 +139,17 @@ msgstr "Utiliser les identifiants IMAP"
 msgid "No authentication required"
 msgstr "Aucune authentification nécessaire"
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Les données fournies ne semblent pas correspondre à un compte de messagerie "
 "valide."
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr "Connexion impossible. Veuillez vérifier vos identifiants."
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Échec de la vérification des paramètres IMAP : %s"

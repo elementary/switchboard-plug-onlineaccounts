@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-01-11 21:23+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -93,11 +93,11 @@ msgstr "Görev Listeleri"
 msgid "Finding available calendars and tasks…"
 msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr "Takvimler getirilemedi"
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 "Sağlanan veriler geçerli bir CalDav hesabını yansıtmıyor gibi görünüyor."
@@ -139,16 +139,16 @@ msgstr "IMAP Kimliğı Kullan"
 msgid "No authentication required"
 msgstr "Kimlik denetimi gerekmiyor"
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Sağlanan veriler geçerli bir posta hesabını yansıtmıyor gibi görünüyor."
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr "Giriş yapılamadı. Lütfen kimlik bilgilerinizi doğrulayın."
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP doğrulaması başarısız oldu: %s"

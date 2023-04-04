@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-09-30 22:36+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -27,89 +27,95 @@ msgstr "Nastavenia online účtov"
 msgid "Manage online accounts and connected applications"
 msgstr "Spravujte online účty a pripojené aplikácie"
 
-#: data/onlineaccounts.appdata.xml.in:12 data/onlineaccounts.appdata.xml.in:33
-#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:62
+#: data/onlineaccounts.appdata.xml.in:13 data/onlineaccounts.appdata.xml.in:26
+#: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:63
+#: data/onlineaccounts.appdata.xml.in:76
 msgid "Minor updates:"
 msgstr "Menšie aktualizácie:"
 
-#: data/onlineaccounts.appdata.xml.in:14 data/onlineaccounts.appdata.xml.in:35
-#: data/onlineaccounts.appdata.xml.in:51 data/onlineaccounts.appdata.xml.in:67
-#: data/onlineaccounts.appdata.xml.in:76 data/onlineaccounts.appdata.xml.in:86
-#: data/onlineaccounts.appdata.xml.in:95
+#: data/onlineaccounts.appdata.xml.in:15
+msgid "Update Mail and Tasks icons"
+msgstr ""
+
+#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
+#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:65
+#: data/onlineaccounts.appdata.xml.in:81 data/onlineaccounts.appdata.xml.in:90
+#: data/onlineaccounts.appdata.xml.in:100
+#: data/onlineaccounts.appdata.xml.in:109
 msgid "Updated translations"
 msgstr "Aktualizované preklady"
 
-#: data/onlineaccounts.appdata.xml.in:21 data/onlineaccounts.appdata.xml.in:29
-#: data/onlineaccounts.appdata.xml.in:41
+#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:55
 msgid "New features:"
 msgstr "Nové funkcie:"
 
-#: data/onlineaccounts.appdata.xml.in:23
+#: data/onlineaccounts.appdata.xml.in:37
 msgid "Added offline support for CalDAV accounts"
 msgstr "Pridaná offline podpora pre CalDAV účty"
 
-#: data/onlineaccounts.appdata.xml.in:31
+#: data/onlineaccounts.appdata.xml.in:45
 msgid "Choose refresh rate for IMAP"
 msgstr "Zvoľte interval opätovného načítania pre IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:43
+#: data/onlineaccounts.appdata.xml.in:57
 msgid "Edit saved CalDAV accounts"
 msgstr "Upravujte uložené CalDAV účty"
 
-#: data/onlineaccounts.appdata.xml.in:45 data/onlineaccounts.appdata.xml.in:57
+#: data/onlineaccounts.appdata.xml.in:59 data/onlineaccounts.appdata.xml.in:71
 msgid "Fixes:"
 msgstr "Opravy:"
 
-#: data/onlineaccounts.appdata.xml.in:47
+#: data/onlineaccounts.appdata.xml.in:61
 msgid "Dim window when creating a new IMAP account"
 msgstr "Stmaviť okno pri vytváraní nového IMAP účtu"
 
-#: data/onlineaccounts.appdata.xml.in:59
+#: data/onlineaccounts.appdata.xml.in:73
 msgid "Make sure the refresh interval for an IMAP account is set"
 msgstr "Zaistené, že interval obnovovania účtu IMAP je nastavený"
 
-#: data/onlineaccounts.appdata.xml.in:60
+#: data/onlineaccounts.appdata.xml.in:74
 msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
 msgstr ""
 "Opravená chyba s pridávaním, úpravou a odstraňovaním zoznamov v aplikáciach "
 "podporujúcich CalDAV, ako napríklad aplikácia Úlohy"
 
-#: data/onlineaccounts.appdata.xml.in:64
+#: data/onlineaccounts.appdata.xml.in:78
 msgid "Make sure you can always navigate next by pressing the Enter key"
 msgstr "Zaistené, aby bolo vždy možné presúvať sa ďalej pomocou klávesy Enter"
 
-#: data/onlineaccounts.appdata.xml.in:65
+#: data/onlineaccounts.appdata.xml.in:79
 msgid "Close dialogs when pressing the Escape key"
 msgstr "Zatvárať dialógy pri stlačení klávesy ESC"
 
-#: data/onlineaccounts.appdata.xml.in:66
+#: data/onlineaccounts.appdata.xml.in:80
 msgid "Use a more complete list of authentication methods for IMAP"
 msgstr "Používať kompletnejší zoznam overovacích metód pre IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:74
+#: data/onlineaccounts.appdata.xml.in:88
 msgid "Edit saved IMAP accounts"
 msgstr "Upravujte uložené IMAP účty"
 
-#: data/onlineaccounts.appdata.xml.in:75
+#: data/onlineaccounts.appdata.xml.in:89
 msgid "Automatically detect authentication method for IMAP"
 msgstr "Automaticky zistiť metódu overenia pre IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:83
+#: data/onlineaccounts.appdata.xml.in:97
 msgid "Verify login credentials when saving IMAP accounts"
 msgstr "Overovať prihlasovacie údaje pri ukladaní IMAP účtov"
 
-#: data/onlineaccounts.appdata.xml.in:84
+#: data/onlineaccounts.appdata.xml.in:98
 msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
 msgstr "Nastavujte priečinky Archív, Koncepty, Odoslané a Predlohy pre IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:85
+#: data/onlineaccounts.appdata.xml.in:99
 msgid "Close \"Add Account\" popover when an item is selected"
 msgstr "Zatvoriť vyskakovacie okno „Pridať účet“ pri označení položky"
 
-#: data/onlineaccounts.appdata.xml.in:93
+#: data/onlineaccounts.appdata.xml.in:107
 msgid "Complete redesign"
 msgstr "Úplná prerábka"
 
-#: data/onlineaccounts.appdata.xml.in:94
+#: data/onlineaccounts.appdata.xml.in:108
 msgid "Fix blurry icons on HiDPI"
 msgstr "Opravené rozmazané ikonky na displejoch s vysokým rozlíšením (HiDPI)"

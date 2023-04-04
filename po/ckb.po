@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-10-04 21:31+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -88,11 +88,11 @@ msgstr "لیستی ئەرکەکان"
 msgid "Finding available calendars and tasks…"
 msgstr "دۆزینەوەی ڕۆژمێرە بەردەستەکان و ئەرکەکان…"
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr "نەتوانرا ڕۆژمێرەکان وەربگیرێن"
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr "پێ ناچێت زانیاری دابینکراو وێنەی هەژمارێکی دروستی کاڵداڤ بێت."
 
@@ -133,15 +133,15 @@ msgstr "بەکارهێنانی زانیاری نهێنی IMAP"
 msgid "No authentication required"
 msgstr "هیچ سەلماندێک پێویست نییە"
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "پێ ناچێت زانیاری پێدراو وێنەی هەژمارێکی پۆستی ئەلیکترۆنی دروست بێت."
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr "نەتوانرا بکرێتەوە، تکایە دڵنیابە لە دروستی زانیارییەکانت."
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "سەلماندنی IMAP شکستی هێنا: %s"

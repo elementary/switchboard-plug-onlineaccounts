@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2023-03-21 18:59+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -90,11 +90,11 @@ msgstr ""
 msgid "Finding available calendars and tasks…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 
@@ -139,17 +139,17 @@ msgstr "IMAP क्रेडेन्शियल्स वापरा"
 msgid "No authentication required"
 msgstr "प्रमाणीकरण आवश्यक नाही"
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "कृपया आपली प्रमाणपत्रे प्रविष्ट करा …"
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

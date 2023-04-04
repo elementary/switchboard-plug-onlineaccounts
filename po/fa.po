@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2014-01-19 05:28+0000\n"
 "Last-Translator: Mohammad Zali <mohamadzali@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -91,11 +91,11 @@ msgstr ""
 msgid "Finding available calendars and tasks…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 
@@ -136,15 +136,15 @@ msgstr ""
 msgid "No authentication required"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

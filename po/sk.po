@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-onlineaccounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:34+0000\n"
+"POT-Creation-Date: 2023-04-04 02:45+0000\n"
 "PO-Revision-Date: 2022-02-05 22:24+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -93,11 +93,11 @@ msgstr "Zoznamy úloh"
 msgid "Finding available calendars and tasks…"
 msgstr "Hľadajú sa dostupné kalendáre a úlohy…"
 
-#: src/Dialogs/CaldavDialog.vala:422
+#: src/Dialogs/CaldavDialog.vala:426
 msgid "Could not fetch calendars"
 msgstr "Nepodarilo sa získať kalendáre"
 
-#: src/Dialogs/CaldavDialog.vala:530
+#: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr "Poskytnuté údaje sa nezhodujú s platným CalDav účtom."
 
@@ -138,16 +138,16 @@ msgstr "Použiť prihlasovacie údaje IMAP"
 msgid "No authentication required"
 msgstr "Overenie nie je potrebné"
 
-#: src/Dialogs/Imap/ImapDialog.vala:368
+#: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "Poskytnuté údaje sa nezhodujú s platným e-mailovým účtom."
 
-#: src/Dialogs/Imap/ImapDialog.vala:607
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr ""
 "Nepodarilo sa prihlásiť. Prosím, skontrolujte vaše prihlasovacie údaje."
 
-#: src/Dialogs/Imap/ImapDialog.vala:621
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Overenie IMAP sa nepodarilo: %s"
