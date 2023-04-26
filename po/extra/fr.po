@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-04 02:45+0000\n"
-"PO-Revision-Date: 2022-06-30 10:04+0000\n"
+"PO-Revision-Date: 2023-04-27 11:06+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
@@ -35,7 +35,7 @@ msgstr "Mises à jour mineures :"
 
 #: data/onlineaccounts.appdata.xml.in:15
 msgid "Update Mail and Tasks icons"
-msgstr ""
+msgstr "Mise à jour des icônes de Messagerie et Tâches"
 
 #: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
 #: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:65
