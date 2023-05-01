@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-04 02:45+0000\n"
-"PO-Revision-Date: 2023-04-06 22:59+0000\n"
+"PO-Revision-Date: 2023-05-02 22:06+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.appdata.xml.in:5
 msgid "Online Accounts Settings"
-msgstr "Налаштування мережних облікових записів"
+msgstr "Налаштування онлайнових облікових записів"
 
 #: data/onlineaccounts.appdata.xml.in:6
 msgid "Manage online accounts and connected applications"
-msgstr "Керування мережними обліковими записами та під'єднаними застосунками"
+msgstr "Керування онлайновими обліковими записами та під'єднаними застосунками"
 
 #: data/onlineaccounts.appdata.xml.in:13 data/onlineaccounts.appdata.xml.in:26
 #: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:63
