@@ -667,6 +667,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                             var save_setup_source_type = keys[0];
                             var save_setup_extension_name = keys[1];
                             var save_setup_property_name = keys[2];
+                            var type_id = keys[3];
 
                             switch (save_setup_source_type) {
                                 case "Account":
@@ -693,8 +694,33 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                                     }
                                     break;
 
+                                case "Backend":
+                                    if (!account_source.has_extension (save_setup_extension_name)) {
+                                        warning ("Backend extension '%s' not found", save_setup_extension_name);
+                                        break;
+                                    }
+
+                                    var backend_extension = account_source.get_extension (save_setup_extension_name);
+                                    switch (type_id) {
+                                        case "s":
+                                            backend_extension.set (save_setup_property_name, save_setup.get (key));
+                                            break;
+                                        case "b":
+                                            var val = bool.parse (save_setup.get (key));
+                                            backend_extension.set (save_setup_property_name, val, null);
+                                            break;
+                                        case "i":
+                                            var val = int.parse (save_setup.get (key));
+                                            backend_extension.set (save_setup_property_name, val);
+                                            break;
+                                        default: //@TODO: support type "f" (see comment above)
+                                            warning ("Unknown type identifier '%s' provided", type_id);
+                                            break;
+                                    }
+                                    break;
+
                                 default:
-                                    debug ("Initial setup key is not stored: “%s”", key);
+                                    warning ("Initial setup key is not stored: “%s”", key);
                                     break;
                             }
                         }
