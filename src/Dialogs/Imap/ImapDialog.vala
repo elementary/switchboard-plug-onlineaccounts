@@ -833,14 +833,17 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             case "s":
                 extension.set (property_name, val);
                 break;
+
             case "b":
                 var bool_val = bool.parse (val);
                 extension.set (property_name, bool_val);
                 break;
+
             case "i":
                 var int_val = int.parse (val);
                 extension.set (property_name, int_val);
                 break;
+
             case "f":
                 string folder_val = val;
                 if (folder_val[0] == '/') {
@@ -850,6 +853,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 var full_folder_uri = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (val, ":;@?#"));
                 extension.set (property_name, full_folder_uri);
                 break;
+
             default:
                 warning ("Unknown type identifier '%s' provided", property_type);
                 break;
