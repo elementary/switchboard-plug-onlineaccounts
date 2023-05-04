@@ -667,56 +667,41 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                             var save_setup_source_type = keys[0];
                             var save_setup_extension_name = keys[1];
                             var save_setup_property_name = keys[2];
-                            var type_id = keys[3];
+                            var save_setup_property_type = keys[3];
+                            var save_setup_property_value = save_setup.get (key);
 
                             switch (save_setup_source_type) {
                                 case "Account":
-                                    if (
-                                        save_setup_extension_name == E.SOURCE_EXTENSION_MAIL_ACCOUNT &&
-                                        save_setup_property_name == "archive-folder"
-                                    ) {
-                                        account_extension.archive_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (save_setup.get (key), ":;@?#"));
-                                    }
+                                    save_initial_setup_key_for_source (
+                                        account_source,
+                                        save_setup_extension_name,
+                                        save_setup_property_name,
+                                        save_setup_property_type,
+                                        save_setup_property_value,
+                                        encoded_account_uri
+                                    );
                                     break;
 
                                 case "Submission":
-                                    if (
-                                        save_setup_extension_name == E.SOURCE_EXTENSION_MAIL_COMPOSITION &&
-                                        save_setup_property_name == "drafts-folder"
-                                    ) {
-                                        composition_extension.drafts_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (save_setup.get (key), ":;@?#"));
-
-                                    } else if (
-                                        save_setup_extension_name == E.SOURCE_EXTENSION_MAIL_SUBMISSION &&
-                                        save_setup_property_name == "sent-folder"
-                                    ) {
-                                        submission_extension.sent_folder = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (save_setup.get (key), ":;@?#"));
-                                    }
+                                    save_initial_setup_key_for_source (
+                                        identity_source,
+                                        save_setup_extension_name,
+                                        save_setup_property_name,
+                                        save_setup_property_type,
+                                        save_setup_property_value,
+                                        encoded_account_uri
+                                    );
                                     break;
 
                                 case "Backend":
-                                    if (!account_source.has_extension (save_setup_extension_name)) {
-                                        warning ("Backend extension '%s' not found", save_setup_extension_name);
-                                        break;
-                                    }
-
-                                    var backend_extension = account_source.get_extension (save_setup_extension_name);
-                                    switch (type_id) {
-                                        case "s":
-                                            backend_extension.set (save_setup_property_name, save_setup.get (key));
-                                            break;
-                                        case "b":
-                                            var val = bool.parse (save_setup.get (key));
-                                            backend_extension.set (save_setup_property_name, val, null);
-                                            break;
-                                        case "i":
-                                            var val = int.parse (save_setup.get (key));
-                                            backend_extension.set (save_setup_property_name, val);
-                                            break;
-                                        default: //@TODO: support type "f" (see comment above)
-                                            warning ("Unknown type identifier '%s' provided", type_id);
-                                            break;
-                                    }
+                                    save_initial_setup_key_for_source (
+                                        account_source,
+                                        save_setup_extension_name,
+                                        save_setup_property_name,
+                                        save_setup_property_type,
+                                        save_setup_property_value,
+                                        encoded_account_uri
+                                    );
                                     break;
 
                                 default:
@@ -830,6 +815,45 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     private void unset_cancel_timeout () {
         if (cancel_timeout_id != 0) {
             GLib.Source.remove (cancel_timeout_id);
+        }
+    }
+
+    private void save_initial_setup_key_for_source (E.Source source, string extension_name, string property_name, string? property_type, string val, string encoded_account_uri) {
+        if (!source.has_extension (extension_name)) {
+            warning ("Extension '%s' not found for source '%s'", extension_name, source.display_name);
+            return;
+        }
+
+        unowned var extension = source.get_extension (extension_name);
+
+        if (property_type == null) {
+            property_type = "s";
+        }
+        switch (property_type) {
+            case "s":
+                extension.set (property_name, val);
+                break;
+            case "b":
+                var bool_val = bool.parse (val);
+                extension.set (property_name, bool_val);
+                break;
+            case "i":
+                var int_val = int.parse (val);
+                extension.set (property_name, int_val);
+                break;
+            case "f":
+                string folder_val = val;
+                print (folder_val + "\n");
+                if (val[0] == '/') {
+                    folder_val = val.substring (1);
+                }
+                print (folder_val + "\n");
+                var full_folder_uri = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (val, ":;@?#"));
+                extension.set (property_name, full_folder_uri);
+                break;
+            default:
+                warning ("Unknown type identifier '%s' provided", property_type);
+                break;
         }
     }
 }
