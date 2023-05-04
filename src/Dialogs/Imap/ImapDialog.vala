@@ -548,8 +548,6 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         identity_extension.address = login_page.email;
         identity_extension.name = login_page.real_name;
 
-        unowned var composition_extension = (E.SourceMailComposition) identity_source.get_extension (E.SOURCE_EXTENSION_MAIL_COMPOSITION);
-
         /* configure transport_source */
 
         unowned var transport_extension = (E.SourceMailTransport) transport_source.get_extension (E.SOURCE_EXTENSION_MAIL_TRANSPORT);
@@ -693,6 +691,17 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                                     );
                                     break;
 
+                                case "Transport":
+                                    save_initial_setup_key_for_source (
+                                        transport_source,
+                                        save_setup_extension_name,
+                                        save_setup_property_name,
+                                        save_setup_property_type,
+                                        save_setup_property_value,
+                                        encoded_account_uri
+                                    );
+                                    break;
+
                                 case "Backend":
                                     save_initial_setup_key_for_source (
                                         account_source,
@@ -819,12 +828,11 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
     }
 
     private void save_initial_setup_key_for_source (E.Source source, string extension_name, string property_name, string? property_type, string val, string encoded_account_uri) {
-        if (!source.has_extension (extension_name)) {
+        unowned var extension = source.get_extension (extension_name);
+        if (extension == null) {
             warning ("Extension '%s' not found for source '%s'", extension_name, source.display_name);
             return;
         }
-
-        unowned var extension = source.get_extension (extension_name);
 
         if (property_type == null) {
             property_type = "s";
