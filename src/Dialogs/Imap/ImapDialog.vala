@@ -843,11 +843,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
                 break;
             case "f":
                 string folder_val = val;
-                print (folder_val + "\n");
                 if (val[0] == '/') {
                     folder_val = val.substring (1);
                 }
-                print (folder_val + "\n");
                 var full_folder_uri = "folder://%s/%s".printf (encoded_account_uri, Camel.URL.encode (val, ":;@?#"));
                 extension.set (property_name, full_folder_uri);
                 break;
