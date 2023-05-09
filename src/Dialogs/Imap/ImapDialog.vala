@@ -578,7 +578,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             yield ((Camel.NetworkService) imap_service).can_reach (cancellable);
         }
 
-        var imap_auth_types = imap_service.query_auth_types_sync (cancellable);
+        var imap_auth_types = yield imap_service.query_auth_types (GLib.Priority.DEFAULT, cancellable);
         GLib.Error? imap_auth_error = null;
         foreach (unowned var imap_auth_type in imap_auth_types) {
             debug ("Testing %s authentication for imap service…", imap_auth_type.name);
@@ -749,7 +749,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             yield ((Camel.NetworkService) transport_service).can_reach (cancellable);
         }
 
-        var smtp_auth_types = transport_service.query_auth_types_sync (cancellable);
+        var smtp_auth_types = yield transport_service.query_auth_types (GLib.Priority.DEFAULT, cancellable);
         GLib.Error? smtp_auth_error = null;
         foreach (unowned var smtp_auth_type in smtp_auth_types) {
             debug ("Testing %s authentication for smtp service…", smtp_auth_type.name);
