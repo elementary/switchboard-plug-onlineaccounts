@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 02:45+0000\n"
+"POT-Creation-Date: 2023-05-30 22:22+0000\n"
 "PO-Revision-Date: 2023-02-02 23:25+0000\n"
 "Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://l10n.elementary.io/projects/"
@@ -150,13 +150,13 @@ msgstr "Inga identitetsstadfesting er kravd"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:614
+#: src/Dialogs/Imap/ImapDialog.vala:612
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Oppgje brukardetaljar…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:628
+#: src/Dialogs/Imap/ImapDialog.vala:626
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""

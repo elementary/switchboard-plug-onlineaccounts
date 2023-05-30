@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 02:45+0000\n"
+"POT-Creation-Date: 2023-05-30 22:22+0000\n"
 "PO-Revision-Date: 2022-01-14 22:27+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -142,11 +142,11 @@ msgstr "Tunnistautumista ei vaadita"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "Annetut tiedot eivät vaikuta kuvastavan kelvollista sähköpostitiliä."
 
-#: src/Dialogs/Imap/ImapDialog.vala:614
+#: src/Dialogs/Imap/ImapDialog.vala:612
 msgid "Could not log in. Please verify your credentials."
 msgstr "Kirjautuminen ei onnistunut. Varmista kirjautumistietosi."
 
-#: src/Dialogs/Imap/ImapDialog.vala:628
+#: src/Dialogs/Imap/ImapDialog.vala:626
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP-todennus epäonnistui: %s"

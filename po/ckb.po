@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 02:45+0000\n"
+"POT-Creation-Date: 2023-05-30 22:22+0000\n"
 "PO-Revision-Date: 2022-10-04 21:31+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -137,11 +137,11 @@ msgstr "هیچ سەلماندێک پێویست نییە"
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "پێ ناچێت زانیاری پێدراو وێنەی هەژمارێکی پۆستی ئەلیکترۆنی دروست بێت."
 
-#: src/Dialogs/Imap/ImapDialog.vala:614
+#: src/Dialogs/Imap/ImapDialog.vala:612
 msgid "Could not log in. Please verify your credentials."
 msgstr "نەتوانرا بکرێتەوە، تکایە دڵنیابە لە دروستی زانیارییەکانت."
 
-#: src/Dialogs/Imap/ImapDialog.vala:628
+#: src/Dialogs/Imap/ImapDialog.vala:626
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "سەلماندنی IMAP شکستی هێنا: %s"
