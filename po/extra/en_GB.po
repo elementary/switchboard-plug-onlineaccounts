@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:22+0000\n"
+"POT-Creation-Date: 2023-05-30 22:26+0000\n"
 "PO-Revision-Date: 2023-04-06 22:59+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -33,47 +33,47 @@ msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:84
+#: data/onlineaccounts.metainfo.xml.in:58
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Minor updates:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
-msgid "Update Mail and Tasks icons"
-msgstr "Update Mail and Tasks icons"
+msgid "Fix freeze when an IMAP server sends no response"
+msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:69
-#: data/onlineaccounts.metainfo.xml.in:86
+#: data/onlineaccounts.metainfo.xml.in:48
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Updated translations"
 
-#: data/onlineaccounts.metainfo.xml.in:54
-#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:47
+msgid "Update Mail and Tasks icons"
+msgstr "Update Mail and Tasks icons"
+
+#: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "New features:"
 
-#: data/onlineaccounts.metainfo.xml.in:56
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
 msgstr "Added offline support for CalDAV accounts"
 
-#: data/onlineaccounts.metainfo.xml.in:65
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
 msgstr "Choose refresh rate for IMAP"
 
-#: data/onlineaccounts.metainfo.xml.in:78
-msgid "Edit saved CalDAV accounts"
-msgstr "Edit saved CalDAV accounts"
+#~ msgid "Edit saved CalDAV accounts"
+#~ msgstr "Edit saved CalDAV accounts"
 
-#: data/onlineaccounts.metainfo.xml.in:80
-msgid "Fixes:"
-msgstr "Fixes:"
+#~ msgid "Fixes:"
+#~ msgstr "Fixes:"
 
-#: data/onlineaccounts.metainfo.xml.in:82
-msgid "Dim window when creating a new IMAP account"
-msgstr "Dim window when creating a new IMAP account"
+#~ msgid "Dim window when creating a new IMAP account"
+#~ msgstr "Dim window when creating a new IMAP account"
 
 #~ msgid "Make sure the refresh interval for an IMAP account is set"
 #~ msgstr "Make sure the refresh interval for an IMAP account is set"

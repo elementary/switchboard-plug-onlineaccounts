@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:22+0000\n"
+"POT-Creation-Date: 2023-05-30 22:26+0000\n"
 "PO-Revision-Date: 2023-05-02 22:06+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -34,47 +34,47 @@ msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:84
+#: data/onlineaccounts.metainfo.xml.in:58
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
-msgid "Update Mail and Tasks icons"
-msgstr "Оновлено піктограми пошти та завдань"
+msgid "Fix freeze when an IMAP server sends no response"
+msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:69
-#: data/onlineaccounts.metainfo.xml.in:86
+#: data/onlineaccounts.metainfo.xml.in:48
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/onlineaccounts.metainfo.xml.in:54
-#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:47
+msgid "Update Mail and Tasks icons"
+msgstr "Оновлено піктограми пошти та завдань"
+
+#: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "Нові функції:"
 
-#: data/onlineaccounts.metainfo.xml.in:56
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
 msgstr "Додано офлайн підтримку облікових записів CalDAV"
 
-#: data/onlineaccounts.metainfo.xml.in:65
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
 msgstr "Обирайте частоту оновлення IMAP"
 
-#: data/onlineaccounts.metainfo.xml.in:78
-msgid "Edit saved CalDAV accounts"
-msgstr "Редагування збережених облікових записів CalDAV"
+#~ msgid "Edit saved CalDAV accounts"
+#~ msgstr "Редагування збережених облікових записів CalDAV"
 
-#: data/onlineaccounts.metainfo.xml.in:80
-msgid "Fixes:"
-msgstr "Виправлення:"
+#~ msgid "Fixes:"
+#~ msgstr "Виправлення:"
 
-#: data/onlineaccounts.metainfo.xml.in:82
-msgid "Dim window when creating a new IMAP account"
-msgstr "Під час створення нового облікового запису IMAP вікно затемнюється"
+#~ msgid "Dim window when creating a new IMAP account"
+#~ msgstr "Під час створення нового облікового запису IMAP вікно затемнюється"
 
 #~ msgid "Make sure the refresh interval for an IMAP account is set"
 #~ msgstr ""
