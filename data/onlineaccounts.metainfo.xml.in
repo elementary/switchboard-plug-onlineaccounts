@@ -27,6 +27,19 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="6.5.3" date="2023-05-29" urgency="medium">
+      <description>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Fix freeze when an IMAP server sends no response</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-onlineaccounts/issues/232">IMAP: Add support for RealTrashPath and RealJunkPath</issue>
+      </issues>
+    </release>
+
     <release version="6.5.2" date="2023-04-03" urgency="medium">
       <description>
         <p>Minor updates:</p>
@@ -71,23 +84,7 @@
       </description>
     </release>
 
-    <release version="6.3.0" date="2021-12-13" urgency="medium">
-      <description>
-        <p>New features:</p>
-        <ul>
-          <li>Edit saved CalDAV accounts</li>
-        </ul>
-        <p>Fixes:</p>
-        <ul>
-          <li>Dim window when creating a new IMAP account</li>
-        </ul>
-        <p>Minor updates:</p>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-
+    <release version="6.3.0" date="2021-12-13" urgency="medium" />
     <release version="6.2.1" date="2021-09-28" urgency="medium" />
     <release version="6.2.0" date="2021-08-25" urgency="medium" />
     <release version="6.1.0" date="2021-07-28" urgency="medium" />
