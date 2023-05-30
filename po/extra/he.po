@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 02:45+0000\n"
+"POT-Creation-Date: 2023-05-30 22:22+0000\n"
 "PO-Revision-Date: 2023-04-06 22:59+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -19,104 +19,97 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.16.4\n"
 
-#: data/onlineaccounts.appdata.xml.in:5
+#: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
 msgstr "הגדרות חשבונות מקוונים"
 
-#: data/onlineaccounts.appdata.xml.in:6
+#: data/onlineaccounts.metainfo.xml.in:11
 msgid "Manage online accounts and connected applications"
 msgstr "ניהול חשבונות מקוונים ויישומים מקושרים"
 
-#: data/onlineaccounts.appdata.xml.in:13 data/onlineaccounts.appdata.xml.in:26
-#: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:63
-#: data/onlineaccounts.appdata.xml.in:76
+#: data/onlineaccounts.metainfo.xml.in:25
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/onlineaccounts.metainfo.xml.in:32
+#: data/onlineaccounts.metainfo.xml.in:45
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "עדכונים משניים:"
 
-#: data/onlineaccounts.appdata.xml.in:15
+#: data/onlineaccounts.metainfo.xml.in:34
 msgid "Update Mail and Tasks icons"
 msgstr "עדכונים לסמלים הדואר והמשימות"
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
-#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:65
-#: data/onlineaccounts.appdata.xml.in:81 data/onlineaccounts.appdata.xml.in:90
-#: data/onlineaccounts.appdata.xml.in:100
-#: data/onlineaccounts.appdata.xml.in:109
+#: data/onlineaccounts.metainfo.xml.in:35
+#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:86
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:43
-#: data/onlineaccounts.appdata.xml.in:55
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "יכולות חדשות:"
 
-#: data/onlineaccounts.appdata.xml.in:37
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Added offline support for CalDAV accounts"
 msgstr "נוספה תמיכה בלתי מקוונת לחשבונות CalDAV"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.metainfo.xml.in:65
 msgid "Choose refresh rate for IMAP"
 msgstr "בחירת קצב רענון ל־IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Edit saved CalDAV accounts"
 msgstr "עריכת חשבונות CalDAV שמורים"
 
-#: data/onlineaccounts.appdata.xml.in:59 data/onlineaccounts.appdata.xml.in:71
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "תיקונים:"
 
-#: data/onlineaccounts.appdata.xml.in:61
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Dim window when creating a new IMAP account"
 msgstr "לעמעם את החלון בעת יצירת חשבון IMAP חדש"
 
-#: data/onlineaccounts.appdata.xml.in:73
-msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr "וידוא שמוגדר הפרש בין עדכונים בחשבון IMAP"
+#~ msgid "Make sure the refresh interval for an IMAP account is set"
+#~ msgstr "וידוא שמוגדר הפרש בין עדכונים בחשבון IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:74
-msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr "תוקנה הוספת, עריכת והסרת רשימות ביישומי CalDAV כגון יישום המשימות"
+#~ msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+#~ msgstr "תוקנה הוספת, עריכת והסרת רשימות ביישומי CalDAV כגון יישום המשימות"
 
-#: data/onlineaccounts.appdata.xml.in:78
-msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "וידאנו שתמיד ניתן לנווט הלאה עם המקש Enter"
+#~ msgid "Make sure you can always navigate next by pressing the Enter key"
+#~ msgstr "וידאנו שתמיד ניתן לנווט הלאה עם המקש Enter"
 
-#: data/onlineaccounts.appdata.xml.in:79
-msgid "Close dialogs when pressing the Escape key"
-msgstr "תיבות דו־שיח נסגרות בלחיצה על המקש Escape"
+#~ msgid "Close dialogs when pressing the Escape key"
+#~ msgstr "תיבות דו־שיח נסגרות בלחיצה על המקש Escape"
 
-#: data/onlineaccounts.appdata.xml.in:80
-msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "נעשה שימוש ברשימה מלאה יותר של שיטות אימות ל־IMAP"
+#~ msgid "Use a more complete list of authentication methods for IMAP"
+#~ msgstr "נעשה שימוש ברשימה מלאה יותר של שיטות אימות ל־IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:88
-msgid "Edit saved IMAP accounts"
-msgstr "עריכת חשבונות IMAP שמורים"
+#~ msgid "Edit saved IMAP accounts"
+#~ msgstr "עריכת חשבונות IMAP שמורים"
 
-#: data/onlineaccounts.appdata.xml.in:89
-msgid "Automatically detect authentication method for IMAP"
-msgstr "לזהות את שיטת האימות ל־IMAP אוטומטית"
+#~ msgid "Automatically detect authentication method for IMAP"
+#~ msgstr "לזהות את שיטת האימות ל־IMAP אוטומטית"
 
-#: data/onlineaccounts.appdata.xml.in:97
-msgid "Verify login credentials when saving IMAP accounts"
-msgstr "פרטי הגישה מאומתים בעת שמירת חשבונות IMAP"
+#~ msgid "Verify login credentials when saving IMAP accounts"
+#~ msgstr "פרטי הגישה מאומתים בעת שמירת חשבונות IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:98
-msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr "אפשר להקים תיקיות ארכיון, טיוטות, נשלח ותבניות ב־IMAP"
+#~ msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+#~ msgstr "אפשר להקים תיקיות ארכיון, טיוטות, נשלח ותבניות ב־IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:99
-msgid "Close \"Add Account\" popover when an item is selected"
-msgstr "החלונית הצפה „הוספת חשבון” נסגרת כשנבחר פריט"
+#~ msgid "Close \"Add Account\" popover when an item is selected"
+#~ msgstr "החלונית הצפה „הוספת חשבון” נסגרת כשנבחר פריט"
 
-#: data/onlineaccounts.appdata.xml.in:107
-msgid "Complete redesign"
-msgstr "עיצוב מחדש מאפס"
+#~ msgid "Complete redesign"
+#~ msgstr "עיצוב מחדש מאפס"
 
-#: data/onlineaccounts.appdata.xml.in:108
-msgid "Fix blurry icons on HiDPI"
-msgstr "תיקון סמלים מטושטשים ברזולוציה גבוהה"
+#~ msgid "Fix blurry icons on HiDPI"
+#~ msgstr "תיקון סמלים מטושטשים ברזולוציה גבוהה"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "הגדרה כך שקישורים חיצוניים ייפתחו בדפדפן"

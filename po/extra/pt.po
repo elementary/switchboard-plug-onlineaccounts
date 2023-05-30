@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 02:45+0000\n"
+"POT-Creation-Date: 2023-05-30 22:22+0000\n"
 "PO-Revision-Date: 2022-06-03 23:21+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -19,109 +19,104 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/onlineaccounts.appdata.xml.in:5
+#: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
 msgstr "Definições de Contas Online"
 
-#: data/onlineaccounts.appdata.xml.in:6
+#: data/onlineaccounts.metainfo.xml.in:11
 msgid "Manage online accounts and connected applications"
 msgstr "Gerir contas online e aplicações associadas"
 
-#: data/onlineaccounts.appdata.xml.in:13 data/onlineaccounts.appdata.xml.in:26
-#: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:63
-#: data/onlineaccounts.appdata.xml.in:76
+#: data/onlineaccounts.metainfo.xml.in:25
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/onlineaccounts.metainfo.xml.in:32
+#: data/onlineaccounts.metainfo.xml.in:45
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Pequenas atualizações:"
 
-#: data/onlineaccounts.appdata.xml.in:15
+#: data/onlineaccounts.metainfo.xml.in:34
 msgid "Update Mail and Tasks icons"
 msgstr ""
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
-#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:65
-#: data/onlineaccounts.appdata.xml.in:81 data/onlineaccounts.appdata.xml.in:90
-#: data/onlineaccounts.appdata.xml.in:100
-#: data/onlineaccounts.appdata.xml.in:109
+#: data/onlineaccounts.metainfo.xml.in:35
+#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:86
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:43
-#: data/onlineaccounts.appdata.xml.in:55
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "Novas funcionalidades:"
 
-#: data/onlineaccounts.appdata.xml.in:37
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Added offline support for CalDAV accounts"
 msgstr "Adicionado suporte offline para contas CalDAV"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.metainfo.xml.in:65
 msgid "Choose refresh rate for IMAP"
 msgstr "Escolher taxa de atualização para IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Edit saved CalDAV accounts"
 msgstr "Editar contas CalDAV guardadas"
 
-#: data/onlineaccounts.appdata.xml.in:59 data/onlineaccounts.appdata.xml.in:71
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Correções:"
 
-#: data/onlineaccounts.appdata.xml.in:61
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Dim window when creating a new IMAP account"
 msgstr "Escurecer janela quando se cria uma nova conta IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:73
-msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
-"Certifique-se de que o intervalo de atualização para uma conta IMAP está "
-"definido"
+#~ msgid "Make sure the refresh interval for an IMAP account is set"
+#~ msgstr ""
+#~ "Certifique-se de que o intervalo de atualização para uma conta IMAP está "
+#~ "definido"
 
-#: data/onlineaccounts.appdata.xml.in:74
-msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr ""
-"Corrige o adicionar, editar e remover listas em aplicações CalDAV tais como "
-"o Tarefas"
+#~ msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+#~ msgstr ""
+#~ "Corrige o adicionar, editar e remover listas em aplicações CalDAV tais "
+#~ "como o Tarefas"
 
-#: data/onlineaccounts.appdata.xml.in:78
-msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr ""
-"Certifique-se de que pode sempre navegar o seguinte premindo a tecla Enter"
+#~ msgid "Make sure you can always navigate next by pressing the Enter key"
+#~ msgstr ""
+#~ "Certifique-se de que pode sempre navegar o seguinte premindo a tecla Enter"
 
-#: data/onlineaccounts.appdata.xml.in:79
-msgid "Close dialogs when pressing the Escape key"
-msgstr "Fecha janelas de diálogos ao premir a tecla Escape"
+#~ msgid "Close dialogs when pressing the Escape key"
+#~ msgstr "Fecha janelas de diálogos ao premir a tecla Escape"
 
-#: data/onlineaccounts.appdata.xml.in:80
-msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "Utilizar uma lista mais completa de métodos de autenticação para IMAP"
+#~ msgid "Use a more complete list of authentication methods for IMAP"
+#~ msgstr ""
+#~ "Utilizar uma lista mais completa de métodos de autenticação para IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:88
-msgid "Edit saved IMAP accounts"
-msgstr "Editar contas IMAP guardadas"
+#~ msgid "Edit saved IMAP accounts"
+#~ msgstr "Editar contas IMAP guardadas"
 
-#: data/onlineaccounts.appdata.xml.in:89
-msgid "Automatically detect authentication method for IMAP"
-msgstr "Detetar automaticamente o método de autenticação para IMAP"
+#~ msgid "Automatically detect authentication method for IMAP"
+#~ msgstr "Detetar automaticamente o método de autenticação para IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:97
-msgid "Verify login credentials when saving IMAP accounts"
-msgstr "Verificar as credenciais de acesso ao guardar contas IMAP"
+#~ msgid "Verify login credentials when saving IMAP accounts"
+#~ msgstr "Verificar as credenciais de acesso ao guardar contas IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:98
-msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr "Configurar as pastas Arquivo, Rascunhos, Enviados e Modelos para IMAP"
+#~ msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+#~ msgstr ""
+#~ "Configurar as pastas Arquivo, Rascunhos, Enviados e Modelos para IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:99
-msgid "Close \"Add Account\" popover when an item is selected"
-msgstr "Fecha a janela \"Adicionar conta\" quando um item é selecionado"
+#~ msgid "Close \"Add Account\" popover when an item is selected"
+#~ msgstr "Fecha a janela \"Adicionar conta\" quando um item é selecionado"
 
-#: data/onlineaccounts.appdata.xml.in:107
-msgid "Complete redesign"
-msgstr "Reformulação completa"
+#~ msgid "Complete redesign"
+#~ msgstr "Reformulação completa"
 
-#: data/onlineaccounts.appdata.xml.in:108
-msgid "Fix blurry icons on HiDPI"
-msgstr "Corrige ícones desfocados em HiDPI"
+#~ msgid "Fix blurry icons on HiDPI"
+#~ msgstr "Corrige ícones desfocados em HiDPI"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "Faz com que as ligações externas abram no navegador da Internet"

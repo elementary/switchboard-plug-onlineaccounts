@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 02:45+0000\n"
+"POT-Creation-Date: 2023-05-30 22:22+0000\n"
 "PO-Revision-Date: 2023-05-02 22:06+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,113 +16,108 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.17\n"
 
-#: data/onlineaccounts.appdata.xml.in:5
+#: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
 msgstr "Налаштування онлайнових облікових записів"
 
-#: data/onlineaccounts.appdata.xml.in:6
+#: data/onlineaccounts.metainfo.xml.in:11
 msgid "Manage online accounts and connected applications"
 msgstr "Керування онлайновими обліковими записами та під'єднаними застосунками"
 
-#: data/onlineaccounts.appdata.xml.in:13 data/onlineaccounts.appdata.xml.in:26
-#: data/onlineaccounts.appdata.xml.in:47 data/onlineaccounts.appdata.xml.in:63
-#: data/onlineaccounts.appdata.xml.in:76
+#: data/onlineaccounts.metainfo.xml.in:25
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/onlineaccounts.metainfo.xml.in:32
+#: data/onlineaccounts.metainfo.xml.in:45
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:84
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/onlineaccounts.appdata.xml.in:15
+#: data/onlineaccounts.metainfo.xml.in:34
 msgid "Update Mail and Tasks icons"
 msgstr "Оновлено піктограми пошти та завдань"
 
-#: data/onlineaccounts.appdata.xml.in:16 data/onlineaccounts.appdata.xml.in:28
-#: data/onlineaccounts.appdata.xml.in:49 data/onlineaccounts.appdata.xml.in:65
-#: data/onlineaccounts.appdata.xml.in:81 data/onlineaccounts.appdata.xml.in:90
-#: data/onlineaccounts.appdata.xml.in:100
-#: data/onlineaccounts.appdata.xml.in:109
+#: data/onlineaccounts.metainfo.xml.in:35
+#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:86
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/onlineaccounts.appdata.xml.in:35 data/onlineaccounts.appdata.xml.in:43
-#: data/onlineaccounts.appdata.xml.in:55
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "Нові функції:"
 
-#: data/onlineaccounts.appdata.xml.in:37
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Added offline support for CalDAV accounts"
 msgstr "Додано офлайн підтримку облікових записів CalDAV"
 
-#: data/onlineaccounts.appdata.xml.in:45
+#: data/onlineaccounts.metainfo.xml.in:65
 msgid "Choose refresh rate for IMAP"
 msgstr "Обирайте частоту оновлення IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Edit saved CalDAV accounts"
 msgstr "Редагування збережених облікових записів CalDAV"
 
-#: data/onlineaccounts.appdata.xml.in:59 data/onlineaccounts.appdata.xml.in:71
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Fixes:"
 msgstr "Виправлення:"
 
-#: data/onlineaccounts.appdata.xml.in:61
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Dim window when creating a new IMAP account"
 msgstr "Під час створення нового облікового запису IMAP вікно затемнюється"
 
-#: data/onlineaccounts.appdata.xml.in:73
-msgid "Make sure the refresh interval for an IMAP account is set"
-msgstr ""
-"Виправлено проблему встановлення інтервалу оновлення для облікового запису "
-"IMAP"
+#~ msgid "Make sure the refresh interval for an IMAP account is set"
+#~ msgstr ""
+#~ "Виправлено проблему встановлення інтервалу оновлення для облікового "
+#~ "запису IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:74
-msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
-msgstr ""
-"Виправлено додавання, редагування та вилучення списків у застосунках для "
-"роботи з CalDAV, як-от Завдання"
+#~ msgid "Fix adding, editing, and removing lists in CalDAV apps like Tasks"
+#~ msgstr ""
+#~ "Виправлено додавання, редагування та вилучення списків у застосунках для "
+#~ "роботи з CalDAV, як-от Завдання"
 
-#: data/onlineaccounts.appdata.xml.in:78
-msgid "Make sure you can always navigate next by pressing the Enter key"
-msgstr "Натиснувши клавішу «Enter» ви завжди можете перейти далі"
+#~ msgid "Make sure you can always navigate next by pressing the Enter key"
+#~ msgstr "Натиснувши клавішу «Enter» ви завжди можете перейти далі"
 
-#: data/onlineaccounts.appdata.xml.in:79
-msgid "Close dialogs when pressing the Escape key"
-msgstr "Закриття діалогових вікон натисканням клавіші «Escape»"
+#~ msgid "Close dialogs when pressing the Escape key"
+#~ msgstr "Закриття діалогових вікон натисканням клавіші «Escape»"
 
-#: data/onlineaccounts.appdata.xml.in:80
-msgid "Use a more complete list of authentication methods for IMAP"
-msgstr "Повніший перелік методів автентифікації для IMAP"
+#~ msgid "Use a more complete list of authentication methods for IMAP"
+#~ msgstr "Повніший перелік методів автентифікації для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:88
-msgid "Edit saved IMAP accounts"
-msgstr "Редагування збережених облікових записів IMAP"
+#~ msgid "Edit saved IMAP accounts"
+#~ msgstr "Редагування збережених облікових записів IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:89
-msgid "Automatically detect authentication method for IMAP"
-msgstr "Автовизначення методу автентифікації для IMAP"
+#~ msgid "Automatically detect authentication method for IMAP"
+#~ msgstr "Автовизначення методу автентифікації для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:97
-msgid "Verify login credentials when saving IMAP accounts"
-msgstr ""
-"Перевірка облікових даних для входу під час збереження облікових записів IMAP"
+#~ msgid "Verify login credentials when saving IMAP accounts"
+#~ msgstr ""
+#~ "Перевірка облікових даних для входу під час збереження облікових записів "
+#~ "IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:98
-msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
-msgstr "Налаштування тек Архівовані, Чернетки, Надіслані та Шаблони для IMAP"
+#~ msgid "Set up Archive, Drafts, Sent, and Templates folders for IMAP"
+#~ msgstr ""
+#~ "Налаштування тек Архівовані, Чернетки, Надіслані та Шаблони для IMAP"
 
-#: data/onlineaccounts.appdata.xml.in:99
-msgid "Close \"Add Account\" popover when an item is selected"
-msgstr "Закриття вікна «Додати обліковий запис», коли вибрано елемент"
+#~ msgid "Close \"Add Account\" popover when an item is selected"
+#~ msgstr "Закриття вікна «Додати обліковий запис», коли вибрано елемент"
 
-#: data/onlineaccounts.appdata.xml.in:107
-msgid "Complete redesign"
-msgstr "Завершено зміну зовнішнього вигляду"
+#~ msgid "Complete redesign"
+#~ msgstr "Завершено зміну зовнішнього вигляду"
 
-#: data/onlineaccounts.appdata.xml.in:108
-msgid "Fix blurry icons on HiDPI"
-msgstr "Виправлено розмиті піктограми на HiDPI"
+#~ msgid "Fix blurry icons on HiDPI"
+#~ msgstr "Виправлено розмиті піктограми на HiDPI"
 
 #~ msgid "Make external links open in the web browser"
 #~ msgstr "Зовнішні посилання тепер відкриваються в переглядачі мережі"
