@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-30 22:26+0000\n"
-"PO-Revision-Date: 2023-04-06 22:59+0000\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/online-accounts-extra/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -29,7 +29,7 @@ msgstr "Manage online accounts and connected applications"
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
@@ -40,7 +40,7 @@ msgstr "Minor updates:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
 msgid "Fix freeze when an IMAP server sends no response"
-msgstr ""
+msgstr "Fix freeze when an IMAP server sends no response"
 
 #: data/onlineaccounts.metainfo.xml.in:35
 #: data/onlineaccounts.metainfo.xml.in:48
