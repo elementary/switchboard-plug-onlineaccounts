@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-30 22:26+0000\n"
-"PO-Revision-Date: 2023-04-27 11:06+0000\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/fr/>\n"
@@ -29,7 +29,7 @@ msgstr "Gérez les comptes en ligne et les applications connectées"
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
@@ -40,7 +40,7 @@ msgstr "Mises à jour mineures :"
 
 #: data/onlineaccounts.metainfo.xml.in:34
 msgid "Fix freeze when an IMAP server sends no response"
-msgstr ""
+msgstr "Correction d'un blocage lorsqu'un serveur IMAP n'envoie pas de réponse"
 
 #: data/onlineaccounts.metainfo.xml.in:35
 #: data/onlineaccounts.metainfo.xml.in:48
