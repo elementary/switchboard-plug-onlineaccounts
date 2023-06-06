@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-30 22:26+0000\n"
-"PO-Revision-Date: 2023-04-06 22:59+0000\n"
+"PO-Revision-Date: 2023-06-08 00:07+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -29,7 +29,7 @@ msgstr "Kezelje online fiókjait és a kapcsolódó alkalmazásait"
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
@@ -40,7 +40,7 @@ msgstr "Kisebb frissítések:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
 msgid "Fix freeze when an IMAP server sends no response"
-msgstr ""
+msgstr "IMAP szerverektől érkező üres válasz esetén történő fagyás javítva"
 
 #: data/onlineaccounts.metainfo.xml.in:35
 #: data/onlineaccounts.metainfo.xml.in:48
@@ -60,11 +60,11 @@ msgstr "Új funkciók:"
 
 #: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
-msgstr ""
+msgstr "CalDAV-fiókok offline támogatása"
 
 #: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
-msgstr ""
+msgstr "IMAP frissítési gyakoriság beállítása"
 
 #~ msgid "Fixes:"
 #~ msgstr "Javítások:"
