@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:22+0000\n"
-"PO-Revision-Date: 2023-04-10 12:59+0000\n"
+"POT-Creation-Date: 2023-05-30 22:26+0000\n"
+"PO-Revision-Date: 2023-06-04 14:07+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -29,51 +29,51 @@ msgstr "Gestioneu els comptes en línia i les aplicacions connectades."
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:84
+#: data/onlineaccounts.metainfo.xml.in:58
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Actualitzacions menors:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
-msgid "Update Mail and Tasks icons"
-msgstr "Actualització de les icones de Correu i Tasques"
+msgid "Fix freeze when an IMAP server sends no response"
+msgstr "Solució de la congelació quan un servidor IMAP no envia cap resposta"
 
 #: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:69
-#: data/onlineaccounts.metainfo.xml.in:86
+#: data/onlineaccounts.metainfo.xml.in:48
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/onlineaccounts.metainfo.xml.in:54
-#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:47
+msgid "Update Mail and Tasks icons"
+msgstr "Actualització de les icones de Correu i Tasques"
+
+#: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "Característiques noves:"
 
-#: data/onlineaccounts.metainfo.xml.in:56
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
 msgstr "S'ha afegit suport fora de línia per als comptes CalDAV."
 
-#: data/onlineaccounts.metainfo.xml.in:65
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
 msgstr "Trieu la freqüència d'actualització per a IMAP"
 
-#: data/onlineaccounts.metainfo.xml.in:78
-msgid "Edit saved CalDAV accounts"
-msgstr "Edita els comptes de CalDAV desats"
+#~ msgid "Edit saved CalDAV accounts"
+#~ msgstr "Edita els comptes de CalDAV desats"
 
-#: data/onlineaccounts.metainfo.xml.in:80
-msgid "Fixes:"
-msgstr "Correccions:"
+#~ msgid "Fixes:"
+#~ msgstr "Correccions:"
 
-#: data/onlineaccounts.metainfo.xml.in:82
-msgid "Dim window when creating a new IMAP account"
-msgstr "Atenuació de la finestra en crear un compte IMAP nou"
+#~ msgid "Dim window when creating a new IMAP account"
+#~ msgstr "Atenuació de la finestra en crear un compte IMAP nou"
 
 #~ msgid "Make sure the refresh interval for an IMAP account is set"
 #~ msgstr ""

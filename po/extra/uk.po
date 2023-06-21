@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:22+0000\n"
-"PO-Revision-Date: 2023-05-02 22:06+0000\n"
+"POT-Creation-Date: 2023-05-30 22:26+0000\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/uk/>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
@@ -30,51 +30,51 @@ msgstr "Керування онлайновими обліковими запи�
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:84
+#: data/onlineaccounts.metainfo.xml.in:58
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
-msgid "Update Mail and Tasks icons"
-msgstr "Оновлено піктограми пошти та завдань"
+msgid "Fix freeze when an IMAP server sends no response"
+msgstr "Усунено запинку, якщо сервер IMAP не надсилає відповіді"
 
 #: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:69
-#: data/onlineaccounts.metainfo.xml.in:86
+#: data/onlineaccounts.metainfo.xml.in:48
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/onlineaccounts.metainfo.xml.in:54
-#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:47
+msgid "Update Mail and Tasks icons"
+msgstr "Оновлено піктограми пошти та завдань"
+
+#: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "Нові функції:"
 
-#: data/onlineaccounts.metainfo.xml.in:56
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
 msgstr "Додано офлайн підтримку облікових записів CalDAV"
 
-#: data/onlineaccounts.metainfo.xml.in:65
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
 msgstr "Обирайте частоту оновлення IMAP"
 
-#: data/onlineaccounts.metainfo.xml.in:78
-msgid "Edit saved CalDAV accounts"
-msgstr "Редагування збережених облікових записів CalDAV"
+#~ msgid "Edit saved CalDAV accounts"
+#~ msgstr "Редагування збережених облікових записів CalDAV"
 
-#: data/onlineaccounts.metainfo.xml.in:80
-msgid "Fixes:"
-msgstr "Виправлення:"
+#~ msgid "Fixes:"
+#~ msgstr "Виправлення:"
 
-#: data/onlineaccounts.metainfo.xml.in:82
-msgid "Dim window when creating a new IMAP account"
-msgstr "Під час створення нового облікового запису IMAP вікно затемнюється"
+#~ msgid "Dim window when creating a new IMAP account"
+#~ msgstr "Під час створення нового облікового запису IMAP вікно затемнюється"
 
 #~ msgid "Make sure the refresh interval for an IMAP account is set"
 #~ msgstr ""

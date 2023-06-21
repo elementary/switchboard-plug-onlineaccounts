@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:22+0000\n"
-"PO-Revision-Date: 2023-04-06 22:59+0000\n"
+"POT-Creation-Date: 2023-05-30 22:26+0000\n"
+"PO-Revision-Date: 2023-06-04 14:07+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -30,51 +30,51 @@ msgstr "Zarządzaj kontami sieciowymi i połączonymi programami"
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:84
+#: data/onlineaccounts.metainfo.xml.in:58
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
-msgid "Update Mail and Tasks icons"
-msgstr "Aktualizacja ikon Poczty i Zadań"
+msgid "Fix freeze when an IMAP server sends no response"
+msgstr "Naprawiono brak responsywności gdy serwer IMAP nie wyśle odpowiedzi"
 
 #: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:69
-#: data/onlineaccounts.metainfo.xml.in:86
+#: data/onlineaccounts.metainfo.xml.in:48
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Zaktualizowane tłumaczenia"
 
-#: data/onlineaccounts.metainfo.xml.in:54
-#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:47
+msgid "Update Mail and Tasks icons"
+msgstr "Aktualizacja ikon Poczty i Zadań"
+
+#: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr "Nowe funkcje:"
 
-#: data/onlineaccounts.metainfo.xml.in:56
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
 msgstr "Dodano wsparcie offline dla kont CalDAV"
 
-#: data/onlineaccounts.metainfo.xml.in:65
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
 msgstr "Wybieranie okresu odświeżania dla IMAP"
 
-#: data/onlineaccounts.metainfo.xml.in:78
-msgid "Edit saved CalDAV accounts"
-msgstr "Edycja zapisanych kont CalDAV"
+#~ msgid "Edit saved CalDAV accounts"
+#~ msgstr "Edycja zapisanych kont CalDAV"
 
-#: data/onlineaccounts.metainfo.xml.in:80
-msgid "Fixes:"
-msgstr "Poprawki:"
+#~ msgid "Fixes:"
+#~ msgstr "Poprawki:"
 
-#: data/onlineaccounts.metainfo.xml.in:82
-msgid "Dim window when creating a new IMAP account"
-msgstr "Przygaś okno przy tworzeniu nowego konta IMAP"
+#~ msgid "Dim window when creating a new IMAP account"
+#~ msgstr "Przygaś okno przy tworzeniu nowego konta IMAP"
 
 #~ msgid "Make sure the refresh interval for an IMAP account is set"
 #~ msgstr "Upewniono się, że okresowe odświeżanie dla kont IMAP jest ustawione"

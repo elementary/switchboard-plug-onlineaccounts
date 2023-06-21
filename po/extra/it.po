@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:22+0000\n"
+"POT-Creation-Date: 2023-05-30 22:26+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -33,46 +33,37 @@ msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:84
+#: data/onlineaccounts.metainfo.xml.in:58
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:34
-msgid "Update Mail and Tasks icons"
+msgid "Fix freeze when an IMAP server sends no response"
 msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:69
-#: data/onlineaccounts.metainfo.xml.in:86
+#: data/onlineaccounts.metainfo.xml.in:48
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Traduzioni aggiornate"
 
-#: data/onlineaccounts.metainfo.xml.in:54
-#: data/onlineaccounts.metainfo.xml.in:63
+#: data/onlineaccounts.metainfo.xml.in:47
+msgid "Update Mail and Tasks icons"
+msgstr ""
+
+#: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
 msgid "New features:"
 msgstr ""
 
-#: data/onlineaccounts.metainfo.xml.in:56
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
 msgstr ""
 
-#: data/onlineaccounts.metainfo.xml.in:65
-msgid "Choose refresh rate for IMAP"
-msgstr ""
-
 #: data/onlineaccounts.metainfo.xml.in:78
-msgid "Edit saved CalDAV accounts"
-msgstr ""
-
-#: data/onlineaccounts.metainfo.xml.in:80
-msgid "Fixes:"
-msgstr ""
-
-#: data/onlineaccounts.metainfo.xml.in:82
-msgid "Dim window when creating a new IMAP account"
+msgid "Choose refresh rate for IMAP"
 msgstr ""
 
 #, fuzzy
