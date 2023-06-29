@@ -1,3 +1,9 @@
+switchboard-plug-onlineaccounts (6.5.3) jammy; urgency=medium
+
+  * New upstream release
+
+ -- Danielle Foré <danielle@elementary.io>  Thu, 29 Jun 2023 11:22:10 -0700
+
 switchboard-plug-onlineaccounts (6.5.2) jammy; urgency=medium
 
   * New upstream release
