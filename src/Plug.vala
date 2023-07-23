@@ -62,6 +62,7 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Calendars")), "");
         search_results.set ("%s → %s".printf (display_name, _("IMAP")), "");
         search_results.set ("%s → %s".printf (display_name, _("Mail")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Settings Sync")), "");
         return search_results;
     }
 }
