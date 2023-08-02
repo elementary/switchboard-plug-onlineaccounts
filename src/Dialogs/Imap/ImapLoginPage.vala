@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
+public class OnlineAccounts.ImapLoginPage : Gtk.Box {
     public signal void cancel ();
 
     public string display_name { get; set; }
@@ -75,27 +75,33 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
         };
         display_name_hint_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
+            width_request = 86
+        };
 
         next_button = new Gtk.Button.with_label (_("Next")) {
             can_default = true,
+            width_request = 86,
             sensitive = false
         };
         next_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            layout_style = Gtk.ButtonBoxStyle.END,
+        var action_area = new Gtk.Box (HORIZONTAL, 6) {
             margin_top = 24,
-            spacing = 6,
-            valign = Gtk.Align.END,
+            valign = END,
+            halign = END,
+            homogeneous = true,
             vexpand = true
         };
         action_area.add (cancel_button);
         action_area.add (next_button);
 
-        margin = 12;
-        orientation = Gtk.Orientation.VERTICAL;
-        row_spacing = 6;
+        margin_start = 12;
+        margin_end = 12;
+        margin_top = 12;
+        margin_bottom = 12;
+        orientation = VERTICAL;
+        spacing = 6;
         add (real_name_label);
         add (real_name_entry);
         add (email_label);
@@ -107,31 +113,27 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Grid {
         add (display_name_hint_label);
         add (action_area);
 
-        bind_property ("email", email_entry, "text", GLib.BindingFlags.DEFAULT);
+        bind_property ("email", email_entry, "text", BIDIRECTIONAL);
         email_entry.changed.connect (() => {
             display_name_entry.text = email_entry.text;
-            email = email_entry.text;
             set_button_sensitivity ();
         });
 
-        bind_property ("real_name", real_name_entry, "text", GLib.BindingFlags.DEFAULT);
+        bind_property ("real-name", real_name_entry, "text", BIDIRECTIONAL);
         real_name_entry.changed.connect (() => {
             real_name_entry.is_valid = real_name_entry.text.length > 0;
-            real_name = real_name_entry.text;
             set_button_sensitivity ();
         });
 
-        bind_property ("display_name", display_name_entry, "text", GLib.BindingFlags.DEFAULT);
+        bind_property ("display-name", display_name_entry, "text", BIDIRECTIONAL);
         display_name_entry.changed.connect (() => {
             display_name_entry.is_valid = display_name_entry.text.length > 0;
-            display_name = display_name_entry.text;
             set_button_sensitivity ();
         });
 
-        bind_property ("password", password_entry, "text", GLib.BindingFlags.DEFAULT);
+        bind_property ("password", password_entry, "text", BIDIRECTIONAL);
         password_entry.changed.connect (() => {
             password_entry.is_valid = password_entry.text.length > 0;
-            password = password_entry.text;
             set_button_sensitivity ();
         });
 

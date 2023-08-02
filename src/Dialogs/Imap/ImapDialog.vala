@@ -147,8 +147,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_credentials.attach (smtp_password_label, 0, 1);
         smtp_credentials.attach (smtp_password_entry, 1, 1);
 
-        var smtp_revealer = new Gtk.Revealer ();
-        smtp_revealer.add (smtp_credentials);
+        var smtp_revealer = new Gtk.Revealer () {
+            child = smtp_credentials
+        };
 
         var smtp_url_label = new Gtk.Label (_("Server URL:")) {
             xalign = 1
@@ -199,56 +200,60 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_sizegroup.add_widget (smtp_encryption_label);
         smtp_sizegroup.add_widget (smtp_port_label);
 
-        var back_button = new Gtk.Button.with_label (_("Back"));
+        var back_button = new Gtk.Button.with_label (_("Back")) {
+            width_request = 86
+        };
 
         save_button = new Gtk.Button.with_label (_("Log In")) {
             can_default = true,
+            width_request = 86,
             sensitive = false
         };
         save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            layout_style = Gtk.ButtonBoxStyle.END,
-            spacing = 6,
-            valign = Gtk.Align.END,
+        var action_area = new Gtk.Box (HORIZONTAL, 6) {
+            valign = END,
+            halign = END,
+            homogeneous = true,
             vexpand = true
         };
         action_area.add (back_button);
         action_area.add (save_button);
 
-        var main_grid = new Gtk.Grid () {
-            margin = 12,
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 24
+        var main_box = new Gtk.Box (VERTICAL, 24) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        main_grid.add (imap_server_grid);
-        main_grid.add (smtp_server_grid);
-        main_grid.add (action_area);
+        main_box.add (imap_server_grid);
+        main_box.add (smtp_server_grid);
+        main_box.add (action_area);
 
         var deck = new Hdy.Deck () {
             can_swipe_back = true,
-            expand = true
+            hexpand = true,
+            vexpand = true
         };
         deck.add (login_page);
-        deck.add (main_grid);
+        deck.add (main_box);
         deck.add (save_page);
 
-        var window_handle = new Hdy.WindowHandle ();
-        window_handle.add (deck);
+        var window_handle = new Hdy.WindowHandle () {
+            child = deck
+        };
 
-        default_height = 400;
-        default_width = 300;
-        window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+        default_height = 475;
+        default_width = 350;
         modal = true;
-        type_hint = Gdk.WindowTypeHint.DIALOG;
-        add (window_handle);
+        child = window_handle;
 
         login_page.next_button.has_default = true;
 
         login_page.cancel.connect (destroy);
 
         login_page.next_button.clicked.connect (() => {
-            deck.visible_child = main_grid;
+            deck.visible_child = main_box;
             save_button.has_default = true;
         });
 

@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.MainView : Gtk.Grid {
+public class OnlineAccounts.MainView : Gtk.Box {
     private static AccountsModel accountsmodel;
 
     static construct {
@@ -39,9 +39,10 @@ public class OnlineAccounts.MainView : Gtk.Grid {
 
         var scroll = new Gtk.ScrolledWindow (null, null) {
             hscrollbar_policy = Gtk.PolicyType.NEVER,
-            expand = true
+            hexpand = true,
+            vexpand = true,
+            child = listbox
         };
-        scroll.add (listbox);
 
         var caldav_menuitem = new AccountMenuItem (
             "x-office-calendar",
@@ -55,17 +56,21 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             _("Mail")
         );
 
-        var add_acount_grid = new Gtk.Grid () {
+        var add_acount_box = new Gtk.Box (VERTICAL, 0) {
             margin_top = 3,
-            margin_bottom = 3,
-            orientation = Gtk.Orientation.VERTICAL
+            margin_bottom = 3
         };
-        add_acount_grid.add (caldav_menuitem);
-        add_acount_grid.add (imap_menuitem);
-        add_acount_grid.show_all ();
+        add_acount_box.add (caldav_menuitem);
+        add_acount_box.add (imap_menuitem);
+        add_acount_box.show_all ();
 
-        var add_account_popover = new Gtk.Popover (null);
-        add_account_popover.add (add_acount_grid);
+        var add_account_popover = new Gtk.Popover (null) {
+            child = add_acount_box
+        };
+
+        var add_button_content = new Gtk.Box (HORIZONTAL, 3);
+        add_button_content.add (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+        add_button_content.add (new Gtk.Label (_("Add Account…")));
 
         var add_button = new Gtk.MenuButton () {
             always_show_image = true,
@@ -77,34 +82,37 @@ public class OnlineAccounts.MainView : Gtk.Grid {
 
         var action_bar = new Gtk.ActionBar ();
         action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        action_bar.add (add_button);
+        action_bar.pack_start (add_button);
 
         var grid = new Gtk.Grid ();
         grid.attach (scroll, 0, 0);
         grid.attach (action_bar, 0, 1);
 
         var frame = new Gtk.Frame (null) {
-            margin = 12
+            margin_start = 12,
+            margin_end = 12,
+            margin_top = 12,
+            margin_bottom = 12,
+            child = grid
         };
-        frame.add (grid);
 
         add (frame);
         show_all ();
 
         caldav_menuitem.clicked.connect (() => {
+            add_account_popover.popdown ();
             var caldav_dialog = new CaldavDialog () {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             caldav_dialog.show_all ();
-            add_account_popover.popdown ();
         });
 
         imap_menuitem.clicked.connect (() => {
+            add_account_popover.popdown ();
             var imap_dialog = new ImapDialog () {
                 transient_for = (Gtk.Window) get_toplevel ()
             };
             imap_dialog.show_all ();
-            add_account_popover.popdown ();
         });
     }
 
@@ -146,7 +154,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                 "webdav" == ((E.SourceCollection) e_source.get_extension (E.SOURCE_EXTENSION_COLLECTION)).backend_name
             )
         ) {
-            edit_button = new Gtk.Button.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU) {
+            edit_button = new Gtk.Button.from_icon_name ("edit-symbolic") {
                 tooltip_text = _("Edit this account")
             };
             edit_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
@@ -154,7 +162,10 @@ public class OnlineAccounts.MainView : Gtk.Grid {
 
         var grid = new Gtk.Grid () {
             column_spacing = 6,
-            margin = 6
+            margin_top = 6,
+            margin_bottom = 6,
+            margin_start = 6,
+            margin_end = 6
         };
 
         grid.attach (image, 0, 0);
@@ -182,11 +193,15 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             var accept_button = (Gtk.Button) message_dialog.add_button (_("Remove Account"), Gtk.ResponseType.ACCEPT);
             accept_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-            if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-                e_source.remove.begin (null);
-            }
+            message_dialog.response.connect ((res) => {
+                if (res == Gtk.ResponseType.ACCEPT) {
+                    e_source.remove.begin (null);
+                }
 
-            message_dialog.destroy ();
+                message_dialog.destroy ();
+            });
+
+            message_dialog.present ();
         });
 
         if (edit_button != null) {
@@ -212,8 +227,8 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                                 transient_for = (Gtk.Window) get_toplevel ()
                             };
                             error_dialog.show_error_details (e.message);
-                            error_dialog.run ();
-                            error_dialog.destroy ();
+                            error_dialog.response.connect (error_dialog.destroy);
+                            error_dialog.present ();
                         }
                     });
 
@@ -241,8 +256,8 @@ public class OnlineAccounts.MainView : Gtk.Grid {
                                     transient_for = (Gtk.Window) get_toplevel ()
                                 };
                                 error_dialog.show_error_details (e.message);
-                                error_dialog.run ();
-                                error_dialog.destroy ();
+                                error_dialog.response.connect (error_dialog.destroy);
+                                error_dialog.present ();
                             }
                         });
                     }
