@@ -113,7 +113,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
     public void show_busy (GLib.Cancellable cancellable) {
         this.cancellable = cancellable;
         stack.set_visible_child_name ("busy");
-        // close_button.has_default = true;
+        close_button.has_default = true;
     }
 
     public void show_success () {

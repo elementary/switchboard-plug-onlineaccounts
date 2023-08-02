@@ -73,9 +73,7 @@ public class OnlineAccounts.MainView : Gtk.Box {
         add_button_content.add (new Gtk.Label (_("Add Account…")));
 
         var add_button = new Gtk.MenuButton () {
-            always_show_image = true,
-            image = new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR),
-            label = _("Add Account…"),
+            child = add_button_content,
             popover = add_account_popover
         };
         add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
