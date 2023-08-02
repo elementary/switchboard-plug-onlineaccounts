@@ -24,9 +24,8 @@ shared_module(
         gobject_dep,
         granite_dep,
         gtk_dep,
-        handy_dep,
+        adw_dep,
         edataserver_dep,
-        edataserverui_dep,
         switchboard_dep,
         ecal_vapi
     ],

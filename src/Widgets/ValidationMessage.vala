@@ -17,8 +17,8 @@
 * Boston, MA 02110-1301 USA
 */
 
-private class ValidationMessage : Gtk.Revealer {
-    public Gtk.Label label_widget;
+private class ValidationMessage : Gtk.Box {
+    public Gtk.Label label_widget { get; construct; }
     public string label { get; construct set; }
 
     public ValidationMessage (string label) {
@@ -33,10 +33,14 @@ private class ValidationMessage : Gtk.Revealer {
             wrap = true,
             xalign = 1
         };
-        label_widget.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        label_widget.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        transition_type = Gtk.RevealerTransitionType.CROSSFADE;
-        add (label_widget);
+        var revealer = new Gtk.Revealer () {
+            child = label_widget,
+            transition_type = CROSSFADE
+        };
+
+        append (revealer);
 
         bind_property ("label", label_widget, "label");
     }

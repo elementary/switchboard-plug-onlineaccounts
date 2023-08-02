@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.ImapDialog : Hdy.Window {
+public class OnlineAccounts.ImapDialog : Gtk.Window {
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry imap_server_entry;
     private Granite.ValidatedEntry imap_username_entry;
@@ -147,8 +147,9 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_credentials.attach (smtp_password_label, 0, 1);
         smtp_credentials.attach (smtp_password_entry, 1, 1);
 
-        var smtp_revealer = new Gtk.Revealer ();
-        smtp_revealer.add (smtp_credentials);
+        var smtp_revealer = new Gtk.Revealer () {
+            child = smtp_credentials
+        };
 
         var smtp_url_label = new Gtk.Label (_("Server URL:")) {
             xalign = 1
@@ -199,69 +200,74 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
         smtp_sizegroup.add_widget (smtp_encryption_label);
         smtp_sizegroup.add_widget (smtp_port_label);
 
-        var back_button = new Gtk.Button.with_label (_("Back"));
+        var back_button = new Gtk.Button.with_label (_("Back")) {
+            width_request = 86
+        };
 
         save_button = new Gtk.Button.with_label (_("Log In")) {
-            can_default = true,
+            width_request = 86,
             sensitive = false
         };
-        save_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            layout_style = Gtk.ButtonBoxStyle.END,
-            spacing = 6,
-            valign = Gtk.Align.END,
+        var action_area = new Gtk.Box (HORIZONTAL, 6) {
+            valign = END,
+            halign = END,
+            homogeneous = true,
             vexpand = true
         };
-        action_area.add (back_button);
-        action_area.add (save_button);
+        action_area.append (back_button);
+        action_area.append (save_button);
 
-        var main_grid = new Gtk.Grid () {
-            margin = 12,
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 24
+        var main_box = new Gtk.Box (VERTICAL, 24) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        main_grid.add (imap_server_grid);
-        main_grid.add (smtp_server_grid);
-        main_grid.add (action_area);
+        main_box.append (imap_server_grid);
+        main_box.append (smtp_server_grid);
+        main_box.append (action_area);
 
-        var deck = new Hdy.Deck () {
-            can_swipe_back = true,
-            expand = true
+        var leaflet = new Adw.Leaflet () {
+            can_unfold = false,
+            can_navigate_back = true,
+            hexpand = true,
+            vexpand = true
         };
-        deck.add (login_page);
-        deck.add (main_grid);
-        deck.add (save_page);
+        leaflet.append (login_page);
+        leaflet.append (main_box);
+        leaflet.append (save_page);
 
-        var window_handle = new Hdy.WindowHandle ();
-        window_handle.add (deck);
+        var window_handle = new Gtk.WindowHandle () {
+            child = leaflet
+        };
 
-        default_height = 400;
-        default_width = 300;
-        window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
+        default_height = 475;
+        default_width = 350;
         modal = true;
-        type_hint = Gdk.WindowTypeHint.DIALOG;
-        add (window_handle);
+        child = window_handle;
+        titlebar = new Gtk.Grid ();
 
-        login_page.next_button.has_default = true;
+        default_widget = login_page.next_button;
 
         login_page.cancel.connect (destroy);
 
         login_page.next_button.clicked.connect (() => {
-            deck.visible_child = main_grid;
-            save_button.has_default = true;
+            leaflet.visible_child = main_box;
+            default_widget = save_button;
         });
 
         save_page.close.connect (destroy);
 
         save_page.back.connect (() => {
-            deck.navigate (Hdy.NavigationDirection.BACK);
-            save_button.has_default = true;
+            leaflet.navigate (Adw.NavigationDirection.BACK);
+            default_widget = save_button;
         });
 
         back_button.clicked.connect (() => {
-            deck.navigate (Hdy.NavigationDirection.BACK);
-            login_page.next_button.has_default = true;
+            leaflet.navigate (Adw.NavigationDirection.BACK);
+            default_widget = login_page.next_button;
         });
 
         smtp_no_credentials.notify["active"].connect (() => {
@@ -338,7 +344,7 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             }
             cancellable = new GLib.Cancellable ();
 
-            deck.visible_child = save_page;
+            leaflet.visible_child = save_page;
             save_page.show_busy (cancellable);
 
             save_configuration.begin ((obj, res) => {
@@ -352,14 +358,14 @@ public class OnlineAccounts.ImapDialog : Hdy.Window {
             });
         });
 
-        key_release_event.connect ((event_key) => {
-            if (event_key.keyval == Gdk.Key.Escape) {
-                if (cancellable != null) {
-                    cancellable.cancel ();
-                }
-                destroy ();
-            }
-        });
+        // key_release_event.connect ((event_key) => {
+        //     if (event_key.keyval == Gdk.Key.Escape) {
+        //         if (cancellable != null) {
+        //             cancellable.cancel ();
+        //         }
+        //         destroy ();
+        //     }
+        // });
     }
 
     private void set_button_sensitivity () {

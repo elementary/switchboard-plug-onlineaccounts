@@ -18,34 +18,31 @@
 */
 
 public class OnlineAccounts.AccountMenuItem : Gtk.Button {
-    public string icon_name { get; construct; }
+    public string custom_icon_name { get; construct; }
     public string primary_label { get; construct; }
     public string secondary_label { get; construct; }
 
-    public AccountMenuItem (string icon_name, string primary_label, string secondary_label) {
+    public AccountMenuItem (string custom_icon_name, string primary_label, string secondary_label) {
         Object (
-            icon_name: icon_name,
+            custom_icon_name: custom_icon_name,
             primary_label: primary_label,
             secondary_label: secondary_label
         );
-    }
-
-    class construct {
-        set_css_name (Gtk.STYLE_CLASS_MENUITEM);
     }
 
     construct {
         var label = new Gtk.Label (primary_label) {
             halign = Gtk.Align.START
         };
-        label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
         var description = new Gtk.Label (secondary_label) {
             halign = Gtk.Align.START
         };
-        description.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND);
+        var image = new Gtk.Image.from_icon_name (custom_icon_name);
+        image.add_css_class (Granite.STYLE_CLASS_LARGE_ICONS);
 
         var grid = new Gtk.Grid () {
             column_spacing = 6
@@ -54,6 +51,7 @@ public class OnlineAccounts.AccountMenuItem : Gtk.Button {
         grid.attach (label, 1, 0);
         grid.attach (description, 1, 1);
 
-        add (grid);
+        child = grid;
+        add_css_class (Granite.STYLE_CLASS_MENUITEM);
     }
 }

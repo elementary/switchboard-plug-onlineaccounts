@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.CaldavDialog : Hdy.Window {
+public class OnlineAccounts.CaldavDialog : Gtk.Window {
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry url_entry;
     private Granite.ValidatedEntry username_entry;
@@ -29,7 +29,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     private Gtk.Entry password_entry;
     private Gtk.ListBox calendars_list;
     private Gtk.Stack save_configuration_page_stack;
-    private Hdy.Deck deck;
+    private Adw.Leaflet leaflet;
     private ListStore calendars_store;
 
     private E.SourceRegistry? registry = null;
@@ -45,7 +45,7 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         };
 
         var url_message_revealer = new ValidationMessage (_("Invalid URL"));
-        url_message_revealer.label_widget.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
+        url_message_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
         var username_label = new Granite.HeaderLabel (_("User Name"));
         username_entry = new Granite.ValidatedEntry ();
@@ -57,36 +57,40 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             visibility = false
         };
 
-        var login_cancel_button = new Gtk.Button.with_label (_("Cancel"));
+        var login_cancel_button = new Gtk.Button.with_label (_("Cancel")) {
+            width_request = 86
+        };
 
         login_button = new Gtk.Button.with_label (_("Log In")) {
-            can_default = true,
+            width_request = 86,
             sensitive = false
         };
-        login_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        login_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            layout_style = Gtk.ButtonBoxStyle.END,
+        var action_area = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             margin_top = 24,
-            spacing = 6,
-            valign = Gtk.Align.END,
-            vexpand = true
+            halign = END,
+            valign = END,
+            vexpand = true,
+            homogeneous = true
         };
-        action_area.add (login_cancel_button);
-        action_area.add (login_button);
+        action_area.append (login_cancel_button);
+        action_area.append (login_button);
 
-        var login_page = new Gtk.Grid () {
-            orientation = Gtk.Orientation.VERTICAL,
-            margin = 12
+        var login_page = new Gtk.Box (VERTICAL, 0) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        login_page.add (url_label);
-        login_page.add (url_entry);
-        login_page.add (url_message_revealer);
-        login_page.add (username_label);
-        login_page.add (username_entry);
-        login_page.add (password_label);
-        login_page.add (password_entry);
-        login_page.add (action_area);
+        login_page.append (url_label);
+        login_page.append (url_entry);
+        login_page.append (url_message_revealer);
+        login_page.append (username_label);
+        login_page.append (username_entry);
+        login_page.append (password_label);
+        login_page.append (password_entry);
+        login_page.append (action_area);
 
         var display_name_label = new Granite.HeaderLabel (_("Account Display Name"));
 
@@ -97,124 +101,134 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         var display_name_hint_label = new Gtk.Label (_("Pick a name like “Work” or “Personal” for the account.")) {
             hexpand = true,
-            xalign = 0
+            xalign = 0,
+            wrap = true
         };
-        display_name_hint_label.set_line_wrap (true);
-        display_name_hint_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        display_name_hint_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         calendars_store = new ListStore (typeof (E.Source));
 
         calendars_list = new Gtk.ListBox () {
-            expand = true
+            hexpand = true,
+            vexpand = true
         };
         calendars_list.set_header_func (header_func);
         calendars_list.set_sort_func (sort_func);
         calendars_list.bind_model (calendars_store, create_item);
 
-        var calendars_scroll_window = new Gtk.ScrolledWindow (null, null) {
-            hscrollbar_policy = Gtk.PolicyType.NEVER
+        var calendars_scroll_window = new Gtk.ScrolledWindow () {
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            child = calendars_list
         };
-        calendars_scroll_window.add (calendars_list);
 
         var calendar_list_frame = new Gtk.Frame (null) {
-            margin_top = 18
+            margin_top = 18,
+            child = calendars_scroll_window
         };
-        calendar_list_frame.add (calendars_scroll_window);
 
-        var calendar_page_back_button = new Gtk.Button.with_label (_("Back"));
+        var calendar_page_back_button = new Gtk.Button.with_label (_("Back")) {
+            width_request = 86
+        };
 
         save_configuration_button = new Gtk.Button.with_label (_("Save")) {
-            can_default = true
+            width_request = 86
         };
-        save_configuration_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        save_configuration_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var calendar_page_action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            layout_style = Gtk.ButtonBoxStyle.END,
+        var calendar_page_action_area = new Gtk.Box (HORIZONTAL, 6) {
             margin_top = 24,
-            spacing = 6
+            spacing = 6,
+            halign = END,
+            homogeneous = true
         };
-        calendar_page_action_area.add (calendar_page_back_button);
-        calendar_page_action_area.add (save_configuration_button);
+        calendar_page_action_area.append (calendar_page_back_button);
+        calendar_page_action_area.append (save_configuration_button);
 
-        var calendars_page = new Gtk.Grid () {
-            margin = 12,
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 6
+        var calendars_page = new Gtk.Box (VERTICAL, 6) {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        calendars_page.add (display_name_label);
-        calendars_page.add (display_name_entry);
-        calendars_page.add (display_name_hint_label);
-        calendars_page.add (calendar_list_frame);
-        calendars_page.add (calendar_page_action_area);
+        calendars_page.append (display_name_label);
+        calendars_page.append (display_name_entry);
+        calendars_page.append (display_name_hint_label);
+        calendars_page.append (calendar_list_frame);
+        calendars_page.append (calendar_page_action_area);
 
         var save_configuration_busy_label = new Gtk.Label (_("Saving the configuration…"));
 
         var save_configuration_busy_spinner = new Gtk.Spinner ();
         save_configuration_busy_spinner.start ();
 
-        var save_configuration_busy_grid = new Gtk.Grid () {
-            column_spacing = 6
+        var save_configuration_busy_box = new Gtk.Box (HORIZONTAL, 6);
+        save_configuration_busy_box.append (save_configuration_busy_label);
+        save_configuration_busy_box.append (save_configuration_busy_spinner);
+
+        var save_configuration_success_view = new Granite.Placeholder (_("All done")) {
+            description = _("CalDAV account saved."),
+            icon = new ThemedIcon ("process-completed")
         };
-        save_configuration_busy_grid.add (save_configuration_busy_label);
-        save_configuration_busy_grid.add (save_configuration_busy_spinner);
+        save_configuration_success_view.remove_css_class (Granite.STYLE_CLASS_VIEW);
 
-        var save_configuration_success_view = new Granite.Widgets.AlertView (
-            _("All done"),
-            _("CalDAV account saved."),
-            "process-completed"
-        );
-        save_configuration_success_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-        save_configuration_success_view.show_all ();
-
-        var save_configuration_back_button = new Gtk.Button.with_label (_("Back"));
+        var save_configuration_back_button = new Gtk.Button.with_label (_("Back")) {
+            width_request = 86
+        };
 
         save_configuration_close_button = new Gtk.Button.with_label (_("Close")) {
-            can_default = true
+            width_request = 86
         };
-        save_configuration_close_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        save_configuration_close_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var save_configuration_page_action_area = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            layout_style = Gtk.ButtonBoxStyle.END,
+        var save_configuration_page_action_area = new Gtk.Box (HORIZONTAL, 6) {
             margin_top = 24,
-            spacing = 6
+            halign = END,
+            homogeneous = true
         };
-        save_configuration_page_action_area.add (save_configuration_back_button);
-        save_configuration_page_action_area.add (save_configuration_close_button);
+        save_configuration_page_action_area.append (save_configuration_back_button);
+        save_configuration_page_action_area.append (save_configuration_close_button);
 
         save_configuration_page_stack = new Gtk.Stack () {
-            expand = true,
-            homogeneous = false,
+            hexpand = true,
+            vexpand = true,
+            hhomogeneous = false,
+            vhomogeneous = false,
             halign = Gtk.Align.CENTER,
             valign = Gtk.Align.CENTER
         };
-        save_configuration_page_stack.add_named (save_configuration_busy_grid, "busy");
+        save_configuration_page_stack.add_named (save_configuration_busy_box, "busy");
         save_configuration_page_stack.add_named (save_configuration_success_view, "success");
 
         var save_configuration_page = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
-            margin = 12
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12
         };
-        save_configuration_page.add (save_configuration_page_stack);
-        save_configuration_page.add (save_configuration_page_action_area);
+        save_configuration_page.append (save_configuration_page_stack);
+        save_configuration_page.append (save_configuration_page_action_area);
 
-        deck = new Hdy.Deck () {
-            can_swipe_back = true,
-            expand = true
+        leaflet = new Adw.Leaflet () {
+            can_navigate_back = true,
+            hexpand = true,
+            vexpand = true,
+            can_unfold = false
         };
-        deck.add (login_page);
-        deck.add (calendars_page);
-        deck.add (save_configuration_page);
+        leaflet.append (login_page);
+        leaflet.append (calendars_page);
+        leaflet.append (save_configuration_page);
 
-        var window_handle = new Hdy.WindowHandle ();
-        window_handle.add (deck);
+        var window_handle = new Gtk.WindowHandle () {
+            child = leaflet
+        };
 
         default_height = 400;
         default_width = 300;
-        window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
         modal = true;
-        type_hint = Gdk.WindowTypeHint.DIALOG;
-        add (window_handle);
+        child = window_handle;
+        titlebar = new Gtk.Grid ();
 
-        login_button.has_default = true;
+        default_widget = login_button;
 
         login_cancel_button.clicked.connect (() => {
             destroy ();
@@ -222,17 +236,17 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         login_button.clicked.connect (() => {
             find_sources.begin ();
-            deck.visible_child = calendars_page;
-            save_configuration_button.has_default = true;
+            leaflet.visible_child = calendars_page;
+            default_widget = save_configuration_button;
         });
 
         save_configuration_button.clicked.connect (() => {
-            deck.visible_child = save_configuration_page;
+            leaflet.visible_child = save_configuration_page;
             save_configuration_close_button.sensitive = false;
             save_configuration_page_stack.set_visible_child_name ("busy");
 
             save_configuration.begin ((obj, res) => {
-                save_configuration_close_button.has_default = true;
+                default_widget = save_configuration_button;
                 save_configuration_close_button.sensitive = true;
 
                 try {
@@ -244,12 +258,10 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
                     if (error_view != null) {
                         save_configuration_page_stack.remove (error_view);
                     }
-                    error_view = new Granite.Widgets.AlertView (
-                        _("Could not save configuration"),
-                        e.message,
-                        "dialog-error"
-                    );
-                    error_view.show_all ();
+                    error_view = new Granite.Placeholder (_("Could not save configuration")) {
+                        description = e.message,
+                        icon = new ThemedIcon ("dialog-error")
+                    };
 
                     save_configuration_page_stack.add_named (error_view, "error");
                     save_configuration_page_stack.set_visible_child_name ("error");
@@ -263,22 +275,22 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         calendar_page_back_button.clicked.connect (() => {
             back_button_clicked ();
-            login_button.has_default = true;
+            default_widget = login_button;
         });
 
         save_configuration_back_button.clicked.connect (() => {
             back_button_clicked ();
-            save_configuration_button.has_default = true;
+            default_widget = save_configuration_button;
         });
 
         url_entry.changed.connect (() => {
             if (url_entry.text != null && url_entry.text != "") {
                 var is_valid_url = is_valid_url (url_entry.text);
                 url_entry.is_valid = is_valid_url;
-                url_message_revealer.reveal_child = !is_valid_url;
+                // url_message_revealer.reveal_child = !is_valid_url;
             } else {
                 url_entry.is_valid = false;
-                url_message_revealer.reveal_child = false;
+                // url_message_revealer.reveal_child = false;
             }
 
             validate_form ();
@@ -291,21 +303,21 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             validate_form ();
         });
 
-        key_release_event.connect ((event_key) => {
-            if (event_key.keyval == Gdk.Key.Escape) {
-                if (cancellable != null) {
-                    cancellable.cancel ();
-                }
-                destroy ();
-            }
-        });
+        // key_release_event.connect ((event_key) => {
+        //     if (event_key.keyval == Gdk.Key.Escape) {
+        //         if (cancellable != null) {
+        //             cancellable.cancel ();
+        //         }
+        //         destroy ();
+        //     }
+        // });
     }
 
     private void back_button_clicked () {
         if (cancellable != null) {
             cancellable.cancel ();
         }
-        deck.navigate (Hdy.NavigationDirection.BACK);
+        leaflet.navigate (Adw.NavigationDirection.BACK);
     }
 
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
@@ -359,7 +371,6 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
     [ CCode ( instance_pos = 1.9 ) ]
     public Gtk.Widget create_item (GLib.Object item) {
         var row = new SourceRow ((E.Source) item);
-        row.show_all ();
 
         return row;
     }
@@ -377,14 +388,12 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         var spinner = new Gtk.Spinner ();
         spinner.start ();
 
-        var placeholder = new Gtk.Grid () {
-            column_spacing = 6,
+        var placeholder = new Gtk.Box (HORIZONTAL, 6) {
             halign = Gtk.Align.CENTER,
             valign = Gtk.Align.CENTER
         };
-        placeholder.add (placeholder_label);
-        placeholder.add (spinner);
-        placeholder.show_all ();
+        placeholder.append (placeholder_label);
+        placeholder.append (spinner);
 
         calendars_list.set_placeholder (placeholder);
         calendars_store.remove_all ();
@@ -422,13 +431,11 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
             });
 
         } catch (GLib.Error e) {
-            var error_placeholder = new Granite.Widgets.AlertView (
-                _("Could not fetch calendars"),
-                e.message,
-                "dialog-error"
-            );
+            var error_placeholder = new Granite.Placeholder (_("Could not fetch calendars")) {
+                description = e.message,
+                icon = new ThemedIcon ("dialog-error")
+            };
             Idle.add (() => {
-                error_placeholder.show_all ();
                 calendars_list.set_placeholder (error_placeholder);
                 return Source.REMOVE;
             });
@@ -722,15 +729,17 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
 
         construct {
             var name_entry = new Gtk.Label (source.display_name);
-            name_entry.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
+            name_entry.add_css_class (Granite.STYLE_CLASS_ACCENT);
 
-            var grid = new Gtk.Grid () {
-                column_spacing = 6,
-                margin = 6
+            var box = new Gtk.Box (HORIZONTAL, 6) {
+                margin_top = 6,
+                margin_bottom = 6,
+                margin_start = 6,
+                margin_end = 6
             };
-            grid.add (name_entry);
+            box.append (name_entry);
 
-            add (grid);
+            child = box;
 
             unowned var webdav_source = (E.SourceWebdav) source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
 
@@ -738,16 +747,16 @@ public class OnlineAccounts.CaldavDialog : Hdy.Window {
         }
 
         private void style_calendar_color (Gtk.Widget widget, string color) {
-            var css_color = "@define-color accent_color %s;".printf (color.slice (0, 7));
+            // var css_color = "@define-color accent_color %s;".printf (color.slice (0, 7));
 
-            var style_provider = new Gtk.CssProvider ();
+            // var style_provider = new Gtk.CssProvider ();
 
-            try {
-                style_provider.load_from_data (css_color, css_color.length);
-                widget.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-            } catch (Error e) {
-                warning ("Could not create CSS Provider: %s\nStylesheet:\n%s", e.message, css_color);
-            }
+            // try {
+            //     style_provider.load_from_data (css_color, css_color.length);
+            //     widget.get_style_context ().add_provider (style_provider, Granite.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            // } catch (Error e) {
+            //     warning ("Could not create CSS Provider: %s\nStylesheet:\n%s", e.message, css_color);
+            // }
         }
     }
 }
