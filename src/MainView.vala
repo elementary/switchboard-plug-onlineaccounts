@@ -157,8 +157,6 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             warning ("Failed to create account: %s", e.message);
             return;
         }
-
-        warning ("GOT ACCOUNT %s", object.account.id);
     }
 
     private Gtk.Widget create_account_row (GLib.Object object) {
