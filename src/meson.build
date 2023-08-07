@@ -28,7 +28,8 @@ shared_module(
         edataserver_dep,
         edataserverui_dep,
         switchboard_dep,
-        ecal_vapi
+        ecal_vapi,
+        goa_dep
     ],
     install: true,
     install_dir : join_paths(switchboard_plugsdir, 'network')
