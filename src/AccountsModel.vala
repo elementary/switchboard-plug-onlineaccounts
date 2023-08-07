@@ -23,6 +23,7 @@ public class OnlineAccounts.AccountsModel : Object {
 
     private E.SourceRegistryWatcher collection_extension_watcher;
     private E.SourceRegistryWatcher mail_account_extension_watcher;
+    private E.SourceRegistryWatcher goa_extension_watcher;
 
     construct {
         accounts_liststore = new ListStore (typeof (E.Source));
@@ -43,6 +44,11 @@ public class OnlineAccounts.AccountsModel : Object {
             mail_account_extension_watcher.appeared.connect (add_esource);
             mail_account_extension_watcher.disappeared.connect (remove_esource);
             mail_account_extension_watcher.reclaim ();
+
+            goa_extension_watcher = new E.SourceRegistryWatcher (registry, E.SOURCE_EXTENSION_GOA);
+            goa_extension_watcher.appeared.connect (add_esource);
+            goa_extension_watcher.disappeared.connect (remove_esource);
+            goa_extension_watcher.reclaim ();
         } catch (Error e) {
             critical (e.message);
         }

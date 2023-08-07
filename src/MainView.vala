@@ -55,17 +55,24 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             _("Mail")
         );
 
-        var add_acount_grid = new Gtk.Grid () {
+        var google_menuitem = new AccountMenuItem (
+            "onlineaccounts-google",
+            _("Google"),
+            _("Mail, Calendars, Tasks, Contacts and Files")
+        );
+
+        var add_account_grid = new Gtk.Grid () {
             margin_top = 3,
             margin_bottom = 3,
             orientation = Gtk.Orientation.VERTICAL
         };
-        add_acount_grid.add (caldav_menuitem);
-        add_acount_grid.add (imap_menuitem);
-        add_acount_grid.show_all ();
+        add_account_grid.add (caldav_menuitem);
+        add_account_grid.add (imap_menuitem);
+        add_account_grid.add (google_menuitem);
+        add_account_grid.show_all ();
 
         var add_account_popover = new Gtk.Popover (null);
-        add_account_popover.add (add_acount_grid);
+        add_account_popover.add (add_account_grid);
 
         var add_button = new Gtk.MenuButton () {
             always_show_image = true,
@@ -106,6 +113,50 @@ public class OnlineAccounts.MainView : Gtk.Grid {
             imap_dialog.show_all ();
             add_account_popover.popdown ();
         });
+
+        google_menuitem.clicked.connect (() => {
+            create_goa_google_dialog ();
+            add_account_popover.popdown ();
+        });
+    }
+
+    private void create_goa_google_dialog () {
+        Goa.Provider.get_all.begin ((obj, res) => {
+            GLib.List<Goa.Provider> providers;
+            try {
+                Goa.Provider.get_all.end (res, out providers);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
+
+        Goa.Client client;
+        try {
+            client = new Goa.Client.sync (null);
+        } catch (Error e) {
+            warning ("Error retrieving online accounts client: %s", e.message);
+            return;
+        }
+
+        var provider = Goa.Provider.get_for_provider_type ("google");
+        if (provider == null) {
+            warning ("Provider type not supported (google)");
+            return;
+        }
+
+        var dialog = new Gtk.Dialog () {
+            default_width = 500,
+            default_height = 350,
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        Goa.Object object;
+        try {
+            object = provider.add_account (client, dialog, dialog.get_content_area ());
+        } catch (Error e) {
+            warning ("Failed to create account: %s", e.message);
+            return;
+        }
     }
 
     private Gtk.Widget create_account_row (GLib.Object object) {
