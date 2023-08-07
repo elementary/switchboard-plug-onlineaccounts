@@ -133,7 +133,7 @@ public class OnlineAccounts.MainView : Gtk.Grid {
         Goa.Client client;
         try {
             client = new Goa.Client.sync (null);
-        } catch (Error e){
+        } catch (Error e) {
             warning ("Error retrieving online accounts client: %s", e.message);
             return;
         }
