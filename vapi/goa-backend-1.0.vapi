@@ -1,3 +1,6 @@
+// goa-backend doesn't provide vapi file
+// so this thing is handmade from .h files :)
+
 [CCode (cprefix = "Goa", gir_namespace = "Goa", gir_version = "1.0", lower_case_cprefix = "goa_")]
 namespace Goa {
     [CCode (cheader_filename = "goabackend/goabackend.h", type_id = "goa_provider_get_type ()")]
