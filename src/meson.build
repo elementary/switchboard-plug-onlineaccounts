@@ -26,7 +26,6 @@ shared_module(
         gtk_dep,
         handy_dep,
         edataserver_dep,
-        edataserverui_dep,
         switchboard_dep,
         ecal_vapi
     ],
