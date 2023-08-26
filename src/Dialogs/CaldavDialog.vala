@@ -446,12 +446,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         E.Source[] e_sources = {};
         GLib.Error? discover_error = null;
 
-#if HAS_EDS_3_40
         source.webdav_discover_sources.begin (
-#else
-        E.webdav_discover_sources.begin (
-            source,
-#endif
         null,
         only_supports,
         credentials,
@@ -462,12 +457,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
             GLib.SList<E.WebDAVDiscoveredSource?> discovered_sources;
             GLib.SList<string> calendar_user_addresses;
             try {
-#if HAS_EDS_3_40
                 source.webdav_discover_sources.end (
-#else
-                E.webdav_discover_sources_finish (
-                    source,
-#endif
                     res,
                     out certificate_pem,
                     out certificate_errors,

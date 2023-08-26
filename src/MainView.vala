@@ -193,7 +193,6 @@ public class OnlineAccounts.MainView : Gtk.Box {
                 if (res == Gtk.ResponseType.ACCEPT) {
                     e_source.remove.begin (null);
                 }
-
                 message_dialog.destroy ();
             });
 
