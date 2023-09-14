@@ -358,14 +358,20 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             });
         });
 
-        // key_release_event.connect ((event_key) => {
-        //     if (event_key.keyval == Gdk.Key.Escape) {
-        //         if (cancellable != null) {
-        //             cancellable.cancel ();
-        //         }
-        //         destroy ();
-        //     }
-        // });
+        var key_controller = new Gtk.EventControllerKey ();
+        ((Gtk.Widget)this).add_controller (key_controller);
+
+        key_controller.key_released.connect ((keyval) => {
+            if (keyval != Gdk.Key.Escape) {
+                return;
+            }
+
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
+
+            destroy ();
+        });
     }
 
     private void set_button_sensitivity () {
