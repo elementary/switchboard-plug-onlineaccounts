@@ -743,16 +743,12 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         }
 
         private void style_calendar_color (Gtk.Widget widget, string color) {
-            // var css_color = "@define-color accent_color %s;".printf (color.slice (0, 7));
+            var css_color = "@define-color accent_color %s;".printf (color.slice (0, 7));
 
-            // var style_provider = new Gtk.CssProvider ();
+            var style_provider = new Gtk.CssProvider ();
 
-            // try {
-            //     style_provider.load_from_data (css_color, css_color.length);
-            //     widget.get_style_context ().add_provider (style_provider, Granite.STYLE_PROVIDER_PRIORITY_APPLICATION);
-            // } catch (Error e) {
-            //     warning ("Could not create CSS Provider: %s\nStylesheet:\n%s", e.message, css_color);
-            // }
+            style_provider.load_from_data ((uint8[]) css_color);
+            widget.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
     }
 }
