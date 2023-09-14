@@ -20,6 +20,7 @@
 private class ValidationMessage : Gtk.Box {
     public Gtk.Label label_widget { get; construct; }
     public string label { get; construct set; }
+    public bool reveal_child { get; set; }
 
     public ValidationMessage (string label) {
         Object (label: label);
@@ -41,6 +42,8 @@ private class ValidationMessage : Gtk.Box {
         };
 
         append (revealer);
+
+        bind_property ("reveal-child", revealer, "reveal-child", BIDIRECTIONAL | SYNC_CREATE);
 
         bind_property ("label", label_widget, "label");
     }

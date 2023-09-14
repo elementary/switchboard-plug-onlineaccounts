@@ -287,10 +287,10 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
             if (url_entry.text != null && url_entry.text != "") {
                 var is_valid_url = is_valid_url (url_entry.text);
                 url_entry.is_valid = is_valid_url;
-                // url_message_revealer.reveal_child = !is_valid_url;
+                url_message_revealer.reveal_child = !is_valid_url;
             } else {
                 url_entry.is_valid = false;
-                // url_message_revealer.reveal_child = false;
+                url_message_revealer.reveal_child = false;
             }
 
             validate_form ();
@@ -303,14 +303,20 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
             validate_form ();
         });
 
-        // key_release_event.connect ((event_key) => {
-        //     if (event_key.keyval == Gdk.Key.Escape) {
-        //         if (cancellable != null) {
-        //             cancellable.cancel ();
-        //         }
-        //         destroy ();
-        //     }
-        // });
+        var key_controller = new Gtk.EventControllerKey ();
+        ((Gtk.Widget)this).add_controller (key_controller);
+
+        key_controller.key_released.connect ((keyval) => {
+            if (keyval != Gdk.Key.Escape) {
+                return;
+            }
+
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
+
+            destroy ();
+        });
     }
 
     private void back_button_clicked () {
