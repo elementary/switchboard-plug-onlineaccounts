@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.settings.onlineaccounts</id>
   <extends>io.elementary.settings</extends>
-  <translation type="gettext">online-accounts-plug</translation>
+  <translation type="gettext">io.elementary.settings.onlineaccounts</translation>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
 
