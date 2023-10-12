@@ -1,4 +1,4 @@
-# Switchboard Online Accounts Plug
+# Online Accounts Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-onlineaccounts/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -7,13 +7,12 @@
 
 You'll need the following dependencies:
 
-    libedataserver-1.2
-    libedataserverui-1.2
+    libadwaita-1-dev
+    libedataserver-1.2 >=3.40
     libglib2.0-dev
-    libgranite-dev >=6.0.0
-    libhandy-1-dev >= 1.0.0
-    libgtk-3-dev
-    libswitchboard-2.0-dev
+    libgranite-7-dev
+    libgtk-4-dev
+    libswitchboard-3-dev
     meson
     valac
 
@@ -23,7 +22,7 @@ Run `meson` to configure the build environment and then `ninja` to build
     cd build
     ninja
 
-To install, use `ninja install`, then execute with `io.elementary.switchboard`
+To install, use `ninja install`, then execute with `io.elementary.settings`
 
     ninja install
-    io.elementary.switchboard
+    io.elementary.settings
