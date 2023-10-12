@@ -26,7 +26,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
 
     private Gtk.Stack stack;
     private Gtk.Button back_button;
-    private Granite.Widgets.AlertView error_alert_view;
+    private Granite.Placeholder error_alert_view;
     private GLib.Cancellable? cancellable = null;
 
     construct {
@@ -36,24 +36,19 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
         busy_spinner.start ();
 
         var busy_box = new Gtk.Box (HORIZONTAL, 6);
-        busy_box.add (busy_label);
-        busy_box.add (busy_spinner);
+        busy_box.append (busy_label);
+        busy_box.append (busy_spinner);
 
-        error_alert_view = new Granite.Widgets.AlertView (
-            _("Could not save the e-mail account"),
-            "",
-            "process-error"
-        );
-        error_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-        error_alert_view.show_all ();
+        error_alert_view = new Granite.Placeholder (_("Could not save the e-mail account")) {
+            icon = new ThemedIcon ("process-error")
+        };
+        error_alert_view.remove_css_class (Granite.STYLE_CLASS_VIEW);
 
-        var success_alert_view = new Granite.Widgets.AlertView (
-            _("Success"),
-            _("E-mail account saved."),
-            "process-completed"
-        );
-        success_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-        success_alert_view.show_all ();
+        var success_alert_view = new Granite.Placeholder (_("Success")) {
+            description = _("E-mail account saved."),
+            icon = new ThemedIcon ("process-completed")
+        };
+        success_alert_view.remove_css_class (Granite.STYLE_CLASS_VIEW);
 
         stack = new Gtk.Stack () {
             hexpand = true,
@@ -74,7 +69,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
         close_button = new Gtk.Button.with_label (_("Close")) {
             width_request = 86
         };
-        close_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        close_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         var action_area = new Gtk.Box (HORIZONTAL, 6) {
             margin_top = 24,
@@ -83,8 +78,8 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
             homogeneous = true,
             vexpand = true
         };
-        action_area.add (back_button);
-        action_area.add (close_button);
+        action_area.append (back_button);
+        action_area.append (close_button);
 
         margin_top = 12;
         margin_bottom = 12;
@@ -92,8 +87,8 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
         margin_end = 12;
         orientation = VERTICAL;
         spacing = 6;
-        add (stack);
-        add (action_area);
+        append (stack);
+        append (action_area);
 
         back_button.clicked.connect (() => {
             if (cancellable != null) {
@@ -113,7 +108,7 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
     public void show_busy (GLib.Cancellable cancellable) {
         this.cancellable = cancellable;
         stack.set_visible_child_name ("busy");
-        close_button.has_default = true;
+        close_button.grab_focus ();
     }
 
     public void show_success () {

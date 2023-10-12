@@ -30,22 +30,19 @@ public class OnlineAccounts.AccountMenuItem : Gtk.Button {
         );
     }
 
-    class construct {
-        set_css_name (Gtk.STYLE_CLASS_MENUITEM);
-    }
-
     construct {
         var label = new Gtk.Label (primary_label) {
             halign = Gtk.Align.START
         };
-        label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
         var description = new Gtk.Label (secondary_label) {
             halign = Gtk.Align.START
         };
-        description.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        var image = new Gtk.Image.from_icon_name (custom_icon_name, Gtk.IconSize.DND);
+        var image = new Gtk.Image.from_icon_name (custom_icon_name);
+        image.add_css_class (Granite.STYLE_CLASS_LARGE_ICONS);
 
         var grid = new Gtk.Grid () {
             column_spacing = 6
@@ -55,5 +52,6 @@ public class OnlineAccounts.AccountMenuItem : Gtk.Button {
         grid.attach (description, 1, 1);
 
         child = grid;
+        add_css_class (Granite.STYLE_CLASS_MENUITEM);
     }
 }

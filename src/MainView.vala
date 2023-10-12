@@ -26,18 +26,16 @@ public class OnlineAccounts.MainView : Gtk.Box {
     }
 
     construct {
-        var welcome = new Granite.Widgets.AlertView (
-            _("Connect Your Online Accounts"),
-            _("Connect online accounts by clicking the icon in the toolbar below."),
-            "preferences-desktop-online-accounts"
-        );
-        welcome.show_all ();
+        var welcome = new Granite.Placeholder (_("Connect Your Online Accounts")) {
+            description = _("Connect online accounts by clicking the icon in the toolbar below."),
+            icon = new ThemedIcon ("preferences-desktop-online-accounts")
+        };
 
         var listbox = new Gtk.ListBox ();
         listbox.bind_model (accountsmodel.accounts_liststore, create_account_row);
         listbox.set_placeholder (welcome);
 
-        var scroll = new Gtk.ScrolledWindow (null, null) {
+        var scroll = new Gtk.ScrolledWindow () {
             hscrollbar_policy = Gtk.PolicyType.NEVER,
             hexpand = true,
             vexpand = true,
@@ -60,26 +58,27 @@ public class OnlineAccounts.MainView : Gtk.Box {
             margin_top = 3,
             margin_bottom = 3
         };
-        add_acount_box.add (caldav_menuitem);
-        add_acount_box.add (imap_menuitem);
-        add_acount_box.show_all ();
+        add_acount_box.append (caldav_menuitem);
+        add_acount_box.append (imap_menuitem);
 
-        var add_account_popover = new Gtk.Popover (null) {
+        var add_account_popover = new Gtk.Popover () {
             child = add_acount_box
         };
 
         var add_button_content = new Gtk.Box (HORIZONTAL, 3);
-        add_button_content.add (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
-        add_button_content.add (new Gtk.Label (_("Add Account…")));
+        add_button_content.append (new Gtk.Image.from_icon_name ("list-add-symbolic"));
+        add_button_content.append (new Gtk.Label (_("Add Account…")));
 
         var add_button = new Gtk.MenuButton () {
-            child = add_button_content,
-            popover = add_account_popover
+            popover = add_account_popover,
+            direction = UP,
+            has_frame = false,
+            child = add_button_content
         };
-        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        add_button.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         var action_bar = new Gtk.ActionBar ();
-        action_bar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        action_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
         action_bar.pack_start (add_button);
 
         var grid = new Gtk.Grid ();
@@ -94,23 +93,22 @@ public class OnlineAccounts.MainView : Gtk.Box {
             child = grid
         };
 
-        add (frame);
-        show_all ();
+        append (frame);
 
         caldav_menuitem.clicked.connect (() => {
             add_account_popover.popdown ();
             var caldav_dialog = new CaldavDialog () {
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
-            caldav_dialog.show_all ();
+            caldav_dialog.present ();
         });
 
         imap_menuitem.clicked.connect (() => {
             add_account_popover.popdown ();
             var imap_dialog = new ImapDialog () {
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
-            imap_dialog.show_all ();
+            imap_dialog.present ();
         });
     }
 
@@ -133,16 +131,17 @@ public class OnlineAccounts.MainView : Gtk.Box {
             halign = Gtk.Align.START,
             hexpand = true
         };
-        label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
-        var image = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DND) {
+        var image = new Gtk.Image.from_icon_name (icon_name) {
             use_fallback = true
         };
+        image.add_css_class (Granite.STYLE_CLASS_LARGE_ICONS);
 
-        var remove_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.MENU) {
+        var remove_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
             tooltip_text = _("Remove this account")
         };
-        remove_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        remove_button.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         Gtk.Button? edit_button = null;
         if (
@@ -155,7 +154,7 @@ public class OnlineAccounts.MainView : Gtk.Box {
             edit_button = new Gtk.Button.from_icon_name ("edit-symbolic") {
                 tooltip_text = _("Edit this account")
             };
-            edit_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+            edit_button.add_css_class (Granite.STYLE_CLASS_FLAT);
         }
 
         var grid = new Gtk.Grid () {
@@ -175,7 +174,6 @@ public class OnlineAccounts.MainView : Gtk.Box {
         } else {
             grid.attach (remove_button, 2, 0);
         }
-        grid.show_all ();
 
         remove_button.clicked.connect (() => {
             var message_dialog = new Granite.MessageDialog (
@@ -185,17 +183,16 @@ public class OnlineAccounts.MainView : Gtk.Box {
                 Gtk.ButtonsType.CANCEL
             ) {
                 badge_icon = new ThemedIcon ("edit-delete"),
-                transient_for = (Gtk.Window) get_toplevel ()
+                transient_for = (Gtk.Window) get_root ()
             };
 
             var accept_button = (Gtk.Button) message_dialog.add_button (_("Remove Account"), Gtk.ResponseType.ACCEPT);
-            accept_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            accept_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
             message_dialog.response.connect ((res) => {
                 if (res == Gtk.ResponseType.ACCEPT) {
                     e_source.remove.begin (null);
                 }
-
                 message_dialog.destroy ();
             });
 
@@ -206,14 +203,13 @@ public class OnlineAccounts.MainView : Gtk.Box {
             edit_button.clicked.connect (() => {
                 if (e_source.has_extension (E.SOURCE_EXTENSION_MAIL_ACCOUNT)) {
                     var imap_dialog = new ImapDialog () {
-                        transient_for = (Gtk.Window) get_toplevel ()
+                        transient_for = (Gtk.Window) get_root ()
                     };
 
                     imap_dialog.load_configuration.begin (e_source, null, (obj, res) => {
                         try {
                             imap_dialog.load_configuration.end (res);
-                            imap_dialog.show_all ();
-
+                            imap_dialog.present ();
                         } catch (Error e) {
                             var error_dialog = new Granite.MessageDialog (
                                 _("Edit account failed"),
@@ -222,7 +218,7 @@ public class OnlineAccounts.MainView : Gtk.Box {
                                 Gtk.ButtonsType.CLOSE
                             ) {
                                 badge_icon = new ThemedIcon ("dialog-error"),
-                                transient_for = (Gtk.Window) get_toplevel ()
+                                transient_for = (Gtk.Window) get_root ()
                             };
                             error_dialog.show_error_details (e.message);
                             error_dialog.response.connect (error_dialog.destroy);
@@ -235,14 +231,13 @@ public class OnlineAccounts.MainView : Gtk.Box {
 
                     if ("webdav" == collection_extension.backend_name) {
                         var caldav_dialog = new CaldavDialog () {
-                            transient_for = (Gtk.Window) get_toplevel ()
+                            transient_for = (Gtk.Window) get_root ()
                         };
 
                         caldav_dialog.load_configuration.begin (e_source, null, (obj, res) => {
                             try {
                                 caldav_dialog.load_configuration.end (res);
-                                caldav_dialog.show_all ();
-
+                                caldav_dialog.present ();
                             } catch (Error e) {
                                 var error_dialog = new Granite.MessageDialog (
                                     _("Edit account failed"),
@@ -251,7 +246,7 @@ public class OnlineAccounts.MainView : Gtk.Box {
                                     Gtk.ButtonsType.CLOSE
                                 ) {
                                     badge_icon = new ThemedIcon ("dialog-error"),
-                                    transient_for = (Gtk.Window) get_toplevel ()
+                                    transient_for = (Gtk.Window) get_root ()
                                 };
                                 error_dialog.show_error_details (e.message);
                                 error_dialog.response.connect (error_dialog.destroy);

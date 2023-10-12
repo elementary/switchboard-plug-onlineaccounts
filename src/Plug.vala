@@ -36,7 +36,7 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (main_view == null) {
-            Gtk.IconTheme.get_default ().add_resource_path ("/io/elementary/switchboard/onlineaccounts");
+            Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/switchboard/onlineaccounts");
 
             main_view = new MainView ();
         }

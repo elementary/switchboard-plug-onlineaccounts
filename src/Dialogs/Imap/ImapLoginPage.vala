@@ -73,18 +73,17 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
             wrap = true,
             xalign = 0
         };
-        display_name_hint_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        display_name_hint_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
             width_request = 86
         };
 
         next_button = new Gtk.Button.with_label (_("Next")) {
-            can_default = true,
             width_request = 86,
             sensitive = false
         };
-        next_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        next_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         var action_area = new Gtk.Box (HORIZONTAL, 6) {
             margin_top = 24,
@@ -93,8 +92,8 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
             homogeneous = true,
             vexpand = true
         };
-        action_area.add (cancel_button);
-        action_area.add (next_button);
+        action_area.append (cancel_button);
+        action_area.append (next_button);
 
         margin_start = 12;
         margin_end = 12;
@@ -102,16 +101,16 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
         margin_bottom = 12;
         orientation = VERTICAL;
         spacing = 6;
-        add (real_name_label);
-        add (real_name_entry);
-        add (email_label);
-        add (email_entry);
-        add (password_label);
-        add (password_entry);
-        add (display_name_label);
-        add (display_name_entry);
-        add (display_name_hint_label);
-        add (action_area);
+        append (real_name_label);
+        append (real_name_entry);
+        append (email_label);
+        append (email_entry);
+        append (password_label);
+        append (password_entry);
+        append (display_name_label);
+        append (display_name_entry);
+        append (display_name_hint_label);
+        append (action_area);
 
         bind_property ("email", email_entry, "text", BIDIRECTIONAL);
         email_entry.changed.connect (() => {
