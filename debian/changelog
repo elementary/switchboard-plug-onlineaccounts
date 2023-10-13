@@ -1,16 +1,16 @@
-switchboard-plug-onlineaccounts (6.5.3) jammy; urgency=medium
+io.elementary.settings.onlineaccounts (6.5.3) jammy; urgency=medium
 
   * New upstream release
 
  -- Danielle Foré <danielle@elementary.io>  Thu, 29 Jun 2023 11:22:10 -0700
 
-switchboard-plug-onlineaccounts (6.5.2) jammy; urgency=medium
+io.elementary.settings.onlineaccounts (6.5.2) jammy; urgency=medium
 
   * New upstream release
 
  -- Danielle Foré <danielle@elementary.io>  Tue, 04 Apr 2023 10:46:38 -0700
 
-switchboard-plug-onlineaccounts (6.5.1) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.5.1) focal; urgency=medium
 
   * Release 6.5.1 (#245)
   * Update translation files
@@ -18,7 +18,7 @@ switchboard-plug-onlineaccounts (6.5.1) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Fri, 21 Oct 2022 22:09:13 +0000
 
-switchboard-plug-onlineaccounts (6.5.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.5.0) focal; urgency=medium
 
   * Release 6.5.0 (#242)
   * Update translation template
@@ -26,7 +26,7 @@ switchboard-plug-onlineaccounts (6.5.0) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Mon, 16 May 2022 19:22:31 +0000
 
-switchboard-plug-onlineaccounts (6.4.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.4.0) focal; urgency=medium
 
   * Release 6.4.0 (#240)
   * Update translation files
@@ -35,7 +35,7 @@ switchboard-plug-onlineaccounts (6.4.0) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Wed, 06 Apr 2022 18:37:56 +0000
 
-switchboard-plug-onlineaccounts (6.3.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.3.0) focal; urgency=medium
 
   * Release 6.3.0 (#236)
   * Update translation files
@@ -44,7 +44,7 @@ switchboard-plug-onlineaccounts (6.3.0) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Mon, 13 Dec 2021 22:24:23 +0000
 
-switchboard-plug-onlineaccounts (6.2.2) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.2.2) focal; urgency=medium
 
   * Release 6.2.2 (#235)
   * Update translation files
@@ -53,7 +53,7 @@ switchboard-plug-onlineaccounts (6.2.2) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Wed, 24 Nov 2021 23:57:51 +0000
 
-switchboard-plug-onlineaccounts (6.2.1) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.2.1) focal; urgency=medium
 
   * Release 6.2.1 (#231)
   * Update translation files
@@ -69,7 +69,7 @@ switchboard-plug-onlineaccounts (6.2.1) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Tue, 28 Sep 2021 19:28:15 +0000
 
-switchboard-plug-onlineaccounts (6.2.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.2.0) focal; urgency=medium
 
   * Release 6.2.0 (#214)
   * Update translation files
@@ -81,68 +81,68 @@ switchboard-plug-onlineaccounts (6.2.0) focal; urgency=medium
 
  -- elementary, Inc. <builds@elementary.io>  Thu, 26 Aug 2021 20:40:56 +0000
 
-switchboard-plug-onlineaccounts (6.1.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.1.0) focal; urgency=medium
 
   * New upstream release.
 
  -- Daniel Foré <daniel@elementary.io>  Mon, 02 Aug 2021 11:54:42 -0700
 
-switchboard-plug-onlineaccounts (6.0.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (6.0.0) focal; urgency=medium
 
   * New upstream release.
 
  -- Daniel Foré <daniel@elementary.io>  Thu, 15 Jul 2021 14:32:53 -0700
 
-switchboard-plug-onlineaccounts (3.0.0) focal; urgency=medium
+io.elementary.settings.onlineaccounts (3.0.0) focal; urgency=medium
 
   * New upstream release.
 
  -- Corentin Noël <corentin@elementary.io>  Mon, 31 May 2021 17:20:24 +0200
 
-switchboard-plug-onlineaccounts (2.0.1) bionic; urgency=medium
+io.elementary.settings.onlineaccounts (2.0.1) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Wed, 24 Oct 2018 09:43:37 -0500
 
-switchboard-plug-onlineaccounts (2.0) bionic; urgency=medium
+io.elementary.settings.onlineaccounts (2.0) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Mon, 15 Oct 2018 17:35:22 -0500
 
-switchboard-plug-onlineaccounts (2.0) UNRELEASED; urgency=medium
+io.elementary.settings.onlineaccounts (2.0) UNRELEASED; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Thu, 11 Oct 2018 13:19:45 -0500
 
-switchboard-plug-onlineaccounts (0.3.1) xenial; urgency=medium
+io.elementary.settings.onlineaccounts (0.3.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Fri, 18 Aug 2017 18:16:59 -0500
 
-switchboard-plug-onlineaccounts (0.3.0.1) xenial; urgency=medium
+io.elementary.settings.onlineaccounts (0.3.0.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Thu, 08 Sep 2016 19:08:49 -0500
 
-switchboard-plug-onlineaccounts (0.3.0) xenial; urgency=low
+io.elementary.settings.onlineaccounts (0.3.0) xenial; urgency=low
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Sat, 13 Aug 2016 08:42:01 -0500
 
-switchboard-plug-onlineaccounts (0.2.0) UNRELEASED; urgency=low
+io.elementary.settings.onlineaccounts (0.2.0) UNRELEASED; urgency=low
 
   * Ported to the new switchboard-2.0
     Now everything is in vala and included into the plug (no more dialogs).
 
  -- Corentin "tintou" Noël <tintou@mailoo.org>  Sat, 04 Jan 2014 16:03:05 +0100
 
-switchboard-plug-onlineaccounts (0.1.0) UNRELEASED; urgency=low
+io.elementary.settings.onlineaccounts (0.1.0) UNRELEASED; urgency=low
 
   * Initial Release.
 
