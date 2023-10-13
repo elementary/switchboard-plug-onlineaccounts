@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/io/elementary/switchboard/onlineaccounts">
+  <gresource prefix="/io/elementary/settings/onlineaccounts">
     <file alias="32x32/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/32/onlineaccounts.svg</file>
     <file alias="32x32@2/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/32/onlineaccounts.svg</file>
     <file alias="48x48/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/48/onlineaccounts.svg</file>

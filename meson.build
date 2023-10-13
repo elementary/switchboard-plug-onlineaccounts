@@ -1,10 +1,10 @@
 project(
-    'online-accounts',
+    'onlineaccounts',
     'vala', 'c',
     version: '6.5.3'
 )
 
-gettext_name = meson.project_name() + '-plug'
+gettext_name = 'io.elementary.settings.' + meson.project_name()
 gnome = import('gnome')
 i18n = import('i18n')
 
@@ -21,7 +21,7 @@ add_project_arguments(
 
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
-config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name() + '-plug')
+config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
 config_file = configure_file(
     input: 'src/Config.vala.in',
     output: '@BASENAME@',

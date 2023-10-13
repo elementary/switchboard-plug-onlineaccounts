@@ -26,7 +26,7 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
         settings.set ("accounts/online", null);
         Object (
             category: Category.NETWORK,
-            code_name: "io.elementary.switchboard.onlineaccounts",
+            code_name: "io.elementary.settings.onlineaccounts",
             display_name: _("Online Accounts"),
             description: _("Manage online accounts and connected applications"),
             icon: "preferences-desktop-online-accounts",
@@ -36,7 +36,7 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (main_view == null) {
-            Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/switchboard/onlineaccounts");
+            Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/settings/onlineaccounts");
 
             main_view = new MainView ();
         }
