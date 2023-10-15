@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-13 16:20+0000\n"
-"PO-Revision-Date: 2022-07-15 22:41+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2023-10-16 18:10+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -29,7 +29,7 @@ msgstr "Internetkonten und verbundene Anwendungen verwalten"
 
 #: data/onlineaccounts.metainfo.xml.in:25
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:32
 #: data/onlineaccounts.metainfo.xml.in:45
