@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-30 22:26+0000\n"
-"PO-Revision-Date: 2023-02-08 12:25+0000\n"
-"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
+"PO-Revision-Date: 2024-02-02 22:42+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:42
@@ -51,7 +51,7 @@ msgstr "Отображаемое имя учётной записи"
 
 #: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr "Выберите название для учетной записи, например «Рабочая» или «Личная»."
+msgstr "Выберите название для учётной записи, например «Рабочая» или «Личная»."
 
 #: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
 #: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
@@ -101,7 +101,7 @@ msgstr "Не удалось получить календари"
 #: src/Dialogs/CaldavDialog.vala:542
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
-"Похоже, что предоставленные данные не отражают действующую учетную запись "
+"Похоже, что предоставленные данные не отражают действующую учётную запись "
 "CalDav."
 
 #: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
@@ -144,12 +144,12 @@ msgstr "Авторизация не требуется"
 #: src/Dialogs/Imap/ImapDialog.vala:371
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
-"Существующие данные не соответствуют действующей учетной записи электронной "
+"Существующие данные не соответствуют действующей учётной записи электронной "
 "почты."
 
 #: src/Dialogs/Imap/ImapDialog.vala:612
 msgid "Could not log in. Please verify your credentials."
-msgstr "Не удалось войти. Пожалуйста, проверьте свои учетные данные."
+msgstr "Не удалось войти. Пожалуйста, проверьте свои учётные данные."
 
 #: src/Dialogs/Imap/ImapDialog.vala:626
 #, c-format
@@ -170,11 +170,11 @@ msgstr "Далее"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:33
 msgid "Setting up the e-mail account…"
-msgstr "Настройка учетной записи эл. почты…"
+msgstr "Настройка учётной записи эл. почты…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:45
 msgid "Could not save the e-mail account"
-msgstr "Не удалось сохранить учетную запись эл. почты"
+msgstr "Не удалось сохранить учётную запись эл. почты"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:53
 msgid "Success"
@@ -215,11 +215,11 @@ msgstr "Добавить учётную запись…"
 
 #: src/MainView.vala:137
 msgid "Remove this account"
-msgstr "Удалить эту учетную запись"
+msgstr "Удалить эту учётную запись"
 
 #: src/MainView.vala:150
 msgid "Edit this account"
-msgstr "Редактировать эту учетную запись"
+msgstr "Редактировать эту учётную запись"
 
 #: src/MainView.vala:173
 #, c-format
@@ -230,7 +230,7 @@ msgstr "Удалить «%s» с этого устройства"
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
-"Эта учетная запись будет удалена и больше не появится ни в одном приложении "
+"Эта учётная запись будет удалена и больше не появится ни в одном приложении "
 "на этом устройстве."
 
 #: src/MainView.vala:182
@@ -239,7 +239,7 @@ msgstr "Удалить учётную запись"
 
 #: src/MainView.vala:206 src/MainView.vala:235
 msgid "Edit account failed"
-msgstr "Не удалось редактировать учетную запись"
+msgstr "Не удалось редактировать учётную запись"
 
 #: src/MainView.vala:207 src/MainView.vala:236
 #, c-format
