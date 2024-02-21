@@ -29,7 +29,7 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
             code_name: "io.elementary.settings.onlineaccounts",
             display_name: _("Online Accounts"),
             description: _("Manage online accounts and connected applications"),
-            icon: "preferences-desktop-online-accounts",
+            icon: "io.elementary.settings.onlineaccounts",
             supported_settings: settings
         );
     }

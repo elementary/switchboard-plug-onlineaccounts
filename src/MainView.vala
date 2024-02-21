@@ -18,8 +18,15 @@
 *
 */
 
-public class OnlineAccounts.MainView : Gtk.Box {
+public class OnlineAccounts.MainView : Switchboard.SettingsPage {
     private static AccountsModel accountsmodel;
+
+    public MainView () {
+        Object (
+            icon: new ThemedIcon ("io.elementary.settings.onlineaccounts"),
+            title: _("Online Accounts")
+        );
+    }
 
     static construct {
         accountsmodel = new AccountsModel ();
@@ -27,8 +34,7 @@ public class OnlineAccounts.MainView : Gtk.Box {
 
     construct {
         var welcome = new Granite.Placeholder (_("Connect Your Online Accounts")) {
-            description = _("Connect online accounts by clicking the icon in the toolbar below."),
-            icon = new ThemedIcon ("preferences-desktop-online-accounts")
+            description = _("Connect online accounts by clicking the icon in the toolbar below.")
         };
 
         var listbox = new Gtk.ListBox ();
@@ -86,14 +92,10 @@ public class OnlineAccounts.MainView : Gtk.Box {
         grid.attach (action_bar, 0, 1);
 
         var frame = new Gtk.Frame (null) {
-            margin_start = 12,
-            margin_end = 12,
-            margin_top = 12,
-            margin_bottom = 12,
             child = grid
         };
 
-        append (frame);
+        child = frame;
 
         caldav_menuitem.clicked.connect (() => {
             add_account_popover.popdown ();
@@ -115,7 +117,7 @@ public class OnlineAccounts.MainView : Gtk.Box {
     private Gtk.Widget create_account_row (GLib.Object object) {
         var e_source = (E.Source) object;
 
-        var icon_name = "onlineaccounts";
+        var icon_name = "io.elementary.settings.onlineaccounts";
         if (e_source.has_extension (E.SOURCE_EXTENSION_TASK_LIST)) {
             icon_name = "onlineaccounts-tasks";
         } else if (e_source.has_extension (E.SOURCE_EXTENSION_CALENDAR)) {
