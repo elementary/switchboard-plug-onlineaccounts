@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:26+0000\n"
+"POT-Creation-Date: 2023-10-13 16:20+0000\n"
 "PO-Revision-Date: 2019-01-11 20:54+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
@@ -39,66 +39,66 @@ msgstr "Slaptažodis"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
+#: src/Dialogs/CaldavDialog.vala:64 src/Dialogs/Imap/ImapDialog.vala:207
 msgid "Log In"
 msgstr "Prisijungti"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:102 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
-#: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
+#: src/Dialogs/CaldavDialog.vala:129 src/Dialogs/CaldavDialog.vala:174
+#: src/Dialogs/Imap/ImapDialog.vala:203 src/Dialogs/Imap/ImapSavePage.vala:65
 msgid "Back"
 msgstr "Atgal"
 
-#: src/Dialogs/CaldavDialog.vala:126
+#: src/Dialogs/CaldavDialog.vala:133
 msgid "Save"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:150
+#: src/Dialogs/CaldavDialog.vala:159
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:162
+#: src/Dialogs/CaldavDialog.vala:168
 msgid "All done"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/CaldavDialog.vala:169
 #, fuzzy
 #| msgid "Mail Account"
 msgid "CalDAV account saved."
 msgstr "Pašto paskyra"
 
-#: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:178 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Close"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:248
+#: src/Dialogs/CaldavDialog.vala:261
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:348 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Kalendoriai"
 
-#: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
+#: src/Dialogs/CaldavDialog.vala:350 src/Dialogs/CaldavDialog.vala:358
 msgid "Task Lists"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:375
+#: src/Dialogs/CaldavDialog.vala:392
 msgid "Finding available calendars and tasks…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:426
+#: src/Dialogs/CaldavDialog.vala:440
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:542
+#: src/Dialogs/CaldavDialog.vala:545
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 
@@ -112,17 +112,17 @@ msgstr ""
 msgid "Password:"
 msgstr "Slaptažodis"
 
-#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
+#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:154
 #, fuzzy
 #| msgid "Server"
 msgid "Server URL:"
 msgstr "Serveris"
 
-#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:160
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:168
 msgid "Encryption:"
 msgstr "Šifravimas:"
 
@@ -131,7 +131,7 @@ msgid "Refresh Interval in Minutes:"
 msgstr ""
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
+#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:176
 msgid "None"
 msgstr "Nėra"
 
@@ -143,17 +143,17 @@ msgstr "Naudoti IMAP prisijungimo duomenis"
 msgid "No authentication required"
 msgstr "Nereikia tapatybės nustatymo"
 
-#: src/Dialogs/Imap/ImapDialog.vala:371
+#: src/Dialogs/Imap/ImapDialog.vala:383
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:612
+#: src/Dialogs/Imap/ImapDialog.vala:624
 #, fuzzy
 #| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
 msgstr "Prašome įrašyti savo prisijungimo duomenis…"
 
-#: src/Dialogs/Imap/ImapDialog.vala:626
+#: src/Dialogs/Imap/ImapDialog.vala:638
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
@@ -166,7 +166,7 @@ msgstr ""
 msgid "Email"
 msgstr "El. paštas"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:80
+#: src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Next"
 msgstr ""
 
@@ -174,87 +174,87 @@ msgstr ""
 msgid "Setting up the e-mail account…"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapSavePage.vala:45
+#: src/Dialogs/Imap/ImapSavePage.vala:42
 msgid "Could not save the e-mail account"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapSavePage.vala:53
+#: src/Dialogs/Imap/ImapSavePage.vala:47
 msgid "Success"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapSavePage.vala:54
+#: src/Dialogs/Imap/ImapSavePage.vala:48
 #, fuzzy
 #| msgid "Mail Account"
 msgid "E-mail account saved."
 msgstr "Pašto paskyra"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:29
 msgid "Connect Your Online Accounts"
 msgstr "Prijunkite savo internetines paskyras"
 
-#: src/MainView.vala:31
+#: src/MainView.vala:30
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Prijunkite internetines paskyras spusteldami žemiau, įrankių juostoje "
 "esančią piktogramą."
 
-#: src/MainView.vala:48 src/Plug.vala:61
+#: src/MainView.vala:47 src/Plug.vala:61
 msgid "CalDAV"
 msgstr ""
 
-#: src/MainView.vala:49
+#: src/MainView.vala:48
 #, fuzzy
 #| msgid "Calendars"
 msgid "Calendars and Tasks"
 msgstr "Kalendoriai"
 
-#: src/MainView.vala:54 src/Plug.vala:63
+#: src/MainView.vala:53 src/Plug.vala:63
 msgid "IMAP"
 msgstr ""
 
-#: src/MainView.vala:55 src/Plug.vala:64
+#: src/MainView.vala:54 src/Plug.vala:64
 msgid "Mail"
 msgstr ""
 
-#: src/MainView.vala:73
+#: src/MainView.vala:70
 #, fuzzy
 #| msgid "Add a new account…"
 msgid "Add Account…"
 msgstr "Pridėti naują paskyrą…"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:142
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:150
+#: src/MainView.vala:155
 #, fuzzy
 #| msgid "Other Account"
 msgid "Edit this account"
 msgstr "Kita paskyra"
 
-#: src/MainView.vala:173
+#: src/MainView.vala:180
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:174
+#: src/MainView.vala:181
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 
-#: src/MainView.vala:182
+#: src/MainView.vala:189
 #, fuzzy
 #| msgid "New Account"
 msgid "Remove Account"
 msgstr "Nauja paskyra"
 
-#: src/MainView.vala:206 src/MainView.vala:235
+#: src/MainView.vala:215 src/MainView.vala:243
 #, fuzzy
 #| msgid "Mail Account"
 msgid "Edit account failed"
 msgstr "Pašto paskyra"
 
-#: src/MainView.vala:207 src/MainView.vala:236
+#: src/MainView.vala:216 src/MainView.vala:244
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-30 22:26+0000\n"
+"POT-Creation-Date: 2023-10-13 16:20+0000\n"
 "PO-Revision-Date: 2024-02-02 22:42+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
@@ -41,64 +41,64 @@ msgstr "Пароль"
 msgid "Cancel"
 msgstr "Отменить"
 
-#: src/Dialogs/CaldavDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:204
+#: src/Dialogs/CaldavDialog.vala:64 src/Dialogs/Imap/ImapDialog.vala:207
 msgid "Log In"
 msgstr "Войти"
 
-#: src/Dialogs/CaldavDialog.vala:91 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:65
 msgid "Account Display Name"
 msgstr "Отображаемое имя учётной записи"
 
-#: src/Dialogs/CaldavDialog.vala:98 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:102 src/Dialogs/Imap/ImapLoginPage.vala:71
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Выберите название для учётной записи, например «Рабочая» или «Личная»."
 
-#: src/Dialogs/CaldavDialog.vala:124 src/Dialogs/CaldavDialog.vala:169
-#: src/Dialogs/Imap/ImapDialog.vala:202 src/Dialogs/Imap/ImapSavePage.vala:70
+#: src/Dialogs/CaldavDialog.vala:129 src/Dialogs/CaldavDialog.vala:174
+#: src/Dialogs/Imap/ImapDialog.vala:203 src/Dialogs/Imap/ImapSavePage.vala:65
 msgid "Back"
 msgstr "Назад"
 
-#: src/Dialogs/CaldavDialog.vala:126
+#: src/Dialogs/CaldavDialog.vala:133
 msgid "Save"
 msgstr "Сохранить"
 
-#: src/Dialogs/CaldavDialog.vala:150
+#: src/Dialogs/CaldavDialog.vala:159
 msgid "Saving the configuration…"
 msgstr "Сохранение конфигурации…"
 
-#: src/Dialogs/CaldavDialog.vala:162
+#: src/Dialogs/CaldavDialog.vala:168
 msgid "All done"
 msgstr "Готово"
 
-#: src/Dialogs/CaldavDialog.vala:163
+#: src/Dialogs/CaldavDialog.vala:169
 msgid "CalDAV account saved."
 msgstr "Учётная запись CalDAV сохранена."
 
-#: src/Dialogs/CaldavDialog.vala:171 src/Dialogs/Imap/ImapSavePage.vala:72
+#: src/Dialogs/CaldavDialog.vala:178 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Close"
 msgstr "Закрыть"
 
-#: src/Dialogs/CaldavDialog.vala:248
+#: src/Dialogs/CaldavDialog.vala:261
 msgid "Could not save configuration"
 msgstr "Не удалось сохранить конфигурацию"
 
-#: src/Dialogs/CaldavDialog.vala:330 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:348 src/Plug.vala:62
 msgid "Calendars"
 msgstr "Календари"
 
-#: src/Dialogs/CaldavDialog.vala:332 src/Dialogs/CaldavDialog.vala:340
+#: src/Dialogs/CaldavDialog.vala:350 src/Dialogs/CaldavDialog.vala:358
 msgid "Task Lists"
 msgstr "Списки задач"
 
-#: src/Dialogs/CaldavDialog.vala:375
+#: src/Dialogs/CaldavDialog.vala:392
 msgid "Finding available calendars and tasks…"
 msgstr "Поиск доступных календарей и задач…"
 
-#: src/Dialogs/CaldavDialog.vala:426
+#: src/Dialogs/CaldavDialog.vala:440
 msgid "Could not fetch calendars"
 msgstr "Не удалось получить календари"
 
-#: src/Dialogs/CaldavDialog.vala:542
+#: src/Dialogs/CaldavDialog.vala:545
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 "Похоже, что предоставленные данные не отражают действующую учётную запись "
@@ -112,15 +112,15 @@ msgstr "Имя пользователя:"
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:153
+#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:154
 msgid "Server URL:"
 msgstr "URL-адрес сервера:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:159
+#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:160
 msgid "Port:"
 msgstr "Порт:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:167
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:168
 msgid "Encryption:"
 msgstr "Шифрование:"
 
@@ -129,7 +129,7 @@ msgid "Refresh Interval in Minutes:"
 msgstr "Интервал обновления в минутах:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:175
+#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:176
 msgid "None"
 msgstr "Отсутствует"
 
@@ -141,17 +141,17 @@ msgstr "Использовать учётные данные IMAP"
 msgid "No authentication required"
 msgstr "Авторизация не требуется"
 
-#: src/Dialogs/Imap/ImapDialog.vala:371
+#: src/Dialogs/Imap/ImapDialog.vala:383
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Существующие данные не соответствуют действующей учётной записи электронной "
 "почты."
 
-#: src/Dialogs/Imap/ImapDialog.vala:612
+#: src/Dialogs/Imap/ImapDialog.vala:624
 msgid "Could not log in. Please verify your credentials."
 msgstr "Не удалось войти. Пожалуйста, проверьте свои учётные данные."
 
-#: src/Dialogs/Imap/ImapDialog.vala:626
+#: src/Dialogs/Imap/ImapDialog.vala:638
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Не удалось выполнить проверку IMAP: %s"
@@ -164,7 +164,7 @@ msgstr "Настоящее имя"
 msgid "Email"
 msgstr "Электронная почта"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:80
+#: src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Next"
 msgstr "Далее"
 
@@ -172,76 +172,76 @@ msgstr "Далее"
 msgid "Setting up the e-mail account…"
 msgstr "Настройка учётной записи эл. почты…"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:45
+#: src/Dialogs/Imap/ImapSavePage.vala:42
 msgid "Could not save the e-mail account"
 msgstr "Не удалось сохранить учётную запись эл. почты"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:53
+#: src/Dialogs/Imap/ImapSavePage.vala:47
 msgid "Success"
 msgstr "Успешно"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:54
+#: src/Dialogs/Imap/ImapSavePage.vala:48
 msgid "E-mail account saved."
 msgstr "Учётная запись эл. почты сохранена."
 
-#: src/MainView.vala:30
+#: src/MainView.vala:29
 msgid "Connect Your Online Accounts"
 msgstr "Подключите ваши онлайн-аккаунты"
 
-#: src/MainView.vala:31
+#: src/MainView.vala:30
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Подключите онлайн-аккаунты, нажав на значок на панели инструментов ниже."
 
-#: src/MainView.vala:48 src/Plug.vala:61
+#: src/MainView.vala:47 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:49
+#: src/MainView.vala:48
 msgid "Calendars and Tasks"
 msgstr "Календари и задачи"
 
-#: src/MainView.vala:54 src/Plug.vala:63
+#: src/MainView.vala:53 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:55 src/Plug.vala:64
+#: src/MainView.vala:54 src/Plug.vala:64
 msgid "Mail"
 msgstr "Почта"
 
-#: src/MainView.vala:73
+#: src/MainView.vala:70
 msgid "Add Account…"
 msgstr "Добавить учётную запись…"
 
-#: src/MainView.vala:137
+#: src/MainView.vala:142
 msgid "Remove this account"
 msgstr "Удалить эту учётную запись"
 
-#: src/MainView.vala:150
+#: src/MainView.vala:155
 msgid "Edit this account"
 msgstr "Редактировать эту учётную запись"
 
-#: src/MainView.vala:173
+#: src/MainView.vala:180
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Удалить «%s» с этого устройства"
 
-#: src/MainView.vala:174
+#: src/MainView.vala:181
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Эта учётная запись будет удалена и больше не появится ни в одном приложении "
 "на этом устройстве."
 
-#: src/MainView.vala:182
+#: src/MainView.vala:189
 msgid "Remove Account"
 msgstr "Удалить учётную запись"
 
-#: src/MainView.vala:206 src/MainView.vala:235
+#: src/MainView.vala:215 src/MainView.vala:243
 msgid "Edit account failed"
 msgstr "Не удалось редактировать учётную запись"
 
-#: src/MainView.vala:207 src/MainView.vala:236
+#: src/MainView.vala:216 src/MainView.vala:244
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "Произошла непредвиденная ошибка при чтении конфигурации «%s»."
