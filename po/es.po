@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2022-02-17 12:46+0000\n"
 "Last-Translator: Jose Manuel Hernandez Farias <ing.josemhf@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -195,52 +195,56 @@ msgstr "Éxito"
 msgid "E-mail account saved."
 msgstr "Cuenta de correo"
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Cuentas en línea"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Conecte sus cuentas en línea"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Conecte cuentas en línea pulsando en el icono en la barra de herramientas "
 "siguiente."
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 msgid "Calendars and Tasks"
 msgstr "Calendarios y tareas"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 msgid "Mail"
 msgstr "Correo"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 msgid "Add Account…"
 msgstr "Añadir cuenta…"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr "Eliminar esta cuenta"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 #, fuzzy
 #| msgid "Remove this account"
 msgid "Edit this account"
 msgstr "Eliminar esta cuenta"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Eliminar “%s” de este dispositivo"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 #, fuzzy
 #| msgid ""
 #| "This account will be removed and will no longer appear in apps on this "
@@ -251,24 +255,20 @@ msgstr ""
 "Esta cuenta se eliminará y ya no aparecerá en las aplicaciones de este "
 "dispositivo."
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "Eliminar cuenta"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 #, fuzzy
 #| msgid "Mail Account"
 msgid "Edit account failed"
 msgstr "Cuenta de correo"
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Cuentas en línea"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2022-01-11 21:23+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -181,70 +181,70 @@ msgstr "Başarılı"
 msgid "E-mail account saved."
 msgstr "E-posta hesabı kaydedildi."
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Çevrimiçi Hesaplar"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Çevrimiçi Hesaplarınıza Bağlanın"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Aşağıda araç çubuğundaki simgeye tıklayarak çevrimiçi hesaplara bağlanın."
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 msgid "Calendars and Tasks"
 msgstr "Takvimler ve Görevler"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 msgid "Mail"
 msgstr "Posta"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 msgid "Add Account…"
 msgstr "Hesap Ekle…"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr "Bu hesabı kaldır"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Edit this account"
 msgstr "Bu hesabı düzenle"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "“%s” hesabını bu cihazdan kaldır"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Bu hesap kaldırılacak ve artık bu cihazdaki hiçbir uygulamada görünmeyecek."
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "Hesabı Kaldır"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 msgid "Edit account failed"
 msgstr "E-posta hesabı düzenlenemedi"
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "'%s' yapılandırması okunurken beklenmeyen bir hata oluştu."
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Çevrimiçi Hesaplar"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"

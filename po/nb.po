@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2022-12-21 23:25+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -184,73 +184,73 @@ msgstr "Vellykket"
 msgid "E-mail account saved."
 msgstr "E-postkonto lagret."
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Nettkontoer"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Koble til dine nettkontoer"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Koble til nettbaserte kontoer ved å klikke på ikonet i verktøyslinjen "
 "nedenfor."
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 msgid "Calendars and Tasks"
 msgstr "Kalendere og gjøremål"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 #, fuzzy
 msgid "Mail"
 msgstr "E-post"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 msgid "Add Account…"
 msgstr "Legg til konto …"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr "Fjern denne kontoen"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Edit this account"
 msgstr "Rediger denne kontoen"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Fjern «%s» fra denne enheten"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr "Kontoen vil fjernes, og ikke lenger vises i programmer på enheten."
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "Fjern konto"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 #, fuzzy
 #| msgid "E-mail account added."
 msgid "Edit account failed"
 msgstr "Kunne ikke redigere konto"
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, fuzzy, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "Uventet feil under lesing av oppsettet til «%s»"
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Nettkontoer"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"

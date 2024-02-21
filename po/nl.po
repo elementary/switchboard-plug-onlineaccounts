@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2022-01-15 22:24+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -180,74 +180,74 @@ msgstr "Succes"
 msgid "E-mail account saved."
 msgstr "E-mailaccount is opgeslagen."
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Online accounts"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Verbind je online accounts"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Verbind met online accounts door op het icoon beneden op de taakbalk te "
 "klikken."
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 msgid "Calendars and Tasks"
 msgstr "Agenda en taken"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 msgid "Mail"
 msgstr "Mail"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 msgid "Add Account…"
 msgstr "Account toevoegen…"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr "Verwijder dit account"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Edit this account"
 msgstr "Dit account aanpassen"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Verwijder “%s” van dit apparaat"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Dit account zal worden verwijderd en zal niet langer worden gebruikt binnen "
 "ander apps op dit apparaat."
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "Account verwijderen"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 msgid "Edit account failed"
 msgstr "Aanpassen van account is mislukt"
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""
 "Er is een onverwachte fout opgestreden tijdens het lezen van de configuratie "
 "van '%s'."
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Online accounts"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2022-01-13 11:05+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -181,72 +181,72 @@ msgstr "Correcte"
 msgid "E-mail account saved."
 msgstr "Compte de correu desat"
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Comptes en línia"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Connecteu els comptes en línia"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Connecteu-vos a comptes en línia clicant a la icona de la barra d'eines de "
 "baix."
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 msgid "Calendars and Tasks"
 msgstr "Calendaris i tasques"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 msgid "Mail"
 msgstr "Correu"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 msgid "Add Account…"
 msgstr "Afegeix un compte…"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr "Suprimeix aquest compte"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Edit this account"
 msgstr "Edita aquest compte"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Suprimeix %s d'aquest dispositiu"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Aquest compte se suprimirà i ja no apareixerà a les aplicacions d'aquest "
 "dispositiu."
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "Suprimeix el compte"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 msgid "Edit account failed"
 msgstr "Ha fallat l'edició del compte."
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "Hi ha hagut un error inesperat mentre es llegia la configuració de %s."
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Comptes en línia"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"

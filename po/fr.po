@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2022-01-12 11:46+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -182,74 +182,74 @@ msgstr "Succès"
 msgid "E-mail account saved."
 msgstr "Compte de messagerie enregistré."
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Comptes en ligne"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Connectez vos comptes en ligne"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Connectez vos comptes en-ligne en cliquant sur l'icône dans la barre "
 "d'outils ci-dessous."
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr "CalDAV"
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 msgid "Calendars and Tasks"
 msgstr "Calendrier et Tâches"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 msgid "Mail"
 msgstr "Messagerie"
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 msgid "Add Account…"
 msgstr "Ajouter un compte…"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr "Supprimer ce compte"
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 msgid "Edit this account"
 msgstr "Modifier ce compte"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Supprimer « %s » de cet appareil"
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Ce compte sera supprimé et n'apparaîtra plus dans aucune applications sur "
 "cet appareil."
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "Supprimer le compte"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 msgid "Edit account failed"
 msgstr "Échec de la modification du compte"
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""
 "Une erreur inattendue s'est produite lors de la lecture de la configuration "
 "de « %s »."
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Comptes en ligne"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"

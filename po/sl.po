@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 16:20+0000\n"
+"POT-Creation-Date: 2024-02-21 16:15+0000\n"
 "PO-Revision-Date: 2018-03-22 00:05+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -192,77 +192,77 @@ msgstr ""
 msgid "E-mail account saved."
 msgstr "Poštni račun"
 
-#: src/MainView.vala:29
+#: src/MainView.vala:27 src/Plug.vala:30
+msgid "Online Accounts"
+msgstr "Spletni računi"
+
+#: src/MainView.vala:36
 msgid "Connect Your Online Accounts"
 msgstr "Povežite se z vašimi spletnimi računi"
 
-#: src/MainView.vala:30
+#: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
-#: src/MainView.vala:47 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:61
 msgid "CalDAV"
 msgstr ""
 
-#: src/MainView.vala:48
+#: src/MainView.vala:54
 #, fuzzy
 #| msgid "Calendars"
 msgid "Calendars and Tasks"
 msgstr "Koledarji"
 
-#: src/MainView.vala:53 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:63
 msgid "IMAP"
 msgstr ""
 
-#: src/MainView.vala:54 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:64
 msgid "Mail"
 msgstr ""
 
-#: src/MainView.vala:70
+#: src/MainView.vala:76
 #, fuzzy
 #| msgid "Add a new account…"
 msgid "Add Account…"
 msgstr "Dodaj nov račun…"
 
-#: src/MainView.vala:142
+#: src/MainView.vala:144
 msgid "Remove this account"
 msgstr ""
 
-#: src/MainView.vala:155
+#: src/MainView.vala:157
 #, fuzzy
 #| msgid "Other Account"
 msgid "Edit this account"
 msgstr "Drug račun"
 
-#: src/MainView.vala:180
+#: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr ""
 
-#: src/MainView.vala:181
+#: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 
-#: src/MainView.vala:189
+#: src/MainView.vala:191
 #, fuzzy
 msgid "Remove Account"
 msgstr "Drug račun"
 
-#: src/MainView.vala:215 src/MainView.vala:243
+#: src/MainView.vala:217 src/MainView.vala:245
 #, fuzzy
 #| msgid "Mail Account"
 msgid "Edit account failed"
 msgstr "Poštni račun"
 
-#: src/MainView.vala:216 src/MainView.vala:244
+#: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr ""
-
-#: src/Plug.vala:30
-msgid "Online Accounts"
-msgstr "Spletni računi"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
