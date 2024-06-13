@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-21 16:15+0000\n"
-"PO-Revision-Date: 2024-06-13 15:50+0000\n"
+"PO-Revision-Date: 2024-06-13 17:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/es/>\n"
@@ -36,7 +36,7 @@ msgstr "elementary, Inc."
 #: data/onlineaccounts.metainfo.xml.in:58
 #: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
-msgstr ""
+msgstr "Actualizaciones menores:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
 msgid "Fix freeze when an IMAP server sends no response"
