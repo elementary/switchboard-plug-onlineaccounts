@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-21 16:15+0000\n"
-"PO-Revision-Date: 2024-06-13 17:16+0000\n"
+"PO-Revision-Date: 2024-06-15 16:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/es/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
-msgstr "Configuración de cuentas en línea"
+msgstr "Configuración de Cuentas en línea"
 
 #: data/onlineaccounts.metainfo.xml.in:11
 msgid "Manage online accounts and connected applications"
@@ -40,7 +40,7 @@ msgstr "Actualizaciones menores:"
 
 #: data/onlineaccounts.metainfo.xml.in:34
 msgid "Fix freeze when an IMAP server sends no response"
-msgstr ""
+msgstr "Se corrigió un bloqueo cuando un servidor IMAP no envía una respuesta"
 
 #: data/onlineaccounts.metainfo.xml.in:35
 #: data/onlineaccounts.metainfo.xml.in:48
@@ -51,7 +51,7 @@ msgstr "Traducciones actualizadas"
 
 #: data/onlineaccounts.metainfo.xml.in:47
 msgid "Update Mail and Tasks icons"
-msgstr ""
+msgstr "Se actualizaron los íconos de Tareas y Correo"
 
 #: data/onlineaccounts.metainfo.xml.in:67
 #: data/onlineaccounts.metainfo.xml.in:76
@@ -60,11 +60,11 @@ msgstr "Nuevas características:"
 
 #: data/onlineaccounts.metainfo.xml.in:69
 msgid "Added offline support for CalDAV accounts"
-msgstr ""
+msgstr "Se agregó soporte de cuentas CalDAV sin conexión"
 
 #: data/onlineaccounts.metainfo.xml.in:78
 msgid "Choose refresh rate for IMAP"
-msgstr ""
+msgstr "Se puede seleccionar el intervalo de actualización para IMAP"
 
 #~ msgid "Complete redesign"
 #~ msgstr "Rediseño total"
