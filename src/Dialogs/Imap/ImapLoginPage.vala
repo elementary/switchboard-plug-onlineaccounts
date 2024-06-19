@@ -41,39 +41,47 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
             critical (e.message);
         }
 
-        var real_name_label = new Granite.HeaderLabel (_("Real Name"));
-
         real_name_entry = new Granite.ValidatedEntry () {
             is_valid = true,
+            input_purpose = NAME,
             text = Environment.get_real_name ()
         };
+        real_name_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
         real_name = real_name_entry.text;
 
-        var email_label = new Granite.HeaderLabel (_("Email"));
-
-        email_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
-            hexpand = true
+        var real_name_label = new Granite.HeaderLabel (_("Real Name")) {
+            mnemonic_widget = real_name_entry
         };
 
-        var password_label = new Granite.HeaderLabel (_("Password"));
+        email_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
+            hexpand = true,
+            input_purpose = EMAIL
+        };
+        email_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
+
+        var email_label = new Granite.HeaderLabel (_("Email")) {
+            mnemonic_widget = email_entry
+        };
 
         password_entry = new Granite.ValidatedEntry () {
             input_purpose = Gtk.InputPurpose.PASSWORD,
             visibility = false
         };
+        password_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
-        var display_name_label = new Granite.HeaderLabel (_("Account Display Name"));
+        var password_label = new Granite.HeaderLabel (_("Password")) {
+            mnemonic_widget = password_entry
+        };
 
         display_name_entry = new Granite.ValidatedEntry () {
             hexpand = true
         };
+        display_name_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
-        var display_name_hint_label = new Gtk.Label (_("Pick a name like “Work” or “Personal” for the account.")) {
-            hexpand = true,
-            wrap = true,
-            xalign = 0
+        var display_name_label = new Granite.HeaderLabel (_("Account Display Name")) {
+            mnemonic_widget = display_name_entry,
+            secondary_text = _("Pick a name like “Work” or “Personal” for the account.")
         };
-        display_name_hint_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
             width_request = 86
@@ -109,7 +117,6 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
         append (password_entry);
         append (display_name_label);
         append (display_name_entry);
-        append (display_name_hint_label);
         append (action_area);
 
         bind_property ("email", email_entry, "text", BIDIRECTIONAL);
