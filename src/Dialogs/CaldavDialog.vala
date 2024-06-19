@@ -29,7 +29,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
     private Gtk.Entry password_entry;
     private Gtk.ListBox calendars_list;
     private Gtk.Stack save_configuration_page_stack;
-    private Adw.Leaflet leaflet;
+    private Adw.NavigationView navigation_view;
     private ListStore calendars_store;
 
     private E.SourceRegistry? registry = null;
@@ -77,20 +77,22 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         action_area.append (login_cancel_button);
         action_area.append (login_button);
 
-        var login_page = new Gtk.Box (VERTICAL, 0) {
+        var login_box = new Gtk.Box (VERTICAL, 0) {
             margin_top = 12,
             margin_bottom = 12,
             margin_start = 12,
             margin_end = 12
         };
-        login_page.append (url_label);
-        login_page.append (url_entry);
-        login_page.append (url_message_revealer);
-        login_page.append (username_label);
-        login_page.append (username_entry);
-        login_page.append (password_label);
-        login_page.append (password_entry);
-        login_page.append (action_area);
+        login_box.append (url_label);
+        login_box.append (url_entry);
+        login_box.append (url_message_revealer);
+        login_box.append (username_label);
+        login_box.append (username_entry);
+        login_box.append (password_label);
+        login_box.append (password_entry);
+        login_box.append (action_area);
+
+        var login_page = new Adw.NavigationPage (login_box, _("Log In"));
 
         var display_name_label = new Granite.HeaderLabel (_("Account Display Name"));
 
@@ -144,17 +146,19 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         calendar_page_action_area.append (calendar_page_back_button);
         calendar_page_action_area.append (save_configuration_button);
 
-        var calendars_page = new Gtk.Box (VERTICAL, 6) {
+        var calendars_box = new Gtk.Box (VERTICAL, 6) {
             margin_top = 12,
             margin_bottom = 12,
             margin_start = 12,
             margin_end = 12
         };
-        calendars_page.append (display_name_label);
-        calendars_page.append (display_name_entry);
-        calendars_page.append (display_name_hint_label);
-        calendars_page.append (calendar_list_frame);
-        calendars_page.append (calendar_page_action_area);
+        calendars_box.append (display_name_label);
+        calendars_box.append (display_name_entry);
+        calendars_box.append (display_name_hint_label);
+        calendars_box.append (calendar_list_frame);
+        calendars_box.append (calendar_page_action_area);
+
+        var calendars_page = new Adw.NavigationPage (calendars_box, _("Calendars"));
 
         var save_configuration_busy_label = new Gtk.Label (_("Saving the configuration…"));
 
@@ -199,27 +203,25 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         save_configuration_page_stack.add_named (save_configuration_busy_box, "busy");
         save_configuration_page_stack.add_named (save_configuration_success_view, "success");
 
-        var save_configuration_page = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
+        var save_configuration_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
             margin_top = 12,
             margin_bottom = 12,
             margin_start = 12,
             margin_end = 12
         };
-        save_configuration_page.append (save_configuration_page_stack);
-        save_configuration_page.append (save_configuration_page_action_area);
+        save_configuration_box.append (save_configuration_page_stack);
+        save_configuration_box.append (save_configuration_page_action_area);
 
-        leaflet = new Adw.Leaflet () {
-            can_navigate_back = true,
+        var save_configuration_page = new Adw.NavigationPage (save_configuration_box, _("Save Configuration"));
+
+        navigation_view = new Adw.NavigationView () {
             hexpand = true,
-            vexpand = true,
-            can_unfold = false
+            vexpand = true
         };
-        leaflet.append (login_page);
-        leaflet.append (calendars_page);
-        leaflet.append (save_configuration_page);
+        navigation_view.add (login_page);
 
         var window_handle = new Gtk.WindowHandle () {
-            child = leaflet
+            child = navigation_view
         };
 
         default_height = 400;
@@ -230,18 +232,25 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
 
         default_widget = login_button;
 
+        calendars_page.shown.connect (() => {
+            default_widget = save_configuration_button;
+        });
+
+        login_page.shown.connect (() => {
+            default_widget = login_button;
+        });
+
         login_cancel_button.clicked.connect (() => {
             destroy ();
         });
 
         login_button.clicked.connect (() => {
             find_sources.begin ();
-            leaflet.visible_child = calendars_page;
-            default_widget = save_configuration_button;
+            navigation_view.push (calendars_page);
         });
 
         save_configuration_button.clicked.connect (() => {
-            leaflet.visible_child = save_configuration_page;
+            navigation_view.push (save_configuration_page);
             save_configuration_close_button.sensitive = false;
             save_configuration_page_stack.set_visible_child_name ("busy");
 
@@ -275,12 +284,10 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
 
         calendar_page_back_button.clicked.connect (() => {
             back_button_clicked ();
-            default_widget = login_button;
         });
 
         save_configuration_back_button.clicked.connect (() => {
             back_button_clicked ();
-            default_widget = save_configuration_button;
         });
 
         url_entry.changed.connect (() => {
@@ -323,7 +330,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         if (cancellable != null) {
             cancellable.cancel ();
         }
-        leaflet.navigate (Adw.NavigationDirection.BACK);
+        navigation_view.pop ();
     }
 
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
