@@ -229,18 +229,16 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         main_box.append (smtp_server_grid);
         main_box.append (action_area);
 
-        var leaflet = new Adw.Leaflet () {
-            can_unfold = false,
-            can_navigate_back = true,
+        var main_page = new Adw.NavigationPage (main_box, _("Credentials"));
+
+        var navigation_view = new Adw.NavigationView () {
             hexpand = true,
             vexpand = true
         };
-        leaflet.append (login_page);
-        leaflet.append (main_box);
-        leaflet.append (save_page);
+        navigation_view.add (login_page);
 
         var window_handle = new Gtk.WindowHandle () {
-            child = leaflet
+            child = navigation_view
         };
 
         default_height = 475;
@@ -253,21 +251,26 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
         login_page.cancel.connect (destroy);
 
-        login_page.next_button.clicked.connect (() => {
-            leaflet.visible_child = main_box;
+        main_page.shown.connect (() => {
             default_widget = save_button;
+        });
+
+        login_page.next_button.clicked.connect (() => {
+            navigation_view.push (main_page);
+        });
+
+        login_page.shown.connect (() => {
+            default_widget = login_page.next_button;
         });
 
         save_page.close.connect (destroy);
 
         save_page.back.connect (() => {
-            leaflet.navigate (Adw.NavigationDirection.BACK);
-            default_widget = save_button;
+            navigation_view.pop ();
         });
 
         back_button.clicked.connect (() => {
-            leaflet.navigate (Adw.NavigationDirection.BACK);
-            default_widget = login_page.next_button;
+            navigation_view.pop ();
         });
 
         smtp_no_credentials.notify["active"].connect (() => {
@@ -344,7 +347,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             }
             cancellable = new GLib.Cancellable ();
 
-            leaflet.visible_child = save_page;
+            navigation_view.push (save_page);
             save_page.show_busy (cancellable);
 
             save_configuration.begin ((obj, res) => {
