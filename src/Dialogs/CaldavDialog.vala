@@ -39,22 +39,34 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
     private uint source_children_configuration_count = 0;
 
     construct {
-        var url_label = new Granite.HeaderLabel (_("Server URL"));
         url_entry = new Granite.ValidatedEntry () {
-            hexpand = true
+            hexpand = true,
+            input_purpose = URL
+        };
+        url_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
+
+        var url_label = new Granite.HeaderLabel (_("Server URL")) {
+            mnemonic_widget = url_entry
         };
 
         var url_message_revealer = new ValidationMessage (_("Invalid URL"));
         url_message_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
-        var username_label = new Granite.HeaderLabel (_("User Name"));
         username_entry = new Granite.ValidatedEntry ();
+        username_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
-        var password_label = new Granite.HeaderLabel (_("Password"));
+        var username_label = new Granite.HeaderLabel (_("User Name")) {
+            mnemonic_widget = username_entry
+        };
+
         password_entry = new Gtk.Entry () {
             activates_default = true,
-            input_purpose = Gtk.InputPurpose.PASSWORD,
+            input_purpose = PASSWORD,
             visibility = false
+        };
+
+        var password_label = new Granite.HeaderLabel (_("Password")) {
+            mnemonic_widget = password_entry
         };
 
         var login_cancel_button = new Gtk.Button.with_label (_("Cancel")) {
@@ -77,7 +89,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         action_area.append (login_cancel_button);
         action_area.append (login_button);
 
-        var login_page = new Gtk.Box (VERTICAL, 0) {
+        var login_page = new Gtk.Box (VERTICAL, 6) {
             margin_top = 12,
             margin_bottom = 12,
             margin_start = 12,
@@ -92,19 +104,15 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         login_page.append (password_entry);
         login_page.append (action_area);
 
-        var display_name_label = new Granite.HeaderLabel (_("Account Display Name"));
-
         display_name_entry = new Gtk.Entry () {
             activates_default = true,
             hexpand = true
         };
 
-        var display_name_hint_label = new Gtk.Label (_("Pick a name like “Work” or “Personal” for the account.")) {
-            hexpand = true,
-            xalign = 0,
-            wrap = true
+        var display_name_label = new Granite.HeaderLabel (_("Account Display Name")) {
+            mnemonic_widget = display_name_entry,
+            secondary_text = _("Pick a name like “Work” or “Personal” for the account.")
         };
-        display_name_hint_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         calendars_store = new ListStore (typeof (E.Source));
 
@@ -152,7 +160,6 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         };
         calendars_page.append (display_name_label);
         calendars_page.append (display_name_entry);
-        calendars_page.append (display_name_hint_label);
         calendars_page.append (calendar_list_frame);
         calendars_page.append (calendar_page_action_area);
 
