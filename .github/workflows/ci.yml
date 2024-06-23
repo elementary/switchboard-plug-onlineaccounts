@@ -43,7 +43,7 @@ jobs:
       - name: Install Dependencies
         run: |
           dnf install -y git meson ninja-build vala evolution-data-server-devel glib2-devel granite-7-devel gtk4-devel libadwaita-devel
-          git clone --depth 1 --branch 8.0.0 https://github.com/elementary/switchboard
+          git clone --depth 1 --branch 8.0.0 https://github.com/elementary/switchboard.git
           dnf install -y sassc libgee-devel
           cd switchboard
           meson build --prefix=/usr
