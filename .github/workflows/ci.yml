@@ -42,9 +42,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Dependencies
         run: |
-          dnf install -y git meson ninja-build vala evolution-data-server-devel glib2-devel granite-devel gtk3-devel libhandy-devel
-          git clone --depth 1 --branch 6.0.2 https://github.com/elementary/switchboard
-          dnf install -y libgee-devel
+          dnf install -y git meson ninja-build vala evolution-data-server-devel glib2-devel granite-7-devel gtk4-devel libadwaita-devel
+          git clone --depth 1 --branch 8.0.0 https://github.com/elementary/switchboard
+          dnf install -y sassc libgee-devel
           cd switchboard
           meson build --prefix=/usr
           ninja -C build
