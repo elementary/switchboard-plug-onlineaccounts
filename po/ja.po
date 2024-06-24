@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-21 16:15+0000\n"
-"PO-Revision-Date: 2022-01-12 08:21+0000\n"
+"PO-Revision-Date: 2024-06-20 12:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:42
@@ -224,7 +224,7 @@ msgstr "このアカウントを編集"
 #: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr "“%s” をこのデバイスから削除します"
+msgstr "“%s”をこのデバイスから削除します"
 
 #: src/MainView.vala:183
 msgid ""
