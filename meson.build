@@ -37,7 +37,7 @@ glib_dep = dependency('glib-2.0')
 gobject_dep = dependency('gobject-2.0')
 granite_dep = dependency('granite-7')
 gtk_dep = dependency('gtk4')
-adw_dep = dependency('libadwaita-1')
+adw_dep = dependency('libadwaita-1', version: '>= 1.4.0')
 switchboard_dep = dependency('switchboard-3')
 
 if edataserver_dep.version().version_compare('>=3.45.1')
