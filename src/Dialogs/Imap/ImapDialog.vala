@@ -35,6 +35,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
     private ImapSavePage save_page;
+    private Adw.NavigationView navigation_view;
     private uint cancel_timeout_id = 0;
 
     private E.SourceRegistry? registry = null;
@@ -231,7 +232,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
         var main_page = new Adw.NavigationPage (main_box, _("Credentials"));
 
-        var navigation_view = new Adw.NavigationView () {
+        navigation_view = new Adw.NavigationView () {
             hexpand = true,
             vexpand = true
         };
@@ -256,7 +257,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         });
 
         login_page.next_button.clicked.connect (() => {
-            navigation_view.push (main_page);
+            push_page (main_page);
         });
 
         login_page.shown.connect (() => {
@@ -265,13 +266,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
         save_page.close.connect (destroy);
 
-        save_page.back.connect (() => {
-            navigation_view.pop ();
-        });
-
-        back_button.clicked.connect (() => {
-            navigation_view.pop ();
-        });
+        back_button.clicked.connect (go_back);
 
         smtp_no_credentials.notify["active"].connect (() => {
             smtp_revealer.reveal_child = !smtp_no_credentials.active && !use_imap_credentials.active;
@@ -347,7 +342,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             }
             cancellable = new GLib.Cancellable ();
 
-            navigation_view.push (save_page);
+            push_page (save_page);
             save_page.show_busy (cancellable);
 
             save_configuration.begin ((obj, res) => {
@@ -375,6 +370,16 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
             destroy ();
         });
+    }
+
+    // Workaround vala memory leak
+    private void go_back () {
+        navigation_view.pop ();
+    }
+
+    // Workaround vala memory leak
+    private void push_page (Adw.NavigationPage page) {
+        navigation_view.push (page);
     }
 
     private void set_button_sensitivity () {

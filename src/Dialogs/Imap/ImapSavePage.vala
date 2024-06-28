@@ -19,7 +19,6 @@
 */
 
 public class OnlineAccounts.ImapSavePage : Adw.NavigationPage {
-    public signal void back ();
     public signal void close ();
 
     private Gtk.Button close_button;
@@ -96,7 +95,8 @@ public class OnlineAccounts.ImapSavePage : Adw.NavigationPage {
             if (cancellable != null) {
                 cancellable.cancel ();
             }
-            back ();
+
+            ((Adw.NavigationView) get_ancestor (typeof (Adw.NavigationView))).pop ();
         });
 
         close_button.clicked.connect (() => {
