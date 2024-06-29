@@ -10,7 +10,7 @@ You'll need the following dependencies:
     libadwaita-1-dev
     libedataserver-1.2 >=3.40
     libglib2.0-dev
-    libgranite-7-dev
+    libgranite-7-dev >= 7.1.0
     libgtk-4-dev
     libswitchboard-3-dev
     meson
