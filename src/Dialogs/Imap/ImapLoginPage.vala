@@ -64,7 +64,7 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
         };
 
         password_entry = new Granite.ValidatedEntry () {
-            input_purpose = Gtk.InputPurpose.PASSWORD,
+            input_purpose = PASSWORD,
             visibility = false
         };
         password_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
