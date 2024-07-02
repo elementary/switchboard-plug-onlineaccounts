@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 16:15+0000\n"
+"POT-Creation-Date: 2024-06-29 23:51+0000\n"
 "PO-Revision-Date: 2022-01-13 11:05+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -20,148 +20,148 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:42
+#: src/Dialogs/CaldavDialog.vala:48
 msgid "Server URL"
 msgstr "URL del servidor"
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:52
 msgid "Invalid URL"
 msgstr "URL no vàlid"
 
-#: src/Dialogs/CaldavDialog.vala:50
+#: src/Dialogs/CaldavDialog.vala:58
 msgid "User Name"
 msgstr "Nom d'usuari"
 
-#: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:68 src/Dialogs/Imap/ImapLoginPage.vala:72
 msgid "Password"
 msgstr "Contrasenya"
 
-#: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:86
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: src/Dialogs/CaldavDialog.vala:64 src/Dialogs/Imap/ImapDialog.vala:207
+#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:221
 msgid "Log In"
 msgstr "Inici de sessió"
 
-#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:112 src/Dialogs/Imap/ImapLoginPage.vala:81
 msgid "Account Display Name"
 msgstr "Nom del compte visible"
 
-#: src/Dialogs/CaldavDialog.vala:102 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:114 src/Dialogs/Imap/ImapLoginPage.vala:83
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Trieu un nom com ara Feina o Personal per al compte."
 
-#: src/Dialogs/CaldavDialog.vala:129 src/Dialogs/CaldavDialog.vala:174
-#: src/Dialogs/Imap/ImapDialog.vala:203 src/Dialogs/Imap/ImapSavePage.vala:65
+#: src/Dialogs/CaldavDialog.vala:137 src/Dialogs/CaldavDialog.vala:181
+#: src/Dialogs/Imap/ImapDialog.vala:217 src/Dialogs/Imap/ImapSavePage.vala:65
 msgid "Back"
 msgstr "Enrere"
 
-#: src/Dialogs/CaldavDialog.vala:133
+#: src/Dialogs/CaldavDialog.vala:141
 msgid "Save"
 msgstr "Desa"
 
-#: src/Dialogs/CaldavDialog.vala:159
+#: src/Dialogs/CaldavDialog.vala:166
 msgid "Saving the configuration…"
 msgstr "Es desa la configuració…"
 
-#: src/Dialogs/CaldavDialog.vala:168
+#: src/Dialogs/CaldavDialog.vala:175
 msgid "All done"
 msgstr "Tot fet"
 
-#: src/Dialogs/CaldavDialog.vala:169
+#: src/Dialogs/CaldavDialog.vala:176
 msgid "CalDAV account saved."
 msgstr "Compte de CalDAV desat"
 
-#: src/Dialogs/CaldavDialog.vala:178 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/CaldavDialog.vala:185 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Close"
 msgstr "Tanca"
 
-#: src/Dialogs/CaldavDialog.vala:261
+#: src/Dialogs/CaldavDialog.vala:268
 msgid "Could not save configuration"
 msgstr "No s'ha pogut desar la configuració."
 
-#: src/Dialogs/CaldavDialog.vala:348 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:355 src/Plug.vala:73
 msgid "Calendars"
 msgstr "Calendaris"
 
-#: src/Dialogs/CaldavDialog.vala:350 src/Dialogs/CaldavDialog.vala:358
+#: src/Dialogs/CaldavDialog.vala:357 src/Dialogs/CaldavDialog.vala:365
 msgid "Task Lists"
 msgstr "Llistes de tasques"
 
-#: src/Dialogs/CaldavDialog.vala:392
+#: src/Dialogs/CaldavDialog.vala:399
 msgid "Finding available calendars and tasks…"
 msgstr "Es troben els calendaris i les tasques disponibles…"
 
-#: src/Dialogs/CaldavDialog.vala:440
+#: src/Dialogs/CaldavDialog.vala:447
 msgid "Could not fetch calendars"
 msgstr "No s'han pogut obtenir els calendaris."
 
-#: src/Dialogs/CaldavDialog.vala:545
+#: src/Dialogs/CaldavDialog.vala:552
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 "Les dades proporcionades no semblen reflectir un compte de CalDAV vàlid."
 
-#: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:133
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:144
 msgid "Password:"
 msgstr "Contrasenya:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:154
+#: src/Dialogs/Imap/ImapDialog.vala:67 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Server URL:"
 msgstr "URL del servidor:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:160
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:176
 msgid "Port:"
 msgstr "Port:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:168
-msgid "Encryption:"
-msgstr "Encriptació:"
-
-#: src/Dialogs/Imap/ImapDialog.vala:84
+#: src/Dialogs/Imap/ImapDialog.vala:85
 msgid "Refresh Interval in Minutes:"
 msgstr "Interval d'actualització en minuts:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:176
+#: src/Dialogs/Imap/ImapDialog.vala:94 src/Dialogs/Imap/ImapDialog.vala:185
 msgid "None"
 msgstr "Cap"
 
-#: src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:99 src/Dialogs/Imap/ImapDialog.vala:190
+msgid "Encryption:"
+msgstr "Encriptació:"
+
+#: src/Dialogs/Imap/ImapDialog.vala:120
 msgid "Use IMAP Credentials"
 msgstr "Usa credencials d'IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:117
+#: src/Dialogs/Imap/ImapDialog.vala:124
 msgid "No authentication required"
 msgstr "No cal autenticació"
 
-#: src/Dialogs/Imap/ImapDialog.vala:383
+#: src/Dialogs/Imap/ImapDialog.vala:397
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Les dades proporcionades no semblen reflectir un compte de correu vàlid."
 
-#: src/Dialogs/Imap/ImapDialog.vala:624
+#: src/Dialogs/Imap/ImapDialog.vala:638
 msgid "Could not log in. Please verify your credentials."
 msgstr "No s'ha pogut iniciar la sessió. Verifiqueu les credencials."
 
-#: src/Dialogs/Imap/ImapDialog.vala:638
+#: src/Dialogs/Imap/ImapDialog.vala:652
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Ha fallat la verificació d'IMAP: %s"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Real Name"
 msgstr "Nom real"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:52
+#: src/Dialogs/Imap/ImapLoginPage.vala:62
 msgid "Email"
 msgstr "Correu electrònic"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:82
+#: src/Dialogs/Imap/ImapLoginPage.vala:90
 msgid "Next"
 msgstr "Següent"
 
@@ -195,7 +195,7 @@ msgstr ""
 "Connecteu-vos a comptes en línia clicant a la icona de la barra d'eines de "
 "baix."
 
-#: src/MainView.vala:53 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:72
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -203,11 +203,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Calendaris i tasques"
 
-#: src/MainView.vala:59 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:74
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:60 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:75
 msgid "Mail"
 msgstr "Correu"
 

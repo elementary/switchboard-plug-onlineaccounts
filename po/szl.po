@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 16:15+0000\n"
+"POT-Creation-Date: 2024-06-29 23:51+0000\n"
 "PO-Revision-Date: 2019-06-26 18:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -12,146 +12,146 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: src/Dialogs/CaldavDialog.vala:42
+#: src/Dialogs/CaldavDialog.vala:48
 msgid "Server URL"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:47
+#: src/Dialogs/CaldavDialog.vala:52
 msgid "Invalid URL"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:50
+#: src/Dialogs/CaldavDialog.vala:58
 msgid "User Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:53 src/Dialogs/Imap/ImapLoginPage.vala:58
+#: src/Dialogs/CaldavDialog.vala:68 src/Dialogs/Imap/ImapLoginPage.vala:72
 msgid "Password"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:60 src/Dialogs/Imap/ImapLoginPage.vala:78
+#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:86
 msgid "Cancel"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:64 src/Dialogs/Imap/ImapDialog.vala:207
+#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:221
 msgid "Log In"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:95 src/Dialogs/Imap/ImapLoginPage.vala:65
+#: src/Dialogs/CaldavDialog.vala:112 src/Dialogs/Imap/ImapLoginPage.vala:81
 msgid "Account Display Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:102 src/Dialogs/Imap/ImapLoginPage.vala:71
+#: src/Dialogs/CaldavDialog.vala:114 src/Dialogs/Imap/ImapLoginPage.vala:83
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:129 src/Dialogs/CaldavDialog.vala:174
-#: src/Dialogs/Imap/ImapDialog.vala:203 src/Dialogs/Imap/ImapSavePage.vala:65
+#: src/Dialogs/CaldavDialog.vala:137 src/Dialogs/CaldavDialog.vala:181
+#: src/Dialogs/Imap/ImapDialog.vala:217 src/Dialogs/Imap/ImapSavePage.vala:65
 msgid "Back"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:133
+#: src/Dialogs/CaldavDialog.vala:141
 msgid "Save"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:159
+#: src/Dialogs/CaldavDialog.vala:166
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:168
+#: src/Dialogs/CaldavDialog.vala:175
 msgid "All done"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:169
+#: src/Dialogs/CaldavDialog.vala:176
 msgid "CalDAV account saved."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:178 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/CaldavDialog.vala:185 src/Dialogs/Imap/ImapSavePage.vala:69
 msgid "Close"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:261
+#: src/Dialogs/CaldavDialog.vala:268
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:348 src/Plug.vala:62
+#: src/Dialogs/CaldavDialog.vala:355 src/Plug.vala:73
 msgid "Calendars"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:350 src/Dialogs/CaldavDialog.vala:358
+#: src/Dialogs/CaldavDialog.vala:357 src/Dialogs/CaldavDialog.vala:365
 msgid "Task Lists"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:392
+#: src/Dialogs/CaldavDialog.vala:399
 msgid "Finding available calendars and tasks…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:440
+#: src/Dialogs/CaldavDialog.vala:447
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:545
+#: src/Dialogs/CaldavDialog.vala:552
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:49 src/Dialogs/Imap/ImapDialog.vala:121
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:133
 msgid "Username:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:57 src/Dialogs/Imap/ImapDialog.vala:130
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:144
 msgid "Password:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:62 src/Dialogs/Imap/ImapDialog.vala:154
+#: src/Dialogs/Imap/ImapDialog.vala:67 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Server URL:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:160
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:176
 msgid "Port:"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:168
-msgid "Encryption:"
-msgstr ""
-
-#: src/Dialogs/Imap/ImapDialog.vala:84
+#: src/Dialogs/Imap/ImapDialog.vala:85
 msgid "Refresh Interval in Minutes:"
 msgstr ""
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:92 src/Dialogs/Imap/ImapDialog.vala:176
+#: src/Dialogs/Imap/ImapDialog.vala:94 src/Dialogs/Imap/ImapDialog.vala:185
 msgid "None"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:113
+#: src/Dialogs/Imap/ImapDialog.vala:99 src/Dialogs/Imap/ImapDialog.vala:190
+msgid "Encryption:"
+msgstr ""
+
+#: src/Dialogs/Imap/ImapDialog.vala:120
 msgid "Use IMAP Credentials"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:117
+#: src/Dialogs/Imap/ImapDialog.vala:124
 msgid "No authentication required"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:383
+#: src/Dialogs/Imap/ImapDialog.vala:397
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:624
+#: src/Dialogs/Imap/ImapDialog.vala:638
 msgid "Could not log in. Please verify your credentials."
 msgstr ""
 
-#: src/Dialogs/Imap/ImapDialog.vala:638
+#: src/Dialogs/Imap/ImapDialog.vala:652
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:44
+#: src/Dialogs/Imap/ImapLoginPage.vala:52
 msgid "Real Name"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:52
+#: src/Dialogs/Imap/ImapLoginPage.vala:62
 msgid "Email"
 msgstr ""
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:82
+#: src/Dialogs/Imap/ImapLoginPage.vala:90
 msgid "Next"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 
-#: src/MainView.vala:53 src/Plug.vala:61
+#: src/MainView.vala:53 src/Plug.vala:72
 msgid "CalDAV"
 msgstr ""
 
@@ -191,11 +191,11 @@ msgstr ""
 msgid "Calendars and Tasks"
 msgstr ""
 
-#: src/MainView.vala:59 src/Plug.vala:63
+#: src/MainView.vala:59 src/Plug.vala:74
 msgid "IMAP"
 msgstr ""
 
-#: src/MainView.vala:60 src/Plug.vala:64
+#: src/MainView.vala:60 src/Plug.vala:75
 msgid "Mail"
 msgstr ""
 
