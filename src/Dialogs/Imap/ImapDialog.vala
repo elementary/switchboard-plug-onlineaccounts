@@ -31,6 +31,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
     private Gtk.ComboBoxText smtp_encryption_combobox;
     private Gtk.Entry smtp_password_entry;
     private Gtk.Entry smtp_username_entry;
+    private Gtk.Revealer smtp_revealer;
     private Gtk.SpinButton imap_port_spin;
     private Gtk.SpinButton imap_refresh_interval_spin;
     private Gtk.SpinButton smtp_port_spin;
@@ -158,7 +159,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         smtp_credentials.attach (smtp_password_label, 0, 1);
         smtp_credentials.attach (smtp_password_entry, 1, 1);
 
-        var smtp_revealer = new Gtk.Revealer () {
+        smtp_revealer = new Gtk.Revealer () {
             child = smtp_credentials
         };
 
