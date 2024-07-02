@@ -19,6 +19,7 @@
 */
 
 public class OnlineAccounts.ImapDialog : Gtk.Window {
+    private Adw.NavigationPage main_page;
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry imap_server_entry;
     private Granite.ValidatedEntry imap_username_entry;
@@ -230,7 +231,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         main_box.append (smtp_server_grid);
         main_box.append (action_area);
 
-        var main_page = new Adw.NavigationPage (main_box, _("Credentials"));
+        main_page = new Adw.NavigationPage (main_box, _("Credentials"));
 
         navigation_view = new Adw.NavigationView () {
             hexpand = true,
@@ -257,7 +258,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         });
 
         login_page.next_button.clicked.connect (() => {
-            push_page (main_page);
+            navigation_view.push (main_page);
         });
 
         login_page.shown.connect (() => {
@@ -266,7 +267,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
         save_page.close.connect (destroy);
 
-        back_button.clicked.connect (go_back);
+        back_button.clicked.connect (() => navigation_view.pop ());
 
         smtp_no_credentials.notify["active"].connect (() => {
             smtp_revealer.reveal_child = !smtp_no_credentials.active && !use_imap_credentials.active;
@@ -342,7 +343,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             }
             cancellable = new GLib.Cancellable ();
 
-            push_page (save_page);
+            navigation_view.push (save_page);
             save_page.show_busy (cancellable);
 
             save_configuration.begin ((obj, res) => {
@@ -370,16 +371,6 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
             destroy ();
         });
-    }
-
-    // Workaround vala memory leak
-    private void go_back () {
-        navigation_view.pop ();
-    }
-
-    // Workaround vala memory leak
-    private void push_page (Adw.NavigationPage page) {
-        navigation_view.push (page);
     }
 
     private void set_button_sensitivity () {
