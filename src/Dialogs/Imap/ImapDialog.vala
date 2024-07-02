@@ -271,7 +271,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             default_widget = save_button;
         });
 
-        login_page.next_button.clicked.connect (() => {
+        login_page.next.connect (() => {
             navigation_view.push (main_page);
         });
 

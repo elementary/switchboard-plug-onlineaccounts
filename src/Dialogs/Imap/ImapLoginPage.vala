@@ -20,6 +20,7 @@
 
 public class OnlineAccounts.ImapLoginPage : Adw.NavigationPage {
     public signal void cancel ();
+    public signal void next ();
 
     public string display_name { get; set; }
     public string email { get; set; }
@@ -31,7 +32,7 @@ public class OnlineAccounts.ImapLoginPage : Adw.NavigationPage {
     private Granite.ValidatedEntry password_entry;
     private Granite.ValidatedEntry real_name_entry;
 
-    public Gtk.Button next_button { get; set; }
+    public Gtk.Button next_button { get; private set; }
 
     construct {
         Regex? email_regex = null;
@@ -148,6 +149,10 @@ public class OnlineAccounts.ImapLoginPage : Adw.NavigationPage {
 
         cancel_button.clicked.connect (() => {
             cancel ();
+        });
+
+        next_button.clicked.connect (() => {
+            next ();
         });
     }
 
