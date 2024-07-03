@@ -19,6 +19,7 @@
 */
 
 public class OnlineAccounts.ImapDialog : Gtk.Window {
+    private Adw.NavigationPage main_page;
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry imap_server_entry;
     private Granite.ValidatedEntry imap_username_entry;
@@ -30,11 +31,13 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
     private Gtk.ComboBoxText smtp_encryption_combobox;
     private Gtk.Entry smtp_password_entry;
     private Gtk.Entry smtp_username_entry;
+    private Gtk.Revealer smtp_revealer;
     private Gtk.SpinButton imap_port_spin;
     private Gtk.SpinButton imap_refresh_interval_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
     private ImapSavePage save_page;
+    private Adw.NavigationView navigation_view;
     private uint cancel_timeout_id = 0;
 
     private E.SourceRegistry? registry = null;
@@ -156,7 +159,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         smtp_credentials.attach (smtp_password_label, 0, 1);
         smtp_credentials.attach (smtp_password_entry, 1, 1);
 
-        var smtp_revealer = new Gtk.Revealer () {
+        smtp_revealer = new Gtk.Revealer () {
             child = smtp_credentials
         };
 
@@ -243,18 +246,16 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         main_box.append (smtp_server_grid);
         main_box.append (action_area);
 
-        var leaflet = new Adw.Leaflet () {
-            can_unfold = false,
-            can_navigate_back = true,
+        main_page = new Adw.NavigationPage (main_box, _("Credentials"));
+
+        navigation_view = new Adw.NavigationView () {
             hexpand = true,
             vexpand = true
         };
-        leaflet.append (login_page);
-        leaflet.append (main_box);
-        leaflet.append (save_page);
+        navigation_view.add (login_page);
 
         var window_handle = new Gtk.WindowHandle () {
-            child = leaflet
+            child = navigation_view
         };
 
         default_height = 475;
@@ -267,22 +268,21 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
         login_page.cancel.connect (destroy);
 
-        login_page.next_button.clicked.connect (() => {
-            leaflet.visible_child = main_box;
+        main_page.shown.connect (() => {
             default_widget = save_button;
+        });
+
+        login_page.next.connect (() => {
+            navigation_view.push (main_page);
+        });
+
+        login_page.shown.connect (() => {
+            default_widget = login_page.next_button;
         });
 
         save_page.close.connect (destroy);
 
-        save_page.back.connect (() => {
-            leaflet.navigate (Adw.NavigationDirection.BACK);
-            default_widget = save_button;
-        });
-
-        back_button.clicked.connect (() => {
-            leaflet.navigate (Adw.NavigationDirection.BACK);
-            default_widget = login_page.next_button;
-        });
+        back_button.clicked.connect (() => navigation_view.pop ());
 
         smtp_no_credentials.notify["active"].connect (() => {
             smtp_revealer.reveal_child = !smtp_no_credentials.active && !use_imap_credentials.active;
@@ -358,7 +358,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             }
             cancellable = new GLib.Cancellable ();
 
-            leaflet.visible_child = save_page;
+            navigation_view.push (save_page);
             save_page.show_busy (cancellable);
 
             save_configuration.begin ((obj, res) => {

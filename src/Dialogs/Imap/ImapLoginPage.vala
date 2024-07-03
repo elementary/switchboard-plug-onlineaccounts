@@ -18,8 +18,9 @@
 *
 */
 
-public class OnlineAccounts.ImapLoginPage : Gtk.Box {
+public class OnlineAccounts.ImapLoginPage : Adw.NavigationPage {
     public signal void cancel ();
+    public signal void next ();
 
     public string display_name { get; set; }
     public string email { get; set; }
@@ -31,7 +32,7 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
     private Granite.ValidatedEntry password_entry;
     private Granite.ValidatedEntry real_name_entry;
 
-    public Gtk.Button next_button { get; set; }
+    public Gtk.Button next_button { get; private set; }
 
     construct {
         Regex? email_regex = null;
@@ -103,21 +104,24 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
         action_area.append (cancel_button);
         action_area.append (next_button);
 
-        margin_start = 12;
-        margin_end = 12;
-        margin_top = 12;
-        margin_bottom = 12;
-        orientation = VERTICAL;
-        spacing = 6;
-        append (real_name_label);
-        append (real_name_entry);
-        append (email_label);
-        append (email_entry);
-        append (password_label);
-        append (password_entry);
-        append (display_name_label);
-        append (display_name_entry);
-        append (action_area);
+        var box = new Gtk.Box (VERTICAL, 6) {
+            margin_start = 12,
+            margin_end = 12,
+            margin_top = 12,
+            margin_bottom = 12,
+        };
+        box.append (real_name_label);
+        box.append (real_name_entry);
+        box.append (email_label);
+        box.append (email_entry);
+        box.append (password_label);
+        box.append (password_entry);
+        box.append (display_name_label);
+        box.append (display_name_entry);
+        box.append (action_area);
+
+        child = box;
+        title = _("Log In");
 
         bind_property ("email", email_entry, "text", BIDIRECTIONAL);
         email_entry.changed.connect (() => {
@@ -145,6 +149,10 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
 
         cancel_button.clicked.connect (() => {
             cancel ();
+        });
+
+        next_button.clicked.connect (() => {
+            next ();
         });
     }
 

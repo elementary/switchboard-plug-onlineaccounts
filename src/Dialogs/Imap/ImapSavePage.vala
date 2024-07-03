@@ -18,8 +18,7 @@
 *
 */
 
-public class OnlineAccounts.ImapSavePage : Gtk.Box {
-    public signal void back ();
+public class OnlineAccounts.ImapSavePage : Adw.NavigationPage {
     public signal void close ();
 
     private Gtk.Button close_button;
@@ -81,20 +80,23 @@ public class OnlineAccounts.ImapSavePage : Gtk.Box {
         action_area.append (back_button);
         action_area.append (close_button);
 
-        margin_top = 12;
-        margin_bottom = 12;
-        margin_start = 12;
-        margin_end = 12;
-        orientation = VERTICAL;
-        spacing = 6;
-        append (stack);
-        append (action_area);
+        var box = new Gtk.Box (VERTICAL, 6) {
+            margin_start = 12,
+            margin_end = 12,
+            margin_top = 12,
+            margin_bottom = 12,
+        };
+        box.append (stack);
+        box.append (action_area);
+
+        child = box;
 
         back_button.clicked.connect (() => {
             if (cancellable != null) {
                 cancellable.cancel ();
             }
-            back ();
+
+            ((Adw.NavigationView) get_ancestor (typeof (Adw.NavigationView))).pop ();
         });
 
         close_button.clicked.connect (() => {
