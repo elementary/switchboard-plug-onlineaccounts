@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-03 15:59+0000\n"
-"PO-Revision-Date: 2024-06-15 16:16+0000\n"
+"PO-Revision-Date: 2024-07-04 05:17+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-21 06:47+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:48
@@ -141,10 +141,8 @@ msgid "No authentication required"
 msgstr "No se requiere autenticación"
 
 #: src/Dialogs/Imap/ImapDialog.vala:249
-#, fuzzy
-#| msgid "Use IMAP Credentials"
 msgid "Credentials"
-msgstr "Usar credenciales IMAP"
+msgstr "Credenciales"
 
 #: src/Dialogs/Imap/ImapDialog.vala:397
 msgid "The data provided does not seem to reflect a valid mail account."
