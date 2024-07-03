@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 16:15+0000\n"
+"POT-Creation-Date: 2024-07-03 15:59+0000\n"
 "PO-Revision-Date: 2024-06-20 12:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -28,42 +28,42 @@ msgstr "Параметры онлайн-аккаунтов"
 msgid "Manage online accounts and connected applications"
 msgstr "Управление онлайн-аккаунтами и подключёнными приложениями"
 
-#: data/onlineaccounts.metainfo.xml.in:25
+#: data/onlineaccounts.metainfo.xml.in:26
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/onlineaccounts.metainfo.xml.in:32
-#: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:58
-#: data/onlineaccounts.metainfo.xml.in:80
+#: data/onlineaccounts.metainfo.xml.in:34
+#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/onlineaccounts.metainfo.xml.in:34
+#: data/onlineaccounts.metainfo.xml.in:36
 msgid "Fix freeze when an IMAP server sends no response"
 msgstr "Исправлено зависание, когда IMAP сервер не отвечал"
 
-#: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:48
-#: data/onlineaccounts.metainfo.xml.in:60
-#: data/onlineaccounts.metainfo.xml.in:82
+#: data/onlineaccounts.metainfo.xml.in:37
+#: data/onlineaccounts.metainfo.xml.in:50
+#: data/onlineaccounts.metainfo.xml.in:62
+#: data/onlineaccounts.metainfo.xml.in:84
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:49
 msgid "Update Mail and Tasks icons"
 msgstr "Обновлены иконки Почты и Задач"
 
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:76
+#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "New features:"
 msgstr "Новые возможности:"
 
-#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:71
 msgid "Added offline support for CalDAV accounts"
 msgstr "Добавлена офлайн поддержка CalDAV аккаунтов"
 
-#: data/onlineaccounts.metainfo.xml.in:78
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Choose refresh rate for IMAP"
 msgstr "Выбор частоты обновления для IMAP"
 

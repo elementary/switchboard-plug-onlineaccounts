@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-21 16:15+0000\n"
+"POT-Creation-Date: 2024-07-03 15:59+0000\n"
 "PO-Revision-Date: 2023-07-23 14:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -27,42 +27,42 @@ msgstr "オンラインアカウントの設定"
 msgid "Manage online accounts and connected applications"
 msgstr "オンラインアカウントと接続されたアプリケーションを管理します"
 
-#: data/onlineaccounts.metainfo.xml.in:25
+#: data/onlineaccounts.metainfo.xml.in:26
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/onlineaccounts.metainfo.xml.in:32
-#: data/onlineaccounts.metainfo.xml.in:45
-#: data/onlineaccounts.metainfo.xml.in:58
-#: data/onlineaccounts.metainfo.xml.in:80
+#: data/onlineaccounts.metainfo.xml.in:34
+#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:60
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/onlineaccounts.metainfo.xml.in:34
+#: data/onlineaccounts.metainfo.xml.in:36
 msgid "Fix freeze when an IMAP server sends no response"
 msgstr "IMAP サーバーが応答しない場合にフリーズする不具合を修正"
 
-#: data/onlineaccounts.metainfo.xml.in:35
-#: data/onlineaccounts.metainfo.xml.in:48
-#: data/onlineaccounts.metainfo.xml.in:60
-#: data/onlineaccounts.metainfo.xml.in:82
+#: data/onlineaccounts.metainfo.xml.in:37
+#: data/onlineaccounts.metainfo.xml.in:50
+#: data/onlineaccounts.metainfo.xml.in:62
+#: data/onlineaccounts.metainfo.xml.in:84
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/onlineaccounts.metainfo.xml.in:47
+#: data/onlineaccounts.metainfo.xml.in:49
 msgid "Update Mail and Tasks icons"
 msgstr "メールとタスクのアイコンを更新"
 
-#: data/onlineaccounts.metainfo.xml.in:67
-#: data/onlineaccounts.metainfo.xml.in:76
+#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:78
 msgid "New features:"
 msgstr "新機能:"
 
-#: data/onlineaccounts.metainfo.xml.in:69
+#: data/onlineaccounts.metainfo.xml.in:71
 msgid "Added offline support for CalDAV accounts"
 msgstr "CalDAV アカウントのオフライン機能に対応"
 
-#: data/onlineaccounts.metainfo.xml.in:78
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Choose refresh rate for IMAP"
 msgstr "IMAP の更新頻度を設定する機能を追加"
 

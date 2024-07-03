@@ -18,8 +18,9 @@
 *
 */
 
-public class OnlineAccounts.ImapLoginPage : Gtk.Box {
+public class OnlineAccounts.ImapLoginPage : Adw.NavigationPage {
     public signal void cancel ();
+    public signal void next ();
 
     public string display_name { get; set; }
     public string email { get; set; }
@@ -31,7 +32,7 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
     private Granite.ValidatedEntry password_entry;
     private Granite.ValidatedEntry real_name_entry;
 
-    public Gtk.Button next_button { get; set; }
+    public Gtk.Button next_button { get; private set; }
 
     construct {
         Regex? email_regex = null;
@@ -41,39 +42,47 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
             critical (e.message);
         }
 
-        var real_name_label = new Granite.HeaderLabel (_("Real Name"));
-
         real_name_entry = new Granite.ValidatedEntry () {
             is_valid = true,
+            input_purpose = NAME,
             text = Environment.get_real_name ()
         };
+        real_name_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
         real_name = real_name_entry.text;
 
-        var email_label = new Granite.HeaderLabel (_("Email"));
+        var real_name_label = new Granite.HeaderLabel (_("Real Name")) {
+            mnemonic_widget = real_name_entry
+        };
 
         email_entry = new Granite.ValidatedEntry.from_regex (email_regex) {
-            hexpand = true
+            hexpand = true,
+            input_purpose = EMAIL
         };
+        email_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
-        var password_label = new Granite.HeaderLabel (_("Password"));
+        var email_label = new Granite.HeaderLabel (_("Email")) {
+            mnemonic_widget = email_entry
+        };
 
         password_entry = new Granite.ValidatedEntry () {
-            input_purpose = Gtk.InputPurpose.PASSWORD,
+            input_purpose = PASSWORD,
             visibility = false
         };
+        password_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
-        var display_name_label = new Granite.HeaderLabel (_("Account Display Name"));
+        var password_label = new Granite.HeaderLabel (_("Password")) {
+            mnemonic_widget = password_entry
+        };
 
         display_name_entry = new Granite.ValidatedEntry () {
             hexpand = true
         };
+        display_name_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
-        var display_name_hint_label = new Gtk.Label (_("Pick a name like “Work” or “Personal” for the account.")) {
-            hexpand = true,
-            wrap = true,
-            xalign = 0
+        var display_name_label = new Granite.HeaderLabel (_("Account Display Name")) {
+            mnemonic_widget = display_name_entry,
+            secondary_text = _("Pick a name like “Work” or “Personal” for the account.")
         };
-        display_name_hint_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
             width_request = 86
@@ -95,22 +104,24 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
         action_area.append (cancel_button);
         action_area.append (next_button);
 
-        margin_start = 12;
-        margin_end = 12;
-        margin_top = 12;
-        margin_bottom = 12;
-        orientation = VERTICAL;
-        spacing = 6;
-        append (real_name_label);
-        append (real_name_entry);
-        append (email_label);
-        append (email_entry);
-        append (password_label);
-        append (password_entry);
-        append (display_name_label);
-        append (display_name_entry);
-        append (display_name_hint_label);
-        append (action_area);
+        var box = new Gtk.Box (VERTICAL, 6) {
+            margin_start = 12,
+            margin_end = 12,
+            margin_top = 12,
+            margin_bottom = 12,
+        };
+        box.append (real_name_label);
+        box.append (real_name_entry);
+        box.append (email_label);
+        box.append (email_entry);
+        box.append (password_label);
+        box.append (password_entry);
+        box.append (display_name_label);
+        box.append (display_name_entry);
+        box.append (action_area);
+
+        child = box;
+        title = _("Log In");
 
         bind_property ("email", email_entry, "text", BIDIRECTIONAL);
         email_entry.changed.connect (() => {
@@ -138,6 +149,10 @@ public class OnlineAccounts.ImapLoginPage : Gtk.Box {
 
         cancel_button.clicked.connect (() => {
             cancel ();
+        });
+
+        next_button.clicked.connect (() => {
+            next ();
         });
     }
 
