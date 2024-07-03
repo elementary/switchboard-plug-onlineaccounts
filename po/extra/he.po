@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-03 15:59+0000\n"
-"PO-Revision-Date: 2024-06-13 01:03+0000\n"
+"PO-Revision-Date: 2024-07-04 05:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -29,7 +29,7 @@ msgstr "ניהול חשבונות מקוונים ויישומים מקושרים
 
 #: data/onlineaccounts.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr "elementary בע״מ."
+msgstr "elementary בע״מ"
 
 #: data/onlineaccounts.metainfo.xml.in:34
 #: data/onlineaccounts.metainfo.xml.in:47
