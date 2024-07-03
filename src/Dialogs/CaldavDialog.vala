@@ -23,14 +23,18 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
     private Granite.ValidatedEntry url_entry;
     private Granite.ValidatedEntry username_entry;
     private Gtk.Button login_button;
+    private Gtk.Button save_configuration_back_button;
     private Gtk.Button save_configuration_button;
     private Gtk.Button save_configuration_close_button;
     private Gtk.Entry display_name_entry;
     private Gtk.Entry password_entry;
     private Gtk.ListBox calendars_list;
     private Gtk.Stack save_configuration_page_stack;
+    private Adw.NavigationPage calendars_page;
+    private Adw.NavigationPage save_configuration_page;
     private Adw.NavigationView navigation_view;
     private ListStore calendars_store;
+    private ValidationMessage url_message_revealer;
 
     private E.SourceRegistry? registry = null;
     private E.Source? source = null;
@@ -49,7 +53,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
             mnemonic_widget = url_entry
         };
 
-        var url_message_revealer = new ValidationMessage (_("Invalid URL"));
+        url_message_revealer = new ValidationMessage (_("Invalid URL"));
         url_message_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
         username_entry = new Granite.ValidatedEntry ();
@@ -165,7 +169,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         calendars_box.append (calendar_list_frame);
         calendars_box.append (calendar_page_action_area);
 
-        var calendars_page = new Adw.NavigationPage (calendars_box, _("Calendars"));
+        calendars_page = new Adw.NavigationPage (calendars_box, _("Calendars"));
 
         var save_configuration_busy_label = new Gtk.Label (_("Saving the configuration…"));
 
@@ -182,7 +186,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         };
         save_configuration_success_view.remove_css_class (Granite.STYLE_CLASS_VIEW);
 
-        var save_configuration_back_button = new Gtk.Button.with_label (_("Back")) {
+        save_configuration_back_button = new Gtk.Button.with_label (_("Back")) {
             width_request = 86
         };
 
@@ -219,7 +223,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
         save_configuration_box.append (save_configuration_page_stack);
         save_configuration_box.append (save_configuration_page_action_area);
 
-        var save_configuration_page = new Adw.NavigationPage (save_configuration_box, _("Save Configuration"));
+        save_configuration_page = new Adw.NavigationPage (save_configuration_box, _("Save Configuration"));
 
         navigation_view = new Adw.NavigationView () {
             hexpand = true,
