@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 23:51+0000\n"
+"POT-Creation-Date: 2024-07-03 15:59+0000\n"
 "PO-Revision-Date: 2022-10-04 21:31+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -27,28 +27,29 @@ msgstr "لینکەکە هەڵەیە"
 msgid "User Name"
 msgstr "ناوی بەکارهێنەر"
 
-#: src/Dialogs/CaldavDialog.vala:68 src/Dialogs/Imap/ImapLoginPage.vala:72
+#: src/Dialogs/CaldavDialog.vala:68 src/Dialogs/Imap/ImapLoginPage.vala:73
 msgid "Password"
 msgstr "تێپەڕەوشە"
 
-#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:86
+#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
 
-#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:221
+#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:224
+#: src/Dialogs/Imap/ImapLoginPage.vala:124
 msgid "Log In"
 msgstr "چوونەژورەوە"
 
-#: src/Dialogs/CaldavDialog.vala:112 src/Dialogs/Imap/ImapLoginPage.vala:81
+#: src/Dialogs/CaldavDialog.vala:112 src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Account Display Name"
 msgstr "ناوی دیاری هەژمار"
 
-#: src/Dialogs/CaldavDialog.vala:114 src/Dialogs/Imap/ImapLoginPage.vala:83
+#: src/Dialogs/CaldavDialog.vala:114 src/Dialogs/Imap/ImapLoginPage.vala:84
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "ناوێکی وەکو \"کار\" یان \"کەسی\" بۆ هەژمارەکە بنووسە."
 
 #: src/Dialogs/CaldavDialog.vala:137 src/Dialogs/CaldavDialog.vala:181
-#: src/Dialogs/Imap/ImapDialog.vala:217 src/Dialogs/Imap/ImapSavePage.vala:65
+#: src/Dialogs/Imap/ImapDialog.vala:220 src/Dialogs/Imap/ImapSavePage.vala:64
 msgid "Back"
 msgstr "گەڕانەوە"
 
@@ -68,7 +69,7 @@ msgstr "هەمووی تەواوە"
 msgid "CalDAV account saved."
 msgstr "هەژماری کاڵداب پاشەکەوتکرا."
 
-#: src/Dialogs/CaldavDialog.vala:185 src/Dialogs/Imap/ImapSavePage.vala:69
+#: src/Dialogs/CaldavDialog.vala:185 src/Dialogs/Imap/ImapSavePage.vala:68
 msgid "Close"
 msgstr "داخستن"
 
@@ -96,42 +97,48 @@ msgstr "نەتوانرا ڕۆژمێرەکان وەربگیرێن"
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr "پێ ناچێت زانیاری دابینکراو وێنەی هەژمارێکی دروستی کاڵداڤ بێت."
 
-#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:133
+#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136
 msgid "Username:"
 msgstr "ناوی بەکارهێنەر:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:144
+#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
 msgid "Password:"
 msgstr "تێپەڕەوشە:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:67 src/Dialogs/Imap/ImapDialog.vala:167
+#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
 msgid "Server URL:"
 msgstr "لینکی (URL) ڕاژەکار:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:176
+#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:179
 msgid "Port:"
 msgstr "پۆرت:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:85
+#: src/Dialogs/Imap/ImapDialog.vala:88
 msgid "Refresh Interval in Minutes:"
 msgstr "نوێکردنەوەی ئینتەرڤالەکان لە خولەکدا:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:94 src/Dialogs/Imap/ImapDialog.vala:185
+#: src/Dialogs/Imap/ImapDialog.vala:97 src/Dialogs/Imap/ImapDialog.vala:188
 msgid "None"
 msgstr "هیچ"
 
-#: src/Dialogs/Imap/ImapDialog.vala:99 src/Dialogs/Imap/ImapDialog.vala:190
+#: src/Dialogs/Imap/ImapDialog.vala:102 src/Dialogs/Imap/ImapDialog.vala:193
 msgid "Encryption:"
 msgstr "کۆدکردن:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:120
+#: src/Dialogs/Imap/ImapDialog.vala:123
 msgid "Use IMAP Credentials"
 msgstr "بەکارهێنانی زانیاری نهێنی IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:124
+#: src/Dialogs/Imap/ImapDialog.vala:127
 msgid "No authentication required"
 msgstr "هیچ سەلماندێک پێویست نییە"
+
+#: src/Dialogs/Imap/ImapDialog.vala:249
+#, fuzzy
+#| msgid "Use IMAP Credentials"
+msgid "Credentials"
+msgstr "بەکارهێنانی زانیاری نهێنی IMAP"
 
 #: src/Dialogs/Imap/ImapDialog.vala:397
 msgid "The data provided does not seem to reflect a valid mail account."
@@ -146,31 +153,31 @@ msgstr "نەتوانرا بکرێتەوە، تکایە دڵنیابە لە در�
 msgid "IMAP verification failed: %s"
 msgstr "سەلماندنی IMAP شکستی هێنا: %s"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:52
+#: src/Dialogs/Imap/ImapLoginPage.vala:53
 msgid "Real Name"
 msgstr "ناوی ڕاستەقینە"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:62
+#: src/Dialogs/Imap/ImapLoginPage.vala:63
 msgid "Email"
 msgstr "ئیمێڵ"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:90
+#: src/Dialogs/Imap/ImapLoginPage.vala:91
 msgid "Next"
 msgstr "دواتر"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:33
+#: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
 msgstr "ڕێکخستنی هەژماری پۆستە ئەلیکترۆنییەکە…"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:42
+#: src/Dialogs/Imap/ImapSavePage.vala:41
 msgid "Could not save the e-mail account"
 msgstr "نەتوانرا هەژماری پۆستە ئەلیکترۆنییەکە پاشەکەوت بکرێت"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:47
+#: src/Dialogs/Imap/ImapSavePage.vala:46
 msgid "Success"
 msgstr "سەرکەوتوو بوو"
 
-#: src/Dialogs/Imap/ImapSavePage.vala:48
+#: src/Dialogs/Imap/ImapSavePage.vala:47
 msgid "E-mail account saved."
 msgstr "هەژماری پۆستی ئەلیکترۆنی پاشەکەوت کرا."
 
