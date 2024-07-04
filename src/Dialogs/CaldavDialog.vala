@@ -560,7 +560,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
             !collection_source.has_extension (E.SOURCE_EXTENSION_COLLECTION) ||
             "webdav" != ((E.SourceCollection) collection_source.get_extension (E.SOURCE_EXTENSION_COLLECTION)).backend_name
         ) {
-            throw new Camel.Error.ERROR_GENERIC (_("The data provided does not seem to reflect a valid CalDav account."));
+            throw new Camel.Error.ERROR_GENERIC (_("The data provided does not seem to reflect a valid CalDAV account."));
         }
 
         registry = yield new E.SourceRegistry (cancellable);
