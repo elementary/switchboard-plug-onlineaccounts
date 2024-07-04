@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-04 07:06+0000\n"
-"PO-Revision-Date: 2024-07-04 05:17+0000\n"
+"PO-Revision-Date: 2024-07-05 07:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/he/>\n"
@@ -79,10 +79,8 @@ msgid "Close"
 msgstr "סגירה"
 
 #: src/Dialogs/CaldavDialog.vala:226
-#, fuzzy
-#| msgid "Saving the configuration…"
 msgid "Save Configuration"
-msgstr "ההגדרות נשמרות…"
+msgstr "שמירת הגדרות"
 
 #: src/Dialogs/CaldavDialog.vala:281
 msgid "Could not save configuration"
@@ -101,10 +99,8 @@ msgid "Could not fetch calendars"
 msgstr "לא ניתן למשוך לוחות שנה"
 
 #: src/Dialogs/CaldavDialog.vala:563
-#, fuzzy
-#| msgid "The data provided does not seem to reflect a valid CalDav account."
 msgid "The data provided does not seem to reflect a valid CalDAV account."
-msgstr "הנתונים שסופקו לא משקפים חשבון CalDav תקני."
+msgstr "הנתונים שסופקו לא משקפים חשבון CalDAV תקני."
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136
 msgid "Username:"
