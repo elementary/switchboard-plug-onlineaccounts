@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 15:59+0000\n"
+"POT-Creation-Date: 2024-07-04 05:17+0000\n"
 "PO-Revision-Date: 2016-06-03 03:10+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -18,87 +18,92 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
-#: src/Dialogs/CaldavDialog.vala:48
+#: src/Dialogs/CaldavDialog.vala:52
 msgid "Server URL"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:52
+#: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:58
+#: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:68 src/Dialogs/Imap/ImapLoginPage.vala:73
+#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:73
 msgid "Password"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:87
+#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
 msgstr "Utzi"
 
-#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:224
-#: src/Dialogs/Imap/ImapLoginPage.vala:124
+#: src/Dialogs/CaldavDialog.vala:80 src/Dialogs/CaldavDialog.vala:111
+#: src/Dialogs/Imap/ImapDialog.vala:224 src/Dialogs/Imap/ImapLoginPage.vala:124
 msgid "Log In"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:112 src/Dialogs/Imap/ImapLoginPage.vala:82
+#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Account Display Name"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:114 src/Dialogs/Imap/ImapLoginPage.vala:84
+#: src/Dialogs/CaldavDialog.vala:120 src/Dialogs/Imap/ImapLoginPage.vala:84
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:137 src/Dialogs/CaldavDialog.vala:181
+#: src/Dialogs/CaldavDialog.vala:143 src/Dialogs/CaldavDialog.vala:189
 #: src/Dialogs/Imap/ImapDialog.vala:220 src/Dialogs/Imap/ImapSavePage.vala:64
 msgid "Back"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:141
+#: src/Dialogs/CaldavDialog.vala:147
 msgid "Save"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:166
+#: src/Dialogs/CaldavDialog.vala:172 src/Dialogs/CaldavDialog.vala:366
+#: src/Plug.vala:73
+msgid "Calendars"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:174
 msgid "Saving the configuration…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:175
+#: src/Dialogs/CaldavDialog.vala:183
 msgid "All done"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:176
+#: src/Dialogs/CaldavDialog.vala:184
 #, fuzzy
 #| msgid "Account '%s' Removed."
 msgid "CalDAV account saved."
 msgstr "'%s' kontua ezabatu da."
 
-#: src/Dialogs/CaldavDialog.vala:185 src/Dialogs/Imap/ImapSavePage.vala:68
+#: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
 msgid "Close"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:268
+#: src/Dialogs/CaldavDialog.vala:226
+msgid "Save Configuration"
+msgstr ""
+
+#: src/Dialogs/CaldavDialog.vala:281
 msgid "Could not save configuration"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:355 src/Plug.vala:73
-msgid "Calendars"
-msgstr ""
-
-#: src/Dialogs/CaldavDialog.vala:357 src/Dialogs/CaldavDialog.vala:365
+#: src/Dialogs/CaldavDialog.vala:368 src/Dialogs/CaldavDialog.vala:376
 msgid "Task Lists"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:399
+#: src/Dialogs/CaldavDialog.vala:410
 msgid "Finding available calendars and tasks…"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:447
+#: src/Dialogs/CaldavDialog.vala:458
 msgid "Could not fetch calendars"
 msgstr ""
 
-#: src/Dialogs/CaldavDialog.vala:552
+#: src/Dialogs/CaldavDialog.vala:563
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr ""
 

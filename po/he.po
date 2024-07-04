@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 15:59+0000\n"
+"POT-Creation-Date: 2024-07-04 05:17+0000\n"
 "PO-Revision-Date: 2024-07-04 05:17+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -15,85 +15,92 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:48
+#: src/Dialogs/CaldavDialog.vala:52
 msgid "Server URL"
 msgstr "כתובת השרת"
 
-#: src/Dialogs/CaldavDialog.vala:52
+#: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
 msgstr "כתובת שגויה"
 
-#: src/Dialogs/CaldavDialog.vala:58
+#: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
 msgstr "שם משתמש"
 
-#: src/Dialogs/CaldavDialog.vala:68 src/Dialogs/Imap/ImapLoginPage.vala:73
+#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:73
 msgid "Password"
 msgstr "ססמה"
 
-#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:87
+#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
 msgstr "ביטול"
 
-#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapDialog.vala:224
-#: src/Dialogs/Imap/ImapLoginPage.vala:124
+#: src/Dialogs/CaldavDialog.vala:80 src/Dialogs/CaldavDialog.vala:111
+#: src/Dialogs/Imap/ImapDialog.vala:224 src/Dialogs/Imap/ImapLoginPage.vala:124
 msgid "Log In"
 msgstr "כניסה"
 
-#: src/Dialogs/CaldavDialog.vala:112 src/Dialogs/Imap/ImapLoginPage.vala:82
+#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Account Display Name"
 msgstr "שם תצוגת חשבון"
 
-#: src/Dialogs/CaldavDialog.vala:114 src/Dialogs/Imap/ImapLoginPage.vala:84
+#: src/Dialogs/CaldavDialog.vala:120 src/Dialogs/Imap/ImapLoginPage.vala:84
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "נא לבחור שם כמו „עבודה” או „פרטי” לחשבון."
 
-#: src/Dialogs/CaldavDialog.vala:137 src/Dialogs/CaldavDialog.vala:181
+#: src/Dialogs/CaldavDialog.vala:143 src/Dialogs/CaldavDialog.vala:189
 #: src/Dialogs/Imap/ImapDialog.vala:220 src/Dialogs/Imap/ImapSavePage.vala:64
 msgid "Back"
 msgstr "חזרה"
 
-#: src/Dialogs/CaldavDialog.vala:141
+#: src/Dialogs/CaldavDialog.vala:147
 msgid "Save"
 msgstr "שמירה"
 
-#: src/Dialogs/CaldavDialog.vala:166
-msgid "Saving the configuration…"
-msgstr "ההגדרות נשמרות…"
-
-#: src/Dialogs/CaldavDialog.vala:175
-msgid "All done"
-msgstr "הכול בוצע"
-
-#: src/Dialogs/CaldavDialog.vala:176
-msgid "CalDAV account saved."
-msgstr "חשבון CalDAV נשמר."
-
-#: src/Dialogs/CaldavDialog.vala:185 src/Dialogs/Imap/ImapSavePage.vala:68
-msgid "Close"
-msgstr "סגירה"
-
-#: src/Dialogs/CaldavDialog.vala:268
-msgid "Could not save configuration"
-msgstr "לא ניתן לשמור את ההגדרות"
-
-#: src/Dialogs/CaldavDialog.vala:355 src/Plug.vala:73
+#: src/Dialogs/CaldavDialog.vala:172 src/Dialogs/CaldavDialog.vala:366
+#: src/Plug.vala:73
 msgid "Calendars"
 msgstr "יומנים"
 
-#: src/Dialogs/CaldavDialog.vala:357 src/Dialogs/CaldavDialog.vala:365
+#: src/Dialogs/CaldavDialog.vala:174
+msgid "Saving the configuration…"
+msgstr "ההגדרות נשמרות…"
+
+#: src/Dialogs/CaldavDialog.vala:183
+msgid "All done"
+msgstr "הכול בוצע"
+
+#: src/Dialogs/CaldavDialog.vala:184
+msgid "CalDAV account saved."
+msgstr "חשבון CalDAV נשמר."
+
+#: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
+msgid "Close"
+msgstr "סגירה"
+
+#: src/Dialogs/CaldavDialog.vala:226
+#, fuzzy
+#| msgid "Saving the configuration…"
+msgid "Save Configuration"
+msgstr "ההגדרות נשמרות…"
+
+#: src/Dialogs/CaldavDialog.vala:281
+msgid "Could not save configuration"
+msgstr "לא ניתן לשמור את ההגדרות"
+
+#: src/Dialogs/CaldavDialog.vala:368 src/Dialogs/CaldavDialog.vala:376
 msgid "Task Lists"
 msgstr "רשימות משימות"
 
-#: src/Dialogs/CaldavDialog.vala:399
+#: src/Dialogs/CaldavDialog.vala:410
 msgid "Finding available calendars and tasks…"
 msgstr "איתור לוחות שנה ומשימות זמינים…"
 
-#: src/Dialogs/CaldavDialog.vala:447
+#: src/Dialogs/CaldavDialog.vala:458
 msgid "Could not fetch calendars"
 msgstr "לא ניתן למשוך לוחות שנה"
 
-#: src/Dialogs/CaldavDialog.vala:552
+#: src/Dialogs/CaldavDialog.vala:563
 msgid "The data provided does not seem to reflect a valid CalDav account."
 msgstr "הנתונים שסופקו לא משקפים חשבון CalDav תקני."
 
