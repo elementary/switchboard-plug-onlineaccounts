@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-04 07:06+0000\n"
-"PO-Revision-Date: 2024-07-04 05:17+0000\n"
+"PO-Revision-Date: 2024-07-05 07:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/es/>\n"
@@ -84,10 +84,8 @@ msgid "Close"
 msgstr "Cerrar"
 
 #: src/Dialogs/CaldavDialog.vala:226
-#, fuzzy
-#| msgid "Saving the configuration…"
 msgid "Save Configuration"
-msgstr "Guardando la configuración …"
+msgstr "Guardar configuración"
 
 #: src/Dialogs/CaldavDialog.vala:281
 msgid "Could not save configuration"
@@ -106,11 +104,9 @@ msgid "Could not fetch calendars"
 msgstr "No se pudo obtener los calendarios"
 
 #: src/Dialogs/CaldavDialog.vala:563
-#, fuzzy
-#| msgid "The data provided does not seem to reflect a valid CalDav account."
 msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
-"La información proporcionada no parece reflejar una cuenta CalDav válida."
+"La información proporcionada no parece reflejar una cuenta CalDAV válida."
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136
 msgid "Username:"
