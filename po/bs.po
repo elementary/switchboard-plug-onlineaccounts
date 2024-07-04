@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 05:17+0000\n"
+"POT-Creation-Date: 2024-07-04 07:06+0000\n"
 "PO-Revision-Date: 2018-11-09 18:59+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -104,7 +104,7 @@ msgid "Could not fetch calendars"
 msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:563
-msgid "The data provided does not seem to reflect a valid CalDav account."
+msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136

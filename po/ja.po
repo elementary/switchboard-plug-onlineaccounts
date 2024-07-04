@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 05:17+0000\n"
+"POT-Creation-Date: 2024-07-04 07:06+0000\n"
 "PO-Revision-Date: 2024-06-20 12:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -106,7 +106,9 @@ msgid "Could not fetch calendars"
 msgstr "カレンダーを取得できませんでした"
 
 #: src/Dialogs/CaldavDialog.vala:563
-msgid "The data provided does not seem to reflect a valid CalDav account."
+#, fuzzy
+#| msgid "The data provided does not seem to reflect a valid CalDav account."
+msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr "指定されたデータは適切な CalDav アカウントではない可能性があります。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 05:17+0000\n"
+"POT-Creation-Date: 2024-07-04 07:06+0000\n"
 "PO-Revision-Date: 2022-01-12 11:46+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -106,7 +106,9 @@ msgid "Could not fetch calendars"
 msgstr "Impossible de récupérer les calendriers"
 
 #: src/Dialogs/CaldavDialog.vala:563
-msgid "The data provided does not seem to reflect a valid CalDav account."
+#, fuzzy
+#| msgid "The data provided does not seem to reflect a valid CalDav account."
+msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
 "Les données fournies ne semblent pas correspondre à un compte CalDav valide."
 
