@@ -29,6 +29,16 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.0.0" date="2024-07-09" urgency="medium">
+      <description>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Improve screen reader accessibility</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="6.5.3" date="2023-06-29" urgency="medium">
       <description>
         <p>Minor updates:</p>
@@ -73,19 +83,7 @@
       </description>
     </release>
 
-    <release version="6.4.0" date="2022-04-06" urgency="medium">
-      <description>
-        <p>New features:</p>
-        <ul>
-          <li>Choose refresh rate for IMAP</li>
-        </ul>
-        <p>Minor updates:</p>
-        <ul>
-          <li>Updated translations</li>
-        </ul>
-      </description>
-    </release>
-
+    <release version="6.4.0" date="2022-04-06" urgency="medium" />
     <release version="6.3.0" date="2021-12-13" urgency="medium" />
     <release version="6.2.1" date="2021-09-28" urgency="medium" />
     <release version="6.2.0" date="2021-08-25" urgency="medium" />
