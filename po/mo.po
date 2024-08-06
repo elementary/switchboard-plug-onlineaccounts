@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: online-accounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2019-10-16 20:24+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Moldovan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/mo/>\n"
 "Language: mo\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: src/Dialogs/CaldavDialog.vala:52
 msgid "Server URL"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL invalid"
 
 #: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
-msgstr ""
+msgstr "Anulare"
 
 #: src/Dialogs/CaldavDialog.vala:80 src/Dialogs/CaldavDialog.vala:111
 #: src/Dialogs/Imap/ImapDialog.vala:224 src/Dialogs/Imap/ImapLoginPage.vala:124
@@ -112,7 +112,7 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
 msgid "Password:"
-msgstr ""
+msgstr "Parola:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
 msgid "Server URL:"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:179
 msgid "Port:"
-msgstr ""
+msgstr "Poartă:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:88
 msgid "Refresh Interval in Minutes:"
@@ -166,11 +166,11 @@ msgstr ""
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:63
 msgid "Email"
-msgstr ""
+msgstr "Poșta"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:91
 msgid "Next"
-msgstr ""
+msgstr "Înainte"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
