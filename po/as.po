@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: online-accounts-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2018-09-13 18:54+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Assamese <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/as/>\n"
 "Language: as\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: src/Dialogs/CaldavDialog.vala:52
 msgid "Server URL"
@@ -34,7 +37,7 @@ msgstr ""
 
 #: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
-msgstr ""
+msgstr "বাতিল কৰক"
 
 #: src/Dialogs/CaldavDialog.vala:80 src/Dialogs/CaldavDialog.vala:111
 #: src/Dialogs/Imap/ImapDialog.vala:224 src/Dialogs/Imap/ImapLoginPage.vala:124
