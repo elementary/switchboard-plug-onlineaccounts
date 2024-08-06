@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2016-09-29 12:26+0000\n"
-"Last-Translator: Адмирал АнимЕ <Unknown>\n"
-"Language-Team: Bulgarian <bg@li.org>\n"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Bulgarian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-onlineaccounts/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
 
 #: src/Dialogs/CaldavDialog.vala:52
 #, fuzzy
@@ -26,7 +28,7 @@ msgstr "Сървър"
 
 #: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
-msgstr ""
+msgstr "Недействителен адрес"
 
 #: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
@@ -83,7 +85,7 @@ msgstr "Абонаментът '%s' е премахнат."
 
 #: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 #: src/Dialogs/CaldavDialog.vala:226
 msgid "Save Configuration"
@@ -114,10 +116,8 @@ msgid "Username:"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Парола"
+msgstr "Парола:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
 #, fuzzy
@@ -179,7 +179,7 @@ msgstr "Ел. поща"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:91
 msgid "Next"
-msgstr ""
+msgstr "Следващ"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
