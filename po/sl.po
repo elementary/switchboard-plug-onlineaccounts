@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2018-03-22 00:05+0000\n"
-"Last-Translator: Jernej Virag <jernej@virag.si>\n"
-"Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:52
@@ -29,7 +29,7 @@ msgstr "Strežnik"
 
 #: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
-msgstr ""
+msgstr "Neveljaven URL"
 
 #: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
@@ -86,7 +86,7 @@ msgstr "Poštni račun"
 
 #: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
 msgid "Close"
-msgstr ""
+msgstr "Zapri"
 
 #: src/Dialogs/CaldavDialog.vala:226
 msgid "Save Configuration"
@@ -117,10 +117,8 @@ msgid "Username:"
 msgstr ""
 
 #: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
-#, fuzzy
-#| msgid "Password"
 msgid "Password:"
-msgstr "Geslo"
+msgstr "Geslo:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
 #, fuzzy
@@ -130,7 +128,7 @@ msgstr "Strežnik"
 
 #: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:179
 msgid "Port:"
-msgstr ""
+msgstr "Vrata:"
 
 #: src/Dialogs/Imap/ImapDialog.vala:88
 msgid "Refresh Interval in Minutes:"
@@ -184,7 +182,7 @@ msgstr "Elektronska pošta"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:91
 msgid "Next"
-msgstr ""
+msgstr "Naprej"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
