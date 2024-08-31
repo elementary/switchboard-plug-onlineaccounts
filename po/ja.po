@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2024-07-05 07:16+0000\n"
+"PO-Revision-Date: 2024-09-01 08:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/ja/>\n"
@@ -26,7 +26,7 @@ msgstr "サーバーの URL"
 
 #: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
-msgstr "不適切な URL です"
+msgstr "無効な URL です"
 
 #: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
