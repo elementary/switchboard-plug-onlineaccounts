@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2024-09-05 21:13+0000\n"
+"PO-Revision-Date: 2024-09-14 02:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-onlineaccounts/zh_Hant/>\n"
@@ -21,10 +21,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:52
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL"
-msgstr "伺服器"
+msgstr "伺服器網址"
 
 #: src/Dialogs/CaldavDialog.vala:56
 msgid "Invalid URL"
@@ -32,7 +30,7 @@ msgstr "無效的網址"
 
 #: src/Dialogs/CaldavDialog.vala:62
 msgid "User Name"
-msgstr ""
+msgstr "使用者名稱"
 
 #: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:73
 msgid "Password"
@@ -49,11 +47,11 @@ msgstr "登入"
 
 #: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Account Display Name"
-msgstr ""
+msgstr "帳號顯示名稱"
 
 #: src/Dialogs/CaldavDialog.vala:120 src/Dialogs/Imap/ImapLoginPage.vala:84
 msgid "Pick a name like “Work” or “Personal” for the account."
-msgstr ""
+msgstr "為帳號選一個名稱，像是「工作」或「個人」。"
 
 #: src/Dialogs/CaldavDialog.vala:143 src/Dialogs/CaldavDialog.vala:189
 #: src/Dialogs/Imap/ImapDialog.vala:220 src/Dialogs/Imap/ImapSavePage.vala:64
@@ -62,7 +60,7 @@ msgstr "返回"
 
 #: src/Dialogs/CaldavDialog.vala:147
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: src/Dialogs/CaldavDialog.vala:172 src/Dialogs/CaldavDialog.vala:366
 #: src/Plug.vala:73
@@ -71,17 +69,15 @@ msgstr "行事曆"
 
 #: src/Dialogs/CaldavDialog.vala:174
 msgid "Saving the configuration…"
-msgstr ""
+msgstr "正在儲存設定…"
 
 #: src/Dialogs/CaldavDialog.vala:183
 msgid "All done"
-msgstr ""
+msgstr "完成"
 
 #: src/Dialogs/CaldavDialog.vala:184
-#, fuzzy
-#| msgid "Mail Account"
 msgid "CalDAV account saved."
-msgstr "郵件帳號"
+msgstr "CalDAV 帳號已儲存。"
 
 #: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
 msgid "Close"
@@ -89,41 +85,39 @@ msgstr "關閉"
 
 #: src/Dialogs/CaldavDialog.vala:226
 msgid "Save Configuration"
-msgstr ""
+msgstr "儲存設定"
 
 #: src/Dialogs/CaldavDialog.vala:281
 msgid "Could not save configuration"
-msgstr ""
+msgstr "無法儲存設定"
 
 #: src/Dialogs/CaldavDialog.vala:368 src/Dialogs/CaldavDialog.vala:376
 msgid "Task Lists"
-msgstr ""
+msgstr "待辦清單"
 
 #: src/Dialogs/CaldavDialog.vala:410
 msgid "Finding available calendars and tasks…"
-msgstr ""
+msgstr "正在尋找可用的行事曆與待辦事項…"
 
 #: src/Dialogs/CaldavDialog.vala:458
 msgid "Could not fetch calendars"
-msgstr ""
+msgstr "無法取得行事曆"
 
 #: src/Dialogs/CaldavDialog.vala:563
 msgid "The data provided does not seem to reflect a valid CalDAV account."
-msgstr ""
+msgstr "提供的資料似乎並沒有反映有效的 CalDAV 帳號。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136
 msgid "Username:"
-msgstr ""
+msgstr "使用者名稱："
 
 #: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
 msgid "Password:"
 msgstr "密碼："
 
 #: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
-#, fuzzy
-#| msgid "Server"
 msgid "Server URL:"
-msgstr "伺服器"
+msgstr "伺服器網址："
 
 #: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:179
 msgid "Port:"
@@ -131,7 +125,7 @@ msgstr "連接埠："
 
 #: src/Dialogs/Imap/ImapDialog.vala:88
 msgid "Refresh Interval in Minutes:"
-msgstr ""
+msgstr "更新間隔（分鐘）："
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
 #: src/Dialogs/Imap/ImapDialog.vala:97 src/Dialogs/Imap/ImapDialog.vala:188
@@ -144,36 +138,32 @@ msgstr "加密："
 
 #: src/Dialogs/Imap/ImapDialog.vala:123
 msgid "Use IMAP Credentials"
-msgstr "使用 IMAP 憑證"
+msgstr "使用 IMAP 登入資訊"
 
 #: src/Dialogs/Imap/ImapDialog.vala:127
 msgid "No authentication required"
 msgstr "不需核對身份"
 
 #: src/Dialogs/Imap/ImapDialog.vala:249
-#, fuzzy
-#| msgid "Use IMAP Credentials"
 msgid "Credentials"
-msgstr "使用 IMAP 憑證"
+msgstr "登入資訊"
 
 #: src/Dialogs/Imap/ImapDialog.vala:397
 msgid "The data provided does not seem to reflect a valid mail account."
-msgstr ""
+msgstr "提供的資料似乎並沒有反映有效的郵件帳號。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:638
-#, fuzzy
-#| msgid "Please enter your credentials…"
 msgid "Could not log in. Please verify your credentials."
-msgstr "請輸入您的憑證資訊…"
+msgstr "無法登入。請檢查您的登入資訊。"
 
 #: src/Dialogs/Imap/ImapDialog.vala:652
 #, c-format
 msgid "IMAP verification failed: %s"
-msgstr ""
+msgstr "IMAP 驗證失敗：%s"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:53
 msgid "Real Name"
-msgstr ""
+msgstr "本名"
 
 #: src/Dialogs/Imap/ImapLoginPage.vala:63
 msgid "Email"
@@ -185,21 +175,19 @@ msgstr "下一個"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:32
 msgid "Setting up the e-mail account…"
-msgstr ""
+msgstr "正在設定電子郵件帳號…"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:41
 msgid "Could not save the e-mail account"
-msgstr ""
+msgstr "無法儲存電子郵件帳號"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:46
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: src/Dialogs/Imap/ImapSavePage.vala:47
-#, fuzzy
-#| msgid "Mail Account"
 msgid "E-mail account saved."
-msgstr "郵件帳號"
+msgstr "電子郵件帳號已儲存。"
 
 #: src/MainView.vala:27 src/Plug.vala:30
 msgid "Online Accounts"
@@ -211,66 +199,58 @@ msgstr "連接您的線上帳號"
 
 #: src/MainView.vala:37
 msgid "Connect online accounts by clicking the icon in the toolbar below."
-msgstr ""
+msgstr "點擊下方工具列的圖示來連接線上帳號。"
 
 #: src/MainView.vala:53 src/Plug.vala:72
 msgid "CalDAV"
-msgstr ""
+msgstr "CalDAV"
 
 #: src/MainView.vala:54
-#, fuzzy
-#| msgid "Calendars"
 msgid "Calendars and Tasks"
-msgstr "行事曆"
+msgstr "行事曆與待辦事項"
 
 #: src/MainView.vala:59 src/Plug.vala:74
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/MainView.vala:60 src/Plug.vala:75
 msgid "Mail"
-msgstr ""
+msgstr "郵件"
 
 #: src/MainView.vala:76
-#, fuzzy
-#| msgid "Add a new account…"
 msgid "Add Account…"
-msgstr "加入新帳號..."
+msgstr "加入新帳號…"
 
 #: src/MainView.vala:144
 msgid "Remove this account"
-msgstr ""
+msgstr "移除這個帳號"
 
 #: src/MainView.vala:157
-#, fuzzy
-#| msgid "Other Account"
 msgid "Edit this account"
-msgstr "其他帳號"
+msgstr "編輯這個帳號"
 
 #: src/MainView.vala:182
 #, c-format
 msgid "Remove “%s” from this device"
-msgstr ""
+msgstr "從此裝置移除「%s」"
 
 #: src/MainView.vala:183
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
-msgstr ""
+msgstr "這個帳號會被移除，並不再出現於此裝置的任何應用程式中。"
 
 #: src/MainView.vala:191
 msgid "Remove Account"
 msgstr "移除帳號"
 
 #: src/MainView.vala:217 src/MainView.vala:245
-#, fuzzy
-#| msgid "Mail Account"
 msgid "Edit account failed"
-msgstr "郵件帳號"
+msgstr "編輯帳號失敗了"
 
 #: src/MainView.vala:218 src/MainView.vala:246
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
-msgstr ""
+msgstr "讀取「%s」的設定時發生非預期的錯誤。"
 
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
