@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 19:06+0000\n"
+"POT-Creation-Date: 2024-09-18 16:16+0000\n"
 "PO-Revision-Date: 2019-05-10 13:03-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -32,34 +32,40 @@ msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:34
 #: data/onlineaccounts.metainfo.xml.in:44
-#: data/onlineaccounts.metainfo.xml.in:57
-#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
+msgid "Fix icon in the Feedback app"
 msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:60
-#: data/onlineaccounts.metainfo.xml.in:72
+#: data/onlineaccounts.metainfo.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr ""
 
 #: data/onlineaccounts.metainfo.xml.in:46
+msgid "Improve screen reader accessibility"
+msgstr ""
+
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Fix freeze when an IMAP server sends no response"
 msgstr ""
 
-#: data/onlineaccounts.metainfo.xml.in:59
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Update Mail and Tasks icons"
 msgstr ""
 
-#: data/onlineaccounts.metainfo.xml.in:79
+#: data/onlineaccounts.metainfo.xml.in:89
 msgid "New features:"
 msgstr ""
 
-#: data/onlineaccounts.metainfo.xml.in:81
+#: data/onlineaccounts.metainfo.xml.in:91
 msgid "Added offline support for CalDAV accounts"
 msgstr ""
