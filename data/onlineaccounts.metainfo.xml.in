@@ -6,7 +6,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
 
-  <icon type="stock">io.elementary.settings.online-accounts</icon>
+  <icon type="stock">io.elementary.settings.onlineaccounts</icon>
   <name>Online Accounts Settings</name>
   <summary>Manage online accounts and connected applications</summary>
 
