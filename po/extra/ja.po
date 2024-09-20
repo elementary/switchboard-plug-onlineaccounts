@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-18 16:16+0000\n"
-"PO-Revision-Date: 2024-07-10 20:16+0000\n"
+"PO-Revision-Date: 2024-09-20 12:45+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -41,7 +41,7 @@ msgstr "そのほかのアップデート:"
 
 #: data/onlineaccounts.metainfo.xml.in:36
 msgid "Fix icon in the Feedback app"
-msgstr ""
+msgstr "“フィードバック”アプリでのアイコンを修正"
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
