@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-18 16:16+0000\n"
-"PO-Revision-Date: 2024-07-21 09:16+0000\n"
-"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"PO-Revision-Date: 2024-09-22 14:53+0000\n"
+"Last-Translator: Marcin Serwin <marcin@serwin.dev>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/pl/>\n"
 "Language: pl\n"
@@ -42,7 +42,7 @@ msgstr "Mniejsze aktualizacje:"
 
 #: data/onlineaccounts.metainfo.xml.in:36
 msgid "Fix icon in the Feedback app"
-msgstr ""
+msgstr "Naprawiono ikonę w aplikacji Feedback"
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
