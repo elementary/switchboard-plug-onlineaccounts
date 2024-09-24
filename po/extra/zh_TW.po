@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2024-09-14 02:16+0000\n"
+"POT-Creation-Date: 2024-09-18 16:16+0000\n"
+"PO-Revision-Date: 2024-09-19 10:09+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/online-accounts-extra/zh_Hant/>\n"
@@ -33,34 +33,40 @@ msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:34
 #: data/onlineaccounts.metainfo.xml.in:44
-#: data/onlineaccounts.metainfo.xml.in:57
-#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "小型更新："
 
 #: data/onlineaccounts.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
-msgstr "改善螢幕閱讀器輔助"
+msgid "Fix icon in the Feedback app"
+msgstr "修正《回饋》應用程式中的圖示"
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:60
-#: data/onlineaccounts.metainfo.xml.in:72
+#: data/onlineaccounts.metainfo.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "翻譯更新"
 
 #: data/onlineaccounts.metainfo.xml.in:46
+msgid "Improve screen reader accessibility"
+msgstr "改善螢幕閱讀器輔助"
+
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Fix freeze when an IMAP server sends no response"
 msgstr "修正 IMAP 伺服器沒有回應時應用程式會鎖住的問題"
 
-#: data/onlineaccounts.metainfo.xml.in:59
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Update Mail and Tasks icons"
 msgstr "更新郵件和待辦事項的圖示"
 
-#: data/onlineaccounts.metainfo.xml.in:79
+#: data/onlineaccounts.metainfo.xml.in:89
 msgid "New features:"
 msgstr "新功能："
 
-#: data/onlineaccounts.metainfo.xml.in:81
+#: data/onlineaccounts.metainfo.xml.in:91
 msgid "Added offline support for CalDAV accounts"
 msgstr "新增 CalDAV 帳號線下功能的支援"

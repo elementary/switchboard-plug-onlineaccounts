@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2024-07-10 20:16+0000\n"
+"POT-Creation-Date: 2024-09-18 16:16+0000\n"
+"PO-Revision-Date: 2024-09-20 12:45+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/ja/>\n"
@@ -33,35 +33,41 @@ msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:34
 #: data/onlineaccounts.metainfo.xml.in:44
-#: data/onlineaccounts.metainfo.xml.in:57
-#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
 #: data/onlineaccounts.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
-msgstr "スクリーンリーダーのアクセシビリティを改善"
+msgid "Fix icon in the Feedback app"
+msgstr "“フィードバック”アプリでのアイコンを修正"
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:60
-#: data/onlineaccounts.metainfo.xml.in:72
+#: data/onlineaccounts.metainfo.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
 #: data/onlineaccounts.metainfo.xml.in:46
+msgid "Improve screen reader accessibility"
+msgstr "スクリーンリーダーのアクセシビリティを改善"
+
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Fix freeze when an IMAP server sends no response"
 msgstr "IMAP サーバーが応答しない場合にフリーズする不具合を修正"
 
-#: data/onlineaccounts.metainfo.xml.in:59
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Update Mail and Tasks icons"
 msgstr "メールとタスクのアイコンを更新"
 
-#: data/onlineaccounts.metainfo.xml.in:79
+#: data/onlineaccounts.metainfo.xml.in:89
 msgid "New features:"
 msgstr "新機能:"
 
-#: data/onlineaccounts.metainfo.xml.in:81
+#: data/onlineaccounts.metainfo.xml.in:91
 msgid "Added offline support for CalDAV accounts"
 msgstr "CalDAV アカウントのオフライン機能に対応"
 

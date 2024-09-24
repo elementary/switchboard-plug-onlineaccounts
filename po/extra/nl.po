@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 19:06+0000\n"
-"PO-Revision-Date: 2024-08-17 10:16+0000\n"
+"POT-Creation-Date: 2024-09-18 16:16+0000\n"
+"PO-Revision-Date: 2024-09-22 14:53+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/nl/>\n"
@@ -34,37 +34,43 @@ msgstr "elementary, Inc."
 
 #: data/onlineaccounts.metainfo.xml.in:34
 #: data/onlineaccounts.metainfo.xml.in:44
-#: data/onlineaccounts.metainfo.xml.in:57
-#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:54
+#: data/onlineaccounts.metainfo.xml.in:67
+#: data/onlineaccounts.metainfo.xml.in:80
 msgid "Minor updates:"
 msgstr "Kleine updates:"
 
 #: data/onlineaccounts.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
-msgstr ""
+msgid "Fix icon in the Feedback app"
+msgstr "Verbeter icoon in de feedback app"
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
-#: data/onlineaccounts.metainfo.xml.in:60
-#: data/onlineaccounts.metainfo.xml.in:72
+#: data/onlineaccounts.metainfo.xml.in:57
+#: data/onlineaccounts.metainfo.xml.in:70
+#: data/onlineaccounts.metainfo.xml.in:82
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
 
 #: data/onlineaccounts.metainfo.xml.in:46
+msgid "Improve screen reader accessibility"
+msgstr "Verbeter toegankelijkheid van de schermlezer"
+
+#: data/onlineaccounts.metainfo.xml.in:56
 msgid "Fix freeze when an IMAP server sends no response"
-msgstr ""
+msgstr "Verbeter bevriezen wanneer een IMAP server geen respons stuurt"
 
-#: data/onlineaccounts.metainfo.xml.in:59
+#: data/onlineaccounts.metainfo.xml.in:69
 msgid "Update Mail and Tasks icons"
-msgstr ""
+msgstr "Werk Mail en Taken iconen bij"
 
-#: data/onlineaccounts.metainfo.xml.in:79
+#: data/onlineaccounts.metainfo.xml.in:89
 msgid "New features:"
 msgstr "Nieuwe functionaliteit:"
 
-#: data/onlineaccounts.metainfo.xml.in:81
+#: data/onlineaccounts.metainfo.xml.in:91
 msgid "Added offline support for CalDAV accounts"
-msgstr ""
+msgstr "Offline ondersteuning voor CalDAV accounts toegevoegd"
 
 #, fuzzy
 #~| msgid "Major redesign"
