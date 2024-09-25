@@ -1,3 +1,9 @@
+io.elementary.settings.onlineaccounts (8.0.1) noble; urgency=medium
+
+  * New upstream release
+
+ -- Danielle Foré <danielle@elementary.io>  Wed, 25 Sep 2024 10:01:10 -0700
+
 io.elementary.settings.onlineaccounts (8.0.0) noble; urgency=medium
 
   * New upstream release
