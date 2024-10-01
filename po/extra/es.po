@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-18 16:16+0000\n"
-"PO-Revision-Date: 2024-07-10 20:16+0000\n"
+"PO-Revision-Date: 2024-10-02 18:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/es/>\n"
@@ -41,7 +41,7 @@ msgstr "Actualizaciones menores:"
 
 #: data/onlineaccounts.metainfo.xml.in:36
 msgid "Fix icon in the Feedback app"
-msgstr ""
+msgstr "Se corrigió el icono en la aplicación de Comentarios"
 
 #: data/onlineaccounts.metainfo.xml.in:37
 #: data/onlineaccounts.metainfo.xml.in:47
