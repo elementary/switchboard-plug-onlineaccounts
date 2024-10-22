@@ -16,6 +16,7 @@ hicolor_dir = join_paths(datadir, 'icons', 'hicolor')
 
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
+    '-DG_LOG_DOMAIN="@0@"'.format(gettext_name),
     language:'c'
 )
 
