@@ -79,7 +79,8 @@ public class OnlineAccounts.MainView : Switchboard.SettingsPage {
             popover = add_account_popover,
             direction = UP,
             has_frame = false,
-            child = add_button_content
+            child = add_button_content,
+            margin_top = 3
         };
         add_button.add_css_class (Granite.STYLE_CLASS_FLAT);
 
