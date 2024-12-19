@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-18 16:16+0000\n"
-"PO-Revision-Date: 2024-09-22 14:53+0000\n"
+"PO-Revision-Date: 2024-12-20 08:28+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "online-accounts-extra/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/onlineaccounts.metainfo.xml.in:10
 msgid "Online Accounts Settings"
@@ -66,7 +66,7 @@ msgstr "Werk Mail en Taken iconen bij"
 
 #: data/onlineaccounts.metainfo.xml.in:89
 msgid "New features:"
-msgstr "Nieuwe functionaliteit:"
+msgstr "Nieuwe functies:"
 
 #: data/onlineaccounts.metainfo.xml.in:91
 msgid "Added offline support for CalDAV accounts"
