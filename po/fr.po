@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-18 16:16+0000\n"
-"PO-Revision-Date: 2024-07-05 07:16+0000\n"
-"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
+"PO-Revision-Date: 2025-02-07 15:16+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-onlineaccounts/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:52
@@ -93,7 +93,7 @@ msgstr "Impossible d'enregistrer la configuration"
 
 #: src/Dialogs/CaldavDialog.vala:368 src/Dialogs/CaldavDialog.vala:376
 msgid "Task Lists"
-msgstr "Listes de tâche"
+msgstr "Listes de tâches"
 
 #: src/Dialogs/CaldavDialog.vala:410
 msgid "Finding available calendars and tasks…"
