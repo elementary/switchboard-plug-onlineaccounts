@@ -60,12 +60,19 @@ public class OnlineAccounts.MainView : Switchboard.SettingsPage {
             _("Mail")
         );
 
+        var webdav_menuitem = new AccountMenuItem (
+            "folder-remote",
+            _("WebDAV"),
+            _("Files")
+        );
+
         var add_acount_box = new Gtk.Box (VERTICAL, 0) {
             margin_top = 3,
             margin_bottom = 3
         };
         add_acount_box.append (caldav_menuitem);
         add_acount_box.append (imap_menuitem);
+        add_acount_box.append (webdav_menuitem);
 
         var add_account_popover = new Gtk.Popover () {
             child = add_acount_box
@@ -112,6 +119,14 @@ public class OnlineAccounts.MainView : Switchboard.SettingsPage {
                 transient_for = (Gtk.Window) get_root ()
             };
             imap_dialog.present ();
+        });
+
+        webdav_menuitem.clicked.connect (() => {
+            add_account_popover.popdown ();
+            var wevdav_dialog = new WebDavDialog () {
+                transient_for = (Gtk.Window) get_root ()
+            };
+            wevdav_dialog.present ();
         });
     }
 

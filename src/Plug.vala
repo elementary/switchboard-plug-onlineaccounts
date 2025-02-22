@@ -56,6 +56,9 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
     }
 
     public override void shown () {
+        var provider = new Gtk.CssProvider ();
+        provider.load_from_resource ("/io/elementary/settings/onlineaccounts/plug.css");
+        Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
     }
 
     public override void hidden () {

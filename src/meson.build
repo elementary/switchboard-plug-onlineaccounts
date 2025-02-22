@@ -1,6 +1,7 @@
 plug_files = files(
     'AccountsModel.vala',
     'Dialogs/CaldavDialog.vala',
+    'Dialogs' / 'WebDavDialog.vala',
     'Dialogs/Imap/CamelSession.vala',
     'Dialogs/Imap/ImapDialog.vala',
     'Dialogs/Imap/ImapSavePage.vala',
@@ -8,6 +9,7 @@ plug_files = files(
     'MainView.vala',
     'Plug.vala',
     'Widgets/AccountMenuItem.vala',
+    'Widgets' / 'FinalizePage.vala',
     'Widgets/ValidationMessage.vala'
 )
 
