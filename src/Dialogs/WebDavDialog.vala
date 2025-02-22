@@ -12,10 +12,13 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
     private Gtk.PasswordEntry password_entry;
     private ValidationMessage url_message_revealer;
 
+    private GLib.Cancellable cancellable;
+
     construct {
         url_entry = new Granite.ValidatedEntry () {
             hexpand = true,
-            input_purpose = URL
+            input_purpose = URL,
+            placeholder_text = "https://webdav.example.com"
         };
         url_entry.update_property (Gtk.AccessibleProperty.REQUIRED, true, -1);
 
@@ -23,7 +26,7 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
             mnemonic_widget = url_entry
         };
 
-        url_message_revealer = new ValidationMessage (_("Invalid URL"));
+        url_message_revealer = new ValidationMessage (_("URL must begin with “http://” or “https://”"));
         url_message_revealer.label_widget.add_css_class (Granite.STYLE_CLASS_ERROR);
 
         username_entry = new Granite.ValidatedEntry ();
@@ -34,7 +37,8 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
         };
 
         password_entry = new Gtk.PasswordEntry () {
-            activates_default = true
+            activates_default = true,
+            show_peek_icon = true
         };
 
         var password_label = new Granite.HeaderLabel (_("Password")) {
@@ -123,6 +127,73 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
 
             validate_form ();
         });
+
+        login_button.clicked.connect (() => {
+            connect_to_server.begin ((obj, res) => {
+                try {
+                    connect_to_server.end (res);
+                    critical ("success!");
+                } catch (GLib.IOError.ALREADY_MOUNTED e) {
+                    critical ("already mounted");
+                } catch (Error e) {
+                    critical (e.message);
+                } finally {
+                    cancellable = null;
+                }
+            });
+        });
+    }
+
+    private async void connect_to_server () throws Error {
+        var server_uri = Uri.parse (url_entry.text, NONE);
+        var host = server_uri.get_host ();
+
+        /* Fastmail keeps special folders in the toplevel, actual files are in a subfolder
+         * https://www.fastmail.help/hc/en-us/articles/1500000277882-Remote-file-access
+         */
+        if (host == "webdav.fastmail.com") {
+            host = "myfiles.fastmail.com";
+        }
+
+        var port = 80;
+        var scheme = "dav";
+        if (server_uri.get_scheme () == "https") {
+            scheme = "davs";
+            port = 443;
+        }
+
+        var uri = GLib.Uri.build_with_user (
+            NONE,
+            scheme,
+            username_entry.text,
+            null,
+            null,
+            host,
+            port,
+            "",
+            null,
+            null
+        );
+
+        var file = File.new_for_uri (uri.to_string ());
+
+        var mount_operation = new GLib.MountOperation () {
+            domain = host,
+            username = username_entry.text
+        };
+
+        var password = password_entry.text;
+        if (password != null && password != "") {
+            mount_operation.password = password ;
+            mount_operation.password_save = PERMANENTLY;
+            mount_operation.ask_password.connect (() => {
+                mount_operation.reply (HANDLED);
+            });
+        }
+
+        cancellable = new GLib.Cancellable ();
+
+        yield file.mount_enclosing_volume (NONE, mount_operation, cancellable);
     }
 
     private bool is_valid_url (string uri) {
