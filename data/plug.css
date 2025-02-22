@@ -1,0 +1,27 @@
+.dialog .oa-finalize {
+    margin: 1em;
+}
+
+.dialog .oa-finalize > box.vertical {
+    border-spacing: 2em;
+}
+
+.dialog .oa-finalize > box > box.vertical {
+    border-spacing: 0.5em;
+}
+
+.dialog .oa-finalize box.horizontal {
+    border-spacing: 0.5em;
+}
+
+.dialog .oa-finalize image.large-icons {
+    -gtk-icon-size: 64px;
+}
+
+.dialog .oa-finalize image.normal-icons {
+    -gtk-icon-size: 32px;
+}
+
+.dialog .oa-finalize button.text-button {
+    min-width: 7em;
+}

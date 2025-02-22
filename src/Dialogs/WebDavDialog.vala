@@ -101,6 +101,7 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
 
         push_page (login_page);
 
+        default_widget = login_button;
         login_page.shown.connect (() => {
             default_widget = login_button;
         });
@@ -129,7 +130,7 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
         login_button.clicked.connect (() => {
             var cancellable = new GLib.Cancellable ();
 
-            var finalize_page = new FinalizePage (cancellable);
+            var finalize_page = new FinalizePage (new ThemedIcon ("folder-remote"), cancellable);
 
             push_page (finalize_page);
 

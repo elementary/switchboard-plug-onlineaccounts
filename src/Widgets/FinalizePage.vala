@@ -5,73 +5,84 @@
 
 public class OnlineAccounts.FinalizePage : Adw.NavigationPage {
     public GLib.Cancellable? cancellable { get; construct; }
+    public GLib.Icon icon { get; construct; }
 
-    private Granite.Placeholder placeholder;
+    private Gtk.Image badge;
+    private Gtk.Label description_label;
     private Gtk.Button back_button;
     private Gtk.Button close_button;
-    private Gtk.Stack stack;
 
-    public FinalizePage (GLib.Cancellable cancellable) {
-        Object (cancellable: cancellable);
+    public FinalizePage (Icon icon, GLib.Cancellable cancellable) {
+        Object (
+            cancellable: cancellable,
+            icon: icon
+        );
     }
 
     construct {
-        var busy_label = new Gtk.Label (_("Setting up the account…"));
-
-        var busy_spinner = new Gtk.Spinner ();
-        busy_spinner.start ();
-
-        var busy_box = new Gtk.Box (HORIZONTAL, 6);
-        busy_box.append (busy_label);
-        busy_box.append (busy_spinner);
-
-        placeholder = new Granite.Placeholder ("");
-        placeholder.remove_css_class (Granite.STYLE_CLASS_VIEW);
-
-        back_button = new Gtk.Button.with_label (_("Back")) {
-            width_request = 86
+        var image = new Gtk.Image.from_gicon (icon) {
+            icon_size = LARGE
         };
 
-        close_button = new Gtk.Button.with_label (_("Close")) {
-            width_request = 86
+        badge = new Gtk.Image.from_icon_name ("emblem-synchronized") {
+            halign = END,
+            valign = END,
+            icon_size = NORMAL
         };
+
+        var overlay = new Gtk.Overlay () {
+            halign = CENTER,
+            child = image
+        };
+        overlay.add_overlay (badge);
+
+        var title_label = new Gtk.Label ("") {
+            halign = CENTER,
+            justify = CENTER,
+            wrap = true,
+            max_width_chars = 50,
+            use_markup = true
+        };
+        title_label.add_css_class (Granite.STYLE_CLASS_H1_LABEL);
+
+        description_label = new Gtk.Label ("") {
+            halign = CENTER,
+            justify = CENTER,
+            wrap = true,
+            max_width_chars = 50,
+            use_markup = true
+        };
+        description_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+
+        var content_box = new Gtk.Box (VERTICAL, 0);
+        content_box.append (overlay);
+        content_box.append (title_label);
+        content_box.append (description_label);
+
+        back_button = new Gtk.Button.with_label (_("Back"));
+
+        close_button = new Gtk.Button.with_label (_("Close"));
         close_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        stack = new Gtk.Stack () {
-            hexpand = true,
-            vexpand = true,
-            hhomogeneous = false,
-            vhomogeneous = false,
-            halign = CENTER,
-            valign = CENTER
-        };
-        stack.add_child (busy_box);
-        stack.add_child (placeholder);
-
-        var action_area = new Gtk.Box (HORIZONTAL, 6) {
-            margin_top = 24,
+        var action_area = new Gtk.Box (HORIZONTAL, 0) {
             valign = END,
             halign = END,
             homogeneous = true,
             vexpand = true
         };
+        action_area.add_css_class ("action-area");
         action_area.append (back_button);
         action_area.append (close_button);
 
-        var box = new Gtk.Box (VERTICAL, 6) {
-            margin_start = 12,
-            margin_end = 12,
-            margin_top = 12,
-            margin_bottom = 12,
-        };
-        box.append (stack);
+        var box = new Gtk.Box (VERTICAL, 0);
+        box.append (content_box);
         box.append (action_area);
 
         child = box;
         title = _("Setting up the account…");
         add_css_class ("oa-finalize");
 
-        bind_property ("title", placeholder, "title");
+        bind_property ("title", title_label, "label", SYNC_CREATE);
 
         back_button.clicked.connect (() => {
             ((Adw.NavigationView) get_ancestor (typeof (Adw.NavigationView))).pop ();
@@ -94,20 +105,19 @@ public class OnlineAccounts.FinalizePage : Adw.NavigationPage {
 
     public void show_success () {
         title = _("Ready to go");
-        placeholder.description = _("Account saved");
-        placeholder.icon = new ThemedIcon ("process-completed");
-
-        stack.visible_child = placeholder;
-        back_button.visible = false;
+        description_label.label = _("Account saved");
+        badge.icon_name = "process-completed";
 
         ((Gtk.Window) get_ancestor (typeof (Gtk.Window))).default_widget = close_button;
+
+        // Prevent navigating back
+        back_button.visible = false;
+        ((Adw.NavigationView) get_ancestor (typeof (Adw.NavigationView))).replace ({this});
     }
 
     public void show_error (Error error) {
         title = _("Could not save the account");
-        placeholder.description = error.message;
-        placeholder.icon = new ThemedIcon ("dialog-error");
-
-        stack.visible_child = placeholder;
+        description_label.label = error.message;
+        badge.icon_name = "dialog-error";
     }
 }
