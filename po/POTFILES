@@ -6,4 +6,5 @@ src/Dialogs/Imap/ImapSavePage.vala
 src/MainView.vala
 src/Plug.vala
 src/Widgets/AccountMenuItem.vala
+src/Widgets/FinalizePage.vala
 src/Widgets/ValidationMessage.vala

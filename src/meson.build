@@ -9,6 +9,7 @@ plug_files = files(
     'MainView.vala',
     'Plug.vala',
     'Widgets/AccountMenuItem.vala',
+    'Widgets' / 'FinalizePage.vala',
     'Widgets/ValidationMessage.vala'
 )
 

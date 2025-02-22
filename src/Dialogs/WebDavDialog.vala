@@ -12,8 +12,6 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
     private Gtk.PasswordEntry password_entry;
     private ValidationMessage url_message_revealer;
 
-    private GLib.Cancellable cancellable;
-
     construct {
         url_entry = new Granite.ValidatedEntry () {
             hexpand = true,
@@ -129,14 +127,20 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
         });
 
         login_button.clicked.connect (() => {
-            connect_to_server.begin ((obj, res) => {
+            var cancellable = new GLib.Cancellable ();
+
+            var finalize_page = new FinalizePage (cancellable);
+
+            push_page (finalize_page);
+
+            connect_to_server.begin (cancellable, (obj, res) => {
                 try {
                     connect_to_server.end (res);
-                    critical ("success!");
+                    finalize_page.show_success ();
                 } catch (GLib.IOError.ALREADY_MOUNTED e) {
-                    critical ("already mounted");
+                    finalize_page.show_success ();
                 } catch (Error e) {
-                    critical (e.message);
+                    finalize_page.show_error (e);
                 } finally {
                     cancellable = null;
                 }
@@ -144,7 +148,7 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
         });
     }
 
-    private async void connect_to_server () throws Error {
+    private async void connect_to_server (GLib.Cancellable cancellable) throws Error {
         var server_uri = Uri.parse (url_entry.text, NONE);
         var host = server_uri.get_host ();
 
@@ -190,8 +194,6 @@ public class OnlineAccounts.WebDavDialog : Gtk.Window {
                 mount_operation.reply (HANDLED);
             });
         }
-
-        cancellable = new GLib.Cancellable ();
 
         yield file.mount_enclosing_volume (NONE, mount_operation, cancellable);
     }
