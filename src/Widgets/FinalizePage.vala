@@ -3,6 +3,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+/**
+ * FinalizePage is an {@link Adw.NavigationPage} subclass that shows
+ * in-progress, success, and error states
+ */
 public class OnlineAccounts.FinalizePage : Adw.NavigationPage {
     public GLib.Cancellable? cancellable { get; construct; }
     public GLib.Icon icon { get; construct; }
@@ -12,6 +16,14 @@ public class OnlineAccounts.FinalizePage : Adw.NavigationPage {
     private Gtk.Button back_button;
     private Gtk.Button close_button;
 
+    /**
+     * Constructs a new {@link FinalizePage}
+     *
+     * @param icon The {@link GLib.Icon} to represent the type of account
+     *
+     * @param cancellable The {@link GLib.Cancellable} to cancel when
+     * navigating away from this page
+     */
     public FinalizePage (Icon icon, GLib.Cancellable cancellable) {
         Object (
             cancellable: cancellable,
@@ -103,6 +115,9 @@ public class OnlineAccounts.FinalizePage : Adw.NavigationPage {
         });
     }
 
+    /**
+     * Show a success page when saving an account has succeeded
+     */
     public void show_success () {
         title = _("Ready to go");
         description_label.label = _("Account saved");
@@ -115,6 +130,9 @@ public class OnlineAccounts.FinalizePage : Adw.NavigationPage {
         ((Adw.NavigationView) get_ancestor (typeof (Adw.NavigationView))).replace ({this});
     }
 
+    /**
+     * Show an error message when saving an account has failed
+     */
     public void show_error (string message) {
         title = _("Could not save the account");
         description_label.label = message;
