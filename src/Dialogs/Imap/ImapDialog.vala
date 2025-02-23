@@ -36,7 +36,6 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
     private Gtk.SpinButton imap_refresh_interval_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
-    private ImapSavePage save_page;
     private Adw.NavigationView navigation_view;
     private uint cancel_timeout_id = 0;
 
@@ -45,7 +44,6 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
     construct {
         login_page = new ImapLoginPage ();
-        save_page = new ImapSavePage ();
 
         var imap_header = new Granite.HeaderLabel ("IMAP");
 
@@ -217,31 +215,24 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         smtp_sizegroup.add_widget (smtp_encryption_label);
         smtp_sizegroup.add_widget (smtp_port_label);
 
-        var back_button = new Gtk.Button.with_label (_("Back")) {
-            width_request = 86
-        };
+        var back_button = new Gtk.Button.with_label (_("Back"));
 
         save_button = new Gtk.Button.with_label (_("Log In")) {
-            width_request = 86,
             sensitive = false
         };
         save_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.Box (HORIZONTAL, 6) {
+        var action_area = new Gtk.Box (HORIZONTAL, 0) {
             valign = END,
             halign = END,
             homogeneous = true,
             vexpand = true
         };
+        action_area.add_css_class ("action-area");
         action_area.append (back_button);
         action_area.append (save_button);
 
-        var main_box = new Gtk.Box (VERTICAL, 24) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
+        var main_box = new Gtk.Box (VERTICAL, 24);
         main_box.append (imap_server_grid);
         main_box.append (smtp_server_grid);
         main_box.append (action_area);
@@ -263,6 +254,8 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         modal = true;
         child = window_handle;
         titlebar = new Gtk.Grid ();
+        add_css_class ("dialog");
+        add_css_class ("paged");
 
         default_widget = login_page.next_button;
 
@@ -279,8 +272,6 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         login_page.shown.connect (() => {
             default_widget = login_page.next_button;
         });
-
-        save_page.close.connect (destroy);
 
         back_button.clicked.connect (() => navigation_view.pop ());
 
@@ -358,16 +349,18 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
             }
             cancellable = new GLib.Cancellable ();
 
-            navigation_view.push (save_page);
-            save_page.show_busy (cancellable);
+            var finalize_page = new FinalizePage (new ThemedIcon ("onlineaccounts-mail"), cancellable);
+
+            navigation_view.push (finalize_page);
 
             save_configuration.begin ((obj, res) => {
                 try {
                     save_configuration.end (res);
-                    save_page.show_success ();
-
+                    finalize_page.show_success ();
                 } catch (Error e) {
-                    save_page.show_error (e);
+                    finalize_page.show_error (e.message);
+                } finally {
+                    cancellable = null;
                 }
             });
         });

@@ -84,32 +84,25 @@ public class OnlineAccounts.ImapLoginPage : Adw.NavigationPage {
             secondary_text = _("Pick a name like “Work” or “Personal” for the account.")
         };
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
-            width_request = 86
-        };
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
         next_button = new Gtk.Button.with_label (_("Next")) {
-            width_request = 86,
             sensitive = false
         };
         next_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.Box (HORIZONTAL, 6) {
+        var action_area = new Gtk.Box (HORIZONTAL, 0) {
             margin_top = 24,
             valign = END,
             halign = END,
             homogeneous = true,
             vexpand = true
         };
+        action_area.add_css_class ("action-area");
         action_area.append (cancel_button);
         action_area.append (next_button);
 
-        var box = new Gtk.Box (VERTICAL, 6) {
-            margin_start = 12,
-            margin_end = 12,
-            margin_top = 12,
-            margin_bottom = 12,
-        };
+        var box = new Gtk.Box (VERTICAL, 6);
         box.append (real_name_label);
         box.append (real_name_entry);
         box.append (email_label);

@@ -36,7 +36,13 @@ public class OnlineAccounts.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (box == null) {
-            Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/settings/onlineaccounts");
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("/io/elementary/settings/onlineaccounts/plug.css");
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (),
+                provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
 
             var headerbar = new Adw.HeaderBar () {
                 show_title = false
