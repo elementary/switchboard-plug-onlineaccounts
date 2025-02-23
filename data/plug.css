@@ -11,6 +11,7 @@
 }
 
 .dialog.paged navigation-view-page.oa-finalize > box.vertical {
+    margin-top: 2em;
     border-spacing: 2em;
 }
 
