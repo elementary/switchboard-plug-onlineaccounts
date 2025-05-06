@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/elementary/settings/onlineaccounts">
+    <file alias="32x32/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/32.svg</file>
+    <file alias="32x32@2/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/32.svg</file>
+    <file alias="48x48/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/48.svg</file>
+    <file alias="48x48@2/categories/onlineaccounts.svg" compressed="true" preprocess="xml-stripblanks">icons/48.svg</file>
+
     <file alias="32x32/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/32/google.svg</file>
     <file alias="32x32@2/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/32/google.svg</file>
     <file alias="48x48/categories/onlineaccounts-google.svg" compressed="true" preprocess="xml-stripblanks">icons/48/google.svg</file>
