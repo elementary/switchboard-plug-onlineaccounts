@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-18 16:16+0000\n"
+"POT-Creation-Date: 2025-05-06 18:56+0000\n"
 "PO-Revision-Date: 2024-07-07 18:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,143 +21,119 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:52
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Server URL"
 msgstr "URL-адреса сервера"
 
-#: src/Dialogs/CaldavDialog.vala:56
+#: src/Dialogs/CaldavDialog.vala:51
 msgid "Invalid URL"
 msgstr "Недійсна URL-адреса"
 
-#: src/Dialogs/CaldavDialog.vala:62
+#: src/Dialogs/CaldavDialog.vala:57
 msgid "User Name"
 msgstr "Ім'я користувача"
 
-#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:73
+#: src/Dialogs/CaldavDialog.vala:67 src/Dialogs/Imap/ImapLoginPage.vala:73
 msgid "Password"
 msgstr "Пароль"
 
-#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapLoginPage.vala:87
+#: src/Dialogs/CaldavDialog.vala:71 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/Dialogs/CaldavDialog.vala:80 src/Dialogs/CaldavDialog.vala:111
-#: src/Dialogs/Imap/ImapDialog.vala:224 src/Dialogs/Imap/ImapLoginPage.vala:124
+#: src/Dialogs/CaldavDialog.vala:73 src/Dialogs/CaldavDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:219 src/Dialogs/Imap/ImapLoginPage.vala:117
 msgid "Log In"
 msgstr "Вхід"
 
-#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/Imap/ImapLoginPage.vala:82
+#: src/Dialogs/CaldavDialog.vala:106 src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Account Display Name"
 msgstr "Показуване ім'я облікового запису"
 
-#: src/Dialogs/CaldavDialog.vala:120 src/Dialogs/Imap/ImapLoginPage.vala:84
+#: src/Dialogs/CaldavDialog.vala:108 src/Dialogs/Imap/ImapLoginPage.vala:84
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Оберіть назву облікового запису, наприклад «Робота» або «Особистий»."
 
-#: src/Dialogs/CaldavDialog.vala:143 src/Dialogs/CaldavDialog.vala:189
-#: src/Dialogs/Imap/ImapDialog.vala:220 src/Dialogs/Imap/ImapSavePage.vala:64
+#: src/Dialogs/CaldavDialog.vala:131 src/Dialogs/Imap/ImapDialog.vala:217
+#: src/Widgets/FinalizePage.vala:74
 msgid "Back"
 msgstr "Назад"
 
-#: src/Dialogs/CaldavDialog.vala:147
+#: src/Dialogs/CaldavDialog.vala:133
 msgid "Save"
 msgstr "Зберегти"
 
-#: src/Dialogs/CaldavDialog.vala:172 src/Dialogs/CaldavDialog.vala:366
-#: src/Plug.vala:73
+#: src/Dialogs/CaldavDialog.vala:151 src/Dialogs/CaldavDialog.vala:252
+#: src/Plug.vala:79
 msgid "Calendars"
 msgstr "Календарі"
 
-#: src/Dialogs/CaldavDialog.vala:174
-msgid "Saving the configuration…"
-msgstr "Збереження конфігурації…"
-
-#: src/Dialogs/CaldavDialog.vala:183
-msgid "All done"
-msgstr "Усе готово"
-
-#: src/Dialogs/CaldavDialog.vala:184
-msgid "CalDAV account saved."
-msgstr "Обліковий запис CalDAV збережено."
-
-#: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
-msgid "Close"
-msgstr "Закрити"
-
-#: src/Dialogs/CaldavDialog.vala:226
-msgid "Save Configuration"
-msgstr "Зберегти конфігурацію"
-
-#: src/Dialogs/CaldavDialog.vala:281
-msgid "Could not save configuration"
-msgstr "Не вдалося зберегти конфігурації"
-
-#: src/Dialogs/CaldavDialog.vala:368 src/Dialogs/CaldavDialog.vala:376
+#: src/Dialogs/CaldavDialog.vala:254 src/Dialogs/CaldavDialog.vala:262
 msgid "Task Lists"
 msgstr "Списки завдань"
 
-#: src/Dialogs/CaldavDialog.vala:410
+#: src/Dialogs/CaldavDialog.vala:296
 msgid "Finding available calendars and tasks…"
 msgstr "Пошук доступних календарів та завдань…"
 
-#: src/Dialogs/CaldavDialog.vala:458
+#: src/Dialogs/CaldavDialog.vala:344
 msgid "Could not fetch calendars"
 msgstr "Не вдалося отримати календарі"
 
-#: src/Dialogs/CaldavDialog.vala:563
+#: src/Dialogs/CaldavDialog.vala:449
 msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr "Схоже, що надані дані, не відбивають дійсний обліковий запис CalDAV."
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:133
 msgid "Username:"
 msgstr "Ім'я користувача:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:144
 msgid "Password:"
 msgstr "Пароль:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
+#: src/Dialogs/Imap/ImapDialog.vala:67 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Server URL:"
 msgstr "URL-адреса сервера:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:179
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:176
 msgid "Port:"
 msgstr "Порт:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:88
+#: src/Dialogs/Imap/ImapDialog.vala:85
 msgid "Refresh Interval in Minutes:"
 msgstr "Частота оновлення у хвилинах:"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:97 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/Imap/ImapDialog.vala:94 src/Dialogs/Imap/ImapDialog.vala:185
 msgid "None"
 msgstr "Немає"
 
-#: src/Dialogs/Imap/ImapDialog.vala:102 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/Imap/ImapDialog.vala:99 src/Dialogs/Imap/ImapDialog.vala:190
 msgid "Encryption:"
 msgstr "Шифрування:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:123
+#: src/Dialogs/Imap/ImapDialog.vala:120
 msgid "Use IMAP Credentials"
 msgstr "Використовувати облікові дані IMAP"
 
-#: src/Dialogs/Imap/ImapDialog.vala:127
+#: src/Dialogs/Imap/ImapDialog.vala:124
 msgid "No authentication required"
 msgstr "Автентифікація не потрібна"
 
-#: src/Dialogs/Imap/ImapDialog.vala:249
+#: src/Dialogs/Imap/ImapDialog.vala:239
 msgid "Credentials"
 msgstr "Облікові дані"
 
-#: src/Dialogs/Imap/ImapDialog.vala:397
+#: src/Dialogs/Imap/ImapDialog.vala:373
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr "Схоже, що надані дані, не відбивають дійсний поштовий обліковий запис."
 
-#: src/Dialogs/Imap/ImapDialog.vala:638
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr "Не вдалося увійти. Перевірте свої облікові дані."
 
-#: src/Dialogs/Imap/ImapDialog.vala:652
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "Не вдалося виконати перевірку IMAP: %s"
@@ -170,25 +146,9 @@ msgstr "Справжнє ім'я"
 msgid "Email"
 msgstr "Електронна пошта"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:91
+#: src/Dialogs/Imap/ImapLoginPage.vala:89
 msgid "Next"
 msgstr "Далі"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Setting up the e-mail account…"
-msgstr "Налаштування облікового запису е-пошти…"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:41
-msgid "Could not save the e-mail account"
-msgstr "Не вдалося зберегти обліковий запис е-пошти"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:46
-msgid "Success"
-msgstr "Успішно"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:47
-msgid "E-mail account saved."
-msgstr "Обліковий запис е-пошти збережено."
 
 #: src/MainView.vala:27 src/Plug.vala:30
 msgid "Online Accounts"
@@ -204,7 +164,7 @@ msgstr ""
 "Під'єднайте онлайнові облікові записи, натиснувши піктограму на панелі "
 "інструментів унизу."
 
-#: src/MainView.vala:53 src/Plug.vala:72
+#: src/MainView.vala:53 src/Plug.vala:78
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -212,11 +172,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Календарі та завдання"
 
-#: src/MainView.vala:59 src/Plug.vala:74
+#: src/MainView.vala:59 src/Plug.vala:80
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:60 src/Plug.vala:75
+#: src/MainView.vala:60 src/Plug.vala:81
 msgid "Mail"
 msgstr "Пошта"
 
@@ -224,35 +184,35 @@ msgstr "Пошта"
 msgid "Add Account…"
 msgstr "Додати обліковий запис…"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:145
 msgid "Remove this account"
 msgstr "Вилучити цей обліковий запис"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:158
 msgid "Edit this account"
 msgstr "Редагувати цей обліковий запис"
 
-#: src/MainView.vala:182
+#: src/MainView.vala:183
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "Вилучити «%s» з цього пристрою"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:184
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Цей обліковий запис буде вилучено і надалі він не з'являтиметься у жодному "
 "застосунку на цьому пристрої."
 
-#: src/MainView.vala:191
+#: src/MainView.vala:192
 msgid "Remove Account"
 msgstr "Вилучити обліковий запис"
 
-#: src/MainView.vala:217 src/MainView.vala:245
+#: src/MainView.vala:218 src/MainView.vala:246
 msgid "Edit account failed"
 msgstr "Не вдалося редагувати обліковий запис"
 
-#: src/MainView.vala:218 src/MainView.vala:246
+#: src/MainView.vala:219 src/MainView.vala:247
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "Сталася помилка під час читання конфігурації «%s»."
@@ -260,6 +220,50 @@ msgstr "Сталася помилка під час читання конфіг�
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Керування онлайновими обліковими записами та під'єднаними застосунками"
+
+#: src/Widgets/FinalizePage.vala:76
+msgid "Close"
+msgstr "Закрити"
+
+#: src/Widgets/FinalizePage.vala:94
+#, fuzzy
+#| msgid "Setting up the e-mail account…"
+msgid "Setting up the account…"
+msgstr "Налаштування облікового запису е-пошти…"
+
+#: src/Widgets/FinalizePage.vala:122
+msgid "Ready to go"
+msgstr ""
+
+#: src/Widgets/FinalizePage.vala:123
+#, fuzzy
+#| msgid "CalDAV account saved."
+msgid "Account saved"
+msgstr "Обліковий запис CalDAV збережено."
+
+#: src/Widgets/FinalizePage.vala:137
+#, fuzzy
+#| msgid "Could not save the e-mail account"
+msgid "Could not save the account"
+msgstr "Не вдалося зберегти обліковий запис е-пошти"
+
+#~ msgid "Saving the configuration…"
+#~ msgstr "Збереження конфігурації…"
+
+#~ msgid "All done"
+#~ msgstr "Усе готово"
+
+#~ msgid "Save Configuration"
+#~ msgstr "Зберегти конфігурацію"
+
+#~ msgid "Could not save configuration"
+#~ msgstr "Не вдалося зберегти конфігурації"
+
+#~ msgid "Success"
+#~ msgstr "Успішно"
+
+#~ msgid "E-mail account saved."
+#~ msgstr "Обліковий запис е-пошти збережено."
 
 #~ msgid ""
 #~ "The above name will be used to identify this account. Use for example "

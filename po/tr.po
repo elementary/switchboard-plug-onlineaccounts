@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-18 16:16+0000\n"
+"POT-Creation-Date: 2025-05-06 18:56+0000\n"
 "PO-Revision-Date: 2022-01-11 21:23+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,151 +20,125 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:14+0000\n"
 
-#: src/Dialogs/CaldavDialog.vala:52
+#: src/Dialogs/CaldavDialog.vala:47
 msgid "Server URL"
 msgstr "Sunucu URL'si"
 
-#: src/Dialogs/CaldavDialog.vala:56
+#: src/Dialogs/CaldavDialog.vala:51
 msgid "Invalid URL"
 msgstr "Geçersiz URL"
 
-#: src/Dialogs/CaldavDialog.vala:62
+#: src/Dialogs/CaldavDialog.vala:57
 msgid "User Name"
 msgstr "Kullanıcı Adı"
 
-#: src/Dialogs/CaldavDialog.vala:72 src/Dialogs/Imap/ImapLoginPage.vala:73
+#: src/Dialogs/CaldavDialog.vala:67 src/Dialogs/Imap/ImapLoginPage.vala:73
 msgid "Password"
 msgstr "Parola"
 
-#: src/Dialogs/CaldavDialog.vala:76 src/Dialogs/Imap/ImapLoginPage.vala:87
+#: src/Dialogs/CaldavDialog.vala:71 src/Dialogs/Imap/ImapLoginPage.vala:87
 msgid "Cancel"
 msgstr "İptal"
 
-#: src/Dialogs/CaldavDialog.vala:80 src/Dialogs/CaldavDialog.vala:111
-#: src/Dialogs/Imap/ImapDialog.vala:224 src/Dialogs/Imap/ImapLoginPage.vala:124
+#: src/Dialogs/CaldavDialog.vala:73 src/Dialogs/CaldavDialog.vala:99
+#: src/Dialogs/Imap/ImapDialog.vala:219 src/Dialogs/Imap/ImapLoginPage.vala:117
 msgid "Log In"
 msgstr "Oturum Aç"
 
-#: src/Dialogs/CaldavDialog.vala:118 src/Dialogs/Imap/ImapLoginPage.vala:82
+#: src/Dialogs/CaldavDialog.vala:106 src/Dialogs/Imap/ImapLoginPage.vala:82
 msgid "Account Display Name"
 msgstr "Hesap Görünen Adı"
 
-#: src/Dialogs/CaldavDialog.vala:120 src/Dialogs/Imap/ImapLoginPage.vala:84
+#: src/Dialogs/CaldavDialog.vala:108 src/Dialogs/Imap/ImapLoginPage.vala:84
 msgid "Pick a name like “Work” or “Personal” for the account."
 msgstr "Hesap için \"İş\" veya \"Kişisel\" gibi bir ad seçin."
 
-#: src/Dialogs/CaldavDialog.vala:143 src/Dialogs/CaldavDialog.vala:189
-#: src/Dialogs/Imap/ImapDialog.vala:220 src/Dialogs/Imap/ImapSavePage.vala:64
+#: src/Dialogs/CaldavDialog.vala:131 src/Dialogs/Imap/ImapDialog.vala:217
+#: src/Widgets/FinalizePage.vala:74
 msgid "Back"
 msgstr "Geri"
 
-#: src/Dialogs/CaldavDialog.vala:147
+#: src/Dialogs/CaldavDialog.vala:133
 msgid "Save"
 msgstr "Kaydet"
 
-#: src/Dialogs/CaldavDialog.vala:172 src/Dialogs/CaldavDialog.vala:366
-#: src/Plug.vala:73
+#: src/Dialogs/CaldavDialog.vala:151 src/Dialogs/CaldavDialog.vala:252
+#: src/Plug.vala:79
 msgid "Calendars"
 msgstr "Takvimler"
 
-#: src/Dialogs/CaldavDialog.vala:174
-msgid "Saving the configuration…"
-msgstr "Yapılandırma kaydediliyor…"
-
-#: src/Dialogs/CaldavDialog.vala:183
-msgid "All done"
-msgstr "İşlem tamamlandı"
-
-#: src/Dialogs/CaldavDialog.vala:184
-msgid "CalDAV account saved."
-msgstr "CalDAV hesabı kaydedildi."
-
-#: src/Dialogs/CaldavDialog.vala:193 src/Dialogs/Imap/ImapSavePage.vala:68
-msgid "Close"
-msgstr "Kapat"
-
-#: src/Dialogs/CaldavDialog.vala:226
-#, fuzzy
-#| msgid "Saving the configuration…"
-msgid "Save Configuration"
-msgstr "Yapılandırma kaydediliyor…"
-
-#: src/Dialogs/CaldavDialog.vala:281
-msgid "Could not save configuration"
-msgstr "Yapılandırma kaydedilemedi"
-
-#: src/Dialogs/CaldavDialog.vala:368 src/Dialogs/CaldavDialog.vala:376
+#: src/Dialogs/CaldavDialog.vala:254 src/Dialogs/CaldavDialog.vala:262
 msgid "Task Lists"
 msgstr "Görev Listeleri"
 
-#: src/Dialogs/CaldavDialog.vala:410
+#: src/Dialogs/CaldavDialog.vala:296
 msgid "Finding available calendars and tasks…"
 msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 
-#: src/Dialogs/CaldavDialog.vala:458
+#: src/Dialogs/CaldavDialog.vala:344
 msgid "Could not fetch calendars"
 msgstr "Takvimler getirilemedi"
 
-#: src/Dialogs/CaldavDialog.vala:563
+#: src/Dialogs/CaldavDialog.vala:449
 #, fuzzy
 #| msgid "The data provided does not seem to reflect a valid CalDav account."
 msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
 "Sağlanan veriler geçerli bir CalDav hesabını yansıtmıyor gibi görünüyor."
 
-#: src/Dialogs/Imap/ImapDialog.vala:56 src/Dialogs/Imap/ImapDialog.vala:136
+#: src/Dialogs/Imap/ImapDialog.vala:53 src/Dialogs/Imap/ImapDialog.vala:133
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:61 src/Dialogs/Imap/ImapDialog.vala:147
+#: src/Dialogs/Imap/ImapDialog.vala:58 src/Dialogs/Imap/ImapDialog.vala:144
 msgid "Password:"
 msgstr "Parola:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:70 src/Dialogs/Imap/ImapDialog.vala:170
+#: src/Dialogs/Imap/ImapDialog.vala:67 src/Dialogs/Imap/ImapDialog.vala:167
 msgid "Server URL:"
 msgstr "Sunucu URL'si:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:83 src/Dialogs/Imap/ImapDialog.vala:179
+#: src/Dialogs/Imap/ImapDialog.vala:80 src/Dialogs/Imap/ImapDialog.vala:176
 msgid "Port:"
 msgstr "Bağlantı Noktası:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:88
+#: src/Dialogs/Imap/ImapDialog.vala:85
 msgid "Refresh Interval in Minutes:"
 msgstr "Yenileme Zaman Aralığı (dakika):"
 
 #. The IDs need to correspond to Camel.NetworkSecurityMethod enum:
-#: src/Dialogs/Imap/ImapDialog.vala:97 src/Dialogs/Imap/ImapDialog.vala:188
+#: src/Dialogs/Imap/ImapDialog.vala:94 src/Dialogs/Imap/ImapDialog.vala:185
 msgid "None"
 msgstr "Yok"
 
-#: src/Dialogs/Imap/ImapDialog.vala:102 src/Dialogs/Imap/ImapDialog.vala:193
+#: src/Dialogs/Imap/ImapDialog.vala:99 src/Dialogs/Imap/ImapDialog.vala:190
 msgid "Encryption:"
 msgstr "Şifreleme:"
 
-#: src/Dialogs/Imap/ImapDialog.vala:123
+#: src/Dialogs/Imap/ImapDialog.vala:120
 msgid "Use IMAP Credentials"
 msgstr "IMAP Kimliğı Kullan"
 
-#: src/Dialogs/Imap/ImapDialog.vala:127
+#: src/Dialogs/Imap/ImapDialog.vala:124
 msgid "No authentication required"
 msgstr "Kimlik denetimi gerekmiyor"
 
-#: src/Dialogs/Imap/ImapDialog.vala:249
+#: src/Dialogs/Imap/ImapDialog.vala:239
 #, fuzzy
 #| msgid "Use IMAP Credentials"
 msgid "Credentials"
 msgstr "IMAP Kimliğı Kullan"
 
-#: src/Dialogs/Imap/ImapDialog.vala:397
+#: src/Dialogs/Imap/ImapDialog.vala:373
 msgid "The data provided does not seem to reflect a valid mail account."
 msgstr ""
 "Sağlanan veriler geçerli bir posta hesabını yansıtmıyor gibi görünüyor."
 
-#: src/Dialogs/Imap/ImapDialog.vala:638
+#: src/Dialogs/Imap/ImapDialog.vala:614
 msgid "Could not log in. Please verify your credentials."
 msgstr "Giriş yapılamadı. Lütfen kimlik bilgilerinizi doğrulayın."
 
-#: src/Dialogs/Imap/ImapDialog.vala:652
+#: src/Dialogs/Imap/ImapDialog.vala:628
 #, c-format
 msgid "IMAP verification failed: %s"
 msgstr "IMAP doğrulaması başarısız oldu: %s"
@@ -177,25 +151,9 @@ msgstr "Gerçek Ad"
 msgid "Email"
 msgstr "E-posta"
 
-#: src/Dialogs/Imap/ImapLoginPage.vala:91
+#: src/Dialogs/Imap/ImapLoginPage.vala:89
 msgid "Next"
 msgstr "İleri"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:32
-msgid "Setting up the e-mail account…"
-msgstr "Posta hesabı ayarlanıyor…"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:41
-msgid "Could not save the e-mail account"
-msgstr "E-posta hesabı kaydedilemedi"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:46
-msgid "Success"
-msgstr "Başarılı"
-
-#: src/Dialogs/Imap/ImapSavePage.vala:47
-msgid "E-mail account saved."
-msgstr "E-posta hesabı kaydedildi."
 
 #: src/MainView.vala:27 src/Plug.vala:30
 msgid "Online Accounts"
@@ -210,7 +168,7 @@ msgid "Connect online accounts by clicking the icon in the toolbar below."
 msgstr ""
 "Aşağıda araç çubuğundaki simgeye tıklayarak çevrimiçi hesaplara bağlanın."
 
-#: src/MainView.vala:53 src/Plug.vala:72
+#: src/MainView.vala:53 src/Plug.vala:78
 msgid "CalDAV"
 msgstr "CalDAV"
 
@@ -218,11 +176,11 @@ msgstr "CalDAV"
 msgid "Calendars and Tasks"
 msgstr "Takvimler ve Görevler"
 
-#: src/MainView.vala:59 src/Plug.vala:74
+#: src/MainView.vala:59 src/Plug.vala:80
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/MainView.vala:60 src/Plug.vala:75
+#: src/MainView.vala:60 src/Plug.vala:81
 msgid "Mail"
 msgstr "Posta"
 
@@ -230,34 +188,34 @@ msgstr "Posta"
 msgid "Add Account…"
 msgstr "Hesap Ekle…"
 
-#: src/MainView.vala:144
+#: src/MainView.vala:145
 msgid "Remove this account"
 msgstr "Bu hesabı kaldır"
 
-#: src/MainView.vala:157
+#: src/MainView.vala:158
 msgid "Edit this account"
 msgstr "Bu hesabı düzenle"
 
-#: src/MainView.vala:182
+#: src/MainView.vala:183
 #, c-format
 msgid "Remove “%s” from this device"
 msgstr "“%s” hesabını bu cihazdan kaldır"
 
-#: src/MainView.vala:183
+#: src/MainView.vala:184
 msgid ""
 "This account will be removed and no longer appear in any apps on this device."
 msgstr ""
 "Bu hesap kaldırılacak ve artık bu cihazdaki hiçbir uygulamada görünmeyecek."
 
-#: src/MainView.vala:191
+#: src/MainView.vala:192
 msgid "Remove Account"
 msgstr "Hesabı Kaldır"
 
-#: src/MainView.vala:217 src/MainView.vala:245
+#: src/MainView.vala:218 src/MainView.vala:246
 msgid "Edit account failed"
 msgstr "E-posta hesabı düzenlenemedi"
 
-#: src/MainView.vala:218 src/MainView.vala:246
+#: src/MainView.vala:219 src/MainView.vala:247
 #, c-format
 msgid "There was an unexpected error while reading the configuration of '%s'."
 msgstr "'%s' yapılandırması okunurken beklenmeyen bir hata oluştu."
@@ -265,6 +223,52 @@ msgstr "'%s' yapılandırması okunurken beklenmeyen bir hata oluştu."
 #: src/Plug.vala:31
 msgid "Manage online accounts and connected applications"
 msgstr "Çevrimiçi hesapları ve bağlı uygulamaları yönetin"
+
+#: src/Widgets/FinalizePage.vala:76
+msgid "Close"
+msgstr "Kapat"
+
+#: src/Widgets/FinalizePage.vala:94
+#, fuzzy
+#| msgid "Setting up the e-mail account…"
+msgid "Setting up the account…"
+msgstr "Posta hesabı ayarlanıyor…"
+
+#: src/Widgets/FinalizePage.vala:122
+msgid "Ready to go"
+msgstr ""
+
+#: src/Widgets/FinalizePage.vala:123
+#, fuzzy
+#| msgid "CalDAV account saved."
+msgid "Account saved"
+msgstr "CalDAV hesabı kaydedildi."
+
+#: src/Widgets/FinalizePage.vala:137
+#, fuzzy
+#| msgid "Could not save the e-mail account"
+msgid "Could not save the account"
+msgstr "E-posta hesabı kaydedilemedi"
+
+#~ msgid "Saving the configuration…"
+#~ msgstr "Yapılandırma kaydediliyor…"
+
+#~ msgid "All done"
+#~ msgstr "İşlem tamamlandı"
+
+#, fuzzy
+#~| msgid "Saving the configuration…"
+#~ msgid "Save Configuration"
+#~ msgstr "Yapılandırma kaydediliyor…"
+
+#~ msgid "Could not save configuration"
+#~ msgstr "Yapılandırma kaydedilemedi"
+
+#~ msgid "Success"
+#~ msgstr "Başarılı"
+
+#~ msgid "E-mail account saved."
+#~ msgstr "E-posta hesabı kaydedildi."
 
 #~ msgid ""
 #~ "The above name will be used to identify this account. Use for example "
