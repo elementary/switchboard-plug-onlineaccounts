@@ -8,6 +8,7 @@ plug_files = files(
     'Plug.vala',
     'Widgets/AccountMenuItem.vala',
     'Widgets' / 'FinalizePage.vala',
+    'Widgets' / 'PagedDialog.vala',
     'Widgets/ValidationMessage.vala'
 )
 

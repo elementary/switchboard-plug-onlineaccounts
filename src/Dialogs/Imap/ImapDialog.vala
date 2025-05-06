@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.ImapDialog : Gtk.Window {
+public class OnlineAccounts.ImapDialog : PagedDialog {
     private Adw.NavigationPage main_page;
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry imap_server_entry;
@@ -36,7 +36,6 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
     private Gtk.SpinButton imap_refresh_interval_spin;
     private Gtk.SpinButton smtp_port_spin;
     private ImapLoginPage login_page;
-    private Adw.NavigationView navigation_view;
     private uint cancel_timeout_id = 0;
 
     private E.SourceRegistry? registry = null;
@@ -239,23 +238,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
         main_page = new Adw.NavigationPage (main_box, _("Credentials"));
 
-        navigation_view = new Adw.NavigationView () {
-            hexpand = true,
-            vexpand = true
-        };
-        navigation_view.add (login_page);
-
-        var window_handle = new Gtk.WindowHandle () {
-            child = navigation_view
-        };
-
-        default_height = 475;
-        default_width = 350;
-        modal = true;
-        child = window_handle;
-        titlebar = new Gtk.Grid ();
-        add_css_class ("dialog");
-        add_css_class ("paged");
+        push_page (login_page);
 
         default_widget = login_page.next_button;
 
@@ -266,14 +249,14 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
         });
 
         login_page.next.connect (() => {
-            navigation_view.push (main_page);
+            push_page (main_page);
         });
 
         login_page.shown.connect (() => {
             default_widget = login_page.next_button;
         });
 
-        back_button.clicked.connect (() => navigation_view.pop ());
+        back_button.clicked.connect (() => pop_page ());
 
         smtp_no_credentials.notify["active"].connect (() => {
             smtp_revealer.reveal_child = !smtp_no_credentials.active && !use_imap_credentials.active;
@@ -351,7 +334,7 @@ public class OnlineAccounts.ImapDialog : Gtk.Window {
 
             var finalize_page = new FinalizePage (new ThemedIcon ("onlineaccounts-mail"), cancellable);
 
-            navigation_view.push (finalize_page);
+            push_page (finalize_page);
 
             save_configuration.begin ((obj, res) => {
                 try {

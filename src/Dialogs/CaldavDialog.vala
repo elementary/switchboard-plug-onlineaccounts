@@ -18,7 +18,7 @@
 *
 */
 
-public class OnlineAccounts.CaldavDialog : Gtk.Window {
+public class OnlineAccounts.CaldavDialog : PagedDialog {
     private GLib.Cancellable? cancellable;
     private Granite.ValidatedEntry url_entry;
     private Granite.ValidatedEntry username_entry;
@@ -28,7 +28,6 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
     private Gtk.Entry password_entry;
     private Gtk.ListBox calendars_list;
     private Adw.NavigationPage calendars_page;
-    private Adw.NavigationView navigation_view;
     private ListStore calendars_store;
     private ValidationMessage url_message_revealer;
 
@@ -151,23 +150,7 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
 
         calendars_page = new Adw.NavigationPage (calendars_box, _("Calendars"));
 
-        navigation_view = new Adw.NavigationView () {
-            hexpand = true,
-            vexpand = true
-        };
-        navigation_view.add (login_page);
-
-        var window_handle = new Gtk.WindowHandle () {
-            child = navigation_view
-        };
-
-        default_height = 400;
-        default_width = 300;
-        modal = true;
-        child = window_handle;
-        titlebar = new Gtk.Grid ();
-        add_css_class ("dialog");
-        add_css_class ("paged");
+        push_page (login_page);
 
         default_widget = login_button;
 
@@ -185,13 +168,13 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
 
         login_button.clicked.connect (() => {
             find_sources.begin ();
-            navigation_view.push (calendars_page);
+            push_page (calendars_page);
         });
 
         save_configuration_button.clicked.connect (() => {
             var finalize_page = new FinalizePage (new ThemedIcon ("x-office-calendar"), cancellable);
 
-            navigation_view.push (finalize_page);
+            push_page (finalize_page);
 
             save_configuration.begin ((obj, res) => {
                 try {
@@ -207,7 +190,8 @@ public class OnlineAccounts.CaldavDialog : Gtk.Window {
             if (cancellable != null) {
                 cancellable.cancel ();
             }
-            navigation_view.pop ();
+
+            pop_page ();
         });
 
         url_entry.changed.connect (() => {
