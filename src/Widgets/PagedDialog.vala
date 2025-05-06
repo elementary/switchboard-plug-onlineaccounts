@@ -28,6 +28,7 @@ public class OnlineAccounts.PagedDialog : Gtk.Window {
         titlebar = new Gtk.Grid () { visible = false };
 
         add_css_class ("dialog");
+        add_css_class ("paged");
     }
 
     /**

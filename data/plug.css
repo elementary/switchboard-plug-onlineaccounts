@@ -1,0 +1,28 @@
+.dialog.paged navigation-view-page {
+    padding: 1em;
+}
+
+.dialog.paged .action-area  {
+    border-spacing: 0.5em;
+}
+
+.dialog.paged .action-area button.text-button {
+    min-width: 7em;
+}
+
+.dialog.paged navigation-view-page.oa-finalize > box.vertical {
+    margin-top: 2em;
+    border-spacing: 2em;
+}
+
+.dialog.paged navigation-view-page.oa-finalize > box > box.vertical {
+    border-spacing: 0.5em;
+}
+
+.dialog.paged navigation-view-page.oa-finalize image.large-icons {
+    -gtk-icon-size: 64px;
+}
+
+.dialog.paged navigation-view-page.oa-finalize image.normal-icons {
+    -gtk-icon-size: 32px;
+}

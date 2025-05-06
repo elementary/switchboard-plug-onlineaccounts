@@ -23,15 +23,11 @@ public class OnlineAccounts.CaldavDialog : PagedDialog {
     private Granite.ValidatedEntry url_entry;
     private Granite.ValidatedEntry username_entry;
     private Gtk.Button login_button;
-    private Gtk.Button save_configuration_back_button;
     private Gtk.Button save_configuration_button;
-    private Gtk.Button save_configuration_close_button;
     private Gtk.Entry display_name_entry;
     private Gtk.Entry password_entry;
     private Gtk.ListBox calendars_list;
-    private Gtk.Stack save_configuration_page_stack;
     private Adw.NavigationPage calendars_page;
-    private Adw.NavigationPage save_configuration_page;
     private ListStore calendars_store;
     private ValidationMessage url_message_revealer;
 
@@ -72,32 +68,25 @@ public class OnlineAccounts.CaldavDialog : PagedDialog {
             mnemonic_widget = password_entry
         };
 
-        var login_cancel_button = new Gtk.Button.with_label (_("Cancel")) {
-            width_request = 86
-        };
+        var login_cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
         login_button = new Gtk.Button.with_label (_("Log In")) {
-            width_request = 86,
             sensitive = false
         };
         login_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var action_area = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var action_area = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             margin_top = 24,
             halign = END,
             valign = END,
             vexpand = true,
             homogeneous = true
         };
+        action_area.add_css_class ("action-area");
         action_area.append (login_cancel_button);
         action_area.append (login_button);
 
-        var login_box = new Gtk.Box (VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
+        var login_box = new Gtk.Box (VERTICAL, 6);
         login_box.append (url_label);
         login_box.append (url_entry);
         login_box.append (url_message_revealer);
@@ -139,90 +128,27 @@ public class OnlineAccounts.CaldavDialog : PagedDialog {
             child = calendars_scroll_window
         };
 
-        var calendar_page_back_button = new Gtk.Button.with_label (_("Back")) {
-            width_request = 86
-        };
+        var calendar_page_back_button = new Gtk.Button.with_label (_("Back"));
 
-        save_configuration_button = new Gtk.Button.with_label (_("Save")) {
-            width_request = 86
-        };
+        save_configuration_button = new Gtk.Button.with_label (_("Save"));
         save_configuration_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var calendar_page_action_area = new Gtk.Box (HORIZONTAL, 6) {
+        var calendar_page_action_area = new Gtk.Box (HORIZONTAL, 0) {
             margin_top = 24,
-            spacing = 6,
             halign = END,
             homogeneous = true
         };
+        calendar_page_action_area.add_css_class ("action-area");
         calendar_page_action_area.append (calendar_page_back_button);
         calendar_page_action_area.append (save_configuration_button);
 
-        var calendars_box = new Gtk.Box (VERTICAL, 6) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
+        var calendars_box = new Gtk.Box (VERTICAL, 6);
         calendars_box.append (display_name_label);
         calendars_box.append (display_name_entry);
         calendars_box.append (calendar_list_frame);
         calendars_box.append (calendar_page_action_area);
 
         calendars_page = new Adw.NavigationPage (calendars_box, _("Calendars"));
-
-        var save_configuration_busy_label = new Gtk.Label (_("Saving the configuration…"));
-
-        var save_configuration_busy_spinner = new Gtk.Spinner ();
-        save_configuration_busy_spinner.start ();
-
-        var save_configuration_busy_box = new Gtk.Box (HORIZONTAL, 6);
-        save_configuration_busy_box.append (save_configuration_busy_label);
-        save_configuration_busy_box.append (save_configuration_busy_spinner);
-
-        var save_configuration_success_view = new Granite.Placeholder (_("All done")) {
-            description = _("CalDAV account saved."),
-            icon = new ThemedIcon ("process-completed")
-        };
-        save_configuration_success_view.remove_css_class (Granite.STYLE_CLASS_VIEW);
-
-        save_configuration_back_button = new Gtk.Button.with_label (_("Back")) {
-            width_request = 86
-        };
-
-        save_configuration_close_button = new Gtk.Button.with_label (_("Close")) {
-            width_request = 86
-        };
-        save_configuration_close_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-
-        var save_configuration_page_action_area = new Gtk.Box (HORIZONTAL, 6) {
-            margin_top = 24,
-            halign = END,
-            homogeneous = true
-        };
-        save_configuration_page_action_area.append (save_configuration_back_button);
-        save_configuration_page_action_area.append (save_configuration_close_button);
-
-        save_configuration_page_stack = new Gtk.Stack () {
-            hexpand = true,
-            vexpand = true,
-            hhomogeneous = false,
-            vhomogeneous = false,
-            halign = Gtk.Align.CENTER,
-            valign = Gtk.Align.CENTER
-        };
-        save_configuration_page_stack.add_named (save_configuration_busy_box, "busy");
-        save_configuration_page_stack.add_named (save_configuration_success_view, "success");
-
-        var save_configuration_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
-            margin_top = 12,
-            margin_bottom = 12,
-            margin_start = 12,
-            margin_end = 12
-        };
-        save_configuration_box.append (save_configuration_page_stack);
-        save_configuration_box.append (save_configuration_page_action_area);
-
-        save_configuration_page = new Adw.NavigationPage (save_configuration_box, _("Save Configuration"));
 
         push_page (login_page);
 
@@ -246,44 +172,26 @@ public class OnlineAccounts.CaldavDialog : PagedDialog {
         });
 
         save_configuration_button.clicked.connect (() => {
-            push_page (save_configuration_page);
-            save_configuration_close_button.sensitive = false;
-            save_configuration_page_stack.set_visible_child_name ("busy");
+            var finalize_page = new FinalizePage (new ThemedIcon ("x-office-calendar"), cancellable);
+
+            push_page (finalize_page);
 
             save_configuration.begin ((obj, res) => {
-                default_widget = save_configuration_button;
-                save_configuration_close_button.sensitive = true;
-
                 try {
                     save_configuration.end (res);
-                    save_configuration_back_button.visible = false;
-                    save_configuration_page_stack.set_visible_child_name ("success");
+                    finalize_page.show_success ();
                 } catch (Error e) {
-                    var error_view = save_configuration_page_stack.get_child_by_name ("error");
-                    if (error_view != null) {
-                        save_configuration_page_stack.remove (error_view);
-                    }
-                    error_view = new Granite.Placeholder (_("Could not save configuration")) {
-                        description = e.message,
-                        icon = new ThemedIcon ("dialog-error")
-                    };
-
-                    save_configuration_page_stack.add_named (error_view, "error");
-                    save_configuration_page_stack.set_visible_child_name ("error");
+                    finalize_page.show_error (e.message);
                 }
             });
         });
 
-        save_configuration_close_button.clicked.connect (() => {
-            destroy ();
-        });
-
         calendar_page_back_button.clicked.connect (() => {
-            back_button_clicked ();
-        });
+            if (cancellable != null) {
+                cancellable.cancel ();
+            }
 
-        save_configuration_back_button.clicked.connect (() => {
-            back_button_clicked ();
+            pop_page ();
         });
 
         url_entry.changed.connect (() => {
@@ -320,13 +228,6 @@ public class OnlineAccounts.CaldavDialog : PagedDialog {
 
             destroy ();
         });
-    }
-
-    private void back_button_clicked () {
-        if (cancellable != null) {
-            cancellable.cancel ();
-        }
-        pop_page ();
     }
 
     private int sort_func (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {

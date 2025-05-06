@@ -3,12 +3,12 @@ plug_files = files(
     'Dialogs/CaldavDialog.vala',
     'Dialogs/Imap/CamelSession.vala',
     'Dialogs/Imap/ImapDialog.vala',
-    'Dialogs/Imap/ImapSavePage.vala',
     'Dialogs/Imap/ImapLoginPage.vala',
     'MainView.vala',
     'Plug.vala',
     'Widgets/AccountMenuItem.vala',
-    'Widgets/PagedDialog.vala',
+    'Widgets' / 'FinalizePage.vala',
+    'Widgets' / 'PagedDialog.vala',
     'Widgets/ValidationMessage.vala'
 )
 
