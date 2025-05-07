@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-06 18:56+0000\n"
-"PO-Revision-Date: 2025-05-07 15:36+0000\n"
+"PO-Revision-Date: 2025-05-07 18:37+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-onlineaccounts/uk/>\n"
@@ -231,19 +231,15 @@ msgstr "Налаштування облікового запису…"
 
 #: src/Widgets/FinalizePage.vala:122
 msgid "Ready to go"
-msgstr ""
+msgstr "Усе готово"
 
 #: src/Widgets/FinalizePage.vala:123
-#, fuzzy
-#| msgid "CalDAV account saved."
 msgid "Account saved"
-msgstr "Обліковий запис CalDAV збережено."
+msgstr "Обліковий запис збережено"
 
 #: src/Widgets/FinalizePage.vala:137
-#, fuzzy
-#| msgid "Could not save the e-mail account"
 msgid "Could not save the account"
-msgstr "Не вдалося зберегти обліковий запис е-пошти"
+msgstr "Не вдалося зберегти обліковий запис"
 
 #~ msgid "Saving the configuration…"
 #~ msgstr "Збереження конфігурації…"
