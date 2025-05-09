@@ -12,15 +12,15 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-onlineaccounts/8.0.0/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/settings-onlineaccounts/8.0.0/data/screenshot.png</image>
     </screenshot>
   </screenshots>
 
-  <url type="bugtracker">https://github.com/elementary/switchboard-plug-onlineaccounts/issues</url>
+  <url type="bugtracker">https://github.com/elementary/settings-onlineaccounts/issues</url>
   <url type="donation">https://elementary.io/get-involved#funding</url>
-  <url type="help">https://github.com/elementary/switchboard-plug-onlineaccounts/discussions</url>
+  <url type="help">https://github.com/elementary/settings-onlineaccounts/discussions</url>
   <url type="homepage">https://elementary.io/</url>
-  <url type="translate">https://l10n.elementary.io/engage/switchboard/</url>
+  <url type="translate">https://l10n.elementary.io/engage/settings/</url>
 
   <developer id="org.elementaryos">
     <name>elementary, Inc.</name>
@@ -58,7 +58,7 @@
         </ul>
       </description>
       <issues>
-        <issue url="https://github.com/elementary/switchboard-plug-onlineaccounts/issues/232">IMAP: Add support for RealTrashPath and RealJunkPath</issue>
+        <issue url="https://github.com/elementary/settings-onlineaccounts/issues/232">IMAP: Add support for RealTrashPath and RealJunkPath</issue>
       </issues>
     </release>
 
@@ -71,7 +71,7 @@
         </ul>
       </description>
       <issues>
-        <issue url="https://github.com/elementary/switchboard-plug-onlineaccounts/pull/253">Fix use imap username for smtp</issue>
+        <issue url="https://github.com/elementary/settings-onlineaccounts/pull/253">Fix use imap username for smtp</issue>
       </issues>
     </release>
 
