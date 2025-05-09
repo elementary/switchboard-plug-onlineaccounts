@@ -33,17 +33,13 @@ add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi
 
 ecal_vapi = meson.get_compiler('vala').find_library('libecal-2.0-fixes', dirs: meson.current_source_dir() / 'vapi')
 camel_dep = dependency('camel-1.2', version: '>= 3.28')
-edataserver_dep = dependency('libedataserver-1.2', version: '>=3.40')
+edataserver_dep = dependency('libedataserver-1.2', version: '>=3.45.1')
 glib_dep = dependency('glib-2.0')
 gobject_dep = dependency('gobject-2.0')
 granite_dep = dependency('granite-7', version: '>=7.1.0')
 gtk_dep = dependency('gtk4')
 adw_dep = dependency('libadwaita-1', version: '>= 1.4.0')
 switchboard_dep = dependency('switchboard-3')
-
-if edataserver_dep.version().version_compare('>=3.45.1')
-    add_project_arguments('--define=HAS_EDS_3_45', language: 'vala')
-endif
 
 gresource = gnome.compile_resources(
     'gresource',
