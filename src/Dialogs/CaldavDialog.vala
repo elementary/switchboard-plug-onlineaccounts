@@ -315,11 +315,26 @@ public class OnlineAccounts.CaldavDialog : PagedDialog {
             unowned var col = (E.SourceCollection)source.get_extension (E.SOURCE_EXTENSION_COLLECTION);
             col.backend_name = "caldav";
 
+            // If we don't get a port, add 443 https://github.com/elementary/switchboard-plug-onlineaccounts/issues/303
+            var parsed_uri = Uri.parse (url_entry.text, PARSE_RELAXED);
+            if (parsed_uri.get_port () == -1) {
+                parsed_uri = Uri.build (
+                    NONE,
+                    parsed_uri.get_scheme (),
+                    parsed_uri.get_userinfo (),
+                    parsed_uri.get_host (),
+                    443,
+                    parsed_uri.get_path (),
+                    parsed_uri.get_query (),
+                    parsed_uri.get_fragment ()
+                );
+            }
+
             unowned var webdav = (E.SourceWebdav)source.get_extension (E.SOURCE_EXTENSION_WEBDAV_BACKEND);
 #if HAS_EDS_3_45
-            webdav.uri = Uri.parse (url_entry.text, UriFlags.PARSE_RELAXED);
+            webdav.uri = parsed_uri;
 #else
-            webdav.soup_uri = new Soup.URI (url_entry.text);
+            webdav.soup_uri = new Soup.URI (parsed_uri.to_string ());
 #endif
             webdav.calendar_auto_schedule = true;
 
