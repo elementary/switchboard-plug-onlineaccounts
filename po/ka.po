@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-online-accounts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 18:56+0000\n"
+"POT-Creation-Date: 2025-05-10 16:57+0000\n"
 "PO-Revision-Date: 2024-07-05 07:16+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -75,11 +75,11 @@ msgstr "ამოცანების სიები"
 msgid "Finding available calendars and tasks…"
 msgstr "ხელმისაწვდომი კალენდარებისა და ამოცანების ძებნა…"
 
-#: src/Dialogs/CaldavDialog.vala:344
+#: src/Dialogs/CaldavDialog.vala:355
 msgid "Could not fetch calendars"
 msgstr "კალენდარების გამოთხოვის შეცდომა"
 
-#: src/Dialogs/CaldavDialog.vala:449
+#: src/Dialogs/CaldavDialog.vala:452
 msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
 

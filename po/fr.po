@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beatbox 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 18:56+0000\n"
+"POT-Creation-Date: 2025-05-10 16:57+0000\n"
 "PO-Revision-Date: 2025-02-07 15:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -75,11 +75,11 @@ msgstr "Listes de tâches"
 msgid "Finding available calendars and tasks…"
 msgstr "Recherche des calendriers et tâches disponibles…"
 
-#: src/Dialogs/CaldavDialog.vala:344
+#: src/Dialogs/CaldavDialog.vala:355
 msgid "Could not fetch calendars"
 msgstr "Impossible de récupérer les calendriers"
 
-#: src/Dialogs/CaldavDialog.vala:449
+#: src/Dialogs/CaldavDialog.vala:452
 msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
 "Les données fournies ne semblent pas correspondre à un compte CalDAV valide."

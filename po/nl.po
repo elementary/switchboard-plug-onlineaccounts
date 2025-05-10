@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 18:56+0000\n"
+"POT-Creation-Date: 2025-05-10 16:57+0000\n"
 "PO-Revision-Date: 2024-09-05 20:32+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -75,11 +75,11 @@ msgstr "Takenlijst"
 msgid "Finding available calendars and tasks…"
 msgstr "Zoeken naar beschikbare agenda's en taken…"
 
-#: src/Dialogs/CaldavDialog.vala:344
+#: src/Dialogs/CaldavDialog.vala:355
 msgid "Could not fetch calendars"
 msgstr "Kon agenda niet opvragen"
 
-#: src/Dialogs/CaldavDialog.vala:449
+#: src/Dialogs/CaldavDialog.vala:452
 msgid "The data provided does not seem to reflect a valid CalDAV account."
 msgstr ""
 "De opgegeven gegevens lijken niet van een geldig CalDAV account te zijn."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-06 18:56+0000\n"
+"POT-Creation-Date: 2025-05-10 16:57+0000\n"
 "PO-Revision-Date: 2022-01-11 21:23+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -75,11 +75,11 @@ msgstr "Görev Listeleri"
 msgid "Finding available calendars and tasks…"
 msgstr "Kullanılabilir takvimler ve görevler bulunuyor…"
 
-#: src/Dialogs/CaldavDialog.vala:344
+#: src/Dialogs/CaldavDialog.vala:355
 msgid "Could not fetch calendars"
 msgstr "Takvimler getirilemedi"
 
-#: src/Dialogs/CaldavDialog.vala:449
+#: src/Dialogs/CaldavDialog.vala:452
 #, fuzzy
 #| msgid "The data provided does not seem to reflect a valid CalDav account."
 msgid "The data provided does not seem to reflect a valid CalDAV account."
