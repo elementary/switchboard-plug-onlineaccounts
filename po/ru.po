@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: beat-box\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-06 18:56+0000\n"
-"PO-Revision-Date: 2024-07-05 07:16+0000\n"
-"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
-"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-onlineaccounts/ru/>\n"
+"PO-Revision-Date: 2025-05-10 16:28+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: Russian <https://l10n.elementaryos.org/projects/settings/"
+"onlineaccounts/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
 "X-Launchpad-Export-Date: 2017-01-06 06:13+0000\n"
 
 #: src/Dialogs/CaldavDialog.vala:47
@@ -229,26 +229,20 @@ msgid "Close"
 msgstr "Закрыть"
 
 #: src/Widgets/FinalizePage.vala:94
-#, fuzzy
-#| msgid "Setting up the e-mail account…"
 msgid "Setting up the account…"
-msgstr "Настройка учётной записи эл. почты…"
+msgstr "Настройка учётной записи…"
 
 #: src/Widgets/FinalizePage.vala:122
 msgid "Ready to go"
-msgstr ""
+msgstr "Готово"
 
 #: src/Widgets/FinalizePage.vala:123
-#, fuzzy
-#| msgid "CalDAV account saved."
 msgid "Account saved"
-msgstr "Учётная запись CalDAV сохранена."
+msgstr "Учётная запись сохранена"
 
 #: src/Widgets/FinalizePage.vala:137
-#, fuzzy
-#| msgid "Could not save the e-mail account"
 msgid "Could not save the account"
-msgstr "Не удалось сохранить учётную запись эл. почты"
+msgstr "Не удалось сохранить учётную запись"
 
 #~ msgid "Saving the configuration…"
 #~ msgstr "Сохранение конфигурации…"
